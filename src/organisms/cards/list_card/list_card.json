@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "tags": [
+      "preview",
+      "image",
+      "picture",
+      "link",
+      "heading",
+      "text",
+      "summary",
+      "event"
+    ]
+  },
+  "listCard": {
+    "link": "#",
+    "variant": "osg-v-default",
+    "stateText": "Blandit"
+  },
+  "contentBox": {
+    "date": "7. vesiturum - 11. eleifend",
+    "heading": "Pellentesque habitant morbi",
+    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "tags": {
+    "variant": "osg-v-underline",
+    "items": [
+      {
+        "tag": {
+          "content": "Integer tincidunt",
+          "url": "#lorem_ipsum_1"
+        }
+      },
+      {
+        "tag": {
+          "content": "Felis at est viverra",
+          "url": "#lorem_ipsum_2"
+        }
+      },
+      {
+        "tag": {
+          "content": "Sed ultrices turpis",
+          "url": "#lorem_ipsum_3"
+        }
+      }
+    ]
+  },
+  "shape": {
+    "variant": "osg-v-image osg-v-circle"
+  },
+  "figure": {
+    "variant": "osg-v-default",
+    "img": {
+      "alt": "Lorem ipsum dolor sit amet.",
+      "defaultUrl": "https://picsum.photos/250/250/?random",
+      "mediaQueryUrls": [
+        {
+          "query": "max-width: 768px",
+          "url": "https://picsum.photos/150/150/?random"
+        }
+      ]
+    }
+  }
+}

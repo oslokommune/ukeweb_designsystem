@@ -1,0 +1,27 @@
+<div class="osg-info-list {{ infoList.modifiers | default(null) }}">
+  <ul>
+    {% for icon in infoList.icons.entries %}
+    <li>
+      {% include "atoms/icons/icon/icon.twig" with { variant: icon.variant } %}
+      {% if icon.text is defined %}
+        <p>{{ icon.text|raw }}</p>
+      {% endif %}
+      {% if icon.linkText is defined and icon.link is defined %}
+        <a href="{{ icon.link }}">{{ icon.linkText }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+    {% if button is defined %}
+      <li>
+        {% include "atoms/buttons/button/button.twig" %}
+      </li>
+    {% endif %}
+    {% if infoList.asteriskText is defined %}
+    <li>
+      <p>
+        *{{ infoList.asteriskText }}
+      </p>
+    </li>
+    {% endif %}
+  </ul>
+</div>

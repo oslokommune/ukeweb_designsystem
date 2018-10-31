@@ -1,0 +1,10 @@
+<a class="osg-social-icon {{ icon.modifiers | default(null) }}" href="{{ icon.url }}" target="_blank">
+  <div>
+      {{ icon.brand|raw }}
+  </div>
+  {% if icon.text is defined and icon.textVisible is defined %}
+  <span class="osg-icon-text {{ (icon.textVisible == true) ? '' : 'sr-only' }}">
+    {{ icon.text }}
+  </span>
+  {% endif %}
+</a>

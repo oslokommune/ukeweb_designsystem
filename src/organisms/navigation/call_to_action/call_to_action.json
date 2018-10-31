@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "tags": [
+      "image",
+      "picture",
+      "figure",
+      "button",
+      "click",
+      "link"
+    ]
+  },
+  "callToAction": {
+    "heading": "Lorem ipsum",
+    "content": "Aenean vitae tortor sem. Mauris enim eros, ultrices nec hendrerit nec, porta sollicitudin enim."
+  },
+  "figure": {
+    "variant": "osg-v-default",
+    "img": {
+      "alt": "Lorem ipsum dolor sit amet.",
+      "defaultUrl": "https://picsum.photos/960/540/?random"
+    }
+  },
+  "button": {
+    "color": "green",
+    "content": "Fusce rutrum",
+    "variant": "osg-v-default",
+    "link": "#"
+  }
+}

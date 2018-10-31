@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "tags": [
+      "global",
+      "links",
+      "logo",
+      "translation",
+      "language",
+      "english",
+      "norwegian",
+      "navigation",
+      "sitemap",
+      "pages",
+      "overview"
+    ]
+  },
+  "footer": {
+    "linkList": [
+      {"text": "Lorem ipsum", "url": "#"},
+      {"text": "Dolor sit", "url": "#"},
+      {"text": "Amet consectetur", "url": "#"},
+      {"text": "Adipiscing elit", "url": "#"},
+      {"text": "Morbi vitae convallis", "url": "#"},
+      {"text": "Risus nam", "url": "#"},
+      {"text": "Dignissim vulputate", "url": "#"},
+      {"text": "Mi at porttitor", "url": "#"}
+    ],
+    "languageLink": {
+      "url": "#",
+      "text": "Curabitur"
+    },
+    "topDomainLink": {
+      "url": "#",
+      "text": "Ligula Ullamcorper"
+    }
+  },
+  "iconList": {
+    "variant": "osg-v-vertical-no-shape",
+    "brands": [
+      {
+        "icon": "<i class='fab fa-facebook'></i>",
+        "text": "Facebook",
+        "textVisible": true,
+        "url": "#"
+      },
+      {
+        "icon": "<i class='fab fa-instagram'></i>",
+        "text": "Instagram",
+        "textVisible": true,
+        "url": "#"
+      },
+      {
+        "icon": "<i class='fab fa-twitter'></i>",
+        "text": "Twitter",
+        "textVisible": true,
+        "url": "#"
+      }
+    ]
+  },
+  "logos": {
+    "figures": [
+      {
+        "variant": "osg-v-default",
+        "link": {
+          "url": "http://google.com",
+          "target":"_self"
+        },
+        "img": {
+          "alt": "Lorem ipsum",
+          "defaultUrl": "https://picsum.photos/65/105/?random",
+          "mediaQueryUrls": [
+            {
+              "query": "max-width: 768",
+              "url": "https://picsum.photos/65/105/?random"
+            },
+            {
+              "query": "min-width: 769px",
+              "url": "https://picsum.photos/80/128/?random"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

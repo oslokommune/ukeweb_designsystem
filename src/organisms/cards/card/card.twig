@@ -1,0 +1,23 @@
+<div class="osg-card {{ card.variant }} {{ card.modifiers | default(null) }}">
+  <a class="osg-wrapper" href="{{ card.url }}" aria-hidden="true">
+    <div class="osg-image-container">
+      {% include "atoms/decorators/figure/figure.twig" %}
+      {% if card.stateText is defined %}
+        <div class="osg-state-text">{{ card.stateText }}</div>
+      {% endif %}
+    </div>
+    {% include 'molecules/content_display/content_box/content_box.twig' %}
+  </a>
+  {% if tags is defined or shapeCard.searchResult is defined %}
+    <div class="osg-extras">
+      {% if tags is defined %}
+        {% include 'molecules/navigation/tags/tags.twig' %}
+      {% endif %}
+      {% if card.url is defined %}
+        <a href="{{ card.url }}" class="osg-search-result">
+          {{ card.searchResult | default(null) }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

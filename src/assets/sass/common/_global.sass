@@ -1,0 +1,75 @@
+// ============================================================================
+// GLOBALS
+// ============================================================================
+//
+// Provides a set of global styles availible for consumers and patterns.
+
+/* ---------------- GENERAL -----------------*/
+@import '~minireset.css/minireset.sass'
+@import '~@fortawesome/fontawesome-free/css/all.css'
+@import 'osloSans'
+@import 'content'
+
+body, html
+  background-color: $color-white
+  font-family: 'Oslo Sans', 'sans-serif'
+  font-size: 100%
+  font-weight: normal
+
+p
+  font-size: $font-size-18
+  +tablet-and-up
+    font-size: $font-size-20
+
+a
+  color: $color-grey-light
+  text-decoration: underline
+
+hr
+  height: 1px
+  background: inherit
+  border-bottom: 1px solid #DCDCDC
+
+.osg-sr-only
+  border: 0
+  clip: rect(1px, 1px, 1px, 1px)
+  clip-path: inset(50%)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute !important
+  width: 1px
+  word-wrap: normal !important
+
+h1, h2, h3, h4, h5
+  hyphens: auto
+
+.osg-content
+  @extend .osg-content-wrapper
+  blockquote
+    +osg-common-blockquote
+  h1, h2, h3, h4, h5
+    margin-bottom: 0.4em
+    hyphens: auto
+  h1
+    @extend .osg-text-is-size-1
+  h2
+    @extend .osg-text-is-size-2
+  h3
+    @extend .osg-text-is-size-3
+  h4
+    @extend .osg-text-is-size-4
+  h5
+    @extend .osg-text-is-size-5
+  ul li, ol li
+  font-size: $font-size-18
+  +tablet-and-up
+    font-size: $font-size-20
+  strong
+    font-weight: bold
+
+
+.container.osg-is-big
+  width: 100%
+  max-width: 1920 - (2 * $osg-gap)

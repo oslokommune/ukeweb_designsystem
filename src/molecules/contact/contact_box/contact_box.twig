@@ -1,0 +1,35 @@
+<address class="osg-contact-box {{ contactBox.modifiers | default(null) }}">
+  <div>
+    <h2 class="osg-text-is-size-5">{{ contactBox.phoneNumberTitle }}</h2>
+    <p>
+      <a href="tel:{{ contactBox.phonePrefix | default(null) }} {{contactBox.phoneNumber}}">
+      {{ contactBox.phonePrefix | default(null) }} {{contactBox.phoneNumber}}
+      </a>
+    </p>
+  </div>
+  <div>
+    <h2 class="osg-text-is-size-5">{{ contactBox.emailTitle }}</h2>
+    <p>
+      <a href="mailto:{{contactBox.email}}">{{contactBox.email}}</a>
+    </p>
+  </div>
+  <div>
+    <h2 class="osg-text-is-size-5">{{ contactBox.visitAddressTitle }}</h2>
+    <p>
+      {{ contactBox.visitAddress }}
+    </p>
+    {% if contactBox.addressLink is defined %}
+    <p>
+      <a href="{{ contactBox.addressLink.url }}">{{contactBox.addressLink.text}}</a>
+    </p>
+    {% endif %}
+  </div>
+  <div>
+    <h2 class="osg-text-is-size-5">{{ contactBox.postalAddressTitle }}</h2>
+    <p>
+      {{contactBox.postalAddressLine1}}
+    <br>
+      {{contactBox.postalAddressLine2}}
+    </p>
+  </div>
+</address>

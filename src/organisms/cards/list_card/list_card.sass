@@ -1,0 +1,99 @@
+$shape-size-mobile: 150px
+$shape-size-tablet: 250px
+
+.osg-list-card
+  position: relative
+  > a
+    text-decoration: none
+    display: flex
+    user-select: none
+    div
+      display: flex
+      width: 100%
+      flex-shrink: 1
+      flex-direction: column
+      +tablet-and-up
+        flex-direction: row
+      .osg-content-box
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding: 15px 15px 65px
+        +tablet-and-up
+          padding: 30px 40px 61px
+        p
+          font-size: $font-size-16
+          +tablet-and-up
+            font-size: $font-size-20
+        h2
+          font-size: $font-size-18
+          +tablet-and-up
+            font-size: $font-size-28
+      .osg-shape.osg-v-image
+        align-self: start
+        flex-shrink: 20
+        background-color: transparent
+        height: $shape-size-mobile
+        width: $shape-size-mobile
+        +tablet-and-up
+          height: $shape-size-tablet
+          width: $shape-size-tablet
+        figure
+          overflow: hidden
+        &.osg-v-circle
+          figure
+            border-radius: 50%
+        img
+          transition: transform 1s cubic-bezier(.22,.57,.25,1)
+          object-fit: cover
+          display: block
+          min-width: 100%
+          max-width: 100%
+
+  .osg-state-text
+    display: none
+    position: absolute
+    text-align: center
+    z-index: 1
+    top: calc((#{$shape-size-mobile} / 2) - (#{$font-size-16} / 2))
+    width: $shape-size-mobile
+    font-size: $font-size-16
+    +tablet-and-up
+      top: calc((#{$shape-size-tablet} / 2) - (#{$font-size-28} / 2))
+      width: $shape-size-tablet
+      font-size: $font-size-28
+
+  &:hover
+    img
+      transform: scale(1.2)
+
+  /* modifiers styles */
+  +card-with-state-modifier
+  &.osg-m-with-state
+    .osg-shape
+      position: relative
+      height: 100%
+      width: 100%
+      +osg-filter($color-green-dark)
+      &.osg-v-circle
+        border-radius: 50%
+
+  &.osg-m-animate
+    .osg-shape
+      +animation-scale-in(1.2s)
+    .osg-content-box, .osg-tags
+      +animation-scale-up(1.2s)
+      animation-delay: .3s
+
+  /* included pattern styles */
+  .osg-tags
+    position: absolute
+    bottom: 15px
+    left: 0
+    width: 100%
+    padding: 0 15px
+    +tablet-and-up
+      width: calc(100% - #{$shape-size-tablet})
+      left: $shape-size-tablet
+      padding: 0 40px
+      bottom: 20px

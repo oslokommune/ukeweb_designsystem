@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "tags": [
+      "decorator",
+      "helper",
+      "image",
+      "figure"
+    ]
+  },
+  "icon": {
+    "variant": "osg-v-default"
+  }
+}

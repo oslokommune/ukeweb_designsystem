@@ -1,0 +1,62 @@
+
+// map for button colors
+// expand this as we get designs with different colored buttons
+$button-colors: (green: $color-green-lighter $color-green-dark, green-light: $color-green-dark $color-green-lighter)
+
+// helper mixin for making buttons
+=osg-button-helper($color-name, $foreground, $background)
+  .osg-button.osg-v-default
+    box-sizing: content-box
+    padding: 5px 30px 5px 30px
+    font-size: $font-size-18
+    border-radius: 0
+    line-height: 1.5
+    height: 2.25em
+    &.osg-button-#{$color-name}
+      &, &:hover, &:active, &:focus, &:visited
+        color: $foreground
+        border: 1px solid $background
+        background-color: $background
+  .osg-button.osg-v-circle
+    &.osg-button-#{$color-name}
+      &:focus
+        .osg-shape
+          box-shadow: 0 0 2px 2px Highlight
+      &:active
+        .osg-shape
+          background-color: $background
+      .osg-shape
+        border: 1px solid rgba(0, 0, 0, 0)
+        background-color: $background
+        color: $foreground
+      &:hover
+        .osg-shape
+          background-color: lighten($background, 5%)
+      &:active
+        .osg-shape
+          background-color: $background
+          transform: scale(0.97)
+
+@each $name, $tuple in $button-colors
+  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
+  +osg-button-helper($name, nth($tuple, 1), nth($tuple, 2))
+
+.osg-button
+  &.osg-v-circle
+    background: none
+    color: inherit
+    border: none
+    padding: 0
+    font: inherit
+    cursor: pointer
+    outline: inherit
+    user-select: none
+
+    span
+      margin: 0
+
+a.osg-button
+  text-decoration: none
+
+.osg-button.osg-v-default
+  @extend .osg-button

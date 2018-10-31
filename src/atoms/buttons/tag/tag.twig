@@ -1,0 +1,5 @@
+{% set color = tag.color is defined ? "osg-tag-" ~ tag.color  : "" %}
+
+<a href="{{ tag.url }}" class="osg-tag {{ color }} {{ tag.modifiers | default(null) }}">
+  {{ tag.content }}
+</a>

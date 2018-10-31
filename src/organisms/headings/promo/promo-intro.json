@@ -1,0 +1,29 @@
+{
+  "promo": {
+    "variant": "osg-v-promo-intro",
+    "showButton": true,
+    "showLogo": true,
+    "button": {
+      "color": "green-light",
+      "content": "Lorem ipsum",
+      "variant": "osg-v-default"
+    },
+    "logo": {
+      "variant": "osg-v-default",
+      "img": {
+        "alt": "Lorem ipsum",
+        "defaultUrl": "https://picsum.photos/60/96/?random",
+        "mediaQueryUrls": [
+          {
+            "query": "max-width: 768",
+            "url": "https://picsum.photos/60/96/?random"
+          },
+          {
+            "query": "min-width: 769px",
+            "url": "https://picsum.photos/115/181/?random"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "tags": [
+      "social media",
+      "SoMe",
+      "click",
+      "functionality",
+      "share",
+      "like",
+      "facebook",
+      "twitter",
+      "snapchat",
+      "instagram"
+    ]
+  },
+  "iconList": {
+    "brands": [
+      {
+        "icon": "<i class='fab fa-facebook-f'></i>",
+        "text": "Facebook",
+        "textVisible": false,
+        "url": "#"
+      },
+      {
+        "icon": "<i class='fab fa-instagram'></i>",
+        "text": "Instagram",
+        "textVisible": false,
+        "url": "#"
+      },
+      {
+        "icon": "<i class='fab fa-snapchat-ghost'></i>",
+        "text": "Snapchat",
+        "textVisible": false,
+        "url": "#"
+      },
+      {
+        "icon": "<i class='fab fa-twitter'></i>",
+        "text": "Twitter",
+        "textVisible": false,
+        "url": "#"
+      }
+    ],
+    "variant": "osg-v-default"
+  }
+}
+

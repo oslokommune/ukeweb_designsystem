@@ -1,0 +1,2 @@
+### General
+  Displays svg icons.

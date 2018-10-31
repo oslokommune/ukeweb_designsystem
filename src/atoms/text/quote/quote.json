@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tags": [
+      "quotation",
+      "citation",
+      "cite",
+      "saying"
+    ]
+  },
+  "quote": {
+    "variant": "osg-v-default",
+    "text": "Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.",
+    "cite": "– Aldous Huxley, Brave New World",
+    "citeSource": "https://www.huxley.net/bnw/four.html"
+  }
+}

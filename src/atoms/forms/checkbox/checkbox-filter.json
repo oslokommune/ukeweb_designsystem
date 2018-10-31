@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "tags": [
+      "label",
+      "todo",
+      "form",
+      "field",
+      "accept",
+      "gdpr"
+    ]
+  },
+  "checkbox": {
+    "text": "Quisque lacinia",
+    "variant": "osg-v-filter",
+    "modifiers": "osg-m-filter"
+  }
+}

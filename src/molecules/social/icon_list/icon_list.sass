@@ -1,0 +1,45 @@
+.osg-icons
+  display: inline-flex
+  flex-direction: row
+
+  a.osg-social-icon
+    &:not(:last-child)
+      margin-right: 35px
+
+    .osg-icon-text
+      display: none
+    div
+      width: auto
+
+  &.osg-v-vertical
+    +tablet-and-up
+      flex-direction: column
+    .osg-shape
+      background-color: #EBEBEB
+      height: 50px
+      width: 50px
+      +tablet-and-up
+        height: 80px
+        width: 80px
+      a
+        color: #898989
+        &:hover
+          color: $color-green
+      span
+        i
+          font-size: $font-size-18
+          +tablet-and-up
+            font-size: $font-size-26
+  &.osg-v-vertical-no-shape
+    flex-direction: row
+    +tablet-and-up
+      flex-direction: column
+      .osg-social-icon
+        display: flex
+        &:not(:last-child)
+          margin-bottom: 35px
+        .osg-icon
+          display: flex
+        .osg-icon-text
+          margin-left: 10px
+          display: block

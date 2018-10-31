@@ -1,0 +1,11 @@
+<ul class="osg-breadcrumbs {{ breadcrumbs.modifiers | default(null) }}">
+  {% for path in breadcrumbs.paths %}
+    <li>
+      {% if loop.last %}
+        {{ path.name }}
+      {% else %}
+        <a href="{{ path.url }}">{{ path.name }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

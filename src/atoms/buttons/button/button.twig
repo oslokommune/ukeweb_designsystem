@@ -1,0 +1,38 @@
+{% set color = button.color is defined ? "osg-button-" ~ button.color  : "" %}
+
+{% if button.link is defined %}
+<a
+  href="{{ button.link }}"
+  class="osg-button {{ button.variant }} {{ color }} {{ button.modifiers | default(null) }}"
+  {% if button.dataattrs is defined %}
+  {% for dataattr in button.dataattrs %}
+  {{dataattr.key}}={{dataattr.val}}
+  {% endfor %}
+  {% endif %}
+>
+{% else %}
+<button
+  class="osg-button {{ button.variant }} {{ color }}"
+  {% if button.dataattrs is defined %}
+  {% for dataattr in button.dataattrs %}
+  {{dataattr.key}}={{dataattr.val}}
+  {% endfor %}
+  {% endif %}
+>
+{% endif %}
+  {% if button.variant == "osg-v-circle" %}
+  {% set shape = {
+      "text": button.content,
+      "variant": button.variant
+    }
+  %}
+  {% include "atoms/decorators/shape/shape.twig" with shape %}
+  {% endif %}
+  {% if "osg-v-default" in button.variant %}
+    {{ button.content }}
+  {% endif %}
+{% if button.link is defined %}
+</a>
+{% else %}
+</button>
+{% endif %}

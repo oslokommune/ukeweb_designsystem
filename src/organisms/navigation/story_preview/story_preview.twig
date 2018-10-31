@@ -1,0 +1,9 @@
+<div class="osg-storyPreview {{shape.variant}} {{ storyPreview.modifiers | default(null) }}">
+    <div class="osg-image">
+      {% include 'atoms/decorators/shape/shape.twig' %}
+    </div>
+    <div class="osg-text">
+      {% include 'atoms/text/ingress/ingress.twig' %}
+      <a href="{{ storyPreview.link.url }}">{{ storyPreview.link.text }}</a>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<header class="osg-header {{ header.variant }} {{ header.modifiers | default(null) }}">
+  {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
+  <div class="osg-header-title">
+    {% if header.title is defined and header.title.text is defined %}
+    <h1 class="osg-is-size-4">
+      <a href="{{ header.title.url }}" {% if header.title.title is defined %} title="{{ header.title.title }}" {% endif %}>
+      {{ header.title.text }}
+      </a>
+    </h1>
+    {% endif %}
+  </div>
+  {% if header.parentLink is defined and header.parentLink.text is defined %}
+  <div class="osg-header-link">
+    <a href="{{ header.parentLink.url }}" {% if header.parentLink.title is defined %} title="{{ header.parentLink.title }}" {% endif %}>
+      <span>{{ header.parentLink.text|default(null) }}</span>
+      <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+  {% endif %}
+</header>

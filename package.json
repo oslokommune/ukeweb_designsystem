@@ -1,0 +1,20 @@
+{
+  "name": "styleguide",
+  "version": "0.5.0",
+  "description": "Oslo Styleguide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:oslokommune/styleguide.git"
+  },
+  "author": "Utviklings- og kompetanseetaten - Oslo kommune <devnull@uke.oslo.kommune.no>",
+  "license": "proprietary",
+  "homepage": "https://github.com/oslokommune/styleguide#readme",
+  "peerDependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
+    "minireset.css": "0.0.3"
+  }
+}

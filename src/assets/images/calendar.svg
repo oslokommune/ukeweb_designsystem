@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Calender</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Calender" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(3.000000, 5.000000)" fill="#034B45">
+            <path d="M0,12 L0,4 L8,4 L8,0 L12,0 L12,4 L30,4 L30,0 L34,0 L34,4 L42,4 L42,12 L42,34 L42,38 L0,38 L0,34 L0,12 Z M4,12 L4,34 L38,34 L38,12 L4,12 Z" id="Combined-Shape"></path>
+            <polygon id="Fill-36" points="27 29 34 29 34 22 27 22"></polygon>
+        </g>
+    </g>
+</svg>

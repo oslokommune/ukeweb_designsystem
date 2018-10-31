@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "tags": [
+      "global",
+      "navigation",
+      "pages",
+      "links",
+      "menu",
+      "hamburger menu"
+    ],
+    "min-height": "500px"
+  },
+  "navbarMenu": {
+    "links": [
+      {"text": "Non blandit", "url": "#"},
+      {"text": "Eu scelerisque felis", "url": "#"},
+      {"text": "Lobortis mattis aliquam", "url": "#"},
+      {"text": "Etiam erat velit", "url": "#"},
+      {"text": "Aliquam etiam", "url": "#"},
+      {"text": "Euismod nisi", "url": "#"},
+      {"text": "Vstibulum rhoncus", "url": "#"}
+    ],
+    "languages": [
+      {"text": "Vivamus", "url": "#"}
+    ],
+    "variant": "osg-v-default",
+    "topDomainLink": {
+      "url": "#",
+      "text": "Oslo kommune"
+    },
+    "logos": {
+      "figures": [
+        {
+          "variant": "osg-v-default",
+          "link": {
+            "url": "#",
+            "target":"_self"
+          },
+          "img": {
+            "alt": "Lorem ipsum",
+            "defaultUrl": "https://picsum.photos/65/105/?random",
+            "mediaQueryUrls": [
+              {
+                "query": "max-width: 768",
+                "url": "https://picsum.photos/65/105/?random"
+              },
+              {
+                "query": "min-width: 769px",
+                "url": "https://picsum.photos/80/128/?random"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

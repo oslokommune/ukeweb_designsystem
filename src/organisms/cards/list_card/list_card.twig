@@ -1,0 +1,14 @@
+<div class="osg-list-card {{ listCard.modifiers | default(null) }}">
+  <a href="{{ listCard.link }}">
+    <div>
+      {% include 'atoms/decorators/shape/shape.twig' %}
+      {% if listCard.stateText is defined %}
+        <div class="osg-state-text">{{ listCard.stateText }}</div>
+      {% endif %}
+      {% include 'molecules/content_display/content_box/content_box.twig' %}
+    </div>
+  </a>
+  {% if tags is defined %}
+    {% include 'molecules/navigation/tags/tags.twig' %}
+  {% endif %}
+</div>

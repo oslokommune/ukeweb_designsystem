@@ -1,0 +1,25 @@
+<div class="osg-shapeCard {{ shapeCard.variant }} {{ shapeCard.modifiers | default(null) }}">
+  <a class="osg-wrapper" href="{{ shapeCard.url }}">
+    <div class="osg-image-container" href="{{ shapeCard.url }}" aria-hidden="true">
+      {% include "atoms/decorators/figure/figure.twig" %}
+      {% if shapeCard.stateText is defined %}
+      <div class="osg-state-text">{{ shapeCard.stateText }}</div>
+      {% endif %}
+    </div>
+    <div class="osg-box-shape-wrapper">
+      {% include 'molecules/content_display/content_box/content_box.twig' %}
+      {% include 'atoms/decorators/shape/shape.twig' %}
+    </div>
+  </a>
+  {% if tags is defined or shapeCard.searchResult is defined %}
+    <div class="osg-extras">
+      {% if tags is defined %}{% include 'molecules/navigation/tags/tags.twig' %}
+      {% endif %}
+      {% if shapeCard.searchResult is defined %}
+        <a href="{{ shapeCard.url }}" class="osg-search-result">
+          {{ shapeCard.searchResult }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

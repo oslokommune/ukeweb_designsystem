@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "tags": [
+      "icons",
+      "data",
+      "information",
+      "time",
+      "date",
+      "location",
+      "price",
+      "weather forecast"
+    ]
+  },
+  "infoList": {
+    "variant": "osg-v-default",
+    "icons": {
+      "entries": [
+        {
+          "variant": "osg-v-icon-calendar",
+          "text": "Consequat 22.turpis<br/>kl.15:30",
+          "linkText": "Dolor inn i ipsum",
+          "link": "#"
+        },
+        {
+          "variant": "osg-v-icon-location",
+          "text": "Aenean vitae tortor",
+          "linkText": "Mauris ultrices",
+          "link": "#"
+        },
+        {
+          "variant": "osg-v-icon-payment",
+          "text": "23 Vivamus sapien"
+        },
+        {
+          "variant": "osg-v-icon-smiley",
+          "text": "Curabitur"
+        },
+        {
+          "variant": "osg-v-icon-sun",
+          "text": "Fusce libero"
+        }
+      ]
+    },
+    "asteriskText": "Lorem ipsum dolor et"
+  },
+  "button": {
+    "color": "green",
+    "content": "Quisque",
+    "variant": "osg-v-default"
+  }
+}

@@ -1,0 +1,72 @@
+.osg-text-field
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  position: relative
+  .osg-text-field-input
+    background-color: $color-grey-lighter
+    border: 2px solid $color-grayscale-20
+    padding: 5px 5px 5px 10px
+    height: 35px
+    font-size: $font-size-14
+    +tablet-and-up
+      height: 44px
+      font-size: $font-size-16
+    &::placeholder
+      color: transparent
+  .osg-text-field-label
+    position: absolute
+    left: 13px
+    top: 10px
+  .osg-text-field-input:valid + .osg-text-field-label
+    opacity: 0
+  &.osg-v-floating-label
+    .osg-text-field-input:valid + .osg-text-field-label
+      opacity: 1
+    margin-top: 20px
+    .osg-text-field-label
+      position: absolute
+      pointer-events: none
+      transition: .2s ease-out
+      left: 13px
+      // Positions the label in the middle of the textfield
+      top: 7px
+      font-size: $font-size-14
+      +tablet-and-up
+        top: 10px
+        font-size: $font-size-16
+    .osg-text-field-input:focus + .osg-text-field-label,
+    .osg-text-field-input:not(:focus):valid + .osg-text-field-label
+      // Positions the label above the textfield when the textfield is focused
+      font-size: $font-size-12
+      top: -19px
+      +tablet-and-up
+        font-size: $font-size-14
+        top: -21px
+    .osg-text-field-input::placeholder
+      opacity: 0
+      color: transparent
+    .osg-text-field-input:required
+      // Turn off red border on invalid input
+      box-shadow: none
+  &.osg-m-big
+    .osg-text-field-label
+      left: 18px
+      top: 30px
+    .osg-text-field-input
+      padding: 15px
+      height: 83px
+      font-size: $font-size-16
+    &.osg-v-floating-label
+      .osg-text-field-input:focus + .osg-text-field-label,
+      .osg-text-field-input:not(:focus):valid + .osg-text-field-label
+        // Positions the label above the textfield when the textfield is focused
+        top: -17px
+        font-size: $font-size-12
+  &.osg-m-no-border
+    .osg-text-field-input
+      border: none
+  &.osg-m-error
+    .osg-text-field-input
+      background-color: $color-green-lighter
+      border-color: $color-green-lighter

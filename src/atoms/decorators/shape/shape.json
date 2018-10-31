@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "tags": [
+      "square",
+      "circle",
+      "tag",
+      "image",
+      "helper"
+    ]
+  },
+  "shape": {
+    "text": "amet",
+    "variant": "osg-v-default",
+    "url": "#"
+  }
+}

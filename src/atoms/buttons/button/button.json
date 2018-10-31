@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "tags": [
+      "Call to action",
+      "functionality",
+      "link",
+      "click"
+    ]
+  },
+  "button": {
+    "color": "green",
+    "content": "Lorem Ipsum",
+    "variant": "osg-v-default",
+    "dataattrs": [
+      {"key": "id", "val": "lorem_ipsum"},
+      {"key": "data-target", "val": "lorem1"}
+    ]
+  }
+}

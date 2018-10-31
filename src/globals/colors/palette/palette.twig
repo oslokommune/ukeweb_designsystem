@@ -1,0 +1,20 @@
+<div class="osg-palette osg-content">
+  {% for item in palette.colors %}
+    <div
+      class="osg-color-item osg-bg-{{ item.name }} {{ item.dark|default(false) ? 'osg-dark' : 'osg-light' }}">
+      <h2>
+        {{ item.name }}
+      </h2>
+      <h3>
+        Classes
+      </h3>
+      <ul>
+        <li>osg-text-{{ item.name }}</li>
+        <li>osg-bg-{{ item.name }}</li>
+        <li>osg-button-{{ item.name }} (needs button atom)</li>
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+
