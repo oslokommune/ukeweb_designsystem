@@ -1,0 +1,42 @@
+.osg-shape
+  text-decoration: none
+  display: inline-flex
+  background-color: $color-green
+  overflow: hidden
+  align-items: center
+  justify-content: center
+  text-align: center
+  max-width: 100%
+
+  &.osg-v-image
+    padding: 0
+    background: transparent
+    display: inline-block
+    img
+      display: block
+    &.osg-v-circle
+      border-radius: initial
+      img
+        border-radius: 50%
+
+  a
+    display: flex
+    align-items: center
+    align-self: stretch
+    justify-self: stretch
+    text-decoration: none
+
+  &.osg-v-circle
+    border-radius: 50%
+
+  &:not(.osg-v-image):before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    padding-top: 100%
+
+  span
+    display: inline-block
+    vertical-align: middle
+    max-width: 100%
+    margin: 35px

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "tags": [
+      "image",
+      "picture",
+      "figure",
+      "icons",
+      "data",
+      "information",
+      "happening"
+    ]
+  },
+  "event": {
+    "variant": "osg-v-default",
+    "heading": "Lorem ipsum dolor et",
+    "headerTag": "(ENG*)"
+  },
+  "figure": {
+    "variant": "osg-v-default",
+    "caption": "Img: Avaena idor",
+    "img": {
+      "alt": "Lorem ipsum",
+      "defaultUrl": "https://picsum.photos/960/740/?random"
+    }
+  },
+  "infoList": {
+    "icons": {
+      "entries": [
+        { "variant": "osg-v-icon-calendar",
+          "text": "Praesent 22. sed",
+          "subtext": "kl.17:22",
+          "linkText": "Vestibulum varius nisi",
+          "link": "#" },
+        { "variant": "osg-v-icon-location",
+          "text": "Fringilla Mattis Tortor",
+          "linkText": "Aliquam erat volutpat",
+          "link": "#" },
+        { "variant": "osg-v-icon-payment",
+          "text": "250 - 450 kr" }
+      ]
+    },
+    "asteriskText": "Lorem ipsum dolor et"
+  },
+  "button": {
+    "color": "green",
+    "content": "Praesent",
+    "variant": "osg-v-default"
+  },
+  "tags": {
+    "variant": "osg-v-underline",
+    "items": [
+      {
+        "tag": {
+          "content": "Ultrices/Turpis",
+          "url": "#"
+        }
+      },
+      {
+        "tag": {
+          "content": "Aliquet/Metus",
+          "url": "#"
+        }
+      },
+      {
+        "tag": {
+          "content": "Quam/Massa",
+          "url": "#"
+        }
+      }
+    ]
+  }
+}

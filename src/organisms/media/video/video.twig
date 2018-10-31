@@ -1,0 +1,23 @@
+<div class="osg-video {{ video.variant }} {{ video.modifiers | default(null) }}">
+{% if video.variant == "osg-v-video-custom-controls" %}
+  <button class="btn-overlay-play">
+    <div class="overlay-play"></div>
+    <span class="osg-sr-only">{{ video.playBtnText}}</span>
+  </button>
+{% endif %}
+  <video id="video"
+    {{video.variant == "osg-v-default" ? "controls" : ""}}
+    preload="auto"
+    poster="{{ video.posterUrl }}">
+    <source
+      src="{{ video.videoUrl }}"
+      type="video/mp4">
+    <track
+      label="Norsk"
+      kind="subtitles"
+      srclang="nb"
+      src="{{ video.subtitlesUrl }}"
+      default>
+  </video>
+  <div class="footer">{{ video.footer }}</div>
+</div>

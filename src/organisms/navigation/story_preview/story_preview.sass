@@ -1,0 +1,40 @@
+.osg-storyPreview
+  a
+    font-size: $font-size-18
+    +tablet-and-up
+      font-size: $font-size-24
+    line-height: 70px
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active
+      text-decoration: underline
+
+  .osg-text
+    margin-top: 40px
+    padding: 5px
+    .osg-ingress
+      font-size: $font-size-30
+  +tablet-and-up
+    display: flex
+    align-items: center
+    .osg-image
+      order: 1
+      margin-right: 60px
+    .osg-text
+      order: 2
+      .osg-ingress
+        font-size: $font-size-34
+    &.osg-m-right
+      .osg-image
+        order: 2
+        margin-left: 60px
+      .osg-text
+        order: 1
+  +desktop-and-up
+    .osg-text
+      .osg-ingress
+        font-size: $font-size-40
+
+

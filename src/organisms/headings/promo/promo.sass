@@ -1,0 +1,80 @@
+/* ---------------- VARIABLES -----------------*/
+$osg-margin-left-right-mobile: 15px
+$osg-margin-top-bottom-mobile: 25px
+$osg-margin-left-right-desktop: 75px
+$osg-margin-top-bottom-desktop: 25px
+
+.osg-promo
+  height: 80vh
+  color: $color-white
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    opacity: 0.3
+  +tablet-and-up
+    height: 700px
+  .osg-promo-content-container
+    padding: 30px 15px
+    height: 100%
+    +tablet-and-up
+      padding: 3rem 1.5rem
+  .osg-promo-content-wrapper
+    @extend .container
+    position: relative
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    .osg-promo-logo
+      figure
+        img
+          bottom: 0
+          height: auto
+          left: 0
+          right: auto
+          object-fit: unset
+          position: absolute
+          width: auto
+          +tablet-and-up
+            left: auto
+            right: 0
+
+  .osg-figure
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .osg-promo-content
+    padding: $osg-margin-top-bottom-mobile $osg-margin-left-right-mobile
+    text-align: center
+    z-index: 1
+    +tablet-and-up
+      padding: $osg-margin-top-bottom-desktop $osg-margin-left-right-desktop
+    h2
+      font-size: $font-size-34
+      text-shadow: 0 2px 4px rgba(80,80,80,0.5)
+      hyphens: none
+      word-break: break-word
+      +tablet-and-up
+        font-size: $font-size-60
+    button
+      font-size: $font-size-18
+      +tablet-and-up
+        font-size: $font-size-20
+    h2 + button, h2 + a
+      margin-top: 50px
+  &.osg-v-promo-intro
+    height: 100vh
+    +tablet-and-up
+      height: 800px

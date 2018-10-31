@@ -1,0 +1,9 @@
+<blockquote class="osg-quote {{ quote.modifiers | default(null) }}" {% if quote.citeSource is defined %} cite="{{quote.citeSource}}" {% endif %}>
+  {{quote.text}}
+
+  {% if quote.cite is defined %}
+    <footer>
+      <cite>{{quote.cite}}</cite>
+    </footer>
+  {% endif %}
+</blockquote>

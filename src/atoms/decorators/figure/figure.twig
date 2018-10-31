@@ -1,0 +1,24 @@
+<figure class="osg-figure {{ figure.variant }} {{ figure.modifiers | default(null) }}">
+  <picture>
+    {% if figure.img.mediaQueryUrls is defined %}
+      {% for img in figure.img.mediaQueryUrls %}
+        <source srcset="{{ img.url }}" media="({{ img.query }})" />
+      {% endfor %}
+    {% endif %}
+
+    {% if figure.link is defined %}
+      <a href="{{ figure.link.url | default('#') }}"
+        target="{{ figure.link.target | default('_self') }}">
+    {% endif %}
+        <img src="{{ figure.img.defaultUrl }}" alt="{{ figure.img.alt }}" />
+    {% if figure.link is defined %}
+      </a>
+    {% endif %}
+  </picture>
+
+  {% if figure.caption is defined %}
+    <figcaption class="osg-figcaption">
+      {{ figure.caption }}
+    </figcaption>
+  {% endif %}
+</figure>

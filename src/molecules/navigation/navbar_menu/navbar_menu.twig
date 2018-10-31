@@ -1,0 +1,50 @@
+<nav class="osg-navbar-menu {{ navbarMenu.variant|default('default') }} {{ navbarMenu.modifiers | default(null) }}">
+  <div class="osg-navbar-menu-overlay-wrapper">
+    <div class="osg-navbar-menu-overlay">
+    </div>
+  </div>
+  <div class="osg-navbar-hamburger">
+    <button class="osg-navbar-hamburger-icon" aria-haspopup="true" aria-expanded="false" aria-label="Main menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="osg-navbar-menu-content">
+    <div class="osg-navbar-hamburger-close">
+      <button class="osg-navbar-hamburger-icon" aria-haspopup="true" aria-expanded="true" aria-label="Main menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <section class="osg-menu-links">
+      <ul role="menu">
+        {% for link in navbarMenu.links|default([]) %}
+          <li>
+            <a href="{{ link.url }}" role="menuitem">{{ link.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for language in navbarMenu.languages|default([]) %}
+          <li>
+            <a href="{{ language.url }}" role="menuitem">{{ language.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <div>
+      <div class="osg-logos">
+        {% for figure in navbarMenu.logos.figures %}
+          {% include "atoms/decorators/figure/figure.twig" with figure %}
+        {% endfor %}
+
+        {% if navbarMenu.topDomainLink.url is defined %}
+          <a href="{{ navbarMenu.topDomainLink.url }}" target="_blank">{{ navbarMenu.topDomainLink.text }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

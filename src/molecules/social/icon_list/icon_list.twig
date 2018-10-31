@@ -1,0 +1,13 @@
+<div class="osg-icons {{ iconList.variant }} {{ iconList.modifiers | default(null) }}">
+{% set brands = iconList.brands %}
+
+{% if iconList.variant == "osg-v-vertical" %}
+  {% for item in brands %}
+    {% include "atoms/decorators/shape/shape.twig" with { shape: { variant: item.shape|default(null), text: item.icon, url: item.url } } %}
+  {% endfor %}
+{% else %}
+  {% for item in brands %}
+    {% include 'atoms/social/icon/icon.twig' with {icon: {brand: item.icon, text: item.text, textVisible: item.textVisible, url: item.url }} %}
+  {% endfor %}
+{% endif %}
+</div>

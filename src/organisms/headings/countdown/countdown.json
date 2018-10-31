@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "tags": [
+      "days",
+      "hours",
+      "minutes",
+      "seconds",
+      "time",
+      "date",
+      "clock"
+    ]
+  },
+  "countdown": {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "numberOfDays": 30,
+    "numberOfHours": 30,
+    "numberOfMinutes": 30,
+    "numberOfSeconds": 30,
+    "daysLabel": "Morbi",
+    "hoursLabel": "Velit",
+    "minutesLabel": "Consequat",
+    "secondsLabel": "Feugiat"
+  }
+}

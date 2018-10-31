@@ -1,0 +1,29 @@
+{% if toggleButton.link is defined %}
+  <a
+    href="{{ toggleButton.link }}"
+    class="osg-toggle-button {{ toggleButton.variant }} {{ toggleButton.modifiers | default(null) }}"
+    {% if toggleButton.dataattrs is defined %}
+      {% for dataattr in toggleButton.dataattrs %}
+        {{ dataattr.key }}={{ dataattr.val }}
+      {% endfor %}
+    {% endif %}
+  >
+{% else %}
+  <button
+    class="osg-toggle-button {{ toggleButton.variant }} {{ toggleButton.modifiers | default(null) }}"
+    {% if toggleButton.dataattrs is defined %}
+      {% for dataattr in toggleButton.dataattrs %}
+        {{ dataattr.key }}={{ dataattr.val }}
+      {% endfor %}
+    {% endif %}
+  >
+{% endif %}
+  {{ toggleButton.text }}
+  {% if toggleButton.icon is defined %}
+    {{ toggleButton.icon | raw }}
+  {% endif %}
+{% if toggleButton.link is defined %}
+  </a>
+{% else %}
+  </button>
+{% endif %}

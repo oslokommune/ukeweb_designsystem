@@ -1,0 +1,48 @@
+.osg-call-to-action
+  position: relative
+  margin-bottom: 12px
+  +tablet-and-up
+    height: 700px
+    margin-bottom: 0
+
+  .section
+    padding: 0
+    +tablet-and-up
+      padding-left: 1.5rem
+      padding-right: 1.5rem
+
+  .osg-call-to-action-content
+    overflow: hidden
+    +tablet-and-up
+      font-size: $font-size-32
+      padding: 50px 200px 50px 50px
+      position: relative
+      display: inline-block
+    +mobile-only()
+      h2
+        font-size: $font-size-20
+      font-size: $font-size-20
+      padding: 30px 60px 60px 25px
+      position: relative
+      margin-left: 30px
+      margin-top: -100px
+
+    background-color: $color-green-lighter
+    color: $color-green-dark
+    p
+      padding: 15px 0 30px 0
+      max-width: 300px
+
+  .osg-figure
+    width: 100%
+    img
+      object-fit: cover
+      height: 377px
+      width: 100%
+    +tablet-and-up
+      margin-top: 100px
+      position: absolute
+      img
+        height: 600px
+    +mobile-only()
+      transform: scaleX(-1)

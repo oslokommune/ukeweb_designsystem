@@ -1,0 +1,12 @@
+<div class="osg-text-field {{ textField.variant }} {{ textField.modifiers | default(null) }}">
+  <input
+    class="osg-text-field-input"
+    id="{{ textField.id }}"
+    name="{{ textField.name }}"
+    type="text"
+    required
+    placeholder="{{textField.placeholder}}" />
+  <label class="osg-text-field-label" for="{{ textField.id }}">
+    {{ textField.placeholder }}
+  </label>
+</div>

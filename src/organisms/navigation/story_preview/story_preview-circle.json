@@ -1,0 +1,8 @@
+{
+  "storyPreview": {
+    "variant": "osg-v-circle"
+  },
+  "shape": {
+    "variant": "osg-v-circle osg-v-image"
+  }
+}

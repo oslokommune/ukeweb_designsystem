@@ -1,0 +1,270 @@
+// ============================================================================
+// UTILS
+// ============================================================================
+//
+//  Provide a set of generated utility classes that can be used or extended by
+//  the consumer or in patterns.
+
+// generating color classes
+@each $name, $color in $osg-colors
+  .osg-text-#{$name}
+    color: $color !important
+  .osg-bg-#{$name}
+    background-color: $color !important
+
+// generating font weight classes
+@each $name, $size in $font-weights
+  .osg-text-is-#{$name}
+    font-family: 'Oslo Sans', 'sans-serif'
+    font-weight: $size !important
+
+// italic font class
+.osg-text-is-italic
+  font-family: 'Oslo Sans', 'sans-serif'
+  font-style: italic
+
+// generating spacing classes
+@each $name, $size in $spacing-sizes
+  .osg-padding-bottom-#{$name}
+    padding-bottom: $size
+  .osg-margin-bottom-#{$name}
+    margin-bottom: $size
+  .osg-padding-top-#{$name}
+    padding-top: $size
+  .osg-margin-top-#{$name}
+    margin-top: $size
+  .osg-padding-left-#{$name}
+    padding-left: $size
+  .osg-margin-left-#{$name}
+    margin-left: $size
+  .osg-padding-right-#{$name}
+    padding-right: $size
+  .osg-margin-right-#{$name}
+    margin-right: $size
+  .osg-padding-sides-#{$name}
+    padding-left: $size
+    padding-right: $size
+  .osg-margin-sides-#{$name}
+    margin-left: $size
+    margin-right: $size
+
+// generate spacing classes for mobile
+@each $name, $size in $spacing-sizes
+  .osg-padding-bottom-#{$name}-mobile
+    +mobile-only
+      padding-bottom: $size
+  .osg-margin-bottom-#{$name}-mobile
+    +mobile-only
+      margin-bottom: $size
+  .osg-padding-top-#{$name}-mobile
+    +mobile-only
+      padding-top: $size
+  .osg-margin-top-#{$name}-mobile
+    +mobile-only
+      margin-top: $size
+  .osg-padding-left-#{$name}-mobile
+    +mobile-only
+      padding-left: $size
+  .osg-margin-left-#{$name}-mobile
+    +mobile-only
+      margin-left: $size
+  .osg-padding-right-#{$name}-mobile
+    +mobile-only
+      padding-right: $size
+  .osg-margin-right-#{$name}-mobile
+    +mobile-only
+      margin-right: $size
+  .osg-padding-sides-#{$name}-mobile
+    +mobile-only
+      padding-left: $size
+      padding-right: $size
+  .osg-margin-sides-#{$name}-mobile
+    +mobile-only
+      margin-left: $size
+      margin-right: $size
+
+// generate spacing classes for tablet
+@each $name, $size in $spacing-sizes
+  .osg-padding-bottom-#{$name}-tablet
+    +tablet-and-up
+      padding-bottom: $size
+  .osg-margin-bottom-#{$name}-tablet
+    +tablet-and-up
+      margin-bottom: $size
+  .osg-padding-top-#{$name}-tablet
+    +tablet-and-up
+      padding-top: $size
+  .osg-margin-top-#{$name}-tablet
+    +tablet-and-up
+      margin-top: $size
+  .osg-padding-left-#{$name}-tablet
+    +tablet-and-up
+      padding-left: $size
+  .osg-margin-left-#{$name}-tablet
+    +tablet-and-up
+      margin-left: $size
+  .osg-padding-right-#{$name}-tablet
+    +tablet-and-up
+      padding-right: $size
+  .osg-margin-right-#{$name}-tablet
+    +tablet-and-up
+      margin-right: $size
+  .osg-padding-sides-#{$name}-tablet
+    +tablet-and-up
+      padding-left: $size
+      padding-right: $size
+  .osg-margin-sides-#{$name}-tablet
+    +tablet-and-up
+      margin-left: $size
+      margin-right: $size
+
+// generate spacing classes for desktop
+@each $name, $size in $spacing-sizes
+  .osg-padding-bottom-#{$name}-desktop
+    +desktop-and-up
+      padding-bottom: $size
+  .osg-margin-bottom-#{$name}-desktop
+    +desktop-and-up
+      margin-bottom: $size
+  .osg-padding-top-#{$name}-desktop
+    +desktop-and-up
+      padding-top: $size
+  .osg-margin-top-#{$name}-desktop
+    +desktop-and-up
+      margin-top: $size
+  .osg-padding-left-#{$name}-desktop
+    +desktop-and-up
+      padding-left: $size
+  .osg-margin-left-#{$name}-desktop
+    +desktop-and-up
+      margin-left: $size
+  .osg-padding-right-#{$name}-desktop
+    +desktop-and-up
+      padding-right: $size
+  .osg-margin-right-#{$name}-desktop
+    +desktop-and-up
+      margin-right: $size
+  .osg-padding-sides-#{$name}-desktop
+    +desktop-and-up
+      padding-left: $size
+      padding-right: $size
+  .osg-margin-sides-#{$name}-desktop
+    +desktop-and-up
+      margin-left: $size
+      margin-right: $size
+
+// generating font-sizes, bulma style
+@each $name, $size-desktop, $size-mobile in $font-sizes
+  .osg-text-is-size-#{$name}
+    font-size: $size-mobile
+    +tablet-and-up
+      font-size: $size-desktop
+
+// generating color helper classes
+@each $name, $color in $grayscale
+  .osg-bg-grayscale-#{$name}
+    background-color: #{$color}
+  .osg-text-grayscale-#{$name}
+    color: #{$color}
+
+// generating icon classes
+@each $name in $icon-names
+  .osg-icon-#{$name}
+    background: url('../../images/#{$name}.svg')
+    background-repeat: no-repeat
+    background-size: contain
+
+// generating text align classes
+@each $name in $alignment
+  .osg-text-#{$name}
+    text-align: #{$name}
+
+// generating flex direction classes
+@each $name in $direction
+  .osg-direction-#{$name}
+    flex-direction: #{$name}
+
+// Make header white
+.osg-header-inverted
+  .osg-header, .osg-header-underline
+    color: $color-white
+    box-shadow: 0px 2px 2px -2px rgba(255,255,255,1)
+    a
+      color: $color-white
+    .osg-header-title
+      text-shadow: 0 2px 4px rgba(53,53,53,0.5)
+    .osg-navbar-menu
+      .osg-navbar-hamburger .osg-navbar-hamburger-icon span
+        background: $color-white
+      &.osg-v-with-mobile-action-button .osg-navbar-hamburger .osg-navbar-hamburger-icon span
+        background: $color-green-dark
+        +tablet-and-up
+          background: $color-white
+    .osg-header-link
+      text-shadow: 0 2px 4px rgba(53,53,53,0.5)
+      i
+        color: $color-green-lighter
+
+// Overlay header with first promo element
+.osg-header-overlay
+  .osg-header
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 9999
+
+// Remove underline from header
+.osg-header-no-underline
+  .osg-header
+    box-shadow: none
+
+.osg-background-grey
+  background-color: #F2F2F2
+
+.is-sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
+.osg-animate-scale-up
+  +animation-scale-up(1.2s)
+
+.osg-animate-scale-in
+  +animation-scale-in(1.2s)
+
+.osg-animate-scale-in-text
+  +animation-scale-in-text(1.2s)
+
+/* animations */
+@keyframes scale-up
+  from
+    opacity: 0
+    transform: scale(.7)
+  to
+    opacity: 1
+    transform: scale(1)
+@keyframes scale-in
+  from
+    transform: scale(0)
+  to
+    transform: scale(1)
+@keyframes scale-in-text
+  0%
+    opacity: 0
+    transform: scale(.9)
+  75%
+    opacity: 0
+    transform: scale(.9)
+  100%
+    opacity: 1
+    transform: scale(1)
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1

@@ -1,0 +1,11 @@
+{
+  "toggleButton": {
+    "variant": "osg-v-with-icon",
+    "icon": "<i class='osg-icon-filter'></i>",
+    "dataattrs": [
+      {"key": "id", "val": "my-checkbox"},
+      {"key": "name", "val": "my-checkbox"}
+    ],
+    "modifiers": "osg-m-main-menu"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "tags": [
+      "hierarchy",
+      "sitemap",
+      "navigation",
+      "pages",
+      "go back"
+    ]
+  },
+  "breadcrumbs": {
+    "paths": [
+      {
+        "name": "Duis",
+        "url": "#"
+      },
+      {
+        "name": "sit 1",
+        "url": "#"
+      }
+    ]
+  }
+}

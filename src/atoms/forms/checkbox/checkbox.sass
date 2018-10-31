@@ -1,0 +1,66 @@
+.osg-checkbox
+  cursor: pointer
+  display: block
+  font-size: 16px
+  margin-bottom: 12px
+  padding-left: 35px
+  position: relative
+  user-select: none
+
+  & input
+    cursor: pointer
+    opacity: 0
+    position: absolute
+
+  .osg-checkmark
+    border: 2px solid $color-grayscale-20
+    height: 25px
+    left: 0
+    position: absolute
+    top: 0
+    width: 25px
+
+  &:hover input ~ .osg-checkmark
+    border: 2px solid $color-grayscale-40
+
+  & input:focus ~ .osg-checkmark
+    outline: -webkit-focus-ring-color auto 5px
+
+  .osg-checkmark:after
+    content: ""
+    display: none
+    position: absolute
+
+  & input:checked ~ .osg-checkmark:after
+    display: block
+
+  & .osg-checkmark:after
+    border: solid $color-green-dark
+    border-width: 0 3px 3px 0
+    height: 10px
+    left: 9px
+    top: 5px
+    transform: rotate(45deg)
+    width: 5px
+
+  &.osg-m-filter
+    .osg-checkmark
+      border: 2px solid transparent
+      left: 10px
+    &.osg-checkmark:after
+      border: 2px solid transparent
+    &:hover input ~ .osg-checkmark
+      border: 2px solid transparent
+    & .osg-checkmark:after
+      border: solid $color-green-light
+      border-width: 0 3px 3px 0
+      height: 10px
+      left: 9px
+      top: 5px
+      transform: rotate(45deg)
+      width: 5px
+    & input:checked + span
+        border-bottom: 3px solid $color-green-light
+    span
+      border-bottom: 3px solid $color-green-dark
+      color: $color-green-dark

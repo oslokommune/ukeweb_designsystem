@@ -1,0 +1,11 @@
+<div class="osg-contactPerson {{ contactPerson.variant }} {{ contactPerson.modifiers | default(null) }}">
+  {% include "atoms/decorators/shape/shape.twig" %}
+  <p><strong>{{ contactPerson.name }}</strong></p>
+  <p>{{ contactPerson.title }}</p>
+  {% if contactPerson.number is defined %}
+    <a href="tel:{{ contactPerson.number }}">{{ contactPerson.phonePrefix | default(null) }} {{ contactPerson.number }}</a>
+  {% endif %}
+  {% if contactPerson.email is defined %}
+  <a href="mailto:{{ contactPerson.email.address }}">{{ contactPerson.email.text }}</a>
+  {% endif %}
+</div>

@@ -1,0 +1,35 @@
+.osg-toggle-button
+  background: none
+  border: none
+  margin: 0
+  padding: 0 0 5px 0
+  font-size: $font-size-20
+  +tablet-and-up
+    font-size: $font-size-24
+    color: $color-green-dark
+    padding-bottom: 0 0 10px 0
+  &.osg-v-with-icon
+    > i, > div > span
+      padding-left: 5px
+      font-size: 0.8em
+  &.osg-m-active
+    border-bottom: 5px $color-green-lighter solid
+    font-weight: bold
+  &.osg-m-main-menu
+    color: $color-grey-dark
+  &.osg-m-open
+    color: transparent
+    font-size: 0
+    >.osg-icon-filter
+      transform: rotate(90deg)
+  >.osg-icon-filter
+    background: url('../../../assets/images/filter.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    display: inline-block
+    height: $font-size-18
+    vertical-align: middle
+    width: $font-size-18
+    +tablet-and-up
+      height: $font-size-30
+      width: $font-size-30

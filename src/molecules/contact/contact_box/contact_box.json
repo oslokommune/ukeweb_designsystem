@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "tags": [
+      "telephone number",
+      "email",
+      "address",
+      "postal",
+      "visitation"
+    ]
+  },
+  "contactBox": {
+    "phoneNumberTitle": "Lorem ipsum",
+    "phonePrefix": "+47",
+    "phoneNumber": "21 80 21 80",
+    "emailTitle": "Nam blandit",
+    "email": "fermentum@nec.diam",
+    "visitAddressTitle": "Curabitur",
+    "visitAddress": "Proin semper 4, 0161 Mauris",
+    "addressLink": {"text": "ligula ullamcorper", "url": "#"},
+    "postalAddressTitle": "Phasellus",
+    "postalAddressLine1": "Maecenas vestibulum varius nisi",
+    "postalAddressLine2": "Cras sed, 0037 Lorem"
+  }
+}

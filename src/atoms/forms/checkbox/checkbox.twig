@@ -1,0 +1,11 @@
+<label class="osg-checkbox {{ checkbox.variant }} {{ checkbox.modifiers | default(null) }}">
+  <input type="checkbox"
+    {% if checkbox.dataattrs is defined %}
+      {% for dataattr in checkbox.dataattrs %}
+        {{ dataattr.key }}={{ dataattr.val }}
+      {% endfor %}
+    {% endif %}
+  >
+  <span>{{ checkbox.text }}</span>
+  <span class="osg-checkmark"></span>
+</label>

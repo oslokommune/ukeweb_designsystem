@@ -1,0 +1,25 @@
+.osg-contactPerson
+  .osg-shape
+    @extend .osg-shape.osg-v-image
+    margin-bottom: 25px
+  &.osg-v-circle
+    .osg-shape
+      @extend .osg-shape.osg-v-circle
+  p:last-of-type
+    padding-bottom: 15px
+  a:first-of-type
+    padding-bottom: 5px
+  p, a
+    hyphens: auto
+    display: block
+    color: $color-grayscale-70
+    font-size: $font-size-14
+    +tablet-and-up
+      font-size: $font-size-20
+    strong
+      font-size: $font-size-16
+      color: $color-grayscale-70
+      +tablet-and-up
+        font-size: $font-size-20
+  a
+    text-decoration: underline

@@ -1,0 +1,53 @@
+.osg-event
+  position: relative
+  +desktop-and-up
+    .osg-event-header
+      padding-right: 570px
+  h2
+    font-size: $font-size-26
+    font-weight: bold
+    +tablet-and-up
+      font-size: $font-size-40
+    span
+      margin-left: 5px
+      font-size: $font-size-18
+  .osg-tags
+    margin-top: 25px
+  .osg-event-image
+    .osg-figure
+      display: block
+    +mobile-only()
+      margin-bottom: -80px
+    +desktop-and-up
+      margin-top: 40px
+    picture
+      order: 2
+      +desktop-and-up
+        order: 1
+        display: block
+        margin-right: 60px
+        padding-right: 100px
+    figcaption
+      position: absolute
+      margin-top: 0
+      bottom: 75px
+      left: 10px
+      +desktop-and-up
+        position: static
+    .osg-event-info
+      color: $color-green-dark
+      font-size: $font-size-14
+      i
+        font-size: $font-size-18
+      width: 100%
+      position: relative
+      top: -100px
+      padding-left: 10px
+      padding-right: 10px
+      +osg-until($osg-desktop)
+        order: 3
+      +desktop-and-up
+        width: 550px
+        position: absolute
+        top: 0
+        right: 0

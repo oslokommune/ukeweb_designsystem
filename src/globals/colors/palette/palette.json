@@ -1,0 +1,79 @@
+{
+  "palette": {
+    "colors": [
+      {
+        "name": "blue",
+        "hex": "#6fe9ff"
+      },
+      {
+        "name": "blue-light",
+        "hex": "#b3f5ff"
+      },
+      {
+        "name": "purple",
+        "hex": "#2a2859",
+        "dark": true
+      },
+      {
+        "name": "grey-lighter",
+        "hex": "#f2f2f2"
+      },
+      {
+        "name": "grey-light",
+        "hex": "#4a4a4a",
+        "dark": true
+      },
+      {
+        "name": "grey-dark",
+        "hex": "#333333",
+        "dark": true
+      },
+      {
+        "name": "grey-darker",
+        "hex": "#171414",
+        "dark": true
+      },
+      {
+        "name": "green",
+        "hex": "#43f8b6"
+      },
+      {
+        "name": "green-dark",
+        "hex": "#034b45",
+        "dark": true
+      },
+      {
+        "name": "green-light",
+        "hex": "#4e807c"
+      },
+      {
+        "name": "green-lighter",
+        "hex": "#c7f6c9"
+      },
+      {
+        "name": "green-faded",
+        "hex": "#628c89"
+      },
+      {
+        "name": "brown",
+        "hex": "#d0bfae"
+      },
+      {
+        "name": "brown-beige",
+        "hex": "#f8f0dd"
+      },
+      {
+        "name": "orange",
+        "hex": "#f9c66b"
+      },
+      {
+        "name": "red",
+        "hex": "#ff8274"
+      },
+      {
+        "name": "yellow",
+        "hex": "#F8F0DD"
+      }
+    ]
+  }
+}
