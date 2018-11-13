@@ -1,7 +1,11 @@
 <div class="osg-content-box {{ contentBox.modifiers | default(null) }}">
-  {% if contentBox.date is defined %}
-    <p class="osg-date">{{ contentBox.date }}</p>
-  {% endif %}
-  <h2>{{ contentBox.heading }}</h2>
-  <p>{{ contentBox.text }}</p>
+  {% block head %}
+    {% if contentBox.date is defined %}
+      <p class="osg-date">{{ contentBox.date }}</p>
+    {% endif %}
+  {% endblock %}
+  {% block body %}
+    <h2>{{ contentBox.heading }}</h2>
+    <p>{{ contentBox.text }}</p>
+  {% endblock %}
 </div>
