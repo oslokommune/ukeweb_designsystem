@@ -1,0 +1,14 @@
+<div class="osg-alert {{ alert.variant }} {{ alert.modifiers | default(null) }} osg-bg-{{ alert.bgColor | default('green-dark') }} osg-text-{{ alert.textColor | default('green') }}">
+  <div class="head">
+    <div class="message">{{ alert.message | default(null) }}</div>
+    <div class="updated">
+      {% if alert.updated is defined %}
+        {{ alert.updated.text | default(null) }}
+        {{ alert.updated.date | date("d M Y", "Europe/Paris") }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="oka-content">
+    {{ alert.content | raw | default(null) }}
+  </div>
+</div>

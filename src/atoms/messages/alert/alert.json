@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "tags": [
+      "message",
+      "messages",
+      "important",
+      "information"
+    ]
+  },
+  "alert": {
+    "variant": "osg-v-default",
+    "bgColor": "green",
+    "textColor": "green-dark",
+    "message": "Lorem Ipsum",
+    "updated": {
+      "date": "Tuesday November 13, 2018",
+      "text": "Oppdatert"
+    },
+    "content": ""
+  }
+}
