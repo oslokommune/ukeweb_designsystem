@@ -9,13 +9,12 @@
   },
   "alert": {
     "variant": "osg-v-default",
-    "bgColor": "green",
+    "bgColor": "green-lighter",
     "textColor": "green-dark",
     "message": "Lorem Ipsum",
     "updated": {
       "date": "Tuesday November 13, 2018",
       "text": "Oppdatert"
-    },
-    "content": ""
+    }
   }
 }
