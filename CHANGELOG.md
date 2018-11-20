@@ -12,7 +12,8 @@ See README.md for release description.
 * Item
 
 ### Added
-* Item
+* Icon chevron right
+* Molecule expand box
 
 ### Changed
 * Item
