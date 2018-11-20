@@ -1,0 +1,32 @@
+<div class="osg-expand-box {{ expandBox.variant|default('default') }} {{ expandBox.modifiers | default(null) }}">
+  <div class="osg-title-line">
+    <div class="osg-title-line-text">
+      <h3>{{ expandBox.title }}</h3>
+    </div>
+    {% include "atoms/buttons/button/button.twig" %}
+  </div>
+  <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
+    <ul>
+      {% for element in expandBox.list %}
+        <li>- {{element}}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{expandBox.link.url}}">{% include "atoms/icons/icon/icon.twig" %} {{expandBox.link.text}}</a>
+  </div>
+</div>
+
+<script>
+  const button = document.querySelector(".osg-button")
+  button.addEventListener("click", e => {
+    const box = document.querySelector(".osg-expand-box")
+    if(box.classList.contains("osg-v-default")) {
+      button.innerHTML = "<div class='osg-shape osg-v-circle '><span><i class='fas fa-chevron-up'></i></span></div>"
+      box.classList.remove("osg-v-default")
+      box.classList.add("osg-v-open")
+    } else {
+      button.innerHTML = "<div class='osg-shape osg-v-circle '><span><i class='fas fa-chevron-down'></i></span></div>"
+      box.classList.remove("osg-v-open")
+      box.classList.add("osg-v-default")
+    }
+  })
+</script>
