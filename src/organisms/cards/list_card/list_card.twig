@@ -1,14 +1,33 @@
 <div class="osg-list-card {{ listCard.modifiers | default(null) }}">
-  <a href="{{ listCard.link }}">
-    <div>
-      {% include 'atoms/decorators/shape/shape.twig' %}
-      {% if listCard.stateText is defined %}
-        <div class="osg-state-text">{{ listCard.stateText }}</div>
-      {% endif %}
-      {% include 'molecules/content_display/content_box/content_box.twig' %}
-    </div>
+  <a href="{{ listCard.url }}">
+    {% include 'atoms/decorators/shape/shape.twig' %}
+    {% if listCard.stateText is defined %}
+      <div class="osg-state-text">{{ listCard.stateText }}</div>
+    {% endif %}
   </a>
-  {% if tags is defined %}
-    {% include 'molecules/navigation/tags/tags.twig' %}
-  {% endif %}
+  {% embed 'molecules/content_display/content_box/content_box.twig' %}
+    {% block head %}
+      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
+    {% endblock %}
+    {% block body %}
+      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
+    {% endblock %}
+    {% block bottom %}
+      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
+      {% if tags is defined %}
+        {% include 'molecules/navigation/tags/tags.twig' %}
+      {% endif %}
+      {% if listCard.searchResult is defined %}
+        <a href="{{ listCard.url }}" class="osg-search-result">
+          {{ listCard.searchResult | default(null) }}
+        </a>
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
 </div>
