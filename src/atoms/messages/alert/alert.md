@@ -8,7 +8,7 @@ For displaying an important message.
 | textColor | String | See the color options section | "green-dark" | Name of text color |
 | message | String | Clean string content | null | Text displayed in top left corner |
 | updated.text | String | Clean string content | null | Text to be displayed before date |
-| updated.date | Date | Valid date format | null | Date displayed in top right corner |
+| updated.date | String | Clean string content | null | Date to be displayed in top right corner |
 | content | html | html content | null | Used to display additional information. Will be parsed as html. |
 
 ### Color options

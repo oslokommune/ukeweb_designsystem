@@ -5,7 +5,7 @@
       <div class="updated">
         {% if alert.updated is defined %}
           {{ alert.updated.text | default(null) }}
-          {{ alert.updated.date | date("d M Y", "Europe/Paris") }}
+          {{ alert.updated.date | default(null) }}
         {% endif %}
       </div>
     </div>
