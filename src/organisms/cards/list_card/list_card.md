@@ -14,6 +14,9 @@ Mobile should be 150x150px and from tablet and up should be 250x250px.
 | *url | String | clean string content | null | Link to wrap the whole card in |
 | stateText | String | clean string content | null | Text to be displayed on top of the image. Used together with modifier osg-m-with-state to have effect. |
 | searchResult | String | clean string content | null | Facilitates the need to display part of a text content related to the destination of the url, as part of a search solution. Used together with the modifier osg-m-show-search-result to have effect. |
+| alert | Object | See the alert atom for details | null | See the alert atom for details |
+
+(*) mandatory
 
 ### Modifiers
 - animate: see documentation for the card pattern for tips on how to trigger animations.
