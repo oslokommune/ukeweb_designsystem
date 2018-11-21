@@ -1,17 +1,23 @@
 <div class="osg-event {{ event.modifiers | default(null) }}">
-  <div class="osg-event-header">
-    <h2>
-      {{ event.heading }}
-      {% if event.headerTag is defined %}
-        <span>{{ event.headerTag }}</span>
-      {% endif %}
-    </h2>
-    {% include "molecules/navigation/tags/tags.twig" %}
-  </div>
-  <div class="osg-event-image">
-    {% include "atoms/decorators/figure/figure.twig" %}
-    <div class="osg-event-info">
-      {% include "molecules/data_display/info_list/info_list.twig" %}
+  {% block head %}
+    <div class="osg-event-header">
+      <h2>
+        {{ event.heading }}
+        {% if event.headerTag is defined %}
+          <span>{{ event.headerTag }}</span>
+        {% endif %}
+      </h2>
+      {% include "molecules/navigation/tags/tags.twig" %}
     </div>
-  </div>
+  {% endblock %}
+  {% block body %}
+    <div class="osg-event-image">
+      {% include "atoms/decorators/figure/figure.twig" %}
+      <div class="osg-event-info">
+        {% include "molecules/data_display/info_list/info_list.twig" %}
+      </div>
+    </div>
+  {% endblock %}
+  {% block foot %}
+  {% endblock %}
 </div>
