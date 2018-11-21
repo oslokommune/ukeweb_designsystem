@@ -12,7 +12,7 @@
       <h2>{{ contentBox.heading }}</h2>
       <p>{{ contentBox.text }}</p>
     {% endblock %}
-    {% block bottom %}
+    {% block footer %}
       {% if contentBox.content is defined %}
         <div class="osg-content">
           {{ contentBox.content | raw }}
