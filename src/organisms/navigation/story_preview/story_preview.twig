@@ -3,7 +3,11 @@
       {% include 'atoms/decorators/shape/shape.twig' %}
     </div>
     <div class="osg-text">
+      <p>Folk i næringslivet</p>
       {% include 'atoms/text/ingress/ingress.twig' %}
-      <a href="{{ storyPreview.link.url }}">{{ storyPreview.link.text }}</a>
+      <a href="{{ storyPreview.link.url }}">
+        {% include 'atoms/icons/icon/icon.twig' %}
+        {{ storyPreview.link.text }}
+      </a>
     </div>
 </div>

@@ -12,10 +12,19 @@
       text-decoration: underline
 
   .osg-text
+    p
+      font-size: $font-size-20
+      color: $color-green-dark
+    a
+      display: flex
+      align-items: center
+      font-size: $font-size-18
+      i
+        font-size: $font-size-14
     margin-top: 40px
     padding: 5px
     .osg-ingress
-      font-size: $font-size-30
+      font-size: $font-size-28
   +tablet-and-up
     display: flex
     align-items: center
@@ -25,16 +34,17 @@
     .osg-text
       order: 2
       .osg-ingress
-        font-size: $font-size-34
+        font-size: $font-size-40
+      p
+        font-size: $font-size-28
+      a
+        font-size: $font-size-24
     &.osg-m-right
       .osg-image
         order: 2
         margin-left: 60px
       .osg-text
         order: 1
-  +desktop-and-up
-    .osg-text
-      .osg-ingress
-        font-size: $font-size-40
+    
 
 

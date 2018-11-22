@@ -40,6 +40,9 @@
       ]
     }
   },
+  "icon": {
+    "variant": "osg-v-default"
+  },
   "ingress": {
     "text": "Phasellus sed hendrerit"
   }
