@@ -12,8 +12,8 @@ See README.md for release description.
 * Item
 
 ### Added
-* Icon chevron right
-* Molecule expand box
+* atoms-icons-icon: added icon chevron right
+* molecules-content_display-expand_box: new pattern.
 
 ### Changed
 * Item

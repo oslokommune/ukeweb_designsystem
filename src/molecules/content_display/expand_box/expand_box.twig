@@ -1,4 +1,4 @@
-<div class="osg-expand-box {{ expandBox.variant|default('default') }} {{ expandBox.modifiers | default(null) }}">
+<div class="osg-expand-box {{ expandBox.variant }} {{ expandBox.modifiers | default(null) }}">
   <div class="osg-title-line">
     <div class="osg-title-line-text">
       <h3>{{ expandBox.title }}</h3>
@@ -8,9 +8,9 @@
   <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
     <ul>
       {% for element in expandBox.list %}
-        <li>- {{element}}</li>
+        <li>- {{ element }}</li>
       {% endfor %}
     </ul>
-    <a href="{{expandBox.link.url}}">{% include "atoms/icons/icon/icon.twig" %} {{expandBox.link.text}}</a>
+    <a href="{{ expandBox.link.url }}">{% include "atoms/icons/icon/icon.twig" %} {{ expandBox.link.text }}</a>
   </div>
 </div>
