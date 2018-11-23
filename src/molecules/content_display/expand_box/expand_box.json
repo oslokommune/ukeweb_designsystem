@@ -10,7 +10,6 @@
   "expandBox": {
     "variant": "osg-v-default",
     "title": "Fusce porta",
-    "expanded": "false",
     "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."},
     "list": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac arcu eget leo ultrices tincidunt. Vivamus eleifend, enim ornare aliquet posuere, enim",
