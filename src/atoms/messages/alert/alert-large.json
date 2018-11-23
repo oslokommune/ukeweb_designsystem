@@ -1,0 +1,7 @@
+{
+  "alert": {
+    "variant": "osg-v-large",
+    "content": "<h3 class='osg-padding-top-small'>Lorem ipsum</h3><p>In sagittis neque risus, eu tempor urna gravida ut. Donec commodo tempus velit. Maecenas aliquam orci ex, non feugiat risus convallis at. <a href='#'>Sed bibendum rhoncus viverra.</a></p>",
+    "modifiers": "osg-padding-top-large osg-padding-bottom-large"
+  }
+}

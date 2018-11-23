@@ -9,17 +9,24 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-* Item
+* molecules-content_display-content_box: added twig blocks.
+* organisms-cards-card: added twig blocks and expanded docs.
+* organisms-cards-shapeCard: added twig blocks and expanded docs.
+* organisms-cards-listCard: added twig blocks and expanded docs.
+* organisms-headings-event: added twig blocks.
 
 ### Added
 * atoms-icons-icon: added icon chevron right
 * molecules-content_display-expand_box: new pattern.
+* atoms-messages-alert: new pattern.
+* molecules-content_display-content_box: added alert atom.
 
 ### Changed
-* Item
+* organisms-cards-card: embedding content_box and expanding its blocks with with tags and search.
+* organisms-cards-shapeCard: embedding content_box and expanding its blocks with with tags and search.
+* organisms-cards-listCard: embedding content_box and expanding its blocks with with tags and search.
 
 ### Removed
-* Item
 
 
 ## [0.5.0] - 2018-10-31
