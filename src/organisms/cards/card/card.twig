@@ -1,5 +1,5 @@
 <div class="osg-card {{ card.variant }} {{ card.modifiers | default(null) }}">
-  <a class="osg-wrapper" href="{{ card.url }}">
+  <a class="osg-wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
     <div class="osg-image-container">
       {% include "atoms/decorators/figure/figure.twig" %}
       {% if card.stateText is defined %}
