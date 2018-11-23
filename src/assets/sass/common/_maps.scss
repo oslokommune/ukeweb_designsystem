@@ -40,12 +40,12 @@ $grayscale: (
 
 // used to generate spacing classes in utils.sass
 $spacing-sizes: (
-  "tiny": 10px,
-  "small": 20px,
-  "medium": 30px,
-  "large": 40px,
-  "huge": 60px,
-  "none": 0
+  "none": $space-none,
+  "tiny": $space-tiny,
+  "small": $space-small,
+  "medium": $space-medium,
+  "large": $space-large,
+  "huge": $space-huge
 );
 
 // used to generate font-size classes in utils.sass
