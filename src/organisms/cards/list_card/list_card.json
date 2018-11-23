@@ -12,11 +12,11 @@
     ]
   },
   "listCard": {
-    "link": "#",
-    "variant": "osg-v-default",
-    "stateText": "Blandit"
+    "url": "#",
+    "variant": "osg-v-default"
   },
   "contentBox": {
+    "variant": "osg-v-default",
     "date": "7. vesiturum - 11. eleifend",
     "heading": "Pellentesque habitant morbi",
     "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."

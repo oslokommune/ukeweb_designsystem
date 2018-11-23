@@ -5,11 +5,10 @@
   },
   "shapeCard": {
     "variant": "osg-v-default",
-    "url": "#",
-    "stateText": "Avsluttet",
-    "searchResult": "...some search term..."
+    "url": "#"
   },
   "contentBox": {
+    "variant": "osg-v-default",
     "date": "7. august - 11. september",
     "heading": "Pellentesque habitant morbi",
     "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
