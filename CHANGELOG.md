@@ -21,8 +21,10 @@ See README.md for release description.
 
 ### Added
 * atoms-messages-alert: new pattern.
+* atoms-forms-text: state field. see docs for text for details.
 * molecules-content_display-content_box: added alert atom.
 * global: added color util classes.
+* global: added state util classes.
 
 ### Changed
 * atoms-buttons-button: changed button color class with button state class (non breaking change for twig consumers).
