@@ -14,6 +14,7 @@ See README.md for release description.
 * organisms-cards-shapeCard: added twig blocks and expanded docs.
 * organisms-cards-listCard: added twig blocks and expanded docs.
 * organisms-headings-event: added twig blocks.
+* organisms-media-video: made poster image optional.
 * global: made size-1 one a little bit smaller.
 
 ### Added
