@@ -8,7 +8,6 @@
     ]
   },
   "button": {
-    "color": "green",
     "content": "Lorem Ipsum",
     "variant": "osg-v-default",
     "dataattrs": [
