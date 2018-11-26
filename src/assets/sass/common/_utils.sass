@@ -12,6 +12,12 @@
   .osg-color-bg-#{$name}
     background-color: $color !important
 
+@each $name, $tuple in $osg-named-colors
+  // $osg-named-colors is a map from name to a tuple with two color values which we extract using the nth function
+  .osg-color-#{$name}
+    background-color: nth($tuple, 1) !important
+    color: nth($tuple, 2) !important
+
 // generating font weight classes
 @each $name, $size in $font-weights
   .osg-text-is-#{$name}
