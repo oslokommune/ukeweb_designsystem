@@ -18,6 +18,7 @@ See README.md for release description.
 ### Added
 * atoms-messages-alert: new pattern.
 * molecules-content_display-content_box: added alert atom.
+* global: added color util classes.
 
 ### Changed
 * organisms-cards-card: embedding content_box and expanding its blocks with with tags and search.
