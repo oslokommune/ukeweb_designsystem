@@ -3,7 +3,7 @@ For displaying an important message.
 
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| *variant | String | [1]osg-v-default, [2]osg-v-large | undefined | [1]Default variant, [2]Example of how to the alert more expansive |
+| variant | String | [1]osg-v-default, [2]osg-v-large | undefined | [1]Default variant, [2]Example of how to the alert more expansive |
 | bgColor | String | See the color options section | "green" | Name of background color |
 | textColor | String | See the color options section | "green-dark" | Name of text color |
 | message | String | Clean string content | null | Text displayed in top left corner |
