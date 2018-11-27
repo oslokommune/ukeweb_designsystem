@@ -3,7 +3,7 @@
     <a href="{{ shape.url }}" target="_blank">
   {% endif %}
 
-  {% if "osg-v-image" in shape.variant %}
+  {% if "osg-v-image" in shape.variant | default('osg-v-default') %}
     {% include "atoms/decorators/figure/figure.twig" %}
   {% else %}
     <span>{{ shape.text|raw }}</span>
