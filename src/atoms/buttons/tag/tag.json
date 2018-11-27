@@ -7,7 +7,7 @@
     ]
   },
   "tag": {
-    "color": "green",
+    "variant": "oka-v-default",
     "content": "Nunc elit risus",
     "url": "#"
   }

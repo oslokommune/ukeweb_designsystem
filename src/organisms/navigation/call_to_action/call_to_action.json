@@ -21,7 +21,6 @@
     }
   },
   "button": {
-    "color": "green",
     "content": "Fusce rutrum",
     "variant": "osg-v-default",
     "link": "#"

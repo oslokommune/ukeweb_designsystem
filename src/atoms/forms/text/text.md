@@ -1,7 +1,21 @@
 ### General
 Textfield for user input
 
-#### Modifiers
-- .osg-m-no-border: Remove border from textfield
-- .osg-m-big: Makes the textfield bigger
-- .osg-m-error: changes the background-color to the error color
+### Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| *variant | String  | osg-v-default | "osg-v-default" | Name of the variant |
+| modifiers | String | "osg-m-big" | null | Makes text field bigger |
+| state | String | See the color options section | "success" | Sets state colors for text and background using global css classes |
+| *id | String | Clean text content | null | input id attribute |
+| *placeholder | String | Clean text content | null | input placeholder attribute, and label text |
+| *name | String | Clean text content | null | input name attribute |
+
+(*) mandatory
+
+### State options
+- "muted"
+- "primary"
+- "success"
+- "warning"
+- "danger"

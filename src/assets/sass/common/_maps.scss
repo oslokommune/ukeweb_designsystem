@@ -26,6 +26,14 @@ $osg-colors: (
 "white": $color-white
 );
 
+$osg-named-colors: (
+  "muted": $color-grayscale-10 $color-grayscale-80,
+  "primary": $color-blue-light $color-grey-dark,
+  "success": $color-green-lighter $color-grey-dark,
+  "warning": $color-orange $color-grey-dark,
+  "danger": $color-red $color-grey-dark
+);
+
 $grayscale: (
   10: $color-grayscale-10,
   20: $color-grayscale-20,
