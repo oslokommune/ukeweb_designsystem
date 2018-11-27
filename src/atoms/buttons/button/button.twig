@@ -3,7 +3,7 @@
 {% if button.link is defined %}
 <a
   href="{{ button.link }}"
-  class="osg-button {{ button.variant }} {{ color }} {{ button.modifiers | default(null) }}"
+  class="osg-button {{ button.variant | default('oka-v-default')  }} {{ color }} {{ button.modifiers | default(null) }}"
   {% if button.dataattrs is defined %}
   {% for dataattr in button.dataattrs %}
   {{dataattr.key}}={{dataattr.val}}
@@ -12,7 +12,7 @@
 >
 {% else %}
 <button
-  class="osg-button {{ button.variant }} {{ color }}"
+  class="osg-button {{ button.variant | default('oka-v-default')  }} {{ color }}"
   {% if button.dataattrs is defined %}
   {% for dataattr in button.dataattrs %}
   {{dataattr.key}}={{dataattr.val}}

@@ -1,4 +1,4 @@
-<figure class="osg-figure {{ figure.variant }} {{ figure.modifiers | default(null) }}">
+<figure class="osg-figure {{ figure.variant | default('oka-v-default')  }} {{ figure.modifiers | default(null) }}">
   <picture>
     {% if figure.img.mediaQueryUrls is defined %}
       {% for img in figure.img.mediaQueryUrls %}

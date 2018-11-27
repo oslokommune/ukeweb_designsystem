@@ -1,4 +1,4 @@
-<div class="osg-text-field {{ textField.variant }} {{ textField.modifiers | default(null) }}">
+<div class="osg-text-field {{ textField.variant | default('oka-v-default')  }} {{ textField.modifiers | default(null) }}">
   <input
     class="osg-text-field-input"
     id="{{ textField.id }}"

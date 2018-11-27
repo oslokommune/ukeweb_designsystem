@@ -1,4 +1,4 @@
-<div class="osg-video {{ video.variant }} {{ video.modifiers | default(null) }}">
+<div class="osg-video {{ video.variant | default('oka-v-default')  }} {{ video.modifiers | default(null) }}">
 {% if video.variant == "osg-v-video-custom-controls" %}
   <button class="btn-overlay-play">
     <div class="overlay-play"></div>

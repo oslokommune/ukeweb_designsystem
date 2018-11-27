@@ -1,4 +1,4 @@
-<div class="osg-shape {{ shape.variant }} {{ shape.modifiers | default(null) }}">
+<div class="osg-shape {{ shape.variant | default('oka-v-default')  }} {{ shape.modifiers | default(null) }}">
   {% if shape.url is defined %}
     <a href="{{ shape.url }}" target="_blank">
   {% endif %}

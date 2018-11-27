@@ -1,4 +1,4 @@
-<div class="osg-content-box {{ contentBox.variant }} {{ contentBox.modifiers | default(null) }}">
+<div class="osg-content-box {{ contentBox.variant | default('oka-v-default')  }} {{ contentBox.modifiers | default(null) }}">
   {% if alert is defined %}
     {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}

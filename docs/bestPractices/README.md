@@ -92,7 +92,7 @@ For example:
 
 ```twig
 {# button.twig #}
-<div class="{{ button.variant }}">
+<div class="{{ button.variant | default('oka-v-default')  }}">
 ```
 
 ## Modifiers
@@ -145,7 +145,7 @@ this to all components that should have the textblock on the right side.
 
 ```twig
 {# article.twig #}
-<div class="{{ article.variant }} {{ article.modifiers | default(null) }}">
+<div class="{{ article.variant | default('oka-v-default')  }} {{ article.modifiers | default(null) }}">
 ```
 
 ```twig

@@ -1,4 +1,4 @@
-<div class="osg-alert {{ alert.variant }} {{ alert.modifiers | default(null) }} osg-bg-{{ alert.bgColor | default('green-dark') }} osg-text-{{ alert.textColor | default('green') }}">
+<div class="osg-alert {{ alert.variant | default('oka-v-default')  }} {{ alert.modifiers | default(null) }} osg-bg-{{ alert.bgColor | default('green-dark') }} osg-text-{{ alert.textColor | default('green') }}">
   {% block head %}
     <div class="osg-head">
       <div class="osg-message">

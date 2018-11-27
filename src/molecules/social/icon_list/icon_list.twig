@@ -1,4 +1,4 @@
-<div class="osg-icons {{ iconList.variant }} {{ iconList.modifiers | default(null) }}">
+<div class="osg-icons {{ iconList.variant | default('oka-v-default')  }} {{ iconList.modifiers | default(null) }}">
 {% set brands = iconList.brands %}
 
 {% if iconList.variant == "osg-v-vertical" %}
