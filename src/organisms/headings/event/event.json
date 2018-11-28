@@ -40,8 +40,8 @@
     "asteriskText": "Lorem ipsum dolor et"
   },
   "button": {
-    "color": "green",
-    "content": "Praesent"
+    "content": "Praesent",
+    "variant": "osg-v-default"
   },
   "tags": {
     "variant": "osg-v-underline",

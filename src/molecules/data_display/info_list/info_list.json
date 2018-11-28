@@ -43,7 +43,7 @@
     "asteriskText": "Lorem ipsum dolor et"
   },
   "button": {
-    "color": "green",
-    "content": "Quisque"
+    "content": "Quisque",
+    "variant": "osg-v-default"
   }
 }

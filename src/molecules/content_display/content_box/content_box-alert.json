@@ -3,8 +3,7 @@
     "variant": "osg-v-alert"
   },
   "alert": {
-    "bgColor": "green-lighter",
-    "textColor": "green-dark",
+    "variant": "osg-v-default",
     "message": "Lorem Ipsum",
     "updated": {
       "date": "Tuesday November 13, 2018",

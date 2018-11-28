@@ -1,3 +1,16 @@
+=osg-tag-helper($color-name, $background, $foreground)
+  .osg-tag.osg-tag-#{$color-name}
+    color: $foreground
+    border: 2px solid $background
+    &:hover, &:active, &:focus, &:visited
+      background-color: $background
+
+// looping map from maps.scss
+@each $name, $tuple in $osg-named-colors
+  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
+  +osg-tag-helper($name, nth($tuple, 1), nth($tuple, 2))
+
+
 .osg-tag
   display: inline-block
   color: $color-grayscale-90
@@ -8,8 +21,3 @@
   transition: background-color .2s
   &:hover, &:active, &:focus, &:visited
     background-color: $color-grayscale-10
-  &.osg-tag-green
-    color: $color-green-dark
-    border: 2px solid $color-green-lighter
-    &:hover, &:active, &:focus, &:visited
-      background-color: $color-green-lighter

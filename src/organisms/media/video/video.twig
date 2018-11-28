@@ -8,7 +8,10 @@
   <video id="video"
     {{ video.variant is defined and video.variant == "osg-v-default" ? "controls" : "" }}
     preload="auto"
-    poster="{{ video.posterUrl }}">
+    {% if video.posterUrl %}
+      poster="{{ video.posterUrl }}"
+    {% endif %}
+    >
     <source
       src="{{ video.videoUrl }}"
       type="video/mp4">

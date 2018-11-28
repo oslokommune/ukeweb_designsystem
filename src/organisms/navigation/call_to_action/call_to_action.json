@@ -20,7 +20,6 @@
     }
   },
   "button": {
-    "color": "green",
     "content": "Fusce rutrum",
     "link": "#"
   }

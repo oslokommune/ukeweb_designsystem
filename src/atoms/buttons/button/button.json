@@ -8,7 +8,6 @@
     ]
   },
   "button": {
-    "color": "green",
     "content": "Lorem Ipsum",
     "dataattrs": [
       {"key": "id", "val": "lorem_ipsum"},

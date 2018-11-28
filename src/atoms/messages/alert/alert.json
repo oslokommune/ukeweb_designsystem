@@ -8,8 +8,7 @@
     ]
   },
   "alert": {
-    "bgColor": "green-lighter",
-    "textColor": "green-dark",
+    "variant": "osg-v-default",
     "message": "Lorem Ipsum",
     "updated": {
       "text": "Oppdatert",
