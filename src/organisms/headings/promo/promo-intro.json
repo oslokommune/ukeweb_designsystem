@@ -5,11 +5,9 @@
     "showLogo": true,
     "button": {
       "color": "green-light",
-      "content": "Lorem ipsum",
-      "variant": "osg-v-default"
+      "content": "Lorem ipsum"
     },
     "logo": {
-      "variant": "osg-v-default",
       "img": {
         "alt": "Lorem ipsum",
         "defaultUrl": "https://picsum.photos/60/96/?random",

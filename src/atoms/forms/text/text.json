@@ -9,7 +9,6 @@
   "textField": {
     "id": "vestibulum1",
     "placeholder": "Nunc elit risus",
-    "variant": "osg-v-default",
     "name": "textfield"
   }
 }

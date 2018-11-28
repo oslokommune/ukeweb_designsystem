@@ -23,7 +23,6 @@
     "languages": [
       {"text": "Vivamus", "url": "#"}
     ],
-    "variant": "osg-v-default",
     "topDomainLink": {
       "url": "#",
       "text": "Oslo kommune"
@@ -31,7 +30,6 @@
     "logos": {
       "figures": [
         {
-          "variant": "osg-v-default",
           "link": {
             "url": "#",
             "target":"_self"

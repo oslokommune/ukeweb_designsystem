@@ -1,4 +1,4 @@
-<label class="osg-checkbox {{ checkbox.variant }} {{ checkbox.modifiers | default(null) }}">
+<label class="osg-checkbox {{ checkbox.variant | default('osg-v-default')  }} {{ checkbox.modifiers | default(null) }}">
   <input type="checkbox"
     {% if checkbox.dataattrs is defined %}
       {% for dataattr in checkbox.dataattrs %}

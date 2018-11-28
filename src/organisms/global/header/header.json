@@ -14,7 +14,6 @@
     "min-height": "500px"
   },
   "header": {
-    "variant": "osg-v-default",
     "title": {
       "text": "Lorem ipsum dolor sit amet",
       "url": "#",
@@ -38,7 +37,6 @@
       "languages": [
         {"text": "Curabitut", "url": "#"}
       ],
-      "variant": "osg-v-default",
       "topDomainLink": {
         "url": "#",
         "text": "Oslo kommune"
@@ -46,7 +44,6 @@
       "logos": {
         "figures": [
           {
-            "variant": "osg-v-default",
             "img": {
               "alt": "Lorem ipsum",
               "defaultUrl": "https://picsum.photos/65/105/?random",
