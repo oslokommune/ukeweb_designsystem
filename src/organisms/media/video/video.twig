@@ -19,7 +19,9 @@
       label="Norsk"
       kind="subtitles"
       srclang="nb"
-      src="{{ video.subtitlesUrl }}"
+      {% if video.subtitlesUrl is defined %}
+        src="{{ video.subtitlesUrl }}"
+      {% endif %}
       default>
   </video>
   <div class="footer">{{ video.footer }}</div>
