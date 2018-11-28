@@ -75,9 +75,9 @@ The name of the variable contains the size of the font in pixels, and the value 
 ## Variant
 A pattern can have different variants which shows different format for the same pattern.
 Things to keep in mind when using variants:
-+ The format of the variant file is: `nameOfPattern_variantName.json`, where `variantName` doesn't include the oka-v prefix.
-+ One variant has to be set as default with the variant name **'oka-v-default'**. The default variant will merge its data with the other variants.
-+ The value of the variant has to be prefixed with 'oka-v-', like the css classes.
++ The format of the variant file is: `nameOfPattern_variantName.json`, where `variantName` doesn't include the osg-v prefix.
++ One variant has to be set as default with the variant name **'osg-v-default'**. The default variant will merge its data with the other variants.
++ The value of the variant has to be prefixed with 'osg-v-', like the css classes.
 + The value of the variant will be included as a css class even thought it doesn't have any styles defined. The reason is to provide better DOM inspection on the consumer.
 For example:
 ```json
@@ -85,14 +85,14 @@ For example:
 {
   "button": {
     "content": "Bacon Ipsum",
-    "variant": "oka-v-is-circle"
+    "variant": "osg-v-is-circle"
   }
 }
 ```
 
 ```twig
 {# button.twig #}
-<div class="{{ button.variant | default('oka-v-default')  }}">
+<div class="{{ button.variant | default('osg-v-default')  }}">
 ```
 
 ## Modifiers
@@ -111,7 +111,7 @@ Variants and modifiers differ in multiple ways:
 + Only changes the styling of a component. Should not add/remove elements
 
 An example usecase for a modifier could be for alternating the position of an element when using a component in a list. Lets say you have a component with a text block on the left side.
-In your list you want this block to be displayed on the right side for every other compoenent. In this case you could make a modifier called `.oka-m-textblock-right` and append
+In your list you want this block to be displayed on the right side for every other compoenent. In this case you could make a modifier called `.osg-m-textblock-right` and append
 this to all components that should have the textblock on the right side.
 
 ```json
@@ -123,7 +123,7 @@ this to all components that should have the textblock on the right side.
         "article": {
           "title": "Title of article",
           "content": "Article content",
-          "variant": "oka-v-default",
+          "variant": "osg-v-default",
           "modifiers": "",
           ...
         }
@@ -132,8 +132,8 @@ this to all components that should have the textblock on the right side.
         "article": {
           "title": "Title of article",
           "content": "Article content",
-          "variant": "oka-v-default",
-          "modifiers": "oka-m-textbox-right",
+          "variant": "osg-v-default",
+          "modifiers": "osg-m-textbox-right",
           ...
         }
       }
@@ -145,7 +145,7 @@ this to all components that should have the textblock on the right side.
 
 ```twig
 {# article.twig #}
-<div class="{{ article.variant | default('oka-v-default')  }} {{ article.modifiers | default(null) }}">
+<div class="{{ article.variant | default('osg-v-default')  }} {{ article.modifiers | default(null) }}">
 ```
 
 ```twig
@@ -162,7 +162,7 @@ this to all components that should have the textblock on the right side.
 ```
 
 Things to keep in mind when using modifiers:
-+ The naming convention for modifiers are `oka-m-modifierName`
++ The naming convention for modifiers are `osg-m-modifierName`
 + Modifiers should only be used on the root element of a component
 + A pattern can have zero to many modifiers
 + The styling for a modifier is usually added to the sass file for that specific component.
