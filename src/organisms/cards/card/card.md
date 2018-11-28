@@ -4,7 +4,7 @@ Multi-purpose container for previewing part of content, usually some form of art
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| *variant | String  | osg-v-default<br> [1]osg-v-download<br> | "osg-v-default" | Name of the variant |
+| variant | String  | osg-v-default<br> [1]osg-v-download<br> | "osg-v-default" | Name of the variant |
 | modifiers | String | [1]osg-m-animate<br> [2]osg-m-with-state<br>[3]osg-m-left{-tablet}<br>[4]osg-m-right{-tablet}<br>[5]osg-m-full{-tablet} | null | See details below in the Modifiers section |
 | *url | String | clean string content | null | Link to wrap the whole card in |
 | stateText | String | clean string content | null | Text to be displayed on top of the image. Used together with modifier osg-m-with-state to have effect. |
