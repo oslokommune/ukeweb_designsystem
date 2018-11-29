@@ -1,4 +1,4 @@
-<div class="osg-expand-box {{ expandBox.variant }} {{ expandBox.modifiers | default(null) }}">
+<div class="osg-expand-box {{ expandBox.variant | default("osg-v-default") }} {{ expandBox.modifiers | default(null) }}">
   {% block head %}
     <div class="osg-title-line">
       {% if expandBox.title is defined %}
