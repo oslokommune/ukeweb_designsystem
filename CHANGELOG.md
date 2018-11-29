@@ -9,6 +9,17 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+
+## [0.6.0] - 2018-11-29
+
+### Fixed
 * atoms-buttons-button: no need to pass button color/state.
 * molecules-data_display-info_list: no need to pass button color/state.
 * molecules-content_display-content_box: added twig blocks.
@@ -32,11 +43,9 @@ See README.md for release description.
 
 ### Changed
 * atoms-buttons-button: changed button color class with button state class (non breaking change for twig consumers).
-* organisms-cards-card: embedding content_box and expanding its blocks with with tags and search.
-* organisms-cards-shapeCard: embedding content_box and expanding its blocks with with tags and search.
-* organisms-cards-listCard: embedding content_box and expanding its blocks with with tags and search.
-
-### Removed
+* organisms-cards-card: embedding content_box and expanding its blocks with with tags and search (non breaking change for twig consumers).
+* organisms-cards-shapeCard: embedding content_box and expanding its blocks with with tags and search (non breaking change for twig consumers).
+* organisms-cards-listCard: embedding content_box and expanding its blocks with with tags and search (non breaking change for twig consumers).
 
 
 ## [0.5.0] - 2018-10-31
