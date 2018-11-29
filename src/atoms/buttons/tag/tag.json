@@ -7,7 +7,7 @@
     ]
   },
   "tag": {
-    "color": "green",
+    "variant": "osg-v-default",
     "content": "Nunc elit risus",
     "url": "#"
   }
