@@ -1,4 +1,6 @@
 .osg-expand-box
+  .osg-content-box > .osg-container
+    background-color: $color-brown-beige
   .osg-button
     .osg-shape
       height: 60px
@@ -12,7 +14,9 @@
     justify-content: space-between
     height: 60px
     .osg-title-line-text
-      padding-left: 30px
+      padding-left: 15px
+      +tablet-and-up
+        padding-left: 30px
       background-color: $color-brown-beige
       width: 100%
       display: flex
@@ -25,8 +29,6 @@
       display: block
   .osg-expand-box-content
     display: none
-    padding: 20px 30px 40px 30px
-    background-color: $color-brown-beige
     font-size: $font-size-18
     font-weight: 300
     ul
