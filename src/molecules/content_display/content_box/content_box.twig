@@ -1,7 +1,23 @@
-<div class="osg-content-box {{ contentBox.modifiers | default(null) }}">
-  {% if contentBox.date is defined %}
-    <p class="osg-date">{{ contentBox.date }}</p>
+<div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
+  {% if alert is defined %}
+    {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}
-  <h2>{{ contentBox.heading }}</h2>
-  <p>{{ contentBox.text }}</p>
+  <div class="osg-container">
+    {% block head %}
+      {% if contentBox.date is defined %}
+        <p class="osg-date">{{ contentBox.date }}</p>
+      {% endif %}
+    {% endblock %}
+    {% block body %}
+      <h2>{{ contentBox.heading }}</h2>
+      <p>{{ contentBox.text }}</p>
+    {% endblock %}
+    {% block footer %}
+      {% if contentBox.content is defined %}
+        <div class="osg-content">
+          {{ contentBox.content | raw }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
 </div>

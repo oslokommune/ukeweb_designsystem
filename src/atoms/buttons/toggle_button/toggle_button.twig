@@ -1,7 +1,7 @@
 {% if toggleButton.link is defined %}
   <a
     href="{{ toggleButton.link }}"
-    class="osg-toggle-button {{ toggleButton.variant }} {{ toggleButton.modifiers | default(null) }}"
+    class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
     {% if toggleButton.dataattrs is defined %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}
@@ -10,7 +10,7 @@
   >
 {% else %}
   <button
-    class="osg-toggle-button {{ toggleButton.variant }} {{ toggleButton.modifiers | default(null) }}"
+    class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
     {% if toggleButton.dataattrs is defined %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}

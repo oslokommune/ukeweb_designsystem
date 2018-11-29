@@ -10,7 +10,6 @@
   },
   "toggleButton": {
     "text": "Lorem Ipsum",
-    "variant": "osg-v-default",
     "dataattrs": [
       {"key": "id", "val": "lorem-ipsum"},
       {"key": "data-target", "val": "ipsum-lorem"}

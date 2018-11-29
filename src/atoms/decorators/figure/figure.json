@@ -9,7 +9,6 @@
     ]
   },
   "figure": {
-    "variant": "osg-v-default",
     "caption": "Lorem ipsum dolor sit amet",
     "img": {
       "alt": "Lorem ipsum",

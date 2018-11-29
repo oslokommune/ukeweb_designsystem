@@ -60,7 +60,6 @@
   "logos": {
     "figures": [
       {
-        "variant": "osg-v-default",
         "link": {
           "url": "http://google.com",
           "target":"_self"

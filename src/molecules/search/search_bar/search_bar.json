@@ -3,7 +3,6 @@
     "tags": ["search", "input", "searchbar"]
   },
   "searchBar": {
-    "variant": "osg-v-default",
     "modifiers": "osg-m-color-green"
   },
   "textField": {

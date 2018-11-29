@@ -7,10 +7,16 @@
 
 // generating color classes
 @each $name, $color in $osg-colors
-  .osg-text-#{$name}
+  .osg-color-text-#{$name}
     color: $color !important
-  .osg-bg-#{$name}
+  .osg-color-bg-#{$name}
     background-color: $color !important
+
+@each $name, $tuple in $osg-named-colors
+  // $osg-named-colors is a map from name to a tuple with two color values which we extract using the nth function
+  .osg-color-#{$name}
+    background-color: nth($tuple, 1) !important
+    color: nth($tuple, 2) !important
 
 // generating font weight classes
 @each $name, $size in $font-weights
@@ -26,146 +32,146 @@
 // generating spacing classes
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}
-    padding-bottom: $size
+    padding-bottom: $size !important
   .osg-margin-bottom-#{$name}
-    margin-bottom: $size
+    margin-bottom: $size !important
   .osg-padding-top-#{$name}
-    padding-top: $size
+    padding-top: $size !important
   .osg-margin-top-#{$name}
-    margin-top: $size
+    margin-top: $size !important
   .osg-padding-left-#{$name}
-    padding-left: $size
+    padding-left: $size !important
   .osg-margin-left-#{$name}
-    margin-left: $size
+    margin-left: $size !important
   .osg-padding-right-#{$name}
-    padding-right: $size
+    padding-right: $size !important
   .osg-margin-right-#{$name}
-    margin-right: $size
+    margin-right: $size !important
   .osg-padding-sides-#{$name}
-    padding-left: $size
-    padding-right: $size
+    padding-left: $size !important
+    padding-right: $size !important
   .osg-margin-sides-#{$name}
-    margin-left: $size
-    margin-right: $size
+    margin-left: $size !important
+    margin-right: $size !important
 
 // generate spacing classes for mobile
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-mobile
     +mobile-only
-      padding-bottom: $size
+      padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-mobile
     +mobile-only
-      margin-bottom: $size
+      margin-bottom: $size !important
   .osg-padding-top-#{$name}-mobile
     +mobile-only
-      padding-top: $size
+      padding-top: $size !important
   .osg-margin-top-#{$name}-mobile
     +mobile-only
-      margin-top: $size
+      margin-top: $size !important
   .osg-padding-left-#{$name}-mobile
     +mobile-only
-      padding-left: $size
+      padding-left: $size !important
   .osg-margin-left-#{$name}-mobile
     +mobile-only
-      margin-left: $size
+      margin-left: $size !important
   .osg-padding-right-#{$name}-mobile
     +mobile-only
-      padding-right: $size
+      padding-right: $size !important
   .osg-margin-right-#{$name}-mobile
     +mobile-only
-      margin-right: $size
+      margin-right: $size !important
   .osg-padding-sides-#{$name}-mobile
     +mobile-only
-      padding-left: $size
-      padding-right: $size
+      padding-left: $size !important
+      padding-right: $size !important
   .osg-margin-sides-#{$name}-mobile
     +mobile-only
-      margin-left: $size
-      margin-right: $size
+      margin-left: $size !important
+      margin-right: $size !important
 
 // generate spacing classes for tablet
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-tablet
     +tablet-and-up
-      padding-bottom: $size
+      padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-tablet
     +tablet-and-up
-      margin-bottom: $size
+      margin-bottom: $size !important
   .osg-padding-top-#{$name}-tablet
     +tablet-and-up
-      padding-top: $size
+      padding-top: $size !important
   .osg-margin-top-#{$name}-tablet
     +tablet-and-up
-      margin-top: $size
+      margin-top: $size !important
   .osg-padding-left-#{$name}-tablet
     +tablet-and-up
-      padding-left: $size
+      padding-left: $size !important
   .osg-margin-left-#{$name}-tablet
     +tablet-and-up
-      margin-left: $size
+      margin-left: $size !important
   .osg-padding-right-#{$name}-tablet
     +tablet-and-up
-      padding-right: $size
+      padding-right: $size !important
   .osg-margin-right-#{$name}-tablet
     +tablet-and-up
-      margin-right: $size
+      margin-right: $size !important
   .osg-padding-sides-#{$name}-tablet
     +tablet-and-up
-      padding-left: $size
-      padding-right: $size
+      padding-left: $size !important
+      padding-right: $size !important
   .osg-margin-sides-#{$name}-tablet
     +tablet-and-up
-      margin-left: $size
-      margin-right: $size
+      margin-left: $size !important
+      margin-right: $size !important
 
 // generate spacing classes for desktop
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-desktop
     +desktop-and-up
-      padding-bottom: $size
+      padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-desktop
     +desktop-and-up
-      margin-bottom: $size
+      margin-bottom: $size !important
   .osg-padding-top-#{$name}-desktop
     +desktop-and-up
-      padding-top: $size
+      padding-top: $size !important
   .osg-margin-top-#{$name}-desktop
     +desktop-and-up
-      margin-top: $size
+      margin-top: $size !important
   .osg-padding-left-#{$name}-desktop
     +desktop-and-up
-      padding-left: $size
+      padding-left: $size !important
   .osg-margin-left-#{$name}-desktop
     +desktop-and-up
-      margin-left: $size
+      margin-left: $size !important
   .osg-padding-right-#{$name}-desktop
     +desktop-and-up
-      padding-right: $size
+      padding-right: $size !important
   .osg-margin-right-#{$name}-desktop
     +desktop-and-up
-      margin-right: $size
+      margin-right: $size !important
   .osg-padding-sides-#{$name}-desktop
     +desktop-and-up
-      padding-left: $size
-      padding-right: $size
+      padding-left: $size !important
+      padding-right: $size !important
   .osg-margin-sides-#{$name}-desktop
     +desktop-and-up
-      margin-left: $size
-      margin-right: $size
+      margin-left: $size !important
+      margin-right: $size !important
 
 // generating font-sizes, bulma style
 @each $name, $size-desktop, $size-mobile in $font-sizes
   .osg-text-is-size-#{$name}
-    font-size: $size-mobile
+    font-size: $size-mobile !important
     +tablet-and-up
-      font-size: $size-desktop
+      font-size: $size-desktop !important
 
 // generating color helper classes
 @each $name, $color in $grayscale
   .osg-bg-grayscale-#{$name}
-    background-color: #{$color}
+    background-color: #{$color} !important
   .osg-text-grayscale-#{$name}
-    color: #{$color}
+    color: #{$color} !important
 
 // generating icon classes
 @each $name in $icon-names
@@ -177,12 +183,12 @@
 // generating text align classes
 @each $name in $alignment
   .osg-text-#{$name}
-    text-align: #{$name}
+    text-align: #{$name} !important
 
 // generating flex direction classes
 @each $name in $direction
   .osg-direction-#{$name}
-    flex-direction: #{$name}
+    flex-direction: #{$name} !important
 
 // Make header white
 .osg-header-inverted

@@ -26,6 +26,14 @@ $osg-colors: (
 "white": $color-white
 );
 
+$osg-named-colors: (
+  "muted": $color-grayscale-10 $color-grayscale-80,
+  "primary": $color-blue-light $color-grey-dark,
+  "success": $color-green-lighter $color-grey-dark,
+  "warning": $color-orange $color-grey-dark,
+  "danger": $color-red $color-grey-dark
+);
+
 $grayscale: (
   10: $color-grayscale-10,
   20: $color-grayscale-20,
@@ -40,17 +48,17 @@ $grayscale: (
 
 // used to generate spacing classes in utils.sass
 $spacing-sizes: (
-  "tiny": 10px,
-  "small": 20px,
-  "medium": 30px,
-  "large": 40px,
-  "huge": 60px,
-  "none": 0
+  "none": $space-none,
+  "tiny": $space-tiny,
+  "small": $space-small,
+  "medium": $space-medium,
+  "large": $space-large,
+  "huge": $space-huge
 );
 
 // used to generate font-size classes in utils.sass
 $font-sizes: (
-  ("1", $font-size-48, $font-size-36),
+  ("1", $font-size-40, $font-size-26),
   ("2", $font-size-36, $font-size-24),
   ("3", $font-size-28, $font-size-20),
   ("4", $font-size-24, $font-size-18),

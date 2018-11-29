@@ -1,8 +1,3 @@
-
-// map for button colors
-// expand this as we get designs with different colored buttons
-$button-colors: (green: $color-green-lighter $color-green-dark, green-light: $color-green-dark $color-green-lighter)
-
 // helper mixin for making buttons
 =osg-button-helper($color-name, $foreground, $background)
   .osg-button.osg-v-default
@@ -37,7 +32,8 @@ $button-colors: (green: $color-green-lighter $color-green-dark, green-light: $co
           background-color: $background
           transform: scale(0.97)
 
-@each $name, $tuple in $button-colors
+// looping map from maps.scss
+@each $name, $tuple in $osg-named-colors
   // button-colors is a map from name to a tuple with two color values which we extract using the nth function
   +osg-button-helper($name, nth($tuple, 1), nth($tuple, 2))
 

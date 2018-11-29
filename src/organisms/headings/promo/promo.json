@@ -11,13 +11,11 @@
     ]
   },
   "promo": {
-    "variant": "osg-v-default",
     "title": "Lorem ipsum dolor sit amet",
     "showButton": false,
     "showLogo": false
   },
   "figure": {
-    "variant": "osg-v-default",
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
       "defaultUrl": "https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1280&w=1707"

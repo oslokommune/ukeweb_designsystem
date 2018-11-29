@@ -11,12 +11,10 @@
     ]
   },
   "event": {
-    "variant": "osg-v-default",
     "heading": "Lorem ipsum dolor et",
     "headerTag": "(ENG*)"
   },
   "figure": {
-    "variant": "osg-v-default",
     "caption": "Img: Avaena idor",
     "img": {
       "alt": "Lorem ipsum",
@@ -42,7 +40,6 @@
     "asteriskText": "Lorem ipsum dolor et"
   },
   "button": {
-    "color": "green",
     "content": "Praesent",
     "variant": "osg-v-default"
   },
