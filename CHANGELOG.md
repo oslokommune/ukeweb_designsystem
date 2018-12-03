@@ -9,6 +9,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+molecules-contact-contact_box: fixed faulty name syntax in sass.
 
 ### Added
 
