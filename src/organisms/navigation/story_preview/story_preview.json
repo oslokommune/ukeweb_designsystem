@@ -40,7 +40,7 @@
     }
   },
   "icon": {
-    "variant": "osg-v-chevron-right"
+    "variant": "osg-v-icon-chevron-right"
   },
   "ingress": {
     "text": "Elva gir meg livsglede"
