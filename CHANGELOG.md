@@ -40,6 +40,8 @@ molecules-contact-contact_box: fixed faulty name syntax in sass.
 * global: made size-1 one a little bit smaller.
 
 ### Added
+* atoms-icons-icon: added icon chevron right
+* molecules-content_display-expand_box: new pattern.
 * atoms-messages-alert: new pattern.
 * atoms-forms-text: state field. see docs for text for details.
 * molecules-content_display-content_box: added alert atom.
