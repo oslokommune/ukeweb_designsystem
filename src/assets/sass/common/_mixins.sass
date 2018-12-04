@@ -132,16 +132,16 @@
     display: flex
     flex-direction: column
     font-weight: 300
-    .osg-box-shape-wrapper
-      display: flex
-      flex-direction: row
-    .osg-shape
-      order: 2
-    h2
-      font-weight: 500
-    &:hover
-      img
-        transform: scale(1.1)
+  .osg-box-shape-wrapper
+    display: flex
+    flex-direction: row
+  .osg-shape
+    order: 2
+  h2
+    font-weight: 500
+  &:hover
+    img
+      transform: scale(1.1)
   .osg-content-box
     text-decoration: none
     flex-grow: 1
@@ -153,22 +153,17 @@
     +tablet-and-up
       bottom: 60px
       margin-bottom: $box-margin-top-tablet
-  .osg-content-box, .osg-extras
-    padding: 10px 15px 15px 15px
+  .osg-content-box
     width: calc(100% - #{$shape-size-mobile})
     +tablet-and-up
-      padding: 30px 30px 30px 30px
       width: calc(100% - #{$shape-size-tablet})
-  .osg-extras
-    background-color: white
-    padding-top: 0
-    .osg-search-result
-      display: none
-      text-decoration: none
-      padding-top: 15px
-      margin-top: 30px
-      border-top: 1px solid $color-green
-      font-weight: bold
+  .osg-search-result
+    display: none
+    text-decoration: none
+    padding-top: 15px
+    margin-top: 30px
+    border-top: 1px solid $color-green
+    font-weight: bold
   .osg-state-text
     display: none
     position: absolute
@@ -179,7 +174,9 @@
     top: calc(50% + #{$box-margin-top-mobile})
     +tablet-and-up
       top: calc(50% + #{$box-margin-top-tablet})
-  /* modifiers style */
+  .osg-tags
+    padding-top: 15px
+  /* modifiers styling */
   &.osg-m-show-search-result
     .osg-search-result
       display: block
@@ -193,15 +190,17 @@
       span
         +animation-scale-in-text(1.2s)
         animation-delay: .3s
-    .osg-content-box, .osg-box-shape-wrapper, .osg-extras
+    .osg-content-box, .osg-box-shape-wrapper
       +animation-fade-in(1.2s)
       animation-delay: .3s
 =card-with-state-modifier
   &.osg-m-with-state
     a
       color: white
-    .osg-content-box, .osg-shape, .osg-extras
+    .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
       background-color: $color-green-dark
+    .osg-shape
+      color: white
     p.osg-date:after
       background-color: white
     .osg-state-text

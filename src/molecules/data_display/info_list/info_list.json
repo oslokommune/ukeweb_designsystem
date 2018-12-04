@@ -12,7 +12,6 @@
     ]
   },
   "infoList": {
-    "variant": "osg-v-default",
     "icons": {
       "entries": [
         {
@@ -44,7 +43,6 @@
     "asteriskText": "Lorem ipsum dolor et"
   },
   "button": {
-    "color": "green",
     "content": "Quisque",
     "variant": "osg-v-default"
   }

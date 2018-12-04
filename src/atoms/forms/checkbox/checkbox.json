@@ -11,7 +11,6 @@
   },
   "checkbox": {
     "text": "laoreet lacinia neque",
-    "variant": "osg-v-default",
     "dataattrs": [
       {"key": "id", "val": "my-checkbox"},
       {"key": "name", "val": "my-checkbox"}

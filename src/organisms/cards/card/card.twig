@@ -1,23 +1,35 @@
-<div class="osg-card {{ card.variant }} {{ card.modifiers | default(null) }}">
-  <a class="osg-wrapper" href="{{ card.url }}" aria-hidden="true">
+<div class="osg-card {{ card.variant | default('osg-v-default')  }} {{ card.modifiers | default(null) }}">
+  <a class="osg-wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
     <div class="osg-image-container">
       {% include "atoms/decorators/figure/figure.twig" %}
       {% if card.stateText is defined %}
         <div class="osg-state-text">{{ card.stateText }}</div>
       {% endif %}
     </div>
-    {% include 'molecules/content_display/content_box/content_box.twig' %}
   </a>
-  {% if tags is defined or shapeCard.searchResult is defined %}
-    <div class="osg-extras">
+  {% embed 'molecules/content_display/content_box/content_box.twig' %}
+    {% block head %}
+      <a class="osg-wrapper" href="{{ card.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
+    {% endblock %}
+    {% block body %}
+      <a class="osg-wrapper" href="{{ card.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
+    {% endblock %}
+    {% block footer %}
+      <a class="osg-wrapper" href="{{ card.url }}" aria-hidden="true">
+        {{ parent() }}
+      </a>
       {% if tags is defined %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
-      {% if card.url is defined %}
+      {% if card.searchResult is defined %}
         <a href="{{ card.url }}" class="osg-search-result">
           {{ card.searchResult | default(null) }}
         </a>
       {% endif %}
-    </div>
-  {% endif %}
+    {% endblock %}
+  {% endembed %}
 </div>

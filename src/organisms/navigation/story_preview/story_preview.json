@@ -13,7 +13,6 @@
     ]
   },
   "storyPreview": {
-    "variant": "osg-v-default",
     "modifiers": "osg-m-default",
     "link": {
       "url": "#",
@@ -24,7 +23,6 @@
     "variant": "osg-v-image"
   },
   "figure": {
-    "variant": "osg-v-default",
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
       "defaultUrl": "https://picsum.photos/500/500/?random",

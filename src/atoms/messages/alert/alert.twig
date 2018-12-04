@@ -1,0 +1,24 @@
+<div class="osg-alert {{ alert.variant | default('osg-v-default') }} {{ alert.modifiers | default(null) }} osg-color-{{ alert.state | default('success') }}">
+  {% block head %}
+    <div class="osg-head">
+      <div class="osg-message">
+        {{ alert.message | default(null) }}
+      </div>
+      <div class="osg-updated">
+        {% if alert.updated is defined %}
+          {{ alert.updated.text | default(null) }}
+          {{ alert.updated.date | default(null) }}
+        {% endif %}
+      </div>
+    </div>
+  {% endblock %}
+  {% block body %}
+    {% if alert.content is defined %}
+      <div class="osg-content">
+        {{ alert.content | raw }}
+      </div>
+    {% endif %}
+  {% endblock %}
+  {% block footer %}
+  {% endblock %}
+</div>
