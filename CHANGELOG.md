@@ -14,6 +14,7 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* organisms-story-preview: Updated to latest design
 
 ### Removed
 
