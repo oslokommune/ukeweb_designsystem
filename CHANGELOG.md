@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 See README.md for release description.
 
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -15,6 +16,12 @@ See README.md for release description.
 ### Changed
 
 ### Removed
+
+
+## [0.6.1] - 2018-12-03
+
+### Fixed
+molecules-contact-contact_box: fixed faulty name syntax in sass.
 
 
 ## [0.6.0] - 2018-11-29
