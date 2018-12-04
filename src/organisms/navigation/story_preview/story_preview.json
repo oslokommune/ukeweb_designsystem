@@ -13,10 +13,11 @@
     ]
   },
   "storyPreview": {
-    "modifiers": "osg-m-default",
+    "variant": "osg-v-default",
+    "title": "Lorem ipsum dolor et",
     "link": {
       "url": "#",
-      "text": "Nam blandit dapibus"
+      "text": "Les hele historien"
     }
   },
   "shape": {
@@ -39,9 +40,9 @@
     }
   },
   "icon": {
-    "variant": "osg-v-default"
+    "variant": "osg-v-chevron-right"
   },
   "ingress": {
-    "text": "Phasellus sed hendrerit"
+    "text": "Elva gir meg livsglede"
   }
 }
