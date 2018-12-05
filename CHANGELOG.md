@@ -10,6 +10,9 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* atoms-buttons-button: changed background color to green-dark.
+* organisms-headings-promo: fixed issue with overlay affecting the logo.
+* organisms-global-footer: changed link color to green-dark.
 * organisms-global-header: fixed faulty css class for font size on title
 
 ### Added
