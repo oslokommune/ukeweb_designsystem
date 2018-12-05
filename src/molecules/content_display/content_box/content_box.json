@@ -11,6 +11,11 @@
     "variant": "osg-default",
     "date": "7. viverra - 11. sagittis",
     "heading": "Pellentesque habitant morbi",
-    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."}
+  },
+
+  "icon": {
+    "variant": "osg-v-icon-chevron-right"
   }
 }
