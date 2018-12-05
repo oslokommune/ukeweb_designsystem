@@ -1,0 +1,34 @@
+<div class="osg-expand-box {{ expandBox.variant | default("osg-v-default") }} {{ expandBox.modifiers | default(null) }}">
+  {% block head %}
+    <div class="osg-title-line">
+      {% if expandBox.title is defined %}
+        <div class="osg-title-line-text">
+          <h3>{{ expandBox.title }}</h3>
+        </div>
+      {% endif %}
+      {% include "atoms/buttons/button/button.twig" %}
+    </div>
+  {% endblock %}
+  {% block body %}
+  <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
+    {% embed 'molecules/content_display/content_box/content_box.twig' %}
+      {% block body %}
+        {% if expandBox.list is defined %}
+          <ul>
+            {% for element in expandBox.list %}
+              <li>- {{ element }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endblock %}
+      {% block footer %}
+        {% if expandBox.link is defined %}
+          <a href="{{ expandBox.link.url }}">{% include "atoms/icons/icon/icon.twig" %} {{ expandBox.link.text }}</a>
+        {% endif %}
+      {% endblock %}
+    {% endembed %}
+  </div>
+  {% endblock %}
+  {% block footer %}
+  {% endblock %}
+</div>
