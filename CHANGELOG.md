@@ -19,10 +19,19 @@ See README.md for release description.
 ### Removed
 
 
+## [0.6.2] - 2018-12-05
+
+### Fixed
+* atoms-buttons-button: changed background color to green-dark.
+* organisms-headings-promo: fixed issue with overlay affecting the logo.
+* organisms-global-footer: changed link color to green-dark.
+* organisms-global-header: fixed faulty css class for font size on title
+
+
 ## [0.6.1] - 2018-12-03
 
 ### Fixed
-molecules-contact-contact_box: fixed faulty name syntax in sass.
+* molecules-contact-contact_box: fixed faulty name syntax in sass.
 
 
 ## [0.6.0] - 2018-11-29
