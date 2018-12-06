@@ -13,8 +13,7 @@
     ]
   },
   "storyPreview": {
-    "variant": "osg-v-default",
-    "modifiers": "osg-m-big osg-m-right"
+    "variant": "osg-v-default"
   },
   "contentBox": {
     "variant": "osg-default",
