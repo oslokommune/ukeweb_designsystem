@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+* organisms-content_display-content_box: added optional tag field and optional link field
 
 ### Changed
 * organisms-story-preview: Updated to latest design
