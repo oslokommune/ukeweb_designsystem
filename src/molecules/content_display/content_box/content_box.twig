@@ -14,8 +14,12 @@
       {% endif %}
     {% endblock %}
     {% block body %}
-      <h2 class="osg-body-heading">{{ contentBox.heading }}</h2>
-      <p class="osg-body-text">{{ contentBox.text }}</p>
+      {% if contentBox.heading is defined %}
+        <h2 class="osg-body-heading">{{ contentBox.heading }}</h2>
+      {% endif %}
+      {% if contentBox.text is defined %}
+        <p class="osg-body-text">{{ contentBox.text }}</p>
+      {% endif %}
     {% endblock %}
     {% block footer %}
       {% if contentBox.content is defined %}
