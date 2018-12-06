@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 organisms-headings-promo: fixed z-index problem making the button not clickable.
+organisms-headings-promo: made promo 100 view height on mobile.
 
 ### Added
 
