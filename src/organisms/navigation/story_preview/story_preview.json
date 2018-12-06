@@ -13,13 +13,14 @@
     ]
   },
   "storyPreview": {
-    "variant": "osg-v-default"
+    "variant": "osg-v-default",
+    "modifiers": "osg-m-big osg-m-right"
   },
   "contentBox": {
     "variant": "osg-default",
-    "tag": "Consectetur ",
-    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."}
+    "tag": "Consectetur",
+    "text": "Lorem ipsum dolor",
+    "link": {"url": "#", "text": "Nulla vel orci ut erat."}
   },
   "shape": {
     "variant": "osg-v-image"
