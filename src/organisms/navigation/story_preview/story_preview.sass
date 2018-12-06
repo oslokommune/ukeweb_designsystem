@@ -64,12 +64,17 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     padding-top: nth($padding-list, 3)
 
 .osg-story-preview
-  a
-    display: flex
-    align-items: center
-    text-decoration: none
-    &:hover,
-      text-decoration: underline
+  .osg-content-box
+    background: transparent
+    max-width: 300px
+    +tablet-and-up
+      max-width: 500px
+  // a
+  //   display: flex
+  //   align-items: center
+  //   text-decoration: none
+  //   &:hover,
+  //     text-decoration: underline
   p
     color: $color-green-dark
   .osg-icon

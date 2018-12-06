@@ -2,18 +2,15 @@
   <div class="osg-image">
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
-  <div class="osg-text">
-    {% if storyPreview.title is defined %}
-      <p>{{ storyPreview.title }}</p>
-    {% endif %}
-    {% if ingress is defined %}
-      {% include 'atoms/text/ingress/ingress.twig' %}
-    {% endif %}
-    {% if storyPreview.link is defined %}
-      <a href="{{ storyPreview.link.url }}">
-        {% include 'atoms/icons/icon/icon.twig' %}
-        {{ storyPreview.link.text }}
-      </a>
-    {% endif %}
-  </div>
+  {% embed 'molecules/content_display/content_box/content_box.twig' %}
+    {% block head %}
+      {{ parent() }}
+    {% endblock %}
+    {% block body %}
+      {{ parent() }}
+    {% endblock %}
+    {% block footer %}
+      {{ parent() }}
+    {% endblock %}
+  {% endembed %}
 </div>

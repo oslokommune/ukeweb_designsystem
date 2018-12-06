@@ -13,12 +13,13 @@
     ]
   },
   "storyPreview": {
-    "variant": "osg-v-default",
-    "title": "Lorem ipsum dolor et",
-    "link": {
-      "url": "#",
-      "text": "Adipisicing sit voluptate"
-    }
+    "variant": "osg-v-default"
+  },
+  "contentBox": {
+    "variant": "osg-default",
+    "tag": "Consectetur ",
+    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."}
   },
   "shape": {
     "variant": "osg-v-image"
