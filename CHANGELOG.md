@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+organisms-headings-promo: fixed z-index problem making the button not clickable.
 
 ### Added
 
