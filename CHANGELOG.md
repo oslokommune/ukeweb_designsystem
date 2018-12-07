@@ -10,8 +10,18 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* atoms-forms-checkbox: changed hover color
+* atoms-social-icon: changed hover color
+* molecules-content_display-expand_box: changed hover color
+* molecules-navigation-navbar_menu: changed hover color
+* molecules-navigation-tags: changed hover color
+* molecules-social-icon_list: changed hover color
+* organisms-global-footer: changed hover color
+* organisms-global-header: changed hover color
+* organisms-navigation-story_preview: changed hover color
 
 ### Added
+* global: added sass variable color-green-darker
 
 ### Changed
 
