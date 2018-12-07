@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "tags": [
+      "content",
+      "fact",
+      "info",
+      "expand"
+    ]
+  },
+  "expandBox": {
+    "variant": "osg-v-default",
+    "title": "Fusce porta",
+    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."},
+    "list": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac arcu eget leo ultrices tincidunt. Vivamus eleifend, enim ornare aliquet posuere, enim",
+      "Duis a dui consequat mi rutrum porttitor. Vestibulum sit amet ante rutrum, sagittis mauris vitae, ullamcorper ex.",
+      "Phasellus vitae tortor diam. Etiam ac aliquet magna.",
+      "Aenean rutrum facilisis nisi, et bibendum dolor cursus ut. ",
+      "Maecenas mollis vulputate tellus, ac interdum tellus porta id. Curabitur ultrices, mi in sodales pretium, ipsum enim sodales lectus",
+      "Curabitur vitae risus et velit fermentum facilisis eget vitae ante. Sed condimentum sem lectus, ut vestibulum nisl dignissim ac."
+    ]
+  },
+  "button": {
+    "color": "",
+    "content": "<i class='fas fa-chevron-down'></i>",
+    "variant": "osg-v-circle",
+    "dataattrs": [
+      {"key": "aria-label", "val": "expand-button"}
+    ]
+  },
+  "icon": {
+    "variant": "osg-v-icon-chevron-right"
+  },
+  "contentBox": {
+    "variant": "osg-v-default"
+  }
+}

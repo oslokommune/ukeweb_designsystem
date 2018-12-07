@@ -18,10 +18,38 @@ See README.md for release description.
 ### Removed
 
 
+## [0.7.0] - 2018-12-07
+
+### Fixed
+* atoms-forms-checkbox: changed hover color
+* atoms-social-icon: changed hover color
+* molecules-content_display-expand_box: changed hover color
+* molecules-navigation-navbar_menu: changed hover color
+* molecules-navigation-tags: changed hover color
+* molecules-social-icon_list: changed hover color
+* organisms-global-footer: changed hover color
+* organisms-global-header: changed hover color
+* organisms-headings-promo: fixed z-index problem making the button not clickable.
+* organisms-headings-promo: made promo 100 view height on mobile.
+
+### Added
+* global: added sass variable color-green-darker
+* organisms-content_display-content_box: added optional tag field and optional link field
+
+
+## [0.6.2] - 2018-12-05
+
+### Fixed
+* atoms-buttons-button: changed background color to green-dark.
+* organisms-headings-promo: fixed issue with overlay affecting the logo.
+* organisms-global-footer: changed link color to green-dark.
+* organisms-global-header: fixed faulty css class for font size on title
+
+
 ## [0.6.1] - 2018-12-03
 
 ### Fixed
-molecules-contact-contact_box: fixed faulty name syntax in sass.
+* molecules-contact-contact_box: fixed faulty name syntax in sass.
 
 
 ## [0.6.0] - 2018-11-29
@@ -40,6 +68,8 @@ molecules-contact-contact_box: fixed faulty name syntax in sass.
 * global: made size-1 one a little bit smaller.
 
 ### Added
+* atoms-icons-icon: added icon chevron right
+* molecules-content_display-expand_box: new pattern.
 * atoms-messages-alert: new pattern.
 * atoms-forms-text: state field. see docs for text for details.
 * molecules-content_display-content_box: added alert atom.

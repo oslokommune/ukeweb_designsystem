@@ -28,10 +28,10 @@ $osg-colors: (
 
 $osg-named-colors: (
   "muted": $color-grayscale-10 $color-grayscale-80,
-  "primary": $color-blue-light $color-grey-dark,
-  "success": $color-green-lighter $color-grey-dark,
-  "warning": $color-orange $color-grey-dark,
-  "danger": $color-red $color-grey-dark
+  "primary": $color-blue-light $color-green-dark,
+  "success": $color-green-lighter $color-green-dark,
+  "warning": $color-orange $color-green-dark,
+  "danger": $color-red $color-green-dark
 );
 
 $grayscale: (
@@ -78,7 +78,8 @@ $icon-names: (
   "location",
   "payment",
   "smiley",
-  "sun"
+  "sun",
+  "chevron-right"
 );
 
 // used to generate alignment classes in utils.sass

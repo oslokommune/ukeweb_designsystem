@@ -2,11 +2,12 @@
 =osg-button-helper($color-name, $foreground, $background)
   .osg-button.osg-v-default
     box-sizing: content-box
-    padding: 5px 30px 5px 30px
+    display: inline-block
+    padding: 10px 30px 10px 30px
     font-size: $font-size-18
     border-radius: 0
     line-height: 1.5
-    height: 2.25em
+    min-height: 1.5em
     &.osg-button-#{$color-name}
       &, &:hover, &:active, &:focus, &:visited
         color: $foreground

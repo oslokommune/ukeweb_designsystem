@@ -5,7 +5,9 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-promo
-  height: 80vh
+  height: 100vh
+  +tablet-and-up
+    height: 80vh
   color: $color-white
   position: relative
   &::after
@@ -34,6 +36,7 @@ $osg-margin-top-bottom-desktop: 25px
     .osg-promo-logo
       figure
         img
+          z-index: 1
           bottom: 0
           height: auto
           left: 0

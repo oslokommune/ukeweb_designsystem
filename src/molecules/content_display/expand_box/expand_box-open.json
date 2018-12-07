@@ -1,0 +1,14 @@
+{
+  "expandBox": {
+    "variant": "osg-v-open",
+    "expanded": "true"
+  },
+  "button": {
+    "color": "",
+    "content": "<i class='fas fa-chevron-up'></i>",
+    "variant": "osg-v-circle",
+    "dataattrs": [
+      {"key": "aria-label", "val": "expand-button"}
+    ]
+  }
+}
