@@ -19,6 +19,8 @@ See README.md for release description.
 * organisms-global-footer: changed hover color
 * organisms-global-header: changed hover color
 * organisms-navigation-story_preview: changed hover color
+* organisms-headings-promo: fixed z-index problem making the button not clickable.
+* organisms-headings-promo: made promo 100 view height on mobile.
 
 ### Added
 * global: added sass variable color-green-darker
