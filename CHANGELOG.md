@@ -10,6 +10,17 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+
+## [0.7.0] - 2018-12-07
+
+### Fixed
 * atoms-forms-checkbox: changed hover color
 * atoms-social-icon: changed hover color
 * molecules-content_display-expand_box: changed hover color
@@ -24,10 +35,6 @@ See README.md for release description.
 ### Added
 * global: added sass variable color-green-darker
 * organisms-content_display-content_box: added optional tag field and optional link field
-
-### Changed
-
-### Removed
 
 
 ## [0.6.2] - 2018-12-05
