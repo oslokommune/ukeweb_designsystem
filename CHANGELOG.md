@@ -22,6 +22,7 @@ See README.md for release description.
 
 ### Added
 * global: added sass variable color-green-darker
+* organisms-content_display-content_box: added optional tag field and optional link field
 
 ### Changed
 
