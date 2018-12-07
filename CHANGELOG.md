@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* molecules-navigation-tags: removed margin around pattern
 
 ### Added
 * organisms-content_display-content_box: added optional tag field and optional link field
