@@ -8,3 +8,5 @@ Multi-purpose container for previewing part of content, usually some form of art
 | heading | String | Clean string content | null | Content heading |
 | text | String | Clean string content | null | A paragraph |
 | content | html | html content | null | Used to display additional information. Will be parsed as html. |
+| tag | String | Clean string content | null | A tag that sits above the date |
+| link | String | Object with url and text | null | A link that has a chevron right icon, usually used for a read more link | 
