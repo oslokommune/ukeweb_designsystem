@@ -18,7 +18,6 @@ See README.md for release description.
 * molecules-social-icon_list: changed hover color
 * organisms-global-footer: changed hover color
 * organisms-global-header: changed hover color
-* organisms-navigation-story_preview: changed hover color
 * organisms-headings-promo: fixed z-index problem making the button not clickable.
 * organisms-headings-promo: made promo 100 view height on mobile.
 
