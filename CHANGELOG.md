@@ -12,12 +12,30 @@ See README.md for release description.
 ### Fixed
 
 ### Added
-* organisms-content_display-content_box: added optional tag field and optional link field
 
 ### Changed
 * organisms-story-preview: Updated to latest design
 
 ### Removed
+
+
+## [0.7.0] - 2018-12-07
+
+### Fixed
+* atoms-forms-checkbox: changed hover color
+* atoms-social-icon: changed hover color
+* molecules-content_display-expand_box: changed hover color
+* molecules-navigation-navbar_menu: changed hover color
+* molecules-navigation-tags: changed hover color
+* molecules-social-icon_list: changed hover color
+* organisms-global-footer: changed hover color
+* organisms-global-header: changed hover color
+* organisms-headings-promo: fixed z-index problem making the button not clickable.
+* organisms-headings-promo: made promo 100 view height on mobile.
+
+### Added
+* global: added sass variable color-green-darker
+* organisms-content_display-content_box: added optional tag field and optional link field
 
 
 ## [0.6.2] - 2018-12-05
