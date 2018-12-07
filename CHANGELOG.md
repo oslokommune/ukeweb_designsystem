@@ -10,8 +10,11 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+organisms-headings-promo: fixed z-index problem making the button not clickable.
+organisms-headings-promo: made promo 100 view height on mobile.
 
 ### Added
+* organisms-content_display-content_box: added optional tag field and optional link field
 
 ### Changed
 
