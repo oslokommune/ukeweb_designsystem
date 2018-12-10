@@ -14,41 +14,28 @@ $shape-size-tablet: 250px
   a
     text-decoration: none
     user-select: none
-    .osg-content-box
-      display: flex
-      justify-content: center
-      flex-direction: column
-      padding: 15px 15px 65px
-      +tablet-and-up
-        padding: 30px 40px 61px
-      p
-        font-size: $font-size-16
-        +tablet-and-up
-          font-size: $font-size-20
-      h2
-        font-size: $font-size-18
-        +tablet-and-up
-          font-size: $font-size-28
-    .osg-shape.osg-v-image
-      align-self: start
-      flex-shrink: 20
-      background-color: transparent
-      height: $shape-size-mobile
-      width: $shape-size-mobile
-      +tablet-and-up
-        height: $shape-size-tablet
-        width: $shape-size-tablet
+  .osg-body-heading
+    font-weight: 600
+  .osg-shape.osg-v-image
+    align-self: start
+    flex-shrink: 20
+    background-color: transparent
+    height: $shape-size-mobile
+    width: $shape-size-mobile
+    +tablet-and-up
+      height: $shape-size-tablet
+      width: $shape-size-tablet
+    figure
+      overflow: hidden
+    &.osg-v-circle
       figure
-        overflow: hidden
-      &.osg-v-circle
-        figure
-          border-radius: 50%
-      img
-        transition: transform 1s cubic-bezier(.22,.57,.25,1)
-        object-fit: cover
-        display: block
-        min-width: 100%
-        max-width: 100%
+        border-radius: 50%
+    img
+      transition: transform 1s cubic-bezier(.22,.57,.25,1)
+      object-fit: cover
+      display: block
+      min-width: 100%
+      max-width: 100%
   .osg-tags
     padding-top: 15px
 
@@ -96,4 +83,3 @@ $shape-size-tablet: 250px
     .osg-content-box
       +animation-scale-up(1.2s)
       animation-delay: .3s
-
