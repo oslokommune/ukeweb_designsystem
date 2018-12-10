@@ -10,6 +10,11 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* organisms-global-header: removed hover color
+* organisms-header-event: changed width of green box
+* organisms-cards-card: changed font-weight in heading
+* organisms-cards-listCard: changed font-weight in heading
+* molecules-navigation-tags: removed margin around pattern
 
 ### Added
 
