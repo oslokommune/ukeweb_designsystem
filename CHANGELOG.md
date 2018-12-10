@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 * organisms-header-event: changed width of green box
+* molecules-navigation-tags: removed margin around pattern
 
 ### Added
 
