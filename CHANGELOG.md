@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* molecules-navigation-tags: removed margin around pattern
 
 ### Added
 
