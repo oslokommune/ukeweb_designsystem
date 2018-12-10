@@ -13,11 +13,13 @@
     ]
   },
   "storyPreview": {
-    "modifiers": "osg-m-default",
-    "link": {
-      "url": "#",
-      "text": "Nam blandit dapibus"
-    }
+    "variant": "osg-v-default"
+  },
+  "contentBox": {
+    "variant": "osg-default",
+    "tag": "Consectetur",
+    "text": "Lorem ipsum dolor",
+    "link": {"url": "#", "text": "Nulla vel orci ut erat."}
   },
   "shape": {
     "variant": "osg-v-image"
@@ -38,7 +40,10 @@
       ]
     }
   },
+  "icon": {
+    "variant": "osg-v-icon-chevron-right"
+  },
   "ingress": {
-    "text": "Phasellus sed hendrerit"
+    "text": "Necessitatibus cupiditate"
   }
 }
