@@ -10,6 +10,8 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* organisms-cards-card: changed font-weight in heading
+* organisms-cards-listCard: changed font-weight in heading
 * molecules-navigation-tags: removed margin around pattern
 
 ### Added
