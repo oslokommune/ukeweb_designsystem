@@ -18,6 +18,7 @@ See README.md for release description.
 * organisms-navigation-story_preview: fixed css to apply to the correct parts of content_box
 
 ### Added
+* organisms-navigation-story_preview: started using the heading and text segments in content_box
 
 ### Changed
 * organisms-story-preview: Updated to latest design
