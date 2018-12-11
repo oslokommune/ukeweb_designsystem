@@ -20,6 +20,7 @@ See README.md for release description.
 
 ### Changed
 * organisms-story-preview: Updated to latest design
+* organisms-navigation-call_to_action: changed padding and max width
 
 ### Removed
 
