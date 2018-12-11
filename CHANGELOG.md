@@ -16,6 +16,7 @@ See README.md for release description.
 * organisms-cards-listCard: changed font-weight in heading
 * molecules-navigation-tags: removed margin around pattern
 * organisms-navigation-story_preview: fixed css to apply to the correct parts of content_box
+* atoms-buttons-button: increased padding on button
 
 ### Added
 
