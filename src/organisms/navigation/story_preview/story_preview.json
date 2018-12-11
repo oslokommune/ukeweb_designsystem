@@ -12,11 +12,14 @@
       "summary"
     ]
   },
-  "storyPreview": {
-    "modifiers": "osg-m-default",
+  "storyPreview": {},
+  "contentBox": {
+    "tag": "Consectetur",
+    "heading": "Pellentesque habitant morbi",
+    "text": "Lorem ipsum dolor",
     "link": {
-      "url": "#",
-      "text": "Nam blandit dapibus"
+      "url": "#", 
+      "text": "lerum cupiditate"
     }
   },
   "shape": {
@@ -38,7 +41,10 @@
       ]
     }
   },
+  "icon": {
+    "variant": "osg-v-icon-chevron-right"
+  },
   "ingress": {
-    "text": "Phasellus sed hendrerit"
+    "text": "Necessitatibus cupiditate"
   }
 }

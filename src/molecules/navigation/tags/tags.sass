@@ -1,7 +1,6 @@
 .osg-tags
   li
     display: inline-block
-    margin-top: $space-large
   li:not(:last-child)
     margin-right: $space-large
   &.osg-v-underline
@@ -10,6 +9,8 @@
       margin: 0
       &:not(:last-child):after
         content: "-"
+        display: inline-block
+        margin: 0 4px
       .osg-tag
         border: none
         padding: 0
