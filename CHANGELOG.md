@@ -6,8 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 See README.md for release description.
 
-
 ## [Unreleased] - YYYY-MM-DD
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+
+## [0.8.0] - 2018-12-11
 
 ### Fixed
 * organisms-global-header: removed hover color
@@ -18,12 +28,12 @@ See README.md for release description.
 * organisms-navigation-story_preview: fixed css to apply to the correct parts of content_box
 * atoms-buttons-button: increased padding on button
 * molecules-navigation-navbar_menu: decreased spacing between elements
+* organisms-navigation-call_to_action: changed padding and max width
 
 ### Added
 
 ### Changed
 * organisms-story-preview: Updated to latest design
-* organisms-navigation-call_to_action: changed padding and max width
 
 ### Removed
 
