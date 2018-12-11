@@ -12,14 +12,15 @@
       "summary"
     ]
   },
-  "storyPreview": {
-    "variant": "osg-v-default"
-  },
+  "storyPreview": {},
   "contentBox": {
-    "variant": "osg-default",
     "tag": "Consectetur",
+    "heading": "Pellentesque habitant morbi",
     "text": "Lorem ipsum dolor",
-    "link": {"url": "#", "text": "Nulla vel orci ut erat."}
+    "link": {
+      "url": "#", 
+      "text": "lerum cupiditate"
+    }
   },
   "shape": {
     "variant": "osg-v-image"
