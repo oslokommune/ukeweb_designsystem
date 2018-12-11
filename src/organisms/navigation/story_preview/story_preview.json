@@ -20,7 +20,10 @@
     "tag": "Consectetur",
     "heading": "Pellentesque habitant morbi",
     "text": "Lorem ipsum dolor",
-    "link": {"url": "#", "text": "lerum cupiditate"}
+    "link": {
+      "url": "#", 
+      "text": "lerum cupiditate"
+    }
   },
   "shape": {
     "variant": "osg-v-image"
