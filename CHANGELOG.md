@@ -13,6 +13,10 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* organisms-cards-card: removed unused markup which was confusing screen readers
+* organisms-cards-card: removed aria-hidden tags which was confusing screen readers
+* organisms-cards-list_card: removed unused markup which was confusing screen readers
+* organisms-cards-list_card: removed aria-hidden tags which was confusing screen readers
 
 ### Removed
 
