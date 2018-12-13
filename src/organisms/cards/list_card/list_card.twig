@@ -7,19 +7,16 @@
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block head %}
-      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
+      <a class="osg-wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
     {% block body %}
-      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
+      <a class="osg-wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
     {% block footer %}
-      <a class="osg-wrapper" href="{{ listCard.url }}" aria-hidden="true">
-        {{ parent() }}
-      </a>
       {% if tags is defined %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
