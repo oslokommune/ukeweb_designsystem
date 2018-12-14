@@ -40,6 +40,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
 =osg-story-preview-right
   display: flex
   align-items: center
+  justify-content: space-between
   .osg-image
     order: 1
     margin-right: 30px
@@ -47,6 +48,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
       margin-right: 60px
     padding-top: unset
   .osg-content-box
+    flex: unset
     margin-right: unset
     order: 2
     .osg-content-box-tag
@@ -67,9 +69,6 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
 .osg-story-preview
   .osg-content-box
     background: transparent
-    max-width: 300px
-    +tablet-and-up
-      max-width: 500px
     .osg-container
       padding: unset
   .osg-content-box-tag

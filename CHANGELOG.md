@@ -9,6 +9,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* organisms-navigation-story_preview: removed code for sizing the story_preview
 
 ### Added
 
