@@ -9,6 +9,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* molecules-search-search_bar: Fixed issue with iphone zooming in on search-box.
 
 ### Added
 
