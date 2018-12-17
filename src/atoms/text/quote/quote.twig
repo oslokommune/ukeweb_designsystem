@@ -3,7 +3,13 @@
 
   {% if quote.cite is defined %}
     <footer>
-      <cite>{{quote.cite}}</cite>
+      {% if quote.citeSource is defined and quote.linkToCitation == true  %}
+        <a href="{{ quote.citeSource }}">
+      {% endif %}
+        <cite>{{ quote.cite }}</cite>
+      {% if quote.citeSource is defined  %}
+        </a>
+      {% endif %}
     </footer>
   {% endif %}
 </blockquote>

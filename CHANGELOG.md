@@ -17,6 +17,20 @@ See README.md for release description.
 ### Removed
 
 
+## [0.9.0] - 2018-12-17
+
+### Fixed
+* molecules-search-search_bar: Fixed issue with iphone zooming in on search-box.
+* organisms-navigation-story_preview: removed code for sizing the story_preview
+
+### Changed
+* organisms-cards-card: removed unused markup which was confusing screen readers
+* organisms-cards-card: removed aria-hidden tags which was confusing screen readers
+* organisms-cards-list_card: removed unused markup which was confusing screen readers
+* organisms-cards-list_card: removed aria-hidden tags which was confusing screen readers
+* atoms-text-quote: added optional link around cite
+
+
 ## [0.8.0] - 2018-12-11
 
 ### Fixed
