@@ -17,6 +17,7 @@ See README.md for release description.
 * organisms-cards-card: removed aria-hidden tags which was confusing screen readers
 * organisms-cards-list_card: removed unused markup which was confusing screen readers
 * organisms-cards-list_card: removed aria-hidden tags which was confusing screen readers
+* atoms-text-quote: added optional link around cite
 
 ### Removed
 
