@@ -3,7 +3,7 @@
 
   {% if quote.cite is defined %}
     <footer>
-      {% if quote.citeSource is defined and quote.linkToCitation is defined  %}
+      {% if quote.citeSource is defined and quote.linkToCitation is true  %}
         <a href="{{ quote.citeSource }}">
       {% endif %}
         <cite>{{quote.cite}}</cite>
