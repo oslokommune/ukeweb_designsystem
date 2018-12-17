@@ -16,6 +16,14 @@ See README.md for release description.
 
 ### Removed
 
+## [0.10.0] - 2018-12-17
+
+### Added
+* molecules-content_display-expand_box: added option for using markup from contentBox
+
+### Changed
+* molecules-content_display-expand_box: changed footer link to use content box read more link, removed styling for read more link from expandBox as it now comes from contentBox
+
 
 ## [0.9.0] - 2018-12-17
 

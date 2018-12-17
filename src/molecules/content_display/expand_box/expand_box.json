@@ -10,7 +10,6 @@
   "expandBox": {
     "variant": "osg-v-default",
     "title": "Fusce porta",
-    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."},
     "list": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac arcu eget leo ultrices tincidunt. Vivamus eleifend, enim ornare aliquet posuere, enim",
       "Duis a dui consequat mi rutrum porttitor. Vestibulum sit amet ante rutrum, sagittis mauris vitae, ullamcorper ex.",
@@ -32,6 +31,6 @@
     "variant": "osg-v-icon-chevron-right"
   },
   "contentBox": {
-    "variant": "osg-v-default"
+    "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."}
   }
 }
