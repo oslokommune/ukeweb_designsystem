@@ -31,7 +31,6 @@
     "variant": "osg-v-icon-chevron-right"
   },
   "contentBox": {
-    "variant": "osg-v-default",
     "link": {"url": "#", "text": "Nulla vel orci ut erat volutpat."}
   }
 }
