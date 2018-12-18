@@ -13,6 +13,7 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* atoms-buttons-button: wrapped data-attrs in double-quotes to allow for multiple words .
 
 ### Removed
 

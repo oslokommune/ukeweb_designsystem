@@ -6,7 +6,7 @@
   class="osg-button {{ button.variant | default('osg-v-default') }} {{ state }} {{ button.modifiers | default(null) }}"
   {% if button.dataattrs is defined %}
   {% for dataattr in button.dataattrs %}
-  {{dataattr.key}}={{dataattr.val}}
+  {{dataattr.key}}="{{dataattr.val}}"
   {% endfor %}
   {% endif %}
 >
@@ -15,7 +15,7 @@
   class="osg-button {{ button.variant | default('osg-v-default')  }} {{ state }}"
   {% if button.dataattrs is defined %}
   {% for dataattr in button.dataattrs %}
-  {{dataattr.key}}={{dataattr.val}}
+  {{dataattr.key}}="{{dataattr.val}}"
   {% endfor %}
   {% endif %}
 >
