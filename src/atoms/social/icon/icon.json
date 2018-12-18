@@ -16,6 +16,7 @@
   "icon": {
     "brand": "<i class='fab fa-facebook'></i>",
     "text": "Facebook",
+    "title": "Facebook",
     "textVisible": true,
     "url": "#"
   }
