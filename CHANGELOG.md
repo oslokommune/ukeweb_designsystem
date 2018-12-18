@@ -13,6 +13,7 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* atoms-forms-text: changed namespace from textField to text.
 
 ### Removed
 

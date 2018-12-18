@@ -6,7 +6,7 @@
       "field"
     ]
   },
-  "textField": {
+  "text": {
     "id": "vestibulum1",
     "placeholder": "Nunc elit risus",
     "name": "textfield"
