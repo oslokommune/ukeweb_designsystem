@@ -14,6 +14,8 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* atoms-forms-text: changed namespace from textField to text.
+* atoms-buttons-button: wrapped data-attrs in double-quotes to allow for multiple words .
 
 ### Removed
 
