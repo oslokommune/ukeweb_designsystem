@@ -22,8 +22,10 @@
       display: flex
       h3
         align-self: center
-        font-size: 24px
+        font-size: $font-size-20
         font-weight: 600
+        +tablet-and-up
+          font-size: $font-size-24
   &.osg-v-open
     .osg-expand-box-content
       display: block

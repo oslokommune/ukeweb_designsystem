@@ -13,8 +13,9 @@
     "heading": "Pellentesque habitant morbi",
     "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "link": {
-      "url": "#", 
-      "text": "Nulla vel orci ut erat volutpat."
+      "url": "#",
+      "text": "Nulla vel orci ut erat volutpat.",
+      "srText": "This text is only for screen readers"
     }
   },
   "icon": {

@@ -28,7 +28,13 @@
         </div>
       {% endif %}
       {% if contentBox.link is defined %}
-        <a class="osg-extra-link" href="{{ contentBox.link.url }}">{% include "atoms/icons/icon/icon.twig" %} {{ contentBox.link.text }}</a>
+        <a class="osg-extra-link" href="{{ contentBox.link.url }}">
+          {% include "atoms/icons/icon/icon.twig" %}
+          {{ contentBox.link.text }}
+          {% if contentBox.link.srText is defined %}
+            <span class="sr-only">{{ contentBox.link.srText }}</span>
+          {% endif %}
+        </a>
       {% endif %}
     {% endblock %}
   </div>

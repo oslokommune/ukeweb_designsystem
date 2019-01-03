@@ -1,5 +1,5 @@
 <div class="osg-list-card {{ listCard.modifiers | default(null) }}">
-  <a href="{{ listCard.url }}" title="{{ figure.img.alt }}">
+  <a href="{{ listCard.url }}">
     {% include 'atoms/decorators/shape/shape.twig' %}
     {% if listCard.stateText is defined %}
       <div class="osg-state-text">{{ listCard.stateText }}</div>
