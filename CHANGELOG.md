@@ -9,6 +9,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* molecules-content_display-expand_box: Fixed font size for title in mobile view.
 * organisms-navigation-story_preview: changed font weight to 600
 
 ### Added
