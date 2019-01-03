@@ -9,16 +9,23 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-* molecules-content_display-expand_box: Fixed font size for title in mobile view.
-* organisms-navigation-story_preview: changed font weight to 600
 
 ### Added
 
 ### Changed
-* atoms-forms-text: changed namespace from textField to text.
-* atoms-buttons-button: wrapped data-attrs in double-quotes to allow for multiple words .
 
 ### Removed
+
+
+## [0.11.0] - 2019-01-03
+
+### Fixed
+* molecules-content_display-expand_box: Fixed font size for title in mobile view.
+* organisms-navigation-story_preview: changed font weight to 600
+
+### Changed
+* atoms-forms-text: changed namespace from textField to text.
+* atoms-buttons-button: wrapped data-attrs in double-quotes to allow for multiple words .
 
 ## [0.10.0] - 2018-12-17
 
