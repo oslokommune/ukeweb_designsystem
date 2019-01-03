@@ -1,14 +1,14 @@
-{% set state = textField.state is defined ? "osg-text-field-" ~ textField.state : null %}
+{% set state = text.state is defined ? "osg-text-field-" ~ text.state : null %}
 
-<div class="osg-text-field {{ textField.variant | default('osg-v-default') }} {{ state is defined ? state : null }} {{ textField.modifiers | default(null) }}">
+<div class="osg-text-field {{ text.variant | default('osg-v-default') }} {{ state is defined ? state : null }} {{ text.modifiers | default(null) }}">
   <input
     class="osg-text-field-input"
-    id="{{ textField.id }}"
-    name="{{ textField.name }}"
+    id="{{ text.id }}"
+    name="{{ text.name }}"
     type="text"
     required
-    placeholder="{{ textField.placeholder }}" />
-  <label class="osg-text-field-label" for="{{ textField.id }}">
-    {{ textField.placeholder }}
+    placeholder="{{ text.placeholder }}" />
+  <label class="osg-text-field-label" for="{{ text.id }}">
+    {{ text.placeholder }}
   </label>
 </div>
