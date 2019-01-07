@@ -9,6 +9,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* organisms-global-footer: Added background color to top domain link.
 
 ### Added
 
