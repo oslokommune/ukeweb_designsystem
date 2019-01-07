@@ -13,6 +13,7 @@ See README.md for release description.
 ### Added
 
 ### Changed
+* molecules-search-search_bar: changed json field for textField, as it has changed name to text
 
 ### Removed
 
