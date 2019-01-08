@@ -1,6 +1,6 @@
 <div class="osg-shape {{ shape.variant | default('osg-v-default')  }} {{ shape.modifiers | default(null) }}">
   {% if shape.url is defined %}
-    <a href="{{ shape.url }}" target="_blank">
+  <a href="{{ shape.url }}" {% if shape.title is defined %} title="{{ shape.title }}" {% endif %} target="_blank">
   {% endif %}
 
   {% if "osg-v-image" in shape.variant | default('osg-v-default') %}
