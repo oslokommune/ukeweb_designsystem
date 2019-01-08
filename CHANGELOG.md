@@ -16,8 +16,20 @@ See README.md for release description.
 * atoms-decorators-shape: added optional title field to the anchor.
 * atoms-social-icon: added optional title field to the anchor.
 * molecules-social-icon_list: added title field to the brands.
+* molecules-search-search_bar: changed json field for textField, as it has changed name to text
 
 ### Removed
+
+
+## [0.11.0] - 2019-01-03
+
+### Fixed
+* molecules-content_display-expand_box: Fixed font size for title in mobile view.
+* organisms-navigation-story_preview: changed font weight to 600
+
+### Changed
+* atoms-forms-text: changed namespace from textField to text.
+* atoms-buttons-button: wrapped data-attrs in double-quotes to allow for multiple words .
 
 ## [0.10.0] - 2018-12-17
 
