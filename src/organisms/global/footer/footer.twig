@@ -16,7 +16,9 @@
     {% endfor %}
 
     {% if footer.topDomainLink.url is defined %}
-      <a href="{{ footer.topDomainLink.url }}" target="_blank">{{ footer.topDomainLink.text }}</a>
+      <div class="osg-logo-wrapper">
+        <a href="{{ footer.topDomainLink.url }}" target="_blank">{{ footer.topDomainLink.text }}</a>
+      </div>
     {% endif %}
   </div>
   <div class="osg-lang">

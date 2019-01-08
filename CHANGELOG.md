@@ -12,9 +12,23 @@ See README.md for release description.
 
 ### Added
 
+### Removed
+
 ### Changed
 
-### Removed
+
+## [0.12.0] - 2019-01-08
+
+### Fixed
+* organisms-global-footer: Added background color to top domain link.
+
+### Added
+* atoms-decorators-shape: added optional title field to the anchor.
+* atoms-social-icon: added optional title field to the anchor.
+* molecules-social-icon_list: added title field to the brands.
+
+### Changed
+* molecules-search-search_bar: changed json field for textField, as it has changed name to text
 
 
 ## [0.11.0] - 2019-01-03
