@@ -1,4 +1,4 @@
-<div class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+<a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
   <div class="osg-image">
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
@@ -10,7 +10,15 @@
       {{ parent() }}
     {% endblock %}
     {% block footer %}
+      <div class="osg-extra-link">
+        {% include "atoms/icons/icon/icon.twig" %}
+        {{ storyPreview.link.text }}
+        {% if storyPreview.link.srText is defined %}
+        <span class="sr-only">{{ storyPreview.link.srText }}</span>
+        {% endif %}
+      </div>
       {{ parent() }}
     {% endblock %}
   {% endembed %}
-</div>
+</a>
+

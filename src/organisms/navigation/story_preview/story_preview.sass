@@ -68,6 +68,10 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
       padding-top: nth($padding-list, 3)
 
 .osg-story-preview
+  text-decoration: none
+  &:hover
+    .osg-extra-link
+      text-decoration: underline
   .osg-content-box
     background: transparent
     .osg-container
@@ -76,8 +80,18 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     font-weight: 600
   .osg-content-box-tag
     color: $color-green-dark
-    &:hover
-      color: $color-green-dark
+  .osg-extra-link
+    display: flex
+    text-decoration: none
+    align-items: center
+    font-size: $font-size-18
+    .osg-icon
+      height: 15px
+      width: 15px
+      +tablet-and-up
+        height: 20px
+        width: 20px
+      margin-right: 10px
   .osg-icon
     margin-right: 10px
     height: 20px
