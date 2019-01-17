@@ -1,4 +1,8 @@
-<a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+{% if storyPreview.link is defined and storyPreview.allClickable %}
+  <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+{% else %}
+  <div class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+{% endif %}
   <div class="osg-image">
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
@@ -10,15 +14,23 @@
       {{ parent() }}
     {% endblock %}
     {% block footer %}
-      <div class="osg-extra-link">
-        {% include "atoms/icons/icon/icon.twig" %}
-        {{ storyPreview.link.text }}
-        {% if storyPreview.link.srText is defined %}
-        <span class="sr-only">{{ storyPreview.link.srText }}</span>
+      {% if storyPreview.allClickable is defined and storyPreview.allClickable == true %}
+        {% if storyPreview.link is defined %}
+          <div class="osg-extra-link">
+            {% include "atoms/icons/icon/icon.twig" %}
+            {{ storyPreview.link.text }}
+            {% if storyPreview.link.srText is defined %}
+              <span class="sr-only">{{ storyPreview.link.srText }}</span>
+            {% endif %}
+          </div>
         {% endif %}
-      </div>
+      {% endif %}
       {{ parent() }}
     {% endblock %}
   {% endembed %}
-</a>
+{% if storyPreview.link is defined %}
+  </a>
+{% else %}
+  </div>
+{% endif %}
 

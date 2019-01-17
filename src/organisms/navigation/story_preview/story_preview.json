@@ -13,16 +13,17 @@
     ]
   },
   "storyPreview": {
+    "allClickable": false
+  },
+  "contentBox": {
+    "tag": "Consectetur",
+    "heading": "Pellentesque habitant morbi",
+    "text": "Lorem ipsum dolor",
     "link": {
       "url": "#",
       "text": "Nulla vel orci ut erat volutpat.",
       "srText": "This text is only for screen readers"
     }
-  },
-  "contentBox": {
-    "tag": "Consectetur",
-    "heading": "Pellentesque habitant morbi",
-    "text": "Lorem ipsum dolor"
   },
   "shape": {
     "variant": "osg-v-image"
