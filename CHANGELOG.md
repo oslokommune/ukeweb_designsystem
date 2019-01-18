@@ -15,6 +15,8 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+* organisms-navigation-story_preview: Moved the read more link from content box into the main story preview component.
+* organisms-navigation-story_preview: Made the whole component a link if the link is defined, otherwise the component is a div and the read more text is not shown.
 
 
 ## [0.12.0] - 2019-01-08
