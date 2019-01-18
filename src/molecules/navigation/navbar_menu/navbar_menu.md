@@ -3,6 +3,31 @@ Navbar hamburger menu with slide in effect from the left.
 
 Append class .osg-v-open to nav.osg-navbar-menu to open the menu.
 
+### Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| variant | String  | osg-v-default, osg-v-open | "osg-v-default" | Name of the variant |
+| modifiers | String | Any global css class | null | Root class to modify styles |
+| *links | Array | List of objects. See the "Link Object Data Fields" section below | [] (empty array) | Array of link objects |
+| *languages | Array | List of objects. See the "Language Object Data Fields" section below | [] (empty array) | Array of language objects |
+| topDomainLink | Object | text:String, url:String | null | Link to parent site |
+| topDomainLink.text | String | Clean text content | null | Text for top domain link |
+| topDomainLink.url | String | Valid url | null | Url to where the top domain link points |
+| *logos | Object | Array of figures | null | Wrapper object for the figures array |
+| *figures | Array | List of objects. See the figure pattern documentation for figure field descriptions | null | Array of figure objects |
+
+#### Link Object Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| *text | String | Clean text content | null | Text for menu link |
+| *url | String | Valid url | null | Url to where the menu link points |
+
+#### Language Object Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| *text | String | Clean text content | null | Text for language link |
+| *url | String | Valid url | null | Url to where the language link points |
+
 ### Javascript Functionality
 
 Example code for opening and closing the menu:
