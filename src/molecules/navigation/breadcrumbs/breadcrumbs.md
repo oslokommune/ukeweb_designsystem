@@ -12,3 +12,5 @@ Breadcrumbs is a vertical list of links, typically displayed once at the top of 
 |---|---|---|---|---|
 | text | String | Clean text content | null | Text inside path link |
 | url | String | Valid url | null | Url to where the path link points |
+
+(*) mandatory

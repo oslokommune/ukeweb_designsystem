@@ -28,6 +28,8 @@ Append class .osg-v-open to nav.osg-navbar-menu to open the menu.
 | *text | String | Clean text content | null | Text for language link |
 | *url | String | Valid url | null | Url to where the language link points |
 
+(*) mandatory
+
 ### Javascript Functionality
 
 Example code for opening and closing the menu:
