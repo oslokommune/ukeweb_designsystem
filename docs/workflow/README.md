@@ -18,7 +18,7 @@ git flow feature start [name-of-jira-issue]
 ```shell
 git flow feature publish [name-of-jira-issue]
 ```
-* Bitbucket: Find your feature branch and make a pull request towards the develop branch
+* Github: Find your feature branch and make a pull request towards the develop branch
 * Jira: Move your issue from "in progress" to "code review"
 
 Someone from the team will look over and either make change requests or accept the pull request. If you get change request, make changes, commit and push.
