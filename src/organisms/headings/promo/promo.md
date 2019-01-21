@@ -1,7 +1,13 @@
 ### General
 This pattern is used for displaying the intro section on a page. The intro variant is larger and will display as 100 view height on mobiles.
 
-#### Twig
-Logo and button can be toggeled using flags:
-- **showButton**: true|false
-- **showLogo**: true|false
+### Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| variant | String  | See variant options below | "osg-v-default" | Name of the variant |
+| title | String | Clean text content | null | Text on top of image |
+| button | Object | See the button patterns data fields | null | A general purpose button |
+| showButton | Boolean | true/false | null | Whether to show a button. Use together with the button data fields |
+| showLogo | Boolean | true/false | null | Whether to show a logo. Use together with figure data fields |
+
+**See the figure patterns data fields to know how to add a logo.**
