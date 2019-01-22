@@ -28,12 +28,9 @@
         margin-right: 60px
         padding-right: 100px
     figcaption
-      position: absolute
-      margin-top: 0
-      bottom: 75px
-      left: 10px
+      display: none
       +desktop-and-up
-        position: static
+        display: block
     .osg-event-info
       color: $color-green-dark
       font-size: $font-size-14
@@ -51,3 +48,14 @@
         position: absolute
         top: 0
         right: 0
+
+  .osg-event-caption
+    // osg-event-caption is a hack to display the image
+    // figcaption below info_list on mobile and tablet
+    color: #6A6A6A
+    font-size: $font-size-12
+    padding: 15px 0 0
+    +tablet-and-up
+      font-size: $font-size-14
+    +desktop-and-up
+      display: none

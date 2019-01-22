@@ -11,10 +11,12 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+* organisms-headings-event: new element (div.osg-event-caption) to show image caption below the info_list pattern on mobile. Now supports multiple caption lines on mobile.
 
 ### Removed
 
 ### Changed
+* organisms-headings-event: hiding figcaption on mobile (not a breaking change for twig consumers).
 * organisms-navigation-story_preview: Moved the read more link from content box into the main story preview component.
 * organisms-navigation-story_preview: Made the whole component a link if the link is defined, otherwise the component is a div and the read more text is not shown.
 
