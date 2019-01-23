@@ -15,6 +15,11 @@
       {% include "atoms/decorators/figure/figure.twig" %}
       <div class="osg-event-info">
         {% include "molecules/data_display/info_list/info_list.twig" %}
+        {% if figure.caption is not empty %}
+          <div class="osg-event-caption">
+            {{ figure.caption }}
+          </div>
+        {% endif %}
       </div>
     </div>
   {% endblock %}

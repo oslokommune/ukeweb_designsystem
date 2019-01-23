@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 See README.md for release description.
 
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -15,6 +16,17 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+
+
+## [0.13.0] - 2019-01-23
+
+### Added
+* organisms-headings-event: new element (div.osg-event-caption) to show image caption below the info_list pattern on mobile. Now supports multiple caption lines on mobile.
+
+### Changed
+* organisms-headings-event: hiding figcaption on mobile (not a breaking change for twig consumers).
+* organisms-navigation-story_preview: Moved the read more link from content box into the main story preview component.
+* organisms-navigation-story_preview: Made the whole component a link if the link is defined, otherwise the component is a div and the read more text is not shown.
 
 
 ## [0.12.0] - 2019-01-08
