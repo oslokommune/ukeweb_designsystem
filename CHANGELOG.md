@@ -6,14 +6,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 See README.md for release description.
 
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
 
 ### Added
-* organisms-headings-event: new element (div.osg-event-caption) to show image caption below the info_list pattern on mobile. Now supports multiple caption lines on mobile.
 
 ### Removed
+
+### Changed
+
+
+## [0.13.0] - 2019-01-23
+
+### Added
+* organisms-headings-event: new element (div.osg-event-caption) to show image caption below the info_list pattern on mobile. Now supports multiple caption lines on mobile.
 
 ### Changed
 * organisms-headings-event: hiding figcaption on mobile (not a breaking change for twig consumers).
