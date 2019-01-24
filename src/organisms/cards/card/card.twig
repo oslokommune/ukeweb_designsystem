@@ -19,6 +19,7 @@
       </a>
     {% endblock %}
     {% block footer %}
+      {{ parent() }}
       {% if tags is defined %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
