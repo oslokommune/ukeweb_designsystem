@@ -18,6 +18,14 @@ See README.md for release description.
 ### Changed
 
 
+## [0.13.3] - 2019-01-24
+
+### Fixed
+* organisms-cards-listCard: added support for injecting content into contentBox footer(by added a call to parent)
+* organisms-cards-shapeCard: added support for injecting content into contentBox footer(by added a call to parent)
+* organisms-cards-card: added support for injecting content into contentBox footer(by added a call to parent)
+
+
 ## [0.13.2] - 2019-01-24
 
 ### Fixed
