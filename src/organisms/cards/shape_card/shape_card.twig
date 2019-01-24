@@ -20,9 +20,7 @@
         </a>
       {% endblock %}
       {% block footer %}
-        <a class="osg-wrapper" href="{{ shapeCard.url }}" aria-hidden="true">
-          {{ parent() }}
-        </a>
+        {{ parent() }}
         {% if tags is defined %}
           {% include 'molecules/navigation/tags/tags.twig' %}
         {% endif %}
