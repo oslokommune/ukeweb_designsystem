@@ -18,11 +18,16 @@ See README.md for release description.
 ### Changed
 
 
+## [0.13.2] - 2019-01-24
+
+### Fixed
+* content_display-content_box: more rigid variable checks on optional fields.
+
+
 ## [0.13.1] - 2019-01-24
 
 ### Fixed
 * organisms-navigation-story_preview: more rigid variable checks on optional fields.
-* content_display-content_box: more rigid variable checks on optional fields.
 
 
 ## [0.13.0] - 2019-01-23
