@@ -1,5 +1,6 @@
+{% set hasAlertData = alert is defined and alert is not empty %}
 <div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
-  {% if alert is defined %}
+  {% if hasAlertData %}
     {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}
   <div class="osg-container">
