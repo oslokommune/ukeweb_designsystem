@@ -2,10 +2,11 @@
 // HELPER MIXINS
 // ============================================================================
 //
-// Provides misc helper mixins
+// Provides misc helper mixins.
+// Is prefixed with osg-helper-
 
 // copied from font-face-mixin sass file and converted to sass
-=font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+=osg-helper-font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
   $src: null
   $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") )
   $formats: ( otf: "opentype", ttf: "truetype" )
@@ -20,7 +21,7 @@
     src: $src
 
 // helper mixin for using font awesome icon as a pseudo element
-=fa-pseudo($unicode)
+=osg-helper-fa-pseudo($unicode)
   font-family: Font Awesome\ 5 Free
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
@@ -32,7 +33,7 @@
   font-weight: 900
   content: "#{$unicode}"
 
-=osg-filter($color)
+=osg-helper-filter($color)
   position: relative
   &:after
     content: ""
