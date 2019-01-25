@@ -1,0 +1,29 @@
+/* ------------- MEDIA QUERY MIXINS -------------- */
+
+=osg-from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=osg-until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile-only
+  @media screen and (max-width: $osg-tablet - 1px)
+    @content
+
+=tablet-and-up
+  @media screen and (min-width: $osg-tablet), print
+    @content
+
+=desktop-and-up
+  @media screen and (min-width: $osg-desktop)
+    @content
+
+=widescreen-and-up
+  @media screen and (min-width: $osg-widescreen)
+    @content
+
+=fullhd-and-up
+  @media screen and (min-width: $osg-fullhd)
+    @content

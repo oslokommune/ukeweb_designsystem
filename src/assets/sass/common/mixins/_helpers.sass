@@ -1,0 +1,40 @@
+/* ------------- HELPER MIXINS -------------- */
+// copied from font-face-mixin sass file and converted to sass
+=font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+  $src: null
+  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") )
+  $formats: ( otf: "opentype", ttf: "truetype" )
+  @each $ext in $exts
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma)
+  @font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    src: $src
+
+// helper mixin for using font awesome icon as a pseudo element
+=fa-pseudo($unicode)
+  font-family: Font Awesome\ 5 Free
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  display: inline-block
+  font-style: normal
+  font-variant: normal
+  text-rendering: auto
+  line-height: 1
+  font-weight: 900
+  content: "#{$unicode}"
+
+=osg-filter($color)
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: $color
+    opacity: .7
