@@ -2,32 +2,33 @@
 // MEDIA QUERY MIXINS
 // ============================================================================
 //
-// Provides mixins to wrap device spesific styles in
+// Provides mixins to wrap device spesific styles in.
+// Is prefixed with osg-mq-
 
-=osg-from($device)
+=osg-mq-from($device)
   @media screen and (min-width: $device)
     @content
 
-=osg-until($device)
+=osg-mq-until($device)
   @media screen and (max-width: $device - 1px)
     @content
 
-=mobile-only
+=osg-mq-mobile-only
   @media screen and (max-width: $osg-tablet - 1px)
     @content
 
-=tablet-and-up
+=osg-mq-tablet-and-up
   @media screen and (min-width: $osg-tablet), print
     @content
 
-=desktop-and-up
+=osg-mq-desktop-and-up
   @media screen and (min-width: $osg-desktop)
     @content
 
-=widescreen-and-up
+=osg-mq-widescreen-and-up
   @media screen and (min-width: $osg-widescreen)
     @content
 
-=fullhd-and-up
+=osg-mq-fullhd-and-up
   @media screen and (min-width: $osg-fullhd)
     @content

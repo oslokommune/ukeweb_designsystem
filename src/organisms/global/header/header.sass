@@ -12,7 +12,7 @@ $osg-margin-top-bottom-desktop: 25px
   padding: $osg-margin-top-bottom-mobile 0 $osg-margin-top-bottom-mobile 0
   width: 100%
   box-shadow: 0px 2px 2px -2px rgba(220,220,220,1)
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     padding: $osg-margin-top-bottom-desktop 0 $osg-margin-top-bottom-desktop 0
   a
     color: $color-grey-darker
@@ -22,14 +22,14 @@ $osg-margin-top-bottom-desktop: 25px
     position: fixed
     right: 15px
     bottom: 30px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       flex-shrink: 0
       align-self: flex-start
       position: static
   .osg-header-title
     flex-grow: 1
     margin-left: 0
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-left: 20px
     a
       text-decoration: none
@@ -50,12 +50,12 @@ $osg-margin-top-bottom-desktop: 25px
       &:hover span
         text-decoration: underline
 
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $font-size-20
     i
       color: $color-green-dark
       margin-left: 10px
       margin-bottom: 2px
-      +tablet-and-up
+      +osg-mq-tablet-and-up
         margin-left: 20px
         margin-bottom: 3px

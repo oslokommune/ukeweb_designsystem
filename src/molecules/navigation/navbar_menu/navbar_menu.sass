@@ -62,7 +62,7 @@ $osg-mobile-hamburger-line-height: 2px
           top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, 0)
         &:nth-child(3)
           top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, $osg-mobile-hamburger-line-gap)
-        +tablet-and-up
+        +osg-mq-tablet-and-up
           height: $osg-desktop-hamburger-line-height
           width: $osg-desktop-hamburger-line-width
           left: ($osg-hamburger-width / 2) - ($osg-desktop-hamburger-line-width / 2)
@@ -90,7 +90,7 @@ $osg-mobile-hamburger-line-height: 2px
     padding: 50px 15px 35px 30px
     font-size: $font-size-24
     z-index: 102
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       width: 521px
       padding: 150px 15px 50px 125px
       font-size: $font-size-30
@@ -106,7 +106,7 @@ $osg-mobile-hamburger-line-height: 2px
       list-style: none
       padding: 0
       margin-bottom: 45px
-      +tablet-and-up
+      +osg-mq-tablet-and-up
         margin-bottom: 95px
     li
       padding: 0
@@ -126,12 +126,12 @@ $osg-mobile-hamburger-line-height: 2px
       width: auto
       img
         width: auto
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $font-size-24
       margin-bottom: 0
 
   // Style for mobile version of the navbar menu
-  +mobile-only
+  +osg-mq-mobile-only
     .osg-navbar-hamburger
       position: fixed
       bottom: 30px
@@ -197,7 +197,7 @@ $osg-mobile-hamburger-line-height: 2px
             transform: translateY(-7px) translateY(50%) rotate(135deg)
 
   // Style for desktop version of the navbar menu
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     .osg-navbar-menu-overlay-wrapper
       width: 521px
       position: fixed

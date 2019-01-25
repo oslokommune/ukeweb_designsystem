@@ -1,12 +1,12 @@
 .osg-event
   position: relative
-  +desktop-and-up
+  +osg-mq-desktop-and-up
     .osg-event-header
       padding-right: 570px
   h2
     font-size: $font-size-26
     font-weight: bold
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $font-size-40
     span
       margin-left: 5px
@@ -16,20 +16,20 @@
   .osg-event-image
     .osg-figure
       display: block
-    +mobile-only()
+    +osg-mq-mobile-only()
       margin-bottom: -80px
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-top: 40px
     picture
       order: 2
-      +desktop-and-up
+      +osg-mq-desktop-and-up
         order: 1
         display: block
         margin-right: 60px
         padding-right: 100px
     figcaption
       display: none
-      +desktop-and-up
+      +osg-mq-desktop-and-up
         display: block
     .osg-event-info
       color: $color-green-dark
@@ -41,9 +41,9 @@
       top: -100px
       padding-left: 10px
       padding-right: 10px
-      +osg-until($osg-desktop)
+      +osg-mq-until($osg-desktop)
         order: 3
-      +desktop-and-up
+      +osg-mq-desktop-and-up
         width: 500px
         position: absolute
         top: 0
@@ -55,7 +55,7 @@
     color: #6A6A6A
     font-size: $font-size-12
     padding: 15px 0 0
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $font-size-14
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       display: none

@@ -7,7 +7,7 @@ $shape-size-tablet: 250px
   width: 100%
   flex-shrink: 1
   flex-direction: column
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     flex-direction: row
   > a
     display: flex
@@ -22,7 +22,7 @@ $shape-size-tablet: 250px
     background-color: transparent
     height: $shape-size-mobile
     width: $shape-size-mobile
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       height: $shape-size-tablet
       width: $shape-size-tablet
     figure
@@ -47,7 +47,7 @@ $shape-size-tablet: 250px
     top: calc((#{$shape-size-mobile} / 2) - (#{$font-size-16} / 2))
     width: $shape-size-mobile
     font-size: $font-size-16
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       top: calc((#{$shape-size-tablet} / 2) - (#{$font-size-28} / 2))
       width: $shape-size-tablet
       font-size: $font-size-28
