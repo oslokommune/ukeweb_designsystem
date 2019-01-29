@@ -7,8 +7,8 @@
 /* ---------------- GENERAL -----------------*/
 @import '~minireset.css/minireset.sass'
 @import '~@fortawesome/fontawesome-free/css/all.css'
-@import 'osloSans'
-@import 'content'
+@import 'global/osloSans'
+@import 'global/content'
 
 body, html
   background-color: $color-white
@@ -18,7 +18,7 @@ body, html
 
 p
   font-size: $font-size-18
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     font-size: $font-size-20
 
 a
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5
     @extend .osg-text-is-size-5
   ul li, ol li
   font-size: $font-size-18
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     font-size: $font-size-20
   strong
     font-weight: bold

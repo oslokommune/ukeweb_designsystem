@@ -19,12 +19,12 @@ $box-margin-top-tablet: -60px
     width: calc(100% - #{$size})
 
 .osg-card
-  +card-common
-  +card-with-state-modifier
+  +osg-common-card
+  +osg-common-card-with-state-modifier
 
   &.osg-v-download
     h2:after
-      +fa-pseudo('\f019')
+      +osg-helper-fa-pseudo('\f019')
       font-size: $font-size-13
       margin-left: 15px
 
@@ -33,29 +33,29 @@ $box-margin-top-tablet: -60px
     +osg-card-m-full
   &.osg-m-right
     +osg-card-m-right($shape-size-mobile)
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-card-m-right($shape-size-tablet)
   &.osg-m-left
     +osg-card-m-left($shape-size-mobile)
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-card-m-left($shape-size-tablet)
 
   &.osg-m-full-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-card-m-full
   &.osg-m-right-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-card-m-right($shape-size-tablet)
   &.osg-m-left-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-card-m-left($shape-size-tablet)
 
   &.osg-m-full-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-card-m-full
   &.osg-m-right-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-card-m-right($shape-size-tablet)
   &.osg-m-left-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-card-m-left($shape-size-tablet)

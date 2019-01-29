@@ -28,8 +28,8 @@ $box-margin-top-tablet: -60px
     top: calc(#{$margin} - #{$size})
 
 .osg-shapeCard
-  +card-common
-  +card-with-state-modifier
+  +osg-common-card
+  +osg-common-card-with-state-modifier
 
   .osg-shape
     padding: 0
@@ -40,7 +40,7 @@ $box-margin-top-tablet: -60px
     order: 2
     span
       white-space: nowrap
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       height: $shape-size-tablet
       width: $shape-size-tablet
       padding: 15px
@@ -50,35 +50,35 @@ $box-margin-top-tablet: -60px
 
   &.osg-m-right
     +osg-shapeCard-m-right
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-shapeCard-m-right
   &.osg-m-left
     +osg-shapeCard-m-left($shape-size-mobile)
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-shapeCard-m-left($shape-size-tablet)
   &.osg-m-shape-in-image
     +osg-shapeCard-m-shape-in-image($shape-size-mobile, $box-margin-top-mobile)
 
   &.osg-m-shape-in-image-mobile-only
-    +mobile-only
+    +osg-mq-mobile-only
       +osg-shapeCard-m-shape-in-image($shape-size-mobile, $box-margin-top-mobile)
 
   &.osg-m-right-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-shapeCard-m-right
   &.osg-m-left-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-shapeCard-m-left($shape-size-tablet)
   &.osg-m-shape-in-image-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-shapeCard-m-shape-in-image($shape-size-tablet, $box-margin-top-tablet)
 
   &.osg-m-right-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-shapeCard-m-right
   &.osg-m-left-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-shapeCard-m-left($shape-size-tablet)
   &.osg-m-shape-in-image-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       +osg-shapeCard-m-shape-in-image($shape-size-tablet, $box-margin-top-tablet)

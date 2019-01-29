@@ -1,0 +1,145 @@
+// ============================================================================
+// COMMON MIXINS
+// ============================================================================
+//
+// This is where we put styles that is used across more than one pattern
+// Is prefixed with osg-common-
+
+=osg-common-blockquote
+  position: relative
+  background-color: $color-brown-beige
+  color: $color-grey-dark
+  padding: 105px 15px 50px 30px
+  font-size: $font-size-20
+  +osg-mq-tablet-and-up
+    font-size: $font-size-32
+    padding: 130px 120px 100px 120px
+    line-height: 45px
+  a
+    text-decoration: none
+  p
+    font-size: $font-size-20
+    +osg-mq-tablet-and-up
+      font-size: $font-size-32
+  footer, & > cite
+    display: block
+    font-size: $font-size-16
+    line-height: 33px
+    padding-top: 20px
+    +osg-mq-tablet-and-up
+      font-size: $font-size-20
+      padding-top: 40px
+  &:before
+    font-family: 'Font Awesome 5 Free'
+    font-weight: 900
+    content: "\F10E"
+    font-size: $font-size-30
+    font-style: normal
+    color: $color-grey-dark
+    position: absolute
+    top: 50px
+    left: 30px
+    +osg-mq-tablet-and-up
+      left: 50px
+
+=osg-common-card
+  position: relative
+  a
+    text-decoration: none
+  figure
+    overflow: hidden
+  img
+    display: block
+    min-width: 100%
+    max-width: 100%
+    object-fit: cover
+    transition: transform 1s cubic-bezier(.22,.57,.25,1)
+  .osg-wrapper
+    display: flex
+    flex-direction: column
+    font-weight: 300
+  .osg-box-shape-wrapper
+    display: flex
+    flex-direction: row
+  .osg-shape
+    order: 2
+  h2
+    font-weight: 500
+  &:hover
+    img
+      transform: scale(1.1)
+  .osg-content-box
+    text-decoration: none
+    flex-grow: 1
+    order: 0
+    position: relative
+    background: white
+    bottom: 50px
+    margin-bottom: $box-margin-top-mobile
+    width: calc(100% - #{$shape-size-mobile})
+    +osg-mq-tablet-and-up
+      bottom: 60px
+      margin-bottom: $box-margin-top-tablet
+      width: calc(100% - #{$shape-size-tablet})
+    h2
+      font-weight: 600
+  .osg-search-result
+    display: none
+    text-decoration: none
+    padding-top: 15px
+    margin-top: 30px
+    border-top: 1px solid $color-green
+    font-weight: bold
+  .osg-state-text
+    display: none
+    position: absolute
+    font-size: $font-size-40
+    text-align: center
+    z-index: 1
+    width: 100%
+    top: calc(50% + #{$box-margin-top-mobile})
+    +osg-mq-tablet-and-up
+      top: calc(50% + #{$box-margin-top-tablet})
+  .osg-tags
+    padding-top: 15px
+  /* modifiers styling */
+  &.osg-m-show-search-result
+    .osg-search-result
+      display: block
+  &.osg-m-animate
+    visibility: visible
+    .osg-image-container
+      +osg-animation-scale-up(1.5s)
+    .osg-shape
+      +osg-animation-scale-in(1.2s)
+      animation-delay: .3s
+      span
+        +osg-animation-scale-in-text(1.2s)
+        animation-delay: .3s
+    .osg-content-box, .osg-box-shape-wrapper
+      +osg-animation-fade-in(1.2s)
+      animation-delay: .3s
+
+=osg-common-card-with-state-modifier
+  &.osg-m-with-state
+    a
+      color: white
+    .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
+      background-color: $color-green-dark
+    .osg-shape
+      color: white
+    p.osg-date:after
+      background-color: white
+    .osg-state-text
+      display: block
+    .osg-tags li
+      &:after
+        color: white
+      .osg-tag
+        color: white
+        &:hover
+          color: white
+    .osg-search-result
+      border-color: white
+    .osg-image-container
+      +osg-helper-filter($color-green-dark)

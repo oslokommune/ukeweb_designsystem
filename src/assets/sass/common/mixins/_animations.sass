@@ -1,0 +1,18 @@
+// ============================================================================
+// ANIMATION MIXINS
+// ============================================================================
+//
+// Provides standardized animations with option for duration.
+// Is prefixed witg osg-animation
+
+=osg-animation-scale-up($duration)
+  animation: scale-up #{$duration} #{$cubic-bezier} backwards
+
+=osg-animation-scale-in($duration)
+  animation: scale-in #{$duration} #{$cubic-bezier} backwards
+
+=osg-animation-scale-in-text($duration)
+  animation: scale-in-text #{$duration} #{$cubic-bezier} backwards
+
+=osg-animation-fade-in($duration)
+  animation: fade-in #{$duration} #{$cubic-bezier} backwards

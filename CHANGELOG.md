@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* sass: split mixins into separate files, and gave them prefixes related to its use (osg-mq, osg-helpers, osg-animations, osg-common).
 
 ### Added
 

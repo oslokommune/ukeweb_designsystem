@@ -1,18 +1,18 @@
 .osg-countdown
-  +desktop-and-up
+  +osg-mq-desktop-and-up
     display: flex
     justify-content: space-between
   .osg-timing
     display: flex
     justify-content: space-between
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       flex-basis: 40%
   h2, .osg-timing
     @extend .osg-padding-bottom-medium
   h2
     font-size: $font-size-24
     line-height: 32px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $font-size-36
       line-height: 48px
       flex-basis: 50%
@@ -24,7 +24,7 @@
       display: block
       &:first-child
         font-size: $font-size-24
-        +tablet-and-up
+        +osg-mq-tablet-and-up
           font-size: $font-size-36
           padding-bottom: 10px
       &:last-child

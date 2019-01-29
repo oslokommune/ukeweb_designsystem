@@ -34,7 +34,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     .osg-content-box-tag
       padding-top: unset
     margin-right: 30px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
         margin-right: 60px
     order: 1
 
@@ -45,7 +45,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
   .osg-image
     order: 1
     margin-right: 30px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-right: 60px
     padding-top: unset
   .osg-content-box
@@ -89,7 +89,7 @@ a.osg-story-preview:hover
     .osg-icon
       height: 15px
       width: 15px
-      +tablet-and-up
+      +osg-mq-tablet-and-up
         height: 20px
         width: 20px
       margin-right: 10px
@@ -97,23 +97,23 @@ a.osg-story-preview:hover
     margin-right: 10px
     height: 20px
     width: 20px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       height: 30px
       width: 30px
   +osg-story-preview-font-padding($font-size-regular-mobile, $padding-top-regular-mobile)
-  +tablet-and-up
+  +osg-mq-tablet-and-up
     +osg-story-preview-font-padding($font-size-regular-desktop, $padding-top-regular-desktop)
   &.osg-m-big
     +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-story-preview-font-padding($font-size-big-desktop, $padding-top-big-desktop)
   &.osg-m-big-mobile-only
-    +mobile-only
+    +osg-mq-mobile-only
       +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
   &.osg-m-big-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
-      +tablet-and-up
+      +osg-mq-tablet-and-up
         +osg-story-preview-font-padding($font-size-big-desktop, $padding-top-big-desktop)
   &.osg-m-right
     +osg-story-preview-right
@@ -122,11 +122,11 @@ a.osg-story-preview:hover
   &.osg-m-top
     +osg-story-preview-top
   &.osg-m-left-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-story-preview-left
   &.osg-m-right-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-story-preview-right
   &.osg-m-top-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       +osg-story-preview-top

@@ -57,105 +57,105 @@
 // generate spacing classes for mobile
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       margin-bottom: $size !important
   .osg-padding-top-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       padding-top: $size !important
   .osg-margin-top-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       margin-top: $size !important
   .osg-padding-left-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       padding-left: $size !important
   .osg-margin-left-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       margin-left: $size !important
   .osg-padding-right-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       padding-right: $size !important
   .osg-margin-right-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       margin-right: $size !important
   .osg-padding-sides-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       padding-left: $size !important
       padding-right: $size !important
   .osg-margin-sides-#{$name}-mobile
-    +mobile-only
+    +osg-mq-mobile-only
       margin-left: $size !important
       margin-right: $size !important
 
 // generate spacing classes for tablet
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-bottom: $size !important
   .osg-padding-top-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       padding-top: $size !important
   .osg-margin-top-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-top: $size !important
   .osg-padding-left-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       padding-left: $size !important
   .osg-margin-left-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-left: $size !important
   .osg-padding-right-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       padding-right: $size !important
   .osg-margin-right-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-right: $size !important
   .osg-padding-sides-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       padding-left: $size !important
       padding-right: $size !important
   .osg-margin-sides-#{$name}-tablet
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       margin-left: $size !important
       margin-right: $size !important
 
 // generate spacing classes for desktop
 @each $name, $size in $spacing-sizes
   .osg-padding-bottom-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       padding-bottom: $size !important
   .osg-margin-bottom-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-bottom: $size !important
   .osg-padding-top-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       padding-top: $size !important
   .osg-margin-top-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-top: $size !important
   .osg-padding-left-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       padding-left: $size !important
   .osg-margin-left-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-left: $size !important
   .osg-padding-right-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       padding-right: $size !important
   .osg-margin-right-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-right: $size !important
   .osg-padding-sides-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       padding-left: $size !important
       padding-right: $size !important
   .osg-margin-sides-#{$name}-desktop
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       margin-left: $size !important
       margin-right: $size !important
 
@@ -163,7 +163,7 @@
 @each $name, $size-desktop, $size-mobile in $font-sizes
   .osg-text-is-size-#{$name}
     font-size: $size-mobile !important
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       font-size: $size-desktop !important
 
 // generating color helper classes
@@ -204,7 +204,7 @@
         background: $color-white
       &.osg-v-with-mobile-action-button .osg-navbar-hamburger .osg-navbar-hamburger-icon span
         background: $color-green-dark
-        +tablet-and-up
+        +osg-mq-tablet-and-up
           background: $color-white
     .osg-header-link
       text-shadow: 0 2px 4px rgba(53,53,53,0.5)
@@ -238,13 +238,13 @@
   border: 0
 
 .osg-animate-scale-up
-  +animation-scale-up(1.2s)
+  +osg-animation-scale-up(1.2s)
 
 .osg-animate-scale-in
-  +animation-scale-in(1.2s)
+  +osg-animation-scale-in(1.2s)
 
 .osg-animate-scale-in-text
-  +animation-scale-in-text(1.2s)
+  +osg-animation-scale-in-text(1.2s)
 
 /* animations */
 @keyframes scale-up
