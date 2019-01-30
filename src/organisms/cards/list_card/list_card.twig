@@ -17,7 +17,9 @@
       </a>
     {% endblock %}
     {% block footer %}
-      {{ parent() }}
+      <a class="osg-wrapper" href="{{ listCard.url }}">
+        {{ parent() }}
+      </a>
       {% if tags is defined %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
