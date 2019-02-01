@@ -15,10 +15,32 @@
     "url": "#"
   },
   "contentBox": {
-    "modifiers": "osg-background-grey",
     "date": "7. vesiturum - 11. eleifend",
     "heading": "Pellentesque habitant morbi",
     "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "tags": {
+    "variant": "osg-v-underline",
+    "items": [
+      {
+        "tag": {
+          "content": "Integer tincidunt",
+          "url": "#lorem_ipsum_1"
+        }
+      },
+      {
+        "tag": {
+          "content": "Felis at est viverra",
+          "url": "#lorem_ipsum_2"
+        }
+      },
+      {
+        "tag": {
+          "content": "Sed ultrices turpis",
+          "url": "#lorem_ipsum_3"
+        }
+      }
+    ]
   },
   "shape": {
     "variant": "osg-v-image"
