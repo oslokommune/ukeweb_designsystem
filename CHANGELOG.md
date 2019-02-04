@@ -13,8 +13,10 @@ See README.md for release description.
 * sass: split mixins into separate files, and gave them prefixes related to its use (osg-mq, osg-helpers, osg-animations, osg-common).
 
 ### Added
+* atoms-icons-icon: added optional screen reader text.
 
 ### Removed
+* remove is-sr-only class in _utils.sass.
 
 ### Changed
 
