@@ -43,12 +43,12 @@
     ]
   },
   "shape": {
-    "variant": "osg-v-image osg-v-circle"
+    "variant": "osg-v-image"
   },
   "figure": {
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
-      "defaultUrl": "https://picsum.photos/250/250/?random",
+      "defaultUrl": "https://picsum.photos/210/210/?random",
       "mediaQueryUrls": [
         {
           "query": "max-width: 768px",
