@@ -3,7 +3,7 @@
       {{ icon.brand|raw }}
   </div>
   {% if icon.text is defined and icon.textVisible is defined %}
-  <span class="osg-icon-text {{ (icon.textVisible == true) ? '' : 'sr-only' }}">
+  <span class="osg-icon-text {{ (icon.textVisible == true) ? '' : 'osg-sr-only' }}">
     {{ icon.text }}
   </span>
   {% endif %}
