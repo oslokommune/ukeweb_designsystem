@@ -1,7 +1,10 @@
+{% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
+{% set hasList = expandBox.list is defined and expandBox.list is not empty %}
+
 <div class="osg-expand-box {{ expandBox.variant | default("osg-v-default") }} {{ expandBox.modifiers | default(null) }}">
   {% block head %}
     <div class="osg-title-line">
-      {% if expandBox.title is defined %}
+      {% if hasTitle %}
         <div class="osg-title-line-text">
           <h3>{{ expandBox.title }}</h3>
         </div>
@@ -17,7 +20,7 @@
       {% endblock %}
       {% block body %}
         {{ parent() }}
-        {% if expandBox.list is defined %}
+        {% if hasList %}
           <ul>
             {% for element in expandBox.list %}
               <li>- {{ element }}</li>

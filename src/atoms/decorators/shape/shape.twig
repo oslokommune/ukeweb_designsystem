@@ -1,5 +1,8 @@
+{% set hasUrl = shape.url is defined and shape.url is not empty %}
+{% set hasTitle = shape.title is defined and shape.title is not empty %}
+
 <div class="osg-shape {{ shape.variant | default('osg-v-default')  }} {{ shape.modifiers | default(null) }}">
-  {% if shape.url is defined %}
+  {% if hasUrl %}
   <a href="{{ shape.url }}" {% if shape.title is defined %} title="{{ shape.title }}" {% endif %} target="_blank">
   {% endif %}
 
@@ -9,7 +12,7 @@
     <span>{{ shape.text|raw }}</span>
   {% endif %}
 
-  {% if shape.url is defined %}
+  {% if hasUrl %}
     </a>
   {% endif %}
 </div>

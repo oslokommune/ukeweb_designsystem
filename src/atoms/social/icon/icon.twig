@@ -1,8 +1,12 @@
-<a class="osg-social-icon {{ icon.modifiers | default(null) }}" href="{{ icon.url }}" {% if icon.title is defined %} title="{{ icon.title }}" {% endif %} target="_blank">
+{% set hasTitle = icon.title is defined and icon.title is not empty %}
+{% set hasText = icon.text is defined and icon.text is not empty %}
+{% set hasTextVisible = icon.textVisible is defined and icon.textVisible is not empty %}
+
+<a class="osg-social-icon {{ icon.modifiers | default(null) }}" href="{{ icon.url }}" {% if hasTitle %} title="{{ icon.title }}" {% endif %} target="_blank">
   <div>
       {{ icon.brand|raw }}
   </div>
-  {% if icon.text is defined and icon.textVisible is defined %}
+  {% if hasText and hasTextVisible %}
   <span class="osg-icon-text {{ (icon.textVisible == true) ? '' : 'sr-only' }}">
     {{ icon.text }}
   </span>

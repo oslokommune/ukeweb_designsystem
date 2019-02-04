@@ -1,13 +1,16 @@
-<blockquote class="osg-quote {{ quote.modifiers | default(null) }}" {% if quote.citeSource is defined %} cite="{{quote.citeSource}}" {% endif %}>
+{% set hasCiteSource = quote.citeSource is defined and quote.citeSource is not empty %}
+{% set hasCite = quote.cite is defined and quote.cite is not empty %}
+
+<blockquote class="osg-quote {{ quote.modifiers | default(null) }}" {% if hasCiteSource %} cite="{{quote.citeSource}}" {% endif %}>
   {{quote.text}}
 
-  {% if quote.cite is defined %}
+  {% if hasCite %}
     <footer>
-      {% if quote.citeSource is defined and quote.linkToCitation == true  %}
+      {% if hasCiteSource and quote.linkToCitation == true  %}
         <a href="{{ quote.citeSource }}">
       {% endif %}
         <cite>{{ quote.cite }}</cite>
-      {% if quote.citeSource is defined  %}
+      {% if hasCiteSource  %}
         </a>
       {% endif %}
     </footer>

@@ -1,9 +1,12 @@
+{% set hasHeaderTag = event.headerTag is defined and event.headerTag is not empty %}
+{% set hasCaption = figure.caption is defined and figure.caption is not empty %}
+
 <div class="osg-event {{ event.modifiers | default(null) }}">
   {% block head %}
     <div class="osg-event-header">
       <h2>
         {{ event.heading }}
-        {% if event.headerTag is defined %}
+        {% if hasHeaderTag %}
           <span>{{ event.headerTag }}</span>
         {% endif %}
       </h2>
@@ -15,7 +18,7 @@
       {% include "atoms/decorators/figure/figure.twig" %}
       <div class="osg-event-info">
         {% include "molecules/data_display/info_list/info_list.twig" %}
-        {% if figure.caption is not empty %}
+        {% if hasCaption %}
           <div class="osg-event-caption">
             {{ figure.caption }}
           </div>

@@ -1,22 +1,26 @@
+{% set hasMediaQueryUrls = figure.img.mediaQueryUrls is defined and figure.img.mediaQueryUrls is not empty %}
+{% set hasLink = figure.link is defined and figure.link is not empty %}
+{% set hasFigure = figure.caption is defined and figure.caption is not empty %}
+
 <figure class="osg-figure {{ figure.variant | default('osg-v-default')  }} {{ figure.modifiers | default(null) }}">
   <picture>
-    {% if figure.img.mediaQueryUrls is defined %}
+    {% if hasMediaQueryUrls %}
       {% for img in figure.img.mediaQueryUrls %}
         <source srcset="{{ img.url }}" media="({{ img.query }})" />
       {% endfor %}
     {% endif %}
 
-    {% if figure.link is defined %}
+    {% if hasLink %}
       <a href="{{ figure.link.url | default('#') }}"
         target="{{ figure.link.target | default('_self') }}">
     {% endif %}
         <img src="{{ figure.img.defaultUrl }}" alt="{{ figure.img.alt }}" />
-    {% if figure.link is defined %}
+    {% if hasLink %}
       </a>
     {% endif %}
   </picture>
 
-  {% if figure.caption is defined %}
+  {% if hasFigure %}
     <figcaption class="osg-figcaption">
       {{ figure.caption }}
     </figcaption>
