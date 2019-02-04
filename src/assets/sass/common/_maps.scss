@@ -6,63 +6,63 @@
 // https://github.com/sass/sass/issues/1088
 
 $osg-colors: (
-"blue": $color-blue,
-"blue-light": $color-blue-light,
-"purple": $color-purple,
-"grey-lighter": $color-grey-lighter,
-"grey-light": $color-grey-light,
-"grey-dark": $color-grey-dark,
-"grey-darker": $color-grey-darker,
-"green": $color-green,
-"green-dark": $color-green-dark,
-"green-light": $color-green-light,
-"green-lighter": $color-green-lighter,
-"green-faded": $color-green-faded,
-"brown": $color-brown,
-"brown-beige": $color-brown-beige,
-"orange": $color-orange,
-"red": $color-red,
-"yellow": $color-yellow,
-"white": $color-white
+"blue": $osg-color-blue,
+"blue-light": $osg-color-blue-light,
+"purple": $osg-color-purple,
+"grey-lighter": $osg-color-grey-lighter,
+"grey-light": $osg-color-grey-light,
+"grey-dark": $osg-color-grey-dark,
+"grey-darker": $osg-color-grey-darker,
+"green": $osg-color-green,
+"green-dark": $osg-color-green-dark,
+"green-light": $osg-color-green-light,
+"green-lighter": $osg-color-green-lighter,
+"green-faded": $osg-color-green-faded,
+"brown": $osg-color-brown,
+"brown-beige": $osg-color-brown-beige,
+"orange": $osg-color-orange,
+"red": $osg-color-red,
+"yellow": $osg-color-yellow,
+"white": $osg-color-white
 );
 
 $osg-named-colors: (
-  "muted": $color-grayscale-10 $color-grayscale-80,
-  "primary": $color-blue-light $color-green-dark,
-  "success": $color-green-lighter $color-green-dark,
-  "warning": $color-orange $color-green-dark,
-  "danger": $color-red $color-green-dark
+  "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
+  "primary": $osg-color-blue-light $osg-color-green-dark,
+  "success": $osg-color-green-lighter $osg-color-green-dark,
+  "warning": $osg-color-orange $osg-color-green-dark,
+  "danger": $osg-color-red $osg-color-green-dark
 );
 
 $grayscale: (
-  10: $color-grayscale-10,
-  20: $color-grayscale-20,
-  30: $color-grayscale-30,
-  40: $color-grayscale-40,
-  50: $color-grayscale-50,
-  60: $color-grayscale-60,
-  70: $color-grayscale-70,
-  80: $color-grayscale-80,
-  90: $color-grayscale-90
+  10: $osg-color-grayscale-10,
+  20: $osg-color-grayscale-20,
+  30: $osg-color-grayscale-30,
+  40: $osg-color-grayscale-40,
+  50: $osg-color-grayscale-50,
+  60: $osg-color-grayscale-60,
+  70: $osg-color-grayscale-70,
+  80: $osg-color-grayscale-80,
+  90: $osg-color-grayscale-90
 );
 
 // used to generate spacing classes in utils.sass
 $spacing-sizes: (
-  "none": $space-none,
-  "tiny": $space-tiny,
-  "small": $space-small,
-  "medium": $space-medium,
-  "large": $space-large,
-  "huge": $space-huge
+  "none": $osg-space-none,
+  "tiny": $osg-space-tiny,
+  "small": $osg-space-small,
+  "medium": $osg-space-medium,
+  "large": $osg-space-large,
+  "huge": $osg-space-huge
 );
 
 // used to generate font-size classes in utils.sass
-$font-sizes: (
-  ("1", $font-size-40, $font-size-26),
-  ("2", $font-size-36, $font-size-24),
-  ("3", $font-size-28, $font-size-20),
-  ("4", $font-size-24, $font-size-18),
-  ("5", $font-size-20, $font-size-16)
+$osg-font-sizes: (
+  ("1", $osg-font-size-40, $osg-font-size-26),
+  ("2", $osg-font-size-36, $osg-font-size-24),
+  ("3", $osg-font-size-28, $osg-font-size-20),
+  ("4", $osg-font-size-24, $osg-font-size-18),
+  ("5", $osg-font-size-20, $osg-font-size-16)
 );
 
 $font-weights: (

@@ -7,35 +7,35 @@
 
 =osg-common-blockquote
   position: relative
-  background-color: $color-brown-beige
-  color: $color-grey-dark
+  background-color: $osg-color-brown-beige
+  color: $osg-color-grey-dark
   padding: 105px 15px 50px 30px
-  font-size: $font-size-20
+  font-size: $osg-font-size-20
   +osg-mq-tablet-and-up
-    font-size: $font-size-32
+    font-size: $osg-font-size-32
     padding: 130px 120px 100px 120px
     line-height: 45px
   a
     text-decoration: none
   p
-    font-size: $font-size-20
+    font-size: $osg-font-size-20
     +osg-mq-tablet-and-up
-      font-size: $font-size-32
+      font-size: $osg-font-size-32
   footer, & > cite
     display: block
-    font-size: $font-size-16
+    font-size: $osg-font-size-16
     line-height: 33px
     padding-top: 20px
     +osg-mq-tablet-and-up
-      font-size: $font-size-20
+      font-size: $osg-font-size-20
       padding-top: 40px
   &:before
     font-family: 'Font Awesome 5 Free'
     font-weight: 900
     content: "\F10E"
-    font-size: $font-size-30
+    font-size: $osg-font-size-30
     font-style: normal
-    color: $color-grey-dark
+    color: $osg-color-grey-dark
     position: absolute
     top: 50px
     left: 30px
@@ -88,12 +88,12 @@
     text-decoration: none
     padding-top: 15px
     margin-top: 30px
-    border-top: 1px solid $color-green
+    border-top: 1px solid $osg-color-green
     font-weight: bold
   .osg-state-text
     display: none
     position: absolute
-    font-size: $font-size-40
+    font-size: $osg-font-size-40
     text-align: center
     z-index: 1
     width: 100%
@@ -125,7 +125,7 @@
     a
       color: white
     .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
-      background-color: $color-green-dark
+      background-color: $osg-color-green-dark
     .osg-shape
       color: white
     p.osg-date:after
@@ -142,4 +142,4 @@
     .osg-search-result
       border-color: white
     .osg-image-container
-      +osg-helper-filter($color-green-dark)
+      +osg-helper-filter($osg-color-green-dark)
