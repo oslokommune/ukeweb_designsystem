@@ -1,5 +1,6 @@
 {
   "icon": {
-    "variant": "osg-v-icon-calendar"
+    "variant": "osg-v-icon-calendar",
+    "description": "Calendar"
   }
 }

@@ -5,6 +5,7 @@ Displays svg icons.
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
 | variant | String  | See variant options below | "osg-v-default" | Name of the variant |
+| description | String  | Text | null | Describes the icon for screen reader purposes |
 
 ### Variant Options
 | Name | Description |
