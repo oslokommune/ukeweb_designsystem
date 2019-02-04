@@ -25,18 +25,18 @@
     "icons": {
       "entries": [
         { "variant": "osg-v-icon-calendar",
-          "description": "Calendar",
+          "srText": "Calendar",
           "text": "Praesent 22. sed",
           "subtext": "kl.17:22",
           "linkText": "Vestibulum varius nisi",
           "link": "#" },
         { "variant": "osg-v-icon-location",
-          "description": "Location",
+          "srText": "Location",
           "text": "Fringilla Mattis Tortor",
           "linkText": "Aliquam erat volutpat",
           "link": "#" },
         { "variant": "osg-v-icon-payment",
-          "description": "Payment",
+          "srText": "Payment",
           "text": "250 - 450 kr" }
       ]
     },
