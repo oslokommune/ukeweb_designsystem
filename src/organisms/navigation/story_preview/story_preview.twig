@@ -1,5 +1,5 @@
 {% set isLinkFullSize = storyPreview.link is defined and storyPreview.link and storyPreview.allClickable is defined and storyPreview.allClickable == true %}
-{% set hasSrText = storyPreview.link is defined and storyPreview.link.srText is defined and storyPreview.link.srText is not empty %}
+{% set hasSrText = storyPreview.link.srText is defined and storyPreview.link.srText is not empty %}
 
 {% if isLinkFullSize %}
   <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
