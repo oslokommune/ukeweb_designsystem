@@ -18,7 +18,12 @@
   "contentBox": {
     "tag": "Consectetur",
     "heading": "Pellentesque habitant morbi",
-    "text": "Lorem ipsum dolor"
+    "text": "Lorem ipsum dolor",
+    "link": {
+      "url": "#",
+      "text": "Nulla vel orci ut erat volutpat.",
+      "srText": "This text is only for screen readers"
+    }
   },
   "shape": {
     "variant": "osg-v-image"
