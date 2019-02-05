@@ -14,8 +14,10 @@ See README.md for release description.
 * all twig patterns: Changed "is defined" to "is defined and is not empty" so the consumer can either not pass a field or pass it as null.
 
 ### Added
+* atoms-icons-icon: added optional screen reader text.
 
 ### Removed
+* remove is-sr-only class in _utils.sass.
 
 ### Changed
 
