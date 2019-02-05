@@ -32,6 +32,30 @@
     "topDomainLink": {
       "url": "#",
       "text": "Ligula Ullamcorper"
+    },
+    "logos": {
+      "figures": [
+        {
+          "link": {
+            "url": "http://google.com",
+            "target":"_self"
+          },
+          "img": {
+            "alt": "Lorem ipsum",
+            "defaultUrl": "https://picsum.photos/65/105/?random",
+            "mediaQueryUrls": [
+            {
+              "query": "max-width: 768",
+              "url": "https://picsum.photos/65/105/?random"
+            },
+            {
+              "query": "min-width: 769px",
+              "url": "https://picsum.photos/80/128/?random"
+            }
+            ]
+          }
+        }
+      ]
     }
   },
   "iconList": {
@@ -54,30 +78,6 @@
         "text": "Twitter",
         "textVisible": true,
         "url": "#"
-      }
-    ]
-  },
-  "logos": {
-    "figures": [
-      {
-        "link": {
-          "url": "http://google.com",
-          "target":"_self"
-        },
-        "img": {
-          "alt": "Lorem ipsum",
-          "defaultUrl": "https://picsum.photos/65/105/?random",
-          "mediaQueryUrls": [
-            {
-              "query": "max-width: 768",
-              "url": "https://picsum.photos/65/105/?random"
-            },
-            {
-              "query": "min-width: 769px",
-              "url": "https://picsum.photos/80/128/?random"
-            }
-          ]
-        }
       }
     ]
   }
