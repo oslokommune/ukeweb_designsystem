@@ -19,7 +19,7 @@
     color: nth($tuple, 2) !important
 
 // generating font weight classes
-@each $name, $size in $font-weights
+@each $name, $size in $osg-font-weights
   .osg-text-is-#{$name}
     font-family: 'Oslo Sans', 'sans-serif'
     font-weight: $size !important
@@ -30,7 +30,7 @@
   font-style: italic
 
 // generating spacing classes
-@each $name, $size in $spacing-sizes
+@each $name, $size in $osg-spacing-sizes
   .osg-padding-bottom-#{$name}
     padding-bottom: $size !important
   .osg-margin-bottom-#{$name}
@@ -55,7 +55,7 @@
     margin-right: $size !important
 
 // generate spacing classes for mobile
-@each $name, $size in $spacing-sizes
+@each $name, $size in $osg-spacing-sizes
   .osg-padding-bottom-#{$name}-mobile
     +osg-mq-mobile-only
       padding-bottom: $size !important
@@ -90,7 +90,7 @@
       margin-right: $size !important
 
 // generate spacing classes for tablet
-@each $name, $size in $spacing-sizes
+@each $name, $size in $osg-spacing-sizes
   .osg-padding-bottom-#{$name}-tablet
     +osg-mq-tablet-and-up
       padding-bottom: $size !important
@@ -125,7 +125,7 @@
       margin-right: $size !important
 
 // generate spacing classes for desktop
-@each $name, $size in $spacing-sizes
+@each $name, $size in $osg-spacing-sizes
   .osg-padding-bottom-#{$name}-desktop
     +osg-mq-desktop-and-up
       padding-bottom: $size !important
@@ -167,26 +167,26 @@
       font-size: $size-desktop !important
 
 // generating color helper classes
-@each $name, $color in $grayscale
+@each $name, $color in $osg-grayscale
   .osg-bg-grayscale-#{$name}
     background-color: #{$color} !important
   .osg-text-grayscale-#{$name}
     color: #{$color} !important
 
 // generating icon classes
-@each $name in $icon-names
+@each $name in $osg-icon-names
   .osg-icon-#{$name}
     background: url('../../images/#{$name}.svg')
     background-repeat: no-repeat
     background-size: contain
 
 // generating text align classes
-@each $name in $alignment
+@each $name in $osg-alignment
   .osg-text-#{$name}
     text-align: #{$name} !important
 
 // generating flex direction classes
-@each $name in $direction
+@each $name in $osg-direction
   .osg-direction-#{$name}
     flex-direction: #{$name} !important
 

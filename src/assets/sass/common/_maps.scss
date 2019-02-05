@@ -34,7 +34,7 @@ $osg-named-colors: (
   "danger": $osg-color-red $osg-color-green-dark
 );
 
-$grayscale: (
+$osg-grayscale: (
   10: $osg-color-grayscale-10,
   20: $osg-color-grayscale-20,
   30: $osg-color-grayscale-30,
@@ -47,7 +47,7 @@ $grayscale: (
 );
 
 // used to generate spacing classes in utils.sass
-$spacing-sizes: (
+$osg-spacing-sizes: (
   "none": $osg-space-none,
   "tiny": $osg-space-tiny,
   "small": $osg-space-small,
@@ -65,7 +65,7 @@ $osg-font-sizes: (
   ("5", $osg-font-size-20, $osg-font-size-16)
 );
 
-$font-weights: (
+$osg-font-weights: (
   "light": 300,
   "regular": 500,
   "medium": 700,
@@ -73,7 +73,7 @@ $font-weights: (
 );
 
 // used to generate icon classes in utils.sass
-$icon-names: (
+$osg-icon-names: (
   "calendar",
   "location",
   "payment",
@@ -83,14 +83,14 @@ $icon-names: (
 );
 
 // used to generate alignment classes in utils.sass
-$alignment: (
+$osg-alignment: (
   "left",
   "right",
   "center"
 );
 
 // used to generate flex direction classes in utils.sass
-$direction: (
+$osg-direction: (
   "row-reverse",
   "column-reverse"
 );
