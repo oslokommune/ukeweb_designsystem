@@ -16,7 +16,7 @@
     </div>
   {% endblock %}
   {% block body %}
-    {% if alert.content is defined %}
+    {% if hasContent %}
       <div class="osg-content">
         {{ alert.content | raw }}
       </div>

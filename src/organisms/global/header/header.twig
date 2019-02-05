@@ -1,7 +1,10 @@
 {% set hasTitle = header.title is defined and header.title is not empty %}
-{% set hasTitleText = header.title is defined and header.title.text and header.title.text is not empty %}
-{% set hasTitleTitle = header.title is defined and header.title.title and header.title.title is not empty %}
-{% set hasTitleUrl = header.title is defined and header.title.url and header.title.url is not empty %}
+{% set hasTitleText = hasTitle and header.title.text and header.title.text is not empty %}
+{% set hasTitleTitle = hasTitle and header.title.title and header.title.title is not empty %}
+{% set hasTitleUrl = hasTitle and header.title.url is defined and header.title.url is not empty %}
+{% set hasParentLink = header.parentLink is defined and header.parentLink is not empty %}
+{% set hasParentLinkText = hasParentLink and header.parentLink.text is defined and header.parentLink.text is not empty %}
+{% set hasParentLinkTitle = hasParentLink and header.parentLink.title is defined and header.parentLink.title is not empty %}
 
 <header class="osg-header {{ header.variant | default('osg-v-default')  }} {{ header.modifiers | default(null) }}">
   {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
@@ -14,9 +17,9 @@
     </h1>
     {% endif %}
   </div>
-  {% if header.parentLink is defined and header.parentLink.text is defined %}
+  {% if hasParentLink and hasParentLinkText %}
   <div class="osg-header-link">
-    <a href="{{ header.parentLink.url }}" {% if header.parentLink.title is defined %} title="{{ header.parentLink.title }}" {% endif %}>
+    <a href="{{ header.parentLink.url }}" {% if hasParentLinkTitle %} title="{{ header.parentLink.title }}" {% endif %}>
       <span>{{ header.parentLink.text|default(null) }}</span>
       <i class="fa fa-angle-right"></i>
     </a>

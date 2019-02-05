@@ -3,7 +3,7 @@
 
 <div class="osg-shape {{ shape.variant | default('osg-v-default')  }} {{ shape.modifiers | default(null) }}">
   {% if hasUrl %}
-  <a href="{{ shape.url }}" {% if shape.title is defined %} title="{{ shape.title }}" {% endif %} target="_blank">
+  <a href="{{ shape.url }}" {% if hasTitle %} title="{{ shape.title }}" {% endif %} target="_blank">
   {% endif %}
 
   {% if "osg-v-image" in shape.variant | default('osg-v-default') %}
