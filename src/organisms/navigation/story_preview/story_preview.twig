@@ -1,4 +1,5 @@
 {% set isLinkFullSize = storyPreview.link is defined and storyPreview.link and storyPreview.allClickable is defined and storyPreview.allClickable == true %}
+{% set hasSrText = storyPreview.link.srText is defined and storyPreview.link.srText is not empty %}
 
 {% if isLinkFullSize %}
   <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
@@ -20,7 +21,7 @@
         <div class="osg-extra-link">
           {% include "atoms/icons/icon/icon.twig" %}
           {{ storyPreview.link.text }}
-          {% if storyPreview.link.srText is defined and storyPreview.link.srText %}
+          {% if hasSrText %}
             <span class="osg-sr-only">{{ storyPreview.link.srText }}</span>
           {% endif %}
         </div>
@@ -33,4 +34,3 @@
 {% else %}
   </div>
 {% endif %}
-

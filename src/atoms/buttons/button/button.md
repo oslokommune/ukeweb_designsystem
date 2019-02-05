@@ -21,4 +21,4 @@ Keep in mind that the text size affects to the size of the button.
 - "danger"
 
 ### Other attributes
-If you want to set attributes, such as id, name, data targets etc. You can add them via the dataattrs array which accepts key, val objects and adds them to the <button> or <a>.
+If you want to set attributes, such as id, name, data targets etc. You can add them via the dataattrs array which accepts key, val objects and adds them to the button or the anchor.
