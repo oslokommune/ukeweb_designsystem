@@ -13,6 +13,8 @@ See README.md for release description.
 * sass: split mixins into separate files, and gave them prefixes related to its use (osg-mq, osg-helpers, osg-animations, osg-common).
 * atoms-buttons-button: added hover color
 * all twig patterns: Changed "is defined" to "is defined and is not empty" so the consumer can either not pass a field or pass it as null.
+* organisms-cards-card: changed display to flex to make content not spill over the container
+* organisms-cards-shape_card: changed display to flex to make content not spill over the container
 
 ### Added
 * atoms-icons-icon: added optional screen reader text.
