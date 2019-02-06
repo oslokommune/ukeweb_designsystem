@@ -11,4 +11,7 @@ Header for an event page
 
 (*) mandatory
 
+### Modifiers
+- osg-m-with-state: makes the pattern green and shows the "stateText" if it is defined.
+
 **See the patterns figure, infoList, button and tags for more data field descriptions.**
