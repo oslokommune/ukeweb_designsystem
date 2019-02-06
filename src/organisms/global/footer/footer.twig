@@ -1,3 +1,5 @@
+{% set hasTopDomainLink = footer.topDomainLink is defined and footer.topDomainLink is not empty %}
+
 <div class="osg-footer {{ footer.modifiers | default(null) }}">
   {% set half = footer.linkList|length / 2 %}
   {% for row in footer.linkList|batch(half) %}
@@ -11,11 +13,11 @@
     {% include 'molecules/social/icon_list/icon_list.twig' %}
   </div>
   <div class="osg-logos">
-    {% for figure in logos.figures %}
+    {% for figure in footer.logos.figures %}
       {% include "atoms/decorators/figure/figure.twig" with figure %}
     {% endfor %}
 
-    {% if footer.topDomainLink.url is defined %}
+    {% if hasTopDomainLink %}
       <div class="osg-logo-wrapper">
         <a href="{{ footer.topDomainLink.url }}" target="_blank">{{ footer.topDomainLink.text }}</a>
       </div>

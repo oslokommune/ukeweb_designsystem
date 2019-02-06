@@ -5,7 +5,7 @@ The icons must always contain text, toggled by the flag "textVisible" set to tru
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String  | See "variant options" section below | "osg-v-default" | Name of the variant |
+| variant | String | See "variant options" section below | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | *brands | Array | List of objects. See the "Brands Object Data Fields" section below | null | Array of icon objects |
 

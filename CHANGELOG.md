@@ -18,6 +18,25 @@ See README.md for release description.
 ### Changed
 
 
+## [0.14.0] - 2019-02-06
+
+### Fixed
+* all twig patterns: better checks to ensure that optional fields can either not be passed in or be passed in with with a null value.
+* atoms-buttons-button: added hover color.
+* organisms-cards-card: fixed card being taller then its content.
+* organisms-cards-shape_card: fixed card being taller then its content.
+
+### Added
+* atoms-icons-icon: added optional screen reader text.
+* organisms-headings-event: added optional field stateText and modifier osg-m-with-state which adds an overlay over the picture with the given text
+
+### Removed
+* remove is-sr-only class in _utils.sass.
+
+### Changed
+* organisms-global-footer: moved logos object into footer namespace (twig consumer only).
+
+
 ## [0.13.3] - 2019-01-24
 
 ### Fixed

@@ -1,5 +1,5 @@
-=osg-tag-helper($color-name, $background, $foreground)
-  .osg-tag.osg-tag-#{$color-name}
+=osg-tag-helper($osg-color-name, $background, $foreground)
+  .osg-tag.osg-tag-#{$osg-color-name}
     color: $foreground
     border: 2px solid $background
     &:hover, &:active, &:focus, &:visited
@@ -13,11 +13,11 @@
 
 .osg-tag
   display: inline-block
-  color: $color-grayscale-90
-  border: 2px solid $color-grayscale-10
+  color: $osg-color-grayscale-90
+  border: 2px solid $osg-color-grayscale-10
   background-color: transparent
   padding: 5px 15px 5px 15px
   text-decoration: none
   transition: background-color .2s
   &:hover, &:active, &:focus, &:visited
-    background-color: $color-grayscale-10
+    background-color: $osg-color-grayscale-10

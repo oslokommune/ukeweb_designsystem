@@ -1,5 +1,5 @@
 $shape-size-mobile: 150px
-$shape-size-tablet: 250px
+$shape-size-tablet: 210px
 
 .osg-list-card
   position: relative
@@ -7,7 +7,8 @@ $shape-size-tablet: 250px
   width: 100%
   flex-shrink: 1
   flex-direction: column
-  +tablet-and-up
+  font-weight: 300
+  +osg-mq-tablet-and-up
     flex-direction: row
   > a
     display: flex
@@ -16,13 +17,27 @@ $shape-size-tablet: 250px
     user-select: none
   .osg-body-heading
     font-weight: 600
+  .osg-body-text
+    padding-top: 10px
+    padding-bottom: 15px
+  .osg-date
+    font-size: 18px
+  .osg-container
+    padding: 30px 40px 20px 40px
+    .osg-content-box-tag
+      padding-bottom: 10px
+    .osg-extra-link
+      padding-top: 25px
+      font-size: 20px
+    .osg-content
+      padding-top: 10px
   .osg-shape.osg-v-image
     align-self: start
     flex-shrink: 20
     background-color: transparent
     height: $shape-size-mobile
     width: $shape-size-mobile
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       height: $shape-size-tablet
       width: $shape-size-tablet
     figure
@@ -44,19 +59,19 @@ $shape-size-tablet: 250px
     position: absolute
     text-align: center
     z-index: 1
-    top: calc((#{$shape-size-mobile} / 2) - (#{$font-size-16} / 2))
+    top: calc((#{$shape-size-mobile} / 2) - (#{$osg-font-size-16} / 2))
     width: $shape-size-mobile
-    font-size: $font-size-16
-    +tablet-and-up
-      top: calc((#{$shape-size-tablet} / 2) - (#{$font-size-28} / 2))
+    font-size: $osg-font-size-16
+    +osg-mq-tablet-and-up
+      top: calc((#{$shape-size-tablet} / 2) - (#{$osg-font-size-28} / 2))
       width: $shape-size-tablet
-      font-size: $font-size-28
+      font-size: $osg-font-size-28
   .osg-search-result
     display: none
     text-decoration: none
     padding-top: 15px
     margin-top: 30px
-    border-top: 1px solid $color-green
+    border-top: 1px solid $osg-color-green
     font-weight: bold
 
   &:hover
@@ -67,19 +82,19 @@ $shape-size-tablet: 250px
   &.osg-m-show-search-result
     .osg-search-result
       display: block
-  +card-with-state-modifier
+  +osg-common-card-with-state-modifier
   &.osg-m-with-state
     .osg-shape
       position: relative
       height: 100%
       width: 100%
-      +osg-filter($color-green-dark)
+      +osg-helper-filter($osg-color-green-dark)
       &.osg-v-circle
         border-radius: 50%
 
   &.osg-m-animate
     .osg-shape
-      +animation-scale-in(1.2s)
+      +osg-animation-scale-in(1.2s)
     .osg-content-box
-      +animation-scale-up(1.2s)
+      +osg-animation-scale-up(1.2s)
       animation-delay: .3s

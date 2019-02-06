@@ -18,41 +18,41 @@
       display: none
 
   .btn-overlay-play
-    background-color: $color-green
-    border: 1px solid $color-green
+    background-color: $osg-color-green
+    border: 1px solid $osg-color-green
     height: 50px
     left: 44%
     position: absolute
     top: 35%
     width: 50px
-    +tablet-and-up
+    +osg-mq-tablet-and-up
       height: 100px
       left: 43%
       top: 36%
       width: 100px
-    +desktop-and-up
+    +osg-mq-desktop-and-up
       left: 45%
       top: 40%
     .overlay-play
-      border: solid $color-green-dark
+      border: solid $osg-color-green-dark
       border-width: 0 5px 5px 0
       display: inline-block
       padding: 3px
       transform: rotate(-45deg)
       -webkit-transform: rotate(-45deg)
-      +tablet-and-up
+      +osg-mq-tablet-and-up
         border-width: 0 10px 10px 0
         padding: 5px
 
   .footer
-    font-size: $font-size-12
+    font-size: $osg-font-size-12
     color: #6A6A6A
     margin-top: 15px
     background: inherit
     padding: 0
     flex-grow: 0
-    +tablet-and-up
-      font-size: $font-size-14
+    +osg-mq-tablet-and-up
+      font-size: $osg-font-size-14
 
   /* modifiers styling */
   &.osg-m-ratio-1x1

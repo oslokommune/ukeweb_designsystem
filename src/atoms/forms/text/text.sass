@@ -1,5 +1,5 @@
-=osg-text-field-helper($color-name, $background, $foreground)
-  .osg-text-field.osg-text-field-#{$color-name}
+=osg-text-field-helper($osg-color-name, $background, $foreground)
+  .osg-text-field.osg-text-field-#{$osg-color-name}
     .osg-text-field-input
       color: $foreground
       background-color: $background
@@ -16,13 +16,13 @@
   position: relative
   .osg-text-field-input
     border: none
-    background-color: $color-grey-lighter
+    background-color: $osg-color-grey-lighter
     padding: 5px 5px 5px 10px
     height: 35px
-    font-size: $font-size-14
-    +tablet-and-up
+    font-size: $osg-font-size-14
+    +osg-mq-tablet-and-up
       height: 44px
-      font-size: $font-size-16
+      font-size: $osg-font-size-16
     &::placeholder
       color: transparent
   .osg-text-field-label
@@ -42,17 +42,17 @@
       left: 13px
       // Positions the label in the middle of the textfield
       top: 7px
-      font-size: $font-size-14
-      +tablet-and-up
+      font-size: $osg-font-size-14
+      +osg-mq-tablet-and-up
         top: 10px
-        font-size: $font-size-16
+        font-size: $osg-font-size-16
     .osg-text-field-input:focus + .osg-text-field-label,
     .osg-text-field-input:not(:focus):valid + .osg-text-field-label
       // Positions the label above the textfield when the textfield is focused
-      font-size: $font-size-12
+      font-size: $osg-font-size-12
       top: -19px
-      +tablet-and-up
-        font-size: $font-size-14
+      +osg-mq-tablet-and-up
+        font-size: $osg-font-size-14
         top: -21px
     .osg-text-field-input::placeholder
       opacity: 0
@@ -64,10 +64,10 @@
     .osg-text-field-input
       padding: 15px
       height: 83px
-      font-size: $font-size-16
+      font-size: $osg-font-size-16
     &.osg-v-floating-label
       .osg-text-field-input:focus + .osg-text-field-label,
       .osg-text-field-input:not(:focus):valid + .osg-text-field-label
         // Positions the label above the textfield when the textfield is focused
         top: -17px
-        font-size: $font-size-12
+        font-size: $osg-font-size-12

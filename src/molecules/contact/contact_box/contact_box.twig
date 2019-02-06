@@ -1,3 +1,5 @@
+{% set hasAddressLink = contactBox.addressLink is defined and contactBox.addressLink is not empty %}
+
 <address class="osg-contact-box {{ contactBox.modifiers | default(null) }}">
   <div>
     <h2 class="osg-text-is-size-5">{{ contactBox.phoneNumberTitle }}</h2>
@@ -18,7 +20,7 @@
     <p>
       {{ contactBox.visitAddress }}
     </p>
-    {% if contactBox.addressLink is defined %}
+    {% if hasAddressLink %}
     <p>
       <a href="{{ contactBox.addressLink.url }}">{{contactBox.addressLink.text}}</a>
     </p>

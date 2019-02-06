@@ -4,7 +4,8 @@ Displays svg icons.
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String  | See variant options below | "osg-v-default" | Name of the variant |
+| variant | String | See variant options below | "osg-v-default" | Name of the variant |
+| srText | String | Clean text content | null | Describes the icon for screen reader purposes |
 
 ### Variant Options
 | Name | Description |

@@ -1,7 +1,11 @@
+{% set hasStateText = listCard.stateText is defined and listCard.stateText is not empty %}
+{% set hasTags = tags is defined and tags is not empty %}
+{% set hasSearchResult = listCard.searchResult is defined and listCard.searchResult is not empty %}
+
 <div class="osg-list-card {{ listCard.modifiers | default(null) }}">
   <a href="{{ listCard.url }}">
     {% include 'atoms/decorators/shape/shape.twig' %}
-    {% if listCard.stateText is defined %}
+    {% if hasStateText %}
       <div class="osg-state-text">{{ listCard.stateText }}</div>
     {% endif %}
   </a>
@@ -17,11 +21,13 @@
       </a>
     {% endblock %}
     {% block footer %}
-      {{ parent() }}
-      {% if tags is defined %}
+      <a class="osg-wrapper" href="{{ listCard.url }}">
+        {{ parent() }}
+      </a>
+      {% if hasTags %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
-      {% if listCard.searchResult is defined %}
+      {% if hasSearchResult %}
         <a href="{{ listCard.url }}" class="osg-search-result">
           {{ listCard.searchResult | default(null) }}
         </a>

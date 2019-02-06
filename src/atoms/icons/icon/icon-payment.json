@@ -1,5 +1,6 @@
 {
   "icon": {
-    "variant": "osg-v-icon-payment"
+    "variant": "osg-v-icon-payment",
+    "srText": "Payment"
   }
 }
