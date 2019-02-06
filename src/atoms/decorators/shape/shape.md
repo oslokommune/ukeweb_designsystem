@@ -8,7 +8,7 @@ Shape can be a link as well, you just need to fill the optional attribute "url".
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String  | See variant options below | "osg-v-default" | Name of the variant |
+| variant | String | See variant options below | "osg-v-default" | Name of the variant |
 | *text | String | Clean text content | null | Text inside shape |
 | *url | String | Valid url | null | Url to where the shape points |
 

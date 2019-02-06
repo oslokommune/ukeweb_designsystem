@@ -5,7 +5,7 @@ This is the bottom of every page.
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String  | osg-v-default, osg-v-open | "osg-v-default" | Name of the variant |
+| variant | String | osg-v-default, osg-v-open | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | *linkList | Array | List of objects. See the "Link Object Data Fields" section below | null | Array of link objects |
 | *languageLink | Object | text:String, url:String | null | Link to a translated version of the site |
