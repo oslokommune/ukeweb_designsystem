@@ -1,38 +1,46 @@
 {% set hasAlertData = alert is defined and alert is not empty %}
+{% set hasTag = contentBox.tag is defined and contentBox.tag is not empty %}
+{% set hasDate = contentBox.date is defined and contentBox.date is not empty %}
+{% set hasHeading = contentBox.heading is defined and contentBox.heading is not empty %}
+{% set hasText = contentBox.text is defined and contentBox.text is not empty %}
+{% set hasContent = contentBox.content is defined and contentBox.content is not empty %}
+{% set hasLink = contentBox.link is defined and contentBox.link is not empty %}
+{% set hasLinkSrText = contentBox.link.srText is defined and contentBox.link.srText is not empty %}
+
 <div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
   {% if hasAlertData %}
     {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}
   <div class="osg-container">
     {% block head %}
-      {% if contentBox.tag is defined %}
+      {% if hasTag %}
         <div class="osg-content-box-tag">
           <h3>{{ contentBox.tag }}</h3>
         </div>
       {% endif %}
-      {% if contentBox.date is defined %}
+      {% if hasDate %}
         <p class="osg-date">{{ contentBox.date }}</p>
       {% endif %}
     {% endblock %}
     {% block body %}
-      {% if contentBox.heading is defined %}
+      {% if hasHeading %}
         <h2 class="osg-body-heading">{{ contentBox.heading }}</h2>
       {% endif %}
-      {% if contentBox.text is defined %}
+      {% if hasText %}
         <p class="osg-body-text">{{ contentBox.text }}</p>
       {% endif %}
     {% endblock %}
     {% block footer %}
-      {% if contentBox.content is defined %}
+      {% if hasContent %}
         <div class="osg-content">
           {{ contentBox.content | raw }}
         </div>
       {% endif %}
-      {% if contentBox.link is defined %}
+      {% if hasLink %}
         <a class="osg-extra-link" href="{{ contentBox.link.url }}">
           {% include "atoms/icons/icon/icon.twig" %}
           {{ contentBox.link.text }}
-          {% if contentBox.link.srText is defined %}
+          {% if hasLinkSrText %}
             <span class="osg-sr-only">{{ contentBox.link.srText }}</span>
           {% endif %}
         </a>
