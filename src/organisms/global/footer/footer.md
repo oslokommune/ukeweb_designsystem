@@ -15,7 +15,7 @@ This is the bottom of every page.
 | topDomainLink.text | String | Clean text content | null | Text for top domain link |
 | topDomainLink.url | String | Valid url | null | Url to where the top domain link points |
 | *logos | Object | figures:Object | null | Logos for the right side of the footer |
-| *logos.figures | Array[Figure] | null | Logos array |
+| *logos.figures | Array[Figure] | Array of Figures | null | Logos array |
 | *logos.figures[figure] | Object | See figure pattern | null | Figures for the logos |
 
 
