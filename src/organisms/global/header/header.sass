@@ -5,7 +5,7 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-header
-  color: $color-grey-darker
+  color: $osg-color-grey-darker
   padding-bottom: 20px
   align-items: center
   display: flex
@@ -15,7 +15,7 @@ $osg-margin-top-bottom-desktop: 25px
   +osg-mq-tablet-and-up
     padding: $osg-margin-top-bottom-desktop 0 $osg-margin-top-bottom-desktop 0
   a
-    color: $color-grey-darker
+    color: $osg-color-grey-darker
     &:hover
       text-decoration: underline
   .osg-navbar-menu
@@ -39,7 +39,7 @@ $osg-margin-top-bottom-desktop: 25px
         text-decoration: underline
   .osg-header-link
     flex-grow: 0
-    font-size: $font-size-15
+    font-size: $osg-font-size-15
     min-width: 150px
     text-align: right
     a
@@ -51,9 +51,9 @@ $osg-margin-top-bottom-desktop: 25px
         text-decoration: underline
 
     +osg-mq-tablet-and-up
-      font-size: $font-size-20
+      font-size: $osg-font-size-20
     i
-      color: $color-green-dark
+      color: $osg-color-green-dark
       margin-left: 10px
       margin-bottom: 2px
       +osg-mq-tablet-and-up

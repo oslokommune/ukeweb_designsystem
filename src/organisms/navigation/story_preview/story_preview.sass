@@ -1,13 +1,13 @@
-$font-size-regular-mobile: ( $font-size-14, $font-size-16, $font-size-14)
+$osg-font-size-regular-mobile: ( $osg-font-size-14, $osg-font-size-16, $osg-font-size-14)
 $padding-top-regular-mobile: ( 23px, 5px, 15px)
 
-$font-size-regular-desktop: ( $font-size-20, $font-size-28, $font-size-18 )
+$osg-font-size-regular-desktop: ( $osg-font-size-20, $osg-font-size-28, $osg-font-size-18 )
 $padding-top-regular-desktop: ( 42px, 15px, 29px )
 
-$font-size-big-mobile: ( $font-size-18, $font-size-26, $font-size-18 )
+$osg-font-size-big-mobile: ( $osg-font-size-18, $osg-font-size-26, $osg-font-size-18 )
 $padding-top-big-mobile: ( 33px, 6px, 30px )
 
-$font-size-big-desktop: ( $font-size-20, $font-size-40, $font-size-28 )
+$osg-font-size-big-desktop: ( $osg-font-size-20, $osg-font-size-40, $osg-font-size-28 )
 $padding-top-big-desktop: ( 33px, 6px, 30px )
 
 =osg-story-preview-top
@@ -80,12 +80,12 @@ a.osg-story-preview:hover
   .osg-body-heading
     font-weight: 600
   .osg-content-box-tag
-    color: $color-green-dark
+    color: $osg-color-green-dark
   .osg-extra-link
     display: flex
     text-decoration: none
     align-items: center
-    font-size: $font-size-18
+    font-size: $osg-font-size-18
     .osg-icon
       height: 15px
       width: 15px
@@ -100,21 +100,21 @@ a.osg-story-preview:hover
     +osg-mq-tablet-and-up
       height: 30px
       width: 30px
-  +osg-story-preview-font-padding($font-size-regular-mobile, $padding-top-regular-mobile)
+  +osg-story-preview-font-padding($osg-font-size-regular-mobile, $padding-top-regular-mobile)
   +osg-mq-tablet-and-up
-    +osg-story-preview-font-padding($font-size-regular-desktop, $padding-top-regular-desktop)
+    +osg-story-preview-font-padding($osg-font-size-regular-desktop, $padding-top-regular-desktop)
   &.osg-m-big
-    +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
+    +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
     +osg-mq-tablet-and-up
-      +osg-story-preview-font-padding($font-size-big-desktop, $padding-top-big-desktop)
+      +osg-story-preview-font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
   &.osg-m-big-mobile-only
     +osg-mq-mobile-only
-      +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
+      +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
   &.osg-m-big-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview-font-padding($font-size-big-mobile, $padding-top-big-mobile)
+      +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
       +osg-mq-tablet-and-up
-        +osg-story-preview-font-padding($font-size-big-desktop, $padding-top-big-desktop)
+        +osg-story-preview-font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
   &.osg-m-right
     +osg-story-preview-right
   &.osg-m-left
