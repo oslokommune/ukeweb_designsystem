@@ -10,12 +10,21 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-* sass: split mixins into separate files, and gave them prefixes related to its use (osg-mq, osg-helpers, osg-animations, osg-common).
-* sass: prefixed variables with osg
-* atoms-buttons-button: added hover color
-* all twig patterns: Changed "is defined" to "is defined and is not empty" so the consumer can either not pass a field or pass it as null.
-* organisms-cards-card: changed display to flex to make content not spill over the container
-* organisms-cards-shape_card: changed display to flex to make content not spill over the container
+
+### Added
+
+### Removed
+
+### Changed
+
+
+## [0.14.0] - 2019-02-06
+
+### Fixed
+* all twig patterns: better checks to ensure that optional fields can either not be passed in or be passed in with with a null value.
+* atoms-buttons-button: added hover color.
+* organisms-cards-card: fixed card being taller then its content.
+* organisms-cards-shape_card: fixed card being taller then its content.
 
 ### Added
 * atoms-icons-icon: added optional screen reader text.
@@ -25,7 +34,7 @@ See README.md for release description.
 * remove is-sr-only class in _utils.sass.
 
 ### Changed
-* (Twig consumer only)organisms-global-footer: moved logos object into footer namespace
+* organisms-global-footer: moved logos object into footer namespace (twig consumer only).
 
 
 ## [0.13.3] - 2019-01-24
