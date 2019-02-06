@@ -14,6 +14,8 @@ See README.md for release description.
 * sass: prefixed variables with osg
 * atoms-buttons-button: added hover color
 * all twig patterns: Changed "is defined" to "is defined and is not empty" so the consumer can either not pass a field or pass it as null.
+* organisms-cards-card: changed display to flex to make content not spill over the container
+* organisms-cards-shape_card: changed display to flex to make content not spill over the container
 
 ### Added
 * atoms-icons-icon: added optional screen reader text.
@@ -22,6 +24,7 @@ See README.md for release description.
 * remove is-sr-only class in _utils.sass.
 
 ### Changed
+* (Twig consumer only)organisms-global-footer: moved logos object into footer namespace
 
 
 ## [0.13.3] - 2019-01-24

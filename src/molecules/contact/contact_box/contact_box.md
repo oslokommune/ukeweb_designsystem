@@ -5,7 +5,7 @@ Shows the contact information
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
 | modifiers | String | Any global css class | null | Root class to modify styles |
-| *phoneNumberTitle | String | Clean text content | null | Title to be displayed together with phone number  |
+| *phoneNumberTitle | String | Clean text content | null | Title to be displayed together with phone number |
 | *phonePrefix | String | Number with optional plus sign | null | Country code (i.e "+47") |
 | *phoneNumber | String | Preformatted phone number | null | Phone number |
 | *emailTitle | String | Clean text content | null | Title to be displayed together with email address |
