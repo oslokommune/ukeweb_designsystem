@@ -4,7 +4,7 @@ This pattern is primarily to be used for displaying a list of tags
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String  | osg-v-default, osg-v-underline | "osg-v-default" | Name of the variant |
+| variant | String | osg-v-default, osg-v-underline | "osg-v-default" | Name of the variant |
 | *items | Array | List of objects. See the tag pattern documentation for figure field descriptions | null | Array of tag objects |
 
 (*) mandatory
