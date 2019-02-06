@@ -11,10 +11,8 @@
     ]
   },
   "event": {
-    "modifiers": "osg-m-with-state",
     "heading": "Lorem ipsum dolor et",
     "headerTag": "(ENG*)",
-    "stateText": "halla"
   },
   "figure": {
     "caption": "Img: Avaena idor",
