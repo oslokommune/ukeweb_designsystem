@@ -21,6 +21,7 @@ See README.md for release description.
 * remove is-sr-only class in _utils.sass.
 
 ### Changed
+* (Twig consumer only)organisms-global-footer: moved logos object into footer namespace
 
 
 ## [0.13.3] - 2019-01-24
