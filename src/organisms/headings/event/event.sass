@@ -49,6 +49,32 @@
         top: 0
         right: 0
 
+  .osg-image-container
+    position: relative
+  .osg-state-text
+    display: none
+    position: absolute
+    font-size: $osg-font-size-40
+    text-align: center
+    z-index: 1
+    width: 100%
+    top: calc(50% - 50px)
+    +osg-mq-desktop-and-up
+      width: 80%
+
+  &.osg-m-with-state
+    .osg-state-text
+      display: block
+      font-weight: 600
+      color: white
+      +osg-mq-desktop-and-up
+        font-size: $osg-font-size-60
+    picture
+      +osg-helper-filter($osg-color-green-dark)
+      +osg-mq-desktop-and-up
+        &:after
+          margin-right: 100px
+
   .osg-event-caption
     // osg-event-caption is a hack to display the image
     // figcaption below info_list on mobile and tablet
