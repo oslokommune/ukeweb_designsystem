@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 * sass: split mixins into separate files, and gave them prefixes related to its use (osg-mq, osg-helpers, osg-animations, osg-common).
+* all twig patterns: Changed "is defined" to "is defined and is not empty" so the consumer can either not pass a field or pass it as null.
 
 ### Added
 * atoms-icons-icon: added optional screen reader text.

@@ -1,3 +1,5 @@
+{% set hasTopDomainLink = navbarMenu.topDomainLink.url is defined and navbarMenu.topDomainLink.url is not empty %}
+
 <nav class="osg-navbar-menu {{ navbarMenu.variant|default('default') }} {{ navbarMenu.modifiers | default(null) }}">
   <div class="osg-navbar-menu-overlay-wrapper">
     <div class="osg-navbar-menu-overlay">
@@ -41,7 +43,7 @@
           {% include "atoms/decorators/figure/figure.twig" with figure %}
         {% endfor %}
 
-        {% if navbarMenu.topDomainLink.url is defined %}
+        {% if hasTopDomainLink  %}
           <a href="{{ navbarMenu.topDomainLink.url }}" target="_blank">{{ navbarMenu.topDomainLink.text }}</a>
         {% endif %}
       </div>
