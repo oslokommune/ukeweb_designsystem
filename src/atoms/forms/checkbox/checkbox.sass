@@ -13,7 +13,7 @@
     position: absolute
 
   .osg-checkmark
-    border: 2px solid $color-grayscale-20
+    border: 2px solid $osg-color-grayscale-20
     height: 25px
     left: 0
     position: absolute
@@ -21,7 +21,7 @@
     width: 25px
 
   &:hover input ~ .osg-checkmark
-    border: 2px solid $color-green-darker
+    border: 2px solid $osg-color-green-darker
 
   & input:focus ~ .osg-checkmark
     outline: -webkit-focus-ring-color auto 5px
@@ -35,7 +35,7 @@
     display: block
 
   & .osg-checkmark:after
-    border: solid $color-green-dark
+    border: solid $osg-color-green-dark
     border-width: 0 3px 3px 0
     height: 10px
     left: 9px
@@ -52,7 +52,7 @@
     &:hover input ~ .osg-checkmark
       border: 2px solid transparent
     & .osg-checkmark:after
-      border: solid $color-green-light
+      border: solid $osg-color-green-light
       border-width: 0 3px 3px 0
       height: 10px
       left: 9px
@@ -60,7 +60,7 @@
       transform: rotate(45deg)
       width: 5px
     & input:checked + span
-        border-bottom: 3px solid $color-green-light
+        border-bottom: 3px solid $osg-color-green-light
     span
-      border-bottom: 3px solid $color-green-dark
-      color: $color-green-dark
+      border-bottom: 3px solid $osg-color-green-dark
+      color: $osg-color-green-dark

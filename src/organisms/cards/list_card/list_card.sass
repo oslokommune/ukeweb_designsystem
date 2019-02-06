@@ -59,19 +59,19 @@ $shape-size-tablet: 210px
     position: absolute
     text-align: center
     z-index: 1
-    top: calc((#{$shape-size-mobile} / 2) - (#{$font-size-16} / 2))
+    top: calc((#{$shape-size-mobile} / 2) - (#{$osg-font-size-16} / 2))
     width: $shape-size-mobile
-    font-size: $font-size-16
+    font-size: $osg-font-size-16
     +osg-mq-tablet-and-up
-      top: calc((#{$shape-size-tablet} / 2) - (#{$font-size-28} / 2))
+      top: calc((#{$shape-size-tablet} / 2) - (#{$osg-font-size-28} / 2))
       width: $shape-size-tablet
-      font-size: $font-size-28
+      font-size: $osg-font-size-28
   .osg-search-result
     display: none
     text-decoration: none
     padding-top: 15px
     margin-top: 30px
-    border-top: 1px solid $color-green
+    border-top: 1px solid $osg-color-green
     font-weight: bold
 
   &:hover
@@ -88,7 +88,7 @@ $shape-size-tablet: 210px
       position: relative
       height: 100%
       width: 100%
-      +osg-helper-filter($color-green-dark)
+      +osg-helper-filter($osg-color-green-dark)
       &.osg-v-circle
         border-radius: 50%
 
