@@ -14,6 +14,7 @@ This is the bottom of every page.
 | topDomainLink | Object | text:String, url:String | null | Link to parent site |
 | topDomainLink.text | String | Clean text content | null | Text for top domain link |
 | topDomainLink.url | String | Valid url | null | Url to where the top domain link points |
+| *logos | Object | figures:Object{ link:Object{ url:String, target:String}, img:Object{ alt:String, defaultUrl:String, mediaQueryUrls:Array[Object{ query:String, url:String }] } } | Valid logos | Logos |
 
 #### Link Object Data Fields
 | Attribute | Type | Values | Default | Description |
