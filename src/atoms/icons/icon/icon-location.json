@@ -1,5 +1,6 @@
 {
   "icon": {
-    "variant": "osg-v-icon-location"
+    "variant": "osg-v-icon-location",
+    "srText": "Location"
   }
 }

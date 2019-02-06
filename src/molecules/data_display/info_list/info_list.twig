@@ -1,22 +1,29 @@
+{% set hasButton = button is defined and button is not empty %}
+{% set hasAsteriskText = infoList.asteriskText is defined and infoList.asteriskText is not empty %}
+
 <div class="osg-info-list {{ infoList.modifiers | default(null) }}">
   <ul>
     {% for icon in infoList.icons.entries %}
     <li>
       {% include "atoms/icons/icon/icon.twig" with { variant: icon.variant } %}
-      {% if icon.text is defined %}
+      {% if icon.text is defined and icon.text is not empty %}
         <p>{{ icon.text|raw }}</p>
       {% endif %}
-      {% if icon.linkText is defined and icon.link is defined %}
+
+      {% set hasLinkText = icon.linkText is defined and icon.linkText is not empty %}
+      {% set hasLink = icon.link is defined and icon.link is not empty %}
+
+      {% if hasLinkText and hasLink %}
         <a href="{{ icon.link }}">{{ icon.linkText }}</a>
       {% endif %}
     </li>
     {% endfor %}
-    {% if button is defined %}
+    {% if hasButton %}
       <li>
         {% include "atoms/buttons/button/button.twig" %}
       </li>
     {% endif %}
-    {% if infoList.asteriskText is defined %}
+    {% if hasAsteriskText %}
     <li>
       <p>
         *{{ infoList.asteriskText }}

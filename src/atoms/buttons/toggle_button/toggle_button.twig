@@ -1,8 +1,12 @@
-{% if toggleButton.link is defined %}
+{% set hasLink = toggleButton.link is defined and toggleButton.link is not empty %}
+{% set hasDataattrs = toggleButton.dataattrs is defined and toggleButton.dataattrs is not empty %}
+{% set hasIcon = toggleButton.icon is defined and toggleButton.icon is not empty %}
+
+{% if hasLink %}
   <a
     href="{{ toggleButton.link }}"
     class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
-    {% if toggleButton.dataattrs is defined %}
+    {% if hasDataattrs %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}
       {% endfor %}
@@ -11,7 +15,7 @@
 {% else %}
   <button
     class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
-    {% if toggleButton.dataattrs is defined %}
+    {% if hasDataattrs %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}
       {% endfor %}
@@ -19,10 +23,10 @@
   >
 {% endif %}
   {{ toggleButton.text }}
-  {% if toggleButton.icon is defined %}
+  {% if hasIcon %}
     {{ toggleButton.icon | raw }}
   {% endif %}
-{% if toggleButton.link is defined %}
+{% if hasLink %}
   </a>
 {% else %}
   </button>

@@ -1,10 +1,12 @@
 {% set state = "osg-button-" ~ button.state | default('success') %}
+{% set hasLink = button.link is defined and button.link is not empty %}
+{% set hasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
 
-{% if button.link is defined %}
+{% if hasLink %}
 <a
   href="{{ button.link }}"
   class="osg-button {{ button.variant | default('osg-v-default') }} {{ state }} {{ button.modifiers | default(null) }}"
-  {% if button.dataattrs is defined %}
+  {% if hasDataattrs %}
   {% for dataattr in button.dataattrs %}
   {{dataattr.key}}="{{dataattr.val}}"
   {% endfor %}
@@ -13,7 +15,7 @@
 {% else %}
 <button
   class="osg-button {{ button.variant | default('osg-v-default')  }} {{ state }}"
-  {% if button.dataattrs is defined %}
+  {% if hasDataattrs %}
   {% for dataattr in button.dataattrs %}
   {{dataattr.key}}="{{dataattr.val}}"
   {% endfor %}
@@ -31,7 +33,7 @@
   {% if "osg-v-default" in button.variant | default('osg-v-default') %}
     {{ button.content }}
   {% endif %}
-{% if button.link is defined %}
+{% if hasLink %}
 </a>
 {% else %}
 </button>

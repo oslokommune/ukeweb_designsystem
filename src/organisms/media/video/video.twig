@@ -1,3 +1,5 @@
+{% set hasSubtitlesUrl = video.subtitlesUrl is defined and video.subtitlesUrl is not empty %}
+
 <div class="osg-video {{ video.variant | default('osg-v-default')  }} {{ video.modifiers | default(null) }}">
 {% if video.variant is defined and video.variant == "osg-v-video-custom-controls" %}
   <button class="btn-overlay-play">
@@ -19,7 +21,7 @@
       label="Norsk"
       kind="subtitles"
       srclang="nb"
-      {% if video.subtitlesUrl is defined %}
+      {% if hasSubtitlesUrl %}
         src="{{ video.subtitlesUrl }}"
       {% endif %}
       default>
