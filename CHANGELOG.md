@@ -18,6 +18,7 @@ See README.md for release description.
 
 ### Added
 * atoms-icons-icon: added optional screen reader text.
+* organisms-headings-event: added optional field stateText and modifier osg-m-with-state which adds an overlay over the picture with the given text
 
 ### Removed
 * remove is-sr-only class in _utils.sass.
