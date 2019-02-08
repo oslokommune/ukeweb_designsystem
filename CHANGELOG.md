@@ -10,6 +10,8 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* organisms-headings-promo: fixed logo display bug in IE.
+
 
 ### Added
 
