@@ -14,6 +14,12 @@ The withIcon variant can for example also be used as a dropdown with active modi
 
 (*) mandatory
 
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Shows a button with text |
+| osg-v-with-icon | Shows a button with text and an icon on the right side |
+
 ### Accessibility
 To allow screen readers to read if the button is expanded or collapsed, dataattr must contain:
 
