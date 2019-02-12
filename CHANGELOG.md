@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+* organisms-data_display-simple_table: new pattern.
 
 ### Removed
 
