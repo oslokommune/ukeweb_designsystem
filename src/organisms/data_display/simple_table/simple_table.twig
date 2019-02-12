@@ -1,0 +1,21 @@
+
+<div class="osg-c-simple-table {{ infoList.modifiers | default(null) }}">
+  <table>
+    {% for row in simpleTable.rows %}
+      {% set isHead =  row.isHead is defined and row.isHead == true %}
+      <tr>
+        {% for cell in row.cells %}
+          {% if isHead %}
+            <th class="osg-content">
+              {{ cell.content|raw }}
+            </th>
+          {% else %}
+            <td class="osg-content">
+              {{ cell.content|raw }}
+            </td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</div>
