@@ -3,10 +3,7 @@
 This repo aims to only contain files related to comsumtion of components/patterns.
 
 ## Contributing
-To aid in development of these patterns, clone the repo 'styleguide_devtools' and run
-``` shell
-docker-compose up
-```
+To aid in development of these patterns, clone the repo 'styleguide_devtools' and run `docker-compose up` and point your browser to `localhost:9000`.
 
 ## Consumption
 A cdn with the precompiled css is on the way. Untill it is, you'll have to use it as a node module, and have some way of compiling sass in your project. This repo does not have an entry file for all the sass files, so you will have to import each patterns file that you want to use manually in your projects sass entry file.
