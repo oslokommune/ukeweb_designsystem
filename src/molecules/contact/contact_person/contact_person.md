@@ -16,7 +16,7 @@ This pattern is primarily to be used for displaying a persons image and contact 
 (*) mandatory
 
 ### Variant Options
-| Name | Description |
-|---|---|
+| Name          | Description                                        |
+|---------------+----------------------------------------------------|
 | osg-v-default | Is used if nothing is defined. Does nothing extra. |
-| osg-v-circle | Makes the contact image circular |
+| osg-v-circle  | Makes the contact image circular                   |
