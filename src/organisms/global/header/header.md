@@ -22,6 +22,6 @@ These optional utility classes should be added to the body tag, when needed.
 
 | Name | Description |
 |---|---|
-| osg-header-overlay | Will absolute position the header and overlay it with the page content. Used for positioning the header above the promo pattern. |
-| osg-header-inverted | Change color of header to white. |
-| osg-header-no-underline | Remove underline from header |
+| osg-u-header-overlay | Will absolute position the header and overlay it with the page content. Used for positioning the header above the promo pattern. |
+| osg-u-header-inverted | Change color of header to white. |
+| osg-u-header-no-underline | Remove underline from header |

@@ -10,6 +10,8 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* Removed danglig comma in atom/buttons/button/button.sass
+* Added docker-compose.yml so you can run devtools directly from the styleguide repository
 
 ### Added
 * organisms-data_display-simple_table: new pattern.
@@ -17,6 +19,9 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+util classes: Added -u to the prefix of all utils classes.
+util classes: Added -only postfix to the end of util classes with the -mobile postfix.
+util classes: Added -and-up to the end of the util classes with the -tablet and the -desktop postfix.
 
 
 ## [0.14.0] - 2019-02-06
