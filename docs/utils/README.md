@@ -9,43 +9,43 @@ These classes should be added to any element to set styles directly to it.
 ### Color
 | Name | Description |
 |---|---|
-| .osg-u-color-text-[color name] | Specifies a color for text with a color from the official color palette |
-| .osg-u-color-bg-[color name] | Specifies a color for the background of the element with a color from the official color palette |
-| .osg-u-color-[state color name] | Specifies a color for the background and text with colors from the official state system |
+| .osg-u-color-text-[color] | Specifies a color for text with a color from the official color palette |
+| .osg-u-color-bg-[color] | Specifies a color for the background of the element with a color from the official color palette |
+| .osg-u-color-[state color] | Specifies a color for the background and text with colors from the official state system |
 | .osg-u-background-grey | Specifies the default background color, typically set to section elements to visually disguinish an area from other areas |
-| .osg-u-text-grayscale-[grayscale number] | Specifies a gray color for text with a color from the official gray scale |
-| .osg-u-bg-grayscale-[grayscale number] | Specifies a gray color for the background of the element with a color from the official gray scale |
+| .osg-u-text-grayscale-[grayscale] | Specifies a gray color for text with a color from the official gray scale |
+| .osg-u-bg-grayscale-[grayscale] | Specifies a gray color for the background of the element with a color from the official gray scale |
 
 ### Text
 | Name | Description |
 |---|---|
-| .osg-u-text-is-[font weight name] | Specifies a font weight for the element |
+| .osg-u-text-is-[font weight] | Specifies a font weight for the element |
 | .osg-u-text-is-italic | Makes the text style italic |
-| .osg-u-text-is-size-[font size number] | Specifies a predefined text-size |
+| .osg-u-text-is-size-[font size] | Specifies a predefined text-size |
 
 ### Spacing
 | Name | Description |
 |---|---|
-| .osg-u-padding-bottom-[spacing size name] | Adds padding to the bottom of the element |
-| .osg-u-margin-bottom-[spacing size name] | Adds margin to the bottom of the element |
-| .osg-u-padding-top-[spacing size name] | Adds padding to the top of the element |
-| .osg-u-margin-top-[spacing size name] | Adds margin to the top of the element |
-| .osg-u-padding-left-[spacing size name] | Adds padding to the left of the element |
-| .osg-u-margin-left-[spacing size name] | Adds margin to the left of the element |
-| .osg-u-padding-right-[spacing size name] | Adds padding to the right of the element |
-| .osg-u-margin-right-[spacing size name] | Adds margin to the right of the element |
-| .osg-u-padding-sides-[spacing size name] | Adds padding to the left and right of the element |
-| .osg-u-margin-sides-[spacing size name] | Adds margin to the left and right of the element |
-| .osg-u-padding-bottom-[spacing size]-[screen size name] | Adds padding to the bottom of the element for a spesific breakpoint |
-| .osg-u-margin-bottom-[spacing size]-[screen size name] | Adds margin to the bottom of the element for a spesific breakpoint |
-| .osg-u-padding-top-[spacing size]-[screen size name] | Adds padding to the top of the element for a spesific breakpoint |
-| .osg-u-margin-top-[spacing size]-[screen size name] | Adds margin to the top of the element for a spesific breakpoint |
-| .osg-u-padding-left-[spacing size]-[screen size name] | Adds padding to the left of the element for a spesific breakpoint |
-| .osg-u-margin-left-[spacing size]-[screen size name] | Adds margin to the left of the element for a spesific breakpoint |
-| .osg-u-padding-right-[spacing size]-[screen size name] | Adds padding to the right of the element for a spesific breakpoint |
-| .osg-u-margin-right-[spacing size]-[screen size name] | Adds margin to the right of the element for a spesific breakpoint |
-| .osg-u-padding-sides-[spacing size]-[screen size name] | Adds padding to the left and right of the element for a spesific breakpoint |
-| .osg-u-margin-sides-[spacing size]-[screen size name] | Adds margin to the left and right of the element for a spesific breakpoint |
+| .osg-u-padding-bottom-[spacing size] | Adds padding to the bottom of the element |
+| .osg-u-margin-bottom-[spacing size] | Adds margin to the bottom of the element |
+| .osg-u-padding-top-[spacing size] | Adds padding to the top of the element |
+| .osg-u-margin-top-[spacing size] | Adds margin to the top of the element |
+| .osg-u-padding-left-[spacing size] | Adds padding to the left of the element |
+| .osg-u-margin-left-[spacing size] | Adds margin to the left of the element |
+| .osg-u-padding-right-[spacing size] | Adds padding to the right of the element |
+| .osg-u-margin-right-[spacing size] | Adds margin to the right of the element |
+| .osg-u-padding-sides-[spacing size] | Adds padding to the left and right of the element |
+| .osg-u-margin-sides-[spacing size] | Adds margin to the left and right of the element |
+| .osg-u-padding-bottom-[spacing size]-[screen size] | Adds padding to the bottom of the element for a spesific breakpoint |
+| .osg-u-margin-bottom-[spacing size]-[screen size] | Adds margin to the bottom of the element for a spesific breakpoint |
+| .osg-u-padding-top-[spacing size]-[screen size] | Adds padding to the top of the element for a spesific breakpoint |
+| .osg-u-margin-top-[spacing size]-[screen size] | Adds margin to the top of the element for a spesific breakpoint |
+| .osg-u-padding-left-[spacing size]-[screen size] | Adds padding to the left of the element for a spesific breakpoint |
+| .osg-u-margin-left-[spacing size]-[screen size] | Adds margin to the left of the element for a spesific breakpoint |
+| .osg-u-padding-right-[spacing size]-[screen size] | Adds padding to the right of the element for a spesific breakpoint |
+| .osg-u-margin-right-[spacing size]-[screen size] | Adds margin to the right of the element for a spesific breakpoint |
+| .osg-u-padding-sides-[spacing size]-[screen size] | Adds padding to the left and right of the element for a spesific breakpoint |
+| .osg-u-margin-sides-[spacing size]-[screen size] | Adds margin to the left and right of the element for a spesific breakpoint |
 
 ### Animation
 | Name | Description |
@@ -74,7 +74,7 @@ These optional utility classes should be added to the body tag, when needed.
 | osg-u-header-inverted | Change color of the header organism to white |
 | osg-u-header-no-underline | Remove underline from header organism |
 
-##Options
+## Options
 ### Colors
 * blue (#6fe9ff)
 * blue-light (#b3f5ff)
