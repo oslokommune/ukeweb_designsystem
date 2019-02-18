@@ -3,10 +3,7 @@
 This repo aims to only contain files related to comsumtion of components/patterns.
 
 ## Contributing
-To aid in development of these patterns, clone the repo 'styleguide_devtools' and run
-``` shell
-docker-compose up
-```
+To aid in development of these patterns, clone the repo 'styleguide_devtools' and run `docker-compose up` and point your browser to `localhost:9000`.
 
 ## Consumption
 ### General
