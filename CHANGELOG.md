@@ -14,6 +14,7 @@ See README.md for release description.
 * Added docker-compose.yml so you can run devtools directly from the styleguide repository
 
 ### Added
+* organisms-data_display-simple_table: new pattern.
 
 ### Removed
 
