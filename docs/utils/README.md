@@ -126,11 +126,11 @@ Mobile first break points.
 * desktop-and-up (from 1088 pixels and up)
 
 ### Font Sizes
-Number reprecenting standardized font sizes. Size 1 is biggest, 2 i one step lower etc.
+Number representing standardized font sizes. Size 1 is the biggest, 2 is one step lower etc.
 
 Each size number has one font-size for mobile and one for tablet and up. The tablet and up one is typically bigger.
 
-The sizes are specified in rem, and its pixel equivilent (assuming a root/body/html size of 16px) is represented in parenthezes.
+The sizes are specified in rem, and its pixel equivalent (assuming a root/body/html size of 16px) is represented in parentheses.
 
 | Name | Mobile | Tablet (and up) |
 |---|---|---|
@@ -141,7 +141,7 @@ The sizes are specified in rem, and its pixel equivilent (assuming a root/body/h
 | 5 | 1rem (16px) | 1.25rem (20px) |
 
 ### Grayscales
-Number reprecenting percentage of darkness starting from white. So the higher the number, the darker the scale of gray.
+Number representing percentage of darkness starting from white. So the higher the number, the darker the scale of gray.
 
 * 10
 * 20
