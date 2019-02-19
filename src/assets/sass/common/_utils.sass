@@ -159,11 +159,22 @@
       margin-left: $size !important
       margin-right: $size !important
 
-// generating font-sizes, bulma style
-@each $name, $size-desktop, $size-mobile in $osg-font-sizes
-  .osg-u-text-is-size-#{$name}
+// generating typography classes for headers
+@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies-header
+  .osg-u-header-#{$name}
     font-size: $size-mobile !important
     +osg-mq-tablet-and-up
+      font-size: $size-tablet !important
+    +osg-mq-desktop-and-up
+      font-size: $size-desktop !important
+
+// generating typography classes for other text
+@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies-header
+  .osg-u-text-#{$name}
+    font-size: $size-mobile !important
+    +osg-mq-tablet-and-up
+      font-size: $size-tablet !important
+    +osg-mq-desktop-and-up
       font-size: $size-desktop !important
 
 // generating color helper classes

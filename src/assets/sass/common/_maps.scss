@@ -56,13 +56,23 @@ $osg-spacing-sizes: (
   "huge": $osg-space-huge
 );
 
-// used to generate font-size classes in utils.sass
-$osg-font-sizes: (
-  ("1", $osg-font-size-40, $osg-font-size-26),
-  ("2", $osg-font-size-36, $osg-font-size-24),
-  ("3", $osg-font-size-28, $osg-font-size-20),
-  ("4", $osg-font-size-24, $osg-font-size-18),
-  ("5", $osg-font-size-20, $osg-font-size-16)
+// used to generate typography classes in utils.sass
+$osg-typographies-header: (
+  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60),
+  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36),
+  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28),
+  ("4", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24),
+  ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-20),
+  ("6", $osg-font-size-16, $osg-font-size-17, $osg-font-size-18)
+);
+
+$osg-typographies: (
+  ("1", $osg-font-size-20, $osg-font-size-24, $osg-font-size-30),
+  ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24),
+  ("3", $osg-font-size-18, $osg-font-size-19, $osg-font-size-20),
+  ("4", $osg-font-size-16, $osg-font-size-17, $osg-font-size-18),
+  ("5", $osg-font-size-14, $osg-font-size-14, $osg-font-size-16),
+  ("6", $osg-font-size-13, $osg-font-size-13, $osg-font-size-14)
 );
 
 $osg-font-weights: (
