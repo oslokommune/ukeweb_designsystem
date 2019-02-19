@@ -20,8 +20,8 @@ These classes should be added to any element to set styles directly to it.
 |---|---|
 | .osg-u-text-is-[font weight] | Specifies a font weight for the element |
 | .osg-u-text-is-italic | Makes the text style italic |
-| .osg-u-header-[typography number] | Specifies a predefined header typography |
-| .osg-u-text-[typography number] | Specifies a predefined text typography |
+| .osg-u-header-[typography] | Specifies a predefined header typography |
+| .osg-u-text-[typography] | Specifies a predefined text typography |
 
 ### Spacing
 | Name | Description |
@@ -126,7 +126,7 @@ Mobile first break points.
 * tablet-and-up (from 769 pixels and up)
 * desktop-and-up (from 1088 pixels and up)
 
-### Typography Numbers
+### Typography
 Number representing standardized Typographies. Typography 1 is the biggest, 2 is one step lower etc.
 
 Each size number has one font-size for mobile and one for tablet and up and one for tablet and up. The bigger the screen the bigger the font-size.
