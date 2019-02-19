@@ -10,9 +10,21 @@ If a link is passed to storyPreview and allClickable is set to true, the whole c
 
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | [1]osg-v-default<br> [2]osg-v-circle | "osg-v-default" | [1]Default<br> [2]figure is a circle |
-| modifiers | String | [1]osg-m-big<br> [2]osg-m-left<br> [3]osg-m-right<br> [4]osg-m-top | null | [1]makes the text bigger<br> [2]text on the left of the image<br> [3]text on the right of the image<br> [4]text on the top of the image |
+| variant | String | See variant options bellow | osg-v-default | Name of the variant |
+| modifiers | String | See modifier options bellow | null | Name of the modifier |
 | allClickable | boolean | true, false | null | Makes the story preview a link, link must be passed in for this to work |
 | link | Object | url, text, srText | null | Link for the component, does nothing if allClickable is not true |
 
-**All modifiers in this pattern can have a "-tablet" postfix (i.e osg-m-right-tablet) to make the modification happen only on devices "bigger than mobile".**
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Is used if nothing is defined. Does nothing extra. |
+| osg-v-circle | Figure is a circle |
+
+### Modifier Options
+| Name | Description |
+|------|-------------|
+| osg-m-big{-tablet} | makes the text bigger |
+| osg-m-left{-tablet} | text on the left of the image |
+| osg-m-right{-tablet} | text on the right of the image |
+| osg-m-top{-tablet} | text on the top of the image |

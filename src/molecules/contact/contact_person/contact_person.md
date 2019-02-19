@@ -4,7 +4,7 @@ This pattern is primarily to be used for displaying a persons image and contact 
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | osg-v-default, osg-v-circle | "osg-v-default" | Name of the variant |
+| variant | String | See variant options bellow | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | *name | String | Clean text content | null | Name of contact |
 | *title | String | Clean text content | null | Contacts job title |
@@ -16,7 +16,7 @@ This pattern is primarily to be used for displaying a persons image and contact 
 (*) mandatory
 
 ### Variant Options
-| Name          | Description                                        |
-|---------------+----------------------------------------------------|
+| Name | Description |
+|------|-------------|
 | osg-v-default | Is used if nothing is defined. Does nothing extra. |
-| osg-v-circle  | Makes the contact image circular                   |
+| osg-v-circle | Makes the contact image circular |

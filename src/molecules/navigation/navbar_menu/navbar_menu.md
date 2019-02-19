@@ -6,7 +6,7 @@ Append class .osg-v-open to nav.osg-navbar-menu to open the menu.
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | osg-v-default, osg-v-open | "osg-v-default" | Name of the variant |
+| variant | String | See variant options bellow | osg-v-default | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | *links | Array | List of objects. See the "Link Object Data Fields" section below | [] (empty array) | Array of link objects |
 | *languages | Array | List of objects. See the "Language Object Data Fields" section below | [] (empty array) | Array of language objects |
@@ -27,6 +27,12 @@ Append class .osg-v-open to nav.osg-navbar-menu to open the menu.
 |---|---|---|---|---|
 | *text | String | Clean text content | null | Text for language link |
 | *url | String | Valid url | null | Url to where the language link points |
+
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Default closed |
+| osg-v-open | Expanded state for menu |
 
 (*) mandatory
 
