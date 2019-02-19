@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 * Removed danglig comma in atom/buttons/button/button.sass
 * Added docker-compose.yml so you can run devtools directly from the styleguide repository
+* all twig documentation: changed docs to have a table showing the variant/modifiers
 
 ### Added
 
