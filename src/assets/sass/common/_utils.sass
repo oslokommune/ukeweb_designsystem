@@ -163,15 +163,20 @@
 @each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies-header
   .osg-u-header-#{$name}
     font-size: $size-mobile !important
+    @if $name == "1"
+      letter-spacing: -0.9px !important
+    @else
+      letter-spacing: -0.3px !important
     +osg-mq-tablet-and-up
       font-size: $size-tablet !important
     +osg-mq-desktop-and-up
       font-size: $size-desktop !important
 
 // generating typography classes for other text
-@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies-header
+@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies
   .osg-u-text-#{$name}
     font-size: $size-mobile !important
+    line-height: 1.5em !important
     +osg-mq-tablet-and-up
       font-size: $size-tablet !important
     +osg-mq-desktop-and-up
