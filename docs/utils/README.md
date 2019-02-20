@@ -80,17 +80,20 @@ These optional utility classes should be added to the body tag, when needed.
 * black: (#2c2c2c)
 * blue: (#6fe9ff)
 * blue-dark: (#2a2859)
-* blue-hover: (#1f42aa)
 * blue-light: b3f5ff
 * green: (#43f8b6)
 * green-dark: (#034b45)
 * green-light: (#c7f6c9)
 * grey: (#f2f2f2)
 * grey-light: (#f9f9f9)
-* purple: (#8d50b1)
-* purple-light: (#e0adff)
 * red: (#ff8274)
 * yellow: (#f9c66b)
+
+#### Context Aware Colors
+These colors should only be used in the context represented by its name
+* blue-hover: (#1f42aa)
+* purple-visited: (#8d50b1)
+* purple-visited-light: (#e0adff)
 
 ### State Colors
 Background and text color that is compliant to WCAG 2.0
