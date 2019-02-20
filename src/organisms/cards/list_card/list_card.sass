@@ -55,17 +55,16 @@ $shape-size-tablet: 210px
     padding-top: 15px
 
   .osg-state-text
+    @extend .osg-u-header-3
     display: none
     position: absolute
     text-align: center
     z-index: 1
     top: calc((#{$shape-size-mobile} / 2) - (#{$osg-font-size-16} / 2))
     width: $shape-size-mobile
-    font-size: $osg-font-size-16
     +osg-mq-tablet-and-up
       top: calc((#{$shape-size-tablet} / 2) - (#{$osg-font-size-28} / 2))
       width: $shape-size-tablet
-      font-size: $osg-font-size-28
   .osg-search-result
     display: none
     text-decoration: none

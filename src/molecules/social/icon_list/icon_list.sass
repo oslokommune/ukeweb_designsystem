@@ -27,9 +27,7 @@
           color: $osg-color-green-darker
       span
         i
-          font-size: $osg-font-size-18
-          +osg-mq-tablet-and-up
-            font-size: $osg-font-size-26
+          @extend .osg-u-text-2
   &.osg-v-vertical-no-shape
     flex-direction: row
     +osg-mq-tablet-and-up
@@ -41,5 +39,6 @@
         .osg-icon
           display: flex
         .osg-icon-text
+          padding-top: 8px
           margin-left: 10px
           display: block
