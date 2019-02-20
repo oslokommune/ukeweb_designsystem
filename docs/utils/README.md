@@ -76,25 +76,25 @@ These optional utility classes should be added to the body tag, when needed.
 
 ## Options
 ### Colors
-* blue (#6fe9ff)
-* blue-light (#b3f5ff)
-* purple (#2a2859)
-* grey-lighter (#f2f2f2)
-* grey-light (#4a4a4a)
-* grey-dark (#333333)
-* grey-darker (#171414)
-* green (#43f8b6)
-* green-dark (#034b45)
-* green-darker (#007982)
-* green-light (#4e807c)
-* green-lighter (#c7f6c9)
-* green-faded (#628c89)
-* brown (#d0bfae)
-* brown-beige (#f8f0dd)
-* orange (#f9c66b)
-* red (#ff8274)
-* yellow (#F8F0DD)
-* white (#FFFFFF)
+* beige: (#f8f0dd)
+* beige-dark: (#d0bfae)
+* black: (#2c2c2c)
+* blue: (#6fe9ff)
+* blue-dark: (#2a2859)
+* blue-light: b3f5ff
+* green: (#43f8b6)
+* green-dark: (#034b45)
+* green-light: (#c7f6c9)
+* grey: (#f2f2f2)
+* grey-light: (#f9f9f9)
+* red: (#ff8274)
+* yellow: (#f9c66b)
+
+#### Context Aware Colors
+These colors should only be used in the context represented by its name
+* blue-hover: (#1f42aa)
+* purple-visited: (#8d50b1)
+* purple-visited-light: (#e0adff)
 
 ### State Colors
 Background and text color that is compliant to WCAG 2.0
