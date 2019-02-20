@@ -1,4 +1,4 @@
-.osg-toggle-button
+.osg-p-toggle-button
   background: none
   border: none
   margin: 0
@@ -9,20 +9,18 @@
     color: $osg-color-green-dark
     padding-bottom: 0 0 10px 0
   &.osg-v-with-icon
-    > i, > div > span
+    i, div span
       padding-left: 5px
       font-size: 0.8em
-  &.osg-m-active
+  &--active
     border-bottom: 5px $osg-color-green-lighter solid
     font-weight: bold
-  &.osg-m-main-menu
+  &--main-menu
     color: $osg-color-grey-dark
-  &.osg-m-open
+  &--open
     color: transparent
     font-size: 0
-    >.osg-icon-filter
-      transform: rotate(90deg)
-  >.osg-icon-filter
+  &__icon-filter
     background: url('../../../assets/images/filter.svg')
     background-repeat: no-repeat
     background-size: contain
@@ -33,3 +31,5 @@
     +osg-mq-tablet-and-up
       height: $osg-font-size-30
       width: $osg-font-size-30
+  &--open &__icon-filter
+    transform: rotate(90deg)

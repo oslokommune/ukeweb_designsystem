@@ -5,7 +5,7 @@
 {% if hasLink %}
   <a
     href="{{ toggleButton.link }}"
-    class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
+    class="osg-p-toggle-button {{ toggleButton.variant | default('osg-v-default') }} {{ toggleButton.modifiers | default(null) }}"
     {% if hasDataattrs %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}
@@ -14,7 +14,7 @@
   >
 {% else %}
   <button
-    class="osg-toggle-button {{ toggleButton.variant | default('osg-v-default')  }} {{ toggleButton.modifiers | default(null) }}"
+    class="osg-p-toggle-button {{ toggleButton.variant | default('osg-v-default') }} {{ toggleButton.modifiers | default(null) }}"
     {% if hasDataattrs %}
       {% for dataattr in toggleButton.dataattrs %}
         {{ dataattr.key }}={{ dataattr.val }}
