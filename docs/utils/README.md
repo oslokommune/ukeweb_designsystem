@@ -75,25 +75,22 @@ These optional utility classes should be added to the body tag, when needed.
 
 ## Options
 ### Colors
-* blue (#6fe9ff)
-* blue-light (#b3f5ff)
-* purple (#2a2859)
-* grey-lighter (#f2f2f2)
-* grey-light (#4a4a4a)
-* grey-dark (#333333)
-* grey-darker (#171414)
-* green (#43f8b6)
-* green-dark (#034b45)
-* green-darker (#007982)
-* green-light (#4e807c)
-* green-lighter (#c7f6c9)
-* green-faded (#628c89)
-* brown (#d0bfae)
-* brown-beige (#f8f0dd)
-* orange (#f9c66b)
-* red (#ff8274)
-* yellow (#F8F0DD)
-* white (#FFFFFF)
+* beige: (#f8f0dd)
+* beige-dark: (#d0bfae)
+* black: (#2c2c2c)
+* blue: (#6fe9ff)
+* blue-dark: (#2a2859)
+* blue-hover: (#1f42aa)
+* blue-light: b3f5ff
+* green: (#43f8b6)
+* green-dark: (#034b45)
+* green-light: (#c7f6c9)
+* grey: (#f2f2f2)
+* grey-light: (#f9f9f9)
+* purple: (#8d50b1)
+* purple-light: (#e0adff)
+* red: (#ff8274)
+* yellow: (#f9c66b)
 
 ### State Colors
 Background and text color that is compliant to WCAG 2.0
