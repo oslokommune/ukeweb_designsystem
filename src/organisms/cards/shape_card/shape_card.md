@@ -6,7 +6,7 @@ This pattern is primarily to be used for...
 | Attribute | Type | Values | Default | Description |
 |-----------|------|--------|---------|-------------|
 | variant | String | osg-v-default | "osg-v-default" | Default variant |
-| modifiers | String | See modifier options bellow | null | Name of the modifier |
+| modifiers | String | See modifier options below | null | Name of the modifier |
 | *url | String | Clean text content | null | Link to wrap the whole card in |
 | stateText | String | Clean text content | null | Text to be displayed on top of the image. Used together with modifier osg-m-with-state to have effect. |
 | searchResult | String | Clean text content | null | Facilitates the need to display part of a text content related to the destination of the url, as part of a search solution. Used together with the modifier osg-m-show-search-result to have effect. |

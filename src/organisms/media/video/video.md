@@ -7,8 +7,8 @@ Basic html5 player example with subtitles.
 
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | See variant options bellow | osg-v-default | Name of the variant |
-| modifiers | String | See modifier options bellow | null | Name of the modifier |
+| variant | String | See variant options below | osg-v-default | Name of the variant |
+| modifiers | String | See modifier options below | null | Name of the modifier |
 | posterUrl | String | Clean text content | null | Url to image file |
 | *videoUrl | String | Clean text content | null | Url to video file |
 | *subtitlesUrl | String | Clean text content | null | Url to subtitles file |

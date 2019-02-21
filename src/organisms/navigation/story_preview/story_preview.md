@@ -10,8 +10,8 @@ If a link is passed to storyPreview and allClickable is set to true, the whole c
 
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | See variant options bellow | osg-v-default | Name of the variant |
-| modifiers | String | See modifier options bellow | null | Name of the modifier |
+| variant | String | See variant options below | osg-v-default | Name of the variant |
+| modifiers | String | See modifier options below | null | Name of the modifier |
 | allClickable | boolean | true, false | null | Makes the story preview a link, link must be passed in for this to work |
 | link | Object | url, text, srText | null | Link for the component, does nothing if allClickable is not true |
 

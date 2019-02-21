@@ -4,7 +4,7 @@ This pattern is primarily used for content search
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| modifiers | String | See modifier options bellow | null | Name of the modifier |
+| modifiers | String | See modifier options below | null | Name of the modifier |
 
 Check the included text pattern docs for more data field descriptions.
 

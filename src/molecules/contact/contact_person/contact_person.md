@@ -4,7 +4,7 @@ This pattern is primarily to be used for displaying a persons image and contact 
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | See variant options bellow | "osg-v-default" | Name of the variant |
+| variant | String | See variant options below | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | *name | String | Clean text content | null | Name of contact |
 | *title | String | Clean text content | null | Contacts job title |

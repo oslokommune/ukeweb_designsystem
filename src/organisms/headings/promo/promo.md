@@ -4,7 +4,7 @@ This pattern is used for displaying the intro section on a page.
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | See variant options bellow | osg-v-default | Name of the variant |
+| variant | String | See variant options below | osg-v-default | Name of the variant |
 | title | String | Clean text content | null | Text on top of image |
 | button | Object | See the button patterns data fields | null | A general purpose button |
 | showButton | Boolean | true/false | null | Whether to show a button. Use together with the button data fields |
