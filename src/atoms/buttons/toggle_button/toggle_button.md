@@ -6,13 +6,26 @@ The withIcon variant can for example also be used as a dropdown with active modi
 ### Data
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | [1] osg-v-default-icon  <br> [2] osg-v-with-icon | null | [1] Shows a button with a text <br> [2] Shows a button with a text and an icon on the right side |
-| modifiers | String | [1] osg-m-main-menu <br> [2] osg-m-active <br> [3] osg-m-open | null | [1] Sets the color of the text in dark grey <br> [2] Adds a 5px light green border below <br> [3] Hides the text of the button and rotates the icon 90 degrees. You'll have to change the value of the attribute aria-expanded according to the status of the toggle |
+| variant | String | See variant options below | osg-v-default | Name of the variant |
+| modifiers | String | See modifier options below | null | Name of the modifier |
 | *text | String | (text value) | null | Text of the button |
 | icon | String | [1]``` <i class='fa fa-chevron-down'></i>``` <br> [2]```<i class='osg-icon-filter'></i>``` | null | [1] Down arrow icon, uses Font Awesome library <br> [2] Filter arrow icon, uses and svg icon |
 | dataattr | Array | key:String, val:String | null | Extra attributes to add to the button |
 
 (*) mandatory
+
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Shows a button with text |
+| osg-v-with-icon | Shows a button with text and an icon on the right side |
+
+### Modifier Options
+| Name | Description |
+|------|-------------|
+| osg-m-main-menu | Sets the color of the text in dark grey |
+| osg-m-active | Adds a 5px light green border below |
+| osg-m-open | Hides the text of the button and rotates the icon 90 degrees. You'll have to change the value of the attribute aria-expanded according to the status of the toggle |
 
 ### Accessibility
 To allow screen readers to read if the button is expanded or collapsed, dataattr must contain:
