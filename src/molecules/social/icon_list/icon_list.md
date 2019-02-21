@@ -12,7 +12,7 @@ The icons must always contain text, toggled by the flag "textVisible" set to tru
 #### Brands Object Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| *icon | String | Rich text (html) | null | html element of the icon to display |
+| *icon | String | Rich text (html) | null | Html element of the icon to display |
 | text | String | Clean text content | null | Text displayed together with the icon and/or in the anchor elements title attribute |
 | textVisible | Boolean | true/false | null | Whether to display the text below the icon |
 | *url | String | Valid url | null | Url to where the icon points |

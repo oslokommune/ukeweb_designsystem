@@ -24,7 +24,7 @@ If a link is passed to storyPreview and allClickable is set to true, the whole c
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-big{-tablet} | makes the text bigger |
-| osg-m-left{-tablet} | text on the left of the image |
-| osg-m-right{-tablet} | text on the right of the image |
-| osg-m-top{-tablet} | text on the top of the image |
+| osg-m-big{-tablet} | Makes the text bigger |
+| osg-m-left{-tablet} | Text on the left of the image |
+| osg-m-right{-tablet} | Text on the right of the image |
+| osg-m-top{-tablet} | Text on the top of the image |
