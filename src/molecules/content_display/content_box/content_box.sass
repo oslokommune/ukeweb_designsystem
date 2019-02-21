@@ -6,13 +6,9 @@
     +osg-mq-tablet-and-up
       padding: 30px 40px 55px 30px
     .osg-body-heading
-      font-size: $osg-font-size-24
-      +osg-mq-tablet-and-up
-        font-size: $osg-font-size-28
+      @extend .osg-u-header-3
     .osg-body-text
-      font-size: $osg-font-size-18
-      +osg-mq-tablet-and-up
-        font-size: $osg-font-size-20
+      @extend .osg-u-text-3
     .osg-date
       &:after
         display: block
@@ -22,12 +18,12 @@
         margin: 15px 0
         background-color: $osg-color-green
     .osg-extra-link
+      @extend .osg-u-text-4
       display: flex
       text-decoration: none
+      align-items: center
       &:hover
         text-decoration: underline
-      align-items: center
-      font-size: $osg-font-size-18
       .osg-icon
         height: 15px
         width: 15px

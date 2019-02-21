@@ -15,10 +15,14 @@ See README.md for release description.
 * all twig documentation: changed docs to have a table showing the variant/modifiers
 
 ### Added
+* organisms-data_display-simple_table: new pattern.
 
 ### Removed
 
 ### Changed
+util classes: Added -u to the prefix of all utils classes.
+util classes: Added -only postfix to the end of util classes with the -mobile postfix.
+util classes: Added -and-up to the end of the util classes with the -tablet and the -desktop postfix.
 
 
 ## [0.14.0] - 2019-02-06

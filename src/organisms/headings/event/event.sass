@@ -4,13 +4,11 @@
     .osg-event-header
       padding-right: 570px
   h2
-    font-size: $osg-font-size-26
+    @extend .osg-u-header-2
     font-weight: bold
-    +osg-mq-tablet-and-up
-      font-size: $osg-font-size-40
     span
+      @extend .osg-u-text-4
       margin-left: 5px
-      font-size: $osg-font-size-18
   .osg-tags
     margin-top: 25px
   .osg-event-image
@@ -32,10 +30,10 @@
       +osg-mq-desktop-and-up
         display: block
     .osg-event-info
+      @extend .osg-u-text-6
       color: $osg-color-green-dark
-      font-size: $osg-font-size-14
       i
-        font-size: $osg-font-size-18
+        @extend .osg-u-text-4
       width: 100%
       position: relative
       top: -100px
@@ -52,23 +50,21 @@
   .osg-image-container
     position: relative
   .osg-state-text
+    @extend .osg-u-header-1
     display: none
     position: absolute
-    font-size: $osg-font-size-40
     text-align: center
     z-index: 1
     width: 100%
     top: calc(50% - 50px)
+    font-weight: 600
+    color: white
     +osg-mq-desktop-and-up
       width: 80%
 
   &.osg-m-with-state
     .osg-state-text
       display: block
-      font-weight: 600
-      color: white
-      +osg-mq-desktop-and-up
-        font-size: $osg-font-size-60
     picture
       +osg-helper-filter($osg-color-green-dark)
       +osg-mq-desktop-and-up
@@ -78,10 +74,8 @@
   .osg-event-caption
     // osg-event-caption is a hack to display the image
     // figcaption below info_list on mobile and tablet
+    @extend .osg-u-text-6
     color: #6A6A6A
-    font-size: $osg-font-size-12
     padding: 15px 0 0
-    +osg-mq-tablet-and-up
-      font-size: $osg-font-size-14
     +osg-mq-desktop-and-up
       display: none

@@ -1,0 +1,17 @@
+.osg-c-simple-table
+  overflow: scroll-x
+  td,
+  th
+    padding: 20px
+    +osg-mq-tablet-and-up
+      padding: 20px 80px
+  tr:nth-child(even)
+    td
+      background-color: $osg-color-yellow
+  .osg-simple-table
+    &__data-separator
+      display: block
+      +osg-mq-tablet-and-up
+        display: inline
+        + .osg-simple-table__data-separator
+          padding-left: 10px
