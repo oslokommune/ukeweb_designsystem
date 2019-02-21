@@ -76,6 +76,7 @@ $osg-mobile-hamburger-line-height: 2px
 
   // Style for content
   .osg-navbar-menu-content
+    @extend .osg-u-header-3
     display: flex
     flex-direction: column
     text-align: left
@@ -88,12 +89,10 @@ $osg-mobile-hamburger-line-height: 2px
     overflow: auto
     width: 100%
     padding: 50px 15px 35px 30px
-    font-size: $osg-font-size-24
     z-index: 102
     +osg-mq-tablet-and-up
       width: 521px
       padding: 150px 15px 50px 125px
-      font-size: $osg-font-size-30
       left: -521px
       visibility: hidden
     a
@@ -116,18 +115,17 @@ $osg-mobile-hamburger-line-height: 2px
     .osg-menu-links
       flex-grow: 1
   .osg-logos
+    @extend .osg-u-text-2
     display: flex
     align-items: center
     flex-wrap: wrap
     flex-direction: row
-    font-size: $osg-font-size-18
     .osg-figure
       padding: 20px 20px 20px 0
       width: auto
       img
         width: auto
     +osg-mq-tablet-and-up
-      font-size: $osg-font-size-24
       margin-bottom: 0
 
   // Style for mobile version of the navbar menu

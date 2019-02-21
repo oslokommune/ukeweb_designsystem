@@ -6,34 +6,30 @@
 // Is prefixed with osg-common-
 
 =osg-common-blockquote
+  @extend .osg-u-text-1
   position: relative
   background-color: $osg-color-beige-dark
   color: $osg-color-grey
   padding: 105px 15px 50px 30px
-  font-size: $osg-font-size-20
   +osg-mq-tablet-and-up
-    font-size: $osg-font-size-32
     padding: 130px 120px 100px 120px
     line-height: 45px
   a
     text-decoration: none
   p
-    font-size: $osg-font-size-20
-    +osg-mq-tablet-and-up
-      font-size: $osg-font-size-32
+    @extend .osg-u-text-1
   footer, & > cite
+    @extend .osg-u-text-3
     display: block
-    font-size: $osg-font-size-16
     line-height: 33px
     padding-top: 20px
     +osg-mq-tablet-and-up
-      font-size: $osg-font-size-20
       padding-top: 40px
   &:before
+    @extend .osg-u-text-1
     font-family: 'Font Awesome 5 Free'
     font-weight: 900
     content: "\F10E"
-    font-size: $osg-font-size-30
     font-style: normal
     color: $osg-color-grey
     position: absolute
@@ -92,9 +88,9 @@
     border-top: 1px solid $osg-color-green
     font-weight: bold
   .osg-state-text
+    @extend .osg-u-header-2
     display: none
     position: absolute
-    font-size: $osg-font-size-40
     text-align: center
     z-index: 1
     width: 100%
