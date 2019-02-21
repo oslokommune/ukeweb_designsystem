@@ -20,7 +20,8 @@ These classes should be added to any element to set styles directly to it.
 |---|---|
 | .osg-u-text-is-[font weight] | Specifies a font weight for the element |
 | .osg-u-text-is-italic | Makes the text style italic |
-| .osg-u-text-is-size-[font size] | Specifies a predefined text-size |
+| .osg-u-header-[typography] | Specifies a predefined header typography |
+| .osg-u-text-[typography] | Specifies a predefined text typography |
 
 ### Spacing
 | Name | Description |
@@ -75,25 +76,25 @@ These optional utility classes should be added to the body tag, when needed.
 
 ## Options
 ### Colors
-* blue (#6fe9ff)
-* blue-light (#b3f5ff)
-* purple (#2a2859)
-* grey-lighter (#f2f2f2)
-* grey-light (#4a4a4a)
-* grey-dark (#333333)
-* grey-darker (#171414)
-* green (#43f8b6)
-* green-dark (#034b45)
-* green-darker (#007982)
-* green-light (#4e807c)
-* green-lighter (#c7f6c9)
-* green-faded (#628c89)
-* brown (#d0bfae)
-* brown-beige (#f8f0dd)
-* orange (#f9c66b)
-* red (#ff8274)
-* yellow (#F8F0DD)
-* white (#FFFFFF)
+* beige: (#f8f0dd)
+* beige-dark: (#d0bfae)
+* black: (#2c2c2c)
+* blue: (#6fe9ff)
+* blue-dark: (#2a2859)
+* blue-light: b3f5ff
+* green: (#43f8b6)
+* green-dark: (#034b45)
+* green-light: (#c7f6c9)
+* grey: (#f2f2f2)
+* grey-light: (#f9f9f9)
+* red: (#ff8274)
+* yellow: (#f9c66b)
+
+#### Context Aware Colors
+These colors should only be used in the context represented by its name
+* blue-hover: (#1f42aa)
+* purple-visited: (#8d50b1)
+* purple-visited-light: (#e0adff)
 
 ### State Colors
 Background and text color that is compliant to WCAG 2.0
@@ -125,20 +126,34 @@ Mobile first break points.
 * tablet-and-up (from 769 pixels and up)
 * desktop-and-up (from 1088 pixels and up)
 
-### Font Sizes
-Number representing standardized font sizes. Size 1 is the biggest, 2 is one step lower etc.
+### Typography
+Number representing standardized Typographies. Typography 1 is the biggest, 2 is one step lower etc.
 
-Each size number has one font-size for mobile and one for tablet and up. The tablet and up one is typically bigger.
+Each size number has one font-size for mobile and one for tablet and up and one for tablet and up. The bigger the screen the bigger the font-size.
 
-The sizes are specified in rem, and its pixel equivalent (assuming a root/body/html size of 16px) is represented in parentheses.
+The sizes are specified in rem, and its pixel equivalent (assuming a root/body/html size of 16px) is represented after the slash in the tables.
 
-| Name | Mobile | Tablet (and up) |
-|---|---|---|
-| 1 | 1.625rem (26px) | 3rem (40px) |
-| 2 | 1.5rem (24px) | 2.25rem (36px) |
-| 3 | 1.25rem (20px) | 1.75rem (28px) |
-| 4 | 1.125rem (18px) | 1.5rem (24px) |
-| 5 | 1rem (16px) | 1.25rem (20px) |
+The typography classes also specifies values for letter-spacing and line-height. Text typographies have more letter-spacing and line-height than the header typographies.
+
+#### Header Typographies
+| Name | Mobile            | Tablet (and up)     | Desktop (and up)    |
+|------|-------------------|---------------------|---------------------|
+| 1    | 1.75 rem / 28 px  | 2.5 rem / 40 px     | 3.75 rem / 60 px    |
+| 2    | 1.5 rem / 24 px   | 1.875 rem / 30 px   | 2.25 rem / 36 px    |
+| 3    | 1.375 rem / 22 px | 1.625 rem / 26 px   | 1.75 rem / 28 px    |
+| 4    | 1.25 rem / 20 px  | 1.375 rem / 22 px   | 1.5 rem / 24 px     |
+| 5    | 1.125 rem / 18 px | 1.25 rem / 20 px    | 1.25 rem / 20 px    |
+| 6    | 1 rem / 16 px     | 1.0625 rem / 17 px  | 1.125 rem / 18 px   |
+
+#### Text Typographies
+| Name | Mobile            | Tablet (and up)     | Desktop (and up)    |
+|------|-------------------|---------------------|---------------------|
+| 1    | 1.25 rem / 20 px  | 1.5 rem / 24 px     | 1.875 rem / 30 px   |
+| 2    | 1.25 rem / 20 px  | 1.375 rem / 22 px   | 1.5 rem / 24 px     |
+| 3    | 1.125 rem / 18 px | 1.1875 rem / 19 px  | 1.25 rem / 20 px    |
+| 4    | 1 rem / 16 px     | 1.0625 rem / 17 px  | 1.125 rem / 18 px   |
+| 5    | 0.875 rem / 14 px | 0.875 rem / 14 px   | 1 rem / 16 px       |
+| 6    | 0.812 rem / 13 px | 0.812 rem / 13 px   | 0.875 rem / 14 px   |
 
 ### Grayscales
 Number representing percentage of darkness starting from white. So the higher the number, the darker the scale of gray.

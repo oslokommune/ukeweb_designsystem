@@ -12,24 +12,21 @@
       padding-right: 1.5rem
 
   .osg-call-to-action-content
+    @extend .osg-u-text-1
     max-width: 550px
     overflow: hidden
-    +osg-mq-tablet-and-up
-      font-size: $osg-font-size-32
-      padding: 50px 100px 50px 50px
-      position: relative
-      display: inline-block
+    padding: 30px 30px 60px 25px
+    position: relative
+    background-color: $osg-color-green-light
+    color: $osg-color-green-dark
     +osg-mq-mobile-only()
-      h2
-        font-size: $osg-font-size-20
-      font-size: $osg-font-size-20
-      padding: 30px 30px 60px 25px
-      position: relative
       margin-left: 30px
       margin-top: -100px
-
-    background-color: $osg-color-green-lighter
-    color: $osg-color-green-dark
+    +osg-mq-tablet-and-up
+      padding: 50px 100px 50px 50px
+      display: inline-block
+    h2
+      @extend .osg-u-text-1
     p
       padding: 15px 0 30px 0
 
@@ -44,5 +41,3 @@
       position: absolute
       img
         height: 600px
-    +osg-mq-mobile-only()
-      transform: scaleX(-1)

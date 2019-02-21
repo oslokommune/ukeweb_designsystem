@@ -1,13 +1,13 @@
 .osg-expand-box
   .osg-content-box > .osg-container
-    background-color: $osg-color-brown-beige
+    background-color: $osg-color-beige-dark
   .osg-button
     .osg-shape
       height: 60px
       width: 60px
-      background-color: $osg-color-green-lighter
+      background-color: $osg-color-green-light
       i
-        font-size: $osg-font-size-21
+        @extend .osg-u-text-3
   .osg-title-line
     display: flex
     flex-direction: row
@@ -17,21 +17,19 @@
       padding-left: 15px
       +osg-mq-tablet-and-up
         padding-left: 30px
-      background-color: $osg-color-brown-beige
+      background-color: $osg-color-beige-dark
       width: 100%
       display: flex
       h3
+        @extend .osg-u-header-4
         align-self: center
-        font-size: $osg-font-size-20
         font-weight: 600
-        +osg-mq-tablet-and-up
-          font-size: $osg-font-size-24
   &.osg-v-open
     .osg-expand-box-content
       display: block
   .osg-expand-box-content
+    @extend .osg-u-text-4
     display: none
-    font-size: $osg-font-size-18
     font-weight: 300
     ul
       margin-bottom: 30px
