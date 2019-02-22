@@ -5,13 +5,14 @@
       "messages",
       "important",
       "information"
-    ]
+    ],
+    "min-height": "500px"
   },
   "alert": {
-    "variant": "osg-v-default",
-    "message": "Lorem Ipsum",
+    "state": "critical",
+    "heading": "Lorem ipsum",
     "updated": {
-      "text": "Oppdatert",
+      "text": "Varsling:",
       "date": "11.Juni 2018"
     }
   }
