@@ -4,7 +4,7 @@ This pattern is primarily used for content search
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| modifiers | String | osg-m-color-green | null | Change color and placeholder color to green |
+| modifiers | String | osg-m-hide-field | null | Adds a yellow border to the input box and hides it in mobile view |
 
 Check the included text pattern docs for more data field descriptions.
 

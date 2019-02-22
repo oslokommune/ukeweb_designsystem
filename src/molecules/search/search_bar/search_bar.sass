@@ -1,21 +1,27 @@
 .osg-searchbar
   display: flex
-  position: relative
-  .osg-text-field-input, .osg-text-field-input:focus
-    font-size: 16px
+  .osg-button
+    margin-top: 20px
   .osg-searchbar-icon
-    @extend .osg-u-text-3
-    position: absolute
-    top: 24px
-    right: 15px
-    color: #000
-    +osg-mq-tablet-and-up
-      top: 23px
-  &.osg-m-color-green
+    padding: 21px
+    +osg-mq-desktop-and-up
+      padding: 26px
+  &.osg-m-hide-field
     .osg-text-field
+      display: none
+      +osg-mq-tablet-and-up
+        display: flex
       .osg-text-field-input
-        color: $osg-color-green-dark
-      .osg-text-field-floating-label
-        color: $osg-color-green-light
+        border: 2px solid $osg-color-yellow
+        +osg-mq-tablet-and-up
+          height: 46px
+        +osg-mq-desktop-and-up
+          height: 57px
+      .osg-text-field-label
+        top: 10px
+        +osg-mq-desktop-and-up
+          top: 14px
     .osg-searchbar-icon
-      color: $osg-color-green-dark
+      padding: 15px
+      +osg-mq-desktop-and-up
+        padding: 20px
