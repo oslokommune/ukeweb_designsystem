@@ -7,7 +7,7 @@ Keep in mind that the text size affects to the size of the button.
 | *variant | String | See "variant options" section below | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | link | String | Any valid url | null | Makes pattern into a link with the style of a button |
-| color | String | See the color options section | "success" | Sets state colors for text and background using global css classes |
+| color | String | See the color options section | "red" | Sets state colors for text and background using global css classes |
 | *content | String | Clean text content | null | Text inside tag |
 | dataattrs | Object | key and val | null | See example in data tab |
 
