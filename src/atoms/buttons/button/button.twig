@@ -3,38 +3,38 @@
 {% set hasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
 
 {% if hasLink %}
-<a
-  href="{{ button.link }}"
-  class="osg-button {{ button.variant | default('osg-v-default') }} {{ state }} {{ button.modifiers | default(null) }}"
-  {% if hasDataattrs %}
-  {% for dataattr in button.dataattrs %}
-  {{dataattr.key}}="{{dataattr.val}}"
-  {% endfor %}
-  {% endif %}
->
+  <a
+    href="{{ button.link }}"
+    class="osg-button {{ button.variant | default('osg-v-default') }} {{ state }} {{ button.modifiers | default(null) }}"
+    {% if hasDataattrs %}
+      {% for dataattr in button.dataattrs %}
+        {{ dataattr.key }}="{{ dataattr.val }}"
+      {% endfor %}
+    {% endif %}
+  >
 {% else %}
-<button
-  class="osg-button {{ button.variant | default('osg-v-default')  }} {{ state }}"
-  {% if hasDataattrs %}
-  {% for dataattr in button.dataattrs %}
-  {{dataattr.key}}="{{dataattr.val}}"
-  {% endfor %}
-  {% endif %}
->
+  <button
+    class="osg-button {{ button.variant | default('osg-v-default')  }} {{ state }}"
+    {% if hasDataattrs %}
+      {% for dataattr in button.dataattrs %}
+        {{ dataattr.key }}="{{ dataattr.val }}"
+      {% endfor %}
+    {% endif %}
+  >
 {% endif %}
   {% if button.variant is defined and button.variant == "osg-v-circle" %}
-  {% set shape = {
-      "text": button.content,
-      "variant": button.variant
-    }
-  %}
-  {% include "atoms/decorators/shape/shape.twig" with shape %}
+    {% set shape = {
+        "text": button.content,
+        "variant": button.variant
+      }
+    %}
+    {% include "atoms/decorators/shape/shape.twig" with shape %}
   {% endif %}
   {% if "osg-v-default" in button.variant | default('osg-v-default') %}
     {{ button.content }}
   {% endif %}
 {% if hasLink %}
-</a>
+  </a>
 {% else %}
-</button>
+  </button>
 {% endif %}
