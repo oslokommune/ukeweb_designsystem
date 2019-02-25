@@ -3,7 +3,7 @@ Multi-purpose container for previewing part of content, usually some form of art
 
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
-| variant | String | [1]osg-v-default, [2]osg-v-alert | "osg-v-default" | [1]Default variant, [2]Example with alert |
+| variant | String | osg-v-default | "osg-v-default" | Default variant |
 | date | String | Clean text content | null | Used for putting either one date or  a from and a to date |
 | heading | String | Clean text content | null | Content heading |
 | text | String | Clean text content | null | A paragraph |
