@@ -10,14 +10,18 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* global styles: made text dark blue by default.
+* global styles: made links dark blue with underline.
 * Removed danglig comma in atom/buttons/button/button.sass
 * Added docker-compose.yml so you can run devtools directly from the styleguide repository
 * all twig documentation: changed docs to have a table showing the variant/modifiers
 
 ### Added
 * organisms-data_display-simple_table: new pattern.
+* organism-messages-alert: new pattern.
 
 ### Removed
+* atom-messages-alert: removed pattern.
 
 ### Changed
 util classes: Added -u to the prefix of all utils classes.

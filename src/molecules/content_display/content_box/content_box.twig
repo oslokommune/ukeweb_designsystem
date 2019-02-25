@@ -1,4 +1,3 @@
-{% set hasAlertData = alert is defined and alert is not empty %}
 {% set hasTag = contentBox.tag is defined and contentBox.tag is not empty %}
 {% set hasDate = contentBox.date is defined and contentBox.date is not empty %}
 {% set hasHeading = contentBox.heading is defined and contentBox.heading is not empty %}
@@ -8,9 +7,6 @@
 {% set hasLinkSrText = contentBox.link.srText is defined and contentBox.link.srText is not empty %}
 
 <div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
-  {% if hasAlertData %}
-    {% include "atoms/messages/alert/alert.twig" %}
-  {% endif %}
   <div class="osg-container">
     {% block head %}
       {% if hasTag %}
