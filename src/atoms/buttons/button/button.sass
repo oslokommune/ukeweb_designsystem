@@ -39,9 +39,8 @@
           transform: scale(0.97)
 
 // looping map from maps.scss
-@each $name, $tuple in $osg-named-colors
-  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
-  +osg-button-helper($name, nth($tuple, 1), nth($tuple, 2))
+@each $name, $text, $background in $osg-button-colors
+  +osg-button-helper($name, $text, $background)
 
 .osg-button
   &.osg-v-circle

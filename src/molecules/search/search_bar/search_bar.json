@@ -2,14 +2,17 @@
   "meta": {
     "tags": ["search", "input", "searchbar"]
   },
-  "searchBar": {
-    "modifiers": "osg-m-color-green"
-  },
   "text": {
     "variant": "osg-v-floating-label",
     "name": "textfield",
     "placeholder": "Lorem ipsum dolor sit amet.",
-    "id": "searchbar",
-    "modifiers": "osg-m-no-border"
+    "id": "searchbar"
+  },
+  "button": {
+    "content": "<i class='fas fa-search osg-searchbar-icon'></i>",
+    "variant": "osg-v-circle",
+    "dataattrs": [
+      {"key": "aria-label", "val": "Search"}
+    ]
   }
 }

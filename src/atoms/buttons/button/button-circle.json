@@ -1,6 +1,10 @@
 {
   "button": {
     "content": "Dolor",
-    "variant": "osg-v-circle"
+    "variant": "osg-v-circle",
+    "dataattrs": [
+      {"key": "id", "val": "lorem_ipsum"},
+      {"key": "aria-label", "val": "Search"}
+    ]
   }
 }
