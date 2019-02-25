@@ -1,0 +1,58 @@
+.osg-alert
+  background-color: white
+  padding: 15px
+  +osg-mq-tablet-and-up
+    padding: 30px 30px 60px
+  &__heading
+    @extend .osg-u-header-6
+  &__overlay,
+  &__overlay-wrapper
+    display: none
+
+  &.osg-v-open
+    .osg-alert
+      &__overlay-wrapper
+        z-index: 2
+        display: flex
+        flex-direction: column
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-color: rgba($osg-color-black, 0.6)
+        padding: 20px
+        +osg-mq-mobile-only
+          background-color: white
+          height: 100vh
+        +osg-mq-tablet-and-up
+          justify-content: center
+          align-items: center
+      &__overlay
+        display: inline-flex
+        flex-direction: column
+        max-width: 600px
+      &__overlay-top
+        display: flex
+      &__white-space
+        content: "test"
+        color: white
+        display: block
+        height: 100%
+        width: 100%
+        background-color: white
+        flex: 1
+    .osg-button .osg-shape
+      background-color: $osg-color-yellow
+      color: $osg-color-blue-dark
+      padding: 14px 18px
+      +osg-mq-tablet-and-up
+        padding: 20px 24px
+    .osg-content
+      background-color: white
+      +osg-mq-tablet-and-up
+        padding: 20px 50px 75px
+
+

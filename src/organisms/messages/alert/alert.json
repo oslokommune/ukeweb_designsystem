@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "tags": [
+      "message",
+      "messages",
+      "important",
+      "information"
+    ],
+    "min-height": "500px"
+  },
+  "alert": {
+    "state": "critical",
+    "heading": "Lorem ipsum",
+    "updated": {
+      "text": "Varsling:",
+      "date": "11.Juni 2018"
+    }
+  }
+}
