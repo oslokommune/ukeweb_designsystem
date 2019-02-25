@@ -11,7 +11,7 @@ Check the included text pattern docs for more data field descriptions.
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-color-green | Change color and placeholder color to green |
+| osg-m-hide-field | Hides the search box in mobile view |
 
 ### Javascript
 Example showing how to set focus on the input element when clicking the search icon.
