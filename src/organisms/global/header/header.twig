@@ -8,7 +8,7 @@
   {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
   <div class="osg-header-title">
     {% if hasTitleText and hasTitleTitle and hasTitleUrl %}
-    <h1 class="osg-text-is-size-4">
+    <h1>
       <a href="{{ header.title.url }}" {% if header.title.title is defined %} title="{{ header.title.title }}" {% endif %}>
       {{ header.title.text }}
       </a>
