@@ -15,8 +15,10 @@ See README.md for release description.
 
 ### Added
 * organisms-data_display-simple_table: new pattern.
+* organism-messages-alert: new pattern.
 
 ### Removed
+* atom-messages-alert: removed pattern.
 
 ### Changed
 util classes: Added -u to the prefix of all utils classes.
