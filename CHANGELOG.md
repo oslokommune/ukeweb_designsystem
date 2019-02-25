@@ -10,6 +10,8 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* global styles: made text dark blue by default.
+* global styles: made links dark blue with underline.
 * Removed danglig comma in atom/buttons/button/button.sass
 * Added docker-compose.yml so you can run devtools directly from the styleguide repository
 
