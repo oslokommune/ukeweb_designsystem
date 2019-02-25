@@ -13,6 +13,19 @@ Textfield for user input
 
 (*) mandatory
 
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Is used if nothing is defined. Does nothing extra. |
+| osg-v-floating-label | Makes the label float above the text field on focus |
+
+### Modifier Options
+| Name | Description |
+|------|-------------|
+| osg-m-big | Makes the text field bigger |
+
+
+
 ### State options
 - "muted"
 - "primary"
