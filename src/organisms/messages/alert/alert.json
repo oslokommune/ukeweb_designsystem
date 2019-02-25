@@ -11,9 +11,9 @@
   "alert": {
     "heading": "Lorem ipsum",
     "updated": {
-      "text": "Varsling:",
+      "text": "Dolor sit:",
       "date": "11.Juni 2018"
     },
-    "ariaLabel": "Åpne meldingsboks"
+    "ariaLabel": "Amet sit ipsum"
   }
 }
