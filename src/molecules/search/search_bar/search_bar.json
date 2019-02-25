@@ -2,9 +2,6 @@
   "meta": {
     "tags": ["search", "input", "searchbar"]
   },
-  "searchBar": {
-    "modifiers": ""
-  },
   "text": {
     "variant": "osg-v-floating-label",
     "name": "textfield",
