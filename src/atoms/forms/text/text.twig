@@ -1,6 +1,8 @@
 {% set state = text.state is defined ? "osg-text-field-" ~ text.state : null %}
+{% set textVariant = text.variant | default('osg-v-default') %}
+{% set textModifiers = text.modifiers | default(null) %}
 
-<div class="osg-text-field {{ text.variant | default('osg-v-default') }} {{ state is defined ? state : null }} {{ text.modifiers | default(null) }}">
+<div class="osg-text-field {{ textVariant }} {{ state }} {{ textModifiers }}">
   <input
     class="osg-text-field-input"
     id="{{ text.id }}"

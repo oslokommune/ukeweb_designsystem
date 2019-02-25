@@ -1,5 +1,6 @@
+{% set infoListModifiers = infoList.modifiers | default(null) %}
 
-<div class="osg-c-simple-table {{ infoList.modifiers | default(null) }}">
+<div class="osg-c-simple-table {{ infoListModifiers }}">
   <table>
     {% for row in simpleTable.rows %}
       {% set isHead =  row.isHead is defined and row.isHead == true %}

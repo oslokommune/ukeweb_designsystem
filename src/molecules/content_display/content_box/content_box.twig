@@ -6,8 +6,10 @@
 {% set hasContent = contentBox.content is defined and contentBox.content is not empty %}
 {% set hasLink = contentBox.link is defined and contentBox.link is not empty %}
 {% set hasLinkSrText = contentBox.link.srText is defined and contentBox.link.srText is not empty %}
+{% set contentBoxVariant = contentBox.variant | default('osg-v-default') %}
+{% set contentBoxModifiers = contentBox.modifiers | default(null) %}
 
-<div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
+<div class="osg-content-box {{ contentBoxVariant }} {{ contentBoxModifiers }}">
   {% if hasAlertData %}
     {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}

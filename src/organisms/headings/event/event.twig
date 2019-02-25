@@ -1,8 +1,9 @@
 {% set hasHeaderTag = event.headerTag is defined and event.headerTag is not empty %}
 {% set hasCaption = figure.caption is defined and figure.caption is not empty %}
 {% set hasStateText = event.stateText is defined and event.stateText is not empty %}
+{% set eventModifiers = event.modifiers | default(null) %}
 
-<div class="osg-event {{ event.modifiers | default(null) }}">
+<div class="osg-event {{ eventModifiers }}">
   {% block head %}
     <div class="osg-event-header">
       <h2>

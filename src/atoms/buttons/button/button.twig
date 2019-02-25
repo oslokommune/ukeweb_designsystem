@@ -1,11 +1,14 @@
 {% set color = "osg-button-" ~ button.color | default('red') %}
 {% set hasLink = button.link is defined and button.link is not empty %}
 {% set hasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
+{% set buttonVariant = button.variant | default('osg-v-default') %}
+{% set buttonModifiers = button.modifiers | default(null) %}
+
 
 {% if hasLink %}
 <a
   href="{{ button.link }}"
-  class="osg-button {{ button.variant | default('osg-v-default') }} {{ color }} {{ button.modifiers | default(null) }}"
+  class="osg-button {{ buttonVariant }} {{ color }} {{ buttonModifiers }}"
   {% if hasDataattrs %}
   {% for dataattr in button.dataattrs %}
   {{dataattr.key}}="{{dataattr.val}}"

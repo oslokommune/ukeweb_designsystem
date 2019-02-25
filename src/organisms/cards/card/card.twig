@@ -1,8 +1,10 @@
 {% set hasStateText = card.stateText is defined and card.stateText is not empty %}
 {% set hasTags = tags is defined and tags is not empty %}
 {% set hasSearchResult = card.searchResult is defined and card.searchResult is not empty %}
+{% set cardVariant = card.variant | default('osg-v-default') %}
+{% set cardModifiers = card.modifiers | default(null) %}
 
-<div class="osg-card {{ card.variant | default('osg-v-default')  }} {{ card.modifiers | default(null) }}">
+<div class="osg-card {{ cardVariant }} {{ cardModifiers }}">
   <a class="osg-wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
     <div class="osg-image-container">
       {% include "atoms/decorators/figure/figure.twig" %}

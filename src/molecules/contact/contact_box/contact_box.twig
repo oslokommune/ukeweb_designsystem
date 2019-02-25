@@ -1,6 +1,7 @@
 {% set hasAddressLink = contactBox.addressLink is defined and contactBox.addressLink is not empty %}
+{% set contactBoxModifiers = contactBox.modifiers | default(null) %}
 
-<address class="osg-contact-box {{ contactBox.modifiers | default(null) }}">
+<address class="osg-contact-box {{ contactBoxModifiers }}">
   <div>
     <h2 class="osg-text-is-size-5">{{ contactBox.phoneNumberTitle }}</h2>
     <p>

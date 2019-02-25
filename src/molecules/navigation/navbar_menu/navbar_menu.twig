@@ -1,6 +1,8 @@
 {% set hasTopDomainLink = navbarMenu.topDomainLink.url is defined and navbarMenu.topDomainLink.url is not empty %}
+{% set navbarMenuVariant = navbarMenu.variant | default('osg-v-default') %}
+{% set navbarMenuModifiers = navbarMenu.modifiers | default(null) %}
 
-<nav class="osg-navbar-menu {{ navbarMenu.variant|default('default') }} {{ navbarMenu.modifiers | default(null) }}">
+<nav class="osg-navbar-menu {{ navbarMenuVariant }} {{ navbarMenuModifiers }}">
   <div class="osg-navbar-menu-overlay-wrapper">
     <div class="osg-navbar-menu-overlay">
     </div>
