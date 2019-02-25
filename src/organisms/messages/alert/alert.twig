@@ -3,7 +3,7 @@
 {% set alertHasButton = button is defined and button is not empty %}
 {% set alertVariant = alert.variant|default('osg-v-default') %}
 {% set alertModifiers = alert.modifiers | default(null) %}
-{% set alertState = 'osg-alert--' ~ alert.state | default('default') %}
+{% set alertState = 'osg-alert--state-' ~ alert.state | default('default') %}
 
 <div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
   {% block head %}
@@ -37,7 +37,7 @@
               {% include 'atoms/buttons/button/button.twig' %}
             {% endif %}
           </div>
-          <div class="osg-content">
+          <div class="osg-alert__content osg-content">
             {{ alert.content | raw }}
           </div>
         </div>

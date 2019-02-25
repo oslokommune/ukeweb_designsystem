@@ -9,7 +9,6 @@
     "min-height": "500px"
   },
   "alert": {
-    "state": "critical",
     "heading": "Lorem ipsum",
     "updated": {
       "text": "Varsling:",
