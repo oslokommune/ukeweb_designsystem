@@ -1,4 +1,7 @@
-.osg-c-simple-table
+.osg-simple-table
+  $block: &
+  $data-separator: #{$block}__data-separator
+
   overflow: scroll-x
   td,
   th
@@ -8,10 +11,9 @@
   tr:nth-child(even)
     td
       background-color: $osg-color-yellow
-  .osg-simple-table
-    &__data-separator
-      display: block
-      +osg-mq-tablet-and-up
-        display: inline
-        + .osg-simple-table__data-separator
-          padding-left: 10px
+  #{$data-separator}
+    display: block
+    +osg-mq-tablet-and-up
+      display: inline
+      + #{$data-separator}
+        padding-left: 10px

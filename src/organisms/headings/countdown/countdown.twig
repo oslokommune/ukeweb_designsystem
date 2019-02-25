@@ -1,19 +1,19 @@
 <div class="osg-countdown {{ countdown.modifiers | default(null) }}">
   <h2>{{ countdown.text }}</h2>
-  <div class="osg-timing">
-    <div class="osg-days">
+  <div class="osg-countdown__timing">
+    <div class="osg-countdown__days">
       <span>{{ countdown.numberOfDays }}</span>
       <span>{{ countdown.daysLabel }}</span>
     </div>
-    <div class="osg-hours">
+    <div class="osg-countdown__hours">
       <span>{{ countdown.numberOfHours }}</span>
       <span>{{ countdown.hoursLabel }}</span>
     </div>
-    <div class="osg-minutes">
+    <div class="osg-countdown__minutes">
       <span>{{ countdown.numberOfMinutes }}</span>
       <span>{{ countdown.minutesLabel }}</span>
     </div>
-    <div class="osg-seconds">
+    <div class="osg-countdown__seconds">
       <span>{{ countdown.numberOfSeconds }}</span>
       <span>{{ countdown.secondsLabel }}</span>
     </div>

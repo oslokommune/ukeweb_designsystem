@@ -5,6 +5,7 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-promo
+  $root: &
   height: 100vh
   +osg-mq-tablet-and-up
     height: 80vh
@@ -21,19 +22,19 @@ $osg-margin-top-bottom-desktop: 25px
     opacity: 0.3
   +osg-mq-tablet-and-up
     height: 700px
-  .osg-promo-content-container
+  &__content-container
     padding: 30px 15px
     height: 100%
     +osg-mq-tablet-and-up
       padding: 3rem 1.5rem
-  .osg-promo-content-wrapper
+  &__content-wrapper
     @extend .container
     position: relative
     height: 100%
     display: flex
     align-items: center
     justify-content: center
-    .osg-promo-logo
+    #{$root}__logo
       figure
         img
           z-index: 1
@@ -58,7 +59,7 @@ $osg-margin-top-bottom-desktop: 25px
       width: 100%
       height: 100%
       object-fit: cover
-  .osg-promo-content
+  &__content
     padding: $osg-margin-top-bottom-mobile $osg-margin-left-right-mobile
     text-align: center
     z-index: 1

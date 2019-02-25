@@ -12,7 +12,7 @@ Header for an event page
 ### Modifier options
 | Name | Description |
 |------|-------------|
-| osg-m-with-state | Makes the pattern green and shows the "stateText" if it is defined |
+| osg-event--with-state | Makes the pattern green and shows the "stateText" if it is defined |
 
 (*) mandatory
 

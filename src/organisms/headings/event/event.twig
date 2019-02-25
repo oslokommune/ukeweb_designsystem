@@ -4,7 +4,7 @@
 
 <div class="osg-event {{ event.modifiers | default(null) }}">
   {% block head %}
-    <div class="osg-event-header">
+    <div class="osg-event__header">
       <h2>
         {{ event.heading }}
         {% if hasHeaderTag %}
@@ -15,17 +15,17 @@
     </div>
   {% endblock %}
   {% block body %}
-    <div class="osg-event-image">
-      <div class="osg-image-container">
+    <div class="osg-event__image">
+      <div class="osg-event__image-container">
         {% include "atoms/decorators/figure/figure.twig" %}
         {% if hasStateText %}
-          <div class="osg-state-text">{{ event.stateText }}</div>
+          <div class="osg-event__state-text">{{ event.stateText }}</div>
         {% endif %}
       </div>
-      <div class="osg-event-info">
+      <div class="osg-event__info">
         {% include "molecules/data_display/info_list/info_list.twig" %}
         {% if hasCaption %}
-          <div class="osg-event-caption">
+          <div class="osg-event__caption">
             {{ figure.caption }}
           </div>
         {% endif %}

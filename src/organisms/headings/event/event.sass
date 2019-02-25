@@ -1,7 +1,9 @@
 .osg-event
+  $root: &
+
   position: relative
   +osg-mq-desktop-and-up
-    .osg-event-header
+    &__header
       padding-right: 570px
   h2
     @extend .osg-u-header-2
@@ -11,7 +13,7 @@
       margin-left: 5px
   .osg-tags
     margin-top: 25px
-  .osg-event-image
+  &__image
     .osg-figure
       display: block
     +osg-mq-mobile-only()
@@ -29,27 +31,27 @@
       display: none
       +osg-mq-desktop-and-up
         display: block
-    .osg-event-info
-      @extend .osg-u-text-6
-      color: $osg-color-green-dark
-      i
-        @extend .osg-u-text-4
-      width: 100%
-      position: relative
-      top: -100px
-      padding-left: 10px
-      padding-right: 10px
-      +osg-mq-until($osg-desktop)
-        order: 3
-      +osg-mq-desktop-and-up
-        width: 500px
-        position: absolute
-        top: 0
-        right: 0
-
-  .osg-image-container
+  &__info
+    @extend .osg-u-text-6
+    color: $osg-color-green-dark
+    i
+      @extend .osg-u-text-4
+    width: 100%
     position: relative
-  .osg-state-text
+    top: -100px
+    padding-left: 10px
+    padding-right: 10px
+    +osg-mq-until($osg-desktop)
+      order: 3
+    +osg-mq-desktop-and-up
+      width: 500px
+      position: absolute
+      top: 0
+      right: 0
+
+  &__image-container
+    position: relative
+  &__state-text
     @extend .osg-u-header-1
     display: none
     position: absolute
@@ -62,8 +64,8 @@
     +osg-mq-desktop-and-up
       width: 80%
 
-  &.osg-m-with-state
-    .osg-state-text
+  &--with-state
+    #{$root}__state-text
       display: block
     picture
       +osg-helper-filter($osg-color-green-dark)
@@ -71,7 +73,7 @@
         &:after
           margin-right: 100px
 
-  .osg-event-caption
+  &__caption
     // osg-event-caption is a hack to display the image
     // figcaption below info_list on mobile and tablet
     @extend .osg-u-text-6

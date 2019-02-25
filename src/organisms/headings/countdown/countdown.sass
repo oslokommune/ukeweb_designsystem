@@ -2,12 +2,12 @@
   +osg-mq-desktop-and-up
     display: flex
     justify-content: space-between
-  .osg-timing
+  &__timing
     display: flex
     justify-content: space-between
     +osg-mq-desktop-and-up
       flex-basis: 40%
-  h2, .osg-timing
+  h2, &__timing
     @extend .osg-u-padding-bottom-medium
   h2
     @extend .osg-u-header-2
@@ -15,10 +15,10 @@
     +osg-mq-tablet-and-up
       line-height: 48px
       flex-basis: 50%
-  .osg-days,
-  .osg-hours,
-  .osg-minutes,
-  .osg-seconds
+  &__days,
+  &__hours,
+  &__minutes,
+  &__seconds
     > span
       display: block
       &:first-child
