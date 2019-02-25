@@ -7,16 +7,32 @@
 
 <div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
   {% block head %}
-    <h2 class="osg-alert__heading">
-      {{ alert.heading }}
-    </h2>
+    <button
+      class="osg-alert__trigger"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="{{ alert.ariaLabel | default('Viktig melding') }}"
+      role="alertdialog"
+    >
+      <h2 class="osg-alert__heading">
+        {{ alert.heading }}
+      </h2>
+      {% if alertHasUpdated %}
+        <div class="osg-alert__updated">
+          {{ alert.updated.text | default(null) }}
+          {{ alert.updated.date | default(null) }}
+        </div>
+      {% endif %}
+    </button>
   {% endblock %}
   {% block body %}
+  {% endblock %}
+  {% block footer %}
     {% if alertHasContent %}
       <div class="osg-alert__overlay-wrapper">
         <div class="osg-alert__overlay">
           <div class="osg-alert__overlay-top">
-            <div class="osg-alert__white-space"></div>
+            <div class="osg-alert__white-space" aria-hidden></div>
             {% if alertHasButton %}
               {% include 'atoms/buttons/button/button.twig' %}
             {% endif %}
@@ -25,14 +41,6 @@
             {{ alert.content | raw }}
           </div>
         </div>
-      </div>
-    {% endif %}
-  {% endblock %}
-  {% block footer %}
-    {% if alertHasUpdated %}
-      <div class="osg-alert__updated">
-        {{ alert.updated.text | default(null) }}
-        {{ alert.updated.date | default(null) }}
       </div>
     {% endif %}
   {% endblock %}
