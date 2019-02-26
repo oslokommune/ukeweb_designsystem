@@ -1,7 +1,8 @@
 {% set hasButton = button is defined and button is not empty %}
 {% set hasAsteriskText = infoList.asteriskText is defined and infoList.asteriskText is not empty %}
+{% set infoListModifiers = infoList.modifiers | default(null) %}
 
-<div class="osg-info-list {{ infoList.modifiers | default(null) }}">
+<div class="osg-info-list {{ infoListModifiers }}">
   <ul>
     {% for icon in infoList.icons.entries %}
     <li>

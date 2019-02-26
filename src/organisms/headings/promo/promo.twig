@@ -1,7 +1,8 @@
 {% set hasButton = promo.button is defined and promo.button is not empty %}
 {% set hasLogo = promo.logo is defined and promo.logo is not empty %}
+{% set promoVariant = promo.variant | default('osg-v-default') %}
 
-<section class="osg-promo {{ promo.variant | default('osg-v-default')  }}">
+<section class="osg-promo {{ promoVariant }}">
   {% include "atoms/decorators/figure/figure.twig" %}
   <div class="osg-promo-content-container">
     <div class="osg-promo-content-wrapper">

@@ -1,4 +1,7 @@
-<div class="osg-contactPerson {{ contactPerson.variant | default('osg-v-default')  }} {{ contactPerson.modifiers | default(null) }}">
+{% set contactPersonVariant = contactPerson.variant | default('osg-v-default') %}
+{% set contactPersonModifiers = contactPerson.modifiers | default(null) %}
+
+<div class="osg-contactPerson {{ contactPersonVariant }} {{ contactPersonModifiers }}">
   {% include "atoms/decorators/shape/shape.twig" %}
   <p><strong>{{ contactPerson.name }}</strong></p>
   <p>{{ contactPerson.title }}</p>

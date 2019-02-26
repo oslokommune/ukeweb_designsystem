@@ -1,4 +1,6 @@
-<ul class="osg-breadcrumbs {{ breadcrumbs.modifiers | default(null) }}">
+{% set breadcrumbsModifiers = breadcrumbs.modifiers | default(null) %}
+
+<ul class="osg-breadcrumbs {{ breadcrumbsModifiers }}">
   {% for path in breadcrumbs.paths %}
     <li>
       {% if loop.last %}

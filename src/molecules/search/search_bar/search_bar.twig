@@ -1,4 +1,7 @@
-<div class="osg-searchbar {{ searchBar.variant | default('osg-v-default')  }} {{ searchBar.modifiers | default(null) }}">
+{% set searchBarVariant = searchBar.variant | default('osg-v-default') %}
+{% set searchBarModifiers = searchBar.modifiers | default(null) %}
+
+<div class="osg-searchbar {{ searchBarVariant }} {{ searchBarModifiers }}">
   {% include 'atoms/forms/text/text.twig' %}
   {% include "atoms/buttons/button/button.twig" %}
 </div>

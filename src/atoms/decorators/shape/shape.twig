@@ -1,12 +1,14 @@
 {% set hasUrl = shape.url is defined and shape.url is not empty %}
 {% set hasTitle = shape.title is defined and shape.title is not empty %}
+{% set shapeVariant = shape.variant | default('osg-v-default') %}
+{% set shapeModifiers = shape.modifiers | default(null) %}
 
-<div class="osg-shape {{ shape.variant | default('osg-v-default')  }} {{ shape.modifiers | default(null) }}">
+<div class="osg-shape {{ shapeVariant }} {{ shapeModifiers }}">
   {% if hasUrl %}
   <a href="{{ shape.url }}" {% if hasTitle %} title="{{ shape.title }}" {% endif %} target="_blank">
   {% endif %}
 
-  {% if "osg-v-image" in shape.variant | default('osg-v-default') %}
+  {% if "osg-v-image" in shapeVariant %}
     {% include "atoms/decorators/figure/figure.twig" %}
   {% else %}
     <span>{{ shape.text|raw }}</span>

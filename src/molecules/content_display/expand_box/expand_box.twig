@@ -1,7 +1,9 @@
 {% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
 {% set hasList = expandBox.list is defined and expandBox.list is not empty %}
+{% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
+{% set expandBoxModifiers = expandBox.modifiers | default(null) %}
 
-<div class="osg-expand-box {{ expandBox.variant | default("osg-v-default") }} {{ expandBox.modifiers | default(null) }}">
+<div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   {% block head %}
     <div class="osg-title-line">
       {% if hasTitle %}
