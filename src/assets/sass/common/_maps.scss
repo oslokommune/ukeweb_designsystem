@@ -63,6 +63,7 @@ $osg-spacing-sizes: (
 );
 
 // used to generate typography classes in utils.sass
+// they represent: id, mobile size, tablet size and desktop size
 $osg-typographies-header: (
   ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60),
   ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36),

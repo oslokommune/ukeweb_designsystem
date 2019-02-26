@@ -26,18 +26,18 @@
 >
 {% endif %}
   {% if button.variant is defined and button.variant == "osg-v-circle" %}
-  {% set shape = {
-      "text": button.content,
-      "variant": button.variant
-    }
-  %}
-  {% include "atoms/decorators/shape/shape.twig" with shape %}
+    {% set shape = {
+        "text": button.content,
+        "variant": button.variant
+      }
+    %}
+    {% include "atoms/decorators/shape/shape.twig" with shape %}
   {% endif %}
   {% if "osg-v-default" in button.variant | default('osg-v-default') %}
     {{ button.content }}
   {% endif %}
 {% if hasLink %}
-</a>
+  </a>
 {% else %}
-</button>
+  </button>
 {% endif %}
