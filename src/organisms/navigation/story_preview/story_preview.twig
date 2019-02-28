@@ -6,7 +6,7 @@
 {% else %}
   <div class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
 {% endif %}
-  <div class="osg-image">
+  <div class="osg-story-preview__image">
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
@@ -18,7 +18,7 @@
     {% endblock %}
     {% block footer %}
       {% if isLinkFullSize %}
-        <div class="osg-extra-link">
+        <div class="osg-story-preview__extra-link">
           {% include "atoms/icons/icon/icon.twig" %}
           {{ storyPreview.link.text }}
           {% if hasSrText %}
