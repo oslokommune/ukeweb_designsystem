@@ -14,14 +14,22 @@ body, html
   background-color: white
   font-family: 'Oslo Sans', 'sans-serif'
   font-size: 100%
-  font-weight: normal
+  font-weight: 300
+  color: $osg-color-blue-dark
 
 p
   @extend .osg-u-text-3
 
 a
-  color: $osg-color-grey-light
-  text-decoration: underline
+  text-decoration: none
+  &:link,
+  &:visited
+    color: $osg-color-purple-visited
+  &:hover
+    color: $osg-color-blue-hover
+    text-decoration: underline
+  &:active
+    color: $osg-color-blue-dark
 
 hr
   height: 1px
@@ -51,15 +59,15 @@ h1, h2, h3, h4, h5
     margin-bottom: 0.4em
     hyphens: auto
   h1
-    @extend .osg-u-header-1
+    @extend .osg-u-heading-1
   h2
-    @extend .osg-u-header-2
+    @extend .osg-u-heading-2
   h3
-    @extend .osg-u-header-3
+    @extend .osg-u-heading-3
   h4
-    @extend .osg-u-header-4
+    @extend .osg-u-heading-4
   h5
-    @extend .osg-u-header-5
+    @extend .osg-u-heading-5
   ul li, ol li
     @extend .osg-u-text-3
   strong

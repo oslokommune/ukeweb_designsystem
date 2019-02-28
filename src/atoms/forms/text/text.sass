@@ -15,42 +15,42 @@
   flex-grow: 1
   position: relative
   .osg-text-field-input
-    @extend .osg-u-text-5
-    border: none
+    @extend .osg-u-text-3
     background-color: $osg-color-grey-light
+    border: none
+    height: 60px
     padding: 5px 5px 5px 10px
-    height: 35px
-    +osg-mq-tablet-and-up
-      height: 44px
+    +osg-mq-desktop-and-up
+      height: 70px
     &::placeholder
       color: transparent
   .osg-text-field-label
     position: absolute
     left: 13px
-    top: 10px
+    top: 18px
   .osg-text-field-input:valid + .osg-text-field-label
     opacity: 0
   &.osg-v-floating-label
+    margin-top: 20px
     .osg-text-field-input:valid + .osg-text-field-label
       opacity: 1
-    margin-top: 20px
     .osg-text-field-label
       position: absolute
       pointer-events: none
       transition: .2s ease-out
       left: 13px
       // Positions the label in the middle of the textfield
-      @extend .osg-u-text-5
-      top: 7px
-      +osg-mq-tablet-and-up
-        top: 10px
+      @extend .osg-u-text-3
+      top: 15px
+      +osg-mq-desktop-and-up
+        top: 18px
     .osg-text-field-input:focus + .osg-text-field-label,
     .osg-text-field-input:not(:focus):valid + .osg-text-field-label
       // Positions the label above the textfield when the textfield is focused
-      @extend .osg-u-text-6
-      top: -19px
-      +osg-mq-tablet-and-up
-        top: -21px
+      @extend .osg-u-text-4
+      top: -21px
+      +osg-mq-desktop-and-up
+        top: -23px
     .osg-text-field-input::placeholder
       opacity: 0
       color: transparent
@@ -59,12 +59,12 @@
       left: 18px
       top: 30px
     .osg-text-field-input
-      @extend .osg-u-text-5
+      @extend .osg-u-text-3
       padding: 15px
       height: 83px
     &.osg-v-floating-label
       .osg-text-field-input:focus + .osg-text-field-label,
       .osg-text-field-input:not(:focus):valid + .osg-text-field-label
         // Positions the label above the textfield when the textfield is focused
-        @extend .osg-u-text-6
+        @extend .osg-u-text-4
         top: -17px

@@ -1,6 +1,7 @@
 {% set hasTopDomainLink = footer.topDomainLink is defined and footer.topDomainLink is not empty %}
+{% set footerModifiers = footer.modifiers | default(null) %}
 
-<div class="osg-footer {{ footer.modifiers | default(null) }}">
+<div class="osg-footer {{ footerModifiers }}">
   {% set half = footer.linkList|length / 2 %}
   {% for row in footer.linkList|batch(half) %}
   <div class="osg-footer__links">

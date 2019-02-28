@@ -1,10 +1,12 @@
 {% set isLinkFullSize = storyPreview.link is defined and storyPreview.link and storyPreview.allClickable is defined and storyPreview.allClickable == true %}
 {% set hasSrText = storyPreview.link.srText is defined and storyPreview.link.srText is not empty %}
+{% set storyPreviewVariant = storyPreview.variant | default(null) %}
+{% set storyPreviewModifiers = storyPreview.modifiers | default(null) %}
 
 {% if isLinkFullSize %}
-  <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+  <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
 {% else %}
-  <div class="osg-story-preview {{ storyPreview.variant | default(null) }} {{ storyPreview.modifiers | default(null) }}">
+  <div class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
 {% endif %}
   <div class="osg-story-preview__image">
     {% include 'atoms/decorators/shape/shape.twig' %}

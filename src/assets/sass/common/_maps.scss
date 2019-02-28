@@ -24,6 +24,14 @@ $osg-colors: (
   "yellow": $osg-color-yellow
 );
 
+$osg-button-colors: (
+  ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),
+  ("green-dark", $osg-color-green-light, $osg-color-green-dark),
+  ("green-light", $osg-color-green-dark, $osg-color-green-light),
+  ("red", $osg-color-blue-dark, $osg-color-red),
+  ("yellow", $osg-color-blue-dark, $osg-color-yellow)
+);
+
 $osg-named-colors: (
   "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
   "primary": $osg-color-blue-light $osg-color-green-dark,
@@ -55,6 +63,7 @@ $osg-spacing-sizes: (
 );
 
 // used to generate typography classes in utils.sass
+// they represent: id, mobile size, tablet size and desktop size
 $osg-typographies-header: (
   ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60),
   ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36),

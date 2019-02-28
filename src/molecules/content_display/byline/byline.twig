@@ -1,4 +1,6 @@
-<div class="osg-byline {{ byline.modifiers | default(null) }}">
+{% set bylineModifiers = byline.modifiers | default(null) %}
+
+<div class="osg-byline {{ bylineModifiers }}">
   {{ byline.term }}:
   {% for organizer in byline.organizers %}
     <a href="{{ organizer.link }}">{% if loop.last %}

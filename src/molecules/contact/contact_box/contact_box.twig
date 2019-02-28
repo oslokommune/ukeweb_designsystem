@@ -1,8 +1,9 @@
 {% set hasAddressLink = contactBox.addressLink is defined and contactBox.addressLink is not empty %}
+{% set contactBoxModifiers = contactBox.modifiers | default(null) %}
 
-<address class="osg-contact-box {{ contactBox.modifiers | default(null) }}">
+<address class="osg-contact-box {{ contactBoxModifiers }}">
   <div>
-    <h2 class="osg-text-is-size-5">{{ contactBox.phoneNumberTitle }}</h2>
+    <h2>{{ contactBox.phoneNumberTitle }}</h2>
     <p>
       <a href="tel:{{ contactBox.phonePrefix | default(null) }} {{contactBox.phoneNumber}}">
       {{ contactBox.phonePrefix | default(null) }} {{contactBox.phoneNumber}}
@@ -10,13 +11,13 @@
     </p>
   </div>
   <div>
-    <h2 class="osg-text-is-size-5">{{ contactBox.emailTitle }}</h2>
+    <h2>{{ contactBox.emailTitle }}</h2>
     <p>
       <a href="mailto:{{contactBox.email}}">{{contactBox.email}}</a>
     </p>
   </div>
   <div>
-    <h2 class="osg-text-is-size-5">{{ contactBox.visitAddressTitle }}</h2>
+    <h2>{{ contactBox.visitAddressTitle }}</h2>
     <p>
       {{ contactBox.visitAddress }}
     </p>
@@ -27,7 +28,7 @@
     {% endif %}
   </div>
   <div>
-    <h2 class="osg-text-is-size-5">{{ contactBox.postalAddressTitle }}</h2>
+    <h2>{{ contactBox.postalAddressTitle }}</h2>
     <p>
       {{contactBox.postalAddressLine1}}
     <br>

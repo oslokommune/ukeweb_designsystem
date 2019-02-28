@@ -1,4 +1,7 @@
-<ul class="osg-tags {{ tags.variant | default('osg-v-default')  }} {{ tags.modifiers | default(null) }}">
+{% set tagsVariant = tags.variant | default('osg-v-default') %}
+{% set tagsModifiers = tags.modifiers | default(null) %}
+
+<ul class="osg-tags {{ tagsVariant }} {{ tagsModifiers }}">
   {% for item in tags.items %}
     <li>
       {% include 'atoms/buttons/tag/tag.twig' with{ tag: item.tag } %}

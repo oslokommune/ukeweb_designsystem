@@ -1,4 +1,6 @@
-<div class="osg-countdown {{ countdown.modifiers | default(null) }}">
+{% set countdownModifiers = countdown.modifiers | default(null) %}
+
+<div class="osg-countdown {{ countdownModifiers }}">
   <h2>{{ countdown.text }}</h2>
   <div class="osg-countdown__timing">
     <div class="osg-countdown__days">

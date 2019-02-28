@@ -1,6 +1,8 @@
 {% set hasDataattrs = checkbox.dataattrs is defined and checkbox.dataattrs is not empty %}
+{% set checkboxVariant = checkbox.variant | default('osg-v-default') %}
+{% set checkboxModifiers = checkbox.modifiers | default(null) %}
 
-<label class="osg-checkbox {{ checkbox.variant | default('osg-v-default')  }} {{ checkbox.modifiers | default(null) }}">
+<label class="osg-checkbox {{ checkboxVariant  }} {{ checkboxModifiers }}">
   <input type="checkbox"
     {% if hasDataattrs %}
       {% for dataattr in checkbox.dataattrs %}

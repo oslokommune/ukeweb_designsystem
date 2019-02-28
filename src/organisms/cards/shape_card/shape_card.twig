@@ -1,8 +1,10 @@
 {% set hasStateText = shapeCard.stateText is defined and shapeCard.stateText is not empty %}
 {% set hasTags = tags is defined and tags is not empty %}
 {% set hasSearchResult = shapeCard.searchResult is defined and shapeCard.searchResult is not empty %}
+{% set shapeCardVariant = shapeCard.variant | default('osg-v-default') %}
+{% set shapeCardModifiers = shapeCard.modifiers | default(null) %}
 
-<div class="osg-shapeCard {{ shapeCard.variant | default('osg-v-default')  }} {{ shapeCard.modifiers | default(null) }}">
+<div class="osg-shapeCard {{ shapeCardVariant }} {{ shapeCardModifiers }}">
   <a class="osg-wrapper" href="{{ shapeCard.url }}" title="{{ figure.img.alt }}">
     <div class="osg-image-container" href="{{ shapeCard.url }}" aria-hidden="true">
       {% include "atoms/decorators/figure/figure.twig" %}
