@@ -1,0 +1,35 @@
+{% set iconLinkHasHeading = iconLink.heading is defined and iconLink.heading is not empty %}
+{% set iconLinkHasText = iconLink.text is defined and iconLink.text is not empty %}
+{% set iconLinkHasDataAttrs = iconLink.dataAttrs is defined and iconLink.dataAttrs is not empty %}
+{% set iconLinkVariant = iconLink.variant|default('osg-v-default') %}
+{% set iconLinkModifiers = iconLink.modifiers | default(null) %}
+
+<div class="osg-iconLink {{ iconLinkVariant }} {{ iconLinkModifiers }}">
+  <div class="osg-iconLink__link-icon">
+    <i class="fa fa-suitcase"></i>
+  </div>
+  <div class="osg-iconLink__link-text">
+    {% if iconLinkHasHeading %}
+      <a class="osg-iconLink__link-text--heading" href="{{ iconLink.url }}"
+      {% if iconLinkHasDataAttrs %}
+        {% for dataAttr in iconLink.dataAttrs %}
+        {{dataAttr.key}}="{{dataAttr.val}}"
+        {% endfor %}
+      {% endif %}
+      >
+      {{ iconLink.heading }}
+      </a>
+    {% endif %}
+    {% if iconLinkHasText %}
+      <a class="osg-iconLink__link-text--description" href="{{ iconLink.url }}"
+      {% if iconLinkHasDataAttrs %}
+        {% for dataAttr in iconLink.dataAttrs %}
+        {{dataAttr.key}}="{{dataAttr.val}}"
+        {% endfor %}
+      {% endif %}
+      >
+      {{ iconLink.text }}
+      </a>
+    {% endif %}
+  </div>
+</div>
