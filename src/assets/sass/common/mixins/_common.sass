@@ -39,6 +39,14 @@
       left: 50px
 
 =osg-common-card
+  $root: &
+  $state-text: #{$root}__state-text
+  $image-container: #{$root}__image-container
+  $wrapper: #{$root}__wrapper
+  $result: #{$root}__result
+  $search-text: #{$root}__search-text
+  $box-shape-wrapper: #{$root}__box-shape-wrapper
+
   position: relative
   display: table
   a
@@ -51,11 +59,11 @@
     max-width: 100%
     object-fit: cover
     transition: transform 1s cubic-bezier(.22,.57,.25,1)
-  .osg-wrapper
+  #{$wrapper}
     display: flex
     flex-direction: column
     font-weight: 300
-  .osg-box-shape-wrapper
+  #{$box-shape-wrapper}
     display: flex
     flex-direction: row
   .osg-shape
@@ -80,14 +88,14 @@
       width: calc(100% - #{$shape-size-tablet})
     h2
       font-weight: 600
-  .osg-search-result
+  #{$result}
     display: none
     text-decoration: none
     padding-top: 15px
     margin-top: 30px
     border-top: 1px solid $osg-color-green
     font-weight: bold
-  .osg-state-text
+  #{$state-text}
     @extend .osg-u-heading-2
     display: none
     position: absolute
@@ -100,12 +108,12 @@
   .osg-tags
     padding-top: 15px
   /* modifiers styling */
-  &.osg-m-show-search-result
-    .osg-search-result
+  & &__show-search-result
+    #{$search-text}
       display: block
-  &.osg-m-animate
+  & &__animate
     visibility: visible
-    .osg-image-container
+    #{$image-container}
       +osg-animation-scale-up(1.5s)
     .osg-shape
       +osg-animation-scale-in(1.2s)
@@ -113,12 +121,17 @@
       span
         +osg-animation-scale-in-text(1.2s)
         animation-delay: .3s
-    .osg-content-box, .osg-box-shape-wrapper
+    .osg-content-box, #{$box-shape-wrapper}
       +osg-animation-fade-in(1.2s)
       animation-delay: .3s
 
 =osg-common-card-with-state-modifier
-  &.osg-m-with-state
+  $root: &
+  $search-result: #{$root}__search-result
+  $image-container: #{$root}__image-container
+  $state-text: #{$root}__state-text
+
+  & &__with-state
     a
       color: white
     .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
@@ -127,7 +140,7 @@
       color: white
     p.osg-date:after
       background-color: white
-    .osg-state-text
+    #{$state-text}
       display: block
     .osg-tags li
       &:after
@@ -136,7 +149,7 @@
         color: white
         &:hover
           color: white
-    .osg-search-result
+    #{$search-result}
       border-color: white
-    .osg-image-container
+    #{$image-container}
       +osg-helper-filter($osg-color-green-dark)

@@ -1,5 +1,6 @@
 .osg-event
   $root: &
+  $state-text: #{$root}__state-text
 
   position: relative
   +osg-mq-desktop-and-up
@@ -11,8 +12,10 @@
     span
       @extend .osg-u-text-4
       margin-left: 5px
+
   .osg-tags
     margin-top: 25px
+
   &__image
     .osg-figure
       display: block
@@ -34,13 +37,13 @@
   &__info
     @extend .osg-u-text-6
     color: $osg-color-green-dark
-    i
-      @extend .osg-u-text-4
     width: 100%
     position: relative
     top: -100px
     padding-left: 10px
     padding-right: 10px
+    i
+      @extend .osg-u-text-4
     +osg-mq-until($osg-desktop)
       order: 3
     +osg-mq-desktop-and-up
@@ -65,7 +68,7 @@
       width: 80%
 
   &--with-state
-    #{$root}__state-text
+    #{$state-text}
       display: block
     picture
       +osg-helper-filter($osg-color-green-dark)

@@ -3,17 +3,17 @@ $shape-size-tablet: 10%
 $box-margin-top-mobile: -50px
 $box-margin-top-tablet: -60px
 
-=osg-card-m-full
+=osg-card--full
   .osg-content-box
     margin-left: 0
     width: 100%
 
-=osg-card-m-right($size)
+=osg-card--right($size)
   .osg-content-box
     margin-left: #{$size}
     width: unset
 
-=osg-card-m-left($size)
+=osg-card--left($size)
   .osg-content-box
     margin-left: unset
     width: calc(100% - #{$size})
@@ -29,33 +29,33 @@ $box-margin-top-tablet: -60px
       margin-left: 15px
 
 
-  &.osg-m-full
-    +osg-card-m-full
-  &.osg-m-right
-    +osg-card-m-right($shape-size-mobile)
+  & &--full
+    +osg-card--full
+  & &--right
+    +osg-card--right($shape-size-mobile)
     +osg-mq-tablet-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left
-    +osg-card-m-left($shape-size-mobile)
+      +osg-card--right($shape-size-tablet)
+  & &--left
+    +osg-card--left($shape-size-mobile)
     +osg-mq-tablet-and-up
-      +osg-card-m-left($shape-size-tablet)
+      +osg-card--left($shape-size-tablet)
 
-  &.osg-m-full-tablet
+  & &--full-tablet
     +osg-mq-tablet-and-up
-      +osg-card-m-full
-  &.osg-m-right-tablet
+      +osg-card--full
+  & &--right-tablet
     +osg-mq-tablet-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left-tablet
+      +osg-card--right($shape-size-tablet)
+  & &--left-tablet
     +osg-mq-tablet-and-up
-      +osg-card-m-left($shape-size-tablet)
+      +osg-card--left($shape-size-tablet)
 
-  &.osg-m-full-desktop
+  & &--full-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-full
-  &.osg-m-right-desktop
+      +osg-card--full
+  & &--right-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left-desktop
+      +osg-card--right($shape-size-tablet)
+  & &--left-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-left($shape-size-tablet)
+      +osg-card--left($shape-size-tablet)
