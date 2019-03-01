@@ -22,7 +22,7 @@ Mobile should be 150x150px and from tablet and up should be 210x210px.
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-animate | See documentation for the card pattern for tips on how to trigger animations. |
-| osg-m-with-state | Makes the pattern green, text white, and shows the "stateText" if it is |
+| osg-card--animate | See documentation for the card pattern for tips on how to trigger animations. |
+| osg-card--with-state | Makes the pattern green, text white, and shows the "stateText" if it is |
 
 (*) mandatory

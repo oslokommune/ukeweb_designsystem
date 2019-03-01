@@ -13,7 +13,7 @@ $osg-font-size-big-desktop: ( $osg-font-size-20, $osg-font-size-40, $osg-font-si
 $padding-top-big-desktop: ( 33px, 6px, 30px )
 
 =osg-story-preview--top
-  $root: &
+  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -28,7 +28,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     order: 1
 
 =osg-story-preview--left
-  $root: &
+  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -47,7 +47,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     order: 1
 
 =osg-story-preview--right
-  $root: &
+  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -67,7 +67,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
       padding-top: unset
 
 =osg-story-preview--font-padding($font-list, $padding-list)
-  $root: &
+  $root: '.osg-story-preview'
   $extra-link: #{$root}__extra-link
 
   .osg-container

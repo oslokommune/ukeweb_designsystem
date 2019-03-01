@@ -12,7 +12,9 @@
     ]
   },
   "card": {
-    "url": "#"
+    "modifiers": "osg-card--with-state",
+    "url": "#",
+    "stateText": "halla"
   },
   "contentBox": {
     "date": "7. volutpat - 11. elementum",

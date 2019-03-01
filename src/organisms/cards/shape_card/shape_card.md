@@ -18,9 +18,9 @@ This pattern is primarily to be used for...
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-left{-tablet} | Positions the shape to the left |
-| osg-m-right{-tablet} | Positions the shape to the right |
-| osg-m-shape-in-image{-tablet} | Puts the shape inside the image |
+| osg-card--left{-tablet} | Positions the shape to the left |
+| osg-card--right{-tablet} | Positions the shape to the right |
+| osg-card--shape-in-image{-tablet} | Puts the shape inside the image |
  
  
 
