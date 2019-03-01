@@ -10,7 +10,7 @@
   </div>
   <div class="osg-iconLink__link-text">
     {% if iconLinkHasHeading %}
-      <a class="osg-iconLink__link-text--heading" href="{{ iconLink.url }}"
+      <a class="osg-iconLink__link-text__heading" href="{{ iconLink.url }}"
       {% if iconLinkHasDataAttrs %}
         {% for dataAttr in iconLink.dataAttrs %}
         {{dataAttr.key}}="{{dataAttr.val}}"
@@ -21,7 +21,7 @@
       </a>
     {% endif %}
     {% if iconLinkHasText %}
-      <a class="osg-iconLink__link-text--description" href="{{ iconLink.url }}"
+      <a class="osg-iconLink__link-text__description" href="{{ iconLink.url }}"
       {% if iconLinkHasDataAttrs %}
         {% for dataAttr in iconLink.dataAttrs %}
         {{dataAttr.key}}="{{dataAttr.val}}"
