@@ -10,6 +10,11 @@
     height: 100%
 
 .osg-video
+  $root: &
+  $btn-overlay-play: #{$root}__btn-overlay-play
+  $overlay-play: #{$root}__overlay-play
+  $footer: #{$root}__footer
+
   display: flex
   flex-direction: column
   video
@@ -17,7 +22,7 @@
     video::-webkit-media-controls-overlay-play-button
       display: none
 
-  &__btn-overlay-play
+  #{$btn-overlay-play}
     background-color: $osg-color-green
     border: 1px solid $osg-color-green
     height: 50px
@@ -33,7 +38,7 @@
     +osg-mq-desktop-and-up
       left: 45%
       top: 40%
-  &__overlay-play
+  #{$overlay-play}
     border: solid $osg-color-green-dark
     border-width: 0 5px 5px 0
     display: inline-block
@@ -44,7 +49,7 @@
       border-width: 0 10px 10px 0
       padding: 5px
 
-  &__footer
+  #{$footer}
     @extend .osg-u-text-6
     color: #6A6A6A
     margin-top: 15px

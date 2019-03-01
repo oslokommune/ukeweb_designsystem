@@ -13,6 +13,7 @@
     ]
   },
   "storyPreview": {
+    "modifiers": "osg-story-preview--right osg-story-preview--big",
     "allClickable": false
   },
   "contentBox": {

@@ -28,34 +28,33 @@ $box-margin-top-tablet: -60px
       @extend .osg-u-text-6
       margin-left: 15px
 
-
-  & &--full
+  &--full
     +osg-card--full
-  & &--right
+  &--right
     +osg-card--right($shape-size-mobile)
     +osg-mq-tablet-and-up
       +osg-card--right($shape-size-tablet)
-  & &--left
+  &--left
     +osg-card--left($shape-size-mobile)
     +osg-mq-tablet-and-up
       +osg-card--left($shape-size-tablet)
 
-  & &--full-tablet
+  &--full-tablet
     +osg-mq-tablet-and-up
       +osg-card--full
-  & &--right-tablet
+  &--right-tablet
     +osg-mq-tablet-and-up
       +osg-card--right($shape-size-tablet)
-  & &--left-tablet
+  &--left-tablet
     +osg-mq-tablet-and-up
       +osg-card--left($shape-size-tablet)
 
-  & &--full-desktop
+  &--full-desktop
     +osg-mq-desktop-and-up
       +osg-card--full
-  & &--right-desktop
+  &--right-desktop
     +osg-mq-desktop-and-up
       +osg-card--right($shape-size-tablet)
-  & &--left-desktop
+  &--left-desktop
     +osg-mq-desktop-and-up
       +osg-card--left($shape-size-tablet)

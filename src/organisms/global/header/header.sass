@@ -5,9 +5,9 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-header
-  $block: &
-  $title: #{$block}__title
-  $link: #{$block}__link
+  $root: &
+  $title: #{$root}__title
+  $link: #{$root}__link
 
   color: black
   padding-bottom: 20px
@@ -30,6 +30,7 @@ $osg-margin-top-bottom-desktop: 25px
       flex-shrink: 0
       align-self: flex-start
       position: static
+
   #{$title}
     flex-grow: 1
     margin-left: 0
@@ -43,6 +44,7 @@ $osg-margin-top-bottom-desktop: 25px
       word-break: break-word
       &:hover
         text-decoration: underline
+
   #{$link}
     @extend .osg-u-text-3
     flex-grow: 0

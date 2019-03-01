@@ -1,6 +1,10 @@
 .osg-event
   $root: &
   $state-text: #{$root}__state-text
+  $image: #{$root}__image
+  $info: #{$root}__info
+  $image-container: #{$root}__image-container
+  $caption: #{$root}__caption
 
   position: relative
   +osg-mq-desktop-and-up
@@ -16,7 +20,7 @@
   .osg-tags
     margin-top: 25px
 
-  &__image
+  #{$image}
     .osg-figure
       display: block
     +osg-mq-mobile-only()
@@ -34,7 +38,8 @@
       display: none
       +osg-mq-desktop-and-up
         display: block
-  &__info
+
+  #{$info}
     @extend .osg-u-text-6
     color: $osg-color-green-dark
     width: 100%
@@ -52,7 +57,7 @@
       top: 0
       right: 0
 
-  &__image-container
+  #{$image-container}
     position: relative
   .osg-state-text
     @extend .osg-u-heading-1
@@ -67,6 +72,15 @@
     +osg-mq-desktop-and-up
       width: 80%
 
+  #{$caption}
+    // osg-event-caption is a hack to display the image
+    // figcaption below info_list on mobile and tablet
+    @extend .osg-u-text-6
+    color: #6A6A6A
+    padding: 15px 0 0
+    +osg-mq-desktop-and-up
+      display: none
+
   &--with-state
     #{$state-text}
       display: block
@@ -75,12 +89,3 @@
       +osg-mq-desktop-and-up
         &:after
           margin-right: 100px
-
-  &__caption
-    // osg-event-caption is a hack to display the image
-    // figcaption below info_list on mobile and tablet
-    @extend .osg-u-text-6
-    color: #6A6A6A
-    padding: 15px 0 0
-    +osg-mq-desktop-and-up
-      display: none

@@ -1,4 +1,10 @@
 .osg-countdown
+  $root: &
+  $days: #{$root}__days
+  $hours: #{$root}__hours
+  $minutes: #{$root}__minutes
+  $seconds: #{$root}__seconds
+
   +osg-mq-desktop-and-up
     display: flex
     justify-content: space-between
@@ -15,10 +21,11 @@
     +osg-mq-tablet-and-up
       line-height: 48px
       flex-basis: 50%
-  &__days,
-  &__hours,
-  &__minutes,
-  &__seconds
+
+  #{$days},
+  #{$hours},
+  #{$minutes},
+  #{$seconds}
     > span
       display: block
       &:first-child

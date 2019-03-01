@@ -4,24 +4,24 @@
 {% set shapeCardVariant = shapeCard.variant | default('osg-v-default') %}
 {% set shapeCardModifiers = shapeCard.modifiers | default(null) %}
 
-<div class="osg-shapeCard {{ shapeCardVariant }} {{ shapeCardModifiers }}">
-  <a class="osg-wrapper" href="{{ shapeCard.url }}" title="{{ figure.img.alt }}">
-    <div class="osg-image-container" href="{{ shapeCard.url }}" aria-hidden="true">
+<div class="osg-shape-card {{ shapeCardVariant }} {{ shapeCardModifiers }}">
+  <a class="osg-shape-card__wrapper" href="{{ shapeCard.url }}" title="{{ figure.img.alt }}">
+    <div class="osg-shape-card__image-container" href="{{ shapeCard.url }}" aria-hidden="true">
       {% include "atoms/decorators/figure/figure.twig" %}
       {% if hasStateText %}
-      <div class="osg-state-text">{{ shapeCard.stateText }}</div>
+      <div class="osg-shape-card__state-text">{{ shapeCard.stateText }}</div>
       {% endif %}
     </div>
   </a>
-  <div class="osg-box-shape-wrapper">
+  <div class="osg-shape-card__box-shape-wrapper">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block head %}
-        <a class="osg-wrapper" href="{{ shapeCard.url }}" aria-hidden="true">
+        <a class="osg-shape-card__wrapper" href="{{ shapeCard.url }}" aria-hidden="true">
           {{ parent() }}
         </a>
       {% endblock %}
       {% block body %}
-        <a class="osg-wrapper" href="{{ shapeCard.url }}" aria-hidden="true">
+        <a class="osg-shape-card__wrapper" href="{{ shapeCard.url }}" aria-hidden="true">
           {{ parent() }}
         </a>
       {% endblock %}
