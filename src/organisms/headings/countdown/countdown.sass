@@ -4,16 +4,17 @@
   $hours: #{$root}__hours
   $minutes: #{$root}__minutes
   $seconds: #{$root}__seconds
+  $timing: #{$root}__timing
 
   +osg-mq-desktop-and-up
     display: flex
     justify-content: space-between
-  &__timing
+  #{$timing}
     display: flex
     justify-content: space-between
     +osg-mq-desktop-and-up
       flex-basis: 40%
-  h2, &__timing
+  h2, #{$timing}
     @extend .osg-u-padding-bottom-medium
   h2
     @extend .osg-u-heading-2

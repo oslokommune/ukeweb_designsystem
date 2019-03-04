@@ -5,10 +5,11 @@
   $info: #{$root}__info
   $image-container: #{$root}__image-container
   $caption: #{$root}__caption
+  $header: #{$root}__header
 
   position: relative
   +osg-mq-desktop-and-up
-    &__header
+    #{$header}
       padding-right: 570px
   h2
     @extend .osg-u-heading-2

@@ -1,7 +1,7 @@
 {
   "toggleButton": {
     "variant": "osg-v-with-icon",
-    "icon": "<i class='osg-p-toggle-button__icon-filter'></i>",
+    "icon": "<i class='osg-toggle-button__icon-filter'></i>",
     "dataattrs": [
       {"key": "id", "val": "my-checkbox"},
       {"key": "name", "val": "my-checkbox"}

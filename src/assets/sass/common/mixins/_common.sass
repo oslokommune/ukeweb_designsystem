@@ -108,10 +108,10 @@
   .osg-tags
     padding-top: 15px
   /* modifiers styling */
-  & &__show-search-result
+  & &--show-search-result
     #{$search-text}
       display: block
-  & &__animate
+  & &--animate
     visibility: visible
     #{$image-container}
       +osg-animation-scale-up(1.5s)
@@ -131,7 +131,7 @@
   $image-container: #{$root}__image-container
   $state-text: #{$root}__state-text
 
-  & &__with-state
+  & &--with-state
     a
       color: white
     .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
