@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+* all organisms: changed to bem css standard
 * global styles: made text dark blue by default.
 * global styles: made links dark blue with underline.
 * Removed danglig comma in atom/buttons/button/button.sass

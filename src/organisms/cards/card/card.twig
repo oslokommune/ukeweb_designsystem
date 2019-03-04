@@ -5,22 +5,22 @@
 {% set cardModifiers = card.modifiers | default(null) %}
 
 <div class="osg-card {{ cardVariant }} {{ cardModifiers }}">
-  <a class="osg-wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
-    <div class="osg-image-container">
+  <a class="osg-card__wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
+    <div class="osg-card__image-container">
       {% include "atoms/decorators/figure/figure.twig" %}
       {% if hasStateText %}
-        <div class="osg-state-text">{{ card.stateText }}</div>
+        <div class="osg-card__state-text">{{ card.stateText }}</div>
       {% endif %}
     </div>
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block head %}
-      <a class="osg-wrapper" href="{{ card.url }}">
+      <a class="osg-card__wrapper" href="{{ card.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
     {% block body %}
-      <a class="osg-wrapper" href="{{ card.url }}">
+      <a class="osg-card__wrapper" href="{{ card.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
@@ -30,7 +30,7 @@
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
       {% if hasSearchResult %}
-        <a href="{{ card.url }}" class="osg-search-result">
+        <a href="{{ card.url }}" class="osg-card__search-result">
           {{ card.searchResult | default(null) }}
         </a>
       {% endif %}

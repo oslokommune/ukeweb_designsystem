@@ -1,7 +1,15 @@
 .osg-event
+  $root: &
+  $state-text: #{$root}__state-text
+  $image: #{$root}__image
+  $info: #{$root}__info
+  $image-container: #{$root}__image-container
+  $caption: #{$root}__caption
+  $header: #{$root}__header
+
   position: relative
   +osg-mq-desktop-and-up
-    .osg-event-header
+    #{$header}
       padding-right: 570px
   h2
     @extend .osg-u-heading-2
@@ -9,9 +17,11 @@
     span
       @extend .osg-u-text-4
       margin-left: 5px
+
   .osg-tags
     margin-top: 25px
-  .osg-event-image
+
+  #{$image}
     .osg-figure
       display: block
     +osg-mq-mobile-only()
@@ -29,25 +39,26 @@
       display: none
       +osg-mq-desktop-and-up
         display: block
-    .osg-event-info
-      @extend .osg-u-text-6
-      color: $osg-color-green-dark
-      i
-        @extend .osg-u-text-4
-      width: 100%
-      position: relative
-      top: -100px
-      padding-left: 10px
-      padding-right: 10px
-      +osg-mq-until($osg-desktop)
-        order: 3
-      +osg-mq-desktop-and-up
-        width: 500px
-        position: absolute
-        top: 0
-        right: 0
 
-  .osg-image-container
+  #{$info}
+    @extend .osg-u-text-6
+    color: $osg-color-green-dark
+    width: 100%
+    position: relative
+    top: -100px
+    padding-left: 10px
+    padding-right: 10px
+    i
+      @extend .osg-u-text-4
+    +osg-mq-until($osg-desktop)
+      order: 3
+    +osg-mq-desktop-and-up
+      width: 500px
+      position: absolute
+      top: 0
+      right: 0
+
+  #{$image-container}
     position: relative
   .osg-state-text
     @extend .osg-u-heading-1
@@ -62,16 +73,7 @@
     +osg-mq-desktop-and-up
       width: 80%
 
-  &.osg-m-with-state
-    .osg-state-text
-      display: block
-    picture
-      +osg-helper-filter($osg-color-green-dark)
-      +osg-mq-desktop-and-up
-        &:after
-          margin-right: 100px
-
-  .osg-event-caption
+  #{$caption}
     // osg-event-caption is a hack to display the image
     // figcaption below info_list on mobile and tablet
     @extend .osg-u-text-6
@@ -79,3 +81,12 @@
     padding: 15px 0 0
     +osg-mq-desktop-and-up
       display: none
+
+  &--with-state
+    #{$state-text}
+      display: block
+    picture
+      +osg-helper-filter($osg-color-green-dark)
+      +osg-mq-desktop-and-up
+        &:after
+          margin-right: 100px

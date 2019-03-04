@@ -1,6 +1,6 @@
 {% set simpleTableModifiers = simpleTable.modifiers | default(null) %}
 
-<div class="osg-c-simple-table {{ simpleTableModifiers }}">
+<div class="osg-simple-table {{ simpleTableModifiers }}">
   <table>
     {% for row in simpleTable.rows %}
       {% set isHead =  row.isHead is defined and row.isHead == true %}

@@ -12,7 +12,8 @@
   },
   "event": {
     "heading": "Lorem ipsum dolor et",
-    "headerTag": "(ENG*)"
+    "headerTag": "(ENG*)",
+    "stateText": "skjera"
   },
   "figure": {
     "caption": "Img: Avaena idor",

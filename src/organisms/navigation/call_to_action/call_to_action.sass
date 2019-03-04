@@ -1,4 +1,7 @@
 .osg-call-to-action
+  $root: &
+  $content: #{$root}__content
+
   position: relative
   margin-bottom: 12px
   +osg-mq-tablet-and-up
@@ -11,7 +14,7 @@
       padding-left: 1.5rem
       padding-right: 1.5rem
 
-  .osg-call-to-action-content
+  #{$content}
     @extend .osg-u-text-1
     max-width: 550px
     overflow: hidden

@@ -12,7 +12,8 @@
     ]
   },
   "card": {
-    "url": "#"
+    "url": "#",
+    "stateText": "halla"
   },
   "contentBox": {
     "date": "7. volutpat - 11. elementum",

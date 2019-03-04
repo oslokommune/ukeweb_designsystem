@@ -3,14 +3,14 @@ $shape-size-tablet: 97px
 $box-margin-top-mobile: -50px
 $box-margin-top-tablet: -60px
 
-=osg-shapeCard-m-left($size)
+=osg-shape-card--left($size)
   .osg-content-box
     order: 1
   .osg-shape
     order: 0
     left: 0
     right: unset
-=osg-shapeCard-m-right
+=osg-shape-card--right
   .osg-content-box
     margin-left: unset
     order: 0
@@ -18,8 +18,8 @@ $box-margin-top-tablet: -60px
     order: 1
     right: 0
     left: unset
-=osg-shapeCard-m-shape-in-image($size, $margin)
-  .osg-box-shape-wrapper
+=osg-shape-card--shape-in-image($size, $margin)
+  .osg-shape-card__box-shape-wrapper
     position: relative
   .osg-content-box
     width: 100%
@@ -27,7 +27,10 @@ $box-margin-top-tablet: -60px
     position: absolute
     top: calc(#{$margin} - #{$size})
 
-.osg-shapeCard
+.osg-shape-card
+  $root: &
+  $image-container: #{$root}__image-container
+
   +osg-common-card
   +osg-common-card-with-state-modifier
 
@@ -45,40 +48,40 @@ $box-margin-top-tablet: -60px
       width: $shape-size-tablet
       padding: 15px
 
-  .osg-image-container
+  #{$image-container}
     position: relative
 
-  &.osg-m-right
-    +osg-shapeCard-m-right
+  &--right
+    +osg-shape-card--right
     +osg-mq-tablet-and-up
-      +osg-shapeCard-m-right
-  &.osg-m-left
-    +osg-shapeCard-m-left($shape-size-mobile)
+      +osg-shape-card--right
+  &--left
+    +osg-shape-card--left($shape-size-mobile)
     +osg-mq-tablet-and-up
-      +osg-shapeCard-m-left($shape-size-tablet)
-  &.osg-m-shape-in-image
-    +osg-shapeCard-m-shape-in-image($shape-size-mobile, $box-margin-top-mobile)
+      +osg-shape-card--left($shape-size-tablet)
+  &--shape-in-image
+    +osg-shape-card--shape-in-image($shape-size-mobile, $box-margin-top-mobile)
 
-  &.osg-m-shape-in-image-mobile-only
+  &--shape-in-image-mobile-only
     +osg-mq-mobile-only
-      +osg-shapeCard-m-shape-in-image($shape-size-mobile, $box-margin-top-mobile)
+      +osg-shape-card--shape-in-image($shape-size-mobile, $box-margin-top-mobile)
 
-  &.osg-m-right-tablet
+  &--right-tablet
     +osg-mq-tablet-and-up
-      +osg-shapeCard-m-right
-  &.osg-m-left-tablet
+      +osg-shape-card--right
+  &--left-tablet
     +osg-mq-tablet-and-up
-      +osg-shapeCard-m-left($shape-size-tablet)
-  &.osg-m-shape-in-image-tablet
+      +osg-shape-card--left($shape-size-tablet)
+  &--shape-in-image-tablet
     +osg-mq-tablet-and-up
-      +osg-shapeCard-m-shape-in-image($shape-size-tablet, $box-margin-top-tablet)
+      +osg-shape-card--shape-in-image($shape-size-tablet, $box-margin-top-tablet)
 
-  &.osg-m-right-desktop
+  &--right-desktop
     +osg-mq-desktop-and-up
-      +osg-shapeCard-m-right
-  &.osg-m-left-desktop
+      +osg-shape-card--right
+  &--left-desktop
     +osg-mq-desktop-and-up
-      +osg-shapeCard-m-left($shape-size-tablet)
-  &.osg-m-shape-in-image-desktop
+      +osg-shape-card--left($shape-size-tablet)
+  &--shape-in-image-desktop
     +osg-mq-desktop-and-up
-      +osg-shapeCard-m-shape-in-image($shape-size-tablet, $box-margin-top-tablet)
+      +osg-shape-card--shape-in-image($shape-size-tablet, $box-margin-top-tablet)

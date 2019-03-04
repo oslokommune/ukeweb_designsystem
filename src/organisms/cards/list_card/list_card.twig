@@ -7,29 +7,29 @@
   <a href="{{ listCard.url }}">
     {% include 'atoms/decorators/shape/shape.twig' %}
     {% if hasStateText %}
-      <div class="osg-state-text">{{ listCard.stateText }}</div>
+      <div class="osg-list-card__state-text">{{ listCard.stateText }}</div>
     {% endif %}
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block head %}
-      <a class="osg-wrapper" href="{{ listCard.url }}">
+      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
     {% block body %}
-      <a class="osg-wrapper" href="{{ listCard.url }}">
+      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
     {% endblock %}
     {% block footer %}
-      <a class="osg-wrapper" href="{{ listCard.url }}">
+      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
       {% if hasTags %}
         {% include 'molecules/navigation/tags/tags.twig' %}
       {% endif %}
       {% if hasSearchResult %}
-        <a href="{{ listCard.url }}" class="osg-search-result">
+        <a href="{{ listCard.url }}" class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}
         </a>
       {% endif %}

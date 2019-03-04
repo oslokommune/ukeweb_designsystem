@@ -22,9 +22,9 @@ Basic html5 player example with subtitles.
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-ratio-1x1 | Forced ratio, responsive |
-| osg-m-ratio-4x3 | Forced ratio, responsive |
-| osg-m-ratio-3x2 | Forced ratio, responsive |
-| osg-m-ratio-16x9 | Forced ratio, responsive |
+| osg-video--ratio-1x1 | Forced ratio, responsive |
+| osg-video--ratio-4x3 | Forced ratio, responsive |
+| osg-video--ratio-3x2 | Forced ratio, responsive |
+| osg-video--ratio-16x9 | Forced ratio, responsive |
 
 (*) mandatory

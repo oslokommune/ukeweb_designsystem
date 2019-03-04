@@ -1,4 +1,11 @@
 .osg-footer
+  $root: &
+  $links: #{$root}__links
+  $social-icon-list: #{$root}__social-icon-list
+  $logos: #{$root}__logos
+  $logo-wrapper: #{$root}__logo-wrapper
+  $lang: #{$root}__lang
+
   @extend .osg-u-text-3
   align-items: flex-start
   background-color: white
@@ -9,7 +16,7 @@
     align-items: center
     flex-direction: row
 
-  .osg-links
+  #{$links}
     display: flex
     flex-wrap: wrap
     flex-direction: column
@@ -38,12 +45,12 @@
     a:not(:last-child)
       margin-bottom: 25px
 
-  .osg-social-icon-list
+  #{$social-icon-list}
     margin-bottom: 40px
     +osg-mq-tablet-and-up
       margin-bottom: 0
 
-  .osg-logos
+  #{$logos}
     align-items: center
     display: flex
     flex-wrap: wrap
@@ -58,16 +65,14 @@
       +osg-mq-tablet-and-up
         width: 118px
 
-    .osg-logo-wrapper
+    #{$logo-wrapper}
       background: #f2f2f2
       align-self: stretch
       padding: 10px
       display: flex
       align-items: center
 
-
-
-  .osg-lang
+  #{$lang}
     align-self: flex-start
     margin-bottom: 40px
     +osg-mq-tablet-and-up

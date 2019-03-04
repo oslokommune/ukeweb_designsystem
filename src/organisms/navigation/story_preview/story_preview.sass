@@ -1,3 +1,5 @@
+$root: '.osg-story-preview'
+
 $osg-font-size-regular-mobile: ( $osg-font-size-14, $osg-font-size-16, $osg-font-size-14)
 $padding-top-regular-mobile: ( 23px, 5px, 15px)
 
@@ -10,11 +12,14 @@ $padding-top-big-mobile: ( 33px, 6px, 30px )
 $osg-font-size-big-desktop: ( $osg-font-size-20, $osg-font-size-40, $osg-font-size-28 )
 $padding-top-big-desktop: ( 33px, 6px, 30px )
 
-=osg-story-preview-top
+=osg-story-preview--top
+  $root: '.osg-story-preview'
+  $image: #{$root}__image
+
   display: flex
   flex-direction: column
   align-items: flex-start
-  .osg-image
+  #{$image}
     padding-top: 30px
     order: 2
   .osg-content-box
@@ -22,11 +27,14 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
       padding-top: unset
     order: 1
 
-=osg-story-preview-left
+=osg-story-preview--left
+  $root: '.osg-story-preview'
+  $image: #{$root}__image
+
   display: flex
   flex-direction: row
   align-items: center
-  .osg-image
+  #{$image}
     order: 2
     margin-right: unset
     padding-top: unset
@@ -38,11 +46,14 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
         margin-right: 60px
     order: 1
 
-=osg-story-preview-right
+=osg-story-preview--right
+  $root: '.osg-story-preview'
+  $image: #{$root}__image
+
   display: flex
   flex-direction: row
   align-items: center
-  .osg-image
+  #{$image}
     order: 1
     margin-right: 30px
     +osg-mq-tablet-and-up
@@ -55,7 +66,10 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     .osg-content-box-tag
       padding-top: unset
 
-=osg-story-preview-font-padding($font-list, $padding-list)
+=osg-story-preview--font-padding($font-list, $padding-list)
+  $root: '.osg-story-preview'
+  $extra-link: #{$root}__extra-link
+
   .osg-container
     .osg-content-box-tag
       font-size: nth($font-list, 1)
@@ -63,7 +77,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     .osg-body-heading
       font-size: nth($font-list, 2)
       padding-top: nth($padding-list, 2)
-    .osg-extra-link, .osg-body-text
+    #{$extra-link}, .osg-body-text
       font-size: nth($font-list, 3)
       padding-top: nth($padding-list, 3)
 
@@ -72,16 +86,20 @@ a.osg-story-preview:hover
     text-decoration: underline
 
 .osg-story-preview
+  $root: &
+  $extra-link: #{$root}__extra-link
+
   text-decoration: none
   .osg-content-box
     background: transparent
     .osg-container
       padding: unset
-  .osg-body-heading
-    font-weight: 600
+    .osg-body-heading
+      font-weight: 600
   .osg-content-box-tag
     color: $osg-color-green-dark
-  .osg-extra-link
+
+  #{$extra-link}
     @extend .osg-u-text-4
     display: flex
     text-decoration: none
@@ -100,33 +118,33 @@ a.osg-story-preview:hover
     +osg-mq-tablet-and-up
       height: 30px
       width: 30px
-  +osg-story-preview-font-padding($osg-font-size-regular-mobile, $padding-top-regular-mobile)
+  +osg-story-preview--font-padding($osg-font-size-regular-mobile, $padding-top-regular-mobile)
   +osg-mq-tablet-and-up
-    +osg-story-preview-font-padding($osg-font-size-regular-desktop, $padding-top-regular-desktop)
-  &.osg-m-big
-    +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
+    +osg-story-preview--font-padding($osg-font-size-regular-desktop, $padding-top-regular-desktop)
+  &--big
+    +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
     +osg-mq-tablet-and-up
-      +osg-story-preview-font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
-  &.osg-m-big-mobile-only
+      +osg-story-preview--font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
+  &--big-mobile-only
     +osg-mq-mobile-only
-      +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
-  &.osg-m-big-tablet
+      +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
+  &--big-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview-font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
+      +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
       +osg-mq-tablet-and-up
-        +osg-story-preview-font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
-  &.osg-m-right
-    +osg-story-preview-right
-  &.osg-m-left
-    +osg-story-preview-left
-  &.osg-m-top
-    +osg-story-preview-top
-  &.osg-m-left-tablet
+        +osg-story-preview--font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
+  &--right
+    +osg-story-preview--right
+  &--left
+    +osg-story-preview--left
+  &--top
+    +osg-story-preview--top
+  &--left-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview-left
-  &.osg-m-right-tablet
+      +osg-story-preview--left
+  &--right-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview-right
-  &.osg-m-top-tablet
+      +osg-story-preview--right
+  &--top-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview-top
+      +osg-story-preview--top

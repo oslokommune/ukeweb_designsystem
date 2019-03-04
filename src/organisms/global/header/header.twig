@@ -8,7 +8,7 @@
 
 <header class="osg-header {{ headerVariant }} {{ headerModifiers }}">
   {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
-  <div class="osg-header-title">
+  <div class="osg-header__title">
     {% if hasTitleText and hasTitleTitle and hasTitleUrl %}
     <h1>
       <a href="{{ header.title.url }}" {% if header.title.title is defined %} title="{{ header.title.title }}" {% endif %}>
@@ -18,7 +18,7 @@
     {% endif %}
   </div>
   {% if hasParentLinkText %}
-  <div class="osg-header-link">
+  <div class="osg-header__link">
     <a href="{{ header.parentLink.url }}" {% if hasParentLinkTitle %} title="{{ header.parentLink.title }}" {% endif %}>
       <span>{{ header.parentLink.text|default(null) }}</span>
       <i class="fa fa-angle-right"></i>

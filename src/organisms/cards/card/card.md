@@ -23,11 +23,11 @@ Multi-purpose container for previewing part of content, usually some form of art
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-animate | See Animations section below for tips on how to use it. |
-| osg-m-with-state | Makes the pattern green, text white, and shows the "stateText" if it is defined. |
-| osg-m-left{-tablet} | Makes the contentBox in the card stick to the left of the image with a margin on the right |
-| osg-m-right{-tablet} | Makes the contentBox in the card stick to the right of the image with a margin on the left |
-| osg-m-full{-tablet} | ContentBox gets 100% wide |
+| osg-card--animate | See Animations section below for tips on how to use it. |
+| osg-card--with-state | Makes the pattern green, text white, and shows the "stateText" if it is defined. |
+| osg-card--left{-tablet} | Makes the contentBox in the card stick to the left of the image with a margin on the right |
+| osg-card--right{-tablet} | Makes the contentBox in the card stick to the right of the image with a margin on the left |
+| osg-card--full{-tablet} | ContentBox gets 100% wide |
 
 
 (*) mandatory
