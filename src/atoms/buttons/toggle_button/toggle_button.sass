@@ -8,18 +8,20 @@
     color: $osg-color-green-dark
     padding-bottom: 0 0 10px 0
   &.osg-v-with-icon
-    i, div span
+    > i, > div > span
       padding-left: 5px
       font-size: 0.8em
-  &--active
+  &.osg-m-active
     border-bottom: 5px $osg-color-green-light solid
     font-weight: bold
-  &--main-menu
+  &.osg-m-main-menu
     color: $osg-color-grey
-  &--open
+  &.osg-m-open
     color: transparent
     font-size: 0
-  &__icon-filter
+    >.osg-icon-filter
+      transform: rotate(90deg)
+  >.osg-icon-filter
     background: url('../../../assets/images/filter.svg')
     background-repeat: no-repeat
     background-size: contain
@@ -30,5 +32,3 @@
     +osg-mq-tablet-and-up
       height: $osg-font-size-30
       width: $osg-font-size-30
-  &--open &__icon-filter
-    transform: rotate(90deg)
