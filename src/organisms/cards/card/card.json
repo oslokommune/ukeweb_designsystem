@@ -12,7 +12,6 @@
     ]
   },
   "card": {
-    "modifiers": "osg-card--with-state",
     "url": "#",
     "stateText": "halla"
   },

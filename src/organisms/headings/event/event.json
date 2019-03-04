@@ -11,7 +11,6 @@
     ]
   },
   "event": {
-    "modifiers": "osg-event--with-state",
     "heading": "Lorem ipsum dolor et",
     "headerTag": "(ENG*)",
     "stateText": "skjera"
