@@ -8,10 +8,11 @@
     ]
   },
   "button": {
-    "content": "Lorem Ipsum",
+    "content": "Lorem ipsum",
     "dataattrs": [
       {"key": "id", "val": "lorem_ipsum"},
       {"key": "data-target", "val": "lorem1"}
-    ]
+    ],
+    "link": "#"
   }
 }
