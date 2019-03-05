@@ -27,55 +27,69 @@ $osg-mobile-hamburger-line-height: 2px
   @return (($hamburgerHeight - $lineHeight) / 2) + $osg-gap
 
 .osg-navbar-menu
+  $root: &
+  $hamburger: #{$root}__hamburger
+  $hamburger-close: #{$root}__hamburger-close
+  $hamburger-icon: #{$root}__hamburger-icon
+  $content: #{$root}__content
+  $links: #{$root}__links
+  $logos: #{$root}__logos
+  $overlay: #{$root}__overlay
+  $overlay-wrapper: #{$root}__overlay-wrapper
+
   z-index: 100
   // Style for hamburger icon
-  .osg-navbar-hamburger, .osg-navbar-hamburger-close
+  #{$hamburger}, #{$hamburger-close}
     height: $osg-hamburger-height
     width: $osg-hamburger-width
-    .osg-navbar-hamburger-icon
-      position: relative
-      display: block
-      background: none
-      width: 100%
-      height: 100%
-      border: none
-      padding: 0
+  #{$hamburger-icon}
+    position: relative
+    display: block
+    background: none
+    width: 100%
+    height: 100%
+    border: none
+    padding: 0
+    transition: transform 200ms ease-in-out
+    transform: scale(1)
+    &:focus, &:hover
       transition: transform 200ms ease-in-out
-      transform: scale(1)
-      &:focus, &:hover
-        transition: transform 200ms ease-in-out
-        transform: scale(.9)
-      span
-        display: block
-        position: absolute
-        transition: transform 1s
-        height: $osg-mobile-hamburger-line-height
-        width: $osg-mobile-hamburger-line-width
-        border-radius: $osg-mobile-hamburger-line-height
-        opacity: 1
-        left: ($osg-hamburger-width / 2) - ($osg-mobile-hamburger-line-width / 2)
-        background: $osg-color-hamburger-text
-        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      transform: scale(.9)
+    span
+      display: block
+      position: absolute
+      transition: transform 1s
+      height: $osg-mobile-hamburger-line-height
+      width: $osg-mobile-hamburger-line-width
+      border-radius: $osg-mobile-hamburger-line-height
+      opacity: 1
+      left: ($osg-hamburger-width / 2) - ($osg-mobile-hamburger-line-width / 2)
+      background: $osg-color-hamburger-text
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      &:nth-child(1)
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, -$osg-mobile-hamburger-line-gap)
+
+
+
+
+      &:nth-child(2)
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, 0)
+      &:nth-child(3)
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, $osg-mobile-hamburger-line-gap)
+      +osg-mq-tablet-and-up
+        height: $osg-desktop-hamburger-line-height
+        width: $osg-desktop-hamburger-line-width
+        left: ($osg-hamburger-width / 2) - ($osg-desktop-hamburger-line-width / 2)
+        border-radius: $osg-desktop-hamburger-line-height
         &:nth-child(1)
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, -$osg-mobile-hamburger-line-gap)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, -$osg-desktop-hamburger-line-gap)
         &:nth-child(2)
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, 0)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, 0)
         &:nth-child(3)
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, $osg-mobile-hamburger-line-gap)
-        +osg-mq-tablet-and-up
-          height: $osg-desktop-hamburger-line-height
-          width: $osg-desktop-hamburger-line-width
-          left: ($osg-hamburger-width / 2) - ($osg-desktop-hamburger-line-width / 2)
-          border-radius: $osg-desktop-hamburger-line-height
-          &:nth-child(1)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, -$osg-desktop-hamburger-line-gap)
-          &:nth-child(2)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, 0)
-          &:nth-child(3)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, $osg-desktop-hamburger-line-gap)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, $osg-desktop-hamburger-line-gap)
 
   // Style for content
-  .osg-navbar-menu-content
+  #{$content}
     @extend .osg-u-heading-3
     display: flex
     flex-direction: column
@@ -112,9 +126,9 @@ $osg-mobile-hamburger-line-height: 2px
       margin: 0
       &:not(:first-child)
         margin-top: 25px
-    .osg-menu-links
-      flex-grow: 1
-  .osg-logos
+  #{$links}
+    flex-grow: 1
+  #{$logos}
     @extend .osg-u-text-2
     display: flex
     align-items: center
@@ -130,20 +144,21 @@ $osg-mobile-hamburger-line-height: 2px
 
   // Style for mobile version of the navbar menu
   +osg-mq-mobile-only
-    .osg-navbar-hamburger
+    #{$hamburger}
       position: fixed
       bottom: 30px
       right: 15px
       z-index: 105
-    .osg-navbar-hamburger-close
+    #{$hamburger-close}
       display: none
-    .osg-navbar-menu-overlay-wrapper
+
+    #{$overlay-wrapper}
       width: $osg-hamburger-width
       height: $osg-hamburger-height
       position: fixed
       bottom: 30px
       right: 15px
-    .osg-navbar-menu-overlay
+    #{$overlay}
       width: $osg-hamburger-width
       height: $osg-hamburger-height
       &::after
@@ -164,7 +179,7 @@ $osg-mobile-hamburger-line-height: 2px
         background: $osg-color-green-light
         transition: all 0.4s cubic-bezier(.694, .0482, .335, 1)
         position: absolute
-    .osg-navbar-menu-content
+    #{$content}
       visibility: hidden
       opacity: 0
       transition: opacity 300ms cubic-bezier(0.19, 1, 0.22, 1)
@@ -175,17 +190,17 @@ $osg-mobile-hamburger-line-height: 2px
       width: 65px
     // Style for open mobile menu
     &.osg-v-open
-      .osg-navbar-menu-content
+      #{$content}
         visibility: visible
         opacity: 1
         left: 0
-      .osg-navbar-menu-overlay
+      #{$overlay}
         &::before
           transform: scale(60)
         &::after
           transform: scale(1)
           transition-delay: 200ms
-      .osg-navbar-hamburger
+      #{$hamburger}
         span
           &:nth-child(1)
             transform: translateY(7px) translateY(-50%) rotate(-135deg)
@@ -196,7 +211,7 @@ $osg-mobile-hamburger-line-height: 2px
 
   // Style for desktop version of the navbar menu
   +osg-mq-tablet-and-up
-    .osg-navbar-menu-overlay-wrapper
+    #{$overlay-wrapper}
       width: 521px
       position: fixed
       left: -521px
@@ -216,7 +231,7 @@ $osg-mobile-hamburger-line-height: 2px
         visibility: hidden
         transition: opacity .3s ease-out
         z-index: 100
-    .osg-navbar-menu-overlay
+    #{$overlay}
       background: $osg-color-green-light
       width: 100%
       height: 100%
@@ -226,36 +241,36 @@ $osg-mobile-hamburger-line-height: 2px
       height: 128px
       min-height: 128px
       width: 80px
-    .osg-navbar-hamburger-close
-        position: absolute
-        top: 30px
-        left: 75px
-        z-index: 103
-        .osg-navbar-hamburger-icon span
-          &:nth-child(1)
-            top: 25px
-            transform: rotate(-45deg)
-          &:nth-child(2)
-            top: 25px
-            transform: rotate(45deg)
-          &:nth-child(3)
-            display: none
-    .osg-navbar-menu-overlay-wrapper
+    #{$hamburger-close}
+      position: absolute
+      top: 30px
+      left: 75px
+      z-index: 103
+      #{$hamburger-icon} span
+        &:nth-child(1)
+          top: 25px
+          transform: rotate(-45deg)
+        &:nth-child(2)
+          top: 25px
+          transform: rotate(45deg)
+        &:nth-child(3)
+          display: none
+    #{$overlay-wrapper}
       transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
       &::after
         transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
-    .osg-navbar-menu-content
+    #{$content}
       transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
     // Style for open desktop menu
     &.osg-v-open
-      .osg-navbar-menu-overlay-wrapper
+      #{$overlay-wrapper}
         left: 0
         transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
         &::after
             opacity: 1
             visibility: visible
             transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
-      .osg-navbar-menu-content
+      #{$content}
         left: 0
         visibility: visible
         transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
