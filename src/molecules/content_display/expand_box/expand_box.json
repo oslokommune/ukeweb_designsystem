@@ -21,7 +21,7 @@
   },
   "button": {
     "color": "",
-    "content": "<i class='fas fa-chevron-down'></i>",
+    "text": "<i class='fas fa-chevron-down'></i>",
     "variant": "osg-v-circle",
     "dataattrs": [
       {"key": "aria-label", "val": "expand-button"}
