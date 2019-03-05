@@ -1,17 +1,23 @@
-.osg-iconLink
+.osg-icon-link
+  $root: &
+  $link-icon: #{$root}__link-icon
+  $link-text: #{$root}__link-text
+  $heading: #{$root}__heading
+  $description: #{$root}__description
+
   display: flex
   flex-direction: row
 
-  &__link-icon
+  #{$link-icon}
     margin: 0 15px 0 0
     @extend .osg-u-text-1
 
-  &__link-text
+  #{$link-text}
     display: flex
     flex-direction: column
 
-    &__heading
-      @extend .osg-u-text-2
+  #{$heading}
+    @extend .osg-u-text-2
 
-    &__description
-      @extend .osg-u-text-4
+  #{$description}
+    @extend .osg-u-text-4
