@@ -1,33 +1,33 @@
 .osg-content-box
   flex: 1
   background-color: white
-  .osg-container
+  &__container
     padding: 20px 15px 40px
     +osg-mq-tablet-and-up
       padding: 30px 40px 55px 30px
-    .osg-body-heading
-      @extend .osg-u-heading-3
-    .osg-body-text
-      @extend .osg-u-text-3
-    .osg-date
-      &:after
-        display: block
-        content: ""
-        width: 10px
-        height: 10px
-        margin: 15px 0
-        background-color: $osg-color-green
-    .osg-extra-link
-      @extend .osg-u-text-4
-      display: flex
-      text-decoration: none
-      align-items: center
-      &:hover
-        text-decoration: underline
-      .osg-icon
-        height: 15px
-        width: 15px
-        +osg-mq-tablet-and-up
-          height: 20px
-          width: 20px
-        margin-right: 10px
+  &__body-heading
+    @extend .osg-u-heading-3
+  &__body-text
+    @extend .osg-u-text-3
+  &__date
+    &:after
+      display: block
+      content: ""
+      width: 10px
+      height: 10px
+      margin: 15px 0
+      background-color: $osg-color-green
+  &__extra-link
+    @extend .osg-u-text-4
+    display: flex
+    text-decoration: none
+    align-items: center
+    &:hover
+      text-decoration: underline
+  .osg-icon
+    height: 15px
+    width: 15px
+    +osg-mq-tablet-and-up
+      height: 20px
+      width: 20px
+    margin-right: 10px

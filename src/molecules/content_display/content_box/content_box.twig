@@ -13,23 +13,23 @@
   {% if hasAlertData %}
     {% include "atoms/messages/alert/alert.twig" %}
   {% endif %}
-  <div class="osg-container">
+  <div class="osg-content-box__container">
     {% block head %}
       {% if hasTag %}
-        <div class="osg-content-box-tag">
+        <div class="osg-content-box__tag">
           <h3>{{ contentBox.tag }}</h3>
         </div>
       {% endif %}
       {% if hasDate %}
-        <p class="osg-date">{{ contentBox.date }}</p>
+        <p class="osg-content-box__date">{{ contentBox.date }}</p>
       {% endif %}
     {% endblock %}
     {% block body %}
       {% if hasHeading %}
-        <h2 class="osg-body-heading">{{ contentBox.heading }}</h2>
+        <h2 class="osg-content-box__body-heading">{{ contentBox.heading }}</h2>
       {% endif %}
       {% if hasText %}
-        <p class="osg-body-text">{{ contentBox.text }}</p>
+        <p class="osg-content-box__body-text">{{ contentBox.text }}</p>
       {% endif %}
     {% endblock %}
     {% block footer %}
@@ -39,7 +39,7 @@
         </div>
       {% endif %}
       {% if hasLink %}
-        <a class="osg-extra-link" href="{{ contentBox.link.url }}">
+        <a class="osg-content-box__extra-link" href="{{ contentBox.link.url }}">
           {% include "atoms/icons/icon/icon.twig" %}
           {{ contentBox.link.text }}
           {% if hasLinkSrText %}
