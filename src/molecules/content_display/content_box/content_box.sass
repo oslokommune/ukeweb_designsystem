@@ -1,15 +1,22 @@
 .osg-content-box
+  $root: &
+  $container: #{$root}__container
+  $body-heading: #{$root}__body-heading
+  $body-text: #{$root}__body-text
+  $date: #{$root}__date
+  $extra-link: #{$root}__extra-link
+
   flex: 1
   background-color: white
-  &__container
+  #{$container}
     padding: 20px 15px 40px
     +osg-mq-tablet-and-up
       padding: 30px 40px 55px 30px
-  &__body-heading
+  #{$body-heading}
     @extend .osg-u-heading-3
-  &__body-text
+  #{$body-text}
     @extend .osg-u-text-3
-  &__date
+  #{$date}
     &:after
       display: block
       content: ""
@@ -17,7 +24,7 @@
       height: 10px
       margin: 15px 0
       background-color: $osg-color-green
-  &__extra-link
+  #{$extra-link}
     @extend .osg-u-text-4
     display: flex
     text-decoration: none
