@@ -32,7 +32,7 @@ If a link is passed to storyPreview and allClickable is set to true, the whole c
 
 ### Examples
 
-Example of clickable hero pattern with circular image, text on the left of the image on tablet and bigger resolutions, and with padding below the image on mobile.
+Example of clickable pattern with circular image, text on the left of the image on tablet and bigger resolutions, and with padding below the image on mobile.
 
 [Codepen](https://codepen.io/oslokommune/pen/Gejwvv)
 
