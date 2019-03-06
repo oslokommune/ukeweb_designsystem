@@ -16,6 +16,7 @@ See README.md for release description.
 * Removed danglig comma in atom/buttons/button/button.sass
 * Added docker-compose.yml so you can run devtools directly from the styleguide repository
 * all twig documentation: changed docs to have a table showing the variant/modifiers
+* Fixed all parent patterns of content_box to be able to override the content_box block.
 
 ### Added
 * organisms-data_display-simple_table: new pattern.
