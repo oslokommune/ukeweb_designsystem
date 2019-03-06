@@ -6,6 +6,9 @@ Remove the variant "osg-v-circle" from the shape to get a squared image.
 ### Image sizes
 Mobile should be 150x150px and from tablet and up should be 210x210px.
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render inside the content box.
+
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|

@@ -1,6 +1,11 @@
 ### General
 Expandable box, used to show info which can be hidden away.
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render inside the expanded box.
+
+### Data Fields
+
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
 | variant | String | See variant options below | osg-v-default | Name of the variant |

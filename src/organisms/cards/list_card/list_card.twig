@@ -2,6 +2,10 @@
 {% set hasSearchResult = listCard.searchResult is defined and listCard.searchResult is not empty %}
 {% set listCardModifiers = listCard.modifiers | default(null) %}
 
+{% set listCardContent %}
+   {% block content %}{% endblock %}
+{% endset %}
+
 <div class="osg-list-card {{ listCardModifiers }}">
   <a href="{{ listCard.url }}">
     {% include 'atoms/decorators/shape/shape.twig' %}
@@ -11,6 +15,7 @@
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block content %}
+      {{ listCardContent }}
       {% if hasSearchResult %}
         <a href="{{ listCard.url }}" class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}

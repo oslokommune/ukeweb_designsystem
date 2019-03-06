@@ -3,6 +3,10 @@
 {% set storyPreviewVariant = storyPreview.variant | default(null) %}
 {% set storyPreviewModifiers = storyPreview.modifiers | default(null) %}
 
+{% set storyPreviewContent %}
+   {% block content %}{% endblock %}
+{% endset %}
+
 {% if isLinkFullSize %}
   <a href="{{ storyPreview.link.url }}" title="{{ storyPreview.link.title }}" class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
 {% else %}
@@ -13,6 +17,7 @@
   </div>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block content %}
+     {{ storyPreviewContent }}
     {% endblock %}
   {% endembed %}
 {% if isLinkFullSize %}

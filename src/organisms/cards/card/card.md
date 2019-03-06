@@ -1,6 +1,9 @@
 ### General
 Multi-purpose container for previewing part of content, usually some form of article.
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render inside the content box.
+
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|

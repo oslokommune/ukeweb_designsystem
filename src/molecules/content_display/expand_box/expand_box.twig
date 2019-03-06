@@ -2,6 +2,10 @@
 {% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
 {% set expandBoxModifiers = expandBox.modifiers | default(null) %}
 
+{% set expandBoxContent %}
+   {% block content %}{% endblock %}
+{% endset %}
+
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   {% block head %}
     <div class="osg-title-line">
@@ -17,6 +21,7 @@
   <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block content %}
+        {{ expandBoxContent }}
       {% endblock %}
     {% endembed %}
   </div>

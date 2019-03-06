@@ -20,5 +20,17 @@
       "alt": "Lorem ipsum dolor sit amet.",
       "defaultUrl": "https://picsum.photos/960/540/?random"
     }
+  },
+  "expandBox": {
+    "variant": "osg-v-open",
+    "expanded": "true"
+  },
+  "button": {
+    "color": "",
+    "content": "<i class='fas fa-chevron-up'></i>",
+    "variant": "osg-v-circle",
+    "dataattrs": [
+      {"key": "aria-label", "val": "expand-button"}
+    ]
   }
 }

@@ -7,7 +7,10 @@ If no link is passed, either in the storyPreview object or the contentBox object
 If a link is passed to contentBox, there will be a link at the bottom of the component.
 If a link is passed to storyPreview and allClickable is set to true, the whole component will be a link, the text at the bottom will be underlined on hover.
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render below the image and image caption.
 
+### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
 | variant | String | See variant options below | osg-v-default | Name of the variant |
