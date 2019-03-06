@@ -1,5 +1,4 @@
 {% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
-{% set hasList = expandBox.list is defined and expandBox.list is not empty %}
 {% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
 {% set expandBoxModifiers = expandBox.modifiers | default(null) %}
 
@@ -22,13 +21,6 @@
       {% endblock %}
       {% block body %}
         {{ parent() }}
-        {% if hasList %}
-          <ul>
-            {% for element in expandBox.list %}
-              <li>- {{ element }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
       {% endblock %}
       {% block footer %}
         {{ parent() }}
