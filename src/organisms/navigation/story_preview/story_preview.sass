@@ -13,7 +13,6 @@ $osg-font-size-big-desktop: ( $osg-font-size-20, $osg-font-size-40, $osg-font-si
 $padding-top-big-desktop: ( 33px, 6px, 30px )
 
 =osg-story-preview--top
-  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -23,12 +22,11 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     padding-top: 30px
     order: 2
   .osg-content-box
-    .content-box-tag
+    &__tag
       padding-top: unset
     order: 1
 
 =osg-story-preview--left
-  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -39,7 +37,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     margin-right: unset
     padding-top: unset
   .osg-content-box
-    .osg-content-box-tag
+    &__tag
       padding-top: unset
     margin-right: 30px
     +osg-mq-tablet-and-up
@@ -47,7 +45,6 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     order: 1
 
 =osg-story-preview--right
-  $root: '.osg-story-preview'
   $image: #{$root}__image
 
   display: flex
@@ -63,7 +60,7 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     flex: unset
     margin-right: unset
     order: 2
-    .osg-content-box-tag
+    &__tag
       padding-top: unset
 
 =osg-story-preview--font-padding($font-list, $padding-list)
@@ -71,18 +68,18 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
   $extra-link: #{$root}__extra-link
 
   .osg-container
-    .osg-content-box-tag
+    &__tag
       font-size: nth($font-list, 1)
       padding-top: nth($padding-list, 1)
-    .osg-body-heading
+    &__body-heading
       font-size: nth($font-list, 2)
       padding-top: nth($padding-list, 2)
-    #{$extra-link}, .osg-body-text
+    #{$extra-link}, &__body-text
       font-size: nth($font-list, 3)
       padding-top: nth($padding-list, 3)
 
 a.osg-story-preview:hover
-  .osg-extra-link
+  .osg-story-preview__extra-link
     text-decoration: underline
 
 .osg-story-preview
@@ -92,12 +89,12 @@ a.osg-story-preview:hover
   text-decoration: none
   .osg-content-box
     background: transparent
-    .osg-container
+    &__container
       padding: unset
-    .osg-body-heading
+    &__body-heading
       font-weight: 600
-  .osg-content-box-tag
-    color: $osg-color-green-dark
+    &__tag
+      color: $osg-color-green-dark
 
   #{$extra-link}
     @extend .osg-u-text-4

@@ -134,7 +134,10 @@
   &--with-state
     a
       color: white
-    .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
+    .osg-content-box
+      &__container,
+      &__wrapper,
+      &__shape
       background-color: $osg-color-green-dark
     .osg-shape
       color: white
