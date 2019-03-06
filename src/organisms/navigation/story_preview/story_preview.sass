@@ -88,12 +88,17 @@ a.osg-story-preview:hover
 
   text-decoration: none
   .osg-content-box
+    $root: &
+    $container: #{$root}__container
+    $body-heading: #{$root}__body-heading
+    $tag: #{$root}__tag
+
     background: transparent
-    &__container
+    #{$container}
       padding: unset
-    &__body-heading
+    #{$body-heading}
       font-weight: 600
-    &__tag
+    #{$tag}
       color: $osg-color-green-dark
 
   #{$extra-link}
