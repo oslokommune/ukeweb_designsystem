@@ -12,7 +12,7 @@
     "id": "searchbar"
   },
   "button": {
-    "content": "<i class='fas fa-search osg-searchbar__icon'></i>",
+    "text": "<i class='fas fa-search osg-searchbar__icon'></i>",
     "variant": "osg-v-circle",
     "dataattrs": [
       {"key": "aria-label", "val": "Search"}
