@@ -13,22 +13,15 @@
     ]
   },
   "storyPreview": {
-    "allClickable": false
   },
   "contentBox": {
-    "tag": "Consectetur",
-    "heading": "Pellentesque habitant morbi",
-    "text": "Lorem ipsum dolor",
-    "link": {
-      "url": "#",
-      "text": "Nulla vel orci ut erat volutpat.",
-      "srText": "This text is only for screen readers"
-    }
+    "content": "<h2 class='osg-u-heading-1'>Lorem ipsum</h2><p class='osg-u-text-1'>Suspendisse condimentum suscipit arcu, eu porta ligula.</p>"
   },
   "shape": {
     "variant": "osg-v-image"
   },
   "figure": {
+    "caption": "Dolor sit amet",
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
       "defaultUrl": "https://picsum.photos/500/500/?random",
@@ -43,11 +36,5 @@
         }
       ]
     }
-  },
-  "icon": {
-    "variant": "osg-v-icon-chevron-right"
-  },
-  "ingress": {
-    "text": "Necessitatibus cupiditate"
   }
 }
