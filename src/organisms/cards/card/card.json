@@ -16,32 +16,7 @@
     "stateText": "halla"
   },
   "contentBox": {
-    "date": "7. volutpat - 11. elementum",
-    "heading": "Pellentesque habitant morbi",
-    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  "tags": {
-    "variant": "osg-v-underline",
-    "items": [
-      {
-        "tag": {
-          "content": "Lorem Ipsum dolor",
-          "url": "#"
-        }
-      },
-      {
-        "tag": {
-          "content": "Sit amet",
-          "url": "#"
-        }
-      },
-      {
-        "tag": {
-          "content": "Dolor sit",
-          "url": "#"
-        }
-      }
-    ]
+    "content": "<h2 class='osg-u-heading-1'>Lorem ipsum</h2><p class='osg-u-text-1'>Suspendisse condimentum suscipit arcu, eu porta ligula.</p>"
   },
   "figure": {
     "img": {

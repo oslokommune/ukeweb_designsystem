@@ -86,8 +86,6 @@
       bottom: 60px
       margin-bottom: $box-margin-top-tablet
       width: calc(100% - #{$shape-size-tablet})
-    h2
-      font-weight: 600
   #{$result}
     display: none
     text-decoration: none
@@ -105,8 +103,6 @@
     top: calc(50% + #{$box-margin-top-mobile})
     +osg-mq-tablet-and-up
       top: calc(50% + #{$box-margin-top-tablet})
-  .osg-tags
-    padding-top: 15px
   /* modifiers styling */
   &--show-search-result
     #{$search-text}
@@ -115,12 +111,6 @@
     visibility: visible
     #{$image-container}
       +osg-animation-scale-up(1.5s)
-    .osg-shape
-      +osg-animation-scale-in(1.2s)
-      animation-delay: .3s
-      span
-        +osg-animation-scale-in-text(1.2s)
-        animation-delay: .3s
     .osg-content-box, #{$box-shape-wrapper}
       +osg-animation-fade-in(1.2s)
       animation-delay: .3s
@@ -134,21 +124,10 @@
   &--with-state
     a
       color: white
-    .osg-content-box, .osg-container, .osg-wrapper, .osg-shape
+    .osg-content-box, .osg-container, .osg-wrapper
       background-color: $osg-color-green-dark
-    .osg-shape
-      color: white
-    p.osg-date:after
-      background-color: white
     #{$state-text}
       display: block
-    .osg-tags li
-      &:after
-        color: white
-      .osg-tag
-        color: white
-        &:hover
-          color: white
     #{$search-result}
       border-color: white
     #{$image-container}

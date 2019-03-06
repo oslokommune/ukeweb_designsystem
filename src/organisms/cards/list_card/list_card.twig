@@ -1,5 +1,4 @@
 {% set hasStateText = listCard.stateText is defined and listCard.stateText is not empty %}
-{% set hasTags = tags is defined and tags is not empty %}
 {% set hasSearchResult = listCard.searchResult is defined and listCard.searchResult is not empty %}
 {% set listCardModifiers = listCard.modifiers | default(null) %}
 
@@ -25,9 +24,6 @@
       <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
         {{ parent() }}
       </a>
-      {% if hasTags %}
-        {% include 'molecules/navigation/tags/tags.twig' %}
-      {% endif %}
       {% if hasSearchResult %}
         <a href="{{ listCard.url }}" class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}
