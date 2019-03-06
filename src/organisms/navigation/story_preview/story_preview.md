@@ -39,7 +39,7 @@ Example of clickable pattern with circular image, text on the left of the image 
 #### Twig include
 
 ```twig
-{% include 'organisms/navigation/story_preview/story_preview.twig' with {
+{% embed 'organisms/navigation/story_preview/story_preview.twig' with {
   "storyPreview": {
     "modifiers": "osg-story-preview--left-tablet",
     "link": {
@@ -47,9 +47,6 @@ Example of clickable pattern with circular image, text on the left of the image 
       "title": "title"
     },
     "variant": "osg-v-circle"
-  },
-  "contentBox": {
-    "content": "<h2 class='osg-u-heading-1'>Lorem ipsum</h2><p class='osg-u-text-1'>Suspendisse condimentum suscipit arcu, eu porta ligula.</p>"
   },
   "shape": {
     "variant": "osg-v-circle osg-v-image"
@@ -73,4 +70,13 @@ Example of clickable pattern with circular image, text on the left of the image 
     }
   }
 } only %}
+  {% block content %}
+    <h2 class='osg-u-heading-1'>
+      Lorem ipsum
+    </h2>
+    <p class='osg-u-text-1'>
+      Suspendisse condimentum suscipit arcu, eu porta ligula.
+    </p>
+  {% endblock %}
+{% endembed %}
 ```

@@ -12,14 +12,7 @@
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      {{ parent() }}
-    {% endblock %}
-    {% block body %}
-      {{ parent() }}
-    {% endblock %}
-    {% block footer %}
-      {{ parent() }}
+    {% block content %}
     {% endblock %}
   {% endembed %}
 {% if isLinkFullSize %}

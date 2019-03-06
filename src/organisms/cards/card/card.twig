@@ -13,20 +13,7 @@
     </div>
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      <a class="osg-card__wrapper" href="{{ card.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block body %}
-      <a class="osg-card__wrapper" href="{{ card.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block footer %}
-      <a class="osg-card__wrapper" href="{{ card.url }}">
-        {{ parent() }}
-      </a>
+    {% block content %}
       {% if hasSearchResult %}
         <a href="{{ card.url }}" class="osg-card__search-result">
           {{ card.searchResult | default(null) }}

@@ -14,9 +14,6 @@
   "listCard": {
     "url": "#"
   },
-  "contentBox": {
-    "content": "<h2 class='osg-u-heading-1'>Lorem ipsum</h2><p class='osg-u-text-1'>Suspendisse condimentum suscipit arcu, eu porta ligula.</p>"
-  },
   "shape": {
     "variant": "osg-v-image"
   },

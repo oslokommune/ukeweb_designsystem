@@ -16,14 +16,7 @@
   {% block body %}
   <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
-      {% block head %}
-        {{ parent() }}
-      {% endblock %}
-      {% block body %}
-        {{ parent() }}
-      {% endblock %}
-      {% block footer %}
-        {{ parent() }}
+      {% block content %}
       {% endblock %}
     {% endembed %}
   </div>

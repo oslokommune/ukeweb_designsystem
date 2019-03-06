@@ -10,20 +10,7 @@
     {% endif %}
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block body %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block footer %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
+    {% block content %}
       {% if hasSearchResult %}
         <a href="{{ listCard.url }}" class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}

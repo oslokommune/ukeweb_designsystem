@@ -4,16 +4,7 @@
 
 <div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
   <div class="osg-container">
-    {% block head %}
-    {% endblock %}
-    {% block body %}
-    {% if hasContent %}
-      <div class="osg-content">
-        {{ contentBox.content | raw }}
-      </div>
-    {% endif %}
-    {% endblock %}
-    {% block footer %}
+    {% block content %}
     {% endblock %}
   </div>
 </div>
