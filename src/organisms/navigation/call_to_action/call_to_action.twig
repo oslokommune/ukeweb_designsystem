@@ -4,7 +4,13 @@
     <div class="osg-call-to-action__content">
       <h2>{{ callToAction.heading }}</h2>
       <p>{{ callToAction.content }}</p>
-      {% include 'atoms/buttons/button/button.twig' %}
+      {% embed "atoms/buttons/button/button.twig" %}
+        {% block buttonContent %}
+          {% if button.content is defined and button.content is not empty %}
+            {{ button.content | raw }}
+          {% endif %}
+        {% endblock %}
+      {% endembed %}
     </div>
   </div>
 </div>

@@ -9,7 +9,13 @@
       <div class="osg-promo__content">
         <h2>{{ promo.title }}</h2>
         {% if hasButton and promo.showButton == true %}
-          {% include 'atoms/buttons/button/button.twig' with { button: promo.button } %}
+          {% embed "atoms/buttons/button/button.twig" with { button: promo.button } %}
+            {% block buttonContent %}
+              {% if promo.button.content is defined and promo.button.content is not empty %}
+                {{ button.content }}
+              {% endif %}
+            {% endblock %}
+          {% endembed %}
         {% endif %}
       </div>
       {% if hasLogo and promo.showLogo == true %}

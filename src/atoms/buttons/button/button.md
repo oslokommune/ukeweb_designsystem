@@ -7,23 +7,15 @@ This pattern is primarily a button with different designs and uses. Keep in mind
 | *variant | String | See "variant options" section below | "osg-v-default" | Name of the variant |
 | modifiers | String | Any global css class | null | Root class to modify styles |
 | color | String | See the color options section | "red" | Sets state colors for text and background using global css classes |
-| content | String | Content of the button, it can be HTML as well | null | Content inside the button |
-| text | String | Clean text content | null | Content inside the button |
 | dataattrs | Object | key and val | null | See example in data tab |
 
 (*) mandatory
 
-### Variant Options
-| Name | Description |
-|------|-------------|
-| osg-v-default | Is used if nothing is defined. Default behaviour. |
-| osg-v-toggle-icon |  Switches the icon between states. Also hides the text in mobile view |
-| osg-v-circle | Makes the button a circle |
 
 ### Modifiers Options
 | Name | Description |
 |------|-------------|
-| osg-m-open | Changes the icon when the state is open/expanded |
+| osg-m-circle | Changes the shape of the icon to be a circle |
 
 ### Color options
 - "blue-dark"

@@ -21,7 +21,13 @@
     {% endfor %}
     {% if hasButton %}
       <li>
-        {% include "atoms/buttons/button/button.twig" %}
+        {% embed "atoms/buttons/button/button.twig" %}
+          {% block buttonContent %}
+            {% if button.content is defined and button.content is not empty %}
+              {{ button.content }}
+            {% endif %}
+          {% endblock %}
+        {% endembed %}
       </li>
     {% endif %}
     {% if hasAsteriskText %}

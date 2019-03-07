@@ -9,8 +9,8 @@
     "id": "searchbar"
   },
   "button": {
-    "text": "<i class='fas fa-search osg-searchbar-icon'></i>",
-    "variant": "osg-v-circle",
+    "content": "<i class='fas fa-search osg-searchbar-icon'></i>",
+    "modifiers": "osg-m-circle",
     "dataattrs": [
       {"key": "aria-label", "val": "Search"}
     ]

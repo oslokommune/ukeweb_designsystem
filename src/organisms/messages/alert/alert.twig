@@ -34,7 +34,13 @@
           <div class="osg-alert__overlay-top">
             <div class="osg-alert__white-space" aria-hidden></div>
             {% if alertHasButton %}
-              {% include 'atoms/buttons/button/button.twig' %}
+              {% embed "atoms/buttons/button/button.twig" %}
+                {% block buttonContent %}
+                  {% if button.content is defined and button.content is not empty %}
+                    {{ button.content | raw }}
+                  {% endif %}
+                {% endblock %}
+              {% endembed %}
             {% endif %}
           </div>
           <div class="osg-alert__content osg-content">

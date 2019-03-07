@@ -14,7 +14,14 @@
           <h3>{{ expandBox.title }}</h3>
         </div>
       {% endif %}
-      {% include "atoms/buttons/button/button.twig" %}
+
+      {% embed "atoms/buttons/button/button.twig" %}
+        {% block buttonContent %}
+          {% if button.content is defined and button.content is not empty %}
+            {{ button.content | raw }} {# this could be <i class='{{icon-class}}'></i> (icon pattern) , where icon-class: "fas fa-chevron-up" in json file #}
+          {% endif %}
+        {% endblock %}
+      {% endembed %}
     </div>
   {% endblock %}
   {% block body %}

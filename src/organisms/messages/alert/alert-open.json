@@ -4,7 +4,8 @@
     "content": "<h3 class='osg-u-padding-top-small-mobile-only'>Lorem ipsum</h3><p>In sagittis neque risus, eu tempor urna gravida ut. Donec commodo tempus velit. Maecenas aliquam orci ex, non feugiat risus convallis at. <a href='#'>Sed bibendum rhoncus viverra.</a></p>"
   },
   "button": {
-    "text": "<i class='fa fa-times'><span class='osg-sr-only'>Dolor amet lorem</span></i>",
-    "variant": "osg-v-circle"
+    "content": "<i class='fa fa-times'><span class='osg-sr-only'>Dolor amet lorem</span></i>",
+    "modifiers": "osg-m-circle",
+    "color": "yellow"
   }
 }
