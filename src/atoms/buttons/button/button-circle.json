@@ -1,6 +1,6 @@
 {
   "button": {
-    "content": "Dolor",
+    "text": "Dolor",
     "variant": "osg-v-circle",
     "dataattrs": [
       {"key": "id", "val": "lorem_ipsum"},

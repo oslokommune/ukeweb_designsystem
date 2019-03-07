@@ -43,21 +43,58 @@
   +osg-button-helper($name, $text, $background)
 
 .osg-button
+  &.osg-v-default
+    @extend .osg-button
+
   &.osg-v-circle
     background: none
-    color: inherit
     border: none
-    padding: 0
-    font: inherit
+    color: inherit
     cursor: pointer
+    font: inherit
     outline: inherit
+    padding: 0
     user-select: none
 
     span
       margin: 0
 
-a.osg-button
-  text-decoration: none
+  &.osg-v-toggle-icon
+    @extend .osg-u-text-4
+    border: 2px solid $osg-color-blue-dark
+    color: $osg-color-blue-dark
+    +osg-mq-mobile-only
+      border: none
+      .osg-button__text
+        display: none
+    +osg-mq-tablet-and-up
+      padding: 5px 20px
 
-.osg-button.osg-v-default
-  @extend .osg-button
+    span > .osg-icon-filter
+      background: url('../../../assets/images/filter.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      display: inline-block
+      height: $osg-font-size-30
+      margin-left: 15px
+      vertical-align: middle
+      width: $osg-font-size-30
+
+      +osg-mq-mobile-only
+        margin: 5px
+      +osg-mq-tablet-and-up
+        height: $osg-font-size-28
+        width: $osg-font-size-28
+      +osg-mq-tablet-and-up
+        height: $osg-font-size-30
+        width: $osg-font-size-30
+
+    &.osg-m-open
+      span >.osg-icon-filter
+        transform: rotate(90deg)
+
+    &:hover
+      border: 2px solid $osg-color-blue-hover
+      color: $osg-color-blue-hover
+      +osg-mq-mobile-only
+        border: none
