@@ -1,7 +1,10 @@
 {% set hasStateText = listCard.stateText is defined and listCard.stateText is not empty %}
-{% set hasTags = tags is defined and tags is not empty %}
 {% set hasSearchResult = listCard.searchResult is defined and listCard.searchResult is not empty %}
 {% set listCardModifiers = listCard.modifiers | default(null) %}
+
+{% set listCardContent %}
+   {% block content %}{% endblock %}
+{% endset %}
 
 <div class="osg-list-card {{ listCardModifiers }}">
   <a href="{{ listCard.url }}">
@@ -11,23 +14,8 @@
     {% endif %}
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block body %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block footer %}
-      <a class="osg-list-card__wrapper" href="{{ listCard.url }}">
-        {{ parent() }}
-      </a>
-      {% if hasTags %}
-        {% include 'molecules/navigation/tags/tags.twig' %}
-      {% endif %}
+    {% block content %}
+      {{ listCardContent }}
       {% if hasSearchResult %}
         <a href="{{ listCard.url }}" class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}

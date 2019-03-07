@@ -1,8 +1,11 @@
 {% set hasStateText = card.stateText is defined and card.stateText is not empty %}
-{% set hasTags = tags is defined and tags is not empty %}
 {% set hasSearchResult = card.searchResult is defined and card.searchResult is not empty %}
 {% set cardVariant = card.variant | default('osg-v-default') %}
 {% set cardModifiers = card.modifiers | default(null) %}
+
+{% set cardContent %}
+   {% block content %}{% endblock %}
+{% endset %}
 
 <div class="osg-card {{ cardVariant }} {{ cardModifiers }}">
   <a class="osg-card__wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
@@ -14,21 +17,8 @@
     </div>
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      <a class="osg-card__wrapper" href="{{ card.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block body %}
-      <a class="osg-card__wrapper" href="{{ card.url }}">
-        {{ parent() }}
-      </a>
-    {% endblock %}
-    {% block footer %}
-      {{ parent() }}
-      {% if hasTags %}
-        {% include 'molecules/navigation/tags/tags.twig' %}
-      {% endif %}
+    {% block content %}
+      {{ cardContent }}
       {% if hasSearchResult %}
         <a href="{{ card.url }}" class="osg-card__search-result">
           {{ card.searchResult | default(null) }}

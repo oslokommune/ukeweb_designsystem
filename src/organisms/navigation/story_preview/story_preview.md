@@ -7,13 +7,17 @@ If no link is passed, either in the storyPreview object or the contentBox object
 If a link is passed to contentBox, there will be a link at the bottom of the component.
 If a link is passed to storyPreview and allClickable is set to true, the whole component will be a link, the text at the bottom will be underlined on hover.
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render below the image and image caption.
 
+### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
 | variant | String | See variant options below | osg-v-default | Name of the variant |
 | modifiers | String | See modifier options below | null | Name of the modifier |
-| allClickable | boolean | true, false | null | Makes the story preview a link, link must be passed in for this to work |
-| link | Object | url, text, srText | null | Link for the component, does nothing if allClickable is not true |
+| link | Object | *url, *title | null | Makes the story preview a link |
+
+(*) mandatory
 
 ### Variant Options
 | Name | Description |
@@ -28,3 +32,54 @@ If a link is passed to storyPreview and allClickable is set to true, the whole c
 | osg-story-preview--left{-tablet} | Text on the left of the image |
 | osg-story-preview--right{-tablet} | Text on the right of the image |
 | osg-story-preview--top{-tablet} | Text on the top of the image |
+
+### Examples
+
+Example of clickable pattern with circular image, text on the left of the image on tablet and bigger resolutions, and with padding below the image on mobile.
+
+[Codepen](https://codepen.io/oslokommune/pen/Gejwvv)
+
+#### Twig include
+
+```twig
+{% embed 'organisms/navigation/story_preview/story_preview.twig' with {
+  "storyPreview": {
+    "modifiers": "osg-story-preview--left-tablet",
+    "link": {
+      "url": "#",
+      "title": "title"
+    },
+    "variant": "osg-v-circle"
+  },
+  "shape": {
+    "variant": "osg-v-circle osg-v-image"
+  },
+  "figure": {
+    "modifiers": "osg-u-padding-bottom-medium-mobile-only",
+    "caption": "Dolor sit amet",
+    "img": {
+      "alt": "Lorem ipsum dolor sit amet.",
+      "defaultUrl": "https://picsum.photos/500/500/?random",
+      "mediaQueryUrls": [
+        {
+          "query": "max-width: 768px",
+          "url": "https://picsum.photos/300/300/?random"
+        },
+        {
+          "query": "min-width: 769px",
+          "url": "https://picsum.photos/500/500/?random"
+        }
+      ]
+    }
+  }
+} only %}
+  {% block content %}
+    <h2 class='osg-u-heading-1'>
+      Lorem ipsum
+    </h2>
+    <p class='osg-u-text-1'>
+      Suspendisse condimentum suscipit arcu, eu porta ligula.
+    </p>
+  {% endblock %}
+{% endembed %}
+```
