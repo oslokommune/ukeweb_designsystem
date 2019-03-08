@@ -1,21 +1,16 @@
-{% set color = "osg-button-" ~ button.color | default('red') %}
-{# {% set hasLink = button.link is defined and button.link is not empty %} #}
-{% set hasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
+{% set buttonColor = "osg-button-" ~ button.color | default('red') %}
+{% set buttonHasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
 {% set buttonVariant = button.variant | default('osg-v-default') %}
 {% set buttonModifiers = button.modifiers | default(null) %}
-{# {% set hasIcon = button.icon is defined and button.icon is not empty %} #}
-{% set buttonHasContent = button.content is defined and button.content is not empty %}
 
 <button
-  class="osg-button {{ buttonVariant }} {{ buttonModifiers }} {{ color }}"
-  {% if hasDataattrs %}
+  class="osg-button {{ buttonVariant }} {{ buttonModifiers }} {{ buttonColor }}"
+  {% if buttonHasDataattrs %}
     {% for dataattr in button.dataattrs %}
       {{dataattr.key}}="{{dataattr.val}}"
     {% endfor %}
   {% endif %}
 >
-
-  {% block buttonContent %}
+  {% block content %}
   {% endblock %}
-
 </button>
