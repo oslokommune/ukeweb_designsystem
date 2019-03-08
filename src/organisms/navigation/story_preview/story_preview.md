@@ -2,36 +2,10 @@
 This pattern is primarily to be used for previewing part of content basically an image, text and a link.
 
 ### Note on the link
-This component can either have no link on it, have a link at the bottom or the whole component can be a link.
-If no link is passed, either in the storyPreview object or the contentBox object and allClickable is not passed or set to false, the component will have no link.
-If a link is passed to contentBox, there will be a link at the bottom of the component.
-If a link is passed to storyPreview and allClickable is set to true, the whole component will be a link, the text at the bottom will be underlined on hover.
+If a the link variable is passed to this patterns twig the whole component will be a link. You can also choose to have a link inside the pattern instead by putting the markup for it inside the "content" block.
 
 ### Blocks
 This pattern has one block named "content". Content passed to the block will render below the image and image caption.
-
-### Data Fields
-| Attribute | Type | Values | Default | Description |
-|---|---|---|---|---|
-| variant | String | See variant options below | osg-v-default | Name of the variant |
-| modifiers | String | See modifier options below | null | Name of the modifier |
-| link | Object | *url, *title | null | Makes the story preview a link |
-
-(*) mandatory
-
-### Variant Options
-| Name | Description |
-|------|-------------|
-| osg-v-default | Is used if nothing is defined. Does nothing extra. |
-| osg-v-circle | Figure is a circle |
-
-### Modifier Options
-| Name | Description |
-|------|-------------|
-| osg-story-preview--big{-tablet} | Makes the text bigger |
-| osg-story-preview--left{-tablet} | Text on the left of the image |
-| osg-story-preview--right{-tablet} | Text on the right of the image |
-| osg-story-preview--top{-tablet} | Text on the top of the image |
 
 ### Examples
 
@@ -83,3 +57,26 @@ Example of clickable pattern with circular image, text on the left of the image 
   {% endblock %}
 {% endembed %}
 ```
+
+### Data Fields
+| Attribute | Type | Values | Default | Description |
+|---|---|---|---|---|
+| variant | String | See variant options below | osg-v-default | Name of the variant |
+| modifiers | String | See modifier options below | null | Name of the modifier |
+| link | Object | *url, *title | null | Makes the story preview a link |
+
+(*) mandatory
+
+### Variant Options
+| Name | Description |
+|------|-------------|
+| osg-v-default | Is used if nothing is defined. Does nothing extra. |
+| osg-v-circle | Figure is a circle |
+
+### Modifier Options
+| Name | Description |
+|------|-------------|
+| osg-story-preview--big{-tablet} | Makes the text bigger |
+| osg-story-preview--left{-tablet} | Text on the left of the image |
+| osg-story-preview--right{-tablet} | Text on the right of the image |
+| osg-story-preview--top{-tablet} | Text on the top of the image |
