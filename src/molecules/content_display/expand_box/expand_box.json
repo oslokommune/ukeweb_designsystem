@@ -13,7 +13,6 @@
   },
   "button": {
     "color": "",
-    "content": "<i class='fas fa-chevron-down'></i>",
     "modifiers": "osg-m-circle",
     "dataattrs": [
       {

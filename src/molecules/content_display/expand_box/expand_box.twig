@@ -6,25 +6,26 @@
    {% block content %}{% endblock %}
 {% endset %}
 
-<div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
-  {% block head %}
-    <div class="osg-title-line">
-      {% if hasTitle %}
-        <div class="osg-title-line-text">
-          <h3>{{ expandBox.title }}</h3>
-        </div>
-      {% endif %}
+{% set expandBoxButtonContent %}
+   {% block buttonContent %}
+    <i class='fas fa-chevron-down'></i>
+   {% endblock %}
+{% endset %}
 
-      {% embed "atoms/buttons/button/button.twig" %}
-        {% block buttonContent %}
-          {% if button.content is defined and button.content is not empty %}
-            {{ button.content | raw }} {# this could be <i class='{{icon-class}}'></i> (icon pattern) , where icon-class: "fas fa-chevron-up" in json file #}
-          {% endif %}
-        {% endblock %}
-      {% endembed %}
-    </div>
-  {% endblock %}
-  {% block body %}
+<div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
+  <div class="osg-title-line">
+    {% if hasTitle %}
+      <div class="osg-title-line-text">
+        <h3>{{ expandBox.title }}</h3>
+      </div>
+    {% endif %}
+
+    {% embed "atoms/buttons/button/button.twig" %}
+      {% block content %}
+        {{ expandBoxButtonContent }}
+      {% endblock %}
+    {% endembed %}
+  </div>
   <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block content %}
@@ -32,7 +33,4 @@
       {% endblock %}
     {% endembed %}
   </div>
-  {% endblock %}
-  {% block footer %}
-  {% endblock %}
 </div>

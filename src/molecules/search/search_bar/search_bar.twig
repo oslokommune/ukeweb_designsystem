@@ -1,13 +1,17 @@
 {% set searchBarVariant = searchBar.variant | default('osg-v-default') %}
 {% set searchBarModifiers = searchBar.modifiers | default(null) %}
 
+{% set searchBarButtonContent %}
+   {% block buttonContent %}
+    <i class='fas fa-search osg-searchbar-icon'></i>
+   {% endblock %}
+{% endset %}
+
 <div class="osg-searchbar {{ searchBarVariant }} {{ searchBarModifiers }}">
   {% include 'atoms/forms/text/text.twig' %}
   {% embed "atoms/buttons/button/button.twig" %}
-    {% block buttonContent %}
-      {% if button.content is defined and button.content is not empty %}
-        {{ button.content | raw }}
-      {% endif %}
+    {% block content %}
+      {{ searchBarButtonContent }}
     {% endblock %}
   {% endembed %}
 </div>
