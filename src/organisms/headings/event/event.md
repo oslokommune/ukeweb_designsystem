@@ -1,6 +1,9 @@
 ### General
 Header for an event page
 
+### Blocks
+This pattern has three blocks named "head", "body" and "footer". The "head" block contains the header and the header tag. The "body" block contains the rest of the pattern. The "footer" block is empty by default and content passed to this block will render below the image and image caption.
+
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|
