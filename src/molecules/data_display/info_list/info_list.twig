@@ -1,5 +1,3 @@
-{% set hasButton = button is defined and button is not empty %}
-{% set hasAsteriskText = infoList.asteriskText is defined and infoList.asteriskText is not empty %}
 {% set infoListModifiers = infoList.modifiers | default(null) %}
 
 <div class="osg-info-list {{ infoListModifiers }}">
@@ -19,23 +17,8 @@
       {% endif %}
     </li>
     {% endfor %}
-    {% if hasButton %}
-      <li>
-        {% embed "atoms/buttons/button/button.twig" %}
-          {% block buttonContent %}
-            {% if button.content is defined and button.content is not empty %}
-              {{ button.content }}
-            {% endif %}
-          {% endblock %}
-        {% endembed %}
-      </li>
-    {% endif %}
-    {% if hasAsteriskText %}
-    <li>
-      <p>
-        *{{ infoList.asteriskText }}
-      </p>
-    </li>
-    {% endif %}
   </ul>
+  {% block content %}
+  {% endblock %}
+
 </div>
