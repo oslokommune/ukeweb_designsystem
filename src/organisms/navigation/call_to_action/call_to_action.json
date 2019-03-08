@@ -9,17 +9,11 @@
       "link"
     ]
   },
-  "callToAction": {
-    "heading": "Lorem ipsum",
-    "content": "Aenean vitae tortor sem. Mauris enim eros, ultrices nec hendrerit nec, porta sollicitudin enim."
-  },
+  "callToAction": {},
   "figure": {
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
       "defaultUrl": "https://picsum.photos/960/540/?random"
     }
-  },
-  "button": {
-    "content": "Fusce rutrum"
   }
 }
