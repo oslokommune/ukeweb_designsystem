@@ -1,7 +1,6 @@
 .osg-alert
   $root: &
   $trigger: #{$root}__trigger
-  $heading: #{$root}__heading
   $overlay: #{$root}__overlay
   $overlay-top: #{$root}__overlay-top
   $overlay-wrapper: #{$root}__overlay-wrapper
@@ -23,9 +22,6 @@
     padding: 15px
     +osg-mq-tablet-and-up
       padding: 30px 30px 60px
-  #{$heading}
-    @extend .osg-u-heading-6
-    padding-bottom: 10px
   #{$overlay},
   #{$overlay-wrapper}
     display: none
