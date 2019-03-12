@@ -2,8 +2,7 @@
 Header for an event page
 
 ### Blocks
-* topContent: will be rendered on top of the image. You can replace the whole block, or pass data to the variable heading.
-* listContent: will be rendered in the link_list box under the list.
+This pattern has three blocks named "head", "body" and "footer". The "head" block contains the header and the header tag. The "body" block contains the rest of the pattern. The "footer" block is empty by default and content passed to this block will render below the image and image caption.
 
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
