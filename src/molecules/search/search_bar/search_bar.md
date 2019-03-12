@@ -1,6 +1,9 @@
 ### General
 This pattern is primarily used for content search
 
+### Blocks
+This pattern has one block named "buttonContent". Content passed to the "buttonContent" block will render inside the round button, and override the default button content which is a magnifying glass icon.
+
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|

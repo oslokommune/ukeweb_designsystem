@@ -11,9 +11,7 @@
     ]
   },
   "promo": {
-    "title": "Lorem ipsum dolor sit amet",
-    "showButton": false,
-    "showLogo": false
+    "title": "Lorem ipsum dolor sit amet"
   },
   "figure": {
     "img": {

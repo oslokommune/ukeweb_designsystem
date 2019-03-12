@@ -2,7 +2,7 @@
 Expandable box, used to show info which can be hidden away.
 
 ### Blocks
-This pattern has one block named "content". Content passed to the block will render inside the expanded box.
+This pattern has two blocks named "content" and "buttonContent". Content passed to the "content" block will render inside the expanded box. Content passed to the "buttonContent" block will render inside the round button, and override the default button content which is a chevron down icon.
 
 ### Data Fields
 

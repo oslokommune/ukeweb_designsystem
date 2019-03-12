@@ -13,7 +13,7 @@
   "event": {
     "heading": "Lorem ipsum dolor et",
     "headerTag": "(ENG*)",
-    "stateText": "skjera"
+    "stateText": "Avsluttet"
   },
   "figure": {
     "caption": "Img: Avaena idor",
@@ -40,34 +40,6 @@
           "srText": "Payment",
           "text": "250 - 450 kr" }
       ]
-    },
-    "asteriskText": "Lorem ipsum dolor et"
-  },
-  "button": {
-    "content": "Praesent",
-    "variant": "osg-v-default"
-  },
-  "tags": {
-    "variant": "osg-v-underline",
-    "items": [
-      {
-        "tag": {
-          "content": "Ultrices/Turpis",
-          "url": "#"
-        }
-      },
-      {
-        "tag": {
-          "content": "Aliquet/Metus",
-          "url": "#"
-        }
-      },
-      {
-        "tag": {
-          "content": "Quam/Massa",
-          "url": "#"
-        }
-      }
-    ]
+    }
   }
 }
