@@ -13,8 +13,7 @@
   },
   "button": {
     "color": "",
-    "text": "<i class='fas fa-chevron-down'></i>",
-    "variant": "osg-v-circle",
+    "modifiers": "osg-m-circle",
     "dataattrs": [
       {
         "key": "aria-label",

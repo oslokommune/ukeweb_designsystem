@@ -1,6 +1,9 @@
 ### General
 List of icons and data used to display information
 
+### Blocks
+This pattern has one block named "content". Content passed to the block will render inside the box after the list.
+
 ### Data Fields
 | Attribute | Type | Values | Default | Description |
 |---|---|---|---|---|

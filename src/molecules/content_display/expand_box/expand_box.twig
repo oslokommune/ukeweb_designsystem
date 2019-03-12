@@ -6,18 +6,26 @@
    {% block content %}{% endblock %}
 {% endset %}
 
+{% set expandBoxButtonContent %}
+   {% block buttonContent %}
+    <i class='fas fa-chevron-down'></i>
+   {% endblock %}
+{% endset %}
+
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
-  {% block head %}
-    <div class="osg-title-line">
-      {% if hasTitle %}
-        <div class="osg-title-line-text">
-          <h3>{{ expandBox.title }}</h3>
-        </div>
-      {% endif %}
-      {% include "atoms/buttons/button/button.twig" %}
-    </div>
-  {% endblock %}
-  {% block body %}
+  <div class="osg-title-line">
+    {% if hasTitle %}
+      <div class="osg-title-line-text">
+        <h3>{{ expandBox.title }}</h3>
+      </div>
+    {% endif %}
+
+    {% embed "atoms/buttons/button/button.twig" %}
+      {% block content %}
+        {{ expandBoxButtonContent }}
+      {% endblock %}
+    {% endembed %}
+  </div>
   <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block content %}
@@ -25,7 +33,4 @@
       {% endblock %}
     {% endembed %}
   </div>
-  {% endblock %}
-  {% block footer %}
-  {% endblock %}
 </div>
