@@ -25,6 +25,9 @@ See README.md for release description.
 ### Removed
 * atoms-messages-alert: removed pattern.
 * organisms-cards-shape_card: removed pattern.
+* atoms-text-ingress: removed pattern.
+* molecules-contact-contact_box: removed pattern.
+* molecules-content_display-byline: removed pattern.
 
 ### Changed
 util classes: Added -u to the prefix of all utils classes.
