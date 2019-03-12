@@ -1,20 +1,7 @@
 $root: '.osg-story-preview'
-
-$osg-font-size-regular-mobile: ( $osg-font-size-14, $osg-font-size-16, $osg-font-size-14)
-$padding-top-regular-mobile: ( 23px, 5px, 15px)
-
-$osg-font-size-regular-desktop: ( $osg-font-size-20, $osg-font-size-28, $osg-font-size-18 )
-$padding-top-regular-desktop: ( 42px, 15px, 29px )
-
-$osg-font-size-big-mobile: ( $osg-font-size-18, $osg-font-size-26, $osg-font-size-18 )
-$padding-top-big-mobile: ( 33px, 6px, 30px )
-
-$osg-font-size-big-desktop: ( $osg-font-size-20, $osg-font-size-40, $osg-font-size-28 )
-$padding-top-big-desktop: ( 33px, 6px, 30px )
+$image: #{$root}__image
 
 =osg-story-preview--top
-  $image: #{$root}__image
-
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -24,11 +11,8 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
   .osg-content-box
     &__tag
       padding-top: unset
-    order: 1
 
 =osg-story-preview--left
-  $image: #{$root}__image
-
   display: flex
   flex-direction: row
   align-items: center
@@ -40,13 +24,11 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     &__tag
       padding-top: unset
     margin-right: 30px
+    order: 1
     +osg-mq-tablet-and-up
         margin-right: 60px
-    order: 1
 
 =osg-story-preview--right
-  $image: #{$root}__image
-
   display: flex
   flex-direction: row
   align-items: center
@@ -60,32 +42,8 @@ $padding-top-big-desktop: ( 33px, 6px, 30px )
     flex: unset
     margin-right: unset
     order: 2
-    &__tag
-      padding-top: unset
-
-=osg-story-preview--font-padding($font-list, $padding-list)
-  $root: '.osg-story-preview'
-  $extra-link: #{$root}__extra-link
-
-  .osg-content-box
-    &__tag
-      font-size: nth($font-list, 1)
-      padding-top: nth($padding-list, 1)
-    &__body-heading
-      font-size: nth($font-list, 2)
-      padding-top: nth($padding-list, 2)
-    #{$extra-link}, &__body-text
-      font-size: nth($font-list, 3)
-      padding-top: nth($padding-list, 3)
-
-a.osg-story-preview:hover
-  .osg-story-preview__extra-link
-    text-decoration: underline
 
 .osg-story-preview
-  $root: &
-  $extra-link: #{$root}__extra-link
-
   text-decoration: none
   .osg-content-box
     $root: &
@@ -96,45 +54,7 @@ a.osg-story-preview:hover
     background: transparent
     #{$container}
       padding: unset
-    #{$body-heading}
-      font-weight: 600
-    #{$tag}
-      color: $osg-color-green-dark
 
-  #{$extra-link}
-    @extend .osg-u-text-4
-    display: flex
-    text-decoration: none
-    align-items: center
-    .osg-icon
-      height: 15px
-      width: 15px
-      +osg-mq-tablet-and-up
-        height: 20px
-        width: 20px
-      margin-right: 10px
-  .osg-icon
-    margin-right: 10px
-    height: 20px
-    width: 20px
-    +osg-mq-tablet-and-up
-      height: 30px
-      width: 30px
-  +osg-story-preview--font-padding($osg-font-size-regular-mobile, $padding-top-regular-mobile)
-  +osg-mq-tablet-and-up
-    +osg-story-preview--font-padding($osg-font-size-regular-desktop, $padding-top-regular-desktop)
-  &--big
-    +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
-    +osg-mq-tablet-and-up
-      +osg-story-preview--font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
-  &--big-mobile-only
-    +osg-mq-mobile-only
-      +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
-  &--big-tablet
-    +osg-mq-tablet-and-up
-      +osg-story-preview--font-padding($osg-font-size-big-mobile, $padding-top-big-mobile)
-      +osg-mq-tablet-and-up
-        +osg-story-preview--font-padding($osg-font-size-big-desktop, $padding-top-big-desktop)
   &--right
     +osg-story-preview--right
   &--left

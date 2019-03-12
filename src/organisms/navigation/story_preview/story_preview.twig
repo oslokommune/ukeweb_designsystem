@@ -1,10 +1,14 @@
-{% set isLinkFullSize = storyPreview.link is defined and storyPreview.link and storyPreview.allClickable is defined and storyPreview.allClickable == true %}
+{% set isLinkFullSize = storyPreview.link is defined and storyPreview.link is not empty %}
 {% set hasSrText = storyPreview.link.srText is defined and storyPreview.link.srText is not empty %}
 {% set storyPreviewVariant = storyPreview.variant | default(null) %}
 {% set storyPreviewModifiers = storyPreview.modifiers | default(null) %}
 
+{% set storyPreviewContent %}
+   {% block content %}{% endblock %}
+{% endset %}
+
 {% if isLinkFullSize %}
-  <a href="{{ storyPreview.link.url }}" class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
+  <a href="{{ storyPreview.link.url }}" title="{{ storyPreview.link.title }}" class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
 {% else %}
   <div class="osg-story-preview {{ storyPreviewVariant }} {{ storyPreviewModifiers }}">
 {% endif %}
@@ -12,23 +16,8 @@
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
-    {% block head %}
-      {{ parent() }}
-    {% endblock %}
-    {% block body %}
-      {{ parent() }}
-    {% endblock %}
-    {% block footer %}
-      {% if isLinkFullSize %}
-        <div class="osg-story-preview__extra-link">
-          {% include "atoms/icons/icon/icon.twig" %}
-          {{ storyPreview.link.text }}
-          {% if hasSrText %}
-            <span class="osg-sr-only">{{ storyPreview.link.srText }}</span>
-          {% endif %}
-        </div>
-      {% endif %}
-      {{ parent() }}
+    {% block content %}
+     {{ storyPreviewContent }}
     {% endblock %}
   {% endembed %}
 {% if isLinkFullSize %}

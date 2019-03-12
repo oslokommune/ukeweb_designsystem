@@ -1,7 +1,10 @@
 {% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
-{% set hasList = expandBox.list is defined and expandBox.list is not empty %}
 {% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
 {% set expandBoxModifiers = expandBox.modifiers | default(null) %}
+
+{% set expandBoxContent %}
+   {% block content %}{% endblock %}
+{% endset %}
 
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   {% block head %}
@@ -17,21 +20,8 @@
   {% block body %}
   <div class="osg-expand-box__content" aria-haspopup="true" aria-expanded="false">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
-      {% block head %}
-        {{ parent() }}
-      {% endblock %}
-      {% block body %}
-        {{ parent() }}
-        {% if hasList %}
-          <ul>
-            {% for element in expandBox.list %}
-              <li>- {{ element }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endblock %}
-      {% block footer %}
-        {{ parent() }}
+      {% block content %}
+        {{ expandBoxContent }}
       {% endblock %}
     {% endembed %}
   </div>
