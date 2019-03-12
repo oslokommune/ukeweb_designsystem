@@ -18,83 +18,29 @@
         background-color: $background
       &:hover
         background-color: lighten($background, 5%)
-  .osg-button.osg-v-circle
-    &.osg-button-#{$color-name}
-      &:focus
-        .osg-shape
-          box-shadow: 0 0 2px 2px Highlight
-      &:active
-        .osg-shape
-          background-color: $background
-      .osg-shape
-        border: 1px solid rgba(0, 0, 0, 0)
-        background-color: $background
-        color: $foreground
-      &:hover
-        .osg-shape
-          background-color: lighten($background, 5%)
-      &:active
-        .osg-shape
-          background-color: $background
-          transform: scale(0.97)
 
 // looping map from maps.scss
 @each $name, $text, $background in $osg-button-colors
   +osg-button-helper($name, $text, $background)
 
 .osg-button
-  &.osg-v-default
-    @extend .osg-button
-
-  &.osg-v-circle
+  &.osg-m-circle
     background: none
     border: none
     color: inherit
     cursor: pointer
+    display: inline-flex
     font: inherit
     outline: inherit
     padding: 0
+    border-radius: 50%
     user-select: none
 
-    span
-      margin: 0
-
-  &.osg-v-toggle-icon
-    @extend .osg-u-text-4
-    border: 2px solid $osg-color-blue-dark
-    color: $osg-color-blue-dark
-    +osg-mq-mobile-only
-      border: none
-      .osg-button__text
-        display: none
-    +osg-mq-tablet-and-up
-      padding: 5px 20px
-
-    span > .osg-icon-filter
-      background: url('../../../assets/images/filter.svg')
-      background-repeat: no-repeat
-      background-size: contain
+    &:before
+      content: ''
       display: inline-block
-      height: $osg-font-size-30
-      margin-left: 15px
       vertical-align: middle
-      width: $osg-font-size-30
+      padding-top: 100%
 
-      +osg-mq-mobile-only
-        margin: 5px
-      +osg-mq-tablet-and-up
-        height: $osg-font-size-28
-        width: $osg-font-size-28
-      +osg-mq-tablet-and-up
-        height: $osg-font-size-30
-        width: $osg-font-size-30
-
-    &.osg-m-open
-      span >.osg-icon-filter
-        transform: rotate(90deg)
-
-    &:hover
-      border: 2px solid $osg-color-blue-hover
-      color: $osg-color-blue-hover
-      +osg-mq-mobile-only
-        border: none
+    i
+      margin: 20px

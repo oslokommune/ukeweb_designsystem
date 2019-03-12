@@ -39,11 +39,6 @@
           "text": "Fusce libero"
         }
       ]
-    },
-    "asteriskText": "Lorem ipsum dolor et"
-  },
-  "button": {
-    "content": "Quisque",
-    "variant": "osg-v-default"
+    }
   }
 }

@@ -1,38 +1,37 @@
-{% set hasHeaderTag = event.headerTag is defined and event.headerTag is not empty %}
 {% set hasCaption = figure.caption is defined and figure.caption is not empty %}
 {% set hasStateText = event.stateText is defined and event.stateText is not empty %}
 {% set eventModifiers = event.modifiers | default(null) %}
 
+{% set eventListContent %}
+   {% block listContent %}{% endblock %}
+{% endset %}
+
 <div class="osg-event {{ eventModifiers }}">
-  {% block head %}
+  {% block topContent %}
     <div class="osg-event__header">
       <h2>
         {{ event.heading }}
-        {% if hasHeaderTag %}
-          <span>{{ event.headerTag }}</span>
-        {% endif %}
       </h2>
-      {% include "molecules/navigation/tags/tags.twig" %}
     </div>
   {% endblock %}
-  {% block body %}
-    <div class="osg-event__image">
-      <div class="osg-event__image-container">
-        {% include "atoms/decorators/figure/figure.twig" %}
-        {% if hasStateText %}
-          <div class="osg-event__state-text">{{ event.stateText }}</div>
-        {% endif %}
-      </div>
-      <div class="osg-event__info">
-        {% include "molecules/data_display/info_list/info_list.twig" %}
-        {% if hasCaption %}
-          <div class="osg-event__caption">
-            {{ figure.caption }}
-          </div>
-        {% endif %}
-      </div>
+  <div class="osg-event__image">
+    <div class="osg-event__image-container">
+      {% include "atoms/decorators/figure/figure.twig" %}
+      {% if hasStateText %}
+        <div class="osg-event__state-text">{{ event.stateText }}</div>
+      {% endif %}
     </div>
-  {% endblock %}
-  {% block footer %}
-  {% endblock %}
+    <div class="osg-event__info">
+      {% embed "molecules/data_display/info_list/info_list.twig" %}
+        {% block content %}
+          {{ eventListContent }}
+        {% endblock %}
+      {% endembed %}
+      {% if hasCaption %}
+        <div class="osg-event__caption">
+          {{ figure.caption }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>

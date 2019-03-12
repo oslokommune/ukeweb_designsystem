@@ -6,6 +6,12 @@
    {% block content %}{% endblock %}
 {% endset %}
 
+{% set expandBoxButtonContent %}
+   {% block buttonContent %}
+    <i class='fas fa-chevron-down'></i>
+   {% endblock %}
+{% endset %}
+
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   {% block head %}
     <div class="osg-expand-box__title-line">
@@ -14,7 +20,11 @@
           <h3>{{ expandBox.title }}</h3>
         </div>
       {% endif %}
-      {% include "atoms/buttons/button/button.twig" %}
+      {% embed "atoms/buttons/button/button.twig" %}
+        {% block content %}
+          {{ expandBoxButtonContent }}
+        {% endblock %}
+      {% endembed %}
     </div>
   {% endblock %}
   {% block body %}
@@ -25,7 +35,4 @@
       {% endblock %}
     {% endembed %}
   </div>
-  {% endblock %}
-  {% block footer %}
-  {% endblock %}
 </div>

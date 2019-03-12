@@ -39,20 +39,6 @@ $osg-margin-top-bottom-desktop: 25px
     display: flex
     align-items: center
     justify-content: center
-    #{$logo}
-      figure
-        img
-          z-index: 1
-          bottom: 0
-          height: auto
-          left: 0
-          right: auto
-          object-fit: unset
-          position: absolute
-          width: auto
-          +osg-mq-tablet-and-up
-            left: auto
-            right: 0
 
   .osg-figure
     position: absolute
@@ -70,14 +56,3 @@ $osg-margin-top-bottom-desktop: 25px
     z-index: 1
     +osg-mq-tablet-and-up
       padding: $osg-margin-top-bottom-desktop $osg-margin-left-right-desktop
-    h2
-      @extend .osg-u-heading-1
-      text-shadow: 0 2px 4px rgba(80,80,80,0.5)
-      hyphens: none
-      word-break: break-word
-    h2 + button, h2 + a
-      margin-top: 50px
-  &.osg-v-promo-intro
-    height: 100vh
-    +osg-mq-tablet-and-up
-      height: 800px
