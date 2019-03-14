@@ -10,7 +10,6 @@
   },
   "button": {
     "text": "<i class='fas fa-search osg-searchbar__icon'></i>",
-    "variant": "osg-v-circle",
     "modifiers": "osg-m-circle",
     "dataattrs": [
       {"key": "aria-label", "val": "Search"}

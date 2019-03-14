@@ -1,9 +1,6 @@
 .osg-expand-box
-  $root: &
-  $title-line: #{$root}__title-line
-  $title-line-text: #{$root}__title-line-text
-  $content: #{$root}__content
-
+  &__content
+    display: none
   .osg-content-box__container
     background-color: $osg-color-beige-dark
   .osg-button
@@ -13,12 +10,12 @@
       background-color: $osg-color-green-light
       i
         @extend .osg-u-text-3
-  #{$title-line}
+  &__title-line
     display: flex
     flex-direction: row
     justify-content: space-between
     height: 60px
-  #{$title-line-text}
+  &__title-line-text
     padding-left: 15px
     +osg-mq-tablet-and-up
       padding-left: 30px
@@ -30,6 +27,5 @@
       align-self: center
       font-weight: 600
   &.osg-v-open
-    #{$content}
     .osg-expand-box__content
       display: block

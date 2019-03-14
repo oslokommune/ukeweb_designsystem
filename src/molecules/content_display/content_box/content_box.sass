@@ -1,14 +1,7 @@
 .osg-content-box
-  $root: &
-  $container: #{$root}__container
-  $body-heading: #{$root}__body-heading
-  $body-text: #{$root}__body-text
-  $date: #{$root}__date
-  $extra-link: #{$root}__extra-link
-
   flex: 1
   background-color: white
-  #{$container}
+  &__container
     padding: 20px 15px 40px
     +osg-mq-tablet-and-up
       padding: 30px 40px 55px 30px

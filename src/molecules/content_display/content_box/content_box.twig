@@ -3,7 +3,7 @@
 {% set contentBoxModifiers = contentBox.modifiers | default(null) %}
 
 <div class="osg-content-box {{ contentBox.variant | default('osg-v-default')  }} {{ contentBox.modifiers | default(null) }}">
-  <div class="osg-container">
+  <div class="osg-content-box__container">
     {% block content %}
     {% endblock %}
   </div>

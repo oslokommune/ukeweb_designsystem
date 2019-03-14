@@ -2,26 +2,24 @@
   display: flex
   .osg-button
     margin-top: 20px
-  .osg-searchbar__icon
-    padding: 21px
-    +osg-mq-desktop-and-up
-      padding: 26px
+
+  &--hide-field &
+    &__icon
+      padding: 15px
+      +osg-mq-desktop-and-up
+        padding: 20px
   &--hide-field
     .osg-text-field
       display: none
       +osg-mq-tablet-and-up
         display: flex
-      .osg-text-field-input
+      &__input
         border: 2px solid $osg-color-yellow
         +osg-mq-tablet-and-up
           height: 46px
         +osg-mq-desktop-and-up
           height: 57px
-      .osg-text-field-label
+      &__label
         top: 10px
         +osg-mq-desktop-and-up
           top: 14px
-    .osg-searchbar__icon
-      padding: 15px
-      +osg-mq-desktop-and-up
-        padding: 20px
