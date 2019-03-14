@@ -2,10 +2,6 @@ $shape-size-mobile: 150px
 $shape-size-tablet: 210px
 
 .osg-list-card
-  $root: &
-  $state-text: #{$root}__state-text
-  $search-result: #{$root}__search-result
-
   position: relative
   display: flex
   width: 100%
@@ -40,7 +36,7 @@ $shape-size-tablet: 210px
       min-width: 100%
       max-width: 100%
 
-  #{$state-text}
+  &__state-text
     @extend .osg-u-heading-3
     display: none
     position: absolute
@@ -52,7 +48,7 @@ $shape-size-tablet: 210px
       top: calc((#{$shape-size-tablet} / 2) - (#{$osg-font-size-28} / 2))
       width: $shape-size-tablet
 
-  #{$search-result}
+  &__search-result
     display: none
     text-decoration: none
     padding-top: 15px
@@ -65,11 +61,18 @@ $shape-size-tablet: 210px
       transform: scale(1.2)
 
   /* modifiers styles */
-  +osg-common-card-with-state-modifier
-  &--show-search-result
-    #{$search-result}
-      display: block
+  &--with-state &
+      &__state-text
+        display: block
+      &__search-result
+        border-color: white
+      &__image-container
+        +osg-helper-filter($osg-color-green-dark)
   &--with-state
+    a
+      color: white
+    .osg-content-box
+      background-color: $osg-color-green-dark
     .osg-shape
       position: relative
       height: 100%
@@ -77,6 +80,10 @@ $shape-size-tablet: 210px
       +osg-helper-filter($osg-color-green-dark)
       &.osg-v-circle
         border-radius: 50%
+
+  &--show-search-result &
+    &__search-result
+      display: block
 
   &--animate
     .osg-shape

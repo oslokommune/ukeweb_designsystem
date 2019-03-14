@@ -1,42 +1,40 @@
-$root: '.osg-story-preview'
-$image: #{$root}__image
-
-=osg-story-preview--top
+=osg-story-preview--top($root)
   display: flex
   flex-direction: column
   align-items: flex-start
-  #{$image}
+  #{$root}__image
     padding-top: 30px
     order: 2
   .osg-content-box
-    order: 1
-    .content-box-tag
+    &__tag
       padding-top: unset
 
-=osg-story-preview--left
+=osg-story-preview--left($root)
   display: flex
   flex-direction: row
   align-items: center
-  #{$image}
+  #{$root}__image
     order: 2
     margin-right: unset
     padding-top: unset
   .osg-content-box
     margin-right: 30px
     order: 1
+    &__tag
+      padding-top: unset
     +osg-mq-tablet-and-up
         margin-right: 60px
 
-=osg-story-preview--right
+=osg-story-preview--right($root)
   display: flex
   flex-direction: row
   align-items: center
-  #{$image}
+  #{$root}__image
     order: 1
     margin-right: 30px
+    padding-top: unset
     +osg-mq-tablet-and-up
       margin-right: 60px
-    padding-top: unset
   .osg-content-box
     flex: unset
     margin-right: unset
@@ -46,21 +44,21 @@ $image: #{$root}__image
   text-decoration: none
   .osg-content-box
     background: transparent
-    .osg-container
+    &__container
       padding: unset
 
   &--right
-    +osg-story-preview--right
+    +osg-story-preview--right('.osg-story-preview')
   &--left
-    +osg-story-preview--left
+    +osg-story-preview--left('.osg-story-preview')
   &--top
-    +osg-story-preview--top
+    +osg-story-preview--top('.osg-story-preview')
   &--left-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--left
+      +osg-story-preview--left('.osg-story-preview')
   &--right-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--right
+      +osg-story-preview--right('.osg-story-preview')
   &--top-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--top
+      +osg-story-preview--top('.osg-story-preview')

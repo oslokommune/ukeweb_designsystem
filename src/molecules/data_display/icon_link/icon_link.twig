@@ -4,13 +4,13 @@
 {% set iconLinkVariant = iconLink.variant|default('osg-v-default') %}
 {% set iconLinkModifiers = iconLink.modifiers | default(null) %}
 
-<div class="osg-iconLink {{ iconLinkVariant }} {{ iconLinkModifiers }}">
-  <div class="osg-iconLink__link-icon">
+<div class="osg-icon-link {{ iconLinkVariant }} {{ iconLinkModifiers }}">
+  <div class="osg-icon-link__link-icon">
     <i class="fa fa-suitcase"></i>
   </div>
-  <div class="osg-iconLink__link-text">
+  <div class="osg-icon-link__link-text">
     {% if iconLinkHasHeading %}
-      <a class="osg-iconLink__link-text__heading" href="{{ iconLink.url }}"
+      <a class="osg-icon-link__heading" href="{{ iconLink.url }}"
       {% if iconLinkHasDataAttrs %}
         {% for dataAttr in iconLink.dataAttrs %}
         {{dataAttr.key}}="{{dataAttr.val}}"
@@ -21,7 +21,7 @@
       </a>
     {% endif %}
     {% if iconLinkHasText %}
-      <a class="osg-iconLink__link-text__description" href="{{ iconLink.url }}"
+      <a class="osg-icon-link__description" href="{{ iconLink.url }}"
       {% if iconLinkHasDataAttrs %}
         {% for dataAttr in iconLink.dataAttrs %}
         {{dataAttr.key}}="{{dataAttr.val}}"

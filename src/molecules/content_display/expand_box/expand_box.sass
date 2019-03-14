@@ -1,5 +1,7 @@
 .osg-expand-box
-  .osg-content-box > .osg-container
+  &__content
+    display: none
+  .osg-content-box__container
     background-color: $osg-color-beige-dark
   .osg-button
     .osg-shape
@@ -8,24 +10,22 @@
       background-color: $osg-color-green-light
       i
         @extend .osg-u-text-3
-  .osg-title-line
+  &__title-line
     display: flex
     flex-direction: row
     justify-content: space-between
     height: 60px
-    .osg-title-line-text
-      padding-left: 15px
-      +osg-mq-tablet-and-up
-        padding-left: 30px
-      background-color: $osg-color-beige-dark
-      width: 100%
-      display: flex
-      h3
-        @extend .osg-u-heading-4
-        align-self: center
-        font-weight: 600
-  .osg-expand-box-content
-    display: none
+  &__title-line-text
+    padding-left: 15px
+    +osg-mq-tablet-and-up
+      padding-left: 30px
+    background-color: $osg-color-beige-dark
+    width: 100%
+    display: flex
+    h3
+      @extend .osg-u-heading-4
+      align-self: center
+      font-weight: 600
   &.osg-v-open
-    .osg-expand-box-content
+    .osg-expand-box__content
       display: block

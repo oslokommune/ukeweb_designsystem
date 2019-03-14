@@ -5,10 +5,6 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-header
-  $root: &
-  $title: #{$root}__title
-  $link: #{$root}__link
-
   color: black
   padding-bottom: 20px
   align-items: center
@@ -31,7 +27,7 @@ $osg-margin-top-bottom-desktop: 25px
       align-self: flex-start
       position: static
 
-  #{$title}
+  &__title
     flex-grow: 1
     margin-left: 0
     +osg-mq-tablet-and-up
@@ -45,7 +41,7 @@ $osg-margin-top-bottom-desktop: 25px
       &:hover
         text-decoration: underline
 
-  #{$link}
+  &__link
     @extend .osg-u-text-3
     flex-grow: 0
     min-width: 150px
