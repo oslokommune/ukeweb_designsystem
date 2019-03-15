@@ -1,10 +1,13 @@
 ### General
+
 This pattern is primarily to be used for previewing part of content basically an image, text and a link.
 
 ### Note on the link
+
 If a the link variable is passed to this patterns twig the whole component will be a link. You can also choose to have a link inside the pattern instead by putting the markup for it inside the "content" block.
 
 ### Blocks
+
 This pattern has one block named "content". Content passed to the block will render below the image and image caption.
 
 ### Examples
@@ -16,17 +19,16 @@ Example of clickable pattern with circular image, text on the left of the image 
 #### Twig include
 
 ```twig
-{% embed 'organisms/navigation/story_preview/story_preview.twig' with {
-  "storyPreview": {
-    "modifiers": "osg-story-preview--left-tablet",
+{% embed 'organisms/navigation/hero/hero.twig' with {
+  "hero": {
+    "modifiers": "osg-hero--circle osg-hero--left-tablet",
     "link": {
       "url": "#",
       "title": "title"
-    },
-    "variant": "osg-v-circle"
+    }
   },
   "shape": {
-    "variant": "osg-v-circle osg-v-image"
+    "variant": "osg-v-image"
   },
   "figure": {
     "modifiers": "osg-u-padding-bottom-medium-mobile-only",
@@ -59,24 +61,27 @@ Example of clickable pattern with circular image, text on the left of the image 
 ```
 
 ### Data Fields
-| Attribute | Type | Values | Default | Description |
-|---|---|---|---|---|
-| variant | String | See variant options below | osg-v-default | Name of the variant |
-| modifiers | String | See modifier options below | null | Name of the modifier |
-| link | Object | *url, *title | null | Makes the story preview a link |
 
-(*) mandatory
+| Attribute | Type   | Values                     | Default       | Description                    |
+| --------- | ------ | -------------------------- | ------------- | ------------------------------ |
+| variant   | String | See variant options below  | osg-v-default | Name of the variant            |
+| modifiers | String | See modifier options below | null          | Name of the modifier           |
+| link      | Object | *url, *title               | null          | Makes the story preview a link |
+
+(\*) mandatory
 
 ### Variant Options
-| Name | Description |
-|------|-------------|
+
+| Name          | Description                                        |
+| ------------- | -------------------------------------------------- |
 | osg-v-default | Is used if nothing is defined. Does nothing extra. |
-| osg-v-circle | Figure is a circle |
 
 ### Modifier Options
-| Name | Description |
-|------|-------------|
-| osg-story-preview--big{-tablet} | Makes the text bigger |
-| osg-story-preview--left{-tablet} | Text on the left of the image |
-| osg-story-preview--right{-tablet} | Text on the right of the image |
-| osg-story-preview--top{-tablet} | Text on the top of the image |
+
+| Name                     | Description                    |
+| ------------------------ | ------------------------------ |
+| osg-hero--circle         | Makes the image circular       |
+| osg-hero--big{-tablet}   | Makes the text bigger          |
+| osg-hero--left{-tablet}  | Text on the left of the image  |
+| osg-hero--right{-tablet} | Text on the right of the image |
+| osg-hero--top{-tablet}   | Text on the top of the image   |
