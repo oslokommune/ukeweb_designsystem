@@ -1,0 +1,20 @@
+{% set linkButtonColor = "osg-link-button-" ~ linkButton.color | default('red') %}
+{% set linkButtonHasDataattrs = linkButton.dataattrs is defined and linkButton.dataattrs is not empty %}
+{% set linkButtonVariant = linkButton.variant | default('osg-v-default') %}
+{% set linkButtonModifiers = linkButton.modifiers | default(null) %}
+{% set linkButtonHref = linkButton.href | default('#') %}
+
+<a
+  class="osg-link-button {{ linkButtonVariant }} {{ linkButtonModifiers }} {{ linkButtonColor }}"
+   href="{{ linkButtonHref }}"
+  {% if linkButtonHasDataattrs %}
+    {% for dataattr in linkButton.dataattrs %}
+      {{dataattr.key}}="{{dataattr.val}}"
+    {% endfor %}
+  {% endif %}
+>
+  <span>
+    {% block content %}
+    {% endblock %}
+  </span>
+</a>
