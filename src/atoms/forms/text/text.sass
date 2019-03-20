@@ -32,7 +32,7 @@
     opacity: 0
   &.osg-v-floating-label
     margin-top: 20px
-    .osg-text-field__input:valid + .osg-text-field__label
+    .osg-text-field__input:valid
       opacity: 1
     .osg-text-field__label
       position: absolute
@@ -45,7 +45,7 @@
       +osg-mq-desktop-and-up
         top: 18px
     .osg-text-field__input:focus + .osg-text-field__label,
-    .osg-text-field__input:not(:focus):valid + .osg-text-field__label
+    .osg-text-field__input:not(:focus):valid
       // Positions the label above the textfield when the textfield is focused
       @extend .osg-u-text-4
       top: -21px
@@ -67,7 +67,7 @@
       left: 18px
       top: 30px
     &__input:focus + &__label,
-    &__input:not(:focus):valid + &__label
+    &__input:not(:focus):valid
       // Positions the label above the textfield when the textfield is focused
       @extend .osg-u-text-4
       top: -17px

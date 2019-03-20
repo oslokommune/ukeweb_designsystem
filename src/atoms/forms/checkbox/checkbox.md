@@ -3,11 +3,11 @@
 Custom checkbox for forms
 
 ### Data
-| Attribute | Type   | Values                      | Default | Description                             |
-| --------- | ------ | --------------------------- | ------- | --------------------------------------- |
-| modifiers | String | See modifier options bellow | null    | Root class to modify styles             |
-| *text     | String | (text value)                | null    | Text of the checkbox                    |
-| dataattr  | Array  | key:String, val:String      | null    | Extra attributes to add to the checkbox |
+| Attribute | Type   | Values                     | Default | Description                             |
+| --------- | ------ | -------------------------- | ------- | --------------------------------------- |
+| modifiers | String | See modifier options below | null    | Root class to modify styles             |
+| *text     | String | (text value)               | null    | Text of the checkbox                    |
+| dataattr  | Array  | key:String, val:String     | null    | Extra attributes to add to the checkbox |
 
 (*) mandatory
 
