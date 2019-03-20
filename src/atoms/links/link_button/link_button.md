@@ -10,21 +10,21 @@ More information about permitted content in links: <a href="https://developer.mo
 Here you can see the different uses of the variants and modifiers with links: <a href="https://codepen.io/oslokommune/pen/LaBKym" target="_blank">https://codepen.io/oslokommune/pen/LaBKym</a>.
 
 ### Data Fields
-| Attribute | Type | Values | Default | Description |
-|---|---|---|---|---|
-| *variant | String | See the "variant options" section below | "osg-v-default" | Name of the variant |
-| modifiers | String | See the "modifier options" section below | null | Root class to modify styles |
-| color | String | See the color options section | "red" | Sets state colors for text and background using global css classes |
-| dataattrs | Object | key and val | null | See example in data tab |
-| url | String | Valid url | '#' | Value of the link's href attribute |
+| Attribute | Type   | Values                                   | Default         | Description                                                        |
+| --------- | ------ | ---------------------------------------- | --------------- | ------------------------------------------------------------------ |
+| *variant  | String | See the "variant options" section below  | "osg-v-default" | Name of the variant                                                |
+| modifiers | String | See the "modifier options" section below | null            | Root class to modify styles                                        |
+| color     | String | See the color options section            | "red"           | Sets state colors for text and background using global css classes |
+| dataattrs | Object | key and val                              | null            | See example in data tab                                            |
+| url       | String | Valid url                                | '#'             | Value of the link's href attribute                                 |
 
 (*) mandatory
 
 
 ### Modifiers Options
-| Name | Description |
-|------|-------------|
-| osg-m-circle | Changes the shape of the icon to be a circle |
+| Name                    | Description                                  |
+| ----------------------- | -------------------------------------------- |
+| osg-link-button--circle | Changes the shape of the icon to be a circle |
 
 ### Color options
 - "blue-dark"
