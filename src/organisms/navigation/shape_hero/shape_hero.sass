@@ -1,0 +1,60 @@
+.osg-shape-hero
+  > .osg-shape
+    text-align: left
+    min-width: 100%
+    +osg-mq-tablet-and-up
+      min-width: calc(50% - 15px)
+      +osg-mq-desktop-and-up
+          min-width: calc(50% - 18px)
+      &:first-child
+        margin-right: 15px
+        +osg-mq-desktop-and-up
+          margin-right: 30px
+    &:last-child
+      display: none
+      +osg-mq-tablet-and-up
+        display: inline-flex
+  &__content
+    display: flex
+    flex-direction: column
+    width: calc(100% - 40px)
+    +osg-mq-desktop-and-up
+      width: calc(100% - 100px)
+  .osg-figure
+    display: grid
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr
+    picture
+      grid-row: 1 / 3
+      grid-column: 1 / 3
+  &__circle-shape
+    background-color: white
+    display: flex
+    flex-direction: column
+    grid-row: 1 / 2
+    grid-column: 1 / 2
+    .osg-shape
+      @extend .osg-shape.osg-v-circle
+
+  .osg-button
+    +osg-mq-desktop-and-up
+      padding: 5px
+
+  &--top-right &
+    &__circle-shape
+      grid-row: 1 / 2
+      grid-column: 2 / 3
+
+  &--bottom-left &
+    &__circle-shape
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+
+  &--bottom-right &
+    &__circle-shape
+      grid-row: 2 / 3
+      grid-column: 2 / 3
+
+  &.osg-v-circle
+    > .osg-shape:last-child
+      @extend .osg-shape.osg-v-circle

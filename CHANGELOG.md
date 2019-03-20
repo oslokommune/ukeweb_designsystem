@@ -24,6 +24,7 @@ See README.md for release description.
 
 - organisms-data_display-simple_table: new pattern.
 - organisms-messages-alert: new pattern.
+- organisms-navigation-shape_hero: new pattern.
 
 ### Removed
 
