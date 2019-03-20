@@ -21,7 +21,7 @@ Here you can see the different uses of the variants and modifiers with buttons: 
 ### Modifiers Options
 | Name | Description |
 |------|-------------|
-| osg-m-circle | Changes the shape of the icon to be a circle |
+| osg-button--circle | Changes the shape of the icon to be a circle |
 
 ### Color options
 - "blue-dark"

@@ -22,7 +22,7 @@ Textfield for user input
 ### Modifier Options
 | Name | Description |
 |------|-------------|
-| osg-m-big | Makes the text field bigger |
+| osg-text-field--big | Makes the text field bigger |
 
 
 

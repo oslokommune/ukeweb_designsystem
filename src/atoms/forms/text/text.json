@@ -7,7 +7,6 @@
     ]
   },
   "text": {
-    "modifiers": "osg-text-field--big",
     "id": "vestibulum1",
     "placeholder": "Nunc elit risus",
     "name": "textfield"
