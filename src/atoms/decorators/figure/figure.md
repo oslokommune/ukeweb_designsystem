@@ -6,6 +6,10 @@ You pass in the default image to figure.img.defaultUrl and add optional media qu
 
 It can be linkable by adding the figure.link.url and figure.link.target.
 
+### Blocks
+
+This pattern has one block named "content". Content passed to the block will render inside the figure element below the image.
+
 ### Data Fields
 
 | Attribute          | Type   | Values                                                                   | Default         | Description                                                                                              |

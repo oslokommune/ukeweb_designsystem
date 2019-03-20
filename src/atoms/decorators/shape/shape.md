@@ -2,9 +2,16 @@
 
 Shape that scales with content. Is shaped like a square by default, but can have different shapes triggered by variant classes.
 
-If used for displaying text it should not contain a lot of content, but rather small data points like tags.
+You can use pass a clean text string to the variable "text", or extend the block "content" with whatever twig content you like.
+
+You can also choose to shape an image by passing in the "osg-v-image" variant and the image data to the figure object.
 
 Shape can be a link as well, you just need to fill the optional attribute "url". By default this link will open in a new window.
+
+### Blocks
+
+- "content": Content passed to the block will render inside the shape.
+- "figureContent": Content passed to the block will render (if image variant is in use) inside the figure element, below the image.
 
 ### Data Fields
 
@@ -12,7 +19,7 @@ Shape can be a link as well, you just need to fill the optional attribute "url".
 | --------- | ------ | ------------------------- | --------------- | ----------------------------- |
 | variant   | String | See variant options below | "osg-v-default" | Name of the variant           |
 | \*text    | String | Clean text content        | null            | Text inside shape             |
-| \*url     | String | Valid url                 | null            | Url to where the shape points |
+| url       | String | Valid url                 | null            | Url to where the shape points |
 
 (\*) mandatory
 
