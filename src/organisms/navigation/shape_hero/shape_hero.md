@@ -8,7 +8,7 @@ This pattern has one block named "content". Content passed to the block will ren
 
 ### Examples
 
-See a html example with search [here](https://codepen.io/oslokommune/pen/zbLXbV)
+See a html example with search, color util classes and a modifier [here](https://codepen.io/oslokommune/pen/zbLXbV)
 
 ### Data Fields
 
