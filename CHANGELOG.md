@@ -40,7 +40,7 @@ util classes: Added -u to the prefix of all utils classes.
 util classes: Added -only postfix to the end of util classes with the -mobile postfix.
 util classes: Added -and-up to the end of the util classes with the -tablet and the -desktop postfix.
 
-- atoms-forms-text: renamed to atoms-forms-text-field
+- atoms-forms-text: renamed to atoms-forms-text_field
 - molecules-content_display-content_box: Refactored out things likely to be changed by consumers.
 - molecules-content_display-expand_box: Refactored out things likely to be changed by consumers.
 - organisms-cards-card: Refactored out things likely to be changed by consumers.
