@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "tags": [
+      "Call to action",
+      "functionality",
+      "link",
+      "click"
+    ]
+  },
+  "linkButton": {
+    "dataattrs": [
+      {"key": "id", "val": "lorem_ipsum"},
+      {"key": "aria-label", "val": "press me"}
+    ],
+    "url": "#"
+  }
+}
