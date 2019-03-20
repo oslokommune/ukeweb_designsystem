@@ -43,7 +43,7 @@
     transform: rotate(45deg)
     width: 5px
 
-  &__filter
+  &--filter
     & input:checked + span
         border-bottom: 3px solid $osg-color-green-light
     span
@@ -51,7 +51,7 @@
       color: $osg-color-green-dark
     &:hover input ~ .osg-checkbox__checkmark
       border: 2px solid transparent
-  &__filter &
+  &--filter &
     &__checkmark
       border: 2px solid transparent
       left: 10px
