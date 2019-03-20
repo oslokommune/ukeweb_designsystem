@@ -2,7 +2,7 @@
   "meta": {
     "tags": ["form", "name", "field"]
   },
-  "text": {
+  "textField": {
     "id": "vestibulum1",
     "placeholder": "Nunc elit risus",
     "name": "textfield"
