@@ -1,10 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "form",
-      "name",
-      "field"
-    ]
+    "tags": ["form", "name", "field"]
   },
   "text": {
     "id": "vestibulum1",
