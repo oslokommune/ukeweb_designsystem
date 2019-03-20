@@ -6,7 +6,7 @@
   "button": {
     "color": "",
     "content": "<i class='fas fa-chevron-up'></i>",
-    "modifiers": "osg-m-circle",
+    "modifiers": "osg-button--circle",
     "dataattrs": [
       {"key": "aria-label", "val": "expand-button"}
     ]
