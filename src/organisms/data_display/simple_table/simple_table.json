@@ -1,10 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "data",
-      "tabular",
-      "information"
-    ]
+    "tags": ["data", "tabular", "information"]
   },
   "simpleTable": {
     "rows": [

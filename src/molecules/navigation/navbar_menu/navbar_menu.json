@@ -12,17 +12,15 @@
   },
   "navbarMenu": {
     "links": [
-      {"text": "Non blandit", "url": "#"},
-      {"text": "Eu scelerisque felis", "url": "#"},
-      {"text": "Lobortis mattis aliquam", "url": "#"},
-      {"text": "Etiam erat velit", "url": "#"},
-      {"text": "Aliquam etiam", "url": "#"},
-      {"text": "Euismod nisi", "url": "#"},
-      {"text": "Vstibulum rhoncus", "url": "#"}
+      { "text": "Non blandit", "url": "#" },
+      { "text": "Eu scelerisque felis", "url": "#" },
+      { "text": "Lobortis mattis aliquam", "url": "#" },
+      { "text": "Etiam erat velit", "url": "#" },
+      { "text": "Aliquam etiam", "url": "#" },
+      { "text": "Euismod nisi", "url": "#" },
+      { "text": "Vstibulum rhoncus", "url": "#" }
     ],
-    "languages": [
-      {"text": "Vivamus", "url": "#"}
-    ],
+    "languages": [{ "text": "Vivamus", "url": "#" }],
     "topDomainLink": {
       "url": "#",
       "text": "Oslo kommune"
@@ -32,7 +30,7 @@
         {
           "link": {
             "url": "#",
-            "target":"_self"
+            "target": "_self"
           },
           "img": {
             "alt": "Lorem ipsum",

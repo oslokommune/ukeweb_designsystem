@@ -8,6 +8,6 @@ Has one block named "content".
 
 ### Data Fields
 
-| Attribute | Type | Values | Default | Description |
-|---|---|---|---|---|
-| variant | String | osg-v-default | osg-v-default | Name of the variant |
+| Attribute | Type   | Values        | Default       | Description         |
+| --------- | ------ | ------------- | ------------- | ------------------- |
+| variant   | String | osg-v-default | osg-v-default | Name of the variant |

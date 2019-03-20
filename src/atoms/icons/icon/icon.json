@@ -1,11 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "decorator",
-      "helper",
-      "image",
-      "figure"
-    ]
+    "tags": ["decorator", "helper", "image", "figure"]
   },
   "icon": {}
 }

@@ -1,11 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "message",
-      "messages",
-      "important",
-      "information"
-    ],
+    "tags": ["message", "messages", "important", "information"],
     "min-height": "500px"
   },
   "alert": {
