@@ -1,14 +1,7 @@
 {
   "meta": {
     "min-height": "100px",
-    "tags": [
-      "links",
-      "related",
-      "go to",
-      "read more",
-      "next",
-      "articles"
-    ]
+    "tags": ["links", "related", "go to", "read more", "next", "articles"]
   },
   "tags": {
     "items": [

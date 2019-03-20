@@ -26,17 +26,15 @@
     },
     "navbarMenu": {
       "links": [
-        {"text": "Non blandit", "url": "#"},
-        {"text": "Eu scelerisque felis", "url": "#"},
-        {"text": "Lobortis mattis aliquam", "url": "#"},
-        {"text": "Etiam erat velit", "url": "#"},
-        {"text": "Aliquam etiam", "url": "#"},
-        {"text": "Euismod nisi", "url": "#"},
-        {"text": "Vstibulum rhoncus", "url": "#"}
+        { "text": "Non blandit", "url": "#" },
+        { "text": "Eu scelerisque felis", "url": "#" },
+        { "text": "Lobortis mattis aliquam", "url": "#" },
+        { "text": "Etiam erat velit", "url": "#" },
+        { "text": "Aliquam etiam", "url": "#" },
+        { "text": "Euismod nisi", "url": "#" },
+        { "text": "Vstibulum rhoncus", "url": "#" }
       ],
-      "languages": [
-        {"text": "Curabitut", "url": "#"}
-      ],
+      "languages": [{ "text": "Curabitut", "url": "#" }],
       "topDomainLink": {
         "url": "#",
         "text": "Oslo kommune"

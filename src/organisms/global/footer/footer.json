@@ -16,14 +16,14 @@
   },
   "footer": {
     "linkList": [
-      {"text": "Lorem ipsum", "url": "#"},
-      {"text": "Dolor sit", "url": "#"},
-      {"text": "Amet consectetur", "url": "#"},
-      {"text": "Adipiscing elit", "url": "#"},
-      {"text": "Morbi vitae convallis", "url": "#"},
-      {"text": "Risus nam", "url": "#"},
-      {"text": "Dignissim vulputate", "url": "#"},
-      {"text": "Mi at porttitor", "url": "#"}
+      { "text": "Lorem ipsum", "url": "#" },
+      { "text": "Dolor sit", "url": "#" },
+      { "text": "Amet consectetur", "url": "#" },
+      { "text": "Adipiscing elit", "url": "#" },
+      { "text": "Morbi vitae convallis", "url": "#" },
+      { "text": "Risus nam", "url": "#" },
+      { "text": "Dignissim vulputate", "url": "#" },
+      { "text": "Mi at porttitor", "url": "#" }
     ],
     "languageLink": {
       "url": "#",
@@ -38,7 +38,7 @@
         {
           "link": {
             "url": "http://google.com",
-            "target":"_self"
+            "target": "_self"
           },
           "img": {
             "alt": "Lorem ipsum",

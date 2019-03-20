@@ -1,19 +1,12 @@
 {
   "meta": {
-    "tags": [
-      "label",
-      "todo",
-      "form",
-      "field",
-      "accept",
-      "gdpr"
-    ]
+    "tags": ["label", "todo", "form", "field", "accept", "gdpr"]
   },
   "checkbox": {
     "text": "laoreet lacinia neque",
     "dataattrs": [
-      {"key": "id", "val": "my-checkbox"},
-      {"key": "name", "val": "my-checkbox"}
+      { "key": "id", "val": "my-checkbox" },
+      { "key": "name", "val": "my-checkbox" }
     ]
   }
 }

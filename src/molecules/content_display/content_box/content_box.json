@@ -1,11 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "content",
-      "text",
-      "info",
-      "article"
-    ]
+    "tags": ["content", "text", "info", "article"]
   },
   "contentBox": {}
 }
