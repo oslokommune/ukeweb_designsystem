@@ -4,7 +4,7 @@ This pattern is primarily a link with different designs and uses. Keep in mind t
 ### Blocks
 This pattern has one block named "content". Content passed to the block will render inside the link.
 
-More information about permitted content in blocks: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a>
+More information about permitted content in links: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a>
 
 ### Examples
 Here you can see the different uses of the variants and modifiers with links: <a href="https://codepen.io/oslokommune/pen/LaBKym" target="_blank">https://codepen.io/oslokommune/pen/LaBKym</a>.
@@ -16,6 +16,7 @@ Here you can see the different uses of the variants and modifiers with links: <a
 | modifiers | String | See the "modifier options" section below | null | Root class to modify styles |
 | color | String | See the color options section | "red" | Sets state colors for text and background using global css classes |
 | dataattrs | Object | key and val | null | See example in data tab |
+| url | String | Valid url | '#' | Value of the link's href attribute |
 
 (*) mandatory
 
