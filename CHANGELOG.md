@@ -43,6 +43,7 @@ util classes: Added -and-up to the end of the util classes with the -tablet and 
 - organisms-cards-card: Refactored out things likely to be changed by consumers.
 - organisms-cards-list_card: Refactored out things likely to be changed by consumers.
 - organisms-navigation-story_preview: Refactored out things likely to be changed by consumers.
+- organisms-navigation-story_preview: Renamed to Hero.
 
 ## [0.14.0] - 2019-02-06
 
