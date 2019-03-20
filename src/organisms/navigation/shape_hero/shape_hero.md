@@ -42,6 +42,16 @@ example data:
 | osg-v-default | Is used if nothing is defined. Does nothing extra. |
 | osg-v-circle  | Will make the second big box circular              |
 
+### Modifier Options
+
+Theese modifiers only work on the default variant.
+
+| Name                         | Description                                                 |
+| ---------------------------- | ----------------------------------------------------------- |
+| osg-shape-hero--top-right    | Places the circle to the top right of the second big box    |
+| osg-shape-hero--bottom-left  | Places the circle to the bottom left of the second big box  |
+| osg-shape-hero--bottom-right | Places the circle to the bottom right of the second big box |
+
 ### Coloring
 
 You can the different parts of this pattern.

@@ -40,6 +40,21 @@
     +osg-mq-desktop-and-up
       padding: 5px
 
+  &--top-right &
+    &__circle-shape
+      grid-row: 1 / 2
+      grid-column: 2 / 3
+
+  &--bottom-left &
+    &__circle-shape
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+
+  &--bottom-right &
+    &__circle-shape
+      grid-row: 2 / 3
+      grid-column: 2 / 3
+
   &.osg-v-circle
     > .osg-shape:last-child
       @extend .osg-shape.osg-v-circle
