@@ -1,13 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "image",
-      "name",
-      "person",
-      "people",
-      "telephone number",
-      "email"
-    ]
+    "tags": ["image", "name", "person", "people", "telephone number", "email"]
   },
   "contactPerson": {
     "name": "Mauris faucibus",
