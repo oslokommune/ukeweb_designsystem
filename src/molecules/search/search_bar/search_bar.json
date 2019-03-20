@@ -2,6 +2,7 @@
   "meta": {
     "tags": ["search", "input", "searchbar"]
   },
+  "search_bar": {},
   "text": {
     "variant": "osg-v-floating-label",
     "name": "textfield",
@@ -10,8 +11,6 @@
   },
   "button": {
     "modifiers": "osg-button--circle",
-    "dataattrs": [
-      {"key": "aria-label", "val": "Search"}
-    ]
+    "dataattrs": [{ "key": "aria-label", "val": "Search" }]
   }
 }
