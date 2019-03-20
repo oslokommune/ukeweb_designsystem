@@ -2,6 +2,7 @@
   "meta": {
     "tags": ["search", "input", "searchbar"]
   },
+  "search_bar": {},
   "text": {
     "variant": "osg-v-floating-label",
     "name": "textfield",
@@ -9,7 +10,6 @@
     "id": "searchbar"
   },
   "button": {
-    "text": "<i class='fas fa-search osg-searchbar__icon'></i>",
     "modifiers": "osg-m-circle",
     "dataattrs": [
       {"key": "aria-label", "val": "Search"}
