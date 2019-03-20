@@ -1,4 +1,4 @@
-=osg-story-preview--top($root)
+=osg-hero--top($root)
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -9,7 +9,7 @@
     &__tag
       padding-top: unset
 
-=osg-story-preview--left($root)
+=osg-hero--left($root)
   display: flex
   flex-direction: row
   align-items: center
@@ -25,7 +25,7 @@
     +osg-mq-tablet-and-up
         margin-right: 60px
 
-=osg-story-preview--right($root)
+=osg-hero--right($root)
   display: flex
   flex-direction: row
   align-items: center
@@ -40,25 +40,29 @@
     margin-right: unset
     order: 2
 
-.osg-story-preview
+.osg-hero
   text-decoration: none
   .osg-content-box
     background: transparent
     &__container
       padding: unset
 
+  &--circle
+    .osg-shape
+      @extend .osg-shape.osg-v-circle
+
   &--right
-    +osg-story-preview--right('.osg-story-preview')
+    +osg-hero--right('.osg-hero')
   &--left
-    +osg-story-preview--left('.osg-story-preview')
+    +osg-hero--left('.osg-hero')
   &--top
-    +osg-story-preview--top('.osg-story-preview')
+    +osg-hero--top('.osg-hero')
   &--left-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--left('.osg-story-preview')
+      +osg-hero--left('.osg-hero')
   &--right-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--right('.osg-story-preview')
+      +osg-hero--right('.osg-hero')
   &--top-tablet
     +osg-mq-tablet-and-up
-      +osg-story-preview--top('.osg-story-preview')
+      +osg-hero--top('.osg-hero')

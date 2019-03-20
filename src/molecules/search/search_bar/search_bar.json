@@ -10,9 +10,7 @@
     "id": "searchbar"
   },
   "button": {
-    "modifiers": "osg-m-circle",
-    "dataattrs": [
-      {"key": "aria-label", "val": "Search"}
-    ]
+    "modifiers": "osg-button--circle",
+    "dataattrs": [{ "key": "aria-label", "val": "Search" }]
   }
 }

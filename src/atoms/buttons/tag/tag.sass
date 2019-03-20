@@ -1,5 +1,5 @@
 =osg-tag-helper($osg-color-name, $background, $foreground)
-  .osg-tag.osg-tag-#{$osg-color-name}
+  a.osg-tag.osg-tag--#{$osg-color-name}
     color: $foreground
     border: 2px solid $background
     &:hover, &:active, &:focus, &:visited
@@ -9,7 +9,6 @@
 @each $name, $tuple in $osg-named-colors
   // button-colors is a map from name to a tuple with two color values which we extract using the nth function
   +osg-tag-helper($name, nth($tuple, 1), nth($tuple, 2))
-
 
 .osg-tag
   display: inline-block

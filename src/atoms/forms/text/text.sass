@@ -14,7 +14,7 @@
   flex-direction: column
   flex-grow: 1
   position: relative
-  .osg-text-field-input
+  &__input
     @extend .osg-u-text-3
     background-color: $osg-color-grey-light
     border: none
@@ -25,17 +25,17 @@
       height: 70px
     &::placeholder
       color: transparent
-  .osg-text-field-label
+  &__label
     position: absolute
     left: 13px
     top: 18px
-  .osg-text-field-input:valid + .osg-text-field-label
+  &__input:valid + &__label
     opacity: 0
-  &.osg-v-floating-label
-    margin-top: 20px
-    .osg-text-field-input:valid + .osg-text-field-label
-      opacity: 1
-    .osg-text-field-label
+  &.osg-v-floating-label &
+    &__input::placeholder
+      opacity: 0
+      color: transparent
+    &__label
       position: absolute
       pointer-events: none
       transition: .2s ease-out
@@ -45,27 +45,26 @@
       top: 15px
       +osg-mq-desktop-and-up
         top: 18px
-    .osg-text-field-input:focus + .osg-text-field-label,
-    .osg-text-field-input:not(:focus):valid + .osg-text-field-label
+    &__input:valid + .osg-text-field__label
+      opacity: 1
+    &__input:focus + .osg-text-field__label,
+    &__input:not(:focus):valid + .osg-text-field__label
       // Positions the label above the textfield when the textfield is focused
       @extend .osg-u-text-4
       top: -21px
       +osg-mq-desktop-and-up
         top: -23px
-    .osg-text-field-input::placeholder
-      opacity: 0
-      color: transparent
-  &.osg-m-big
-    .osg-text-field-label
+  &.osg-v-floating-label
+    margin-top: 20px
+  &--big &
+    &__label
       left: 18px
       top: 30px
-    .osg-text-field-input
+    &__input
       @extend .osg-u-text-3
       padding: 15px
       height: 83px
-    &.osg-v-floating-label
-      .osg-text-field-input:focus + .osg-text-field-label,
-      .osg-text-field-input:not(:focus):valid + .osg-text-field-label
-        // Positions the label above the textfield when the textfield is focused
-        @extend .osg-u-text-4
-        top: -17px
+  &--big.osg-v-floating-label &
+    &__label
+      left: 18px
+      top: 30px
