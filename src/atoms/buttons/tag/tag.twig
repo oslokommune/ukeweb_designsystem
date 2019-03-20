@@ -1,7 +1,7 @@
-{% set state = "osg-tag-" ~ tag.state | default('success') %}
+{% set color = "osg-tag--" ~ tag.color | default('success') %}
 {% set tagVariant = tag.variant | default('osg-v-default') %}
 {% set tagModifiers = tag.modifiers | default(null) %}
 
-<a href="{{ tag.url }}" class="osg-tag {{ tagVariant }} {{ state }} {{ tagModifiers }}">
+<a href="{{ tag.url }}" class="osg-tag {{ tagVariant }} {{ color }} {{ tagModifiers }}">
   {{ tag.content }}
 </a>

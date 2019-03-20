@@ -1,4 +1,4 @@
-{% set buttonColor = "osg-button-" ~ button.color | default('red') %}
+{% set buttonColor = "osg-button--" ~ button.color | default('red') %}
 {% set buttonHasDataattrs = button.dataattrs is defined and button.dataattrs is not empty %}
 {% set buttonVariant = button.variant | default('osg-v-default') %}
 {% set buttonModifiers = button.modifiers | default(null) %}
@@ -11,6 +11,5 @@
     {% endfor %}
   {% endif %}
 >
-  {% block content %}
-  {% endblock %}
+  {% block content %}{% endblock %}
 </button>

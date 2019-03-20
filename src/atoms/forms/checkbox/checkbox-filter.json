@@ -12,6 +12,6 @@
   "checkbox": {
     "text": "Quisque lacinia",
     "variant": "osg-v-filter",
-    "modifiers": "osg-m-filter"
+    "modifiers": "osg-checkbox__filter"
   }
 }

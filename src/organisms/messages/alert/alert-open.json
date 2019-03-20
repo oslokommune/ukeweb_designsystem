@@ -3,7 +3,7 @@
     "variant": "osg-v-open"
   },
   "button": {
-    "modifiers": "osg-m-circle",
+    "modifiers": "osg-button--circle",
     "color": "yellow"
   }
 }
