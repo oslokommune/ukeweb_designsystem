@@ -1,4 +1,4 @@
-{% set state = "osg-tag-" ~ tag.state | default('success') %}
+{% set state = "osg-tag--" ~ tag.state | default('success') %}
 {% set tagVariant = tag.variant | default('osg-v-default') %}
 {% set tagModifiers = tag.modifiers | default(null) %}
 

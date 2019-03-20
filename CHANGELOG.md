@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 
+- all atoms: changed to bem css standard
 - all organisms: changed to bem css standard
 - global styles: made text dark blue by default.
 - global styles: made links dark blue with underline.

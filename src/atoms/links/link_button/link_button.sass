@@ -19,7 +19,7 @@
       &:hover
         background-color: lighten($background, 5%)
 
-  .osg-link-button.osg-m-circle
+  .osg-link-button.osg-link-button--circle
     &.osg-button-#{$color-name}
       &:focus
         .osg-shape
@@ -43,8 +43,7 @@
 @each $name, $text, $background in $osg-button-colors
   +osg-button-helper($name, $text, $background)
 
-.osg-link-button
-  &.osg-m-circle
+.osg-link-button.osg-link-button--circle
     background: none
     border: none
     color: inherit

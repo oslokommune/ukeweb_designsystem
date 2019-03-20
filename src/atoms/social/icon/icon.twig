@@ -8,7 +8,7 @@
       {{ icon.brand|raw }}
   </div>
   {% if hasText and hasTextVisible %}
-    <span class="osg-icon-text {{ (icon.textVisible == true) ? '' : 'osg-sr-only' }}">
+    <span class="osg-social-icon__text {{ (icon.textVisible == true) ? '' : 'osg-sr-only' }}">
     {{ icon.text }}
   </span>
   {% endif %}
