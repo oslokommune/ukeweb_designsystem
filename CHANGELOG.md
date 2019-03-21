@@ -28,6 +28,7 @@ See README.md for release description.
 
 ### Removed
 
+- molecules-contact-contact_person: removed pattern.
 - atoms-messages-alert: removed pattern.
 - organisms-cards-shape_card: removed pattern.
 - atoms-text-ingress: removed pattern.
