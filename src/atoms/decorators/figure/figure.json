@@ -1,12 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "image",
-      "photo",
-      "caption",
-      "image text",
-      "helper"
-    ]
+    "tags": ["image", "photo", "caption", "image text", "helper"]
   },
   "figure": {
     "caption": "Lorem ipsum dolor sit amet",

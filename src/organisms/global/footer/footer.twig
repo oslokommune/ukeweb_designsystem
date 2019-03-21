@@ -1,29 +1,30 @@
 {% set hasTopDomainLink = footer.topDomainLink is defined and footer.topDomainLink is not empty %}
+{% set footerModifiers = footer.modifiers | default(null) %}
 
-<div class="osg-footer {{ footer.modifiers | default(null) }}">
+<div class="osg-footer {{ footerModifiers }}">
   {% set half = footer.linkList|length / 2 %}
   {% for row in footer.linkList|batch(half) %}
-  <div class="osg-links">
+  <div class="osg-footer__links">
     {% for item in row %}
       <a href="{{ item.url }}">{{ item.text }}</a>
     {% endfor %}
   </div>
   {% endfor %}
-  <div class="osg-social-icon-list">
+  <div class="osg-footer__social-icon-list">
     {% include 'molecules/social/icon_list/icon_list.twig' %}
   </div>
-  <div class="osg-logos">
+  <div class="osg-footer__logos">
     {% for figure in footer.logos.figures %}
       {% include "atoms/decorators/figure/figure.twig" with figure %}
     {% endfor %}
 
     {% if hasTopDomainLink %}
-      <div class="osg-logo-wrapper">
+      <div class="osg-footer__logo-wrapper">
         <a href="{{ footer.topDomainLink.url }}" target="_blank">{{ footer.topDomainLink.text }}</a>
       </div>
     {% endif %}
   </div>
-  <div class="osg-lang">
+  <div class="osg-footer__lang">
     <a href="{{ footer.languageLink.url }}">{{ footer.languageLink.text }}</a>
   </div>
 </div>

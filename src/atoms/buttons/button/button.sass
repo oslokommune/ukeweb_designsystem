@@ -1,64 +1,35 @@
-// helper mixin for making buttons
-=osg-button-helper($color-name, $foreground, $background)
-  .osg-button.osg-v-default
-    box-sizing: content-box
-    display: inline-block
-    padding: 15px 30px
-    font-size: $osg-font-size-18
-    border-radius: 0
-    line-height: 1.5
-    min-height: 1.5em
-    &.osg-button-#{$color-name}
-      &,
-      &:active,
-      &:focus,
-      &:visited
-        color: $foreground
-        border: 1px solid $background
-        background-color: $background
-      &:hover,
-        background-color: lighten($background, 5%)
-  .osg-button.osg-v-circle
-    &.osg-button-#{$color-name}
-      &:focus
-        .osg-shape
-          box-shadow: 0 0 2px 2px Highlight
-      &:active
-        .osg-shape
-          background-color: $background
-      .osg-shape
-        border: 1px solid rgba(0, 0, 0, 0)
-        background-color: $background
-        color: $foreground
-      &:hover
-        .osg-shape
-          background-color: lighten($background, 5%)
-      &:active
-        .osg-shape
-          background-color: $background
-          transform: scale(0.97)
-
-// looping map from maps.scss
-@each $name, $tuple in $osg-named-colors
-  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
-  +osg-button-helper($name, nth($tuple, 1), nth($tuple, 2))
-
 .osg-button
-  &.osg-v-circle
-    background: none
-    color: inherit
-    border: none
-    padding: 0
-    font: inherit
+  @extend .osg-u-text-3
+  box-sizing: content-box
+  display: inline-block
+  padding: 15px 30px
+  border-radius: 0
+  line-height: 1.5
+  min-height: 1.5em
+
+  &--circle
     cursor: pointer
-    outline: inherit
+    font: inherit
+    outline: none
+    padding: 0
+    border-radius: 50%
     user-select: none
 
-    span
-      margin: 0
+    i
+      margin: 20px
 
-a.osg-button
-  text-decoration: none
-
-.osg-button.osg-v-default
-  @extend .osg-button
+  @each $name, $text, $background in $osg-button-colors
+    &--#{$name}
+      color: $text
+      background: $background
+      border: 1px solid $background
+      &:focus
+        box-shadow: 0 0 2px 2px Highlight	
+      &:active
+        background-color: $background
+        border: 1px solid rgba(0, 0, 0, 0)
+        background-color: $background
+        transform: scale(0.97)
+        color: $text
+      &:hover
+        background-color: lighten($background, 5%)

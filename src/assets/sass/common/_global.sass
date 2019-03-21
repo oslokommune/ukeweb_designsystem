@@ -2,7 +2,7 @@
 // GLOBALS
 // ============================================================================
 //
-// Provides a set of global styles availible for consumers and patterns.
+// Provides a set of global styles available for consumers and patterns.
 
 /* ---------------- GENERAL -----------------*/
 @import '~minireset.css/minireset.sass'
@@ -11,19 +11,25 @@
 @import 'global/content'
 
 body, html
-  background-color: $osg-color-white
+  background-color: white
   font-family: 'Oslo Sans', 'sans-serif'
   font-size: 100%
-  font-weight: normal
+  font-weight: 300
+  color: $osg-color-blue-dark
 
 p
-  font-size: $osg-font-size-18
-  +osg-mq-tablet-and-up
-    font-size: $osg-font-size-20
+  @extend .osg-u-text-3
 
 a
-  color: $osg-color-grey-light
-  text-decoration: underline
+  text-decoration: none
+  &:link,
+  &:visited
+    color: $osg-color-purple-visited
+  &:hover
+    color: $osg-color-blue-hover
+    text-decoration: underline
+  &:active
+    color: $osg-color-blue-dark
 
 hr
   height: 1px
@@ -53,19 +59,17 @@ h1, h2, h3, h4, h5
     margin-bottom: 0.4em
     hyphens: auto
   h1
-    @extend .osg-text-is-size-1
+    @extend .osg-u-heading-1
   h2
-    @extend .osg-text-is-size-2
+    @extend .osg-u-heading-2
   h3
-    @extend .osg-text-is-size-3
+    @extend .osg-u-heading-3
   h4
-    @extend .osg-text-is-size-4
+    @extend .osg-u-heading-4
   h5
-    @extend .osg-text-is-size-5
+    @extend .osg-u-heading-5
   ul li, ol li
-  font-size: $osg-font-size-18
-  +osg-mq-tablet-and-up
-    font-size: $osg-font-size-20
+    @extend .osg-u-text-3
   strong
     font-weight: bold
 

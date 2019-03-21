@@ -1,0 +1,68 @@
+=osg-hero--top($root)
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  #{$root}__image
+    padding-top: 30px
+    order: 2
+  .osg-content-box
+    &__tag
+      padding-top: unset
+
+=osg-hero--left($root)
+  display: flex
+  flex-direction: row
+  align-items: center
+  #{$root}__image
+    order: 2
+    margin-right: unset
+    padding-top: unset
+  .osg-content-box
+    margin-right: 30px
+    order: 1
+    &__tag
+      padding-top: unset
+    +osg-mq-tablet-and-up
+        margin-right: 60px
+
+=osg-hero--right($root)
+  display: flex
+  flex-direction: row
+  align-items: center
+  #{$root}__image
+    order: 1
+    margin-right: 30px
+    padding-top: unset
+    +osg-mq-tablet-and-up
+      margin-right: 60px
+  .osg-content-box
+    flex: unset
+    margin-right: unset
+    order: 2
+
+.osg-hero
+  text-decoration: none
+  .osg-content-box
+    background: transparent
+    &__container
+      padding: unset
+
+  &--circle
+    .osg-shape
+      @extend .osg-shape.osg-v-circle
+
+  &--right
+    +osg-hero--right('.osg-hero')
+  &--left
+    +osg-hero--left('.osg-hero')
+  &--top
+    +osg-hero--top('.osg-hero')
+  &--left-tablet
+    +osg-mq-tablet-and-up
+      +osg-hero--left('.osg-hero')
+  &--right-tablet
+    +osg-mq-tablet-and-up
+      +osg-hero--right('.osg-hero')
+  &--top-tablet
+    +osg-mq-tablet-and-up
+      +osg-hero--top('.osg-hero')

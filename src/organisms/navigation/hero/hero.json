@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "tags": [
+      "article",
+      "preview",
+      "square",
+      "circle",
+      "image",
+      "figure",
+      "picture",
+      "link",
+      "summary"
+    ]
+  },
+  "hero": {},
+  "shape": {
+    "variant": "osg-v-image"
+  },
+  "figure": {
+    "caption": "Dolor sit amet",
+    "img": {
+      "alt": "Lorem ipsum dolor sit amet.",
+      "defaultUrl": "https://picsum.photos/500/500/?random",
+      "mediaQueryUrls": [
+        {
+          "query": "max-width: 768px",
+          "url": "https://picsum.photos/300/300/?random"
+        },
+        {
+          "query": "min-width: 769px",
+          "url": "https://picsum.photos/500/500/?random"
+        }
+      ]
+    }
+  }
+}

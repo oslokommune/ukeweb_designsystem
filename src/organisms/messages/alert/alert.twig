@@ -1,0 +1,42 @@
+{% set alertHasUpdated = alert.updated is defined and alert.updated is not empty %}
+{% set alertHasButton = button is defined and button is not empty %}
+{% set alertVariant = alert.variant|default('osg-v-default') %}
+{% set alertModifiers = alert.modifiers | default(null) %}
+{% set alertState = 'osg-alert--state-' ~ alert.state | default('default') %}
+
+{% set alertCloseButtonContent %}
+   {% block closeButtonContent %}
+    <i class='fa fa-times'><span class='osg-sr-only'>Lukk varsel</span></i>
+   {% endblock %}
+{% endset %}
+
+<div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
+  <button
+    class="osg-alert__trigger"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-label="{{ alert.ariaLabel | default('Viktig melding') }}"
+    role="alertdialog"
+  >
+    {% block content %}
+    {% endblock %}
+  </button>
+  <div class="osg-alert__overlay-wrapper">
+    <div class="osg-alert__overlay">
+      <div class="osg-alert__overlay-top">
+        <div class="osg-alert__white-space" aria-hidden></div>
+        {% if alertHasButton %}
+          {% embed "atoms/buttons/button/button.twig" %}
+            {% block content %}
+              {{ alertCloseButtonContent }}
+            {% endblock %}
+          {% endembed %}
+        {% endif %}
+      </div>
+      <div class="osg-alert__content osg-content">
+        {% block message %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

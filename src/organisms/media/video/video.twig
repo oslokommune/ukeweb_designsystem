@@ -1,9 +1,11 @@
 {% set hasSubtitlesUrl = video.subtitlesUrl is defined and video.subtitlesUrl is not empty %}
+{% set videoVariant = video.variant | default('osg-v-default') %}
+{% set videoModifiers = video.modifiers | default(null) %}
 
-<div class="osg-video {{ video.variant | default('osg-v-default')  }} {{ video.modifiers | default(null) }}">
+<div class="osg-video {{ videoVariant }} {{ videoModifiers }}">
 {% if video.variant is defined and video.variant == "osg-v-video-custom-controls" %}
-  <button class="btn-overlay-play">
-    <div class="overlay-play"></div>
+  <button class="osg-video__btn-overlay-play">
+    <div class="osg-video__overlay-play"></div>
     <span class="osg-sr-only">{{ video.playBtnText}}</span>
   </button>
 {% endif %}
@@ -26,5 +28,5 @@
       {% endif %}
       default>
   </video>
-  <div class="footer">{{ video.footer }}</div>
+  <div class="osg-video__footer">{{ video.footer }}</div>
 </div>

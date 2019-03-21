@@ -1,39 +1,35 @@
 {% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
-{% set hasList = expandBox.list is defined and expandBox.list is not empty %}
+{% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
+{% set expandBoxModifiers = expandBox.modifiers | default(null) %}
 
-<div class="osg-expand-box {{ expandBox.variant | default("osg-v-default") }} {{ expandBox.modifiers | default(null) }}">
-  {% block head %}
-    <div class="osg-title-line">
-      {% if hasTitle %}
-        <div class="osg-title-line-text">
-          <h3>{{ expandBox.title }}</h3>
-        </div>
-      {% endif %}
-      {% include "atoms/buttons/button/button.twig" %}
-    </div>
-  {% endblock %}
-  {% block body %}
-  <div class="osg-expand-box-content" aria-haspopup="true" aria-expanded="false">
-    {% embed 'molecules/content_display/content_box/content_box.twig' %}
-      {% block head %}
-        {{ parent() }}
-      {% endblock %}
-      {% block body %}
-        {{ parent() }}
-        {% if hasList %}
-          <ul>
-            {% for element in expandBox.list %}
-              <li>- {{ element }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endblock %}
-      {% block footer %}
-        {{ parent() }}
+{% set expandBoxContent %}
+   {% block content %}{% endblock %}
+{% endset %}
+
+{% set expandBoxButtonContent %}
+   {% block buttonContent %}
+    <i class='fas fa-chevron-down'></i>
+   {% endblock %}
+{% endset %}
+
+<div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
+  <div class="osg-expand-box__title-line">
+    {% if hasTitle %}
+      <div class="osg-expand-box__title-line-text">
+        <h3>{{ expandBox.title }}</h3>
+      </div>
+    {% endif %}
+    {% embed "atoms/buttons/button/button.twig" %}
+      {% block content %}
+        {{ expandBoxButtonContent }}
       {% endblock %}
     {% endembed %}
   </div>
-  {% endblock %}
-  {% block footer %}
-  {% endblock %}
+  <div class="osg-expand-box__content" aria-haspopup="true" aria-expanded="false">
+    {% embed 'molecules/content_display/content_box/content_box.twig' %}
+      {% block content %}
+        {{ expandBoxContent }}
+      {% endblock %}
+    {% endembed %}
+  </div>
 </div>

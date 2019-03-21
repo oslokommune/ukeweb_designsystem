@@ -1,10 +1,15 @@
 ### General
+
 Used to tell the user to take action, like volunteering or donating to some cause.
 
-### Data Fields
-| Attribute | Type | Values | Default | Description |
-|---|---|---|---|---|
-| *heading | String | Clean text content | null | Heading text |
-| *content | String | Clean text content | null | Brief intro explaining what to expect when clicking button |
+### Examples
 
-**See the figure and button patterns docs to see their data field descriptions.**
+You can see a dummy html example on Codepen [here](https://codepen.io/oslokommune/pen/pYPWVj).
+
+### Blocks
+
+This pattern has one block named "content". Content passed to the block will render below the box on top of the image.
+
+### Data Fields
+
+**See the figure pattern docs to see its data field descriptions.**

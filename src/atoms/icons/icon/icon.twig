@@ -1,4 +1,7 @@
-<div class="osg-icon {{ icon.variant | default('osg-v-default') }} {{ icon.modifiers | default(null) }}">
+{% set iconVariant = icon.variant | default('osg-v-default') %}
+{% set iconModifiers = icon.modifiers | default(null) %}
+
+<div class="osg-icon {{ iconVariant }} {{ iconModifiers }}">
 {% if icon.srText is defined %}
   <span class="osg-sr-only">{{ icon.srText }}</span>
 {% endif %}

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "tags": ["data", "tabular", "information"]
+  },
+  "simpleTable": {
+    "rows": [
+      {
+        "isHead": true,
+        "cells": [
+          {
+            "content": "Consectetur adipiscing elit"
+          },
+          {
+            "content": "Curabitur ac elit"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": "<a href='#'>Lorem ipsum</a>"
+          },
+          {
+            "content": "Dolor <strong>sit</strong> amet"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": "Phasellus luctus"
+          },
+          {
+            "content": "<span class='osg-simple-table__data-separator'>Ut dictum</span><span class='osg-simple-table__data-separator'>Proin sed quam</span>"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": "Consectetur adipiscing elit"
+          },
+          {
+            "content": "Curabitur ac elit"
+          }
+        ]
+      }
+    ]
+  }
+}

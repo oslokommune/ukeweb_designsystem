@@ -1,0 +1,9 @@
+{
+  "alert": {
+    "variant": "osg-v-open"
+  },
+  "button": {
+    "modifiers": "osg-button--circle",
+    "color": "yellow"
+  }
+}

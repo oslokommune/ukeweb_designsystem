@@ -15,22 +15,6 @@ $shape-size-tablet: 210px
   a
     text-decoration: none
     user-select: none
-  .osg-body-heading
-    font-weight: 600
-  .osg-body-text
-    padding-top: 10px
-    padding-bottom: 15px
-  .osg-date
-    font-size: 18px
-  .osg-container
-    padding: 30px 40px 20px 40px
-    .osg-content-box-tag
-      padding-bottom: 10px
-    .osg-extra-link
-      padding-top: 25px
-      font-size: 20px
-    .osg-content
-      padding-top: 10px
   .osg-shape.osg-v-image
     align-self: start
     flex-shrink: 20
@@ -51,22 +35,20 @@ $shape-size-tablet: 210px
       display: block
       min-width: 100%
       max-width: 100%
-  .osg-tags
-    padding-top: 15px
 
-  .osg-state-text
+  &__state-text
+    @extend .osg-u-heading-3
     display: none
     position: absolute
     text-align: center
     z-index: 1
     top: calc((#{$shape-size-mobile} / 2) - (#{$osg-font-size-16} / 2))
     width: $shape-size-mobile
-    font-size: $osg-font-size-16
     +osg-mq-tablet-and-up
       top: calc((#{$shape-size-tablet} / 2) - (#{$osg-font-size-28} / 2))
       width: $shape-size-tablet
-      font-size: $osg-font-size-28
-  .osg-search-result
+
+  &__search-result
     display: none
     text-decoration: none
     padding-top: 15px
@@ -79,11 +61,18 @@ $shape-size-tablet: 210px
       transform: scale(1.2)
 
   /* modifiers styles */
-  &.osg-m-show-search-result
-    .osg-search-result
-      display: block
-  +osg-common-card-with-state-modifier
-  &.osg-m-with-state
+  &--with-state &
+      &__state-text
+        display: block
+      &__search-result
+        border-color: white
+      &__image-container
+        +osg-helper-filter($osg-color-green-dark)
+  &--with-state
+    a
+      color: white
+    .osg-content-box
+      background-color: $osg-color-green-dark
     .osg-shape
       position: relative
       height: 100%
@@ -92,7 +81,11 @@ $shape-size-tablet: 210px
       &.osg-v-circle
         border-radius: 50%
 
-  &.osg-m-animate
+  &--show-search-result &
+    &__search-result
+      display: block
+
+  &--animate
     .osg-shape
       +osg-animation-scale-in(1.2s)
     .osg-content-box

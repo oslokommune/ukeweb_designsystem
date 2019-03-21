@@ -1,24 +1,6 @@
 {
   "meta": {
-    "tags": [
-      "content",
-      "text",
-      "info",
-      "article"
-    ]
+    "tags": ["content", "text", "info", "article"]
   },
-  "contentBox": {
-    "tag": "Consectetur ",
-    "date": "7. volutpat - 11. elementum",
-    "heading": "Pellentesque habitant morbi",
-    "text": "15:30 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "link": {
-      "url": "#",
-      "text": "Nulla vel orci ut erat volutpat.",
-      "srText": "This text is only for screen readers"
-    }
-  },
-  "icon": {
-    "variant": "osg-v-icon-chevron-right"
-  }
+  "contentBox": {}
 }

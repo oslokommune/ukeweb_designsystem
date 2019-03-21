@@ -9,19 +9,18 @@
   ul
     list-style-type: none
     li
+      @extend .osg-u-text-4
       display: block
-      font-size: $osg-font-size-14
       margin: 15px 0 15px 0
       font-weight: bold
       +osg-mq-tablet-and-up
-        font-size: $osg-font-size-18
         margin: 40px 0
       p
         margin-bottom: 5px
       a
         color: $osg-color-green-dark
         text-decoration: underline
-      .osg-info-list-text-wrapper
-        margin: 10px 0 10px 0
-        +osg-mq-tablet-and-up
-          margin: 10px 0 10px 0
+  &__text-wrapper
+    margin: 10px 0 10px 0
+    +osg-mq-tablet-and-up
+      margin: 10px 0 10px 0

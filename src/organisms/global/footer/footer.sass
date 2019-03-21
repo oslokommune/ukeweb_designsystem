@@ -1,15 +1,15 @@
 .osg-footer
+  @extend .osg-u-text-3
   align-items: flex-start
   background-color: white
   display: flex
-  font-size: $osg-font-size-20
   flex-direction: column
   justify-content: space-between
   +osg-mq-tablet-and-up
     align-items: center
     flex-direction: row
 
-  .osg-links
+  &__links
     display: flex
     flex-wrap: wrap
     flex-direction: column
@@ -30,7 +30,7 @@
       &:visited
         color: $osg-color-green-dark
       &:hover
-        color: $osg-color-green-darker
+        color: black
         text-decoration: underline
       &:active
         color: $osg-color-green-dark
@@ -38,12 +38,12 @@
     a:not(:last-child)
       margin-bottom: 25px
 
-  .osg-social-icon-list
+  &__social-icon-list
     margin-bottom: 40px
     +osg-mq-tablet-and-up
       margin-bottom: 0
 
-  .osg-logos
+  &__logos
     align-items: center
     display: flex
     flex-wrap: wrap
@@ -58,16 +58,14 @@
       +osg-mq-tablet-and-up
         width: 118px
 
-    .osg-logo-wrapper
-      background: #f2f2f2
-      align-self: stretch
-      padding: 10px
-      display: flex
-      align-items: center
+  &__logo-wrapper
+    background: #f2f2f2
+    align-self: stretch
+    padding: 10px
+    display: flex
+    align-items: center
 
-
-
-  .osg-lang
+  &__lang
     align-self: flex-start
     margin-bottom: 40px
     +osg-mq-tablet-and-up

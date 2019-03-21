@@ -1,13 +1,8 @@
 {
   "meta": {
-    "tags": [
-      "keyword",
-      "related",
-      "items"
-    ]
+    "tags": ["keyword", "related", "items"]
   },
   "tag": {
-    "variant": "osg-v-default",
     "content": "Nunc elit risus",
     "url": "#"
   }

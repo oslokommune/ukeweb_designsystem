@@ -1,27 +1,29 @@
 {% set hasTopDomainLink = navbarMenu.topDomainLink.url is defined and navbarMenu.topDomainLink.url is not empty %}
+{% set navbarMenuVariant = navbarMenu.variant | default('osg-v-default') %}
+{% set navbarMenuModifiers = navbarMenu.modifiers | default(null) %}
 
-<nav class="osg-navbar-menu {{ navbarMenu.variant|default('default') }} {{ navbarMenu.modifiers | default(null) }}">
-  <div class="osg-navbar-menu-overlay-wrapper">
-    <div class="osg-navbar-menu-overlay">
+<nav class="osg-navbar-menu {{ navbarMenuVariant }} {{ navbarMenuModifiers }}">
+  <div class="osg-navbar-menu__overlay-wrapper">
+    <div class="osg-navbar-menu__overlay">
     </div>
   </div>
-  <div class="osg-navbar-hamburger">
-    <button class="osg-navbar-hamburger-icon" aria-haspopup="true" aria-expanded="false" aria-label="Main menu">
+  <div class="osg-navbar-menu__hamburger">
+    <button class="osg-navbar-menu__hamburger-icon" aria-haspopup="true" aria-expanded="false" aria-label="Main menu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </button>
   </div>
 
-  <div class="osg-navbar-menu-content">
-    <div class="osg-navbar-hamburger-close">
-      <button class="osg-navbar-hamburger-icon" aria-haspopup="true" aria-expanded="true" aria-label="Main menu">
+  <div class="osg-navbar-menu__content">
+    <div class="osg-navbar-menu__hamburger-close">
+      <button class="osg-navbar-menu__hamburger-icon" aria-haspopup="true" aria-expanded="true" aria-label="Main menu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
     </div>
-    <section class="osg-menu-links">
+    <section class="osg-navbar-menu__links">
       <ul role="menu">
         {% for link in navbarMenu.links|default([]) %}
           <li>
@@ -38,7 +40,7 @@
       </ul>
     </section>
     <div>
-      <div class="osg-logos">
+      <div class="osg-navbar-menu__logos">
         {% for figure in navbarMenu.logos.figures %}
           {% include "atoms/decorators/figure/figure.twig" with figure %}
         {% endfor %}

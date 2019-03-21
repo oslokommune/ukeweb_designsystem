@@ -6,31 +6,37 @@
 // https://github.com/sass/sass/issues/1088
 
 $osg-colors: (
-"blue": $osg-color-blue,
-"blue-light": $osg-color-blue-light,
-"purple": $osg-color-purple,
-"grey-lighter": $osg-color-grey-lighter,
-"grey-light": $osg-color-grey-light,
-"grey-dark": $osg-color-grey-dark,
-"grey-darker": $osg-color-grey-darker,
-"green": $osg-color-green,
-"green-dark": $osg-color-green-dark,
-"green-light": $osg-color-green-light,
-"green-lighter": $osg-color-green-lighter,
-"green-faded": $osg-color-green-faded,
-"brown": $osg-color-brown,
-"brown-beige": $osg-color-brown-beige,
-"orange": $osg-color-orange,
-"red": $osg-color-red,
-"yellow": $osg-color-yellow,
-"white": $osg-color-white
+  "beige": $osg-color-beige,
+  "beige-dark": $osg-color-beige-dark,
+  "black": $osg-color-black,
+  "blue": $osg-color-blue,
+  "blue-dark": $osg-color-blue-dark,
+  "blue-hover": $osg-color-blue-hover,
+  "blue-light": $osg-color-blue-light,
+  "green": $osg-color-green,
+  "green-dark": $osg-color-green-dark,
+  "green-light": $osg-color-green-light,
+  "grey": $osg-color-grey,
+  "grey-light": $osg-color-grey-light,
+  "purple-visited": $osg-color-purple-visited,
+  "purple-visited-light": $osg-color-purple-visited-light,
+  "red": $osg-color-red,
+  "yellow": $osg-color-yellow
+);
+
+$osg-button-colors: (
+  ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),
+  ("green-dark", $osg-color-green-light, $osg-color-green-dark),
+  ("green-light", $osg-color-green-dark, $osg-color-green-light),
+  ("red", $osg-color-blue-dark, $osg-color-red),
+  ("yellow", $osg-color-blue-dark, $osg-color-yellow)
 );
 
 $osg-named-colors: (
   "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
   "primary": $osg-color-blue-light $osg-color-green-dark,
-  "success": $osg-color-green-lighter $osg-color-green-dark,
-  "warning": $osg-color-orange $osg-color-green-dark,
+  "success": $osg-color-green-light $osg-color-green-dark,
+  "warning": $osg-color-yellow $osg-color-green-dark,
   "danger": $osg-color-red $osg-color-green-dark
 );
 
@@ -56,13 +62,24 @@ $osg-spacing-sizes: (
   "huge": $osg-space-huge
 );
 
-// used to generate font-size classes in utils.sass
-$osg-font-sizes: (
-  ("1", $osg-font-size-40, $osg-font-size-26),
-  ("2", $osg-font-size-36, $osg-font-size-24),
-  ("3", $osg-font-size-28, $osg-font-size-20),
-  ("4", $osg-font-size-24, $osg-font-size-18),
-  ("5", $osg-font-size-20, $osg-font-size-16)
+// used to generate typography classes in utils.sass
+// they represent: id, mobile size, tablet size and desktop size
+$osg-typographies-header: (
+  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60),
+  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36),
+  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28),
+  ("4", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24),
+  ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-20),
+  ("6", $osg-font-size-16, $osg-font-size-17, $osg-font-size-18)
+);
+
+$osg-typographies: (
+  ("1", $osg-font-size-20, $osg-font-size-24, $osg-font-size-30),
+  ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24),
+  ("3", $osg-font-size-18, $osg-font-size-19, $osg-font-size-20),
+  ("4", $osg-font-size-16, $osg-font-size-17, $osg-font-size-18),
+  ("5", $osg-font-size-14, $osg-font-size-14, $osg-font-size-16),
+  ("6", $osg-font-size-13, $osg-font-size-13, $osg-font-size-14)
 );
 
 $osg-font-weights: (

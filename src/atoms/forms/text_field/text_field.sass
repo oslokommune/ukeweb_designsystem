@@ -1,0 +1,70 @@
+=osg-text-field-helper($osg-color-name, $background, $foreground)
+  .osg-text-field.osg-text-field-#{$osg-color-name}
+    .osg-text-field-input
+      color: $foreground
+      background-color: $background
+
+// looping map from maps.scss
+@each $name, $tuple in $osg-named-colors
+  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
+  +osg-text-field-helper($name, nth($tuple, 1), nth($tuple, 2))
+
+.osg-text-field
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  position: relative
+  &__input
+    @extend .osg-u-text-3
+    background-color: $osg-color-grey-light
+    border: none
+    height: 60px
+    width: 100%
+    padding: 5px 5px 5px 10px
+    +osg-mq-desktop-and-up
+      height: 70px
+    &::placeholder
+      color: transparent
+  &__label
+    position: absolute
+    left: 13px
+    top: 18px
+  &__input:valid + &__label
+    opacity: 0
+  &.osg-v-floating-label &
+    &__input::placeholder
+      opacity: 0
+      color: transparent
+    &__label
+      position: absolute
+      pointer-events: none
+      transition: .2s ease-out
+      left: 13px
+      // Positions the label in the middle of the textfield
+      @extend .osg-u-text-3
+      top: 15px
+      +osg-mq-desktop-and-up
+        top: 18px
+    &__input:valid + .osg-text-field__label
+      opacity: 1
+    &__input:focus + .osg-text-field__label,
+    &__input:not(:focus):valid + .osg-text-field__label
+      // Positions the label above the textfield when the textfield is focused
+      @extend .osg-u-text-4
+      top: -21px
+      +osg-mq-desktop-and-up
+        top: -23px
+  &.osg-v-floating-label
+    margin-top: 20px
+  &--big &
+    &__label
+      left: 18px
+      top: 30px
+    &__input
+      @extend .osg-u-text-3
+      padding: 15px
+      height: 83px
+  &--big.osg-v-floating-label &
+    &__label
+      left: 18px
+      top: 30px

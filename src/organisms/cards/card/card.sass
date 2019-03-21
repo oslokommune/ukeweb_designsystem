@@ -3,59 +3,135 @@ $shape-size-tablet: 10%
 $box-margin-top-mobile: -50px
 $box-margin-top-tablet: -60px
 
-=osg-card-m-full
+=osg-card--full
   .osg-content-box
     margin-left: 0
     width: 100%
 
-=osg-card-m-right($size)
+=osg-card--right($size)
   .osg-content-box
     margin-left: #{$size}
     width: unset
 
-=osg-card-m-left($size)
+=osg-card--left($size)
   .osg-content-box
     margin-left: unset
     width: calc(100% - #{$size})
 
 .osg-card
-  +osg-common-card
-  +osg-common-card-with-state-modifier
-
-  &.osg-v-download
-    h2:after
-      +osg-helper-fa-pseudo('\f019')
-      font-size: $osg-font-size-13
-      margin-left: 15px
-
-
-  &.osg-m-full
-    +osg-card-m-full
-  &.osg-m-right
-    +osg-card-m-right($shape-size-mobile)
+  position: relative
+  display: table
+  a
+    text-decoration: none
+  figure
+    overflow: hidden
+  img
+    display: block
+    min-width: 100%
+    max-width: 100%
+    object-fit: cover
+    transition: transform 1s cubic-bezier(.22,.57,.25,1)
+  &__wrapper
+    display: flex
+    flex-direction: column
+    font-weight: 300
+  &__box-shape-wrapper
+    display: flex
+    flex-direction: row
+  .osg-shape
+    order: 2
+  h2
+    font-weight: 500
+  &:hover
+    img
+      transform: scale(1.1)
+  .osg-content-box
+    text-decoration: none
+    flex-grow: 1
+    order: 0
+    position: relative
+    background: white
+    bottom: 50px
+    margin-bottom: $box-margin-top-mobile
+    width: calc(100% - #{$shape-size-mobile})
     +osg-mq-tablet-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left
-    +osg-card-m-left($shape-size-mobile)
+      bottom: 60px
+      margin-bottom: $box-margin-top-tablet
+      width: calc(100% - #{$shape-size-tablet})
+  &__result
+    display: none
+    text-decoration: none
+    padding-top: 15px
+    margin-top: 30px
+    border-top: 1px solid $osg-color-green
+    font-weight: bold
+  &__state-text
+    @extend .osg-u-heading-2
+    display: none
+    position: absolute
+    text-align: center
+    z-index: 1
+    width: 100%
+    top: calc(50% + #{$box-margin-top-mobile})
     +osg-mq-tablet-and-up
-      +osg-card-m-left($shape-size-tablet)
+      top: calc(50% + #{$box-margin-top-tablet})
+  /* modifiers styling */
+  &--show-search-result &
+    &__search-text
+      display: block
 
-  &.osg-m-full-tablet
-    +osg-mq-tablet-and-up
-      +osg-card-m-full
-  &.osg-m-right-tablet
-    +osg-mq-tablet-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left-tablet
-    +osg-mq-tablet-and-up
-      +osg-card-m-left($shape-size-tablet)
+  &--animate &
+    &__image-container
+      +osg-animation-scale-up(1.5s)
+    &__box-shape-wrapper
+      +osg-animation-fade-in(1.2s)
+      animation-delay: .3s
+  &--animate
+    visibility: visible
+    .osg-content-box
+      +osg-animation-fade-in(1.2s)
+      animation-delay: .3s
 
-  &.osg-m-full-desktop
+  &--with-state &
+      &__state-text
+        display: block
+      &__search-result
+        border-color: white
+      &__image-container
+        +osg-helper-filter($osg-color-green-dark)
+  &--with-state
+    a
+      color: white
+    .osg-content-box
+      background-color: $osg-color-green-dark
+
+  &--full
+    +osg-card--full
+  &--right
+    +osg-card--right($shape-size-mobile)
+    +osg-mq-tablet-and-up
+      +osg-card--right($shape-size-tablet)
+  &--left
+    +osg-card--left($shape-size-mobile)
+    +osg-mq-tablet-and-up
+      +osg-card--left($shape-size-tablet)
+
+  &--full-tablet
+    +osg-mq-tablet-and-up
+      +osg-card--full
+  &--right-tablet
+    +osg-mq-tablet-and-up
+      +osg-card--right($shape-size-tablet)
+  &--left-tablet
+    +osg-mq-tablet-and-up
+      +osg-card--left($shape-size-tablet)
+
+  &--full-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-full
-  &.osg-m-right-desktop
+      +osg-card--full
+  &--right-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-right($shape-size-tablet)
-  &.osg-m-left-desktop
+      +osg-card--right($shape-size-tablet)
+  &--left-desktop
     +osg-mq-desktop-and-up
-      +osg-card-m-left($shape-size-tablet)
+      +osg-card--left($shape-size-tablet)

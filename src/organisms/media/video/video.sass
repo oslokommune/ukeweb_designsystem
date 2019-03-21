@@ -17,7 +17,7 @@
     video::-webkit-media-controls-overlay-play-button
       display: none
 
-  .btn-overlay-play
+  &__btn-overlay-play
     background-color: $osg-color-green
     border: 1px solid $osg-color-green
     height: 50px
@@ -33,37 +33,35 @@
     +osg-mq-desktop-and-up
       left: 45%
       top: 40%
-    .overlay-play
-      border: solid $osg-color-green-dark
-      border-width: 0 5px 5px 0
-      display: inline-block
-      padding: 3px
-      transform: rotate(-45deg)
-      -webkit-transform: rotate(-45deg)
-      +osg-mq-tablet-and-up
-        border-width: 0 10px 10px 0
-        padding: 5px
+  &__overlay-play
+    border: solid $osg-color-green-dark
+    border-width: 0 5px 5px 0
+    display: inline-block
+    padding: 3px
+    transform: rotate(-45deg)
+    -webkit-transform: rotate(-45deg)
+    +osg-mq-tablet-and-up
+      border-width: 0 10px 10px 0
+      padding: 5px
 
-  .footer
-    font-size: $osg-font-size-12
+  &__footer
+    @extend .osg-u-text-6
     color: #6A6A6A
     margin-top: 15px
     background: inherit
     padding: 0
     flex-grow: 0
-    +osg-mq-tablet-and-up
-      font-size: $osg-font-size-14
 
   /* modifiers styling */
-  &.osg-m-ratio-1x1
+  &--ratio-1x1
     padding-top: 100%
     +video-ratio-helper
-  &.osg-m-ratio-4x3
+  &--ratio-4x3
     padding-top: calc(100%/4*3)
     +video-ratio-helper
-  &.osg-m-ratio-3x2
+  &--ratio-3x2
     padding-top: calc(100%/3*2)
     +video-ratio-helper
-  &.osg-m-ratio-16x9
+  &--ratio-16x9
     padding-top: calc(100%/16*9)
     +video-ratio-helper

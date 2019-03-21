@@ -1,21 +1,14 @@
-{% set hasButton = promo.button is defined and promo.button is not empty %}
-{% set hasLogo = promo.logo is defined and promo.logo is not empty %}
+{% set promoVariant = promo.variant | default('osg-v-default') %}
 
-<section class="osg-promo {{ promo.variant | default('osg-v-default')  }}">
+<section class="osg-promo {{ promoVariant }}">
   {% include "atoms/decorators/figure/figure.twig" %}
-  <div class="osg-promo-content-container">
-    <div class="osg-promo-content-wrapper">
-      <div class="osg-promo-content">
-        <h2>{{ promo.title }}</h2>
-        {% if hasButton and promo.showButton == true %}
-          {% include 'atoms/buttons/button/button.twig' with { button: promo.button } %}
-        {% endif %}
+  <div class="osg-promo__content-container">
+    <div class="osg-promo__content-wrapper">
+      <div class="osg-promo__content">
+        {% block content %}
+          <h2 class="osg-u-text-1">{{ promo.title }}</h2>
+        {% endblock %}
       </div>
-      {% if hasLogo and promo.showLogo == true %}
-        <div class="osg-promo-logo">
-          {% include 'atoms/decorators/figure/figure.twig' with { figure: promo.logo } %}
-        </div>
-      {% endif %}
     </div>
   </div>
 </section>

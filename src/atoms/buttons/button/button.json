@@ -1,17 +1,13 @@
 {
   "meta": {
-    "tags": [
-      "Call to action",
-      "functionality",
-      "link",
-      "click"
-    ]
+    "tags": ["Call to action", "functionality", "link", "click"]
   },
   "button": {
-    "content": "Lorem Ipsum",
     "dataattrs": [
-      {"key": "id", "val": "lorem_ipsum"},
-      {"key": "data-target", "val": "lorem1"}
-    ]
+      { "key": "id", "val": "lorem_ipsum" },
+      { "key": "data-target", "val": "lorem1" },
+      { "key": "aria-label", "val": "press me" }
+    ],
+    "link": "#"
   }
 }
