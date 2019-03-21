@@ -28,6 +28,7 @@ See README.md for release description.
 
 ### Removed
 
+- molecules-navigation-tags: removed pattern.
 - molecules-contact-contact_person: removed pattern.
 - atoms-messages-alert: removed pattern.
 - organisms-cards-shape_card: removed pattern.
