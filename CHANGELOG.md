@@ -11,44 +11,58 @@ See README.md for release description.
 
 ### Fixed
 
-- all atoms: changed to bem css standard
-- all organisms: changed to bem css standard
-- global styles: made text dark blue by default.
-- global styles: made links dark blue with underline.
-- Removed danglig comma in atom/buttons/button/button.sass
-- Added docker-compose.yml so you can run devtools directly from the styleguide repository
-- all twig documentation: changed docs to have a table showing the variant/modifiers
-- Fixed all parent patterns of content_box to be able to override the content_box block.
-
 ### Added
-
-- organisms-data_display-simple_table: new pattern.
-- organisms-messages-alert: new pattern.
-- organisms-navigation-shape_hero: new pattern.
 
 ### Removed
 
+### Changed
+
+## [0.16.0] - 2019-03-21
+
+### Fixed
+
+- dev: Added docker-compose.yml so you can run devtools directly from the styleguide repository
+- all patterns: changed to bem css standard
+- global styles: made text dark blue by default.
+- global styles: made links dark blue with underline.
+- documentation: changed twig docs to have tables showing the variant/modifiers.
+
+### Added
+
+- atoms-links-link_button: new pattern.
+- organisms-data_display-simple_table: new pattern.
+- organisms-messages-alert: new pattern.
+- organisms-navigation-shape_hero: new pattern.
+- organisms-navigation-hero: new pattern (replacing contact_person and story_preview).
+
+### Removed
+
+- atoms-messages-alert: removed pattern.
+- atoms-text-ingress: removed pattern.
 - molecules-navigation-tags: removed pattern.
 - molecules-contact-contact_person: removed pattern.
-- atoms-messages-alert: removed pattern.
-- organisms-cards-shape_card: removed pattern.
-- atoms-text-ingress: removed pattern.
 - molecules-contact-contact_box: removed pattern.
 - molecules-content_display-byline: removed pattern.
+- organisms-cards-shape_card: removed pattern.
+- organisms-navigation-story_preview: removed pattern.
 
 ### Changed
 
-util classes: Added -u to the prefix of all utils classes.
-util classes: Added -only postfix to the end of util classes with the -mobile postfix.
-util classes: Added -and-up to the end of the util classes with the -tablet and the -desktop postfix.
-
+- util classes: Added -u to the prefix of all utils classes.
+- util classes: Added -only postfix to the end of util classes with the -mobile postfix.
+- util classes: Added -and-up to the end of the util classes with the -tablet and the -desktop postfix.
 - atoms-forms-text: renamed to atoms-forms-text_field
-- molecules-content_display-content_box: Refactored out things likely to be changed by consumers.
-- molecules-content_display-expand_box: Refactored out things likely to be changed by consumers.
-- organisms-cards-card: Refactored out things likely to be changed by consumers.
-- organisms-cards-list_card: Refactored out things likely to be changed by consumers.
-- organisms-navigation-story_preview: Refactored out things likely to be changed by consumers.
-- organisms-navigation-story_preview: Renamed to Hero.
+- atoms-decorators-figure: Added block(s).
+- atoms-decorators-shape: Added block(s).
+- atoms-button-button: Added block(s) and refactored out things likely to be changed by consumers.
+- molecules-content_display-content_box: Added block(s) and refactored out things likely to be changed by consumers.
+- molecules-content_display-expand_box: Added block(s) and refactored out things likely to be changed by consumers.
+- molecules-data_display-info_list: Added block(s) and refactored out things likely to be changed by consumers.
+- organisms-cards-card: Added block(s) and refactored out things likely to be changed by consumers.
+- organisms-cards-list_card: Added block(s) and refactored out things likely to be changed by consumers.
+- organisms-headings-event: Added block(s) and refactored out things likely to be changed by consumers.
+- organisms-headings-promo: Added block(s) and refactored out things likely to be changed by consumers.
+- organisms-navigation-call_to_action: Added block(s) and refactored out things likely to be changed by consumers.
 
 ## [0.14.0] - 2019-02-06
 
