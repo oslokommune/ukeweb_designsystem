@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- organisms-messages-alert: allow use extra attributes and removed hardcoded text
 
 ### Added
 
