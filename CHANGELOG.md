@@ -17,6 +17,13 @@ See README.md for release description.
 
 ### Changed
 
+## [0.16.1] - 2019-03-28
+
+### Fixed
+
+- docs: added warning about needing access to the private devtools docker image
+- organisms-messages-alert: allow use extra attributes and removed hardcoded text
+
 ## [0.16.0] - 2019-03-21
 
 ### Fixed
