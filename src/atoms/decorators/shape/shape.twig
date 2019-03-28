@@ -3,12 +3,13 @@
 {% set hasText = shape.text is defined and shape.text is not empty %}
 {% set shapeVariant = shape.variant | default('osg-v-default') %}
 {% set shapeModifiers = shape.modifiers | default(null) %}
+{% set shapeColor = "osg-u-color-bg-" ~ shape.color | default('yellow') %}
 
 {% set figureContent %}
   {% block figureContent %}{% endblock %}
 {% endset %}
 
-<div class="osg-shape {{ shapeVariant }} {{ shapeModifiers }}">
+<div class="osg-shape {{ shapeVariant }} {{ shapeModifiers }} {{ shapeColor }}">
   {% if hasUrl %}
     <a href="{{ shape.url }}" {% if hasTitle %} title="{{ shape.title }}" {% endif %} target="_blank">
   {% endif %}
