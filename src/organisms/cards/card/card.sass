@@ -54,10 +54,12 @@ $box-margin-top-tablet: -60px
     bottom: 50px
     margin-bottom: $box-margin-top-mobile
     width: calc(100% - #{$shape-size-mobile})
+    min-height: 150px
     +osg-mq-tablet-and-up
       bottom: 60px
       margin-bottom: $box-margin-top-tablet
       width: calc(100% - #{$shape-size-tablet})
+      min-height: 200px
   &__result
     display: none
     text-decoration: none
