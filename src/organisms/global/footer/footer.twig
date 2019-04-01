@@ -11,7 +11,14 @@
   </div>
   {% endfor %}
   <div class="osg-footer__social-icon-list">
-    {% include 'molecules/social/icon_list/icon_list.twig' %}
+  {% for icon in social.icons %}
+    {% embed 'atoms/social/icon/icon.twig' with icon %}
+      {% block content %}
+        <i class="{{ icon.icon }} osg-u-padding-sides-medium"></i>
+      {% endblock %}
+    {% endembed %}
+  {% endfor %}
+
   </div>
   <div class="osg-footer__logos">
     {% for figure in footer.logos.figures %}

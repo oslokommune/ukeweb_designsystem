@@ -58,23 +58,22 @@
       ]
     }
   },
-  "iconList": {
-    "variant": "osg-v-vertical-no-shape",
-    "brands": [
+  "social": {
+    "icons": [
       {
-        "icon": "<i class='fab fa-facebook'></i>",
+        "brand": "<i class='fab fa-facebook'></i>",
         "text": "Facebook",
         "textVisible": true,
         "url": "#"
       },
       {
-        "icon": "<i class='fab fa-instagram'></i>",
+        "brand": "<i class='fab fa-instagram'></i>",
         "text": "Instagram",
         "textVisible": true,
         "url": "#"
       },
       {
-        "icon": "<i class='fab fa-twitter'></i>",
+        "brand": "<i class='fab fa-twitter'></i>",
         "text": "Twitter",
         "textVisible": true,
         "url": "#"
