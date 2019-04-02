@@ -21,11 +21,13 @@
       {% endblock %}
     {% endembed %}
   {% endif %}
-    {% if hasText %}
-      <span>{{ shape.text }}</span>
-    {% endif %}
-    {% block content %}
-    {% endblock %}
+
+  {% if hasText %}
+    <span>{{ shape.text }}</span>
+  {% endif %}
+
+  {% block content %}
+  {% endblock %}
 
   {% if hasUrl %}
     </a>
