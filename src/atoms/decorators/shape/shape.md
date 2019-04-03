@@ -14,7 +14,7 @@ Shape can be a link as well, you just need to fill the optional attribute "url".
 - "figureContent": Content passed to the block will render (if image variant is in use) inside the figure element, below the image.
 
 ### Examples
-Here you can see the different ueses of the variants and modifiers with buttons: <a href="https://codepen.io/oslokommune/pen/vMOEma" target="_blank">https://codepen.io/oslokommune/pen/vMOEma</a>
+Here you can see the different uses of the variants and modifiers with buttons: <a href="https://codepen.io/oslokommune/pen/vMOEma" target="_blank">https://codepen.io/oslokommune/pen/vMOEma</a>
 
 ### Data Fields
 
