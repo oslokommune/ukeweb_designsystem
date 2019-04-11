@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+- docs: added instructions on the css standard
 
 ### Removed
 
