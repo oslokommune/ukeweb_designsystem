@@ -6,27 +6,27 @@
         "text": "Facebook",
         "textVisible": false,
         "shape": "osg-v-default",
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-twitter'></i>",
         "text": "Twitter",
         "textVisible": false,
         "shape": "osg-v-circle",
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-google-plus-square'></i>",
         "text": "Google+",
         "textVisible": false,
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-snapchat-ghost'></i>",
         "text": "Snapchat",
         "textVisible": false,
         "shape": "osg-v-circle",
-        "url": "#"
+        "url": "#lorem"
       }
     ],
     "variant": "osg-v-vertical"
