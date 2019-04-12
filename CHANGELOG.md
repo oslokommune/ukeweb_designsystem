@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- organisms-cards-card: fixed bug with search result
 
 ### Added
 - docs: added instructions on the css standard
