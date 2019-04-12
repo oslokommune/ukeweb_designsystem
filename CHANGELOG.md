@@ -17,6 +17,16 @@ See README.md for release description.
 
 ### Changed
 
+## [0.18.0] - 2019-03-28
+
+### Fixed
+
+- utils: added font-weight to typography helpers (^osg-u-text- and ^osg-u-heading-)
+
+### Changed
+
+- organisms-messages-alert: made the button tag into an anchor tag with role=button to fix aria error
+
 ## [0.17.0] - 2019-03-28
 
 ### Fixed
