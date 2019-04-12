@@ -2,6 +2,10 @@
 
 Icon link shows an icon at the left side and a text on the right side. The text can have a heading and a description or only one of them.
 
+### Blocks
+
+This pattern has one block named "content". Content passed to the block will render in the icon's side.
+
 ### Data Fields
 
 | Attribute | Type   | Values               | Default | Description                                 |
