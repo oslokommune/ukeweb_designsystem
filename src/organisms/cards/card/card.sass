@@ -54,11 +54,13 @@ $box-margin-top-tablet: -60px
     bottom: 50px
     margin-bottom: $box-margin-top-mobile
     width: calc(100% - #{$shape-size-mobile})
+    min-height: 150px
     +osg-mq-tablet-and-up
       bottom: 60px
       margin-bottom: $box-margin-top-tablet
       width: calc(100% - #{$shape-size-tablet})
-  &__search-result
+  &__result
+    min-height: 200px
     display: none
     text-decoration: none
     padding-top: 15px
@@ -76,7 +78,7 @@ $box-margin-top-tablet: -60px
     +osg-mq-tablet-and-up
       top: calc(50% + #{$box-margin-top-tablet})
   /* modifiers styling */
-  &--show-search-result &
+  &--show-result &
     &__search-result
       display: block
 
@@ -95,7 +97,7 @@ $box-margin-top-tablet: -60px
   &--with-state &
       &__state-text
         display: block
-      &__search-result
+      &__result
         border-color: white
       &__image-container
         +osg-helper-filter($osg-color-green-dark)

@@ -20,7 +20,7 @@
     {% block content %}
       {{ cardContent }}
       {% if hasSearchResult %}
-        <a href="{{ card.url }}" class="osg-card__search-result">
+        <a href="{{ card.url }}" class="osg-card__result">
           {{ card.searchResult | default(null) }}
         </a>
       {% endif %}

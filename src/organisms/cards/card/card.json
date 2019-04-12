@@ -12,7 +12,8 @@
     ]
   },
   "card": {
-    "url": "#"
+    "url": "#lorem",
+    "searchResult": "halla"
   },
   "figure": {
     "img": {
