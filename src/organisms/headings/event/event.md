@@ -12,7 +12,7 @@ This pattern has three blocks named "head", "body" and "footer". The "head" bloc
 | --------- | ------ | -------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
 | modifiers | String | See modifier options below | null    | Name of the modifier                                                                                       |
 | \*heading | String | Clean text content         | null    | Heading text content                                                                                       |
-| stateText | String | Clean text content         | null    | Text to be displayed on top of the image. Used together with modifier osg-card--with-state to have effect. |
+| stateText | String | Clean text content         | null    | Text to be displayed on top of the image. Used together with modifier osg-event--with-state to have effect. |
 
 ### Modifier options
 

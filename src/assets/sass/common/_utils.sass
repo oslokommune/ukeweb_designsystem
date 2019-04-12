@@ -160,9 +160,10 @@
       margin-right: $size !important
 
 // generating typography classes for headers
-@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies-header
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-typographies-header
   .osg-u-heading-#{$name}
     font-size: $size-mobile !important
+    font-weight: $weight !important
     @if $name == "1"
       letter-spacing: -0.9px !important
     @else
@@ -173,10 +174,11 @@
       font-size: $size-desktop !important
 
 // generating typography classes for other text
-@each $name, $size-mobile, $size-tablet, $size-desktop in $osg-typographies
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-typographies
   .osg-u-text-#{$name}
     font-size: $size-mobile !important
     line-height: 1.5em !important
+    font-weight: $weight !important
     +osg-mq-tablet-and-up
       font-size: $size-tablet !important
     +osg-mq-desktop-and-up

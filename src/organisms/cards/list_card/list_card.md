@@ -27,7 +27,7 @@ This pattern has one block named "content". Content passed to the block will ren
 
 | Name                 | Description                                                                   |
 | -------------------- | ----------------------------------------------------------------------------- |
-| osg-card--animate    | See documentation for the card pattern for tips on how to trigger animations. |
-| osg-card--with-state | Makes the pattern green, text white, and shows the "stateText" if it is       |
+| osg-list-card--animate    | See documentation for the card pattern for tips on how to trigger animations. |
+| osg-list-card--with-state | Makes the pattern green, text white, and shows the "stateText" if it is       |
 
 (\*) mandatory
