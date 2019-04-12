@@ -1,6 +1,6 @@
 # Oslo Styleguide
 
-**Warning: To see the components during development of these you will need access to a private docker image called styleguide_devtools. This image will go public very soon. You can see a precompiled version of the devtools showing the latest released patterns [here](https://styleguide.oslobeta.no/)**
+**Warning: To see the components during development of these you will need access to a private docker image called styleguide_devtools. This image will go public very soon. You can see a precompiled version of the devtools showing the latest released patterns [here](https://styleguide.oslo.kommune.no/)**
 
 ## Intro
 
@@ -20,7 +20,7 @@ See the repositories postfixed with '\_example' for different ways of consuming 
 
 ### Docs
 
-See the visual representation of the patterns together with documentation and code [here](https://styleguide.oslobeta.no/).
+See the visual representation of the patterns together with documentation and code [here](https://styleguide.oslo.kommune.no/).
 
 ### Util Classes
 
