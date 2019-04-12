@@ -5,25 +5,25 @@
         "icon": "<i class='fab fa-facebook'></i>",
         "text": "Facebook",
         "textVisible": true,
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-instagram'></i>",
         "text": "Instagram",
         "textVisible": true,
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-snapchat-ghost'></i>",
         "text": "Snapchat",
         "textVisible": true,
-        "url": "#"
+        "url": "#lorem"
       },
       {
         "icon": "<i class='fab fa-twitter'></i>",
         "text": "Twitter",
         "textVisible": true,
-        "url": "#"
+        "url": "#lorem"
       }
     ],
     "variant": "osg-v-vertical-no-shape"
