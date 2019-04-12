@@ -13,12 +13,12 @@
 
 
 <div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
-  <button
+  <a
+    role="button"
     class="osg-alert__trigger"
     aria-haspopup="true"
     aria-expanded="false"
     aria-label="{{ alert.buttonAriaLabel }}"
-    role="alertdialog"
     {% if alertButtonHasDataattrs %}
       {% for dataattr in alert.dataattrs %}
         {{ dataattr.key }}="{{ dataattr.val }}"
@@ -27,8 +27,8 @@
   >
     {% block content %}
     {% endblock %}
-  </button>
-  <div class="osg-alert__overlay-wrapper">
+  </a>
+  <div class="osg-alert__overlay-wrapper" role="alertdialog" aria-modal="true">
     <div class="osg-alert__overlay">
       <div class="osg-alert__overlay-top">
         <div class="osg-alert__white-space"></div>
