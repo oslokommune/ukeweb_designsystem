@@ -26,13 +26,14 @@ This pattern has one block named "content". Content passed to the block will ren
 
 ### Modifier Options
 
-| Name                     | Description                                                                                |
-| ------------------------ | ------------------------------------------------------------------------------------------ |
-| osg-card--animate        | See Animations section below for tips on how to use it.                                    |
-| osg-card--with-state     | Makes the pattern green, text white, and shows the "stateText" if it is defined.           |
-| osg-card--left{-tablet}  | Makes the contentBox in the card stick to the left of the image with a margin on the right |
-| osg-card--right{-tablet} | Makes the contentBox in the card stick to the right of the image with a margin on the left |
-| osg-card--full{-tablet}  | ContentBox gets 100% wide                                                                  |
+| Name                         | Description                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------ |
+| osg-card--animate            | See Animations section below for tips on how to use it.                                    |
+| osg-card--with-state         | Makes the pattern green, text white, and shows the "stateText" if it is defined.           |
+| osg-card--show-search-result | Makes the search result visible                                                            |
+| osg-card--left{-tablet}      | Makes the contentBox in the card stick to the left of the image with a margin on the right |
+| osg-card--right{-tablet}     | Makes the contentBox in the card stick to the right of the image with a margin on the left |
+| osg-card--full{-tablet}      | ContentBox gets 100% wide                                                                  |
 
 (\*) mandatory
 
