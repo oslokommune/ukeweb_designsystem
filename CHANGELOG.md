@@ -10,14 +10,25 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-- molecules-data_display-icon_link: Add the possibility to switch the icon in the icon list pattern
 
 ### Added
-- docs: added instructions on the css standard
 
 ### Removed
 
 ### Changed
+
+## [0.17.0] - 2019-03-28
+
+### Fixed
+
+- molecules-data_display-icon_link: (twig) Add the possibility to switch the icon in the icon list pattern
+
+### Added
+
+- docs: added instructions on the css standard
+
+### Changed
+
 - molecules-data_display-icon_link: Wrap in a link the content of the icon link
 
 ## [0.16.1] - 2019-03-28
