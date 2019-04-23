@@ -30,6 +30,7 @@ Check out [this list](docs/utils) for all the util classes with descriptions.
 
 ## Development notes
 
+- See customizable sass variables [here](docs/customization)
 - To get a better understanding of how webforvaltningen divide its patterns into atoms, molecules and organisms, [read this](docs/atomic) description.
 - To get consumer information for supporting legacy browsers, [read this](docs/legacyBrowserSupport) setup guide.
 - To get tips and best practices for developing the Style guide, [read this](docs/bestPractises).
