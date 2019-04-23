@@ -52,18 +52,23 @@ $osg-font-size-16: 1rem
 $osg-font-size-14: .875rem
 $osg-font-size-13: .812rem
 
-// --------------- SPACING SIZES ---------------*/
+/* ------------------ CUSTOMIZABLE VARIABLES -----------------*/
+// These variables can be overridden by consumer
 
-$osg-space-none: 0
-$osg-space-tiny: 10px
-$osg-space-small: 20px
-$osg-space-medium: 30px
-$osg-space-large: 40px
-$osg-space-huge: 60px
+// Paths
+$osg-image-path: '../../images' !default
+$osg-font-path: '../../../fonts' !default
 
-/* ------------------ MEDIA QUERIES -----------------*/
+// Spacing
+// These variables should only be used to make util classes
+$osg-space-none: 0 !default
+$osg-space-tiny: 10px !default
+$osg-space-small: 20px !default
+$osg-space-medium: 30px !default
+$osg-space-large: 40px !default
+$osg-space-huge: 60px !default
 
-// The container horizontal gap, which acts as the offset for breakpoints
+// Media Queries
 // media query defaults mimicks the bulma defaults
 $osg-gap: 64px !default
 $osg-tablet: 769px !default
@@ -72,4 +77,5 @@ $osg-widescreen: 1152px + (2 * $osg-gap) !default
 $osg-fullhd: 1344px + (2 * $osg-gap) !default
 
 /* ------------------ MISC -----------------*/
+
 $osg-cubic-bezier: cubic-bezier(.22,.57,.25,1)
