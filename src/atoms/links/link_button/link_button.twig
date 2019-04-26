@@ -9,12 +9,10 @@
    href="{{ linkButtonUrl }}"
   {% if linkButtonHasDataattrs %}
     {% for dataattr in linkButton.dataattrs %}
-      {{dataattr.key}}="{{dataattr.val}}"
+      {{ dataattr.key }}="{{ dataattr.val }}"
     {% endfor %}
   {% endif %}
 >
-  <span>
-    {% block content %}
-    {% endblock %}
-  </span>
+  {% block content %}
+  {% endblock %}
 </a>
