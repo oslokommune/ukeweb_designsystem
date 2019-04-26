@@ -42,7 +42,7 @@
     <div>
       <div class="osg-navbar-menu__logos">
         {% for figure in navbarMenu.logos.figures %}
-          {% include "atoms/decorators/figure/figure.twig" with figure %}
+          {% include 'atoms/decorators/figure/figure.twig' with figure %}
         {% endfor %}
 
         {% if hasTopDomainLink  %}

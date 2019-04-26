@@ -28,7 +28,7 @@ Things to keep in mind when using variants:
 {
   "button": {
     "content": "Lorem ipsum",
-    "variant": "osg-v-is-circle"
+    "variant": "osg-v-circle"
   }
 }
 ```
@@ -53,11 +53,10 @@ Variants and modifiers differ in multiple ways:
 ### Modifiers:
 
 - A component can have zero to multiple modifiers.
-- You can use multiple modifiers at a time
 - Only changes the styling of a component. Should not add/remove elements
 
 An example usecase for a modifier could be for alternating the position of an element when using a component in a list. Lets say you have a component with a text block on the left side.
-In your list you want this block to be displayed on the right side for every other compoenent. In this case you could make a modifier called `.osg-m-textblock-right` and append
+In your list you want this block to be displayed on the right side for every other compoenent. In this case you could make a modifier called `.osg-article-list--textblock-right` and append
 this to all components that should have the textblock on the right side.
 
 ```json
@@ -79,7 +78,7 @@ this to all components that should have the textblock on the right side.
           "title": "Title of article",
           "content": "Article content",
           "variant": "osg-v-default",
-          "modifiers": "osg-m-textbox-right",
+          "modifiers": "osg-article-list--textbox-right",
           ...
         }
       }
@@ -109,7 +108,7 @@ this to all components that should have the textblock on the right side.
 
 Things to keep in mind when using modifiers:
 
-- The naming convention for modifiers are `osg-m-modifierName`
+- The naming convention for modifiers are `osg-pattern-name--modifier-name`
 - Modifiers should only be used on the root element of a component
 - A pattern can have zero to many modifiers
 - The styling for a modifier is usually added to the sass file for that specific component.
