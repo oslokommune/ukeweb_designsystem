@@ -13,6 +13,9 @@ See README.md for release description.
 
 ### Added
 
+- atoms-buttons-button: added outline modifier
+- atoms-links-link_button: added outline modifier
+
 ### Removed
 
 ### Changed
