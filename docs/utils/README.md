@@ -193,12 +193,35 @@ Number representing percentage of darkness starting from white. So the higher th
 
 Custom svg icons, set as background image.
 
-- calendar
-- location
-- payment
-- smiley
-- sun
+- avfall-gjenvinning
+- barnehage
+- bolig-sosiale-tjenester
+- brannvern-ildsted-feiing
+- bruker
 - chevron-right
+- dognapne-vakttjenester
+- drone
+- epost
+- filter
+- gate-transport-parkering
+- handicap
+- helse-omsorg
+- hund
+- kafe
+- kalender
+- kart-pin
+- museum
+- natur-kultur-fritid
+- plan-bygg-eiendom
+- restaurant
+- skatt-nearing
+- skole-utdanning
+- sok
+- street-vendor
+- sykkel
+- toalett
+- trikk
+- vann-avlop
 
 ### Text Alignments
 
