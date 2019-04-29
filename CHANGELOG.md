@@ -15,8 +15,11 @@ See README.md for release description.
 
 - atoms-buttons-button: added outline modifier
 - atoms-links-link_button: added outline modifier
+- atoms-icons-icon: added documentation on how to use icon util classes to create different icons
 
 ### Removed
+
+- atoms-icons-icon: removed all icon variants as they can be made by using icon util classes
 
 ### Changed
 
