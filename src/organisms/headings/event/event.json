@@ -26,7 +26,7 @@
     "icons": {
       "entries": [
         {
-          "variant": "osg-v-icon-calendar",
+          "modifiers": "osg-u-icon-kalender",
           "srText": "Calendar",
           "text": "Praesent 22. sed",
           "subtext": "kl.17:22",
@@ -34,16 +34,11 @@
           "link": "#"
         },
         {
-          "variant": "osg-v-icon-location",
+          "modifiers": "osg-u-icon-kart-pin",
           "srText": "Location",
           "text": "Fringilla Mattis Tortor",
           "linkText": "Aliquam erat volutpat",
           "link": "#"
-        },
-        {
-          "variant": "osg-v-icon-payment",
-          "srText": "Payment",
-          "text": "250 - 450 kr"
         }
       ]
     }

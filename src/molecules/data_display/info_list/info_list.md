@@ -17,11 +17,11 @@ This pattern has one block named "content". Content passed to the block will ren
 
 #### Icon Object Data Fields
 
-| Attribute | Type   | Values             | Default | Description                                    |
-| --------- | ------ | ------------------ | ------- | ---------------------------------------------- |
-| \*variant | String | Clean text content | null    | Variant name to pass to the icon atom          |
-| text      | String | Rich text (html)   | null    | Text content to display together with the icon |
-| link      | String | Valid url          | null    | Url for a link displayed together with icon    |
-| linkText  | String | Clean text content | null    | Text for the link                              |
+| Attribute   | Type   | Values             | Default | Description                                    |
+| ----------- | ------ | ------------------ | ------- | ---------------------------------------------- |
+| \*modifiers | String | Clean text content | null    | Icon util class to pass to the icon atom       |
+| text        | String | Rich text (html)   | null    | Text content to display together with the icon |
+| link        | String | Valid url          | null    | Url for a link displayed together with icon    |
+| linkText    | String | Clean text content | null    | Text for the link                              |
 
 (\*) mandatory
