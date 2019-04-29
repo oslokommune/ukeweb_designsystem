@@ -20,6 +20,8 @@ See README.md for release description.
 
 ### Changed
 
+- devtools: upgraded to 0.8.1
+
 ## [0.18.0] - 2019-03-28
 
 ### Fixed

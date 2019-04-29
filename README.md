@@ -1,7 +1,5 @@
 # Oslo Styleguide
 
-**Warning: To see the components during development of these you will need access to a private docker image called styleguide_devtools. This image will go public very soon. You can see a precompiled version of the devtools showing the latest released patterns [here](https://styleguide.oslo.kommune.no/)**
-
 ## Intro
 
 This repository aims to only contain files related to consumption of components/patterns.
