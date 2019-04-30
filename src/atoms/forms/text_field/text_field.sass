@@ -27,8 +27,10 @@
       color: transparent
   &__label
     position: absolute
-    left: 13px
-    top: 18px
+    left: 10px
+    top: 20px
+    +osg-mq-desktop-and-up
+      top: 24px
   &__input:valid + &__label
     opacity: 0
   &.osg-v-floating-label &
