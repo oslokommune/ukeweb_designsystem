@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.19.1] - 2019-05-02
+
+### Fixed
+
+- small style fix
+
 ## [0.19.0] - 2019-05-02
 
 ### Added
