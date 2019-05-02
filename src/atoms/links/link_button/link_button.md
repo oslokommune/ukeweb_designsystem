@@ -29,6 +29,7 @@ Here you can see the different uses of the variants and modifiers with links: <a
 | Name                    | Description                                  |
 | ----------------------- | -------------------------------------------- |
 | osg-link-button--circle | Changes the shape of the icon to be a circle |
+| osg-button--outline     | Removes background-color. Keeps border.      |
 
 ### Color options
 

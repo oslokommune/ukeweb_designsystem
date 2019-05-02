@@ -4,7 +4,7 @@
   <ul>
     {% for icon in infoList.icons.entries %}
     <li>
-      {% include "atoms/icons/icon/icon.twig" with { variant: icon.variant } %}
+      {% include 'atoms/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
       {% if icon.text is defined and icon.text is not empty %}
         <p>{{ icon.text|raw }}</p>
       {% endif %}

@@ -1,7 +1,5 @@
 # Oslo Styleguide
 
-**Warning: To see the components during development of these you will need access to a private docker image called styleguide_devtools. This image will go public very soon. You can see a precompiled version of the devtools showing the latest released patterns [here](https://styleguide.oslo.kommune.no/)**
-
 ## Intro
 
 This repository aims to only contain files related to consumption of components/patterns.
@@ -30,6 +28,7 @@ Check out [this list](docs/utils) for all the util classes with descriptions.
 
 ## Development notes
 
+- See customizable sass variables [here](docs/customization)
 - To get a better understanding of how webforvaltningen divide its patterns into atoms, molecules and organisms, [read this](docs/atomic) description.
 - To get consumer information for supporting legacy browsers, [read this](docs/legacyBrowserSupport) setup guide.
 - To get tips and best practices for developing the Style guide, [read this](docs/bestPractises).

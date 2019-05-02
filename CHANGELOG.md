@@ -17,6 +17,22 @@ See README.md for release description.
 
 ### Changed
 
+## [0.19.0] - 2019-05-02
+
+### Added
+
+- atoms-buttons-button: added outline modifier
+- atoms-links-link_button: added outline modifier
+- atoms-icons-icon: added documentation on how to use icon util classes to create different icons
+
+### Removed
+
+- atoms-icons-icon: removed all icon variants as they can be made by using icon util classes
+
+### Changed
+
+- devtools: upgraded to 0.8.1
+
 ## [0.18.0] - 2019-03-28
 
 ### Fixed

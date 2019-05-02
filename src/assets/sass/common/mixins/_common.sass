@@ -35,3 +35,34 @@
     left: 30px
     +osg-mq-tablet-and-up
       left: 50px
+
+=osg-common-button
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 15px
+  min-width: 60px
+  min-height: 50px
+  &--circle
+    border-radius: 50%
+    // force 1x1 ratio
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      padding-top: 100%
+  &--outline
+    background-color: transparent !important
+
+  // looping map from maps.scss
+  @each $name, $text, $background in $osg-button-colors
+    &-#{$name}
+      color: $text
+      background: $background
+      border: 2px solid $background
+      &:focus
+        box-shadow: 0 0 2px 2px Highlight
+      &:active
+        transform: scale(0.97)
+      &:hover
+        background-color: lighten($background, 5%)

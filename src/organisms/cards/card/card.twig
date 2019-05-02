@@ -10,7 +10,7 @@
 <div class="osg-card {{ cardVariant }} {{ cardModifiers }}">
   <a class="osg-card__wrapper" href="{{ card.url }}" title="{{ figure.img.alt }}">
     <div class="osg-card__image-container">
-      {% include "atoms/decorators/figure/figure.twig" %}
+      {% include 'atoms/decorators/figure/figure.twig' %}
       {% if hasStateText %}
         <div class="osg-card__state-text">{{ card.stateText }}</div>
       {% endif %}

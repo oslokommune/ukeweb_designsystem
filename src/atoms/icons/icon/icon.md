@@ -1,22 +1,11 @@
 ### General
 
-Displays svg icons.
+Displays svg icons. Use in combination with an icon util class. Read the docs (in the styleguide repo) about util classes to know which icon util classes exists. If you are using twig, you can pass util classes into the field called "modifiers".
 
 ### Data Fields
 
-| Attribute | Type   | Values                    | Default         | Description                                   |
-| --------- | ------ | ------------------------- | --------------- | --------------------------------------------- |
-| variant   | String | See variant options below | "osg-v-default" | Name of the variant                           |
-| srText    | String | Clean text content        | null            | Describes the icon for screen reader purposes |
-
-### Variant Options
-
-| Name                | Description                                             |
-| ------------------- | ------------------------------------------------------- |
-| osg-v-default       | Is used if nothing is defined. Displays a calendar icon |
-| osg-v-sun           | Displays a sun icon                                     |
-| osg-v-smiley        | Displays a smiley icon                                  |
-| osg-v-payment       | Displays a payment icon                                 |
-| osg-v-location      | Displays a location icon                                |
-| osg-v-chevron-right | Displays a chevron icon pointing right                  |
-| osg-v-calendar      | Displays a calendar icon                                |
+| Attribute | Type   | Values                    | Default               | Description                                   |
+| --------- | ------ | ------------------------- | --------------------- | --------------------------------------------- |
+| variant   | String | See variant options below | "osg-v-default"       | Name of the variant                           |
+| modifiers | String | Any global css class      | "osg-u-icon-kalender" | Root class to modify styles                   |
+| srText    | String | Clean text content        | null                  | Describes the icon for screen reader purposes |

@@ -78,8 +78,8 @@ $osg-typographies: (
   ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 300),
   ("3", $osg-font-size-18, $osg-font-size-18, $osg-font-size-20, 300),
   ("4", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500),
-  ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18), 300,
-  ("6", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 500)
+  ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 300),
+  ("6", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 500),
   ("7", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 300)
 );
 
@@ -92,12 +92,35 @@ $osg-font-weights: (
 
 // used to generate icon classes in utils.sass
 $osg-icon-names: (
-  "calendar",
-  "location",
-  "payment",
-  "smiley",
-  "sun",
-  "chevron-right"
+  "avfall-gjenvinning",
+  "barnehage",
+  "bolig-sosiale-tjenester",
+  "brannvern-ildsted-feiing",
+  "bruker",
+  "chevron-right",
+  "dognapne-vakttjenester",
+  "drone",
+  "epost",
+  "filter",
+  "gate-transport-parkering",
+  "handicap",
+  "helse-omsorg",
+  "hund",
+  "kafe",
+  "kalender",
+  "kart-pin",
+  "museum",
+  "natur-kultur-fritid",
+  "plan-bygg-eiendom",
+  "restaurant",
+  "skatt-nearing",
+  "skole-utdanning",
+  "sok",
+  "street-vendor",
+  "sykkel",
+  "toalett",
+  "trikk",
+  "vann-avlop"
 );
 
 // used to generate alignment classes in utils.sass

@@ -6,7 +6,7 @@
 
 {% if iconList.variant is defined and iconList.variant == "osg-v-vertical" %}
   {% for item in brands %}
-    {% include "atoms/decorators/shape/shape.twig" with { shape: { variant: item.shape|default(null), text: item.icon, url: item.url, title: item.text } } %}
+    {% include 'atoms/decorators/shape/shape.twig' with { shape: { variant: item.shape|default(null), text: item.icon, url: item.url, title: item.text } } %}
   {% endfor %}
 {% else %}
   {% for item in brands %}
