@@ -17,6 +17,8 @@ See README.md for release description.
 
 ### Changed
 
+- utils: changed names of all icon utils
+
 ## [0.19.1] - 2019-05-02
 
 ### Fixed
