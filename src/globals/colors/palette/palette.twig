@@ -1,17 +1,20 @@
-<div class="osg-palette osg-content">
+<div class="osg-content">
+  <p>This is the primary color palette for Oslo kommune. There are util classes for adding each color for the background or the text of an element. These classes are prefixed with osg-u-color-bg and osg-u-color-text followed by the colors name.</p>
+</div>
+<div class="osg-palette">
   {% for item in palette.colors %}
     <div
-      class="osg-color-item osg-bg-{{ item.name }} {{ item.dark|default(false) ? 'osg-dark' : 'osg-light' }}">
-      <h2>
+      class="osg-palette__item osg-u-color-bg-{{ item.name }} {{ item.dark|default(false) ? 'osg-dark' : 'osg-light' }}">
+      <h2 class="osg-u-heading-3">
         {{ item.name }}
       </h2>
-      <h3>
+      <h3 class="osg-u-text-4">
         Classes
       </h3>
-      <ul>
-        <li>osg-text-{{ item.name }}</li>
-        <li>osg-bg-{{ item.name }}</li>
-        <li>osg-button-{{ item.name }} (needs button atom)</li>
+      <ul class="osg-u-text-6">
+        <li>osg-u-color-text-{{ item.name }}</li>
+        <li>osg-u-color-bg-{{ item.name }}</li>
+        <li>hex: {{ item.hex }}</li>
       </ul>
     </div>
   {% endfor %}
