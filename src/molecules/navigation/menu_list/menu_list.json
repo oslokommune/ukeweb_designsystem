@@ -4,7 +4,7 @@
   },
   "menuList": {
     "header": "Tjenester",
-    "hasIcons": true,
+    "modifiers": "osg-menu-list--expandable osg-menu-list--expanded",
     "items": [
       {
         "icon": {

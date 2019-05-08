@@ -33,6 +33,7 @@
         background-repeat-x: no-repeat
         background-position: right
         border: none
+        padding-left: 0px
         padding-right: 40px
         @extend .osg-u-heading-5
 
@@ -52,6 +53,7 @@
         background-repeat-x: no-repeat
         background-position: right
         border: none
+        padding-left: 0px
         padding-right: 40px
         @extend .osg-u-heading-5
         +osg-mq-tablet-and-up
@@ -68,7 +70,7 @@
     &__content
       display: none
       +osg-mq-tablet-and-up
-        display: block
+        display: flex
 
   //this can be used if you want to expand the menu from tablet to bigger screens
   &--expandable-tablet-and-up &
@@ -82,6 +84,7 @@
         background-repeat-x: no-repeat
         background-position: right
         border: none
+        padding-left: 0px
         padding-right: 40px
         @extend .osg-u-heading-5
         +osg-mq-mobile-only
@@ -99,7 +102,7 @@
     &__content
       display: none
       +osg-mq-mobile-only
-        display: block
+        display: flex
 
   &--expanded &
     //makes plus into minus, and shows the links
@@ -111,6 +114,7 @@
         background-repeat-x: no-repeat
         background-position: right
         border: none
+        padding-left: 0px
         padding-right: 40px
         @extend .osg-u-heading-5
 
