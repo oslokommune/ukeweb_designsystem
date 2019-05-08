@@ -60,7 +60,6 @@
       +osg-mq-tablet-and-up
         display: none
 
-
     &__header
       display: none
       +osg-mq-tablet-and-up
@@ -116,4 +115,10 @@
         @extend .osg-u-heading-5
 
     &__content
-      display: block
+      display: flex
+
+  &--vertical &
+    &__content
+      li
+        flex: 1 0 100%
+        height: 35px
