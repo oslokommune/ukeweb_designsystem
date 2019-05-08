@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "tags": ["menu", "list", "navigation", "expand", "collapse"]
+  },
+  "menuList": {
+    "header": "Tjenester",
+    "hasIcons": true,
+    "items": [
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-dognapne-vakttjenester"
+        },
+        "text": "Døgnåpne tjenester",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-skole-utdanning"
+        },
+        "text": "Skole ot utdanning",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-barnehage"
+        },
+        "text": "Barnehage",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-helse-omsorg"
+        },
+        "text": "Helse og omsorg",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-natur-kultur-fritid"
+        },
+        "text": "Natur, kultur og fritid",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-bolig-sosiale-tjenester"
+        },
+        "text": "Bolig og sosiale tjenester",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-plan-bygg-eiendom"
+        },
+        "text": "Plan, bygg og eiendom",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-avfall-gjenvinning"
+        },
+        "text": "Avfall og gjenvinning",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-skatt-nearing"
+        },
+        "text": "Skat og næring",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-vann-avlop"
+        },
+        "text": "Vann og avløp",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-gate-transport-parkering"
+        },
+        "text": "Gate, transport og parkering",
+        "url": "#"
+      },
+      {
+        "icon": {
+          "modifiers": "osg-u-icon-brannvern-ildsted-feiing"
+        },
+        "text": "Brannvern, ildsted og feiing",
+        "url": "#"
+      }
+    ]
+  }
+}

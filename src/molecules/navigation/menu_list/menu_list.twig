@@ -1,0 +1,22 @@
+{% set menuListModifiers = menuList.modifiers | default(null) %}
+{% set hasIcons = menuList.hasIcons | default(false) %}
+
+<div class="osg-menu-list osg-menu-list--expandable-tablet-and-up osg-menu-list--expanded">
+  <ul>
+    <li>
+      <h3 class="osg-menu-list__button-header">
+        <button>{{ menuList.header }}</button>
+      </h3>
+      <h3 class="osg-menu-list__header">{{ menuList.header }}</h3>
+      <ul class="osg-menu-list__content">
+        {% for iconLink in menuList.items %}
+          <li>
+          {% if hasIcons %}
+            {% include 'molecules/data_display/icon_link/icon_link.twig' with iconLink %}
+          {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</div>
