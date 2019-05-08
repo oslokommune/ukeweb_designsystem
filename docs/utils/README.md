@@ -115,7 +115,7 @@ Background and text color that is compliant to WCAG 2.0
 
 - muted (bg: grayscale-10, text: grayscale-80)
 - primary (bg: blue-light, text: green-dark)
-- success (bg: green-lighter, text: green-dark)
+- success (bg: green-light, text: green-dark)
 - warning (bg: orange, text: green-dark)
 - danger (bg: red, text: green-dark)
 
@@ -193,35 +193,35 @@ Number representing percentage of darkness starting from white. So the higher th
 
 Custom svg icons, set as background image.
 
-- avfall-gjenvinning
-- barnehage
-- bolig-sosiale-tjenester
-- brannvern-ildsted-feiing
-- bruker
+- recycling
+- swingset
+- house-heart
+- fire-emblem
+- user
 - chevron-right
-- dognapne-vakttjenester
+- 24h
 - drone
-- epost
+- letter
 - filter
-- gate-transport-parkering
+- bus
 - handicap
-- helse-omsorg
-- hund
-- kafe
-- kalender
-- kart-pin
+- heart-plus
+- dog
+- cafe
+- calendar
+- location-pin
 - museum
-- natur-kultur-fritid
-- plan-bygg-eiendom
+- park
+- hoist
 - restaurant
-- skatt-nearing
-- skole-utdanning
-- sok
+- coin-stacks
+- backpack
+- magnifying-glass
 - street-vendor
-- sykkel
-- toalett
-- trikk
-- vann-avlop
+- bike
+- toilet
+- tram
+- water-faucet
 
 ### Text Alignments
 
