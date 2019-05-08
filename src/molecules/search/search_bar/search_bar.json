@@ -11,6 +11,6 @@
   },
   "button": {
     "modifiers": "osg-button--circle",
-    "dataattrs": [{ "key": "aria-label", "val": "Search" }]
+    "dataAttrs": [{ "key": "aria-label", "val": "Search" }]
   }
 }

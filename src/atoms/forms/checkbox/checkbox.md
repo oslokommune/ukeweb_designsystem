@@ -8,7 +8,7 @@ Custom checkbox for forms
 | --------- | ------ | -------------------------- | ------- | --------------------------------------- |
 | modifiers | String | See modifier options below | null    | Root class to modify styles             |
 | \*text    | String | (text value)               | null    | Text of the checkbox                    |
-| dataattr  | Array  | key:String, val:String     | null    | Extra attributes to add to the checkbox |
+| dataAttr  | Array  | key:String, val:String     | null    | Extra attributes to add to the checkbox |
 
 (\*) mandatory
 

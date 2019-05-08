@@ -8,7 +8,7 @@
   <a href="{{ iconLink.url }}"
     {% if iconLinkHasDataAttrs %}
       {% for dataAttr in iconLink.dataAttrs %}
-        {{dataAttr.key}}="{{dataAttr.val}}"
+        {{ dataAttr.key }}="{{ dataAttr.val }}"
       {% endfor %}
     {% endif %}
     >
