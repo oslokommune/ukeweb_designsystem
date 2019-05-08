@@ -115,7 +115,7 @@ Background and text color that is compliant to WCAG 2.0
 
 - muted (bg: grayscale-10, text: grayscale-80)
 - primary (bg: blue-light, text: green-dark)
-- success (bg: green-lighter, text: green-dark)
+- success (bg: green-light, text: green-dark)
 - warning (bg: orange, text: green-dark)
 - danger (bg: red, text: green-dark)
 
