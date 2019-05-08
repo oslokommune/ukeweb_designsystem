@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "gui-preset": "global-pattern",
+    "show-docs": false
+  },
+  "state": {
+    "colors": [
+      {
+        "name": "muted",
+        "bgHex": "#e6e6e6",
+        "hex": "#333333"
+      },
+      {
+        "name": "primary",
+        "bgHex": "#b3f5ff",
+        "hex": "#034b45"
+      },
+      {
+        "name": "success",
+        "bgHex": "#4e807c",
+        "hex": "#034b45"
+      },
+      {
+        "name": "warning",
+        "bgHex": "#f9c66b",
+        "hex": "#034b45"
+      },
+      {
+        "name": "danger",
+        "bgHex": "#ff8274",
+        "hex": "#034b45"
+      }
+    ]
+  }
+}
