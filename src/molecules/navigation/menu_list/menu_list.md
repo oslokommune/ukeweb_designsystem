@@ -2,6 +2,10 @@
 
 Menu list shows a list of links that can be expandable / collapsible in mobile view.
 
+### Examples
+
+Here you can see the different uses of modifiers in this pattern: <a href="https://codepen.io/oslokommune/pen/yWeaye" target="_blank">https://codepen.io/oslokommune/pen/yWeaye</a>.
+
 ### Data Fields
 
 | Attribute | Type   | Values               | Default | Description                                 |
