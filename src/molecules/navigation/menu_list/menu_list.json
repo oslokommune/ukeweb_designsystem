@@ -4,7 +4,7 @@
   },
   "menuList": {
     "header": "Tjenester",
-    "modifiers": "osg-menu-list--expandable osg-menu-list--expanded",
+    "modifiers": "",
     "dataattrs": [
       { "key": "id", "val": "lorem_ipsum" },
       { "key": "aria-expanded", "val": "true" }
@@ -12,86 +12,86 @@
     "items": [
       {
         "icon": {
-          "modifiers": "osg-u-icon-dognapne-vakttjenester"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Døgnåpne tjenester",
+        "text": "lorem ipsum",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-skole-utdanning"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Skole ot utdanning",
+        "text": "dolor sit amet",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-barnehage"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Barnehage",
+        "text": "consectetur",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-helse-omsorg"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Helse og omsorg",
+        "text": "adipiscing elit torquent",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-natur-kultur-fritid"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Natur, kultur og fritid",
+        "text": "ante ultricies tortor",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-bolig-sosiale-tjenester"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Bolig og sosiale tjenester",
+        "text": "pellentesque proin sociis",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-plan-bygg-eiendom"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Plan, bygg og eiendom",
+        "text": "fusce curabitur",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-avfall-gjenvinning"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Avfall og gjenvinning",
+        "text": "purus nec poseuere fames",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-skatt-nearing"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Skat og næring",
+        "text": "condimentum arcu",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-vann-avlop"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Vann og avløp",
+        "text": "justo felis montes est",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-gate-transport-parkering"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Gate, transport og parkering",
+        "text": "scelerisque sagittis",
         "url": "#"
       },
       {
         "icon": {
-          "modifiers": "osg-u-icon-brannvern-ildsted-feiing"
+          "modifiers": "osg-u-icon-chevron-right"
         },
-        "text": "Brannvern, ildsted og feiing",
+        "text": "praesent fringilla dui magna",
         "url": "#"
       }
     ]
