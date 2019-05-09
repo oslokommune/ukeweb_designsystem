@@ -22,3 +22,13 @@ Menu list shows a list of links that can be expandable / collapsible in mobile v
 | osg-menu-list--expandable-tablet-and-up | Adds the plus icon and hides the menu items for tablets and bigger screens  |
 | osg-menu-list--expanded                 | Adds the minus icon and shows the menu items                                |
 | osg-menu-list--vertical                 | Displays the list of items in one column and reduces the space between them |
+
+### Accessibility
+
+There are several things to have in mind when the menu expands and collapses:
+
+| Element                           | Description                                                                                                                               |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| button                            | aria-expanded="true" when the content is visible and false when is not. Also aria-hidden true when the header visible and false otherwise |
+| h3                                | aria-hidden="false" when the button is visible and true otherwise                                                                         |
+| ul class="osg-menu-list__content" | aria-hidden="false" when the button is aria-expanded="true" and false otherwise                                                           |

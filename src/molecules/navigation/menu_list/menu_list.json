@@ -5,6 +5,10 @@
   "menuList": {
     "header": "Tjenester",
     "modifiers": "osg-menu-list--expandable osg-menu-list--expanded",
+    "dataattrs": [
+      { "key": "id", "val": "lorem_ipsum" },
+      { "key": "aria-expanded", "val": "true" }
+    ],
     "items": [
       {
         "icon": {
