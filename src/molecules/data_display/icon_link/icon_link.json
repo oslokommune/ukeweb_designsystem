@@ -5,7 +5,7 @@
     "url": "#lorem",
     "dataAttrs": [{ "key": "target", "val": "_blank" }],
     "icon": {
-      "modifiers": "osg-u-icon-kalender"
+      "modifiers": "osg-u-icon-chevron-right"
     }
   }
 }

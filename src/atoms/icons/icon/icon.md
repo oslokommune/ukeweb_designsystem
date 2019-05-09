@@ -4,8 +4,8 @@ Displays svg icons. Use in combination with an icon util class. Read the docs (i
 
 ### Data Fields
 
-| Attribute | Type   | Values                    | Default               | Description                                   |
-| --------- | ------ | ------------------------- | --------------------- | --------------------------------------------- |
-| variant   | String | See variant options below | "osg-v-default"       | Name of the variant                           |
-| modifiers | String | Any global css class      | "osg-u-icon-calendar" | Root class to modify styles                   |
-| srText    | String | Clean text content        | null                  | Describes the icon for screen reader purposes |
+| Attribute | Type   | Values                    | Default                    | Description                                   |
+| --------- | ------ | ------------------------- | -------------------------- | --------------------------------------------- |
+| variant   | String | See variant options below | "osg-v-default"            | Name of the variant                           |
+| modifiers | String | Any global css class      | "osg-u-icon-chevron-right" | Root class to modify styles                   |
+| srText    | String | Clean text content        | null                       | Describes the icon for screen reader purposes |
