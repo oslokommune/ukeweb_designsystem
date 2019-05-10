@@ -4,7 +4,6 @@
     "min-height": "500px"
   },
   "alert": {
-    "state": "important",
     "buttonAriaLabel": "Amet sit ipsum",
     "closeButtonSrText": "Lukk varsel",
     "dataattrs": [{ "key": "id", "val": "lorem_ipsum" }]
