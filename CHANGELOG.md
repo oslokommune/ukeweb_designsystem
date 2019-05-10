@@ -18,6 +18,7 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+- multiple patterns: changed all variables containing dataattr / dataattrs to camel case, dataAttr / dataAttrs
 
 ## [0.20.0] - 2019-05-02
 

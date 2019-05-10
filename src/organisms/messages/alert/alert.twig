@@ -2,7 +2,7 @@
 {% set alertVariant = alert.variant|default('osg-v-default') %}
 {% set alertModifiers = alert.modifiers | default(null) %}
 {% set alertState = 'osg-alert--state-' ~ alert.state | default('default') %}
-{% set alertButtonHasDataattrs = alert.dataattrs is defined and alert.dataattrs is not empty %}
+{% set alertButtonHasDataAttrs = alert.dataAttrs is defined and alert.dataAttrs is not empty %}
 
 {% set alertCloseButtonContent %}
    {% block closeButtonContent %}
@@ -17,9 +17,9 @@
     aria-haspopup="true"
     aria-expanded="false"
     aria-label="{{ alert.buttonAriaLabel }}"
-    {% if alertButtonHasDataattrs %}
-      {% for dataattr in alert.dataattrs %}
-        {{ dataattr.key }}="{{ dataattr.val }}"
+    {% if alertButtonHasDataAttrs %}
+      {% for dataAttr in alert.dataAttrs %}
+        {{ dataAttr.key }}="{{ dataAttr.val }}"
       {% endfor %}
     {% endif %}
   >
