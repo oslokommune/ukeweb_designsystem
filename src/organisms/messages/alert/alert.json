@@ -11,7 +11,7 @@
     },
     "buttonAriaLabel": "Amet sit ipsum",
     "closeButtonSrText": "Lukk varsel",
-    "dataattrs": [
+    "dataAttrs": [
       { "key": "id", "val": "lorem_ipsum" }
     ]
   }

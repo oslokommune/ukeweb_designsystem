@@ -9,7 +9,7 @@
   "button": {
     "color": "",
     "modifiers": "osg-button--circle",
-    "dataattrs": [
+    "dataAttrs": [
       {
         "key": "aria-label",
         "val": "expand-button"
