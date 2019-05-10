@@ -17,6 +17,22 @@ See README.md for release description.
 
 ### Changed
 
+## [0.21.0] - 2019-05-10
+
+### Fixed
+
+- atoms-messages-alert: fixed missing icon when state was set to important
+
+### Added
+
+- molecules-navigation-menu_list: new pattern
+
+### Removed
+
+### Changed
+
+- multiple patterns: changed all variables containing dataattr / dataattrs to camel case, dataAttr / dataAttrs
+
 ## [0.20.0] - 2019-05-02
 
 ### Changed

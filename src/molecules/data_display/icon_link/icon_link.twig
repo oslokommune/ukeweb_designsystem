@@ -3,20 +3,21 @@
 {% set iconLinkHasDataAttrs = iconLink.dataAttrs is defined and iconLink.dataAttrs is not empty %}
 {% set iconLinkVariant = iconLink.variant|default('osg-v-default') %}
 {% set iconLinkModifiers = iconLink.modifiers | default(null) %}
+{% set iconLinkHasIcon = iconLink.icon.modifiers | default(null) %}
 
 <div class="osg-icon-link {{ iconLinkVariant }} {{ iconLinkModifiers }}">
   <a href="{{ iconLink.url }}"
     {% if iconLinkHasDataAttrs %}
       {% for dataAttr in iconLink.dataAttrs %}
-        {{dataAttr.key}}="{{dataAttr.val}}"
+        {{ dataAttr.key }}="{{ dataAttr.val }}"
       {% endfor %}
     {% endif %}
     >
-    <div class="osg-icon-link__link-icon">
-      {% block content %}
-        <i class="fa fa-suitcase"></i>
-      {% endblock %}
-    </div>
+    {% if iconLinkHasIcon %}
+      <div class="osg-icon-link__link-icon">
+        {% include 'atoms/icons/icon/icon.twig' %}
+      </div>
+    {% endif %}
     <div class="osg-icon-link__link-text">
       {% if iconLinkHasHeading %}
         <span class="osg-icon-link__heading">

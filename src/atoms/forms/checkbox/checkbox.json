@@ -4,7 +4,7 @@
   },
   "checkbox": {
     "text": "laoreet lacinia neque",
-    "dataattrs": [
+    "dataAttrs": [
       { "key": "id", "val": "my-checkbox" },
       { "key": "name", "val": "my-checkbox" }
     ]

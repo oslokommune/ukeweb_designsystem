@@ -4,15 +4,8 @@
     "min-height": "500px"
   },
   "alert": {
-    "heading": "Lorem ipsum",
-    "updated": {
-      "text": "Dolor sit:",
-      "date": "11.Juni 2018"
-    },
     "buttonAriaLabel": "Amet sit ipsum",
     "closeButtonSrText": "Lukk varsel",
-    "dataattrs": [
-      { "key": "id", "val": "lorem_ipsum" }
-    ]
+    "dataAttrs": [{ "key": "id", "val": "lorem_ipsum" }]
   }
 }
