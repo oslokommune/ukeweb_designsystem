@@ -1,4 +1,3 @@
-{% set alertHasUpdated = alert.updated is defined and alert.updated is not empty %}
 {% set alertHasButton = button is defined and button is not empty %}
 {% set alertVariant = alert.variant|default('osg-v-default') %}
 {% set alertModifiers = alert.modifiers | default(null) %}
@@ -10,7 +9,6 @@
     <i class='fa fa-times'><span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span></i>
    {% endblock %}
 {% endset %}
-
 
 <div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
   <a
