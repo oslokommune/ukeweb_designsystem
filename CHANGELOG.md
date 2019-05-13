@@ -16,6 +16,7 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+- organisms-navigation-hero: Added osg-hero--center-mobile modifier for centering image on mobile
 
 ## [0.21.0] - 2019-05-10
 
