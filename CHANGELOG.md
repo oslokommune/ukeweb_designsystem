@@ -12,7 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
-- organisms-navigation-hero: Added osg-hero--center-mobile modifier for centering image on mobile
+- organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
 
 ### Removed
 
