@@ -1,14 +1,14 @@
 {% set menuListModifiers = menuList.modifiers | default(null) %}
-{% set menuListButtonHasDataattrs = menuList.dataattrs is defined and menuList.dataattrs is not empty %}
+{% set menuListButtonHasDataAttrs = menuList.dataAttrs is defined and menuList.dataAttrs is not empty %}
 
 <div class="osg-menu-list {{ menuListModifiers }}">
   <ul>
     <li>
       <h3 class="osg-menu-list__button-header">
         <button
-          {% if menuListButtonHasDataattrs %}
-            {% for dataattr in menuList.dataattrs %}
-              {{ dataattr.key }}="{{ dataattr.val }}"
+          {% if menuListButtonHasDataAttrs %}
+            {% for dataAttr in menuList.dataAttrs %}
+              {{ dataAttr.key }}="{{ dataAttr.val }}"
             {% endfor %}
           {% endif %}
         >{{ menuList.header }}</button>
