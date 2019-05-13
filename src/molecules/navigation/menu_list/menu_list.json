@@ -5,7 +5,7 @@
   "menuList": {
     "header": "Lorem ipsum",
     "modifiers": "",
-    "dataattrs": [
+    "dataAttrs": [
       { "key": "id", "val": "lorem_ipsum" },
       { "key": "aria-expanded", "val": "true" }
     ],
