@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- molecules-navigation-menu_list: fix background plus/minus of the button to be repeated in Firefox
+
 ### Added
 
 ### Removed
