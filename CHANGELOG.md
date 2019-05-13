@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- organisms-navigation-hero: Fixed naming of modifiers targeting tablet and up
 
 ### Added
 - organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
