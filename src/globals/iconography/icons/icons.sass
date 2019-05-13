@@ -1,0 +1,16 @@
+.osg-icons-cols
+  display: flex
+  flex-wrap: wrap
+  &__col
+    display: flex
+    flex-flow: column
+    align-items: center
+    padding: 30px
+    flex: 1
+    min-width: calc(100% / 2)
+    background-color: $osg-color-grey-light
+    border: 1px solid $osg-color-grey
+    +osg-mq-tablet-and-up
+      min-width: calc(100% / 4)
+    +osg-mq-desktop-and-up
+      min-width: calc(100% / 5)

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "gui-preset": "global-pattern",
+    "show-docs": false
+  },
+  "icons": {
+    "items": [
+      {
+        "name": "24h"
+      },
+      {
+        "name": "backpack"
+      },
+      {
+        "name": "bike"
+      },
+      {
+        "name": "bus"
+      },
+      {
+        "name": "cafe"
+      },
+      {
+        "name": "calendar"
+      },
+      {
+        "name": "chevron-right"
+      },
+      {
+        "name": "coin-stacks"
+      },
+      {
+        "name": "dog"
+      },
+      {
+        "name": "drone"
+      },
+      {
+        "name": "filter"
+      },
+      {
+        "name": "fire-emblem"
+      },
+      {
+        "name": "handicap"
+      },
+      {
+        "name": "heart-plus"
+      },
+      {
+        "name": "hoist"
+      },
+      {
+        "name": "house-heart"
+      },
+      {
+        "name": "letter"
+      },
+      {
+        "name": "location-pin"
+      },
+      {
+        "name": "magnifying-glass"
+      },
+      {
+        "name": "minus-sign"
+      },
+      {
+        "name": "museum"
+      },
+      {
+        "name": "park"
+      },
+      {
+        "name": "plus-sign"
+      },
+      {
+        "name": "recycling"
+      },
+      {
+        "name": "restaurant"
+      },
+      {
+        "name": "street-vendor"
+      },
+      {
+        "name": "swingset"
+      },
+      {
+        "name": "toilet"
+      },
+      {
+        "name": "tram"
+      },
+      {
+        "name": "user"
+      },
+      {
+        "name": "water-faucet"
+      }
+    ]
+  }
+}
