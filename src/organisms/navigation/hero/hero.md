@@ -78,9 +78,10 @@ Example of clickable pattern with circular image, text on the left of the image 
 
 ### Modifier Options
 
-| Name                     | Description                    |
-| ------------------------ | ------------------------------ |
-| osg-hero--circle         | Makes the image circular       |
-| osg-hero--left{-tablet}  | Text on the left of the image  |
-| osg-hero--right{-tablet} | Text on the right of the image |
-| osg-hero--top{-tablet}   | Text on the top of the image   |
+| Name                            | Description                    |
+| ------------------------------- | ------------------------------ |
+| osg-hero--circle                | Makes the image circular       |
+| osg-hero--left{-tablet-and-up}  | Text on the left of the image  |
+| osg-hero--right{-tablet-and-up} | Text on the right of the image |
+| osg-hero--top{-tablet-and-up}   | Text on the top of the image   |
+| osg-hero--center-mobile-only    | Image and caption centered     |

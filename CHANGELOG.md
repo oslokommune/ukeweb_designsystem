@@ -10,10 +10,12 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- organisms-navigation-hero: Fixed naming of modifiers targeting tablet and up
 
 - molecules-navigation-menu_list: fix background plus/minus of the button to be repeated in Firefox
 
 ### Added
+- organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
 
 ### Removed
 
