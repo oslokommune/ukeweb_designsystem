@@ -41,6 +41,7 @@
     order: 2
 
 .osg-hero
+  flex-grow: 1
   text-decoration: none
   .osg-content-box
     background: transparent
@@ -51,18 +52,23 @@
     .osg-shape
       @extend .osg-shape.osg-v-circle
 
+  &--center-mobile-only &
+    +osg-mq-mobile-only
+      &__image
+        text-align: center
+
   &--right
     +osg-hero--right('.osg-hero')
   &--left
     +osg-hero--left('.osg-hero')
   &--top
     +osg-hero--top('.osg-hero')
-  &--left-tablet
+  &--left-tablet-and-up
     +osg-mq-tablet-and-up
       +osg-hero--left('.osg-hero')
-  &--right-tablet
+  &--right-tablet-and-up
     +osg-mq-tablet-and-up
       +osg-hero--right('.osg-hero')
-  &--top-tablet
+  &--top-tablet-and-up
     +osg-mq-tablet-and-up
       +osg-hero--top('.osg-hero')

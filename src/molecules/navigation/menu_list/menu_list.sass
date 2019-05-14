@@ -15,12 +15,10 @@
 
     li
       flex: 1 0 100%
-      height: 75px
+      height: 58px
       +osg-mq-tablet-and-up
         flex: 1 0 21%
-
-      a
-        align-items: center
+        height: 75px
 
   //this can be used if you want to expand in any device
   &--expandable &
@@ -30,7 +28,7 @@
 
       button
         background: url('../../../assets/images/icon-plus-sign.svg')
-        background-repeat-x: no-repeat
+        background-repeat: no-repeat
         background-position: right
         border: none
         padding-left: 0px
@@ -50,7 +48,7 @@
 
       button
         background: url('../../../assets/images/icon-plus-sign.svg')
-        background-repeat-x: no-repeat
+        background-repeat: no-repeat
         background-position: right
         border: none
         padding-left: 0px
@@ -81,7 +79,7 @@
 
       button
         background: url('../../../assets/images/icon-plus-sign.svg')
-        background-repeat-x: no-repeat
+        background-repeat: no-repeat
         background-position: right
         border: none
         padding-left: 0px
@@ -111,7 +109,7 @@
 
       button
         background: url('../../../assets/images/icon-minus-sign.svg')
-        background-repeat-x: no-repeat
+        background-repeat: no-repeat
         background-position: right
         border: none
         padding-left: 0px
@@ -123,6 +121,7 @@
 
   &--vertical &
     &__content
+      margin-top: 15px
       li
         flex: 1 0 100%
         height: 35px
