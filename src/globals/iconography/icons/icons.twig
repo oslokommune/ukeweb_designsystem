@@ -1,0 +1,17 @@
+<p>The icons can be used as background by setting the util class to osg-u-icon- followed by the icons name</p>
+<br>
+<div class="osg-icons-cols">
+  {% for item in icons.items %}
+    <div class="osg-icons-cols__col">
+      <p class="osg-u-padding-bottom-tiny">{{ item.name }}</p>
+      {% include 'atoms/icons/icon/icon.twig'
+        with {
+          icon: {
+            modifiers: 'osg-u-icon-' ~ item.name
+          }
+        }
+      %}
+    </div>
+  {% endfor %}
+</div>
+
