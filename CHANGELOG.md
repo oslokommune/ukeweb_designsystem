@@ -6,7 +6,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 See README.md for release description.
-
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -16,6 +15,11 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+
+## [0.23.0] - 2019-05-15
+
+### Removed
+- molecules-data_display-icon_link: Replace the styleguide icon for a block
 
 ## [0.22.0] - 2019-05-14
 
@@ -27,10 +31,6 @@ See README.md for release description.
 ### Added
 - organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
 
-### Removed
-
-### Changed
-
 ## [0.21.0] - 2019-05-10
 
 ### Fixed
@@ -40,8 +40,6 @@ See README.md for release description.
 ### Added
 
 - molecules-navigation-menu_list: new pattern
-
-### Removed
 
 ### Changed
 
