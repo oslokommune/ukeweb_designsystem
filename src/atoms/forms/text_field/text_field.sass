@@ -1,13 +1,15 @@
 =osg-text-field-helper($osg-color-name, $background, $foreground)
-  .osg-text-field.osg-text-field-#{$osg-color-name}
-    .osg-text-field-input
+  .osg-text-field.osg-text-field--#{$osg-color-name}
+    .osg-text-field__input
       color: $foreground
       background-color: $background
+      border-color: $background
 
 // looping map from maps.scss
 @each $name, $tuple in $osg-named-colors
-  // button-colors is a map from name to a tuple with two color values which we extract using the nth function
   +osg-text-field-helper($name, nth($tuple, 1), nth($tuple, 2))
+@each $name, $tuple in $osg-colors
+  +osg-text-field-helper($name, nth($tuple, 1), $osg-color-grey-light)
 
 .osg-text-field
   display: flex
@@ -68,3 +70,7 @@
     &__label
       left: 18px
       top: 30px
+  &--outline &
+    &__input
+      border: solid 2px transparent
+      background-color: $osg-color-grey-light !important
