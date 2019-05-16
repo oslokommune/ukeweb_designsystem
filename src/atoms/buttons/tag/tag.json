@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["keyword", "related", "items"]
+    "pattern": {
+      "tags": ["keyword", "related", "items"]
+    }
   },
   "tag": {
     "content": "Nunc elit risus",

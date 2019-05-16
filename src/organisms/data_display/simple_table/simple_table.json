@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["data", "tabular", "information"]
+    "pattern": {
+      "tags": ["data", "tabular", "information"]
+    }
   },
   "simpleTable": {
     "rows": [

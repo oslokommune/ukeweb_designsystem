@@ -1,14 +1,16 @@
 {
   "meta": {
-    "tags": [
-      "image",
-      "picture",
-      "figure",
-      "icons",
-      "data",
-      "information",
-      "happening"
-    ]
+    "pattern": {
+      "tags": [
+        "image",
+        "picture",
+        "figure",
+        "icons",
+        "data",
+        "information",
+        "happening"
+      ]
+    }
   },
   "event": {
     "heading": "Lorem ipsum dolor et",

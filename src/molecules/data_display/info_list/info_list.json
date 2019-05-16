@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["icons", "data", "information", "time", "date", "location"]
+    "pattern": {
+      "tags": ["icons", "data", "information", "time", "date", "location"]
+    }
   },
   "infoList": {
     "icons": {

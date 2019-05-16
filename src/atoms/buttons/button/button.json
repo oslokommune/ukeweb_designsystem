@@ -1,6 +1,12 @@
 {
   "meta": {
-    "tags": ["Call to action", "functionality", "link", "click"]
+    "pattern": {
+      "tags": ["Call to action", "functionality", "link", "click"]
+    },
+    "gui": {
+      "preset": "global-pattern",
+      "show-docs": false
+    }
   },
   "button": {
     "dataAttrs": [

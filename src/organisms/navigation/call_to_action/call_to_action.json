@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["image", "picture", "figure", "button", "click", "link"]
+    "pattern": {
+      "tags": ["image", "picture", "figure", "button", "click", "link"]
+    }
   },
   "callToAction": {},
   "figure": {

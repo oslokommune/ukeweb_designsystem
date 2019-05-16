@@ -1,6 +1,10 @@
 {
   "meta": {
-    "min-height": "800px"
+    "pattern": {
+      "frame": {
+        "min-height": "800px"
+      }
+    }
   },
   "navbarMenu": {
     "variant": "osg-v-open"

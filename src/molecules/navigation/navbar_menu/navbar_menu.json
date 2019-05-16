@@ -1,14 +1,18 @@
 {
   "meta": {
-    "tags": [
-      "global",
-      "navigation",
-      "pages",
-      "links",
-      "menu",
-      "hamburger menu"
-    ],
-    "min-height": "500px"
+    "pattern": {
+      "tags": [
+        "global",
+        "navigation",
+        "pages",
+        "links",
+        "menu",
+        "hamburger menu"
+      ],
+      "frame": {
+        "min-height": "500px"
+      }
+    }
   },
   "navbarMenu": {
     "links": [

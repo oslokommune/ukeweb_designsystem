@@ -1,15 +1,17 @@
 {
   "meta": {
-    "tags": [
-      "preview",
-      "image",
-      "picture",
-      "link",
-      "heading",
-      "text",
-      "summary",
-      "event"
-    ]
+    "pattern": {
+      "tags": [
+        "preview",
+        "image",
+        "picture",
+        "link",
+        "heading",
+        "text",
+        "summary",
+        "event"
+      ]
+    }
   },
   "listCard": {
     "url": "#lorem"

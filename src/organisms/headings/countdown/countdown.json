@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["days", "hours", "minutes", "seconds", "time", "date", "clock"]
+    "pattern": {
+      "tags": ["days", "hours", "minutes", "seconds", "time", "date", "clock"]
+    }
   },
   "countdown": {
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

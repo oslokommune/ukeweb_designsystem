@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["hierarchy", "sitemap", "navigation", "pages", "go back"]
+    "pattern": {
+      "tags": ["hierarchy", "sitemap", "navigation", "pages", "go back"]
+    }
   },
   "breadcrumbs": {
     "paths": [

@@ -1,7 +1,9 @@
 {
   "meta": {
-    "gui-preset": "global-pattern",
-    "show-docs": false
+    "gui": {
+      "preset": "global-pattern",
+      "show-docs": false
+    }
   },
   "fontSizes": {}
 }

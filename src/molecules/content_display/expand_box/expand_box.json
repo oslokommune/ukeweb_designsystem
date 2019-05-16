@@ -1,6 +1,8 @@
 {
   "meta": {
-    "tags": ["content", "fact", "info", "expand"]
+    "pattern": {
+      "tags": ["content", "fact", "info", "expand"]
+    }
   },
   "expandBox": {
     "variant": "osg-v-default",
