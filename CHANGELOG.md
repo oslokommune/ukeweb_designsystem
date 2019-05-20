@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 See README.md for release description.
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -16,19 +17,28 @@ See README.md for release description.
 
 ### Changed
 
+## [0.23.1] - 2019-05-20
+
+### Added
+
+- atoms-forms-text_field: added outline modifier
+
 ## [0.23.0] - 2019-05-15
 
 ### Removed
+
 - molecules-data_display-icon_link: Replace the styleguide icon for a block
 
 ## [0.22.0] - 2019-05-14
 
 ### Fixed
+
 - organisms-navigation-hero: Fixed naming of modifiers targeting tablet and up
 
 - molecules-navigation-menu_list: fix background plus/minus of the button to be repeated in Firefox and reduce space between items in mobile view
 
 ### Added
+
 - organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
 
 ## [0.21.0] - 2019-05-10
