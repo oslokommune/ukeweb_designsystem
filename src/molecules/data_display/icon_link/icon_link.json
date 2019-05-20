@@ -3,9 +3,6 @@
     "heading": "Lorem ipsum",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "url": "#lorem",
-    "dataAttrs": [{ "key": "target", "val": "_blank" }],
-    "icon": {
-      "modifiers": "osg-u-icon-chevron-right"
-    }
+    "dataAttrs": [{ "key": "target", "val": "_blank" }]
   }
 }

@@ -4,7 +4,6 @@
   },
   "search_bar": {},
   "textField": {
-    "variant": "osg-v-floating-label",
     "name": "textfield",
     "placeholder": "Lorem ipsum dolor sit amet.",
     "id": "searchbar"

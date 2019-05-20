@@ -6,6 +6,10 @@ Icon link shows an icon at the left side and a text on the right side. The text 
 
 This pattern has one block named "content". Content passed to the block will render in the icon's side.
 
+### Examples
+
+Here you can see the different uses of the variants and modifiers with buttons: <a href="https://codepen.io/oslokommune/pen/rgjrVm" target="_blank">https://codepen.io/oslokommune/pen/rgjrVm</a>.
+
 ### Data Fields
 
 | Attribute | Type   | Values               | Default | Description                                 |
