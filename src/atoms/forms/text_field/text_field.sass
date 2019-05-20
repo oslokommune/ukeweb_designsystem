@@ -3,7 +3,10 @@
     .osg-text-field__input
       color: $foreground
       background-color: $background
-      border-color: $background
+  .osg-text-field.osg-text-field--#{$osg-color-name}.osg-text-field--outline
+    .osg-text-field__input
+      border: solid 2px $background
+      background-color: $osg-color-grey-light
 
 // looping map from maps.scss
 @each $name, $tuple in $osg-named-colors
@@ -72,5 +75,5 @@
       top: 30px
   &--outline &
     &__input
-      border: solid 2px transparent
-      background-color: $osg-color-grey-light !important
+      border: solid 2px $osg-color-grayscale-10
+      background-color: $osg-color-grey-light
