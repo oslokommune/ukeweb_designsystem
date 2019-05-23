@@ -59,17 +59,15 @@
       color: $text
       background: $background
       border: 2px solid $background
-      &:focus
-        box-shadow: 0 0 2px 2px Highlight
-      &:active
-        transform: scale(0.97)
-      &:hover
-        background-color: lighten($background, 5%)
+      &:focus, &:hover
+        color: white
+        background: $osg-color-blue-hover
+        border-color: $osg-color-blue-hover
+        text-decoration: none
 
   &--outline
     background-color: transparent
     color: $osg-color-blue-dark
-    &:focus
+    &:focus, &:hover
       background-color: transparent
-    &:hover
-      background-color: transparent
+      color: $osg-color-blue-hover
