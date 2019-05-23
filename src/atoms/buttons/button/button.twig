@@ -1,4 +1,4 @@
-{% set buttonColor = "osg-button-" ~ button.color | default('red') %}
+{% set buttonColor = "osg-button--" ~ button.color | default('red') %}
 {% set buttonHasDataAttrs = button.dataAttrs is defined and button.dataAttrs is not empty %}
 {% set buttonVariant = button.variant | default('osg-v-default') %}
 {% set buttonModifiers = button.modifiers | default(null) %}
