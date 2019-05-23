@@ -17,6 +17,20 @@ See README.md for release description.
 
 ### Changed
 
+## [0.24.0] - 2019-05-23
+
+### Fixed
+
+- atoms-buttons-button: outline modifier stays outlined on hover
+- atoms-links-link_button: outline modifier stays outlined on hover
+- atoms-buttons-button: using normal link color on text on outline button
+- atoms-links-link_button: using normal link color on text on outline link_button
+
+### Changed
+
+- atoms-buttons-button: using bem style for color modifiers (added one extra dash to color modifier classes)
+- atoms-links-link_button: using bem style for color modifiers (added one extra dash to color modifier classes)
+
 ## [0.23.1] - 2019-05-20
 
 ### Added

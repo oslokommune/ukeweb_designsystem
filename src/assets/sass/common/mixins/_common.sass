@@ -43,6 +43,7 @@
   padding: 15px
   min-width: 60px
   min-height: 50px
+  text-decoration: none
   &--circle
     border-radius: 50%
     // force 1x1 ratio
@@ -51,18 +52,22 @@
       display: inline-block
       vertical-align: middle
       padding-top: 100%
-  &--outline
-    background-color: transparent !important
 
   // looping map from maps.scss
   @each $name, $text, $background in $osg-button-colors
-    &-#{$name}
+    &--#{$name}
       color: $text
       background: $background
       border: 2px solid $background
-      &:focus
-        box-shadow: 0 0 2px 2px Highlight
-      &:active
-        transform: scale(0.97)
-      &:hover
-        background-color: lighten($background, 5%)
+      &:focus, &:hover
+        color: white
+        background: $osg-color-blue-hover
+        border-color: $osg-color-blue-hover
+        text-decoration: none
+
+  &--outline
+    background-color: transparent
+    color: $osg-color-blue-dark
+    &:focus, &:hover
+      background-color: transparent
+      color: $osg-color-blue-hover
