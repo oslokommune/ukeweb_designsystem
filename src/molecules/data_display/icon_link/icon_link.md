@@ -1,6 +1,6 @@
 ### General
 
-Icon link shows an icon at the left side and a text on the right side. The text can have a heading and a description or only one of them.
+Icon link shows an icon at the left side and a text on the right side. The text can have a heading and a description or only one of them. The icon is optional, and can be added using a block or using the style guide css icons.
 
 ### Blocks
 
