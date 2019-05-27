@@ -40,6 +40,8 @@
       top: 24px
   &__input:valid + &__label
     opacity: 0
+  &.osg-v-floating-label
+    margin-top: 16px
   &.osg-v-floating-label &
     &__input::placeholder
       opacity: 0
@@ -48,9 +50,9 @@
       position: absolute
       pointer-events: none
       transition: .2s ease-out
+      @extend .osg-u-text-5
       left: 13px
       // Positions the label in the middle of the textfield
-      @extend .osg-u-text-5
       top: 16px
       +osg-mq-desktop-and-up
         top: 18px
@@ -58,8 +60,8 @@
       opacity: 1
     &__input:focus + .osg-text-field__label,
     &__input:not(:focus):valid + .osg-text-field__label
-      // Positions the label above the textfield when the textfield is focused
       @extend .osg-u-text-5
+      // Positions the label above the textfield when the textfield is focused
       top: -21px
       +osg-mq-desktop-and-up
         top: -23px
