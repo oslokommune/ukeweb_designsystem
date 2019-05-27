@@ -6,7 +6,8 @@
   .osg-text-field.osg-text-field--#{$osg-color-name}.osg-text-field--outline
     .osg-text-field__input
       border: solid 2px $background
-      background-color: $osg-color-grey-light
+      color: $osg-color-blue-dark
+      background-color: white
 
 // looping map from maps.scss
 @each $name, $tuple in $osg-named-colors
@@ -22,14 +23,13 @@
   &__input
     @extend .osg-u-text-3
     background-color: $osg-color-grey-light
+    outline: none
     border: none
     height: 60px
     width: 100%
     padding: 5px 5px 5px 10px
     +osg-mq-desktop-and-up
       height: 70px
-    &::placeholder
-      color: transparent
   &__label
     position: absolute
     left: 10px
@@ -48,7 +48,7 @@
       transition: .2s ease-out
       left: 13px
       // Positions the label in the middle of the textfield
-      @extend .osg-u-text-3
+      font-size: 18px
       top: 15px
       +osg-mq-desktop-and-up
         top: 18px
@@ -57,7 +57,7 @@
     &__input:focus + .osg-text-field__label,
     &__input:not(:focus):valid + .osg-text-field__label
       // Positions the label above the textfield when the textfield is focused
-      @extend .osg-u-text-4
+      font-size: 16px
       top: -21px
       +osg-mq-desktop-and-up
         top: -23px
@@ -76,4 +76,3 @@
   &--outline &
     &__input
       border: solid 2px $osg-color-grayscale-10
-      background-color: $osg-color-grey-light

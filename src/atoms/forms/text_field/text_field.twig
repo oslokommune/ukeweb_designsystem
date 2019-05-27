@@ -10,7 +10,9 @@
     type="text"
     required
     placeholder="{{ textField.placeholder }}" />
-  <label class="osg-text-field__label" for="{{ textField.id }}">
-    {{ textField.placeholder }}
-  </label>
+  {% if textFieldVariant == 'osg-v-floating-label' %}
+    <label class="osg-text-field__label" for="{{ textField.id }}">
+      {{ textField.placeholder }}
+    </label>
+  {% endif %}
 </div>
