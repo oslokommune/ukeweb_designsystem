@@ -10,7 +10,10 @@
     name="{{ textField.name }}"
     type="text"
     required
-    placeholder="{{ textField.placeholder }}"
+    {% if textFieldVariant == 'osg-v-default' %}
+      placeholder="{{ textField.placeholder }}"
+      title="{{ textField.placeholder }}"
+    {% endif %}
     autocomplete="{{ textFieldAutocomplete }}"/>
   {% if textFieldVariant == 'osg-v-floating-label' %}
     <label class="osg-text-field__label" for="{{ textField.id }}">
