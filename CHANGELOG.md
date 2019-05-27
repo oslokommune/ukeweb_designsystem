@@ -10,8 +10,11 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- atoms-forms-text_field: changed foreground color in the outline modifier
+- atoms-forms-text_field: fixed extra outline with the outline modifier
 
 ### Added
+- atoms-forms-text_field: added optional autocomplete field
 
 ### Removed
 

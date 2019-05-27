@@ -1,6 +1,7 @@
 {% set textFieldstate = textField.state is defined ? "osg-text-field-" ~ textField.state : null %}
 {% set textFieldVariant = textField.variant | default('osg-v-default') %}
 {% set textFieldModifiers = textField.modifiers | default(null) %}
+{% set textFieldAutocomplete = textField.autocomplete | default('on') %}
 
 <div class="osg-text-field {{ textFieldVariant }} {{ textFieldstate }} {{ textFieldModifiers }}">
   <input
@@ -9,7 +10,8 @@
     name="{{ textField.name }}"
     type="text"
     required
-    placeholder="{{ textField.placeholder }}" />
+    placeholder="{{ textField.placeholder }}"
+    autocomplete="{{ textFieldAutocomplete }}"/>
   {% if textFieldVariant == 'osg-v-floating-label' %}
     <label class="osg-text-field__label" for="{{ textField.id }}">
       {{ textField.placeholder }}
