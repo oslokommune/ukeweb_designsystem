@@ -17,6 +17,15 @@ See README.md for release description.
 
 ### Changed
 
+## [0.25.0] - 2019-05-27
+
+### Fixed
+- atoms-forms-text_field: changed foreground color in the outline modifier
+- atoms-forms-text_field: fixed extra outline with the outline modifier
+
+### Added
+- atoms-forms-text_field: added optional autocomplete field
+
 ## [0.24.0] - 2019-05-23
 
 ### Fixed
