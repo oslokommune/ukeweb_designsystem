@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.26.1] - 2019-05-29
+
+### Fixed
+
+- molecules-data_display-icon_link: stylefix
+
 ## [0.26.0] - 2019-05-29
 
 ### Fixed
