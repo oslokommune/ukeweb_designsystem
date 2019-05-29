@@ -13,17 +13,25 @@ See README.md for release description.
 
 ### Added
 
+- utils: added numbered spacing util classes from 1 to 7 (i.e osg-u-padding-top-3 or osg-u-margin-left-6 )
+- utils: added spacing util classes for vertical spacing (i.e osg-u-margin-vertical-large or osg-u-padding-vertical-5)
+- utils: added spacing util classes for spacing in all directions (i.e osg-u-margin-large or osg-u-padding-5)
+
 ### Removed
 
 ### Changed
 
+- utils: changed naming of spacing util classes from "sides" to "horizontal" (i.e osg-u-padding-sides-small is now osg-u-padding-horizontal-small)
+
 ## [0.25.0] - 2019-05-27
 
 ### Fixed
+
 - atoms-forms-text_field: changed foreground color in the outline modifier
 - atoms-forms-text_field: fixed extra outline with the outline modifier
 
 ### Added
+
 - atoms-forms-text_field: added optional autocomplete field
 
 ## [0.24.0] - 2019-05-23
