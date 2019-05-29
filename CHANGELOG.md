@@ -11,6 +11,9 @@ See README.md for release description.
 
 ### Fixed
 
+- molecules-data_display-icon_link: fixed ie style issue
+- molecules-data_display-icon_link: fixed semantic tags
+
 ### Added
 
 - utils: added numbered spacing util classes from 1 to 7 (i.e osg-u-padding-top-3 or osg-u-margin-left-6 )
