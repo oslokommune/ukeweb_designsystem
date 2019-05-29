@@ -13,6 +13,7 @@ See README.md for release description.
 
 - molecules-data_display-icon_link: fixed ie style issue
 - molecules-data_display-icon_link: fixed semantic tags
+- atoms-links-link_button: set default color for visited state
 
 ### Added
 
