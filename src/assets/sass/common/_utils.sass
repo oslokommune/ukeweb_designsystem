@@ -31,6 +31,10 @@
 
 // generating spacing classes
 @each $name, $size in $osg-spacing-sizes
+  .osg-u-padding-#{$name}
+    padding: $size $size $size $size !important
+  .osg-u-margin-#{$name}
+    margin: $size $size $size $size !important
   .osg-u-padding-bottom-#{$name}
     padding-bottom: $size !important
   .osg-u-margin-bottom-#{$name}
@@ -47,12 +51,18 @@
     padding-right: $size !important
   .osg-u-margin-right-#{$name}
     margin-right: $size !important
-  .osg-u-padding-sides-#{$name}
+  .osg-u-padding-horizontal-#{$name}
     padding-left: $size !important
     padding-right: $size !important
-  .osg-u-margin-sides-#{$name}
+  .osg-u-margin-horizontal-#{$name}
     margin-left: $size !important
     margin-right: $size !important
+  .osg-u-padding-vertical-#{$name}
+    padding-top: $size !important
+    padding-bottom: $size !important
+  .osg-u-margin-vertical-#{$name}
+    margin-top: $size !important
+    margin-bottom: $size !important
 
 // generate spacing classes for mobile
 @each $name, $size in $osg-spacing-sizes
