@@ -14,6 +14,7 @@ See README.md for release description.
 - molecules-data_display-icon_link: fixed ie style issue
 - molecules-data_display-icon_link: fixed semantic tags
 - atoms-links-link_button: set default color for visited state
+- molecules-cards-card: set content_box in card to full width on mobile as default
 
 ### Added
 
