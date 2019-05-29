@@ -14,8 +14,8 @@ See README.md for release description.
 ### Added
 
 - utils: added numbered spacing util classes from 1 to 7 (i.e osg-u-padding-top-3 or osg-u-margin-left-6 )
-- utils: added spacing util classes for vertical spacing (i.e osg-margin-vertical-large or osg-padding-vertical-5)
-- utils: added spacing util classes for spacing in all directions (i.e osg-margin-large or osg-padding-5)
+- utils: added spacing util classes for vertical spacing (i.e osg-u-margin-vertical-large or osg-u-padding-vertical-5)
+- utils: added spacing util classes for spacing in all directions (i.e osg-u-margin-large or osg-u-padding-5)
 
 ### Removed
 
