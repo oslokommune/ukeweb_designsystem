@@ -66,6 +66,12 @@
 
 // generate spacing classes for mobile
 @each $name, $size in $osg-spacing-sizes
+  .osg-u-padding-#{$name}-mobile-only
+    +osg-mq-mobile-only
+      padding: $size $size $size $size !important
+  .osg-u-margin-#{$name}-mobile-only
+    +osg-mq-mobile-only
+      margin: $size $size $size $size !important
   .osg-u-padding-bottom-#{$name}-mobile-only
     +osg-mq-mobile-only
       padding-bottom: $size !important
@@ -90,17 +96,31 @@
   .osg-u-margin-right-#{$name}-mobile-only
     +osg-mq-mobile-only
       margin-right: $size !important
-  .osg-u-padding-sides-#{$name}-mobile-only
+  .osg-u-padding-horizontal-#{$name}-mobile-only
     +osg-mq-mobile-only
       padding-left: $size !important
       padding-right: $size !important
-  .osg-u-margin-sides-#{$name}-mobile-only
+  .osg-u-margin-horizontal-#{$name}-mobile-only
     +osg-mq-mobile-only
       margin-left: $size !important
       margin-right: $size !important
+  .osg-u-padding-vertical-#{$name}-mobile-only
+    +osg-mq-mobile-only
+      padding-top: $size !important
+      padding-bottom: $size !important
+  .osg-u-margin-vertical-#{$name}-mobile-only
+    +osg-mq-mobile-only
+      margin-top: $size !important
+      margin-bottom: $size !important
 
 // generate spacing classes for tablet
 @each $name, $size in $osg-spacing-sizes
+  .osg-u-padding-#{$name}-tablet-and-up
+    +osg-mq-tablet-and-up
+      padding: $size $size $size $size !important
+  .osg-u-margin-#{$name}-tablet-and-up
+    +osg-mq-tablet-and-up
+      margin: $size $size $size $size !important
   .osg-u-padding-bottom-#{$name}-tablet-and-up
     +osg-mq-tablet-and-up
       padding-bottom: $size !important
@@ -125,17 +145,31 @@
   .osg-u-margin-right-#{$name}-tablet-and-up
     +osg-mq-tablet-and-up
       margin-right: $size !important
-  .osg-u-padding-sides-#{$name}-tablet-and-up
+  .osg-u-padding-horizontal-#{$name}-tablet-and-up
     +osg-mq-tablet-and-up
       padding-left: $size !important
       padding-right: $size !important
-  .osg-u-margin-sides-#{$name}-tablet-and-up
+  .osg-u-margin-horizontal-#{$name}-tablet-and-up
     +osg-mq-tablet-and-up
       margin-left: $size !important
       margin-right: $size !important
+  .osg-u-padding-vertical-#{$name}-tablet-and-up
+    +osg-mq-tablet-and-up
+      padding-top: $size !important
+      padding-bottom: $size !important
+  .osg-u-margin-vertical-#{$name}-tablet-and-up
+    +osg-mq-tablet-and-up
+      margin-top: $size !important
+      margin-bottom: $size !important
 
 // generate spacing classes for desktop
 @each $name, $size in $osg-spacing-sizes
+  .osg-u-padding-#{$name}-desktop-and-up
+    +osg-mq-desktop-and-up
+      padding: $size $size $size $size !important
+  .osg-u-margin-#{$name}-desktop-and-up
+    +osg-mq-desktop-and-up
+      margin: $size $size $size $size !important
   .osg-u-padding-bottom-#{$name}-desktop-and-up
     +osg-mq-desktop-and-up
       padding-bottom: $size !important
@@ -160,14 +194,22 @@
   .osg-u-margin-right-#{$name}-desktop-and-up
     +osg-mq-desktop-and-up
       margin-right: $size !important
-  .osg-u-padding-sides-#{$name}-desktop-and-up
+  .osg-u-padding-horizontal-#{$name}-desktop-and-up
     +osg-mq-desktop-and-up
       padding-left: $size !important
       padding-right: $size !important
-  .osg-u-margin-sides-#{$name}-desktop-and-up
+  .osg-u-margin-horizontal-#{$name}-desktop-and-up
     +osg-mq-desktop-and-up
       margin-left: $size !important
       margin-right: $size !important
+  .osg-u-padding-vertical-#{$name}-desktop-and-up
+    +osg-mq-desktop-and-up
+      padding-top: $size !important
+      padding-bottom: $size !important
+  .osg-u-margin-vertical-#{$name}-desktop-and-up
+    +osg-mq-desktop-and-up
+      margin-top: $size !important
+      margin-bottom: $size !important
 
 // generating typography classes for headers
 @each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-typographies-header
