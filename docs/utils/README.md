@@ -132,7 +132,7 @@ Background and text color that is compliant to WCAG 2.0
 
 ### Spacing Sizes
 
-#### Named spaces
+#### Named spacing sizes
 
 - none (0)
 - tiny (10px)
@@ -141,7 +141,7 @@ Background and text color that is compliant to WCAG 2.0
 - large (40px)
 - huge (60px)
 
-#### Numbered spacing
+#### Numbered spacing sizes
 
 - 1 (5px)
 - 2 (10px)
