@@ -72,9 +72,9 @@ $osg-spacing-sizes: (
 // used to generate typography classes in utils.sass
 // they represent: id, mobile size, tablet size and desktop size
 $osg-typographies-header: (
-  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60, 300),
-  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 300),
-  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28, 300),
+  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60, 400),
+  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 400),
+  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28, 400),
   ("4", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 500),
   ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-20, 500),
   ("6", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500)
@@ -92,9 +92,9 @@ $osg-typographies: (
 
 $osg-font-weights: (
   "light": 300,
-  "regular": 500,
-  "medium": 700,
-  "bold": 900
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
 );
 
 // used to generate icon classes in utils.sass
