@@ -4,7 +4,7 @@ Multi-purpose container for previewing part of content, usually some form of art
 
 ### Blocks
 
-This pattern has two blocks, one named "content" and one named "extraContent". Content passed to the block will render inside the content box. Content passed to the extraContent block will be in a div under the card, which is outside of the anchor tag of the card.
+This pattern has two blocks, one named "content" and one named "extraContent". Content passed to the block will render inside the content box. Content passed to the extraContent block will be in a div under the card, which is outside of the anchor tag of the card, but will appear as though it is inside the card.
 
 ### Data Fields
 
