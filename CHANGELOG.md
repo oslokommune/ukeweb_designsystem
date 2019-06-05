@@ -12,6 +12,14 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+
+### Removed
+
+### Changed
+
+## [0.27.0] - 2019-06-05
+
+### Added
 - organisms-cards-card: added block with content to be placed under the card
 
 ### Removed
