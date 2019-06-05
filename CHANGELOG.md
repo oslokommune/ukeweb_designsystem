@@ -12,10 +12,14 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+- organisms-cards-card: added block with content to be placed under the card
 
 ### Removed
+- organisms-cards-card: removed left/right/full modifiers
 
 ### Changed
+- organisms-cards-card: changed url to cover entire card
+- organisms-cards-card: changed searchResult to use the new field searchResultUrl as its url
 
 ## [0.26.1] - 2019-05-29
 
