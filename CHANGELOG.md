@@ -17,6 +17,11 @@ See README.md for release description.
 
 ### Changed
 
+## [0.27.2] - 2019-06-05
+
+### Fixed
+- organisms-cards-card: removed display: table and unnecessary display: flex because of an ie fix
+
 ## [0.27.1] - 2019-06-05
 
 ### Fixed
