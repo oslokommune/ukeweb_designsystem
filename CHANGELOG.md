@@ -17,6 +17,11 @@ See README.md for release description.
 
 ### Changed
 
+## [0.27.1] - 2019-06-05
+
+### Fixed
+- organisms-cards-card: made hover on card zoom in the image and not change the text color
+
 ## [0.27.0] - 2019-06-05
 
 ### Added
