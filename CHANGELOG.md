@@ -12,11 +12,18 @@ See README.md for release description.
 ### Fixed
 
 ### Added
-- atoms-buttons-button: added active modifier to button outline
 
 ### Removed
 
 ### Changed
+
+## [0.27.3] - 2019-06-07
+
+### Fixed
+- atoms-decorators-figure: fixed longer figcaptions not breaking properly
+
+### Added
+- atoms-buttons-button: added active modifier to button outline
 
 ## [0.27.2] - 2019-06-05
 
