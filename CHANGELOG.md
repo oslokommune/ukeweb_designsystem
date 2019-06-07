@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+- atoms-buttons-button: added active modifier to button outline
 
 ### Removed
 
