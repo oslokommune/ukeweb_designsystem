@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- atoms-decorators-figure: Fixed issue with long text not wrapping for figcaption. Changed display and position rule of figure and figcaption to use display: table and table-caption
 
 ### Added
 
