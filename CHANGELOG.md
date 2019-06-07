@@ -17,10 +17,12 @@ See README.md for release description.
 
 ### Changed
 
-## [0.27.3] - 2019-06-07
+## [0.27.4] - 2019-06-07
 
 ### Fixed
-- atoms-decorators-figure: fixed longer figcaptions not breaking properly
+- atoms-decorators-figure: Fixed issue with long text not wrapping for figcaption. Changed display and position rule of figure and figcaption to use display: table and table-caption
+
+## [0.27.3] - 2019-06-07
 
 ### Added
 - atoms-buttons-button: added active modifier to button outline
