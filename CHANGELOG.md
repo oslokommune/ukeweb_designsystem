@@ -11,13 +11,17 @@ See README.md for release description.
 
 ### Fixed
 
-organisms-navigation-shape_hero: fixed aligning of main columns for all break points.
-
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.27.5] - 2019-06-07
+
+### Fixed
+
+- organisms-navigation-shape_hero: fixed aligning of main columns for all break points
 
 ## [0.27.4] - 2019-06-07
 
