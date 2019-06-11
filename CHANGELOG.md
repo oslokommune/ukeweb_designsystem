@@ -10,6 +10,8 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- atoms-decorators-figure: default text color for figcaption is now dark blue.
+
 
 ### Added
 
