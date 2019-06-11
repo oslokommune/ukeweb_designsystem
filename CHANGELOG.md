@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+organisms-navigation-shape_hero: fixed aligning of main columns for all break points.
+
 ### Added
 
 ### Removed
@@ -20,32 +22,39 @@ See README.md for release description.
 ## [0.27.4] - 2019-06-07
 
 ### Fixed
+
 - atoms-decorators-figure: Fixed issue with long text not wrapping for figcaption. Changed display and position rule of figure and figcaption to use display: table and table-caption
 
 ## [0.27.3] - 2019-06-07
 
 ### Added
+
 - atoms-buttons-button: added active modifier to button outline
 
 ## [0.27.2] - 2019-06-05
 
 ### Fixed
+
 - organisms-cards-card: removed display: table and unnecessary display: flex because of an ie fix
 
 ## [0.27.1] - 2019-06-05
 
 ### Fixed
+
 - organisms-cards-card: made hover on card zoom in the image and not change the text color
 
 ## [0.27.0] - 2019-06-05
 
 ### Added
+
 - organisms-cards-card: added block with content to be placed under the card
 
 ### Removed
+
 - organisms-cards-card: removed left/right/full modifiers
 
 ### Changed
+
 - organisms-cards-card: changed url to cover entire card
 - organisms-cards-card: changed searchResult to use the new field searchResultUrl as its url
 
