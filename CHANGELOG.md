@@ -11,11 +11,17 @@ See README.md for release description.
 
 ### Fixed
 
-- organisms-navigation-hero: image is now within a column that takes one third of the vertical space on the left and right modifiers.
-
 ### Added
 
 ### Removed
+
+### Changed
+
+## [0.29.0] - 2019-06-12
+
+### Fixed
+
+- organisms-navigation-hero: image is now within a column that takes one third of the vertical space on the left and right modifiers.
 
 ### Changed
 
