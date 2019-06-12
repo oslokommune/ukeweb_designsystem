@@ -10,14 +10,23 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-- atoms-decorators-figure: default text color for figcaption is now dark blue.
-
 
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.28.0] - 2019-06-12
+
+### Fixed
+
+- atoms-decorators-figure: default text color for figcaption is now dark blue.
+- organisms-navigation-shape_hero: Fixed grid bug in IE that made all the items overlap in the grid.
+
+### Removed
+
+- molecules-navigation-menu_list: removed component
 
 ## [0.27.5] - 2019-06-07
 
