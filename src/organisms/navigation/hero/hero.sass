@@ -1,52 +1,43 @@
 =osg-hero--top($root)
-  display: flex
-  flex-direction: column
-  align-items: flex-start
   #{$root}__image
-    padding-top: 30px
-    order: 2
-  .osg-content-box
-    &__tag
-      padding-top: unset
+    grid-row: 2 / 3
+  #{$root}__content
+    grid-row: 1 / 2
 
 =osg-hero--left($root)
-  display: flex
-  flex-direction: row
   align-items: center
+  justify-items: end
+  grid-template-rows: 1fr
+  grid-template-columns: 2fr 1fr
   #{$root}__image
-    order: 2
-    margin-right: unset
-    padding-top: unset
-  .osg-content-box
-    margin-right: 30px
-    order: 1
-    &__tag
-      padding-top: unset
-    +osg-mq-tablet-and-up
-        margin-right: 60px
+    grid-column: 2 / 3
+    grid-row: 1 / 2
+  #{$root}__content
+    grid-column: 1 / 2
+    grid-row: 1 / 2
 
 =osg-hero--right($root)
-  display: flex
-  flex-direction: row
   align-items: center
+  grid-template-rows: 1fr
+  grid-template-columns: 1fr 2fr
   #{$root}__image
-    order: 1
-    margin-right: 30px
-    padding-top: unset
-    +osg-mq-tablet-and-up
-      margin-right: 60px
-  .osg-content-box
-    flex: unset
-    margin-right: unset
-    order: 2
+    grid-column: 1 / 2
+    grid-row: 1 / 2
+  #{$root}__content
+    grid-column: 2 / 3
+    grid-row: 1 / 2
 
 .osg-hero
-  flex-grow: 1
+  display: grid
+  grid-template-columns: auto
+  grid-template-rows: auto auto
+  grid-row-gap: $osg-space-4
+  column-gap: $osg-space-4
   text-decoration: none
-  .osg-content-box
-    background: transparent
-    &__container
-      padding: unset
+  &__image
+    grid-row: 1 / 2
+  &__content
+    grid-row: 2 / 3
 
   &--circle
     .osg-shape

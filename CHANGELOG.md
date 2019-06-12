@@ -11,11 +11,15 @@ See README.md for release description.
 
 ### Fixed
 
+- organisms-navigation-hero: image is now within a column that takes one third of the vertical space on the left and right modifiers.
+
 ### Added
 
 ### Removed
 
 ### Changed
+
+- organisms-navigation-hero: replaced two divs with classes osg-content-box and osg-content-box\_\_container with a div with class osg-hero\_\_content (refactored out the content_box pattern from the hero pattern)
 
 ## [0.28.0] - 2019-06-12
 
