@@ -11,7 +11,7 @@ See README.md for release description.
 
 ### Fixed
 - atoms-decorators-figure: default text color for figcaption is now dark blue.
-
+- organisms-navigation-shape_hero: Fixed grid bug in IE that made all the items overlap in the grid.
 
 ### Added
 
