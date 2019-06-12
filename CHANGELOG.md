@@ -25,6 +25,10 @@ See README.md for release description.
 
 - organisms-navigation-shape_hero: fixed aligning of main columns for all break points
 
+### Removed
+
+- molecules-navigation-menu_list: removed component
+
 ## [0.27.4] - 2019-06-07
 
 ### Fixed
