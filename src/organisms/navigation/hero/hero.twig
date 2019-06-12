@@ -2,10 +2,6 @@
 {% set heroVariant = hero.variant | default(null) %}
 {% set heroModifiers = hero.modifiers | default(null) %}
 
-{% set heroContent %}
-   {% block content %}{% endblock %}
-{% endset %}
-
 {% if heroIsLinkFullSize %}
   <a href="{{ hero.link.url }}" title="{{ hero.link.title }}" class="osg-hero {{ heroVariant }} {{ heroModifiers }}">
 {% else %}
@@ -14,11 +10,10 @@
   <div class="osg-hero__image">
     {% include 'atoms/decorators/shape/shape.twig' %}
   </div>
-  {% embed 'molecules/content_display/content_box/content_box.twig' %}
+  <div class="osg-hero__content">
     {% block content %}
-     {{ heroContent }}
     {% endblock %}
-  {% endembed %}
+  </div>
 {% if heroIsLinkFullSize %}
   </a>
 {% else %}
