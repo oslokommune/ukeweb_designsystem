@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.29.1] - 2019-06-12
+
+### Fixed
+
+- organisms-navigation-hero: style fix for right modifier (align-items: stretch)
+
 ## [0.29.0] - 2019-06-12
 
 ### Fixed
