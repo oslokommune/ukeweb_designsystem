@@ -11,9 +11,9 @@
     text-align: left
     color: $osg-color-black
     background-color: white
-    padding: 15px
+    padding: 15px 45px 15px 15px
     +osg-mq-tablet-and-up
-      padding: 30px
+      padding: 30px 60px 30px 30px
     &:hover
       text-decoration: none
       cursor: pointer
@@ -34,8 +34,10 @@
 
   &--state-important &
     &__trigger:after
-      +osg-helper-fa-pseudo('\f06a')
-      font-size: 30px
+      @extend .osg-u-icon-exclamation-mark-circle
+      content: ""
+      width: 32px
+      height: 32px
   &--state-critical &
     &__trigger
       &:after,
