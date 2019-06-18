@@ -11,13 +11,17 @@ See README.md for release description.
 
 ### Fixed
 
-- organisms-messages-alert: text will now never overlap the state icon.
-
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.29.3] - 2019-06-12
+
+### Fixed
+
+- organisms-messages-alert: text will now never overlap the state icon.
 
 ## [0.29.2] - 2019-06-12
 
