@@ -11,9 +11,13 @@ See README.md for release description.
 
 ### Fixed
 
+atoms-icons-icon: switched out icon svg backgrounds with icon-font in the :before pseudo element.
+
 ### Added
 
 ### Removed
+
+atoms-icons-icon: removed the sass file that is no longer needed.
 
 ### Changed
 
