@@ -15,6 +15,8 @@ See README.md for release description.
 
 ### Removed
 
+- global: removed font awesome as dependency and replaced with osg-u-icon helper classes in patterns. The patterns affected are expand_box, alert, icon_list, quote, icon (social) and header.
+
 ### Changed
 
 ## [0.30.0] - 2019-06-24
