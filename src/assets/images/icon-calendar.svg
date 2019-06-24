@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <g fill="none" fill-rule="evenodd">
-    <polygon points="0 0 32 0 32 32 0 32"/>
-    <g fill="#000" fill-rule="nonzero" transform="translate(3 2)">
-      <path d="M22,3 L22,0 L20,0 L20,3 L6,3 L6,0 L4,0 L4,3 L0,3 L0,28 L26,28 L26,3 L22,3 Z M24,5 L24,9 L2,9 L2,5 L24,5 Z M2,26 L2,11 L24,11 L24,26 L2,26 Z"/>
-      <circle cx="18" cy="17" r="3"/>
-    </g>
-  </g>
-</svg>
