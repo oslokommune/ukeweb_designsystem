@@ -17,6 +17,20 @@ See README.md for release description.
 
 ### Changed
 
+## [0.30.0] - 2019-06-24
+
+### Fixed
+
+- atoms-icons-icon: switched out icon svg backgrounds with icon-font in the :before pseudo element.
+
+### Added
+
+- atoms-icons-icon: added more icons.
+
+### Removed
+
+- atoms-icons-icon: removed the sass file that is no longer needed.
+
 ## [0.29.3] - 2019-06-12
 
 ### Fixed

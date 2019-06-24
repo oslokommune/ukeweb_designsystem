@@ -243,12 +243,19 @@
   .osg-u-text-grayscale-#{$name}
     color: #{$color} !important
 
-// generating icon classes
-@each $name in $osg-icon-names
-  .osg-u-icon-#{$name}
-    background: url('#{$osg-image-path}/icon-#{$name}.svg')
-    background-repeat: no-repeat
-    background-size: contain
+// Defining default font styling
+[class*=osg-u-icon-]
+  speak: none
+  font-family: 'Oslo Icons' !important
+  line-height: 1
+  font-size: 32px
+  font-style: normal
+  color: inherit
+
+// Generating icon classes
+@each $name, $content in $osg-icons
+  .osg-u-icon-#{$name}:before
+    content: "#{$content}"
 
 // generating text align classes
 @each $name in $osg-alignment
