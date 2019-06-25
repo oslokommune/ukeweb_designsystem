@@ -28,9 +28,10 @@ Check out [this list](docs/utils) for all the util classes with descriptions.
 
 ## Development notes
 
-- See customizable sass variables [here](docs/customization)
+- See customizable sass variables [here](docs/consume/customization.md)
+- Read about how to deal with global and pattern styles in a JavaScript framework [here](docs/consume/jsComponents.md)
 - To get a better understanding of how webforvaltningen divide its patterns into atoms, molecules and organisms, [read this](docs/atomic) description.
-- To get consumer information for supporting legacy browsers, [read this](docs/legacyBrowserSupport) setup guide.
+- To get consumer information for supporting legacy browsers, [read this](docs/consume/legacyBrowserSupport.md) setup guide.
 - To get tips and best practices for developing the Style guide, [read this](docs/bestPractises).
 - If you work for UKE contributing to this repository, [read this](docs/workflow) for a detailed overview of the work flow.
 - The style guide only logs changes to patterns and util classes, so use other classes, mixins, functions, variables etc at you own risk.
