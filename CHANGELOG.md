@@ -11,14 +11,18 @@ See README.md for release description.
 
 ### Fixed
 
-- Global: Grouped variables, maps and mixins into a file called resources.sass for better js framework consumption.
-- Docs: changed some doc file names and added doc about js framework consumption.
-
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.31.1] - 2019-06-25
+
+### Fixed
+
+- Global: Grouped variables, maps and mixins into a file called resources.sass for better js framework consumption.
+- Docs: changed some doc file names and added doc about js framework consumption.
 
 ## [0.31.0] - 2019-06-24
 
