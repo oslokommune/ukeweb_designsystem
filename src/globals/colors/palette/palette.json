@@ -1,8 +1,12 @@
 {
-  "meta": {
-    "gui": {
-      "preset": "global-pattern",
-      "show-docs": false
+  "devtools": {
+    "gui-preset": "clean",
+    "pattern": {
+      "sections": {
+        "docs": {
+          "visible":  false
+        }
+      }
     }
   },
   "palette": {
