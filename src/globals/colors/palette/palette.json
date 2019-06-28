@@ -7,7 +7,11 @@
           "visible":  false
         }
       }
-    }
+    },
+    "tags": [
+      "palette",
+      "colors"
+    ]
   },
   "palette": {
     "colors": [
