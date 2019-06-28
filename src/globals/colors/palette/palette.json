@@ -1,6 +1,6 @@
 {
   "devtools": {
-    "gui-preset": "clean",
+    "preset": "clean",
     "pattern": {
       "sections": {
         "docs": {
