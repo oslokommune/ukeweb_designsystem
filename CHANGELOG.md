@@ -17,6 +17,11 @@ See README.md for release description.
 
 ### Changed
 
+## [0.31.2] - 2019-07-01
+
+### Fixed
+- organisms-messages-alert: Alert component didn't show white background on the top
+
 ## [0.31.1] - 2019-06-25
 
 ### Fixed
