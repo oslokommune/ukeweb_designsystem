@@ -16,6 +16,8 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+- molecules-content_display-expand_box: added a mandatory data field called "expandableAreaId" for better aria support.
+- molecules-content_display-expand_box: changed title data field into a block for more flexibility.
 
 ## [0.31.2] - 2019-07-02
 
