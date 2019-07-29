@@ -1,11 +1,22 @@
 {
   "expandBox": {
-    "variant": "osg-v-open",
-    "expanded": "true"
+    "variant": "osg-v-open"
   },
   "button": {
-    "color": "",
     "modifiers": "osg-button--circle",
-    "dataAttrs": [{ "key": "aria-label", "val": "expand-button" }]
+    "dataAttrs": [
+      {
+        "key": "aria-label",
+        "val": "expand-button"
+      },
+      {
+        "key": "aria-expanded",
+        "val": "true"
+      },
+      {
+        "key": "aria-controls",
+        "val": "expand_area_id"
+      }
+    ]
   }
 }
