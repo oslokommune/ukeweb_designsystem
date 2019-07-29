@@ -1,17 +1,23 @@
 ### General
 
-Expandable box, used to show info which can be hidden away.
+Expand Box contains a title and an area for content that can be collapsed or expanded upon clicking the button.
 
 ### Blocks
 
-This pattern has two blocks named "content" and "buttonContent". Content passed to the "content" block will render inside the expanded box. Content passed to the "buttonContent" block will render inside the round button, and override the default button content which is a chevron down icon.
+| Name          | Default                     | Description                     |
+| ------------- | --------------------------- | ------------------------------- |
+| content       | null                        | renders inside the expanded box |
+| titleContent  | null                        | renders inside the title area   |
+| buttonContent | a chevron down icon element | renders inside the round button |
 
 ### Data Fields
 
-| Attribute | Type   | Values                    | Default       | Description         |
-| --------- | ------ | ------------------------- | ------------- | ------------------- |
-| variant   | String | See variant options below | osg-v-default | Name of the variant |
-| title     | String | Clean text content        | null          | title of the box    |
+| Attribute          | Type   | Values                    | Default       | Description                                       |
+| ------------------ | ------ | ------------------------- | ------------- | ------------------------------------------------- |
+| variant            | String | See variant options below | osg-v-default | Name of the variant                               |
+| \*expandableAreaId | String | Clean text content        | null          | target id for the buttons aria-controls attribute |
+
+See the button patterns data fields for how to add the aria-controls and aria-expanded attributes.
 
 ### Variant Options
 
@@ -22,4 +28,4 @@ This pattern has two blocks named "content" and "buttonContent". Content passed 
 
 ### Javascript
 
-Toggle the open variant and aria-expanded boolean with a click event on the button.
+Toggle the Expand Box open variant and the Button aria-expanded attributes boolean value upon clicking the button.
