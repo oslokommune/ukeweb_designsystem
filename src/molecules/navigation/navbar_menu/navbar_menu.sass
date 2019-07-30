@@ -76,7 +76,6 @@ $osg-mobile-hamburger-line-height: 2px
 
   // Style for content
   &__content
-    @extend .osg-u-heading-3
     display: flex
     flex-direction: column
     text-align: left
@@ -100,32 +99,6 @@ $osg-mobile-hamburger-line-height: 2px
       &:hover
         color: black
         text-decoration: underline
-    ul
-      list-style: none
-      padding: 0
-      margin-bottom: 45px
-      +osg-mq-tablet-and-up
-        margin-bottom: 95px
-    li
-      padding: 0
-      margin: 0
-      &:not(:first-child)
-        margin-top: 25px
-  &__links
-    flex-grow: 1
-  &__logos
-    @extend .osg-u-text-2
-    display: flex
-    align-items: center
-    flex-wrap: wrap
-    flex-direction: row
-    .osg-figure
-      padding: 20px 20px 20px 0
-      width: auto
-      img
-        width: auto
-    +osg-mq-tablet-and-up
-      margin-bottom: 0
 
   // Style for mobile version of the navbar menu
   +osg-mq-mobile-only
@@ -169,12 +142,9 @@ $osg-mobile-hamburger-line-height: 2px
       opacity: 0
       transition: opacity 300ms cubic-bezier(0.19, 1, 0.22, 1)
       transition-delay: 0.15s
-    .osg-egc
-      height: 105px
-      min-height: 105px
-      width: 65px
+
     // Style for open mobile menu
-    &.osg-v-open
+    &--open
       .osg-navbar_menu
         &__content
           visibility: visible
@@ -223,10 +193,6 @@ $osg-mobile-hamburger-line-height: 2px
       height: 100%
       position: absolute
       z-index: 101
-    .osg-egc
-      height: 128px
-      min-height: 128px
-      width: 80px
     &__hamburger-close
       position: absolute
       top: 30px
@@ -248,15 +214,15 @@ $osg-mobile-hamburger-line-height: 2px
     &__content
       transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
     // Style for open desktop menu
-    &.osg-v-open
+    &--open
       .osg-navbar-menu
         &__overlay-wrapper
           left: 0
           transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
           &::after
-              opacity: 1
-              visibility: visible
-              transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
+            opacity: 1
+            visibility: visible
+            transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
         &__content
           left: 0
           visibility: visible

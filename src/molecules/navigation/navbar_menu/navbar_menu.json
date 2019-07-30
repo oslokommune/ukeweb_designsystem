@@ -11,43 +11,5 @@
     "min-height": "500px"
   },
   "navbarMenu": {
-    "links": [
-      { "text": "Non blandit", "url": "#lorem" },
-      { "text": "Eu scelerisque felis", "url": "#lorem" },
-      { "text": "Lobortis mattis aliquam", "url": "#lorem" },
-      { "text": "Etiam erat velit", "url": "#lorem" },
-      { "text": "Aliquam etiam", "url": "#lorem" },
-      { "text": "Euismod nisi", "url": "#lorem" },
-      { "text": "Vstibulum rhoncus", "url": "#lorem" }
-    ],
-    "languages": [{ "text": "Vivamus", "url": "#lorem" }],
-    "topDomainLink": {
-      "url": "#lorem",
-      "text": "Oslo kommune"
-    },
-    "logos": {
-      "figures": [
-        {
-          "link": {
-            "url": "#lorem",
-            "target": "_self"
-          },
-          "img": {
-            "alt": "Lorem ipsum",
-            "defaultUrl": "https://picsum.photos/65/105/?random",
-            "mediaQueryUrls": [
-              {
-                "query": "max-width: 768",
-                "url": "https://picsum.photos/65/105/?random"
-              },
-              {
-                "query": "min-width: 769px",
-                "url": "https://picsum.photos/80/128/?random"
-              }
-            ]
-          }
-        }
-      ]
-    }
   }
 }
