@@ -11,11 +11,14 @@ See README.md for release description.
 
 ### Fixed
 
+- organisms-headings-event: updated outdated docs.
+
 ### Added
 
 ### Removed
 
 ### Changed
+
 - molecules-content_display-expand_box: added a mandatory data field called "expandableAreaId" for better aria support.
 - molecules-content_display-expand_box: changed title data field into a block for more flexibility.
 
