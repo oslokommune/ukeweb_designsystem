@@ -144,7 +144,7 @@ $osg-mobile-hamburger-line-height: 2px
       transition-delay: 0.15s
 
     // Style for open mobile menu
-    &.osg-v-open
+    &--open
       .osg-navbar_menu
         &__content
           visibility: visible
@@ -214,15 +214,15 @@ $osg-mobile-hamburger-line-height: 2px
     &__content
       transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
     // Style for open desktop menu
-    &.osg-v-open
+    &--open
       .osg-navbar-menu
         &__overlay-wrapper
           left: 0
           transition: left 300ms cubic-bezier(.694, .0482, .335, 1)
           &::after
-              opacity: 1
-              visibility: visible
-              transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
+            opacity: 1
+            visibility: visible
+            transition: opacity 300ms cubic-bezier(.694, .0482, .335, 1)
         &__content
           left: 0
           visibility: visible
