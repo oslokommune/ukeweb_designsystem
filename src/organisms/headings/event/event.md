@@ -4,7 +4,7 @@ Top section for an event page
 
 ### Blocks
 
-This pattern has two blocks named "topContent" and "listContent". The "topContent" block renders over the image and contains an overridable heading by default. The "listContent" block renders inside the green box below the icon entries (that is passed into the infoList pattern).
+This pattern has two blocks named "topContent" and "listContent". The "topContent" block renders over the image and contains an overridable heading by default. The "listContent" block renders inside the green box below the icon entries (that is passed into the Info List pattern).
 
 ### Data Fields
 
@@ -16,7 +16,7 @@ This pattern has two blocks named "topContent" and "listContent". The "topConten
 
 (\*) mandatory
 
-See the patterns figure and infoList for more data field descriptions.
+See the patterns Figure and Info List for more data field descriptions.
 
 ps: the heading is not mandatory if it is overridden by passing content into the "topContent" block.
 
