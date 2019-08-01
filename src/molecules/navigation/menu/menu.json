@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "tags": [
+      "navigation",
+      "pages",
+      "links",
+      "menu",
+      "hamburger menu"
+    ]
+  },
+  "menu": {
+    "menuButton": {
+      "text": "Menu",
+      "modifiers": "osg-button osg-v-default osg-button--outline osg-button--blue-dark",
+      "dataAttrs": [
+        {
+          "key": "aria-expanded",
+          "val": "false"
+        }
+      ]
+    }
+  }
+}

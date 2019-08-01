@@ -1,0 +1,45 @@
+$osg-hamburger-width: 55px
+$osg-hamburger-height: 55px
+$osg-hamburger-line-height: 2px
+$osg-hamburger-line-gap: 12px
+
+@function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
+  @return (($hamburgerHeight - $lineHeight) / 2) + $gap
+
+.osg-menu
+  align-items: baseline
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+
+  .osg-menu__content
+    +osg-mq-mobile-only
+      display: none
+
+  .osg-button
+    background-color: transparent
+    border: none
+    padding: 0
+    position: relative
+
+    .osg-menu__button__text
+      +osg-mq-mobile-only
+        +osg-sr-only
+
+    .osg-menu__button__icon
+      width: 60px
+      > span
+        background: $osg-color-blue-dark
+        display: block
+        height: 2px
+        position: absolute
+        right: 15px
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        width: 40px
+
+        &:nth-child(1)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
+        &:nth-child(2)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
+        &:nth-child(3)
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
