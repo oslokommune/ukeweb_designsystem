@@ -10,11 +10,6 @@
   {% endblock %}
 {% endset %}
 
-{% set menuContent %}
-  {% block menuOtherContent %}
-  {% endblock %}
-{% endset %}
-
 <div class="osg-menu">
   {% embed 'atoms/buttons/button/button.twig' with { button: menu.menuButton } %}
     {% block content %}
@@ -22,7 +17,6 @@
     {% endblock %}
   {% endembed %}
 
-  {% block contentLinks %}
-    {{ menuContent }}
+  {% block menuOtherContent %}
   {% endblock %}
 </div>
