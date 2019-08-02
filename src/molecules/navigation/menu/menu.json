@@ -11,7 +11,8 @@
   "menu": {
     "menuButton": {
       "text": "Menu",
-      "modifiers": "osg-button osg-button--outline osg-button--blue-dark",
+      "color": "blue-dark",
+      "modifiers": "osg-button-hamburger osg-button--outline",
       "dataAttrs": [
         {
           "key": "aria-expanded",

@@ -15,11 +15,11 @@ $osg-hamburger-line-gap: 12px
     +osg-mq-mobile-only
       display: none
 
-  .osg-button
-    background-color: transparent
-    border: none
-    padding: 0
+  .osg-button-hamburger
     position: relative
+    border: none
+    +osg-mq-tablet-and-up
+      border: 2px solid
 
     .osg-menu__button__text
       +osg-mq-mobile-only
