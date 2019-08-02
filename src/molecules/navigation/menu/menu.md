@@ -15,6 +15,8 @@ The blocks are the following:
 | Attribute | Type   | Values               | Default | Description                                                                                             |
 | --------- | ------ | -------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
 | modifiers | String | Any global css class | null    | Root class to modify styles.                                                                             |
-| \*text    | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. |
+| text    | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. |
 
-(\*) mandatory
+### Accessibility
+
+Ensure that the hamburger button has a text. This is necessary so the screen readers can find the button.
