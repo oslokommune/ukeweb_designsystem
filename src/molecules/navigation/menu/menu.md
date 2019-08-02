@@ -1,6 +1,9 @@
 ### General
 
-The menu component displays horizontally a hamburger menu button and other custom content in tablet and desktop view. This custom content will be hidden in mobile view to show only a hamburger menu button.
+The menu component displays horizontally a hamburger menu button and other custom content in tablet and desktop view. This custom content will be hidden in mobile view and show only a hamburger menu button.
+
+The the custom content have to be present within the opened menu in the mobile view.
+
 Use the class "osg-menu\_\_content" to hide the custom content in mobile view.
 
 ### Blocks
