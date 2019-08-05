@@ -18,8 +18,8 @@ The blocks are the following:
 | Attribute | Type   | Values               | Default | Description                                                                                              |
 | --------- | ------ | -------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
 | modifiers | String | Any global css class | null    | Root class to modify styles.                                                                             |
-| text      | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. |
-| textClose | String | Clean text content   | null    | Text of the close button. This will be hidden                                                            |
+| text      | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. It is always available to screen readers. |
+| textClose | String | Clean text content   | null    | Text of the close button. This is hidden in all devices, but available to screen readers.                                               |
 
 ### Modifier Options
 
@@ -30,3 +30,5 @@ The blocks are the following:
 ### Accessibility
 
 Ensure that the hamburger button has a text. This is necessary so the screen readers can find the button.
+Only one of the data fields text and textClose should be available for screen readers at a time, so you will need to use aria-hidden to hide each one depending on the case:
+when the menu is open, set the data field 'text' aria-hidden=true and 'textClose' aria-hidden=false and the opposite when the menu is closed.
