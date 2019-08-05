@@ -15,10 +15,17 @@ The blocks are the following:
 
 ### Data Fields
 
-| Attribute | Type   | Values               | Default | Description                                                                                             |
-| --------- | ------ | -------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| Attribute | Type   | Values               | Default | Description                                                                                              |
+| --------- | ------ | -------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
 | modifiers | String | Any global css class | null    | Root class to modify styles.                                                                             |
-| text    | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. |
+| text      | String | Clean text content   | null    | Text of the hamburger button. This will be hidden in mobile view and visible in tablet and desktop view. |
+| textClose | String | Clean text content   | null    | Text of the close button. This will be hidden                                                            |
+
+### Modifier Options
+
+| Name           | Description                                                                   |
+| -------------- | ----------------------------------------------------------------------------- |
+| osg-menu--open | Expanded state for menu. The hamburger buttons transforms into a close button |
 
 ### Accessibility
 

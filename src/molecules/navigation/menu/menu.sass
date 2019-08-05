@@ -1,7 +1,7 @@
 $osg-hamburger-width: 55px
 $osg-hamburger-height: 55px
 $osg-hamburger-line-height: 2px
-$osg-hamburger-line-gap: 12px
+$osg-hamburger-line-gap: 10px
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
   @return (($hamburgerHeight - $lineHeight) / 2) + $gap
@@ -16,17 +16,25 @@ $osg-hamburger-line-gap: 12px
       display: none
 
   .osg-button-hamburger
-    position: relative
+    background: none
     border: none
+    position: relative
     +osg-mq-tablet-and-up
       border: 2px solid
 
     .osg-menu__button__text
+      font-size: 18px
+      font-weight: 500
       +osg-mq-mobile-only
         +osg-sr-only
 
+    .osg-menu__button__text-close
+      +osg-sr-only
+
     .osg-menu__button__icon
-      width: 60px
+      width: 35px
+      +osg-mq-tablet-and-up
+        width: 60px
       > span
         background: $osg-color-blue-dark
         display: block
@@ -34,7 +42,7 @@ $osg-hamburger-line-gap: 12px
         position: absolute
         right: 15px
         transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        width: 40px
+        width: 35px
 
         &:nth-child(1)
           top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
@@ -42,3 +50,30 @@ $osg-hamburger-line-gap: 12px
           top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
         &:nth-child(3)
           top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
+
+  &.osg-menu--open
+    .osg-button
+      color: #2a2859 !important
+      background: #f9c66b !important
+      border: 2px solid #f9c66b !important
+      +osg-common-button--circle
+
+    .osg-menu__button__icon
+      width: 35px
+      +osg-mq-tablet-and-up
+        width: 60px
+      > span
+        background: $osg-color-blue-dark
+        display: block
+        height: 2px
+        position: absolute
+        right: 15px
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        width: 35px
+
+        &:nth-child(1)
+          transform: translateY(14px) translateY(-50%) rotate(-135deg)
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          transform: translateY(-7px) translateY(50%) rotate(135deg)

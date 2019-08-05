@@ -50,6 +50,15 @@
       vertical-align: middle
       padding-top: 100%
 
+=osg-common-button--circle
+  border-radius: 50%
+  // force 1x1 ratio
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    padding-top: 100%
+
   // looping map from maps.scss
   @each $name, $text, $background in $osg-button-colors
     &--#{$name}
