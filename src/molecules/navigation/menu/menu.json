@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "tags": [
+      "navigation",
+      "pages",
+      "links",
+      "menu",
+      "hamburger menu"
+    ]
+  },
+  "menu": {
+    "menuButton": {
+      "text": "Menu",
+      "textClose": "Close menu",
+      "color": "blue-dark",
+      "modifiers": "osg-button-hamburger osg-button--outline",
+      "dataAttrs": [
+        {
+          "key": "aria-expanded",
+          "val": "false"
+        }
+      ]
+    }
+  }
+}
