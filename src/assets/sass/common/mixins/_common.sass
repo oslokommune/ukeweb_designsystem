@@ -42,15 +42,9 @@
   min-height: 50px
   text-decoration: none
   &--circle
-    border-radius: 50%
-    // force 1x1 ratio
-    &:before
-      content: ''
-      display: inline-block
-      vertical-align: middle
-      padding-top: 100%
+    +osg-common-button-circle
 
-=osg-common-button--circle
+=osg-common-button-circle
   border-radius: 50%
   // force 1x1 ratio
   &:before
