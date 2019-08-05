@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 - organisms-headings-event: updated outdated docs.
+- molecules-navigation-menu: Fix issue with the color and outline button mixins.
 
 ### Added
 - molecules-navigation-menu: new pattern.
