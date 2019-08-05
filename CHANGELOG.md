@@ -14,6 +14,7 @@ See README.md for release description.
 - organisms-headings-event: updated outdated docs.
 
 ### Added
+- molecules-navigation-menu: new pattern.
 - molecules-navigation-navbar_menu: added a block named "content".
 
 ### Removed
