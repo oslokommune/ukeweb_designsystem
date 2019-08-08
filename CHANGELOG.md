@@ -10,15 +10,27 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-- global: removed setting global body/html background color to white.
-- organisms-headings-event: updated outdated docs.
-- molecules-navigation-menu: Fix issue with the color and outline button mixins.
 
 ### Added
+
+### Removed
+
+### Changed
+
+## [0.32.0] - 2019-08-08
+
+### Fixed
+
+- global: removed setting global body/html background color to white.
+- organisms-headings-event: updated outdated docs.
+
+### Added
+
 - molecules-navigation-menu: new pattern.
 - molecules-navigation-navbar_menu: added a block named "content".
 
 ### Removed
+
 - molecules-navigation-navbar_menu: removed support for data field "links" with all its content.
 - molecules-navigation-navbar_menu: removed support for data field "topDomainLink" with all its content.
 - molecules-navigation-navbar_menu: removed support for data field "logos" with all its content.
