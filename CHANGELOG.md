@@ -10,7 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-
+- global: removed setting global body/html background color to white.
 - organisms-headings-event: updated outdated docs.
 - molecules-navigation-menu: Fix issue with the color and outline button mixins.
 
