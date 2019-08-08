@@ -17,6 +17,30 @@ See README.md for release description.
 
 ### Changed
 
+## [0.32.0] - 2019-08-08
+
+### Fixed
+
+- global: removed setting global body/html background color to white.
+- organisms-headings-event: updated outdated docs.
+
+### Added
+
+- molecules-navigation-menu: new pattern.
+- molecules-navigation-navbar_menu: added a block named "content".
+
+### Removed
+
+- molecules-navigation-navbar_menu: removed support for data field "links" with all its content.
+- molecules-navigation-navbar_menu: removed support for data field "topDomainLink" with all its content.
+- molecules-navigation-navbar_menu: removed support for data field "logos" with all its content.
+
+### Changed
+
+- molecules-content_display-expand_box: added a mandatory data field called "expandableAreaId" for better aria support.
+- molecules-content_display-expand_box: changed title data field into a block for more flexibility.
+- molecules-navigation-navbar_menu: changed the open variant into a modifier.
+
 ## [0.31.2] - 2019-07-02
 
 ### Fixed

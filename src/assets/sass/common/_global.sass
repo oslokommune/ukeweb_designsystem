@@ -11,7 +11,6 @@
 @import 'global/content'
 
 body, html
-  background-color: white
   font-family: 'Oslo Sans', 'sans-serif'
   font-size: 100%
   font-weight: 300
@@ -43,16 +42,7 @@ hr
   border-bottom: 1px solid #DCDCDC
 
 .osg-sr-only
-  border: 0
-  clip: rect(1px, 1px, 1px, 1px)
-  clip-path: inset(50%)
-  height: 1px
-  margin: -1px
-  overflow: hidden
-  padding: 0
-  position: absolute !important
-  width: 1px
-  word-wrap: normal !important
+  +osg-sr-only
 
 h1, h2, h3, h4, h5
   hyphens: auto
