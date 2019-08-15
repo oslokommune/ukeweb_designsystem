@@ -1,8 +1,8 @@
 ### General
 
-The menu component displays horizontally a hamburger menu button and other custom content in tablet and desktop view. This custom content will be hidden in mobile view and show only a hamburger menu button.
+The navbar menu services component displays horizontally a hamburger menu button and other custom content in tablet and desktop view. This custom content will be hidden in mobile view and show only a hamburger menu button.
 
-The the custom content have to be present within the opened menu in the mobile view.
+The custom content have to be present within the opened menu in the mobile view.
 
 Use the class "osg-menu\_\_content" to hide the custom content in mobile view.
 
@@ -10,8 +10,9 @@ Use the class "osg-menu\_\_content" to hide the custom content in mobile view.
 
 The blocks are the following:
 
-- menuButtonContent: to override the content of the menu button.
-- menuOtherContent: to add custom links or buttons in the menu.
+- menuButtonContent: to override the content of the navbar menu services button.
+- menuOtherLinks: to add custom links or buttons in the navbar menu services.
+- menuListExpanded: to add the content of the expanded part of the navbar menu services.
 
 ### Data Fields
 
@@ -25,7 +26,7 @@ The blocks are the following:
 
 | Name           | Description                                                                   |
 | -------------- | ----------------------------------------------------------------------------- |
-| osg-menu--open | Expanded state for menu. The hamburger buttons transforms into a close button |
+| osg-menu--open | Expanded state for menu. The hamburger button transforms into a close button. |
 
 ### Accessibility
 

@@ -8,12 +8,12 @@
       "hamburger menu"
     ]
   },
-  "menu": {
+  "navbarMenuServices": {
     "menuButton": {
       "text": "Menu",
       "textClose": "Close menu",
       "color": "blue-dark",
-      "modifiers": "osg-button-hamburger osg-button--outline",
+      "modifiers": "osg-hamburger-button osg-button--outline",
       "dataAttrs": [
         {
           "key": "aria-expanded",
