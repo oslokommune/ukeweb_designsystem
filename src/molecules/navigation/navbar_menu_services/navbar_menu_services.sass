@@ -38,9 +38,10 @@ $osg-hamburger-line-gap: 8px
           display: block
           height: 2px
           position: relative
-          left: 15px
           transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
           width: 35px
+          +osg-mq-tablet-and-up
+            left: 15px
 
           &:nth-child(1)
             top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
@@ -78,22 +79,14 @@ $osg-hamburger-line-gap: 8px
 
         &__icon
           > span
-            background: $osg-color-blue-dark
-            display: block
-            height: 2px
-            position: absolute
-            right: 15px
-            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-            width: 35px
-
             &:nth-child(1)
-              transform: translateY(14px) translateY(-50%) rotate(-135deg)
+              transform: translateY(10px) translateY(-50%) rotate(-135deg)
               +osg-mq-tablet-and-up
                 transform: translateY(9px) translateY(-50%) rotate(-135deg)
             &:nth-child(2)
               opacity: 0
             &:nth-child(3)
-              transform: translateY(-7px) translateY(50%) rotate(135deg)
+              transform: translateY(-12px) translateY(50%) rotate(135deg)
               +osg-mq-tablet-and-up
                 transform: translateY(-12px) translateY(50%) rotate(135deg)
 
