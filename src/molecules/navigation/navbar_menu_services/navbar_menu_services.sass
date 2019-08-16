@@ -1,7 +1,7 @@
 $osg-hamburger-width: 55px
-$osg-hamburger-height: 55px
+$osg-hamburger-height: 5px
 $osg-hamburger-line-height: 2px
-$osg-hamburger-line-gap: 10px
+$osg-hamburger-line-gap: 8px
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
   @return (($hamburgerHeight - $lineHeight) / 2) + $gap
@@ -37,8 +37,8 @@ $osg-hamburger-line-gap: 10px
           background: $osg-color-blue-dark
           display: block
           height: 2px
-          position: absolute
-          right: 15px
+          position: relative
+          left: 15px
           transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
           width: 35px
 
