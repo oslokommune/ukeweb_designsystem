@@ -34,6 +34,7 @@ The blocks are the following:
 Ensure that the hamburger button has a text. This is necessary so the screen readers can find the button.
 Only one of the data fields text and textClose should be available for screen readers at a time, so you will need to use aria-hidden to hide each one depending on the case:
 when the menu is expanded, set the data field 'text' to aria-hidden=true and 'textClose' aria-hidden=false and the opposite when the menu is collapsed.
+Also you need to toggle the aria-expanded attribute when the menu is expanded.
 
 ### Examples
 
