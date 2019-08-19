@@ -1,12 +1,12 @@
-$osg-hamburger-width: 40px
-$osg-hamburger-height: 40px
+$osg-hamburger-width: 30px
+$osg-hamburger-height: 30px
 $osg-hamburger-line-height: 2px
 $osg-hamburger-line-gap: 6px
 
-$osg-hamburger-mobile-width: 50px
-$osg-hamburger-mobile-height: 50px
+$osg-hamburger-mobile-width: 40px
+$osg-hamburger-mobile-height: 40px
 $osg-hamburger-mobile-line-height: 2px
-$osg-hamburger-mobile-line-gap: 11px
+$osg-hamburger-mobile-line-gap: 10px
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
   @return (($hamburgerHeight - $lineHeight) / 2) + $gap
@@ -32,13 +32,13 @@ $osg-hamburger-mobile-line-gap: 11px
         +osg-sr-only
 
       &__icon
-        height: 50px
-        margin-left: 15px
+        height: 40px
         overflow: hidden
-        width: 50px
+        width: 40px
         +osg-mq-tablet-and-up
-          height: 40px
-          width: 40px
+          height: 30px
+          margin-left: 15px
+          width: 30px
 
         > span
           background: $osg-color-blue-dark
@@ -93,23 +93,27 @@ $osg-hamburger-mobile-line-gap: 11px
           +osg-common-button-circle
 
         &__icon
+          +osg-mq-tablet-and-up
+            height: 30px
+            margin-left: 15px
+            width: 30px
           > span
             &:nth-child(1)
-              transform: translateY(10px) translateY(-50%) rotate(-135deg)
+              transform: translateY(12px) translateY(-50%) rotate(-135deg)
               +osg-mq-tablet-and-up
-                transform: translateY(9px) translateY(-50%) rotate(-135deg)
+                transform: translateY(8px) translateY(-50%) rotate(-135deg)
             &:nth-child(2)
               opacity: 0
             &:nth-child(3)
-              transform: translateY(-12px) translateY(50%) rotate(135deg)
+              transform: translateY(-14px) translateY(50%) rotate(135deg)
               +osg-mq-tablet-and-up
-                transform: translateY(-12px) translateY(50%) rotate(135deg)
+                transform: translateY(-10px) translateY(50%) rotate(135deg)
 
       .osg-expanded-content
         background: white
         display: block
         position: fixed
-        top: 70px
+        top: 80px
         z-index: 2
   &--overlay
     .osg-overlay

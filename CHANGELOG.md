@@ -13,7 +13,11 @@ See README.md for release description.
 
 ### Added
 
+- navbar_menu_services: refactor the removed pattern menu and renamed it
+
 ### Removed
+
+- molecules-navigation-menu: removed pattern
 
 ### Changed
 
