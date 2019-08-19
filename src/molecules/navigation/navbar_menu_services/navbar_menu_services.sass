@@ -1,7 +1,12 @@
-$osg-hamburger-width: 55px
-$osg-hamburger-height: 5px
+$osg-hamburger-width: 40px
+$osg-hamburger-height: 40px
 $osg-hamburger-line-height: 2px
-$osg-hamburger-line-gap: 8px
+$osg-hamburger-line-gap: 6px
+
+$osg-hamburger-mobile-width: 50px
+$osg-hamburger-mobile-height: 50px
+$osg-hamburger-mobile-line-height: 2px
+$osg-hamburger-mobile-line-gap: 11px
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
   @return (($hamburgerHeight - $lineHeight) / 2) + $gap
@@ -10,7 +15,6 @@ $osg-hamburger-line-gap: 8px
   nav
     align-items: baseline
     display: flex
-    flex-direction: row
 
     .osg-hamburger-button
       background: none
@@ -20,8 +24,7 @@ $osg-hamburger-line-gap: 8px
         border: 2px solid
 
       &__text
-        font-size: 18px
-        font-weight: 500
+        @extend .osg-u-text-4
         +osg-mq-mobile-only
           +osg-sr-only
 
@@ -29,9 +32,13 @@ $osg-hamburger-line-gap: 8px
         +osg-sr-only
 
       &__icon
-        width: 35px
+        height: 50px
+        margin-left: 15px
+        overflow: hidden
+        width: 50px
         +osg-mq-tablet-and-up
-          width: 45px
+          height: 40px
+          width: 40px
 
         > span
           background: $osg-color-blue-dark
@@ -39,16 +46,24 @@ $osg-hamburger-line-gap: 8px
           height: 2px
           position: relative
           transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-          width: 35px
+          width: 40px
           +osg-mq-tablet-and-up
-            left: 15px
+            width: 30px
 
           &:nth-child(1)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, -$osg-hamburger-mobile-line-gap)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
+
           &:nth-child(2)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, 0)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
+
           &:nth-child(3)
-            top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, $osg-hamburger-mobile-line-gap)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
 
     .osg-other-links
       display: none
