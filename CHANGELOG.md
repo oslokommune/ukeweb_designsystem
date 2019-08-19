@@ -17,6 +17,16 @@ See README.md for release description.
 
 ### Changed
 
+## [0.33.0] - 2019-08-19
+
+### Added
+
+- navbar_menu_services: refactor the removed pattern menu and renamed it
+
+### Removed
+
+- molecules-navigation-menu: removed pattern
+
 ## [0.32.0] - 2019-08-08
 
 ### Fixed
