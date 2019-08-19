@@ -1,0 +1,37 @@
+
+{% set navbarMenuServicesModifiers = navbarMenuServices.modifiers | default(null) %}
+
+{% set menuButtonContent %}
+  {% block menuButtonContent %}
+    {% set menuText = navbarMenuServices.menuButton.text | default(null) %}
+    {% set menuTextClose = navbarMenuServices.menuButton.textClose | default(null) %}
+    <span class="osg-hamburger-button__text">{{ menuText }}</span>
+    <span class="osg-hamburger-button__text-close">{{ menuTextClose }}</span>
+    <span class="osg-hamburger-button__icon">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </span>
+  {% endblock %}
+{% endset %}
+
+<div class="osg-navbar-menu-services {{ navbarMenuServicesModifiers }}">
+  <nav>
+    {% embed 'atoms/buttons/button/button.twig' with { button: navbarMenuServices.menuButton } %}
+      {% block content %}
+        {{ menuButtonContent }}
+      {% endblock %}
+    {% endembed %}
+
+    {% block menuOtherLinks %}
+    {% endblock %}
+
+    <div class="osg-expanded-content">
+      {% block menuListExpanded %}
+      {% endblock %}
+    </div>
+  </nav>
+  <div class="osg-overlay"></div>
+</div>
+
+
