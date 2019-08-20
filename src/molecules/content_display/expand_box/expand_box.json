@@ -1,18 +1,25 @@
 {
   "devtools": {
-    "tags": ["content", "fact", "info", "expand"]
+    "tags": ["content", "fact", "info", "expand", "expandable", "toggle"]
   },
   "expandBox": {
     "variant": "osg-v-default",
-    "title": "Fusce porta"
+    "expandableAreaId": "expand_area_id"
   },
   "button": {
-    "color": "",
     "modifiers": "osg-button--circle",
     "dataAttrs": [
       {
         "key": "aria-label",
         "val": "expand-button"
+      },
+      {
+        "key": "aria-expanded",
+        "val": "false"
+      },
+      {
+        "key": "aria-controls",
+        "val": "expand_area_id"
       }
     ]
   }

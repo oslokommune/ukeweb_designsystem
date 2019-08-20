@@ -58,19 +58,25 @@
         "name": "heart-plus"
       },
       {
-        "name": "hoist"
+        "name": "crane"
+      },
+      {
+        "name": "menu"
+      },
+      {
+        "name": "x"
       },
       {
         "name": "house-heart"
       },
       {
-        "name": "letter"
-      },
-      {
         "name": "location-pin"
       },
       {
-        "name": "magnifying-glass"
+        "name": "magnifying-glass-small"
+      },
+      {
+        "name": "magnifying-glass-big"
       },
       {
         "name": "minus-sign"
@@ -91,9 +97,6 @@
         "name": "restaurant"
       },
       {
-        "name": "street-vendor"
-      },
-      {
         "name": "swingset"
       },
       {
@@ -107,6 +110,21 @@
       },
       {
         "name": "water-faucet"
+      },
+      {
+        "name": "exclamation-mark-circle"
+      },
+      {
+        "name": "facebook"
+      },
+      {
+        "name": "instagram"
+      },
+      {
+        "name": "linked-in"
+      },
+      {
+        "name": "twitter"
       }
     ]
   }

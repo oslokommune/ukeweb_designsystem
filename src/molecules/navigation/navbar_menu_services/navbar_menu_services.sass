@@ -1,0 +1,122 @@
+$osg-hamburger-width: 30px
+$osg-hamburger-height: 30px
+$osg-hamburger-line-height: 2px
+$osg-hamburger-line-gap: 6px
+
+$osg-hamburger-mobile-width: 40px
+$osg-hamburger-mobile-height: 40px
+$osg-hamburger-mobile-line-height: 2px
+$osg-hamburger-mobile-line-gap: 10px
+
+@function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap)
+  @return (($hamburgerHeight - $lineHeight) / 2) + $gap
+
+.osg-navbar-menu-services
+  nav
+    align-items: baseline
+    display: flex
+
+    .osg-hamburger-button
+      background: none
+      border: none
+      position: relative
+      +osg-mq-tablet-and-up
+        border: 2px solid
+
+      &__text
+        @extend .osg-u-text-4
+        +osg-mq-mobile-only
+          +osg-sr-only
+
+      &__text-close
+        +osg-sr-only
+
+      &__icon
+        height: 40px
+        overflow: hidden
+        width: 40px
+        +osg-mq-tablet-and-up
+          height: 30px
+          margin-left: 15px
+          width: 30px
+
+        > span
+          background: $osg-color-blue-dark
+          display: block
+          height: 2px
+          position: relative
+          transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+          width: 40px
+          +osg-mq-tablet-and-up
+            width: 30px
+
+          &:nth-child(1)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, -$osg-hamburger-mobile-line-gap)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
+
+          &:nth-child(2)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, 0)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
+
+          &:nth-child(3)
+            top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, $osg-hamburger-mobile-line-gap)
+            +osg-mq-tablet-and-up
+              top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
+
+    .osg-other-links
+      display: none
+      +osg-mq-tablet-and-up
+        display: block
+
+    .osg-expanded-content
+      display: none
+
+  .osg-overlay
+    background: #000
+    display: none
+    height: 100%
+    opacity: .6
+    position: fixed
+    width: 100%
+    z-index: 1
+
+  &--expanded
+    nav
+      height: auto
+      .osg-hamburger-button
+        +osg-mq-mobile-only
+          color: #2a2859 !important
+          background: #f9c66b !important
+          border: 2px solid #f9c66b !important
+          +osg-common-button-circle
+
+        &__icon
+          +osg-mq-tablet-and-up
+            height: 30px
+            margin-left: 15px
+            width: 30px
+          > span
+            &:nth-child(1)
+              transform: translateY(12px) translateY(-50%) rotate(-135deg)
+              +osg-mq-tablet-and-up
+                transform: translateY(8px) translateY(-50%) rotate(-135deg)
+            &:nth-child(2)
+              opacity: 0
+            &:nth-child(3)
+              transform: translateY(-14px) translateY(50%) rotate(135deg)
+              +osg-mq-tablet-and-up
+                transform: translateY(-10px) translateY(50%) rotate(135deg)
+
+      .osg-expanded-content
+        background: white
+        display: block
+        position: fixed
+        top: 80px
+        z-index: 2
+  &--overlay
+    .osg-overlay
+      display: none
+      +osg-mq-tablet-and-up
+        display: block

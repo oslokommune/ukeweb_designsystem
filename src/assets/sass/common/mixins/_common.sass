@@ -25,11 +25,8 @@
     +osg-mq-tablet-and-up
       padding-top: 40px
   &:before
-    @extend .osg-u-text-1
-    font-family: 'Font Awesome 5 Free'
-    font-weight: 900
-    content: "\F10E"
-    font-style: normal
+    @extend .osg-u-heading-1
+    content: '"'
     position: absolute
     top: 50px
     left: 30px
@@ -43,26 +40,44 @@
   padding: 15px
   min-width: 60px
   min-height: 50px
+  text-decoration: none
   &--circle
-    border-radius: 50%
-    // force 1x1 ratio
-    &:before
-      content: ''
-      display: inline-block
-      vertical-align: middle
-      padding-top: 100%
-  &--outline
-    background-color: transparent !important
+    +osg-common-button-circle
 
-  // looping map from maps.scss
   @each $name, $text, $background in $osg-button-colors
-    &-#{$name}
+    &--#{$name}
       color: $text
       background: $background
       border: 2px solid $background
-      &:focus
-        box-shadow: 0 0 2px 2px Highlight
-      &:active
-        transform: scale(0.97)
-      &:hover
-        background-color: lighten($background, 5%)
+      &:visited
+        color: $text
+        background: $background
+        border: 2px solid $background
+      &:focus, &:hover
+        color: white
+        background: $osg-color-blue-hover
+        border-color: $osg-color-blue-hover
+        text-decoration: none
+      &.osg-button--outline.osg-button--active
+        &, &:focus, &:hover, &:visited
+          color: $text
+          background-color: $background
+
+  &--outline
+    background-color: transparent
+    color: $osg-color-blue-dark
+    &:visited
+      background-color: transparent
+      color: $osg-color-blue-dark
+    &:focus, &:hover
+      background-color: transparent
+      color: $osg-color-blue-hover
+
+=osg-common-button-circle
+  border-radius: 50%
+  // force 1x1 ratio
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    padding-top: 100%

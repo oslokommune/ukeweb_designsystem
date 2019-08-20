@@ -23,10 +23,11 @@ Here you can see the different uses of the variants and modifiers with buttons: 
 
 ### Modifiers Options
 
-| Name                | Description                                  |
-| ------------------- | -------------------------------------------- |
-| osg-button--circle  | Changes the shape of the icon to be a circle |
-| osg-button--outline | Removes background-color. Keeps border.      |
+| Name                | Description                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| osg-button--circle  | Changes the shape of the icon to be a circle                                                             |
+| osg-button--outline | Removes background-color. Keeps border.                                                                  |
+| osg-button--active  | Sets active state style for the button (only works for together with the outline modifier at the moment) |
 
 ### Color options
 

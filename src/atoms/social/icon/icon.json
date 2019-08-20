@@ -9,12 +9,11 @@
       "like",
       "facebook",
       "twitter",
-      "snapchat",
       "instagram"
     ]
   },
   "icon": {
-    "brand": "<i class='fab fa-facebook'></i>",
+    "brand": "<i class='osg-u-icon-facebook'></i>",
     "text": "Facebook",
     "textVisible": true,
     "url": "#lorem"

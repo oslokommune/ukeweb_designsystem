@@ -1,4 +1,3 @@
-{% set hasTitle = expandBox.title is defined and expandBox.title is not empty %}
 {% set expandBoxVariant = expandBox.variant | default('osg-v-default') %}
 {% set expandBoxModifiers = expandBox.modifiers | default(null) %}
 
@@ -8,24 +7,23 @@
 
 {% set expandBoxButtonContent %}
    {% block buttonContent %}
-    <i class='fas fa-chevron-down'></i>
+    <i class='osg-u-icon-chevron-down'></i>
    {% endblock %}
 {% endset %}
 
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   <div class="osg-expand-box__title-line">
-    {% if hasTitle %}
-      <div class="osg-expand-box__title-line-text">
-        <h3>{{ expandBox.title }}</h3>
-      </div>
-    {% endif %}
+    <div class="osg-expand-box__title-line-text">
+      {% block titleContent %}
+      {% endblock %}
+    </div>
     {% embed 'atoms/buttons/button/button.twig' %}
       {% block content %}
         {{ expandBoxButtonContent }}
       {% endblock %}
     {% endembed %}
   </div>
-  <div class="osg-expand-box__content" aria-haspopup="true" aria-expanded="false">
+  <div class="osg-expand-box__content" id="{{ expandBox.expandableAreaId }}">
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block content %}
         {{ expandBoxContent }}

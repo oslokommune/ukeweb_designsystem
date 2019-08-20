@@ -24,9 +24,10 @@ Textfield for user input
 
 ### Modifier Options
 
-| Name                | Description                 |
-| ------------------- | --------------------------- |
-| osg-text-field--big | Makes the text field bigger |
+| Name                    | Description                   |
+| ----------------------- | ----------------------------- |
+| osg-text-field--big     | Makes the text field bigger   |
+| osg-text-field--outline | Adds border to the text-field |
 
 ### State options
 
@@ -35,3 +36,5 @@ Textfield for user input
 - "success"
 - "warning"
 - "danger"
+
+You can also add any palette color name insted of state name to color the text field.

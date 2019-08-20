@@ -9,32 +9,25 @@
       "like",
       "facebook",
       "twitter",
-      "snapchat",
       "instagram"
     ]
   },
   "iconList": {
     "brands": [
       {
-        "icon": "<i class='fab fa-facebook-f'></i>",
+        "icon": "<i class='osg-u-icon-facebook'></i>",
         "text": "Facebook",
         "textVisible": false,
         "url": "#lorem"
       },
       {
-        "icon": "<i class='fab fa-instagram'></i>",
+        "icon": "<i class='osg-u-icon-instagram'></i>",
         "text": "Instagram",
         "textVisible": false,
         "url": "#lorem"
       },
       {
-        "icon": "<i class='fab fa-snapchat-ghost'></i>",
-        "text": "Snapchat",
-        "textVisible": false,
-        "url": "#lorem"
-      },
-      {
-        "icon": "<i class='fab fa-twitter'></i>",
+        "icon": "<i class='osg-u-icon-twitter'></i>",
         "text": "Twitter",
         "textVisible": false,
         "url": "#lorem"

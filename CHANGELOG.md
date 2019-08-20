@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 See README.md for release description.
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -16,19 +17,223 @@ See README.md for release description.
 
 ### Changed
 
+## [0.33.0] - 2019-08-19
+
+### Added
+
+- navbar_menu_services: refactor the removed pattern menu and renamed it
+
+### Removed
+
+- molecules-navigation-menu: removed pattern
+
+## [0.32.0] - 2019-08-08
+
+### Fixed
+
+- global: removed setting global body/html background color to white.
+- organisms-headings-event: updated outdated docs.
+
+### Added
+
+- molecules-navigation-menu: new pattern.
+- molecules-navigation-navbar_menu: added a block named "content".
+
+### Removed
+
+- molecules-navigation-navbar_menu: removed support for data field "links" with all its content.
+- molecules-navigation-navbar_menu: removed support for data field "topDomainLink" with all its content.
+- molecules-navigation-navbar_menu: removed support for data field "logos" with all its content.
+
+### Changed
+
+- molecules-content_display-expand_box: added a mandatory data field called "expandableAreaId" for better aria support.
+- molecules-content_display-expand_box: changed title data field into a block for more flexibility.
+- molecules-navigation-navbar_menu: changed the open variant into a modifier.
+
+## [0.31.2] - 2019-07-02
+
+### Fixed
+
+- organisms-messages-alert: Alert component didn't show white background on the top
+
+## [0.31.1] - 2019-06-25
+
+### Fixed
+
+- Global: Grouped variables, maps and mixins into a file called resources.sass for better js framework consumption.
+- Docs: changed some doc file names and added doc about js framework consumption.
+
+## [0.31.0] - 2019-06-24
+
+### Removed
+
+- global: removed font awesome as dependency and replaced with osg-u-icon helper classes in patterns. The patterns affected are expand_box, alert, icon_list, quote, icon (social) and header.
+
+## [0.30.0] - 2019-06-24
+
+### Fixed
+
+- atoms-icons-icon: switched out icon svg backgrounds with icon-font in the :before pseudo element.
+
+### Added
+
+- atoms-icons-icon: added more icons.
+
+### Removed
+
+- atoms-icons-icon: removed the sass file that is no longer needed.
+
+## [0.29.3] - 2019-06-12
+
+### Fixed
+
+- organisms-messages-alert: text will now never overlap the state icon.
+
+## [0.29.2] - 2019-06-12
+
+### Fixed
+
+- organisms-navigation-hero: style fix for right modifier (align-items: stretch)
+
+## [0.29.0] - 2019-06-12
+
+### Fixed
+
+- organisms-navigation-hero: image is now within a column that takes one third of the vertical space on the left and right modifiers.
+
+### Changed
+
+- organisms-navigation-hero: replaced two divs with classes osg-content-box and osg-content-box\_\_container with a div with class osg-hero\_\_content (refactored out the content_box pattern from the hero pattern)
+
+## [0.28.0] - 2019-06-12
+
+### Fixed
+
+- atoms-decorators-figure: default text color for figcaption is now dark blue.
+- organisms-navigation-shape_hero: Fixed grid bug in IE that made all the items overlap in the grid.
+
+### Removed
+
+- molecules-navigation-menu_list: removed component
+
+## [0.27.5] - 2019-06-07
+
+### Fixed
+
+- organisms-navigation-shape_hero: fixed aligning of main columns for all break points
+
+## [0.27.4] - 2019-06-07
+
+### Fixed
+
+- atoms-decorators-figure: Fixed issue with long text not wrapping for figcaption. Changed display and position rule of figure and figcaption to use display: table and table-caption
+
+## [0.27.3] - 2019-06-07
+
+### Added
+
+- atoms-buttons-button: added active modifier to button outline
+
+## [0.27.2] - 2019-06-05
+
+### Fixed
+
+- organisms-cards-card: removed display: table and unnecessary display: flex because of an ie fix
+
+## [0.27.1] - 2019-06-05
+
+### Fixed
+
+- organisms-cards-card: made hover on card zoom in the image and not change the text color
+
+## [0.27.0] - 2019-06-05
+
+### Added
+
+- organisms-cards-card: added block with content to be placed under the card
+
+### Removed
+
+- organisms-cards-card: removed left/right/full modifiers
+
+### Changed
+
+- organisms-cards-card: changed url to cover entire card
+- organisms-cards-card: changed searchResult to use the new field searchResultUrl as its url
+
+## [0.26.1] - 2019-05-29
+
+### Fixed
+
+- molecules-data_display-icon_link: stylefix
+
+## [0.26.0] - 2019-05-29
+
+### Fixed
+
+- molecules-data_display-icon_link: fixed ie style issue
+- molecules-data_display-icon_link: fixed semantic tags
+- atoms-links-link_button: set default color for visited state
+- molecules-cards-card: set content_box in card to full width on mobile as default
+
+### Added
+
+- utils: added numbered spacing util classes from 1 to 7 (i.e osg-u-padding-top-3 or osg-u-margin-left-6 )
+- utils: added spacing util classes for vertical spacing (i.e osg-u-margin-vertical-large or osg-u-padding-vertical-5)
+- utils: added spacing util classes for spacing in all directions (i.e osg-u-margin-large or osg-u-padding-5)
+
+### Changed
+
+- utils: changed naming of spacing util classes from "sides" to "horizontal" (i.e osg-u-padding-sides-small is now osg-u-padding-horizontal-small)
+
+## [0.25.0] - 2019-05-27
+
+### Fixed
+
+- atoms-forms-text_field: changed foreground color in the outline modifier
+- atoms-forms-text_field: fixed extra outline with the outline modifier
+
+### Added
+
+- atoms-forms-text_field: added optional autocomplete field
+
+## [0.24.0] - 2019-05-23
+
+### Fixed
+
+- atoms-buttons-button: outline modifier stays outlined on hover
+- atoms-links-link_button: outline modifier stays outlined on hover
+- atoms-buttons-button: using normal link color on text on outline button
+- atoms-links-link_button: using normal link color on text on outline link_button
+
+### Changed
+
+- atoms-buttons-button: using bem style for color modifiers (added one extra dash to color modifier classes)
+- atoms-links-link_button: using bem style for color modifiers (added one extra dash to color modifier classes)
+
+## [0.23.1] - 2019-05-20
+
+### Added
+
+- atoms-forms-text_field: added outline modifier
+
 ## [0.23.0] - 2019-05-15
 
 ### Removed
+
 - molecules-data_display-icon_link: Replace the styleguide icon for a block
 
 ## [0.22.0] - 2019-05-14
 
 ### Fixed
+
 - organisms-navigation-hero: Fixed naming of modifiers targeting tablet and up
 
 - molecules-navigation-menu_list: fix background plus/minus of the button to be repeated in Firefox and reduce space between items in mobile view
 
 ### Added
+
 - organisms-navigation-hero: Added osg-hero--center-mobile-only modifier for centering image on mobile
 
 ## [0.21.0] - 2019-05-10

@@ -29,28 +29,32 @@ These classes should be added to any element to set styles directly to it.
 
 ### Spacing
 
-| Name                                               | Description                                                                 |
-| -------------------------------------------------- | --------------------------------------------------------------------------- |
-| .osg-u-padding-bottom-[spacing size]               | Adds padding to the bottom of the element                                   |
-| .osg-u-margin-bottom-[spacing size]                | Adds margin to the bottom of the element                                    |
-| .osg-u-padding-top-[spacing size]                  | Adds padding to the top of the element                                      |
-| .osg-u-margin-top-[spacing size]                   | Adds margin to the top of the element                                       |
-| .osg-u-padding-left-[spacing size]                 | Adds padding to the left of the element                                     |
-| .osg-u-margin-left-[spacing size]                  | Adds margin to the left of the element                                      |
-| .osg-u-padding-right-[spacing size]                | Adds padding to the right of the element                                    |
-| .osg-u-margin-right-[spacing size]                 | Adds margin to the right of the element                                     |
-| .osg-u-padding-sides-[spacing size]                | Adds padding to the left and right of the element                           |
-| .osg-u-margin-sides-[spacing size]                 | Adds margin to the left and right of the element                            |
-| .osg-u-padding-bottom-[spacing size]-[screen size] | Adds padding to the bottom of the element for a specific breakpoint         |
-| .osg-u-margin-bottom-[spacing size]-[screen size]  | Adds margin to the bottom of the element for a specific breakpoint          |
-| .osg-u-padding-top-[spacing size]-[screen size]    | Adds padding to the top of the element for a specific breakpoint            |
-| .osg-u-margin-top-[spacing size]-[screen size]     | Adds margin to the top of the element for a specific breakpoint             |
-| .osg-u-padding-left-[spacing size]-[screen size]   | Adds padding to the left of the element for a specific breakpoint           |
-| .osg-u-margin-left-[spacing size]-[screen size]    | Adds margin to the left of the element for a specific breakpoint            |
-| .osg-u-padding-right-[spacing size]-[screen size]  | Adds padding to the right of the element for a specific breakpoint          |
-| .osg-u-margin-right-[spacing size]-[screen size]   | Adds margin to the right of the element for a specific breakpoint           |
-| .osg-u-padding-sides-[spacing size]-[screen size]  | Adds padding to the left and right of the element for a specific breakpoint |
-| .osg-u-margin-sides-[spacing size]-[screen size]   | Adds margin to the left and right of the element for a specific breakpoint  |
+| Name                                                   | Description                                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------------------------- |
+| .osg-u-padding-[spacing size]                          | Adds padding to the top, bottom, and sides of the element                   |
+| .osg-u-margin-[spacing size]                           | Adds margin to the top, bottom, and sides of the element                    |
+| .osg-u-padding-bottom-[spacing size]                   | Adds padding to the bottom of the element                                   |
+| .osg-u-margin-bottom-[spacing size]                    | Adds margin to the bottom of the element                                    |
+| .osg-u-padding-top-[spacing size]                      | Adds padding to the top of the element                                      |
+| .osg-u-margin-top-[spacing size]                       | Adds margin to the top of the element                                       |
+| .osg-u-padding-left-[spacing size]                     | Adds padding to the left of the element                                     |
+| .osg-u-margin-left-[spacing size]                      | Adds margin to the left of the element                                      |
+| .osg-u-padding-right-[spacing size]                    | Adds padding to the right of the element                                    |
+| .osg-u-margin-right-[spacing size]                     | Adds margin to the right of the element                                     |
+| .osg-u-padding-sides-[spacing size]                    | Adds padding to the left and right of the element                           |
+| .osg-u-margin-sides-[spacing size]                     | Adds margin to the left and right of the element                            |
+| .osg-u-padding-bottom-[spacing size]-[screen size]     | Adds padding to the bottom of the element for a specific breakpoint         |
+| .osg-u-margin-bottom-[spacing size]-[screen size]      | Adds margin to the bottom of the element for a specific breakpoint          |
+| .osg-u-padding-top-[spacing size]-[screen size]        | Adds padding to the top of the element for a specific breakpoint            |
+| .osg-u-margin-top-[spacing size]-[screen size]         | Adds margin to the top of the element for a specific breakpoint             |
+| .osg-u-padding-left-[spacing size]-[screen size]       | Adds padding to the left of the element for a specific breakpoint           |
+| .osg-u-margin-left-[spacing size]-[screen size]        | Adds margin to the left of the element for a specific breakpoint            |
+| .osg-u-padding-right-[spacing size]-[screen size]      | Adds padding to the right of the element for a specific breakpoint          |
+| .osg-u-margin-right-[spacing size]-[screen size]       | Adds margin to the right of the element for a specific breakpoint           |
+| .osg-u-padding-horizontal-[spacing size]-[screen size] | Adds padding to the left and right of the element for a specific breakpoint |
+| .osg-u-margin-horizontal-[spacing size]-[screen size]  | Adds margin to the left and right of the element for a specific breakpoint  |
+| .osg-u-padding-vertical-[spacing size]-[screen size]   | Adds padding to the top and bottom of the element for a specific breakpoint |
+| .osg-u-margin-vertical-[spacing size]-[screen size]    | Adds margin to the top and bottom of the element for a specific breakpoint  |
 
 ### Animation
 
@@ -128,12 +132,24 @@ Background and text color that is compliant to WCAG 2.0
 
 ### Spacing Sizes
 
+#### Named Spacing Sizes
+
 - none (0)
 - tiny (10px)
 - small (20px)
 - medium (30px)
 - large (40px)
 - huge (60px)
+
+#### Numbered Spacing Sizes
+
+- 1 (5px)
+- 2 (10px)
+- 3 (15px)
+- 4 (30px)
+- 5 (50px)
+- 6 (75px)
+- 7 (100px)
 
 ### Screen Sizes
 

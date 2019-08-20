@@ -6,19 +6,24 @@
 
 /* ---------------- GENERAL -----------------*/
 @import '~minireset.css/minireset.sass'
-@import '~@fortawesome/fontawesome-free/css/all.css'
 @import 'global/osloSans'
+@import 'global/osloIcons'
 @import 'global/content'
 
 body, html
-  background-color: white
   font-family: 'Oslo Sans', 'sans-serif'
   font-size: 100%
   font-weight: 300
   color: $osg-color-blue-dark
 
 p
-  @extend .osg-u-text-3
+  font-size: $osg-font-size-20
+  line-height: 1.5em
+  font-weight: 300
+  +osg-mq-tablet-and-up
+    font-size: $osg-font-size-22
+  +osg-mq-desktop-and-up
+    font-size: $osg-font-size-24
 
 a
   text-decoration: none
@@ -37,16 +42,7 @@ hr
   border-bottom: 1px solid #DCDCDC
 
 .osg-sr-only
-  border: 0
-  clip: rect(1px, 1px, 1px, 1px)
-  clip-path: inset(50%)
-  height: 1px
-  margin: -1px
-  overflow: hidden
-  padding: 0
-  position: absolute !important
-  width: 1px
-  word-wrap: normal !important
+  +osg-sr-only
 
 h1, h2, h3, h4, h5
   hyphens: auto
@@ -55,6 +51,8 @@ h1, h2, h3, h4, h5
   @extend .osg-content-wrapper
   blockquote
     +osg-common-blockquote
+  p
+    @extend .osg-u-text-3
   h1, h2, h3, h4, h5
     margin-bottom: 0.4em
     hyphens: auto

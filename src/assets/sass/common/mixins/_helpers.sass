@@ -20,19 +20,6 @@
     font-weight: $weight
     src: $src
 
-// helper mixin for using font awesome icon as a pseudo element
-=osg-helper-fa-pseudo($unicode)
-  font-family: Font Awesome\ 5 Free
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  display: inline-block
-  font-style: normal
-  font-variant: normal
-  text-rendering: auto
-  line-height: 1
-  font-weight: 900
-  content: "#{$unicode}"
-
 =osg-helper-filter($color)
   position: relative
   &:after
@@ -44,3 +31,15 @@
     bottom: 0
     background-color: $color
     opacity: .7
+
+=osg-sr-only
+  border: 0
+  clip: rect(1px, 1px, 1px, 1px)
+  clip-path: inset(50%)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute !important
+  width: 1px
+  word-wrap: normal !important

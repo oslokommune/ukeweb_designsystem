@@ -59,15 +59,22 @@ $osg-spacing-sizes: (
   "small": $osg-space-small,
   "medium": $osg-space-medium,
   "large": $osg-space-large,
-  "huge": $osg-space-huge
+  "huge": $osg-space-huge,
+  "1": $osg-space-1,
+  "2": $osg-space-2,
+  "3": $osg-space-3,
+  "4": $osg-space-4,
+  "5": $osg-space-5,
+  "6": $osg-space-6,
+  "7": $osg-space-7
 );
 
 // used to generate typography classes in utils.sass
 // they represent: id, mobile size, tablet size and desktop size
 $osg-typographies-header: (
-  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60, 300),
-  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 300),
-  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28, 300),
+  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-60, 400),
+  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 400),
+  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-28, 400),
   ("4", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 500),
   ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-20, 500),
   ("6", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500)
@@ -85,44 +92,53 @@ $osg-typographies: (
 
 $osg-font-weights: (
   "light": 300,
-  "regular": 500,
-  "medium": 700,
-  "bold": 900
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
 );
 
 // used to generate icon classes in utils.sass
-$osg-icon-names: (
-  "24h",
-  "backpack",
-  "bike",
-  "bus",
-  "cafe",
-  "calendar",
-  "chevron-right",
-  "coin-stacks",
-  "dog",
-  "drone",
-  "filter",
-  "fire-emblem",
-  "handicap",
-  "heart-plus",
-  "hoist",
-  "house-heart",
-  "letter",
-  "location-pin",
-  "magnifying-glass",
-  "minus-sign",
-  "museum",
-  "park",
-  "plus-sign",
-  "recycling",
-  "restaurant",
-  "street-vendor",
-  "swingset",
-  "toilet",
-  "tram",
-  "user",
-  "water-faucet"
+$osg-icons: (
+  "24h": "\e900",
+  "backpack": "\e901",
+  "bike": "\e902",
+  "bus": "\e903",
+  "cafe": "\e904",
+  "calendar": "\e905",
+  "chevron-down": "\e906",
+  "chevron-left": "\e907",
+  "chevron-right": "\e908",
+  "chevron-up": "\e909",
+  "coin-stacks": "\e90a",
+  "crane": "\e90b",
+  "dog": "\e90c",
+  "drone": "\e90d",
+  "exclamation-mark-circle": "\e90e",
+  "filter": "\e910",
+  "fire-emblem": "\e911",
+  "handicap": "\e912",
+  "house-heart": "\e913",
+  "location-pin": "\e914",
+  "magnifying-glass-big": "\e915",
+  "magnifying-glass-small": "\e916",
+  "menu": "\e917",
+  "minus-sign": "\e918",
+  "museum": "\e919",
+  "park": "\e91a",
+  "plus-sign": "\e91b",
+  "recycling": "\e91c",
+  "restaurant": "\e91d",
+  "swingset": "\e91e",
+  "toilet": "\e91f",
+  "tram": "\e920",
+  "user": "\e921",
+  "water-faucet": "\e922",
+  "x": "\e923",
+  "facebook": "\e924",
+  "instagram": "\e925",
+  "linked-in": "\e926",
+  "twitter": "\e927",
+  "heart-plus": "\e928"
 );
 
 // used to generate alignment classes in utils.sass

@@ -1,4 +1,3 @@
-{% set hasTopDomainLink = navbarMenu.topDomainLink.url is defined and navbarMenu.topDomainLink.url is not empty %}
 {% set navbarMenuVariant = navbarMenu.variant | default('osg-v-default') %}
 {% set navbarMenuModifiers = navbarMenu.modifiers | default(null) %}
 
@@ -23,32 +22,7 @@
         <span aria-hidden="true"></span>
       </button>
     </div>
-    <section class="osg-navbar-menu__links">
-      <ul role="menu">
-        {% for link in navbarMenu.links|default([]) %}
-          <li>
-            <a href="{{ link.url }}" role="menuitem">{{ link.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-      <ul>
-        {% for language in navbarMenu.languages|default([]) %}
-          <li>
-            <a href="{{ language.url }}" role="menuitem">{{ language.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-    <div>
-      <div class="osg-navbar-menu__logos">
-        {% for figure in navbarMenu.logos.figures %}
-          {% include 'atoms/decorators/figure/figure.twig' with figure %}
-        {% endfor %}
-
-        {% if hasTopDomainLink  %}
-          <a href="{{ navbarMenu.topDomainLink.url }}" target="_blank">{{ navbarMenu.topDomainLink.text }}</a>
-        {% endif %}
-      </div>
-    </div>
+    {% block content %}
+    {% endblock %}
   </div>
 </nav>

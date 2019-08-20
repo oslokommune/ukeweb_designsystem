@@ -2,9 +2,13 @@
 {% set searchBarModifiers = searchBar.modifiers | default(null) %}
 
 {% set searchBarButtonContent %}
-   {% block buttonContent %}
-    <i class='fas fa-search osg-searchbar__icon'></i>
-   {% endblock %}
+  {% block buttonContent %}
+    {% include 'atoms/icons/icon/icon.twig' with {
+      "icon": {
+        "modifiers": "osg-u-icon-magnifying-glass"
+      }
+    } only %}
+  {% endblock %}
 {% endset %}
 
 <div class="osg-searchbar {{ searchBarVariant }} {{ searchBarModifiers }}">
