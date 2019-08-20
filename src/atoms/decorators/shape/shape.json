@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["square", "circle", "tag", "image", "helper"]
-    }
+  "devtools": {
+    "tags": ["square", "circle", "tag", "image", "helper"]
   },
   "shape": {
     "url": "#lorem"

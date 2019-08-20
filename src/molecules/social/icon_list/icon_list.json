@@ -1,19 +1,17 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "social media",
-        "SoMe",
-        "click",
-        "functionality",
-        "share",
-        "like",
-        "facebook",
-        "twitter",
-        "snapchat",
-        "instagram"
-      ]
-    }
+  "devtools": {
+    "tags": [
+      "social media",
+      "SoMe",
+      "click",
+      "functionality",
+      "share",
+      "like",
+      "facebook",
+      "twitter",
+      "snapchat",
+      "instagram"
+    ]
   },
   "iconList": {
     "brands": [

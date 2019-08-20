@@ -1,16 +1,14 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "image",
-        "picture",
-        "text",
-        "link",
-        "call to action",
-        "header",
-        "figure"
-      ]
-    }
+  "devtools": {
+    "tags": [
+      "image",
+      "picture",
+      "text",
+      "link",
+      "call to action",
+      "header",
+      "figure"
+    ]
   },
   "promo": {
     "title": "Lorem ipsum dolor sit amet"

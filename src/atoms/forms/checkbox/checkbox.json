@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["label", "todo", "form", "field", "accept", "gdpr"]
-    }
+  "devtools": {
+    "tags": ["label", "todo", "form", "field", "accept", "gdpr"]
   },
   "checkbox": {
     "text": "laoreet lacinia neque",

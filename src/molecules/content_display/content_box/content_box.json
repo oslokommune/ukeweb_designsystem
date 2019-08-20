@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["content", "text", "info", "article"]
-    }
+  "devtools": {
+    "tags": ["content", "text", "info", "article"]
   },
   "contentBox": {}
 }

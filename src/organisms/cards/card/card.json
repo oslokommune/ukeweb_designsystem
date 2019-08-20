@@ -1,17 +1,15 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "preview",
-        "image",
-        "picture",
-        "link",
-        "heading",
-        "text",
-        "summary",
-        "event"
-      ]
-    }
+  "devtools": {
+    "tags": [
+      "preview",
+      "image",
+      "picture",
+      "link",
+      "heading",
+      "text",
+      "summary",
+      "event"
+    ]
   },
   "card": {
     "url": "#lorem"

@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["decorator", "helper", "image", "figure"]
-    }
+  "devtools": {
+    "tags": ["decorator", "helper", "image", "figure"]
   },
   "icon": {}
 }

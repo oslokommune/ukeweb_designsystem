@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["form", "name", "field"]
-    }
+  "devtools": {
+    "tags": ["form", "name", "field"]
   },
   "textField": {
     "id": "vestibulum1",

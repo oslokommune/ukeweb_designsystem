@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["search", "input", "searchbar"]
-    }
+  "devtools": {
+    "tags": ["search", "input", "searchbar"]
   },
   "search_bar": {},
   "textField": {

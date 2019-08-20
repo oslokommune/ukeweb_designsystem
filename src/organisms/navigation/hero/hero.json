@@ -1,18 +1,16 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "article",
-        "preview",
-        "square",
-        "circle",
-        "image",
-        "figure",
-        "picture",
-        "link",
-        "summary"
-      ]
-    }
+  "devtools": {
+    "tags": [
+      "article",
+      "preview",
+      "square",
+      "circle",
+      "image",
+      "figure",
+      "picture",
+      "link",
+      "summary"
+    ]
   },
   "hero": {},
   "shape": {

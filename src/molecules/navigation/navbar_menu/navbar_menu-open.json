@@ -1,9 +1,7 @@
 {
-  "meta": {
-    "pattern": {
-      "frame": {
-        "min-height": "800px"
-      }
+  "devtools": {
+    "frame": {
+      "min-height": "800px"
     }
   },
   "navbarMenu": {

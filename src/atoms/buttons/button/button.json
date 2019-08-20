@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["Call to action", "functionality", "link", "click"]
-    }
+  "devtools": {
+    "tags": ["Call to action", "functionality", "link", "click"]
   },
   "button": {
     "dataAttrs": [

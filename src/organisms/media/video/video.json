@@ -1,16 +1,14 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "media",
-        "multimedia",
-        "subtitles",
-        "poster",
-        "play",
-        "movie",
-        "film"
-      ]
-    }
+  "devtools": {
+    "tags": [
+      "media",
+      "multimedia",
+      "subtitles",
+      "poster",
+      "play",
+      "movie",
+      "film"
+    ]
   },
   "video": {
     "variant": "osg-v-default",

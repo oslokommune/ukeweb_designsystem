@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["data", "tabular", "information"]
-    }
+  "devtools": {
+    "tags": ["data", "tabular", "information"]
   },
   "simpleTable": {
     "rows": [

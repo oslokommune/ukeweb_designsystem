@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["menu", "list", "navigation", "expand", "collapse"]
-    }
+  "devtools": {
+    "tags": ["menu", "list", "navigation", "expand", "collapse"]
   },
   "menuList": {
     "header": "Lorem ipsum",

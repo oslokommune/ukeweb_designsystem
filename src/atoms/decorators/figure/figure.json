@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["image", "photo", "caption", "image text", "helper"]
-    }
+  "devtools": {
+    "tags": ["image", "photo", "caption", "image text", "helper"]
   },
   "figure": {
     "caption": "Lorem ipsum dolor sit amet",

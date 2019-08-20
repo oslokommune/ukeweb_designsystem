@@ -1,8 +1,6 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["image", "picture", "figure", "button", "click", "link"]
-    }
+  "devtools": {
+    "tags": ["image", "picture", "figure", "button", "click", "link"]
   },
   "callToAction": {},
   "figure": {

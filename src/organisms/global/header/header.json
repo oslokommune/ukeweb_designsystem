@@ -1,20 +1,18 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": [
-        "top",
-        "global",
-        "navigation",
-        "pages",
-        "links",
-        "menu",
-        "hamburger menu",
-        "go up",
-        "overview"
-      ],
-      "frame": {
-        "min-height": "500px"
-      }
+  "devtools": {
+    "tags": [
+      "top",
+      "global",
+      "navigation",
+      "pages",
+      "links",
+      "menu",
+      "hamburger menu",
+      "go up",
+      "overview"
+    ],
+    "frame": {
+      "min-height": "500px"
     }
   },
   "header": {

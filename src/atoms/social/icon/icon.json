@@ -1,21 +1,17 @@
 {
-  "meta": {
-    "pattern": {
-      "pattern": {
-        "tags": [
-          "social media",
-          "SoMe",
-          "click",
-          "functionality",
-          "share",
-          "like",
-          "facebook",
-          "twitter",
-          "snapchat",
-          "instagram"
-        ]
-      }
-    }
+  "devtools": {
+    "tags": [
+      "social media",
+      "SoMe",
+      "click",
+      "functionality",
+      "share",
+      "like",
+      "facebook",
+      "twitter",
+      "snapchat",
+      "instagram"
+    ]
   },
   "icon": {
     "brand": "<i class='fab fa-facebook'></i>",

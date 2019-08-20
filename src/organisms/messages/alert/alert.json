@@ -1,10 +1,8 @@
 {
-  "meta": {
-    "pattern": {
-      "tags": ["message", "messages", "important", "information"],
-      "frame": {
-        "min-height": "500px"
-      }
+  "devtools": {
+    "tags": ["message", "messages", "important", "information"],
+    "frame": {
+      "min-height": "500px"
     }
   },
   "alert": {
