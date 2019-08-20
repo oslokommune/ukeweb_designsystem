@@ -1,7 +1,21 @@
 {
-  "meta": {
-    "gui-preset": "global-pattern",
-    "show-docs": false
+  "devtools": {
+    "preset": "clean",
+    "pattern": {
+      "sections": {
+        "docs": {
+          "visible":  false
+        }
+      }
+    },
+    "tags": [
+      "font",
+      "size",
+      "heading",
+      "headings",
+      "text",
+      "typography"
+    ]
   },
   "fontSizes": {}
 }

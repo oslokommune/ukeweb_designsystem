@@ -1,7 +1,9 @@
 {
-  "meta": {
+  "devtools": {
     "tags": ["message", "messages", "important", "information"],
-    "min-height": "500px"
+    "frame": {
+      "min-height": "500px"
+    }
   },
   "alert": {
     "buttonAriaLabel": "Amet sit ipsum",

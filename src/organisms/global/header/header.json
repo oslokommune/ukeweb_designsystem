@@ -1,5 +1,5 @@
 {
-  "meta": {
+  "devtools": {
     "tags": [
       "top",
       "global",
@@ -11,7 +11,9 @@
       "go up",
       "overview"
     ],
-    "min-height": "500px"
+    "frame": {
+      "min-height": "500px"
+    }
   },
   "header": {
     "title": {
