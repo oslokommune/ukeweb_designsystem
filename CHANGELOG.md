@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- organisms-messages-alert: fixed missing icon when state was set to "important".
+
 ### Added
 
 ### Removed
