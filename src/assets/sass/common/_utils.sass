@@ -243,19 +243,17 @@
   .osg-u-text-grayscale-#{$name}
     color: #{$color} !important
 
-// Defining default font styling
-[class*=osg-u-icon-]
-  speak: none
-  font-family: 'Oslo Icons' !important
-  line-height: 1
-  font-size: 32px
-  font-style: normal
-  color: inherit
-
 // Generating icon classes
 @each $name, $content in $osg-icons
-  .osg-u-icon-#{$name}:before
-    content: "#{$content}"
+  .osg-u-icon-#{$name}
+    speak: none
+    font-family: 'Oslo Icons' !important
+    line-height: 1
+    font-size: 32px
+    font-style: normal
+    color: inherit
+    &:before
+      content: "#{$content}"
 
 // generating text align classes
 @each $name in $osg-alignment
