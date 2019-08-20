@@ -1,5 +1,5 @@
 {
-  "meta": {
+  "devtools": {
     "tags": [
       "global",
       "navigation",
@@ -8,7 +8,9 @@
       "menu",
       "hamburger menu"
     ],
-    "min-height": "500px"
+    "frame": {
+      "min-height": "500px"
+    }
   },
   "navbarMenu": {
   }

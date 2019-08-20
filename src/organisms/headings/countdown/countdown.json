@@ -1,5 +1,5 @@
 {
-  "meta": {
+  "devtools": {
     "tags": ["days", "hours", "minutes", "seconds", "time", "date", "clock"]
   },
   "countdown": {
