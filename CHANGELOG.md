@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.33.2] - 2019-08-20
+
+### Fixed
+
+- organisms-messages-alert: fixed that icon font was set on the alerts content.
+
 ## [0.33.1] - 2019-08-20
 
 ### Fixed
