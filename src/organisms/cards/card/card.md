@@ -16,12 +16,6 @@ This pattern has two blocks, one named "content" and one named "extraContent". C
 | stateText       | String | Clean text content                  | null            | Text to be displayed on top of the image. Used together with modifier osg-card--with-state to have effect.                                                                                               |
 | figure          | Object | See the tags figure for atom        | null            | See the figure atom for details                                                                                                                                                                          |
 
-### Variant Options
-
-| Name           | Description                                        |
-| -------------- | -------------------------------------------------- |
-| osg-v-default  | Is used if nothing is defined. Does nothing extra. |
-| osg-v-download | Adds a download icon                               |
 
 ### Modifier Options
 
