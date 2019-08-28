@@ -12,7 +12,9 @@
     ]
   },
   "card": {
-    "url": "#lorem"
+    "url": "#lorem",
+    "modifiers": "osg-card--with-state",
+    "stateText": "hola"
   },
   "figure": {
     "img": {
