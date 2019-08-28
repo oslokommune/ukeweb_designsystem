@@ -11,7 +11,7 @@
     transition: transform 1s cubic-bezier(.22,.57,.25,1)
   &:hover
     text-decoration: none
-    a 
+    a
       color: $osg-color-blue-dark
       img
         transform: scale(1.1)
@@ -33,6 +33,7 @@
     @extend .osg-u-heading-2
     display: none
     position: absolute
+    top: 50%
     text-align: center
     z-index: 1
     width: 100%
@@ -42,11 +43,6 @@
     padding: 0 15px 0
     +osg-mq-tablet-and-up
       padding: 0 40px 0 30px
-  /* modifiers styling */
-  &--show-search-result &
-    &__search-text
-      display: block
-
   &--animate &
     &__image-container
       +osg-animation-scale-up(1.5s)
@@ -56,20 +52,23 @@
   &--animate
     visibility: visible
     .osg-content-box
-      +osg-animation-fade-in(1.2s)
+      +osg-animation-scale-up(1.2s)
       animation-delay: .3s
 
   &--with-state &
-      &__state-text
-        display: block
-      &__search-result
-        border-color: white
-      &__image-container
-        +osg-helper-filter($osg-color-green-dark)
+    &__state-text
+      display: block
+    &__search-result
+      border-color: white
+    &__image-container
+      +osg-helper-filter($osg-color-green-dark)
   &--with-state
+    &:hover
+      a
+        color: white
     a
       color: white
     .osg-content-box
       background-color: $osg-color-green-dark
 
-  
+
