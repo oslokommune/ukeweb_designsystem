@@ -13,8 +13,7 @@
   },
   "card": {
     "url": "#lorem",
-    "modifiers": "osg-card--with-state",
-    "stateText": "hola"
+    "modifiers": "osg-card--animate"
   },
   "figure": {
     "img": {
