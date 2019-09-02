@@ -14,7 +14,6 @@ See README.md for release description.
 - organisms-cards-card: fixed state modifier so all text is white while it is active
 - organisms-cards-card: removed docs for download variant, which was removed earlier
 - organisms-cards-card: fixed the animation of the content box
-
 - atoms-icons-icon: icons now inherits color also on hover.
 
 ### Added
