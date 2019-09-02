@@ -248,13 +248,16 @@
 
 // Generating icon classes
 @each $name, $content in $osg-icons
-  .osg-u-icon-#{$name}:before
-    speak: none
-    font-family: 'Oslo Icons'
-    line-height: 1
-    font-style: normal
-    color: inherit
-    content: "#{$content}"
+  .osg-u-icon-#{$name}
+    &:before,
+    &:hover
+      color: inherit
+    &:before
+      speak: none
+      font-family: 'Oslo Icons'
+      line-height: 1
+      font-style: normal
+      content: "#{$content}"
 
 // generating text align classes
 @each $name in $osg-alignment
