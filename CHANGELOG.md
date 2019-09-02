@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- atoms-icons-icon: icons now inherits color also on hover.
+
 ### Added
 
 ### Removed
