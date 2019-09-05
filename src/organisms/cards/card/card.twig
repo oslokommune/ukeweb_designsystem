@@ -1,5 +1,4 @@
 {% set hasStateText = card.stateText is defined and card.stateText is not empty %}
-{% set hasSearchResult = card.searchResult is defined and card.searchResult is not empty %}
 {% set hasCardUrl = card.url is defined and card.url is not empty %}
 {% set cardVariant = card.variant | default('osg-v-default') %}
 {% set cardModifiers = card.modifiers | default(null) %}
@@ -26,11 +25,6 @@
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
       {% block content %}
         {{ cardContent }}
-        {% if hasSearchResult %}
-          <a href="{{ card.searchResultUrl }}" class="osg-card__search-result">
-            {{ card.searchResult | default(null) }}
-          </a>
-        {% endif %}
       {% endblock %}
     {% endembed %}
   {% if hasCardUrl %}

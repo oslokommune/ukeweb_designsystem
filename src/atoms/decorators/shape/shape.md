@@ -23,14 +23,19 @@ Shape can be a link as well, you just need to fill the optional attribute "url".
 
 (\*) mandatory
 
+### Modifier Options
+
+| Name              | Description              |
+| ----------------- | ------------------------ |
+| osg-shape--circle | Makes the shape circular |
+
 ### Variant Options
 
-| Name          | Description                                                                            |
-| ------------- | -------------------------------------------------------------------------------------- |
-| osg-v-default | Is used if nothing is defined. Does nothing extra.                                     |
-| osg-v-image   | Use together with figure data fields to create a shape image                           |
-| osg-v-circle  | Makes the shape circular. Can be combined with the image variant to get a circle image |
+| Name          | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| osg-v-default | Is used if nothing is defined. Does nothing extra.           |
+| osg-v-image   | Use together with figure data fields to create a shape image |
 
-## Note
+#### Note
 
-You can combine the the image and the circle variants to get a circle image.
+You can combine the the image variant the circle modifier to get a circle image.
