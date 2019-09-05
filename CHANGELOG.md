@@ -10,17 +10,26 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-- organisms-cards-card: fixed stateText so it is placed in the middle of the image
-- organisms-cards-card: fixed state modifier so all text is white while it is active
-- organisms-cards-card: removed docs for download variant, which was removed earlier
-- organisms-cards-card: fixed the animation of the content box
 
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.34.0] - 2019-08-20
+
+### Fixed
+
+- organisms-cards-card: fixed stateText so it is placed in the middle of the image
+- organisms-cards-card: fixed state modifier so all text is white while it is active
+- organisms-cards-card: removed docs for download variant, which was removed earlier
+- organisms-cards-card: fixed the animation of the content box
+
+### Changed
+
 - organisms-cards-card: removed the fields searchResult and searchResultUrl and the twig that was using them
+- atoms-decorators-shape: osg-v-circle class on shape is replaced by osg-shape--circle.
 
 ## [0.33.2] - 2019-08-20
 
