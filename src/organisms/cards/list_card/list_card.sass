@@ -10,7 +10,7 @@ $shape-size-tablet: 210px
   font-weight: 300
   +osg-mq-tablet-and-up
     flex-direction: row
-  > a
+  > a, div
     display: flex
   a
     text-decoration: none
@@ -55,6 +55,9 @@ $shape-size-tablet: 210px
     margin-top: 30px
     border-top: 1px solid $osg-color-green
     font-weight: 500
+
+  &__image-container
+    overflow: hidden
 
   &:hover
     img
