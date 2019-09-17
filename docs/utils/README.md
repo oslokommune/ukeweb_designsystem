@@ -24,7 +24,7 @@ These classes should be added to any element to set styles directly to it.
 | ---------------------------- | ---------------------------------------- |
 | .osg-u-text-is-[font weight] | Specifies a font weight for the element  |
 | .osg-u-text-is-italic        | Makes the text style italic              |
-| .osg-u-header-[typography]   | Specifies a predefined header typography |
+| .osg-u-heading-[typography]   | Specifies a predefined header typography |
 | .osg-u-text-[typography]     | Specifies a predefined text typography   |
 
 ### Spacing
