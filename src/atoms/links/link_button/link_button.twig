@@ -5,7 +5,7 @@
 {% set linkButtonUrl = linkButton.url | default('#') %}
 
 <a
-  class="osg-link-button {{ linkButtonVariant }} {{ linkButtonModifiers }} {{ linkButtonColor }}"
+  class="osg-link-button {{ linkButtonVariant }} {{ linkButtonModifiers }}"
    href="{{ linkButtonUrl }}"
   {% if linkButtonHasDataAttrs %}
     {% for dataAttr in linkButton.dataAttrs %}

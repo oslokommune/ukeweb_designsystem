@@ -8,6 +8,12 @@
       "play",
       "movie",
       "film"
+    ],
+    "modifiers": [
+      "osg-video--ratio-1x1",
+      "osg-video--ratio-4x3",
+      "osg-video--ratio-3x2",
+      "osg-video--ratio-16x9"
     ]
   },
   "video": {

@@ -1,4 +1,22 @@
 {
+  "devtools": {
+    "tags": [
+      "article",
+      "preview",
+      "square",
+      "circle",
+      "image",
+      "figure",
+      "picture",
+      "link",
+      "summary"
+    ],
+    "modifiers": [
+      "osg-shape-hero--top-right",
+      "osg-shape-hero--bottom-left",
+      "osg-shape-hero--bottom-right"
+    ]
+  },
   "shapeHero": {
     "imageShape": {
       "shape": {
