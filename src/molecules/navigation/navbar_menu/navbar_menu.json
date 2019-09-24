@@ -8,10 +8,10 @@
       "menu",
       "hamburger menu"
     ],
+    "modifiers": ["osg-navbar-menu--open"],
     "frame": {
       "min-height": "500px"
     }
   },
-  "navbarMenu": {
-  }
+  "navbarMenu": {}
 }

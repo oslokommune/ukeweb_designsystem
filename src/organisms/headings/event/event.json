@@ -8,7 +8,8 @@
       "data",
       "information",
       "happening"
-    ]
+    ],
+    "modifiers": ["osg-event--with-state"]
   },
   "event": {
     "heading": "Lorem ipsum dolor et",

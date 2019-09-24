@@ -16,11 +16,16 @@ See a html example of a opened alert on Codepen [here](https://codepen.io/osloko
 
 | Attribute           | Type   | Values                             | Default   | Description                                                                                        |
 | ------------------- | ------ | ---------------------------------- | --------- | -------------------------------------------------------------------------------------------------- |
-| \*variant           | String | [1]osg-v-default<br>[2]osg-v-open  | undefined | [1]Default variant<br>[2]When the alert is clicked and message displays in overlay                 |
-| modifiers           | String | Any global css class               | null      | Root class to modify styles                                                                        |
+| modifiers           | String | See modifiers below                | null      | Root class to modify styles                                                                        |
 | state               | String | "default", "important", "critical" | "default" | Adds icon in the right corner. Exclamation mark for "important" and animated circle for "critical" |
 | \*buttonAriaLabel   | String | Clean text content                 | undefined | ARIA-Label of the button that opens the modal                                                      |
 | \*closeButtonSrText | String | Clean text content                 | undefined | Close button text available to screen readers                                                      |
+
+### Modifier Options
+
+| Name            | Description                                       |
+| --------------- | ------------------------------------------------- |
+| osg-alert--open | Opens the alert, making the message block visible |
 
 (\*) mandatory
 

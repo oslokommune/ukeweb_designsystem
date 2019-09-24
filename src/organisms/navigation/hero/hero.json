@@ -10,6 +10,16 @@
       "picture",
       "link",
       "summary"
+    ],
+    "modifiers": [
+      "osg-hero--circle",
+      "osg-hero--left",
+      "osg-hero--left-tablet-and-up",
+      "osg-hero--right",
+      "osg-hero--right-tablet-and-up",
+      "osg-hero--top",
+      "osg-hero--top-tablet-and-up",
+      "osg-hero--center-mobile-only"
     ]
   },
   "hero": {},
