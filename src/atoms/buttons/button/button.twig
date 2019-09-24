@@ -1,6 +1,6 @@
 {% set buttonHasDataAttrs = button.dataAttrs is defined and button.dataAttrs is not empty %}
 {% set buttonVariant = button.variant | default('osg-v-default') %}
-{% set buttonModifiers = button.modifiers | default(null) %}
+{% set buttonModifiers = button.modifiers | default('osg-button--red') %}
 
 <button
   class="osg-button {{ buttonVariant }} {{ buttonModifiers }} "

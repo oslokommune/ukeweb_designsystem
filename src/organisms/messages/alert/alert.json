@@ -10,5 +10,8 @@
     "buttonAriaLabel": "Amet sit ipsum",
     "closeButtonSrText": "Lukk varsel",
     "dataAttrs": [{ "key": "id", "val": "lorem_ipsum" }]
+  },
+  "button": {
+    "modifiers": "osg-button--circle osg-button--yellow"
   }
 }

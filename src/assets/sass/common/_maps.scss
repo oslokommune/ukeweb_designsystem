@@ -25,10 +25,10 @@ $osg-colors: (
 );
 
 $osg-button-colors: (
+  ("red", $osg-color-blue-dark, $osg-color-red),
   ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),
   ("green-dark", $osg-color-green-light, $osg-color-green-dark),
   ("green-light", $osg-color-green-dark, $osg-color-green-light),
-  ("red", $osg-color-blue-dark, $osg-color-red),
   ("yellow", $osg-color-blue-dark, $osg-color-yellow)
 );
 
@@ -99,16 +99,16 @@ $osg-font-weights: (
 
 // used to generate icon classes in utils.sass
 $osg-icons: (
+  "chevron-right": "\e908",
+  "chevron-down": "\e906",
+  "chevron-left": "\e907",
+  "chevron-up": "\e909",
   "24h": "\e900",
   "backpack": "\e901",
   "bike": "\e902",
   "bus": "\e903",
   "cafe": "\e904",
   "calendar": "\e905",
-  "chevron-down": "\e906",
-  "chevron-left": "\e907",
-  "chevron-right": "\e908",
-  "chevron-up": "\e909",
   "coin-stacks": "\e90a",
   "crane": "\e90b",
   "dog": "\e90c",
