@@ -11,11 +11,17 @@ See README.md for release description.
 
 ### Fixed
 
+- atoms-icons-icon: fixed position of icon
+
 ### Added
 
 ### Removed
 
 ### Changed
+
+- atoms-buttons-button: removed color field, use modifier instead
+- atoms-links-link_button: removed color field, use modifier instead
+- organisms-messages-alert: removed open variant, use modifier instead
 
 ## [0.34.0] - 2019-08-20
 
