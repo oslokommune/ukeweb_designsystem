@@ -4,12 +4,6 @@
 {% set alertState = 'osg-alert--state-' ~ alert.state | default('default') %}
 {% set alertButtonHasDataAttrs = alert.dataAttrs is defined and alert.dataAttrs is not empty %}
 
-{% set alertCloseButtonContent %}
-   {% block closeButtonContent %}
-    <i class='osg-u-icon-x'><span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span></i>
-   {% endblock %}
-{% endset %}
-
 <div class="osg-alert {{ alertVariant }} {{ alertModifiers }} {{ alertState }}">
   <a
     role="button"
@@ -33,7 +27,7 @@
         {% if alertHasButton %}
           {% embed 'atoms/buttons/button/button.twig' %}
             {% block content %}
-              {{ alertCloseButtonContent }}
+              <i class='osg-u-icon-{{ alert.closeButtonIcon | default('x') }}'><span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span></i>
             {% endblock %}
           {% endembed %}
         {% endif %}
