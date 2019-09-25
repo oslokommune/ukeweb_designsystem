@@ -28,7 +28,8 @@
           {% embed 'atoms/buttons/button/button.twig' %}
             {% block content %}
               <i class='osg-u-icon-{{ alert.closeButtonIcon | default('x') }}'>
-              <span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span></i>
+                <span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span>
+              </i>
             {% endblock %}
           {% endembed %}
         {% endif %}
