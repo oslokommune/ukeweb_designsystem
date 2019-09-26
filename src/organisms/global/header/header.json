@@ -17,16 +17,22 @@
   },
   "header": {
     "title": {
-      "text": "Lorem ipsum dolor sit amet",
+      "text": "denne oppdaterer seg",
       "url": "#lorem",
-      "title": "Lorem ipsum dolor sit amet"
+      "title": "denne oppdaterer seg"
     },
     "parentLink": {
-      "text": "Lorem ipsum",
+      "text": "testtesttest",
       "url": "#lorem",
       "title": "Lorem ipsum"
     },
-    "navbarMenu": {
+    "buttonGroup": {
+    },
+    "searchBar": true,
+    "logo": {
+      "visible": true,
+      "url": "",
+      "text": "Oslo kommune"
     }
   }
 }

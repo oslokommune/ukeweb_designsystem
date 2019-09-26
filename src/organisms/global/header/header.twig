@@ -1,3 +1,4 @@
+{# Gamle ifs #}
 {% set hasTitleText = header.title.text is defined and header.title.text is not empty %}
 {% set hasTitleTitle = header.title.title is defined and header.title.title is not empty %}
 {% set hasTitleUrl = header.title.url is defined and header.title.url is not empty %}
@@ -6,8 +7,14 @@
 {% set headerVariant = header.variant | default('osg-v-default') %}
 {% set headerModifiers = header.modifiers | default(null) %}
 
+{# Nye #}
+{% set hasHeaderLogo = header.logo is defined and header.logo.visible == true %}
+{% set hasHeaderSearchbar = header.searchBar is defined and header.searchBar == true %}
+{% set hasHeaderButtonGroup = header.buttonGroup is defined and header.buttonGroup is not empty %}
+
+{# Twigfilen #}
 <header class="osg-header {{ headerVariant }} {{ headerModifiers }}">
-  {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
+  {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' %}
   <div class="osg-header__title">
     {% if hasTitleText and hasTitleTitle and hasTitleUrl %}
     <h1>
