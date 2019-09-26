@@ -1,0 +1,32 @@
+{
+  "devtools": {
+    "tags": [
+      "top",
+      "global",
+      "navigation",
+      "pages",
+      "links",
+      "menu",
+      "hamburger menu",
+      "go up",
+      "overview"
+    ],
+    "frame": {
+      "min-height": "500px"
+    }
+  },
+  "header": {
+    "title": {
+      "text": "Lorem ipsum dolor sit amet",
+      "url": "#lorem",
+      "title": "Lorem ipsum dolor sit amet"
+    },
+    "parentLink": {
+      "text": "Lorem ipsum",
+      "url": "#lorem",
+      "title": "Lorem ipsum"
+    },
+    "navbarMenu": {
+    }
+  }
+}
