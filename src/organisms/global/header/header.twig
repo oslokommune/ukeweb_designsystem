@@ -24,7 +24,7 @@
 
   {% if hasHeaderNavbarMenu %}
     <div class="osg-header__navbar-right">
-      {% include 'molecules/navigation/navbar_menu_services/navbar_menu_services.twig' %}
+      {% include 'molecules/navigation/navbar_menu_services/navbar_menu_services.twig' with { button: searchBarButton, textField: searchBarTextField } %}
 
       {% embed 'atoms/links/link_button/link_button.twig' %}
         {% block content %}

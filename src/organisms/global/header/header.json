@@ -16,19 +16,12 @@
     }
   },
 
-  "textField": {
-    "name": "textfield",
-    "placeholder": "Lorem ipsum dolor sit amet.",
-    "id": "searchbar",
-    "modifiers": "osg-text-field--outline osg-text-field--yellow"
-  },
-
   "header": {
     "hasLogo": true,
     "searchBar": true
   },
 
-  "button": {
+  "searchBarButton": {
     "modifiers": "osg-button--yellow osg-button--circle",
     "dataAttrs": [
       {
@@ -36,6 +29,13 @@
         "val": "Search"
       }
     ]
+  },
+
+  "searchBarTextField": {
+    "name": "textfield",
+    "placeholder": "Lorem ipsum dolor sit amet.",
+    "id": "searchbar",
+    "modifiers": "osg-text-field--outline osg-text-field--yellow"
   },
 
   "navbarMenuServices": {
