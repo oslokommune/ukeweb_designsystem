@@ -5,58 +5,62 @@ $osg-margin-left-right-desktop: 75px
 $osg-margin-top-bottom-desktop: 25px
 
 .osg-header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
   color: black
   padding-bottom: 20px
-  align-items: center
-  display: flex
   padding: $osg-margin-top-bottom-mobile 0 $osg-margin-top-bottom-mobile 0
-  width: 100%
   box-shadow: 0px 2px 2px -2px rgba(220,220,220,1)
   +osg-mq-tablet-and-up
     padding: $osg-margin-top-bottom-desktop 0 $osg-margin-top-bottom-desktop 0
   a
     color: black
-    &:hover
-      text-decoration: underline
-  .osg-navbar-menu
-    position: fixed
-    right: 15px
-    bottom: 30px
-    +osg-mq-tablet-and-up
-      flex-shrink: 0
-      align-self: flex-start
-      position: static
+  
+  a:hover
+    text-decoration: none
+    cursor: pointer
+  
+  &__navbar-left
+    display: flex
+    flex: 1
+  
+  &__navbar-right
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: flex-end
+  
+  &__login
+    display: flex
+    align-items: center
 
-  &__title
-    flex-grow: 1
-    margin-left: 0
-    +osg-mq-tablet-and-up
-      margin-left: 20px
-    h1
-      @extend .osg-u-text-4
-    a
-      text-decoration: none
-      hyphens: none
-      word-break: break-word
-      &:hover
-        text-decoration: underline
+  &__login-title
+    padding-right: 10px
 
-  &__link
-    @extend .osg-u-text-3
-    flex-grow: 0
-    min-width: 150px
-    text-align: right
-    a
-      text-decoration: none
-      display: flex
-      align-items: flex-end
-      justify-content: flex-end
-      &:hover span
-        text-decoration: underline
-    i
-      color: $osg-color-green-dark
-      margin-left: 10px
-      margin-bottom: 2px
-      +osg-mq-tablet-and-up
-        margin-left: 20px
-        margin-bottom: 3px
+.osg-searchbar
+  align-items: center
+  +osg-mq-tablet-and-up
+    margin-left: 60px
+    
+  .osg-button
+    height: 52px
+    width: 52px
+    min-width: unset
+    min-height: unset
+    padding: 5px
+
+.osg-navbar-menu-services
+  +osg-mq-tablet-and-up
+    padding-right: 15px
+
+.osg-link-button 
+  display: flex
+  align-self: stretch
+
+  +osg-mq-tablet-and-up
+    margin-right: 40px
+
+.osg-text-field__input
+  height: 50px

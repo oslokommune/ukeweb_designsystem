@@ -1,35 +1,44 @@
 {# Gamle ifs #}
-{% set hasTitleText = header.title.text is defined and header.title.text is not empty %}
-{% set hasTitleTitle = header.title.title is defined and header.title.title is not empty %}
-{% set hasTitleUrl = header.title.url is defined and header.title.url is not empty %}
-{% set hasParentLinkText = header.parentLink.text is defined and header.parentLink.text is not empty %}
-{% set hasParentLinkTitle = header.parentLink.title is defined and header.parentLink.title is not empty %}
 {% set headerVariant = header.variant | default('osg-v-default') %}
 {% set headerModifiers = header.modifiers | default(null) %}
 
 {# Nye #}
-{% set hasHeaderLogo = header.logo is defined and header.logo.visible == true %}
+{% set hasHeaderLogo = header.hasLogo is defined and header.hasLogo == true %}
 {% set hasHeaderSearchbar = header.searchBar is defined and header.searchBar == true %}
-{% set hasHeaderButtonGroup = header.buttonGroup is defined and header.buttonGroup is not empty %}
+{% set hasHeaderNavbarMenu = navbarMenuServices.menuButton is defined and navbarMenuServices is not empty %}
+{% set iconModifiers = icon.modifiers | default('osg-u-icon-user') %}
+{% set searchBarModifiers = searchBar.modifiers | default(null) %}
+{% set headerLogo = header.logo | default('/assets/images/oslo_logo.svg') %}
 
 {# Twigfilen #}
 <header class="osg-header {{ headerVariant }} {{ headerModifiers }}">
-  {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' %}
-  <div class="osg-header__title">
-    {% if hasTitleText and hasTitleTitle and hasTitleUrl %}
-    <h1>
-      <a href="{{ header.title.url }}" {% if header.title.title is defined %} title="{{ header.title.title }}" {% endif %}>
-      {{ header.title.text }}
-      </a>
-    </h1>
+  <div class="osg-header__navbar-left">
+    {% if hasHeaderLogo %}
+      <img src={{ headerLogo }} alt="Oslo Logo" />
+    {% endif %}
+    
+    {% if hasHeaderSearchbar %}
+      {% include 'molecules/search/search_bar/search_bar.twig' %}
     {% endif %}
   </div>
-  {% if hasParentLinkText %}
-  <div class="osg-header__link">
-    <a href="{{ header.parentLink.url }}" {% if hasParentLinkTitle %} title="{{ header.parentLink.title }}" {% endif %}>
-      <span>{{ header.parentLink.text|default(null) }}</span>
-      <i class="osg-u-icon-chevron-right"></i>
-    </a>
-  </div>
+
+  {% if hasHeaderNavbarMenu %}
+    <div class="osg-header__navbar-right">
+      {% include 'molecules/navigation/navbar_menu_services/navbar_menu_services.twig' %}
+
+      {% embed 'atoms/links/link_button/link_button.twig' %}
+        {% block content %}
+          <span class="osg-u-text-4">{{ linkButton.title }}</span>
+        {% endblock %}
+      {% endembed %}
+
+      <a class="osg-header__login">
+        <span class="osg-u-text-4 osg-header__login-title">
+          {{ myPage.title }}
+        </span>
+        {% include 'atoms/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
+      </a>
+    </div>
   {% endif %}
+
 </header>
