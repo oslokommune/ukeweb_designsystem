@@ -35,7 +35,7 @@ $osg-hamburger-mobile-line-gap: 10px
         height: 40px
         overflow: hidden
         width: 40px
-        +osg-mq-tablet-and-up
+        +osg-mq-desktop-and-up
           height: 30px
           margin-left: 15px
           width: 30px
@@ -47,22 +47,22 @@ $osg-hamburger-mobile-line-gap: 10px
           position: relative
           transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
           width: 40px
-          +osg-mq-tablet-and-up
+          +osg-mq-desktop-and-up
             width: 30px
 
           &:nth-child(1)
             top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, -$osg-hamburger-mobile-line-gap)
-            +osg-mq-tablet-and-up
+            +osg-mq-desktop-and-up
               top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, -$osg-hamburger-line-gap)
 
           &:nth-child(2)
             top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, 0)
-            +osg-mq-tablet-and-up
+            +osg-mq-desktop-and-up
               top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, 0)
 
           &:nth-child(3)
             top: calculate-hamburger-line-position($osg-hamburger-mobile-height, $osg-hamburger-mobile-line-height, $osg-hamburger-mobile-line-gap)
-            +osg-mq-tablet-and-up
+            +osg-mq-desktop-and-up
               top: calculate-hamburger-line-position($osg-hamburger-height, $osg-hamburger-line-height, $osg-hamburger-line-gap)
 
     .osg-other-links
