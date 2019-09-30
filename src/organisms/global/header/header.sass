@@ -25,45 +25,75 @@ $osg-margin-top-bottom-desktop: 25px
   &__navbar-left
     display: flex
     flex: 1
+    justify-content: space-between
+    +osg-mq-desktop-and-up
+      justify-content: none
   
   &__navbar-right
     display: flex
-    flex: 1
+    flex: 0
     align-items: center
     justify-content: flex-end
+    +osg-mq-desktop-and-up
+      flex: 1
   
   &__login
-    display: flex
-    align-items: center
+    display: none
+    +osg-mq-desktop-and-up
+      display: flex
+      align-items: center  
 
   &__login-title
     padding-right: 10px
 
 .osg-searchbar
   align-items: center
-  +osg-mq-tablet-and-up
+  padding-right: 10px
+  +osg-mq-desktop-and-up
     margin-left: 60px
-    
+    padding-right: 0
+
   .osg-button
-    height: 52px
-    width: 52px
+    height: 46px
+    width: 46px
     min-width: unset
     min-height: unset
     padding: 5px
+    +osg-mq-desktop-and-up
+      height: 52px
+      width: 52px
 
 .osg-navbar-menu-services
   +osg-mq-tablet-and-up
     padding-right: 15px
 
-.osg-link-button 
-  display: flex
-  align-self: stretch
+.osg-navbar-menu-services nav .osg-hamburger-button
+  border: 0
+  +osg-mq-desktop-and-up
+    border: 2px solid    
 
-  +osg-mq-tablet-and-up
+.osg-link-button 
+  display: none
+  +osg-mq-desktop-and-up
+    display: flex
+    align-self: stretch
     margin-right: 40px
 
 .osg-text-field__input
-  height: 50px
+  display: none
+  +osg-mq-desktop-and-up
+    display: flex
+    height: 50px
 
 .osg-icon:hover
   color: $osg-color-blue-dark
+
+.osg-hamburger-button__text
+  display: none
+  +osg-mq-desktop-and-up
+    display: initial
+
+.osg-navbar-menu-services nav .osg-hamburger-button__icon
+  margin-left: 0
+  +osg-mq-desktop-and-up
+    margin-left: 15px

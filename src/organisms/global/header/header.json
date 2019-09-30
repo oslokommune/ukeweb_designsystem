@@ -40,8 +40,8 @@
 
   "navbarMenuServices": {
     "menuButton": {
-      "text": "Menu",
-      "textClose": "Close menu",
+      "text": "Meny",
+      "textClose": "Meny",
       "color": "blue-dark",
       "modifiers": "osg-hamburger-button osg-button--outline",
       "dataAttrs": [
