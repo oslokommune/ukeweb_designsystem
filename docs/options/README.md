@@ -1,6 +1,6 @@
 # Options
 
-_The setting options are valid as of the current version of the devtools at the time of writing, 7th of October 2019._
+_The setting options are valid as of the current version of the "Styleguide Devtools" at the time of writing, 7th of October 2019._
 
 ## Configuring
 
