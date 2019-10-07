@@ -1,5 +1,9 @@
 # Options
 
+_The options are valid as of the current version version of the devtools at the time of writing, 7th of October 2019._
+
+## Configuring
+
 You can control things like min-height of the patterns frame and which parts of the devtools gui you want to show by editing settings in the json file of your pattern.
 
 The settings are put inside of a json object named "devtools".
@@ -36,7 +40,7 @@ The settings are put inside of a json object named "devtools".
 | settings.viewSize.tablet                | Boolean | false   | Set the width of the patterns view to the width of the tablet break point   |
 | settings.viewSize.mobile                | Boolean | false   | Set the width of the patterns view to the width of the mobile break point   |
 
-### Presets
+## Presets
 
 Set GUI option presets in devtools.preset in the json file of your pattern.
 
