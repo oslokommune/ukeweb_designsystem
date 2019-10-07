@@ -1,0 +1,13 @@
+<a href="{{ campaign.link.url }}" title="{{ campaign.link.text }}" class="osg-campaign">
+  <div class="osg-campaign__image">
+    {% include 'atoms/decorators/figure/figure.twig' %}
+  </div>
+  <div class="osg-campaign__text">
+    <h3 class="osg-u-heading-3 osg-campaign__heading">
+      {{ campaign.heading }}
+    </h3>
+    <p class="osg-u-text-4 osg-campaign__ingress">
+      {{ campaign.ingress }}
+    </p>
+  </div>
+</a>

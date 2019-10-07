@@ -1,0 +1,46 @@
+{
+  "devtools": {
+    "tags": [
+      "article",
+      "preview",
+      "image",
+      "figure",
+      "picture",
+      "link",
+      "summary"
+    ],
+    "modifiers": ["osg-campaign--image-right"]
+  },
+  "campaign": {
+    "link": {
+      "text": "lorem ipsum dolor",
+      "url": "#"
+    },
+    "heading": "60 år eller eldre?",
+    "ingress": "Få hjelp til å velge riktig tilbud"
+  },
+  "figure": {
+    "img": {
+      "alt": "Lorem ipsum",
+      "defaultUrl": "https://picsum.photos/1400/800/?random",
+      "mediaQueryUrls": [
+        {
+          "query": "max-width: 768px",
+          "url": "https://picsum.photos/800/600/?random"
+        },
+        {
+          "query": "min-width: 769px",
+          "url": "https://picsum.photos/1100/900/?random"
+        },
+        {
+          "query": "min-width: 1088px",
+          "url": "https://picsum.photos/1400/800/?random"
+        },
+        {
+          "query": "min-width: 1344px",
+          "url": "https://picsum.photos/1600/900/?random"
+        }
+      ]
+    }
+  }
+}
