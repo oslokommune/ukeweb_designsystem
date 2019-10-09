@@ -5,7 +5,7 @@
 
 <div class="osg-text-field {{ textFieldVariant }} {{ textFieldstate }} {{ textFieldModifiers }}">
   <input
-    class="osg-text-field__input"
+    class="osg-text-field__input osg-u-text-5"
     id="{{ textField.id }}"
     name="{{ textField.name }}"
     type="text"
@@ -16,7 +16,7 @@
     {% endif %}
     autocomplete="{{ textFieldAutocomplete }}"/>
   {% if textFieldVariant == 'osg-v-floating-label' %}
-    <label class="osg-text-field__label" for="{{ textField.id }}">
+    <label class="osg-text-field__label osg-u-text-5" for="{{ textField.id }}">
       {{ textField.placeholder }}
     </label>
   {% endif %}
