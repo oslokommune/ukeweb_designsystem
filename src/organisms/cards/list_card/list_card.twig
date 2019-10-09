@@ -10,14 +10,18 @@
   <a href="{{ listCard.url }}">
     {% include 'atoms/decorators/shape/shape.twig' %}
     {% if hasStateText %}
-      <div class="osg-list-card__state-text">{{ listCard.stateText }}</div>
+      <div class="osg-list-card__state-text osg-u-heading-3">
+        {{ listCard.stateText }}
+      </div>
     {% endif %}
   </a>
   {% embed 'molecules/content_display/content_box/content_box.twig' %}
     {% block content %}
       {{ listCardContent }}
       {% if hasSearchResult %}
-        <a href="{{ listCard.url }}" class="osg-list-card__search-result">
+        <a
+          href="{{ listCard.url }}"
+          class="osg-list-card__search-result">
           {{ listCard.searchResult | default(null) }}
         </a>
       {% endif %}
