@@ -2,15 +2,14 @@
 
 This pattern is primarily used for content search
 
-### Blocks
-
-This pattern has one block named "buttonContent". Content passed to the "buttonContent" block will render inside the round button, and override the default button content which is a magnifying glass icon.
-
 ### Data Fields
 
-| Attribute | Type   | Values                     | Default | Description          |
-| --------- | ------ | -------------------------- | ------- | -------------------- |
-| modifiers | String | See modifier options below | null    | Name of the modifier |
+| Attribute  | Type   | Values                     | Default                  | Description                          |
+| ---------- | ------ | -------------------------- | ------------------------ | ------------------------------------ |
+| modifiers  | String | See modifier options below | null                     | Name of the modifier                 |
+| buttonIcon | String | Any valid icon name        | 'magnifying-glass-small' | Name of icon to render inside button |
+
+See the [util docs](/#/pattern/globals-iconography-icons) to get all valid icon names.
 
 Check the included text pattern docs for more data field descriptions.
 

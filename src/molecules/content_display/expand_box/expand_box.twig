@@ -5,12 +5,6 @@
    {% block content %}{% endblock %}
 {% endset %}
 
-{% set expandBoxButtonContent %}
-   {% block buttonContent %}
-    <i class='osg-u-icon-chevron-down'></i>
-   {% endblock %}
-{% endset %}
-
 <div class="osg-expand-box {{ expandBoxVariant }} {{ expandBoxModifiers }}">
   <div class="osg-expand-box__title-line">
     <div class="osg-expand-box__title-line-text">
@@ -19,7 +13,7 @@
     </div>
     {% embed 'atoms/buttons/button/button.twig' %}
       {% block content %}
-        {{ expandBoxButtonContent }}
+        <i class='osg-u-icon-{{ expandBox.buttonIcon | default('chevron-down') }}'></i>
       {% endblock %}
     {% endembed %}
   </div>
