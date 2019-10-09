@@ -173,12 +173,11 @@ The typography classes also specifies values for letter-spacing and line-height.
 
 | Name | Mobile            | Tablet (and up)    | Desktop (and up)  |
 | ---- | ----------------- | ------------------ | ----------------- |
-| 1    | 1.75 rem / 28 px  | 2.5 rem / 40 px    | 3.75 rem / 60 px  |
+| 1    | 1.75 rem / 28 px  | 2.5 rem / 40 px    | 3.375rem / 54 px  |
 | 2    | 1.5 rem / 24 px   | 1.875 rem / 30 px  | 2.25 rem / 36 px  |
-| 3    | 1.375 rem / 22 px | 1.625 rem / 26 px  | 1.75 rem / 28 px  |
-| 4    | 1.25 rem / 20 px  | 1.375 rem / 22 px  | 1.5 rem / 24 px   |
-| 5    | 1.125 rem / 18 px | 1.25 rem / 20 px   | 1.25 rem / 20 px  |
-| 6    | 1 rem / 16 px     | 1.0625 rem / 17 px | 1.125 rem / 18 px |
+| 3    | 1.375 rem / 22 px | 1.625 rem / 26 px  | 1.875 rem / 30 px |
+| 4    | 1.125 rem / 18 px | 1.375 rem / 22 px  | 1.5 rem / 24 px   |
+| 5    | 1 rem / 16 px     | 1 rem / 16 px      | 1.125 rem / 18 px |
 
 #### Text Typographies
 

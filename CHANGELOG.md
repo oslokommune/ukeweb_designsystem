@@ -18,13 +18,13 @@ See README.md for release description.
 ### Removed
 
 ### Changed
-
 - atoms-buttons-button: removed color field, use modifier instead
 - atoms-links-link_button: removed color field, use modifier instead
 - molecules-content_display-expand_box: removed the block "buttonContent", use field "buttonIcon" instead
 - molecules-search-search_bar: removed the block "buttonContent", use field "buttonIcon" instead
 - organisms-messages-alert: removed open variant, use modifier instead
 - organisms-messages-alert: removed the block "closeButtonContent", use the field "closeButtonIcon" instead
+- updated font sizes for headings
 
 ## [0.34.0] - 2019-08-20
 
