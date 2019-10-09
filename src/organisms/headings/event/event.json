@@ -26,7 +26,7 @@
     "icons": {
       "entries": [
         {
-          "modifiers": "osg-u-icon-calendar",
+          "modifiers": "osg-u-icon-calendar osg-u-text-4",
           "srText": "Calendar",
           "text": "Praesent 22. sed",
           "subtext": "kl.17:22",
@@ -34,7 +34,7 @@
           "link": "#"
         },
         {
-          "modifiers": "osg-u-icon-location-pin",
+          "modifiers": "osg-u-icon-location-pin osg-u-text-4",
           "srText": "Location",
           "text": "Fringilla Mattis Tortor",
           "linkText": "Aliquam erat volutpat",
