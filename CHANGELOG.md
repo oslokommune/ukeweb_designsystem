@@ -9,6 +9,8 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
+_Twig consumers: the changes conserning replacing text css for markup is not breaking changes for twig consumers_
+
 ### Fixed
 
 - atoms-icons-icon: fixed position of icon
@@ -17,12 +19,28 @@ See README.md for release description.
 
 ### Removed
 
+- atoms-social-icon: deleted this pattern due the use of an old icon practise
+- molecules-social-icon_list: deleted this pattern due the use of an old icon practise
+
 ### Changed
 
+- atoms-forms-text_field: replaced text styles in the css for util classes in the markup
+- atoms-decorators-figure: replaced text styles in the css for util classes in the markup
 - atoms-buttons-button: removed color field, use modifier instead
 - atoms-links-link_button: removed color field, use modifier instead
+- molecules-navigation-breadcrumbs: replaced text styles in the css for util classes in the markup
+- molecules-data_display-info_list: replaced text styles in the css for util classes in the markup
+- molecules-data_display-icon_link: replaced text styles in the css for util classes in the markup
+- molecules-navigation-navbar_menu_services: replaced text styles in the css for util classes in the markup
 - molecules-content_display-expand_box: removed the block "buttonContent", use field "buttonIcon" instead
 - molecules-search-search_bar: removed the block "buttonContent", use field "buttonIcon" instead
+- organisms-cards-card: replaced text styles in the css for util classes in the markup
+- organisms-cards-list_card: replaced text styles in the css for util classes in the markup
+- organisms-global-header: replaced text styles in the css for util classes in the markup
+- organisms-headings-countdown: replaced text styles in the css for util classes in the markup
+- organisms-headings-event: replaced text styles in the css for util classes in the markup
+- organisms-media-video: replaced text styles in the css for util classes in the markup
+- organisms-messages-alert: replaced text styles in the css for util classes in the markup
 - organisms-messages-alert: removed open variant, use modifier instead
 - organisms-messages-alert: removed the block "closeButtonContent", use the field "closeButtonIcon" instead
 
