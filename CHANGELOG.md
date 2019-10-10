@@ -18,7 +18,9 @@ See README.md for release description.
 ### Removed
 
 ### Changed
-
+- global: updated font sizes for headings
+- global: updated font-size for global text paragraphs
+- global: updated font-sizes for text typographies (osg-u-text-#)
 - atoms-buttons-button: removed color field, use modifier instead
 - atoms-links-link_button: removed color field, use modifier instead
 - molecules-content_display-expand_box: removed the block "buttonContent", use field "buttonIcon" instead
