@@ -17,13 +17,11 @@ body, html
   color: $osg-color-blue-dark
 
 p
-  font-size: $osg-font-size-20
+  font-size: $osg-font-size-16
   line-height: 1.5em
   font-weight: 300
   +osg-mq-tablet-and-up
-    font-size: $osg-font-size-22
-  +osg-mq-desktop-and-up
-    font-size: $osg-font-size-24
+    font-size: $osg-font-size-18
 
 a
   text-decoration: none
@@ -52,7 +50,7 @@ h1, h2, h3, h4, h5
   blockquote
     +osg-common-blockquote
   p
-    @extend .osg-u-text-3
+    @extend .osg-u-text-5
   h1, h2, h3, h4, h5
     margin-bottom: 0.4em
     hyphens: auto
@@ -67,7 +65,7 @@ h1, h2, h3, h4, h5
   h5
     @extend .osg-u-heading-5
   ul li, ol li
-    @extend .osg-u-text-3
+    @extend .osg-u-text-5
   strong
     font-weight: 500
 

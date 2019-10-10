@@ -24,6 +24,9 @@ _Twig consumers: the changes conserning replacing text css for markup is not bre
 
 ### Changed
 
+- global: updated font sizes for headings
+- global: updated font-size for global text paragraphs
+- global: updated font-sizes for text typographies (osg-u-text-#)
 - atoms-forms-text_field: replaced text styles in the css for util classes in the markup
 - atoms-decorators-figure: replaced text styles in the css for util classes in the markup
 - atoms-buttons-button: removed color field, use modifier instead
