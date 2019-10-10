@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.1] - 2019-10-10
+
+### Fixed
+
+- global: Fixed size for osg-u-heading-1
+
 ## [0.35.0] - 2019-10-10
 
 _Twig consumers: the changes conserning replacing text css for markup is not breaking changes for twig consumers_
