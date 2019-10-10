@@ -21,7 +21,6 @@
   flex-grow: 1
   position: relative
   &__input
-    @extend .osg-u-text-5
     background-color: $osg-color-grey-light
     outline: none
     border: none
@@ -48,7 +47,6 @@
       position: absolute
       pointer-events: none
       transition: .2s ease-out
-      @extend .osg-u-text-5
       left: 13px
       // Positions the label in the middle of the textfield
       top: 16px
@@ -58,7 +56,6 @@
       opacity: 1
     &__input:focus + .osg-text-field__label,
     &__input:not(:focus):valid + .osg-text-field__label
-      @extend .osg-u-text-5
       // Positions the label above the textfield when the textfield is focused
       top: -21px
       +osg-mq-desktop-and-up
@@ -68,7 +65,6 @@
       left: 18px
       top: 30px
     &__input
-      @extend .osg-u-text-4
       padding: 15px
       height: 83px
   &--big.osg-v-floating-label &

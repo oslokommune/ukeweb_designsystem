@@ -4,7 +4,11 @@
     "frame": {
       "min-height": "500px"
     },
-    "modifiers": ["osg-alert--open"]
+    "modifiers": [
+      "osg-alert--open",
+      "osg-alert--state-important",
+      "osg-alert--state-critical"
+    ]
   },
   "alert": {
     "buttonAriaLabel": "Amet sit ipsum",

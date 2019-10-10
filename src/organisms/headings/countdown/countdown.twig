@@ -1,23 +1,41 @@
 {% set countdownModifiers = countdown.modifiers | default(null) %}
 
 <div class="osg-countdown {{ countdownModifiers }}">
-  <h2>{{ countdown.text }}</h2>
-  <div class="osg-countdown__timing">
+  <h2 class="osg-u-heading-2 osg-u-padding-bottom-4">
+    {{ countdown.text }}
+  </h2>
+  <div class="osg-countdown__timing osg-u-padding-bottom-4">
     <div class="osg-countdown__days">
-      <span>{{ countdown.numberOfDays }}</span>
-      <span>{{ countdown.daysLabel }}</span>
+      <span class="osg-u-heading-2 osg-u-padding-bottom-2-tablet-and-up">
+        {{ countdown.numberOfDays }}
+      </span>
+      <span class="osg-u-text-3">
+        {{ countdown.daysLabel }}
+      </span>
     </div>
     <div class="osg-countdown__hours">
-      <span>{{ countdown.numberOfHours }}</span>
-      <span>{{ countdown.hoursLabel }}</span>
+      <span class="osg-u-heading-2 osg-u-padding-bottom-2-tablet-and-up">
+        {{ countdown.numberOfHours }}
+      </span>
+      <span class="osg-u-text-3">
+        {{ countdown.hoursLabel }}
+      </span>
     </div>
     <div class="osg-countdown__minutes">
-      <span>{{ countdown.numberOfMinutes }}</span>
-      <span>{{ countdown.minutesLabel }}</span>
+      <span class="osg-u-heading-2 osg-u-padding-bottom-2-tablet-and-up">
+        {{ countdown.numberOfMinutes }}
+      </span>
+      <span class="osg-u-text-3">
+        {{ countdown.minutesLabel }}
+      </span>
     </div>
     <div class="osg-countdown__seconds">
-      <span>{{ countdown.numberOfSeconds }}</span>
-      <span>{{ countdown.secondsLabel }}</span>
+      <span class="osg-u-heading-2 osg-u-padding-bottom-2-tablet-and-up">
+        {{ countdown.numberOfSeconds }}
+      </span>
+      <span class="osg-u-text-3">
+        {{ countdown.secondsLabel }}
+      </span>
     </div>
   </div>
 </div>
