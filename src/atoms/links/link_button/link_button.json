@@ -1,6 +1,14 @@
 {
   "devtools": {
-    "tags": ["Call to action", "functionality", "link", "click"]
+    "tags": ["Call to action", "functionality", "link", "click"],
+    "modifiers": [
+      "osg-link-button--circle",
+      "osg-link-button--outline",
+      "osg-link-button--blue-dark",
+      "osg-link-button--green-dark",
+      "osg-link-button--green-light",
+      "osg-link-button--yellow"
+    ]
   },
   "linkButton": {
     "dataAttrs": [

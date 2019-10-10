@@ -1,11 +1,9 @@
 {
   "devtools": {
-    "tags": [
-      "navigation",
-      "pages",
-      "links",
-      "menu",
-      "hamburger menu"
+    "tags": ["navigation", "pages", "links", "menu", "hamburger menu"],
+    "modifiers": [
+      "osg-navbar-menu-services--expanded",
+      "osg-navbar-menu-services--overlay"
     ]
   },
   "navbarMenuServices": {

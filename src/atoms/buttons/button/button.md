@@ -16,7 +16,6 @@ Here you can see the different uses of the variants and modifiers with buttons: 
 | --------- | ------ | ---------------------------------------- | --------------- | ------------------------------------------------------------------ |
 | \*variant | String | See the "variant options" section below  | "osg-v-default" | Name of the variant                                                |
 | modifiers | String | See the "modifier options" section below | null            | Root class to modify styles                                        |
-| color     | String | See the color options section            | "red"           | Sets state colors for text and background using global css classes |
 | dataAttrs | Object | key and val                              | null            | See example in data tab                                            |
 
 (\*) mandatory

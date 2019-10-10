@@ -1,4 +1,20 @@
 .osg-button
+  color: $osg-color-blue-dark
+  background: $osg-color-red
+  border: 2px solid $osg-color-red
+  &:visited
+    color: $osg-color-blue-dark
+    background: $osg-color-red
+    border: 2px solid $osg-color-red
+  &:focus, &:hover
+    color: white
+    background: $osg-color-blue-hover
+    border-color: $osg-color-blue-hover
+    text-decoration: none
+  &.osg-button--outline.osg-button--active
+    &, &:focus, &:hover, &:visited
+      color: $osg-color-blue-dark
+      background-color: $osg-color-red
   +osg-common-button
   font-size: inherit
   line-height: inherit
