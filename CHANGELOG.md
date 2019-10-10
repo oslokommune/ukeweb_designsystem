@@ -25,7 +25,8 @@ See README.md for release description.
 - organisms-messages-alert: removed open variant, use modifier instead
 - organisms-messages-alert: removed the block "closeButtonContent", use the field "closeButtonIcon" instead
 - updated font sizes for headings
-- updated font-size for text paragraphs
+- updated font-size for global text paragraphs
+- updated font-sizes for text typographies (osg-u-text-#)
 
 ## [0.34.0] - 2019-08-20
 
