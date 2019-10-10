@@ -1,6 +1,7 @@
 {
   "devtools": {
-    "tags": ["search", "input", "searchbar"]
+    "tags": ["search", "input", "searchbar"],
+    "modifiers": ["osg-searchbar--hide-field"]
   },
   "search_bar": {},
   "textField": {
@@ -9,7 +10,7 @@
     "id": "searchbar"
   },
   "button": {
-    "modifiers": "osg-button--circle",
+    "modifiers": "osg-button--red osg-button--circle",
     "dataAttrs": [{ "key": "aria-label", "val": "Search" }]
   }
 }

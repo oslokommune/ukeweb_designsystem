@@ -3,11 +3,19 @@
     "tags": ["message", "messages", "important", "information"],
     "frame": {
       "min-height": "500px"
-    }
+    },
+    "modifiers": [
+      "osg-alert--open",
+      "osg-alert--state-important",
+      "osg-alert--state-critical"
+    ]
   },
   "alert": {
     "buttonAriaLabel": "Amet sit ipsum",
     "closeButtonSrText": "Lukk varsel",
     "dataAttrs": [{ "key": "id", "val": "lorem_ipsum" }]
+  },
+  "button": {
+    "modifiers": "osg-button--circle osg-button--yellow"
   }
 }

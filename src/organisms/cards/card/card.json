@@ -9,7 +9,8 @@
       "text",
       "summary",
       "event"
-    ]
+    ],
+    "modifiers": ["osg-card--animate", "osg-card--with-state"]
   },
   "card": {
     "url": "#lorem"

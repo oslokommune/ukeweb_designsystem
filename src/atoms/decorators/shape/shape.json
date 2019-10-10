@@ -1,6 +1,7 @@
 {
   "devtools": {
-    "tags": ["square", "circle", "tag", "image", "helper"]
+    "tags": ["square", "circle", "tag", "image", "helper"],
+    "modifiers": ["osg-shape--circle"]
   },
   "shape": {
     "url": "#lorem"

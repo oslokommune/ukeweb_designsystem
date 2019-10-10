@@ -17,6 +17,49 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.0] - 2019-10-10
+
+_Twig consumers: the changes conserning replacing text css for markup is not breaking changes for twig consumers_
+
+### Fixed
+
+- atoms-icons-icon: icons now inherits color also on hover.
+- atoms-icons-icon: fixed position of icon
+- organisms-cards-card: fixed stateText so it is placed in the middle of the image
+- organisms-cards-card: fixed state modifier so all text is white while it is active
+- organisms-cards-card: removed docs for download variant, which was removed earlier
+- organisms-cards-card: fixed the animation of the content box
+
+### Removed
+
+- atoms-social-icon: deleted this pattern due the use of an old icon practise
+- molecules-social-icon_list: deleted this pattern due the use of an old icon practise
+
+### Changed
+
+- global: updated font sizes for headings
+- global: updated font-size for global text paragraphs
+- global: updated font-sizes for text typographies (osg-u-text-#)
+- atoms-forms-text_field: replaced text styles in the css for util classes in the markup
+- atoms-decorators-figure: replaced text styles in the css for util classes in the markup
+- atoms-buttons-button: removed color field, use modifier instead
+- atoms-links-link_button: removed color field, use modifier instead
+- molecules-navigation-breadcrumbs: replaced text styles in the css for util classes in the markup
+- molecules-data_display-info_list: replaced text styles in the css for util classes in the markup
+- molecules-data_display-icon_link: replaced text styles in the css for util classes in the markup
+- molecules-navigation-navbar_menu_services: replaced text styles in the css for util classes in the markup
+- molecules-content_display-expand_box: removed the block "buttonContent", use field "buttonIcon" instead
+- molecules-search-search_bar: removed the block "buttonContent", use field "buttonIcon" instead
+- organisms-cards-card: replaced text styles in the css for util classes in the markup
+- organisms-cards-list_card: replaced text styles in the css for util classes in the markup
+- organisms-global-header: replaced text styles in the css for util classes in the markup
+- organisms-headings-countdown: replaced text styles in the css for util classes in the markup
+- organisms-headings-event: replaced text styles in the css for util classes in the markup
+- organisms-media-video: replaced text styles in the css for util classes in the markup
+- organisms-messages-alert: replaced text styles in the css for util classes in the markup
+- organisms-messages-alert: removed open variant, use modifier instead
+- organisms-messages-alert: removed the block "closeButtonContent", use the field "closeButtonIcon" instead
+
 ## [0.34.0] - 2019-08-20
 
 ### Fixed

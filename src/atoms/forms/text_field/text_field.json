@@ -1,6 +1,7 @@
 {
   "devtools": {
-    "tags": ["form", "name", "field"]
+    "tags": ["form", "name", "field"],
+    "modifiers": ["osg-text-field--big", "osg-text-field--outline"]
   },
   "textField": {
     "id": "vestibulum1",
