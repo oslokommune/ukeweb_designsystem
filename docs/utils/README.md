@@ -191,7 +191,7 @@ The typography classes also specifies values for letter-spacing and line-height.
 | 6    | 0.812 rem / 13 px | 0.812 rem / 13 px  | 0.875 rem / 14 px |
 
 ### Grayscales
-
+git
 Number representing percentage of darkness starting from white. So the higher the number, the darker the scale of gray.
 
 - 10
