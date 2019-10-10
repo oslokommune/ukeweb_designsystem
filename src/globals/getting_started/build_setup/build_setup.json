@@ -1,0 +1,25 @@
+{
+  "devtools": {
+    "preset": "clean",
+    "pattern": {
+      "sections": {
+        "docs": {
+          "visible":  false
+        }
+      }
+    },
+    "tags": [
+      "start",
+      "developer",
+      "webpack",
+      "sass",
+      "scss",
+      "consumer",
+      "consuming",
+      "package",
+      "cdn",
+      "build"
+    ]
+  },
+  "buildSetup": {}
+}
