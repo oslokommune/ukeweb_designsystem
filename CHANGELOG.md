@@ -13,7 +13,12 @@ _Twig consumers: the changes conserning replacing text css for markup is not bre
 
 ### Fixed
 
+- atoms-icons-icon: icons now inherits color also on hover.
 - atoms-icons-icon: fixed position of icon
+- organisms-cards-card: fixed stateText so it is placed in the middle of the image
+- organisms-cards-card: fixed state modifier so all text is white while it is active
+- organisms-cards-card: removed docs for download variant, which was removed earlier
+- organisms-cards-card: fixed the animation of the content box
 
 ### Added
 
