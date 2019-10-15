@@ -1,11 +1,9 @@
 {
   "devtools": {
     "preset": "clean",
-    "pattern": {
-      "sections": {
-        "docs": {
-          "visible":  false
-        }
+    "sections": {
+      "frame": {
+        "visible": false
       }
     },
     "tags": [
