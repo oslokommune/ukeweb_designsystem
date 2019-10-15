@@ -15,11 +15,13 @@
     <a href="{{ card.url }}" title="{{ figure.img.alt }}" class="osg-card__wrapper">
   {% else %}
     <div class="osg-card__wrapper">
-  {% endif %} 
+  {% endif %}
     <div class="osg-card__image-container">
       {% include 'atoms/decorators/figure/figure.twig' %}
       {% if hasStateText %}
-        <div class="osg-card__state-text">{{ card.stateText }}</div>
+        <div class="osg-card__state-text osg-u-heading-2">
+          {{ card.stateText }}
+        </div>
       {% endif %}
     </div>
     {% embed 'molecules/content_display/content_box/content_box.twig' %}
