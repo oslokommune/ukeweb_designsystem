@@ -9,6 +9,22 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
+### Fixed
+
+### Added
+
+### Removed
+
+### Changed
+
+## [0.35.1] - 2019-10-10
+
+### Fixed
+
+- global: Fixed size for osg-u-heading-1
+
+## [0.35.0] - 2019-10-10
+
 _Twig consumers: the changes conserning replacing text css for markup is not breaking changes for twig consumers_
 
 ### Fixed
@@ -19,8 +35,6 @@ _Twig consumers: the changes conserning replacing text css for markup is not bre
 - organisms-cards-card: fixed state modifier so all text is white while it is active
 - organisms-cards-card: removed docs for download variant, which was removed earlier
 - organisms-cards-card: fixed the animation of the content box
-
-### Added
 
 ### Removed
 
