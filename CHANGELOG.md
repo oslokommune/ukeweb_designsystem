@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.2] - 2019-10-10
+
+### Fixed
+
+- global: added "white" to color util classes (i.e osg-u-color-bg-white).
+
 ## [0.35.1] - 2019-10-10
 
 ### Fixed
