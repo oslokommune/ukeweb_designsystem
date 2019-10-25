@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.3] - 2019-10-25
+
+### Fixed
+
+- global: aligned osg-gap variable value with bulma gap value (32px instead of 64px).
+
 ## [0.35.2] - 2019-10-10
 
 ### Fixed
