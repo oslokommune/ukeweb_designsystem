@@ -1,6 +1,6 @@
 {
   "devtools": {
-    "preset": "clean",
+    "preset": "md",
     "sections": {
       "frame": {
         "visible": false
@@ -19,5 +19,5 @@
       "build"
     ]
   },
-  "prototyping": {}
+  "buildSetup": {}
 }

@@ -15,10 +15,9 @@ Your package.json should now contains theese two lines under "dependencies":
 "styleguide": "git+ssh://git@github.com/oslokommune/styleguide.git#0.35.1"
 ```
 
-The version number of the packages might naturally be higher than this
-snippet.
+Package versions will most likely differ compared to this snippet.
 
-## 2. configure styling
+## 2. Configure styling
 
 Ensure that your build system compiles SASS. Depending on your compiler, you
 might need to set up SASS transpilation as a build step. In webpack this
