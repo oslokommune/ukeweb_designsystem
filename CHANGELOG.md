@@ -17,6 +17,14 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.4] - 2019-10-30
+
+### Fixed
+
+- Moved getting started out of globals
+- Minor text changes in getting started
+- New version of devtools
+
 ## [0.35.3] - 2019-10-25
 
 ### Fixed
