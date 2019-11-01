@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.5] - 2019-11-01
+
+### Fixed
+
+- organisms-navigation-shape_hero: fixed npm build warnings related to css-grid on IE
+
 ## [0.35.4] - 2019-10-30
 
 ### Fixed
