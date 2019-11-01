@@ -5,27 +5,30 @@
     grid-row: 1 / 2
 
 =osg-hero--left($root)
-  align-items: center
-  justify-items: stretch
   grid-template-rows: 1fr
   grid-template-columns: 2fr 1fr
   #{$root}__image
     grid-column: 2 / 3
     grid-row: 1 / 2
+    align-self: center
+    justify-self: stretch
   #{$root}__content
     grid-column: 1 / 2
     grid-row: 1 / 2
+    align-self: center
+    justify-self: stretch
 
 =osg-hero--right($root)
-  align-items: center
   grid-template-rows: 1fr
   grid-template-columns: 1fr 2fr
   #{$root}__image
     grid-column: 1 / 2
     grid-row: 1 / 2
+    align-self: center
   #{$root}__content
     grid-column: 2 / 3
     grid-row: 1 / 2
+    align-self: center
 
 .osg-hero
   display: grid
