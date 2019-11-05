@@ -1,7 +1,5 @@
 {% set hasStateText = card.stateText is defined and card.stateText is not empty %}
 {% set hasCardUrl = card.url is defined and card.url is not empty %}
-{% set hasCardFigure = figure is defined and figure is not empty %}
-{% set cardUrlTitle = figure.img.alt | default(null) %}
 {% set cardVariant = card.variant | default('osg-v-default') %}
 {% set cardModifiers = card.modifiers | default(null) %}
 
@@ -14,14 +12,12 @@
 
 <div class="osg-card {{ cardVariant }} {{ cardModifiers }}">
   {% if hasCardUrl %}
-    <a href="{{ card.url }}" title="{{ cardUrlTitle }}" class="osg-card__wrapper">
+    <a href="{{ card.url }}" title="{{ figure.img.alt }}" class="osg-card__wrapper">
   {% else %}
     <div class="osg-card__wrapper">
   {% endif %}
     <div class="osg-card__image-container">
-      {% if hasCardFigure %}
-        {% include 'atoms/decorators/figure/figure.twig' %}
-      {% endif %}
+      {% include 'atoms/decorators/figure/figure.twig' %}
       {% if hasStateText %}
         <div class="osg-card__state-text osg-u-heading-2">
           {{ card.stateText }}
