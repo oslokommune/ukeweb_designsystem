@@ -17,15 +17,12 @@ See README.md for release description.
 
 ### Changed
 
-<<<<<<< HEAD
-=======
 ## [0.35.6] - 2019-11-06
 
 ### Fixed
 
 - organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image. 
 
->>>>>>> release/0.35.6
 ## [0.35.5] - 2019-11-01
 
 ### Fixed
