@@ -3,7 +3,7 @@
 {% set hasCardFigure = figure is defined and figure is not empty %}
 {% set cardVariant = card.variant | default('osg-v-default') %}
 {% set cardModifiers = card.modifiers | default(null) %}
-{% set cardUrlTitle = hasCardFigure ? figure.img.alt : default(null) %}
+{% set cardUrlTitle = hasCardFigure ? figure.img.alt : null %}
 
 {% set cardContent %}
    {% block content %}{% endblock %}
