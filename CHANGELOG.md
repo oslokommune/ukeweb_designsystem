@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.7] - 2019-11-07
+
+### Fixed
+
+-  organisms-cards-card: Fix null check for figure.
+
 ## [0.35.6] - 2019-11-06
 
 ### Fixed
