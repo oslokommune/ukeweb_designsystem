@@ -76,16 +76,17 @@ $osg-typographies-header: (
   ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-54, 400),
   ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 400),
   ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-30, 400),
-  ("4", $osg-font-size-18, $osg-font-size-22, $osg-font-size-24, 500),
-  ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500),
+  ("4", $osg-font-size-20, $osg-font-size-24, $osg-font-size-24, 500),
+  ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-22, 500),
+  ("6", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500),
 );
 
 $osg-typographies: (
-  ("1", $osg-font-size-20, $osg-font-size-24, $osg-font-size-30, 300),
+  ("1", $osg-font-size-22, $osg-font-size-24, $osg-font-size-30, 300),
   ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 300),
   ("3", $osg-font-size-18, $osg-font-size-18, $osg-font-size-20, 300),
-  ("4", $osg-font-size-16, $osg-font-size-18, $osg-font-size-18, 500),
-  ("5", $osg-font-size-16, $osg-font-size-18, $osg-font-size-18, 300),
+  ("4", $osg-font-size-16, $osg-font-size-16 $osg-font-size-18, 500),
+  ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 300),
   ("6", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 500),
   ("7", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 300)
 );
