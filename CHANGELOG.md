@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+-  organisms-cards-card: Fix null check for figure.
+
 ### Added
 
 ### Removed
