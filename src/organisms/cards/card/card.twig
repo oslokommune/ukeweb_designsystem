@@ -3,7 +3,7 @@
 {% set hasCardFigure = figure is defined and figure is not empty %}
 {% set cardVariant = card.variant | default('osg-v-default') %}
 {% set cardModifiers = card.modifiers | default(null) %}
-{% set cardUrlTitle = figure.img.alt | default(null) %}
+{% set cardUrlTitle = hasCardFigure ? figure.img.alt : null %}
 
 {% set cardContent %}
    {% block content %}{% endblock %}
@@ -19,7 +19,7 @@
     <div class="osg-card__wrapper">
   {% endif %}
     <div class="osg-card__image-container">
-      {% if hasCardFigure %}
+      {% if hasCardFigure and cardUrlTitle is not null %}
         {% include 'atoms/decorators/figure/figure.twig' %}
       {% endif %}
       {% if hasStateText %}
