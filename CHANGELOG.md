@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.8] - 2019-11-12
+
+### Fixed
+
+- global: fixed body font sizes
+
 ## [0.35.7] - 2019-11-07
 
 ### Fixed
