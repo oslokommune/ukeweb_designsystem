@@ -13,11 +13,16 @@ See README.md for release description.
 
 ### Added
 
-- global: added new icons
-
 ### Removed
 
 ### Changed
+
+## [0.35.9] - 2019-11-13
+
+### Added
+
+- global: added new icons
+
 
 ## [0.35.8] - 2019-11-12
 
