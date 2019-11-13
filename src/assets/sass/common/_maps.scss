@@ -84,7 +84,7 @@ $osg-typographies: (
   ("1", $osg-font-size-22, $osg-font-size-24, $osg-font-size-30, 300),
   ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 300),
   ("3", $osg-font-size-18, $osg-font-size-18, $osg-font-size-20, 300),
-  ("4", $osg-font-size-16, $osg-font-size-16 $osg-font-size-18, 500),
+  ("4", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500),
   ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 300),
   ("6", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 500),
   ("7", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 300)
@@ -138,7 +138,22 @@ $osg-icons: (
   "instagram": "\e925",
   "linked-in": "\e926",
   "twitter": "\e927",
-  "heart-plus": "\e928"
+  "heart-plus": "\e928",
+  "clock": "\e935",
+  "garbage": "\e942",
+  "tickets": "\e938",
+  "email": "\e929",
+  "chevron-thin-up": "\e939",
+  "chevron-thin-down": "\e92a",
+  "elevator": "\e92b",
+  "street-vendor": "\e92c",
+  "coffee-cup": "\e92d",
+  "defibrillator": "\e92f",
+  "bathroom": "\e930",
+  "healthcare": "\e931",
+  "livingroom": "\e932",
+  "wardrobe": "\e933",
+  "bedroom": "\e934"
 );
 
 // used to generate alignment classes in utils.sass

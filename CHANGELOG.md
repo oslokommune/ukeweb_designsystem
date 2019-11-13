@@ -13,6 +13,8 @@ See README.md for release description.
 
 ### Added
 
+- global: added new icons
+
 ### Removed
 
 ### Changed
