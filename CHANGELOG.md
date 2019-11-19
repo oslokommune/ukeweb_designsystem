@@ -11,7 +11,11 @@ See README.md for release description.
 
 ### Fixed
 
+- global: fix icon mapping for heart-plus
+
 ### Added
+
+- global: new icon - fullscreen
 
 ### Removed
 
