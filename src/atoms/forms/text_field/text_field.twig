@@ -1,4 +1,5 @@
 {% set textFieldstate = textField.state is defined ? "osg-text-field-" ~ textField.state : null %}
+{% set textFieldValue = textField.value | default(null) %}
 {% set textFieldVariant = textField.variant | default('osg-v-default') %}
 {% set textFieldModifiers = textField.modifiers | default(null) %}
 {% set textFieldAutocomplete = textField.autocomplete | default('on') %}
@@ -9,6 +10,7 @@
     id="{{ textField.id }}"
     name="{{ textField.name }}"
     type="text"
+    value="{{ textField.value }}"
     required
     {% if textFieldVariant == 'osg-v-default' %}
       placeholder="{{ textField.placeholder }}"

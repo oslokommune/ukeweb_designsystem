@@ -9,7 +9,10 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed
+### Fixed - 2019-11-26
+
+- atoms-forms-text_field: Added value key for text field
+- molecules-search-searchbar_bar: Added value key for text field in search bar
 
 ### Added
 

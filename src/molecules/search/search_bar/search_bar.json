@@ -5,9 +5,10 @@
   },
   "search_bar": {},
   "textField": {
-    "name": "textfield",
+    "id": "searchbar",
     "placeholder": "Lorem ipsum dolor sit amet.",
-    "id": "searchbar"
+    "name": "textfield",
+    "value": "Search bar value"
   },
   "button": {
     "modifiers": "osg-button--red osg-button--circle",

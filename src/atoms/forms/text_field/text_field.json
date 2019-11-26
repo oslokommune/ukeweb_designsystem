@@ -6,6 +6,7 @@
   "textField": {
     "id": "vestibulum1",
     "placeholder": "Nunc elit risus",
-    "name": "textfield"
+    "name": "textfield",
+    "value": "Value"
   }
 }
