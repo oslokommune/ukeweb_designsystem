@@ -21,23 +21,6 @@
     "searchBar": true
   },
 
-  "searchBarButton": {
-    "modifiers": "osg-button--yellow osg-button--circle",
-    "dataAttrs": [
-      {
-        "key": "aria-label",
-        "val": "Search"
-      }
-    ]
-  },
-
-  "searchBarTextField": {
-    "name": "textfield",
-    "placeholder": "Lorem ipsum dolor sit amet.",
-    "id": "searchbar",
-    "modifiers": "osg-text-field--outline osg-text-field--yellow"
-  },
-
   "navbarMenuServices": {
     "menuButton": {
       "text": "Meny",

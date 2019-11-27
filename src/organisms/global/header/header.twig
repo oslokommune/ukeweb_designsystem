@@ -6,8 +6,11 @@
 {% set hasHeaderLogo = header.hasLogo is defined and header.hasLogo == true %}
 {% set hasHeaderSearchbar = header.searchBar is defined and header.searchBar == true %}
 {% set hasHeaderNavbarMenu = navbarMenuServices.menuButton is defined and navbarMenuServices is not empty %}
-{% set iconModifiers = icon.modifiers | default('osg-u-icon-user') %}
+{% set hasHeaderButton = linkButton is defined and linkButton is not empty %}
+{% set hasHeaderLogin = myPage is defined and myPage is not empty %}
+
 {% set searchBarModifiers = searchBar.modifiers | default(null) %}
+{% set iconModifiers = icon.modifiers | default('osg-u-icon-user') %}
 {% set headerLogo = header.logo | default('/assets/images/oslo_logo.svg') %}
 
 {# Twigfilen #}
@@ -16,29 +19,28 @@
     {% if hasHeaderLogo %}
       <img src={{ headerLogo }} alt="Oslo Logo" />
     {% endif %}
-    
-    {% if hasHeaderSearchbar %}
-      {% include 'molecules/search/search_bar/search_bar.twig' %}
-    {% endif %}
   </div>
 
-  {% if hasHeaderNavbarMenu %}
-    <div class="osg-header__navbar-right">
-      {% include 'molecules/navigation/navbar_menu_services/navbar_menu_services.twig' with { button: searchBarButton, textField: searchBarTextField } %}
+  <div class="osg-header__navbar-right">
+    {% if hasHeaderNavbarMenu %}
+      {% include 'molecules/navigation/navbar_menu_services/navbar_menu_services.twig' with { button: navbarMenuServices.menuButton } %}
+    {% endif %}
 
+    {% if hasHeaderButton %}
       {% embed 'atoms/links/link_button/link_button.twig' %}
         {% block content %}
           <span class="osg-u-text-4">{{ linkButton.title }}</span>
         {% endblock %}
       {% endembed %}
+    {% endif %}
 
+    {% if hasHeaderLogin %}
       <a class="osg-header__login">
         <span class="osg-u-text-4 osg-header__login-title">
           {{ myPage.title }}
         </span>
         {% include 'atoms/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
       </a>
-    </div>
-  {% endif %}
-
+    {% endif %}
+  </div>
 </header>
