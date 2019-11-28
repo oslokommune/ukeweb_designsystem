@@ -12,7 +12,6 @@ See README.md for release description.
 ### Fixed
 
 - atoms-icons-icon: fixed position of icon
-- organismis-global-header: 
 
 ### Added
 
@@ -23,9 +22,104 @@ See README.md for release description.
 
 ### Changed
 
+## [0.35.9] - 2019-11-13
+
+### Added
+
+- global: added new icons
+
+## [0.35.8] - 2019-11-12
+
+### Fixed
+
+- global: fixed body font sizes
+
+## [0.35.7] - 2019-11-07
+
+### Fixed
+
+-  organisms-cards-card: Fix null check for figure.
+
+## [0.35.6] - 2019-11-06
+
+### Fixed
+
+- organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image. 
+
+## [0.35.5] - 2019-11-01
+
+### Fixed
+
+- organisms-navigation-shape_hero: fixed npm build warnings related to css-grid on IE
+
+## [0.35.4] - 2019-10-30
+
+### Fixed
+
+- Moved getting started out of globals
+- Minor text changes in getting started
+- New version of devtools
+
+## [0.35.3] - 2019-10-25
+
+### Fixed
+
+- global: aligned osg-gap variable value with bulma gap value (32px instead of 64px).
+
+## [0.35.2] - 2019-10-10
+
+### Fixed
+
+- global: added "white" to color util classes (i.e osg-u-color-bg-white).
+
+## [0.35.1] - 2019-10-10
+
+### Fixed
+
+- global: Fixed size for osg-u-heading-1
+
+## [0.35.0] - 2019-10-10
+
+_Twig consumers: the changes conserning replacing text css for markup is not breaking changes for twig consumers_
+
+### Fixed
+
+- atoms-icons-icon: icons now inherits color also on hover.
+- atoms-icons-icon: fixed position of icon
+- organisms-cards-card: fixed stateText so it is placed in the middle of the image
+- organisms-cards-card: fixed state modifier so all text is white while it is active
+- organisms-cards-card: removed docs for download variant, which was removed earlier
+- organisms-cards-card: fixed the animation of the content box
+
+### Removed
+
+- atoms-social-icon: deleted this pattern due the use of an old icon practise
+- molecules-social-icon_list: deleted this pattern due the use of an old icon practise
+
+### Changed
+
+- global: updated font sizes for headings
+- global: updated font-size for global text paragraphs
+- global: updated font-sizes for text typographies (osg-u-text-#)
+- atoms-forms-text_field: replaced text styles in the css for util classes in the markup
+- atoms-decorators-figure: replaced text styles in the css for util classes in the markup
 - atoms-buttons-button: removed color field, use modifier instead
 - atoms-links-link_button: removed color field, use modifier instead
+- molecules-navigation-breadcrumbs: replaced text styles in the css for util classes in the markup
+- molecules-data_display-info_list: replaced text styles in the css for util classes in the markup
+- molecules-data_display-icon_link: replaced text styles in the css for util classes in the markup
+- molecules-navigation-navbar_menu_services: replaced text styles in the css for util classes in the markup
+- molecules-content_display-expand_box: removed the block "buttonContent", use field "buttonIcon" instead
+- molecules-search-search_bar: removed the block "buttonContent", use field "buttonIcon" instead
+- organisms-cards-card: replaced text styles in the css for util classes in the markup
+- organisms-cards-list_card: replaced text styles in the css for util classes in the markup
+- organisms-global-header: replaced text styles in the css for util classes in the markup
+- organisms-headings-countdown: replaced text styles in the css for util classes in the markup
+- organisms-headings-event: replaced text styles in the css for util classes in the markup
+- organisms-media-video: replaced text styles in the css for util classes in the markup
+- organisms-messages-alert: replaced text styles in the css for util classes in the markup
 - organisms-messages-alert: removed open variant, use modifier instead
+- organisms-messages-alert: removed the block "closeButtonContent", use the field "closeButtonIcon" instead
 
 ## [0.34.0] - 2019-08-20
 

@@ -24,12 +24,15 @@ $osg-hamburger-mobile-line-gap: 10px
         border: 2px solid
 
       &__text
-        @extend .osg-u-text-4
         +osg-mq-mobile-only
           +osg-sr-only
 
       &__text-close
         +osg-sr-only
+
+      &:hover > span > span
+        +osg-mq-desktop-and-up
+          background-color: $osg-color-blue-hover
 
       &__icon
         height: 40px
@@ -47,6 +50,7 @@ $osg-hamburger-mobile-line-gap: 10px
           position: relative
           transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
           width: 40px
+         
           +osg-mq-desktop-and-up
             width: 30px
 
@@ -79,7 +83,7 @@ $osg-hamburger-mobile-line-gap: 10px
     height: 100%
     opacity: .6
     position: fixed
-    width: 100%
+    width: 100%ja
     z-index: 1
 
   &--expanded

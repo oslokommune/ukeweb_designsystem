@@ -41,6 +41,28 @@ $osg-margin-top-bottom-desktop: 25px
     display: none
     +osg-mq-desktop-and-up
       display: flex
+    &:hover
+      color: $osg-color-blue-hover
+
+  &__title
+    flex-grow: 1
+    margin-left: 0
+    +osg-mq-tablet-and-up
+      margin-left: 20px
+    a
+      text-decoration: none
+      hyphens: none
+      word-break: break-word
+      &:hover
+        text-decoration: underline
+
+  &__link
+    flex-grow: 0
+    min-width: 150px
+    text-align: right
+    a
+      text-decoration: none
+      display: flex
       align-items: center  
 
   &__login-title

@@ -1,0 +1,23 @@
+{
+  "devtools": {
+    "preset": "md",
+    "sections": {
+      "frame": {
+        "visible": false
+      }
+    },
+    "tags": [
+      "start",
+      "developer",
+      "webpack",
+      "sass",
+      "scss",
+      "consumer",
+      "consuming",
+      "package",
+      "cdn",
+      "build"
+    ]
+  },
+  "prototyping": {}
+}

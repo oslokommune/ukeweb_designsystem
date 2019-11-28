@@ -9,8 +9,6 @@ See a html example of a opened alert on Codepen [here](https://codepen.io/osloko
 ### Blocks
 
 - content: html to go in the part that is always visible.
-- closeButtonContent: html content to go in the close button of the opened alert. Has a cross icon from font awesome with a sr-only text by default. Information about permitted content in buttons: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button</a>
-- message: html content to go in the opened message box.
 
 ### Data Fields
 
@@ -20,6 +18,9 @@ See a html example of a opened alert on Codepen [here](https://codepen.io/osloko
 | state               | String | "default", "important", "critical" | "default" | Adds icon in the right corner. Exclamation mark for "important" and animated circle for "critical" |
 | \*buttonAriaLabel   | String | Clean text content                 | undefined | ARIA-Label of the button that opens the modal                                                      |
 | \*closeButtonSrText | String | Clean text content                 | undefined | Close button text available to screen readers                                                      |
+| closeButtonIcon     | String | Any valid icon name                | 'x'       | Name of icon to render inside button                                                               |
+
+See the [util docs](/#/pattern/globals-iconography-icons) to get all valid icon names.
 
 ### Modifier Options
 
