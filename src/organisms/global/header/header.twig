@@ -1,23 +1,30 @@
-{# Gamle ifs #}
-{% set headerVariant = header.variant | default('osg-v-default') %}
-{% set headerModifiers = header.modifiers | default(null) %}
-
-{# Nye #}
-{% set hasHeaderLogo = header.hasLogo is defined and header.hasLogo == true %}
-{% set hasHeaderSearchbar = header.searchBar is defined and header.searchBar == true %}
+{% set hasHeaderLogo = hasLogo is defined and hasLogo == true %}
+{% set hasHeaderSearchbar = searchBar is defined and searchBar == true %}
 {% set hasHeaderNavbarMenu = navbarMenuServices.menuButton is defined and navbarMenuServices is not empty %}
 {% set hasHeaderButton = linkButton is defined and linkButton is not empty %}
-{% set hasHeaderLogin = myPage is defined and myPage is not empty %}
+{% set hasHeaderLink = link is defined and link is not empty %}
 
+{% set headerVariant = header.variant | default('osg-v-default') %}
+{% set headerModifiers = header.modifiers | default(null) %}
 {% set searchBarModifiers = searchBar.modifiers | default(null) %}
 {% set iconModifiers = icon.modifiers | default('osg-u-icon-user') %}
 {% set headerLogo = header.logo | default('/assets/images/oslo_logo.svg') %}
 
-{# Twigfilen #}
 <header class="osg-header {{ headerVariant }} {{ headerModifiers }}">
   <div class="osg-header__navbar-left">
     {% if hasHeaderLogo %}
       <img src={{ headerLogo }} alt="Oslo Logo" />
+    {% endif %}
+  </div>
+
+  <div class="osg-header__navbar-center">
+    {% if hasHeaderSearchbar %}
+      {% include 'molecules/search/search_bar/search_bar.twig' with {
+        search_bar: searchBar.search_bar,
+        textField: searchBar.textField,
+        button: searchBar.button,
+        devtools: searchBar.devtools
+      } %}
     {% endif %}
   </div>
 
@@ -34,10 +41,10 @@
       {% endembed %}
     {% endif %}
 
-    {% if hasHeaderLogin %}
-      <a class="osg-header__login">
+    {% if hasHeaderLink %}
+      <a class="osg-header__login" href="{{ link.url }}">
         <span class="osg-u-text-4 osg-header__login-title">
-          {{ myPage.title }}
+          {{ link.title }}
         </span>
         {% include 'atoms/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
       </a>

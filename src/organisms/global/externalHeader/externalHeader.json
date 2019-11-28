@@ -9,7 +9,8 @@
       "menu",
       "hamburger menu",
       "go up",
-      "overview"
+      "overview",
+      "external header"
     ],
     "frame": {
       "min-height": "500px"
