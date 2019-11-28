@@ -12,8 +12,12 @@ See README.md for release description.
 ### Fixed
 
 - atoms-icons-icon: fixed position of icon
+- organismis-global-header: 
 
 ### Added
+
+- organisms-global-external-header: renamed existing header to external header
+- organisms-global-header: added header
 
 ### Removed
 

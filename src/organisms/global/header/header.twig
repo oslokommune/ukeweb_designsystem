@@ -15,9 +15,7 @@
     {% if hasHeaderLogo %}
       <img src={{ headerLogo }} alt="Oslo Logo" />
     {% endif %}
-  </div>
 
-  <div class="osg-header__navbar-center">
     {% if hasHeaderSearchbar %}
       {% include 'molecules/search/search_bar/search_bar.twig' with {
         search_bar: searchBar.search_bar,

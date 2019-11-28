@@ -15,9 +15,7 @@
       "min-height": "500px"
     }
   },
-
   "hasLogo": true,
-  
   "navbarMenuServices": {
     "menuButton": {
       "text": "Meny",
@@ -32,7 +30,6 @@
       ]
     }
   },
-
   "searchBar": {
     "devtools": {
       "tags": ["search", "input", "searchbar"],
@@ -49,7 +46,6 @@
       "dataAttrs": [{ "key": "aria-label", "val": "Search" }]
     }
   },
-
   "linkButton": {
     "dataAttrs": [
       {
@@ -65,12 +61,10 @@
     "modifiers": "osg-link-button--outline osg-link-button--yellow",
     "title": "Kontakt"
   },
-
   "link": {
     "title": "Min side",
     "url": "https://tjenester.oslo.kommune.no/ekstern/minside/"
   },
-
   "icon": {
     "modifiers": "osg-u-icon-user"
   }
