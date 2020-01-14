@@ -9,16 +9,21 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed - 2019-11-26
-
-- atoms-forms-text_field: Added value key for text field
-- molecules-search-searchbar_bar: Added value key for text field in search bar
+### Fixed
 
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.35.10] - 2020-01-14
+
+### Fixed
+
+- atoms-forms-text_field: Added value key for text field
+- molecules-search-searchbar_bar: Added value key for text field in search bar
+
 
 ## [0.35.9] - 2019-11-13
 
