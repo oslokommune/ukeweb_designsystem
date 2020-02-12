@@ -1,15 +1,20 @@
 {% set hasDataAttrs = checkbox.dataAttrs is defined and checkbox.dataAttrs is not empty %}
-{% set checkboxVariant = checkbox.variant | default('osg-v-default') %}
-{% set checkboxModifiers = checkbox.modifiers | default(null) %}
+{% set disabledValue = checkbox.disabled | default(false) %}
 
-<label class="osg-checkbox {{ checkboxVariant  }} {{ checkboxModifiers }}">
+<label class="osg-checkbox">
   <input type="checkbox"
     {% if hasDataAttrs %}
       {% for dataAttr in checkbox.dataAttrs %}
         {{ dataAttr.key }}={{ dataAttr.val }}
       {% endfor %}
     {% endif %}
+    {% if disabledValue %}
+      disabled
+    {% endif %}
   >
-  <span>{{ checkbox.text }}</span>
-  <span class="osg-checkbox__checkmark"></span>
+  <span class="osg-checkbox__checkmark"></span
+  ><span class="osg-u-padding-left-4 osg-checkbox__text">
+  {{ checkbox.text }}
+  </span>
+  
 </label>

@@ -1,11 +1,12 @@
 .osg-checkbox
   cursor: pointer
   display: block
-  font-size: 16px
-  margin-bottom: 12px
-  padding-left: 35px
+  margin-bottom: 0px
   position: relative
+  display: inline-block
+  padding: 0px
   user-select: none
+  font-size: $osg-font-size-20
 
   & input
     cursor: pointer
@@ -13,55 +14,48 @@
     position: absolute
 
   &__checkmark
-    border: 2px solid $osg-color-grayscale-20
-    height: 25px
+    border: 2px solid $osg-color-blue-dark
     left: 0
-    position: absolute
-    top: 0
-    width: 25px
+    display: inline-block
+    vertical-align: -2px
+    top: 4px
+    width: 20px
+    height: 20px
+    
+  &__text
+    border-style: hidden
 
-  &:hover input ~ &__checkmark
-    border: 2px solid black
+  &:hover span
+    color: $osg-color-blue-hover
+    border-color: $osg-color-blue-hover
 
   & input:focus ~ &__checkmark
     outline: -webkit-focus-ring-color auto 5px
+
+  & input:checked ~ &__checkmark:after
+    display: block
+
+  & input:checked ~ &__checkmark
+    background-color: $osg-color-blue-dark
+
+  & input:disabled:checked ~ &__checkmark
+    background-color: $osg-color-grayscale-40
 
   &__checkmark:after
     content: ""
     display: none
     position: absolute
-
-  & input:checked ~ &__checkmark:after
-    display: block
-
-  &__checkmark:after
-    border: solid $osg-color-green-dark
-    border-width: 0 3px 3px 0
+    border: solid white
+    border-width: 0 2px 2px 0
     height: 10px
-    left: 9px
-    top: 5px
     transform: rotate(45deg)
     width: 5px
+    left: 7px
+    top: 8px
 
-  &--filter
-    & input:checked + span
-        border-bottom: 3px solid $osg-color-green-light
-    span
-      border-bottom: 3px solid $osg-color-green-dark
-      color: $osg-color-green-dark
-    &:hover input ~ .osg-checkbox__checkmark
-      border: 2px solid transparent
-  &--filter &
-    &__checkmark
-      border: 2px solid transparent
-      left: 10px
-    &__checkmark:after
-      border: 2px solid transparent
-    &__checkmark:after
-      border: solid $osg-color-green-light
-      border-width: 0 3px 3px 0
-      height: 10px
-      left: 9px
-      top: 5px
-      transform: rotate(45deg)
-      width: 5px
+  & input:disabled ~ span
+    color: $osg-color-grayscale-40
+    border-color: $osg-color-grayscale-40
+    pointer-events: none
+    background-color: none
+    
