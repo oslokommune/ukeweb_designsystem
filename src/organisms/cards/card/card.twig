@@ -1,9 +1,9 @@
-{% set hasStateText = card.stateText is defined and card.stateText is not empty %}
 {% set hasCardUrl = card.url is defined and card.url is not empty %}
 {% set hasCardFigure = figure is defined and figure is not empty %}
-{% set cardVariant = card.variant | default('osg-v-default') %}
+{% set cardVariant = card.variant | default('') %}
 {% set cardModifiers = card.modifiers | default(null) %}
 {% set cardUrlTitle = hasCardFigure ? figure.img.alt : null %}
+
 
 {% set cardContent %}
    {% block content %}{% endblock %}
@@ -21,11 +21,6 @@
     <div class="osg-card__image-container">
       {% if hasCardFigure and cardUrlTitle is not null %}
         {% include 'atoms/decorators/figure/figure.twig' %}
-      {% endif %}
-      {% if hasStateText %}
-        <div class="osg-card__state-text osg-u-heading-2">
-          {{ card.stateText }}
-        </div>
       {% endif %}
     </div>
     {% embed 'molecules/content_display/content_box/content_box.twig' %}

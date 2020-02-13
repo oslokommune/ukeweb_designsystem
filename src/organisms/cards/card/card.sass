@@ -29,13 +29,6 @@
     margin-top: 30px
     border-top: 1px solid $osg-color-green
     font-weight: bold
-  &__state-text
-    display: none
-    position: absolute
-    top: 50%
-    text-align: center
-    z-index: 1
-    width: 100%
   &__extra-content
     display: flex
     background: white
@@ -53,21 +46,9 @@
     .osg-content-box
       +osg-animation-scale-up(1.2s)
       animation-delay: .3s
-
-  &--with-state &
-    &__state-text
-      display: block
-    &__search-result
-      border-color: white
-    &__image-container
-      +osg-helper-filter($osg-color-green-dark)
-  &--with-state
-    &:hover
-      a
-        color: white
-    a
-      color: white
+  &--grey
     .osg-content-box
-      background-color: $osg-color-green-dark
-
-
+      background: $osg-color-grey-light
+  &--grey &
+    &__extra-content
+      background: $osg-color-grey-light
