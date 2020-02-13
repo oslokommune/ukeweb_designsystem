@@ -10,10 +10,12 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+-  organisms-cards-card: new modifier for grey background.
 
 ### Added
 
 ### Removed
+-  organisms-cards-card: removed state from card.
 
 ### Changed
 
