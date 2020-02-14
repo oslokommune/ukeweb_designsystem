@@ -1,0 +1,53 @@
+.osg-searchfield
+  &--left 
+    & .icon-test
+      display: flex
+      left: 10px
+    & .osg-text-field__input
+      padding-left: 50px
+      padding-right: 20px
+      &:focus
+        padding-left: 48px
+        
+  &--right 
+    & .icon-test
+      display: flex
+      right: 10px
+    & .osg-text-field__input
+      padding-left: 20px
+      padding-right: 50px
+
+.osg-text-field
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  position: relative
+
+  &__input
+    background-color: white
+    outline: none
+    border: none
+    height: 50px
+    width: 100%
+    padding: 5px 20px 5px 20px
+    border: 2px solid $osg-color-blue-dark
+
+    &:hover
+      border-color: $osg-color-blue-hover
+      & ~ .icon-test
+        color: $osg-color-blue-hover
+
+    &:focus
+      border-width: 4px
+      padding-left: 18px
+      &:hover
+        border-color: $osg-color-blue-hover
+      & ~ .icon-test
+        font-weight: bold
+
+.icon-test
+  pointer-events: none
+  display: none
+  position: absolute
+  top: 9px
+
