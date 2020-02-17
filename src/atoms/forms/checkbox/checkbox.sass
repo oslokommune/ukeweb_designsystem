@@ -36,7 +36,12 @@
     display: block
 
   & input:checked ~ &__checkmark
-    background-color: $osg-color-blue-dark
+    background-color: $osg-color-blue-hover
+
+  & input:checked ~ span
+    font-weight: 500
+    color: $osg-color-blue-hover
+    border-color: $osg-color-blue-hover
 
   & input:disabled:checked ~ &__checkmark
     background-color: $osg-color-grayscale-40
