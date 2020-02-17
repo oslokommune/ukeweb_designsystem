@@ -1,0 +1,15 @@
+{
+  "devtools": {
+    "tags": ["search", "input", "searchfield"],
+    "modifiers": ["", "right", "left"]
+  },
+  "searchField": {
+    "modifiers": "right"
+  },
+  "dropdownField": {
+    "id": "dropdown",
+    "placeholder": "Lorem ipsum dolor sit amet.",
+    "name": "dropdown",
+    "value": "Click here"
+  }
+}

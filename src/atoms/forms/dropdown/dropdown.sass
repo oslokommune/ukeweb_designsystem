@@ -1,0 +1,166 @@
+.osg-dropdownfield
+  &--left 
+    & .icon-test-button
+      display: flex
+      left: 10px
+    & .osg-dropdown__input
+      padding-left: 50px
+      padding-right: 20px
+      &:focus
+        padding-left: 48px
+        
+  &--right 
+    & .icon-test-button
+      display: flex
+      right: 10px
+    & .osg-dropdown__input
+      padding-left: 20px
+      padding-right: 50px
+
+.osg-dropdown
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  position: relative
+
+  &__input
+    background-color: white
+    outline: none
+    border: none
+    height: 50px
+    width: 100%
+    padding: 5px 20px 5px 20px
+    border: 2px solid $osg-color-blue-dark
+    cursor: pointer
+    text-align: left
+
+    &:hover
+      border-color: $osg-color-blue-hover
+      & ~ .icon-test-button
+        color: $osg-color-blue-hover
+
+    &:focus
+      border-width: 4px
+      padding-left: 18px
+      &:hover
+        border-color: $osg-color-blue-hover
+      & ~ .icon-test-button
+        font-weight: bold
+
+.icon-test-button
+  pointer-events: none
+  display: none
+  position: absolute
+  top: 9px
+
+
+.select-box 
+  // position: relative
+  display: block
+  // min-height: 250px
+  padding-bottom: 30px
+  width: 100%
+  margin: 0 auto
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif
+  font-size: 18px
+  color: #60666d
+  
+  
+  &__current 
+    position: relative
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9)
+    cursor: pointer
+    outline: none
+    margin-bottom: 20px;
+    
+    &:focus 
+      & + .select-box__list 
+        opacity: 1
+
+        // We have to set "animation-name: none" to make the list visible (read below how it works)
+
+        animation-name: none
+        
+        .select-box__option 
+          cursor: pointer
+        
+      
+      
+      .select-box__icon 
+        transform: translateY(-50%) rotate(180deg)
+      
+    
+  
+  
+  &__icon 
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(-50%)
+    width: 20px
+    opacity: 0.3
+    transition: 0.2s ease
+  
+  
+  &__value 
+    display: flex
+  
+  
+  &__input 
+    display: none
+    
+    &:checked + .select-box__input-text 
+      display: block
+    
+  
+  
+  &__input-text 
+    display: none
+    width: 100%
+    margin: 0
+    padding: 15px
+    background-color: #fff
+  
+  
+  &__list 
+    position: absolute
+    width: 100%
+    max-height: 500px
+    overflow: scroll
+    padding: 0
+    list-style: none
+    opacity: 1
+    
+    // We need to use animation with delay.
+    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
+    // This delay will not be noticed because we set "opacity" to "0".
+    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
+    
+    // animation-name: HideList
+    animation-duration: 0.5s
+    animation-delay: 0.5s
+    animation-fill-mode: forwards
+    animation-timing-function: step-start
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9)
+  
+  
+  &__option 
+    display: block
+    padding: 15px
+    background-color: #fff
+    
+    &:hover,
+    &:focus 
+      color: #546c84
+      background-color: #fbfbfb
+    
+  
+
+
+@keyframes HideList 
+  from 
+    transform: scaleY(1)
+  
+  to 
+    transform: scaleY(0)
+  

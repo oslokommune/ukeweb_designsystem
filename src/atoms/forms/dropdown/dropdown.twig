@@ -1,0 +1,18 @@
+{% set searchFieldModifiers = searchField.modifiers is defined ? "osg-dropdownfield--" ~ searchField.modifiers : null %}
+
+{% set dropdownFieldValue = dropdownField.value | default(null) %}
+
+<div class=" osg-dropdownfield {{ searchFieldModifiers }}">
+  <input
+    class="osg-dropdown__input osg-u-text-5"
+    id="{{dropdownField.id}}"
+    name="{{dropdownField.name}}"
+    type="button"
+    value="Click me"
+    title="title"/>
+  <i class="osg-u-icon-chevron-thin-down icon-test-button"></i>
+
+  <div>
+  </div>
+
+</div>
