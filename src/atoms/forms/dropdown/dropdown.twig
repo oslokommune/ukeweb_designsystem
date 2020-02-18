@@ -2,8 +2,17 @@
 
 {% set dropdownFieldValue = dropdownField.value | default(null) %}
 
-<div class=" osg-dropdownfield {{ searchFieldModifiers }}">
-  <input
+<div class="osg-dropdownfield">
+  <!--<label for="cars">Choose a car:</label>-->
+
+  <select id="cars" class="osg-u-text-5">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select>
+  <!--<i class="osg-u-icon-chevron-thin-down icon-test-button"></i>-->
+  <!--<input
     class="osg-dropdown__input osg-u-text-5"
     id="{{dropdownField.id}}"
     name="{{dropdownField.name}}"
@@ -12,7 +21,19 @@
     title="title"/>
   <i class="osg-u-icon-chevron-thin-down icon-test-button"></i>
 
-  <div>
-  </div>
+  <div class="options">
+    <input
+      class="option osg-u-text-5"
+      type="button"
+      id="radio-1"
+      name="pick one"/>
+      <lable for="radio-1">Name one</lable>
+      <input
+      class="option osg-u-text-5"
+      type="button"
+      id="radio-1"
+      name="pick one"/>
+      <lable for="radio-2">Name two</lable>
+  </div>-->
 
 </div>

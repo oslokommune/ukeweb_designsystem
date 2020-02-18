@@ -1,4 +1,9 @@
+body
+  margin: 20px 10px 20px 10px
+  padding-bottom: 200px
+
 .osg-dropdownfield
+  position: relative
   &--left 
     & .icon-test-button
       display: flex
@@ -16,6 +21,21 @@
     & .osg-dropdown__input
       padding-left: 20px
       padding-right: 50px
+  &::after
+    // @extend .osg-u-icon-chevron-thin-down
+    color: inherit
+    content: "\e92a"
+    bottom: 8px
+    right: 14px
+    position: absolute
+    font-family: 'Oslo Icons'
+    line-height: 1
+    font-style: normal
+    font-size: 32px
+    display: inline-flex
+    pointer-events: none
+  &:hover
+    color: $osg-color-blue-hover
 
 .osg-dropdown
   display: flex
@@ -42,16 +62,85 @@
     &:focus
       border-width: 4px
       padding-left: 18px
+      border-color: $osg-color-blue-hover
       &:hover
         border-color: $osg-color-blue-hover
+      & ~ .options
+        display: block
       & ~ .icon-test-button
-        font-weight: bold
+        color: $osg-color-blue-hover
 
 .icon-test-button
   pointer-events: none
   display: none
   position: absolute
-  top: 9px
+  bottom: 9px
+
+
+select 
+  background-color: white
+  outline: none
+  border: none
+  border-radius: 0
+  height: 50px
+  width: 100%
+  padding: 5px 50px 5px 20px
+  border: 2px solid $osg-color-blue-dark
+  cursor: pointer
+  text-align: left
+  appearance: none
+  -webkit-appearance: none
+  -mox-appearance: none
+  // -webkit-border-radius: 0px;
+  &:hover
+    border-color: $osg-color-blue-hover
+    & ~ .icon-test-button
+      color: $osg-color-blue-hover
+
+  &:focus
+    border-width: 4px
+    padding-left: 18px
+    border-color: $osg-color-blue-hover
+    &:hover
+      border-color: $osg-color-blue-hover
+    & ~ .options
+      display: block
+    & ~ .icon-test-button
+      color: $osg-color-blue-hover
+  &::after
+    color: red
+    content: "\e906"
+    bottom: 9px
+    position: absolute
+    pointer-events: none
+
+.options
+  // display: none
+  position: absolute
+  width: 100%
+  background-color: white
+  border: 2px solid $osg-color-grayscale-20
+  // margin: 5px
+  margin-top: 20px
+  // margin-left: 10px
+  // margin-right: 10px
+  box-shadow: 0px 5px 30px -10px $osg-color-grayscale-20
+
+
+.option
+  width: 100%
+  height: 50px
+  // line-height: 50px
+  padding: 5px 20px 5px 20px
+  display: inline-block
+  vertical-align: middle
+  background-color: white
+  outline: none
+  border: none
+  text-align: left
+  cursor: pointer
+  &:hover
+    background-color: $osg-color-grey-light
 
 
 .select-box 
