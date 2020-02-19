@@ -1,12 +1,8 @@
 .osg-checkbox
   cursor: pointer
-  display: block
-  margin-bottom: 0px
-  position: relative
-  display: inline-block
-  padding: 0px
+  display: inline-flex
+  align-items: center
   user-select: none
-  font-size: $osg-font-size-20
 
   & input
     cursor: pointer
@@ -14,13 +10,22 @@
     position: absolute
 
   &__checkmark
+    position: relative
     border: 2px solid $osg-color-blue-dark
-    left: 0
-    display: inline-block
-    vertical-align: -2px
-    top: 4px
     width: 20px
     height: 20px
+  
+  &__checkmark:after
+    content: ""
+    display: none
+    position: absolute
+    border: solid white
+    border-width: 0 2px 2px 0
+    height: 10px
+    transform: translate(-50%, -50%) rotate(45deg)
+    width: 5px
+    top: 50%
+    left: 50%
     
   &__text
     border-style: hidden
@@ -45,18 +50,6 @@
 
   & input:disabled:checked ~ &__checkmark
     background-color: $osg-color-grayscale-40
-
-  &__checkmark:after
-    content: ""
-    display: none
-    position: absolute
-    border: solid white
-    border-width: 0 2px 2px 0
-    height: 10px
-    transform: rotate(45deg)
-    width: 5px
-    left: 7px
-    top: 8px
 
   & input:disabled ~ span
     color: $osg-color-grayscale-40

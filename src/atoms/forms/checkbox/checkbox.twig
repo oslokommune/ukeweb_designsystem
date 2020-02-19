@@ -1,7 +1,7 @@
 {% set hasDataAttrs = checkbox.dataAttrs is defined and checkbox.dataAttrs is not empty %}
 {% set disabledValue = checkbox.disabled | default(false) %}
 
-<label class="osg-checkbox">
+<label class="osg-checkbox osg-u-text-5">
   <input type="checkbox"
     {% if hasDataAttrs %}
       {% for dataAttr in checkbox.dataAttrs %}
@@ -13,7 +13,7 @@
     {% endif %}
   >
   <span class="osg-checkbox__checkmark"></span
-  ><span class="osg-u-padding-left-4 osg-checkbox__text">
+  ><span class="osg-u-padding-left-3 osg-checkbox__text">
   {{ checkbox.text }}
   </span>
   
