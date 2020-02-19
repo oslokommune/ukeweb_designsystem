@@ -3,13 +3,12 @@
     "tags": ["search", "input", "searchfield"],
     "modifiers": ["", "right", "left"]
   },
-  "searchField": {
-    "modifiers": "right"
-  },
   "dropdownField": {
-    "id": "dropdown",
-    "placeholder": "Lorem ipsum dolor sit amet.",
-    "name": "dropdown",
-    "value": "Click here"
+    "id": "dropdown-1",
+    "options": [
+      { "name": "Option 1", "value": "1" },
+      { "name": "Option 2", "value": "2" },
+      { "name": "Dette er en veldig lang option, som godt kan være litt lengere", "value": "3" }
+    ]
   }
 }
