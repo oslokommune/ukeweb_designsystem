@@ -19,6 +19,8 @@ See README.md for release description.
 
 ### Changed
 
+- atoms-forms-checkbox: Replaced old checkbox with new styleguide design. 
+
 ## [0.35.10] - 2020-01-14
 
 ### Fixed

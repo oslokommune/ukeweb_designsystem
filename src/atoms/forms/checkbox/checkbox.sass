@@ -1,10 +1,7 @@
 .osg-checkbox
   cursor: pointer
-  display: block
-  font-size: 16px
-  margin-bottom: 12px
-  padding-left: 35px
-  position: relative
+  display: inline-flex
+  align-items: center
   user-select: none
 
   & input
@@ -13,55 +10,50 @@
     position: absolute
 
   &__checkmark
-    border: 2px solid $osg-color-grayscale-20
-    height: 25px
-    left: 0
-    position: absolute
-    top: 0
-    width: 25px
-
-  &:hover input ~ &__checkmark
-    border: 2px solid black
-
-  & input:focus ~ &__checkmark
-    outline: -webkit-focus-ring-color auto 5px
-
+    position: relative
+    border: 2px solid $osg-color-blue-dark
+    width: 20px
+    height: 20px
+  
   &__checkmark:after
     content: ""
     display: none
     position: absolute
+    border: solid white
+    border-width: 0 2px 2px 0
+    height: 10px
+    transform: translate(-50%, -50%) rotate(45deg)
+    width: 5px
+    top: 50%
+    left: 50%
+    
+  &__text
+    border-style: hidden
+
+  &:hover span
+    color: $osg-color-blue-hover
+    border-color: $osg-color-blue-hover
+
+  & input:focus ~ &__checkmark
+    outline: -webkit-focus-ring-color auto 5px
 
   & input:checked ~ &__checkmark:after
     display: block
 
-  &__checkmark:after
-    border: solid $osg-color-green-dark
-    border-width: 0 3px 3px 0
-    height: 10px
-    left: 9px
-    top: 5px
-    transform: rotate(45deg)
-    width: 5px
+  & input:checked ~ &__checkmark
+    background-color: $osg-color-blue-hover
 
-  &--filter
-    & input:checked + span
-        border-bottom: 3px solid $osg-color-green-light
-    span
-      border-bottom: 3px solid $osg-color-green-dark
-      color: $osg-color-green-dark
-    &:hover input ~ .osg-checkbox__checkmark
-      border: 2px solid transparent
-  &--filter &
-    &__checkmark
-      border: 2px solid transparent
-      left: 10px
-    &__checkmark:after
-      border: 2px solid transparent
-    &__checkmark:after
-      border: solid $osg-color-green-light
-      border-width: 0 3px 3px 0
-      height: 10px
-      left: 9px
-      top: 5px
-      transform: rotate(45deg)
-      width: 5px
+  & input:checked ~ span
+    font-weight: 500
+    color: $osg-color-blue-hover
+    border-color: $osg-color-blue-hover
+
+  & input:disabled:checked ~ &__checkmark
+    background-color: $osg-color-grayscale-40
+
+  & input:disabled ~ span
+    color: $osg-color-grayscale-40
+    border-color: $osg-color-grayscale-40
+    pointer-events: none
+    background-color: none
+    

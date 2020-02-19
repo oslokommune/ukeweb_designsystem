@@ -1,9 +1,9 @@
 {
   "devtools": {
-    "tags": ["label", "todo", "form", "field", "accept", "gdpr"],
-    "modifiers": ["osg-checkbox--filter"]
+    "tags": ["label", "todo", "form", "field", "accept", "gdpr"]
   },
   "checkbox": {
+    "disabled": false,
     "text": "laoreet lacinia neque",
     "dataAttrs": [
       { "key": "id", "val": "my-checkbox" },
