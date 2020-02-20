@@ -1,52 +1,38 @@
 .osg-searchfield
-  &--left 
-    & .icon-test
+  position: relative
+  &__input
+    outline: none
+  &__input:hover ~ &__icon,
+  &__input:focus ~ &__icon
+    color: $osg-color-blue-hover
+
+  &__icon
+    pointer-events: none
+    display: none
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+  &--left & 
+    &__icon
       display: flex
-      left: 10px
-    & .osg-text-field__input
+      left: 15px
+    &__input
       padding-left: 50px
       padding-right: 20px
       &:focus
         padding-left: 48px
+        padding-right: 18px
         
-  &--right 
-    & .icon-test
+  &--right &
+    &__icon
       display: flex
-      right: 10px
-    & .osg-text-field__input
+      right: 15px
+    &__input
       padding-left: 20px
       padding-right: 50px
+      &:focus
+        padding-left: 18px
+        padding-right: 48px
 
-.osg-text-field
-  display: flex
-  flex-direction: column
-  flex-grow: 1
-  position: relative
-
-  &__input
-    background-color: white
-    outline: none
-    border: none
-    height: 50px
-    width: 100%
-    padding: 5px 20px 5px 20px
-    border: 2px solid $osg-color-blue-dark
-
-    &:hover
-      border-color: $osg-color-blue-hover
-      & ~ .icon-test
-        color: $osg-color-blue-hover
-
-    &:focus
-      border-width: 4px
-      padding-left: 18px
-      border-color: $osg-color-blue-hover
-      & ~ .icon-test
-        color: $osg-color-blue-hover
-
-.icon-test
-  pointer-events: none
-  display: none
-  position: absolute
-  top: 9px
 

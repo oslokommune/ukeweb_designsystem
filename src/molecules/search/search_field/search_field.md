@@ -15,6 +15,6 @@ This component is used as a search field in forms.
 
 | Name                      | Description                         |
 | ------------------------- | ----------------------------------- |
-| left | Puts the icon on the left side |
-| right | Puts the icon on the right side |
+| osg-searchfield--left | Puts the icon on the left side |
+| osg-searchfield--right | Puts the icon on the right side |
 |  | Hides the icon |

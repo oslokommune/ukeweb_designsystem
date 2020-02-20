@@ -1,12 +1,9 @@
 {
   "devtools": {
     "tags": ["search", "input", "searchfield"],
-    "modifiers": ["", "right", "left"]
+    "modifiers": ["right", "left"]
   },
   "searchField": {
-    "modifiers": "right"
-  },
-  "textField": {
     "id": "searchfield",
     "placeholder": "Lorem ipsum dolor sit amet.",
     "name": "searchfield"
