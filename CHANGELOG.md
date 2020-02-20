@@ -13,11 +13,14 @@ See README.md for release description.
 -  organisms-cards-card: new modifier for grey background.
 
 ### Added
+- utils: added common form style class for easier implementation of form components. 
 
 ### Removed
 -  organisms-cards-card: removed state from card.
 
 ### Changed
+
+- atoms-forms-checkbox: Replaced old checkbox with new styleguide design. 
 
 ## [0.35.10] - 2020-01-14
 
