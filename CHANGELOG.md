@@ -13,6 +13,7 @@ See README.md for release description.
 -  organisms-cards-card: new modifier for grey background.
 
 ### Added
+- utils: added common form style class for easier implementation of form components. 
 
 ### Removed
 -  organisms-cards-card: removed state from card.
