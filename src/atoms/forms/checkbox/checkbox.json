@@ -4,7 +4,7 @@
   },
   "checkbox": {
     "disabled": false,
-    "text": "laoreet lacinia neque",
+    "text": "Anim ullamco velit magna veniam elit occaecat cupidatat nulla id in cillum ullamco ex tempor.",
     "dataAttrs": [
       { "key": "id", "val": "my-checkbox" },
       { "key": "name", "val": "my-checkbox" }
