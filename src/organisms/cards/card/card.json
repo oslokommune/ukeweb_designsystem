@@ -10,7 +10,10 @@
       "summary",
       "event"
     ],
-    "modifiers": ["osg-card--animate", "osg-card--with-state"]
+    "modifiers": [
+      "osg-card--grey", 
+      "osg-card--animate"
+    ]
   },
   "card": {
     "url": "#lorem"

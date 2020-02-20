@@ -13,7 +13,6 @@ This pattern has two blocks, one named "content" and one named "extraContent". C
 | variant         | String | See "variant options" section below | "osg-v-default" | Name of the variant                                                                                                                                                                                      |
 | modifiers       | String | Any global css class                | null            | Root class to modify styles                                                                                                                                                                              |
 | \*url           | String | Clean text content                  | null            | Link to wrap the whole card in                                                                                                                                                                           |
-| stateText       | String | Clean text content                  | null            | Text to be displayed on top of the image. Used together with modifier osg-card--with-state to have effect.                                                                                               |
 | figure          | Object | See the tags figure for atom        | null            | See the figure atom for details                                                                                                                                                                          |
 
 
@@ -22,7 +21,7 @@ This pattern has two blocks, one named "content" and one named "extraContent". C
 | Name                 | Description                                                                      |
 | -------------------- | -------------------------------------------------------------------------------- |
 | osg-card--animate    | See Animations section below for tips on how to use it.                          |
-| osg-card--with-state | Makes the pattern green, text white, and shows the "stateText" if it is defined. |
+| osg-card--grey       | Change content background to light grey                                          |
 
 (\*) mandatory
 
