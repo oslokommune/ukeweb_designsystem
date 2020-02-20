@@ -1,40 +1,34 @@
 .osg-dropdownfield
   position: relative
+  
   &::after
     color: inherit
     content: "\e92a"
-    bottom: 8px
     right: 14px
     position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    pointer-events: none
+
     font-family: 'Oslo Icons'
     line-height: 1
     font-style: normal
     font-size: 32px
-    display: inline-flex
-    pointer-events: none
+
   &:hover
     color: $osg-color-blue-hover
 
 .select-form 
-  background-color: white
   outline: none
-  border: none
   border-radius: 0
-  height: 50px
-  width: 100%
-  padding: 5px 50px 5px 20px
-  border: 2px solid $osg-color-blue-dark
+  padding-right: 50px
   cursor: pointer
-  text-align: left
 
   appearance: none
   -webkit-appearance: none
   -moz-appearance: none
   &:hover
-    border-color: $osg-color-blue-hover
     color: $osg-color-blue-hover
+  
   &:focus
-    border-width: 4px
-    padding-left: 18px
-    border-color: $osg-color-blue-hover
-    color: $osg-color-blue-hover
+    padding-right: 48px

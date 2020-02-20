@@ -1,10 +1,9 @@
 {
   "devtools": {
-    "tags": ["search", "input", "searchfield"],
-    "modifiers": ["", "right", "left"]
+    "tags": ["dropdown", "input", "select"]
   },
   "dropdownField": {
-    "id": "dropdown-1",
+    "id": "select-one",
     "options": [
       { "name": "Option 1", "value": "1" },
       { "name": "Option 2", "value": "2" },
