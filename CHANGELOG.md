@@ -14,6 +14,7 @@ See README.md for release description.
 
 ### Added
 - utils: added common form style class for easier implementation of form components. 
+- atoms-forms-dropdown: added single select dropdown menu for forms. 
 
 ### Removed
 -  organisms-cards-card: removed state from card.
