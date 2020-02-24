@@ -37,7 +37,7 @@ These variable settings mimicks equivalent settings in Bulma
 
 | Name             | Default                   | Decription                                                   |
 | ---------------- | ------------------------- | ------------------------------------------------------------ |
-| \$osg-gap        | 64px                      | Used in breakpoint settings to account for container padding |
+| \$osg-gap        | 32px                      | Used in breakpoint settings to account for container padding |
 | \$osg-tablet     | 769px                     | Tablet breakpoint                                            |
 | \$osg-desktop    | 960px + (2 \* \$osg-gap)  | Desktop breakpoint                                           |
 | \$osg-widescreen | 1152px + (2 \* \$osg-gap) | Widescreen breakpoint                                        |
