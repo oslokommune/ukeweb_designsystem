@@ -1,6 +1,6 @@
 ### General
 
-This component is used as a search field in forms.
+This component is used as a select menu in forms. 
 
 ### Data Fields
 

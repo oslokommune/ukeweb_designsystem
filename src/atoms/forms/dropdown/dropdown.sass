@@ -1,7 +1,7 @@
 .osg-dropdownfield
   position: relative
   
-  &::after
+  &:after
     color: inherit
     content: "\e92a"
     right: 14px
@@ -18,17 +18,17 @@
   &:hover
     color: $osg-color-blue-hover
 
-.osg-dropdownfield .select-form 
-  outline: none
-  border-radius: 0
-  padding-right: 50px
-  cursor: pointer
+  select 
+    outline: none
+    border-radius: 0
+    padding-right: 50px
+    cursor: pointer
 
-  appearance: none
-  -webkit-appearance: none
-  -moz-appearance: none
-  &:hover
-    color: $osg-color-blue-hover
-  
-  &:focus
-    padding-right: 48px
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    &:hover
+      color: $osg-color-blue-hover
+    
+    &:focus
+      padding-right: 48px
