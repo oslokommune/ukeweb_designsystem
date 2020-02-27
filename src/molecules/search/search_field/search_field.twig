@@ -1,0 +1,19 @@
+{% set searchFieldModifiers = searchField.modifiers is defined ? 'osg-searchfield--' ~ searchField.modifiers : null %}
+
+{% set searchFieldValue = searchField.value | default(null) %}
+
+
+<div class=" osg-searchfield {{ searchFieldModifiers }}">
+  <input
+    class="osg-searchfield__input osg-u-text-5 osg-form-component"
+    id="{{searchField.id}}"
+    name="{{searchField.name}}"
+    type="text"
+    value="{{searchFieldValue}}"
+    title="title"
+    placeholder="{{searchField.placeholder}}"
+    required/>
+
+  <i class="osg-searchfield__icon osg-u-icon-magnifying-glass-small"></i>
+
+</div>
