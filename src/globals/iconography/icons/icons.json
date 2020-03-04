@@ -14,16 +14,22 @@
   "icons": {
     "items": [
       {
+        "name": "chevron-right"
+      },
+      {
+        "name": "chevron-down"
+      },
+      {
+        "name": "chevron-left"
+      },
+      {
+        "name": "chevron-up"
+      },
+      {
         "name": "24h"
       },
       {
         "name": "backpack"
-      },
-      {
-        "name": "bathroom"
-      },  
-      {
-        "name": "bedroom"
       },
       {
         "name": "bike"
@@ -38,46 +44,16 @@
         "name": "calendar"
       },
       {
-        "name": "chevron-right"
-      },
-      {
-        "name": "chevron-left"
-      },
-      {
-        "name": "chevron-up"
-      },
-      {
-        "name": "chevron-down"
-      },
-      {
-        "name": "chevron-thin-up"
-      },
-      {
-        "name": "chevron-thin-down"
-      },
-      {
-        "name": "clock"
-      },
-      {
-        "name": "coffee-cup"
-      }, 
-      {
         "name": "coin-stacks"
       },
       {
         "name": "crane"
       },
       {
-        "name": "defibrillator"
-      },
-      {
         "name": "dog"
       },
       {
         "name": "drone"
-      },
-      {
-        "name": "email"
       },
       {
         "name": "exclamation-mark-circle"
@@ -92,37 +68,19 @@
         "name": "handicap"
       },
       {
-        "name": "heart-plus"
-      },
-      {
-        "name": "healthcare"
-      },
-      {
-        "name": "elevator"
-      },
-      {
-        "name": "garbage"
-      },
-      {
-        "name": "livingroom"
-      },
-      {
-        "name": "menu"
-      },
-      {
-        "name": "x"
-      },
-      {
         "name": "house-heart"
       },
       {
         "name": "location-pin"
       },
       {
+        "name": "magnifying-glass-big"
+      },
+      {
         "name": "magnifying-glass-small"
       },
       {
-        "name": "magnifying-glass-big"
+        "name": "menu"
       },
       {
         "name": "minus-sign"
@@ -143,13 +101,7 @@
         "name": "restaurant"
       },
       {
-        "name": "street-vendor"
-      },
-      {
         "name": "swingset"
-      },
-      {
-        "name": "tickets"
       },
       {
         "name": "toilet"
@@ -161,10 +113,10 @@
         "name": "user"
       },
       {
-        "name": "wardrobe"
+        "name": "water-faucet"
       },
       {
-        "name": "water-faucet"
+        "name": "x"
       },
       {
         "name": "facebook"
@@ -177,6 +129,90 @@
       },
       {
         "name": "twitter"
+      },
+      {
+        "name": "heart-plus"
+      },
+      {
+        "name": "clock"
+      },
+      {
+        "name": "garbage"
+      },
+      {
+        "name": "tickets"
+      },
+      {
+        "name": "email"
+      },
+      {
+        "name": "chevron-thin-up"
+      },
+      {
+        "name": "chevron-thin-down"
+      },
+      {
+        "name": "elevator"
+      },
+      {
+        "name": "street-vendor"
+      },
+      {
+        "name": "coffee-cup"
+      },
+      {
+        "name": "defibrillator"
+      },
+      {
+        "name": "bathroom"
+      },
+      {
+        "name": "healthcare"
+      },
+      {
+        "name": "livingroom"
+      },
+      {
+        "name": "wardrobe"
+      },
+      {
+        "name": "bedroom"
+      },
+      {
+        "name": "wifi"
+      },
+      {
+        "name": "stairs"
+      },
+      {
+        "name": "download"
+      },
+      {
+        "name": "expand"
+      },
+      {
+        "name": "minimize"
+      },
+      {
+        "name": "attachment"
+      },
+      {
+        "name": "edit"
+      },
+      {
+        "name": "thumbs-up"
+      },
+      {
+        "name": "thumbs-down"
+      },
+      {
+        "name": "smile"
+      },
+      {
+        "name": "neutral"
+      },
+      {
+        "name": "sad"
       }
     ]
   }
