@@ -18,6 +18,8 @@
   &:hover
     color: $osg-color-blue-hover
 
+  &[disabled]
+    color: $osg-color-grayscale-40 
   select 
     outline: none
     border-radius: 0
@@ -32,3 +34,7 @@
     
     &:focus
       padding-right: 48px
+    &:disabled
+      color: $osg-color-grayscale-40
+      border-color: $osg-color-grayscale-40
+      cursor: default
