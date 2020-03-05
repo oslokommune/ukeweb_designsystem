@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 -  organisms-cards-card: new modifier for grey background.
+- atoms-icons-icon: added new icon modifiers to example list.
 
 ### Added
 - utils: added common form style class for easier implementation of form components. 
