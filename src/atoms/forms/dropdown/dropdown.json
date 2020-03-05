@@ -1,0 +1,16 @@
+{
+  "devtools": {
+    "tags": ["dropdown", "input", "select", "form"]
+  },
+  "dropdownField": {
+    "id": "select-one",
+    "options": [
+      { "name": "Option 1", "value": "1" },
+      { "name": "Option 2", "value": "2" },
+      { "name": "Option names can be long, but will then be cut off if too long for the box.", "value": "3" }
+    ],
+    "name": "dropdown-name",
+    "disabled": false,
+    "required": false
+  }
+}

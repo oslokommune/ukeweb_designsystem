@@ -17,6 +17,29 @@ See README.md for release description.
 
 ### Changed
 
+## [0.36.0] - 2020-03-05
+
+### Fixed
+
+- organisms-cards-card: new modifier for grey background.
+- atoms-icons-icon: added new icon modifiers to example list.
+
+### Added
+
+- utils: added common form style class for easier implementation of form components. 
+- molecules-search-search_field: added search field component for forms.
+- atoms-forms-dropdown: added single select dropdown menu for forms.
+- global: added new icons.
+
+### Removed
+
+-  organisms-cards-card: removed state from card.
+
+### Changed
+
+- atoms-forms-checkbox: Replaced old checkbox with new styleguide design. 
+
+
 ## [0.35.10] - 2020-01-14
 
 ### Fixed

@@ -1,4 +1,4 @@
-{% set textFieldstate = textField.state is defined ? "osg-text-field-" ~ textField.state : null %}
+{% set textFieldstate = textField.state is defined ? "osg-text-field--" ~ textField.state : null %}
 {% set textFieldValue = textField.value | default(null) %}
 {% set textFieldVariant = textField.variant | default('osg-v-default') %}
 {% set textFieldModifiers = textField.modifiers | default(null) %}

@@ -1,0 +1,23 @@
+{% set dropdownFieldId = dropdownField.id | default('dropdownfield-id') %}
+{% set options = dropdownField.options | default([]) %}
+
+{% set disabled = dropdownField.disabled ? 'disabled' : '' %}
+{% set required = dropdownField.required ? 'required' : '' %}
+
+<div class="osg-dropdownfield" {{dropdownField.disabled ? 'disabled' : ''}}>
+
+  <select class="osg-u-text-5 osg-form-component"
+    id="{{dropdownFieldId}}"
+    name="{{dropdownField.name}}"
+    {{disabled}} 
+    {{required}}>
+
+    {% if options is defined %}
+      {% for option in options %}
+        <option value="{{option.value}}">{{option.name}}</option>
+      {% endfor %}
+    {% endif %}
+
+  </select>
+
+</div>
