@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- global: adjusted header sizes based on latest values from design. 
+
 ### Added
 
 ### Removed
