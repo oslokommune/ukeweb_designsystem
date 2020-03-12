@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.36.1] - 2020-03-12
+
+### Fixed
+- atoms-forms-checkbox: changed textcolor for checked items from hover blue to dark blue.
+- global: adjusted header sizes based on latest values from design. 
+
 ## [0.36.0] - 2020-03-05
 
 ### Fixed
