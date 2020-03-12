@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- atoms-forms-checkbox: changed textcolor for checked items from hover blue to dark blue.
 
 ### Added
 
