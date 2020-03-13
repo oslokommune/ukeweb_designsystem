@@ -10,6 +10,7 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- atoms-forms-checkbox: fixed color on hover state for checked element.
 
 ### Added
 
