@@ -17,6 +17,12 @@ See README.md for release description.
 
 ### Changed
 
+## [0.36.2] - 2020-03-13
+
+### Fixed
+- atoms-forms-checkbox: fixed color on hover state for checked element.
+
+
 ## [0.36.1] - 2020-03-12
 
 ### Fixed
