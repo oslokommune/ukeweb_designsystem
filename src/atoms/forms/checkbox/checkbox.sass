@@ -40,6 +40,10 @@
 
   & input:focus ~ &__checkmark
     outline: -webkit-focus-ring-color auto 5px
+    border-color: $osg-color-blue-hover
+  
+  & input:focus ~ &__text
+    color: $osg-color-blue-hover
 
   & input:checked ~ &__checkmark:after
     display: block
