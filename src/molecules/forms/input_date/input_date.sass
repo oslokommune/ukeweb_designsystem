@@ -1,0 +1,31 @@
+.osg-input-date
+  position: relative
+  &__label
+    display: block
+    position: relative
+  &__input
+    $icon-padding: $osg-space-2 * 2 + 32px
+    appearance: none
+    border: 2px solid $osg-color-blue-dark
+    border-radius: 0
+    box-sizing: border-box
+    height: 50px
+    outline: none
+    padding: $osg-space-2 $icon-padding $osg-space-2 $osg-space-3
+    width: 100%
+    &:focus
+      $focus-padding: $osg-space-2 - 2px
+      $focus-padding-left: $osg-space-3 - 2px
+      border-width: 4px
+      padding: $focus-padding $icon-padding - 2px $focus-padding $focus-padding-left
+    &:focus,
+    &:hover
+      border-color: $osg-color-blue-hover
+      ~ .osg-input-date__icon
+        color: $osg-color-blue-hover
+    &[aria-invalid="true"]
+      border-color: $osg-color-red
+  &__icon
+    bottom: $osg-space-2
+    position: absolute
+    right: $osg-space-2
