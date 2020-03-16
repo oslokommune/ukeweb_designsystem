@@ -42,7 +42,7 @@
   min-height: 50px
   text-decoration: none
   &--circle
-    +osg-common-button-circle
+    +osg-common-button--circle
 
   @each $name, $text, $background in $osg-button-colors
     &--#{$name}
@@ -73,7 +73,7 @@
       background-color: transparent
       color: $osg-color-blue-hover
 
-=osg-common-button-circle
+=osg-common-button--circle
   border-radius: 50%
   // force 1x1 ratio
   &:before
@@ -81,3 +81,21 @@
     display: inline-block
     vertical-align: middle
     padding-top: 100%
+
+=osg-common-button-circle
+  $border-size: 2px
+  $size: 36px
+  border: $border-size solid transparent
+  border-radius: 50%
+  display: inline-block
+  font-size: inherit
+  height: $size
+  line-height: $size - ($border-size * 2)
+  margin: $osg-space-1 / 2
+  outline: none
+  padding: 0
+  width: $size
+  &:focus,
+  &:hover:not(:disabled)
+    border-color: $osg-color-blue-hover
+    color: $osg-color-blue-hover
