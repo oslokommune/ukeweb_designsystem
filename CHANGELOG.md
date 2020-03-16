@@ -14,6 +14,7 @@ See README.md for release description.
 ### Added
 - global: added variable color-white
 - global: added variable color-disabled
+- molecules-pagination: added component
 
 ### Removed
 
