@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- atoms-forms-checkbox: fixed focus state.
+
 ### Added
 
 ### Removed
