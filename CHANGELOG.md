@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 - atoms-forms-checkbox: fixed focus state.
+- globals-colors-palette: added blue dark to palette.
 
 ### Added
 
