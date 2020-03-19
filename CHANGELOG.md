@@ -12,7 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
-- atoms-forms-validation: adds component
+- utils: adds input validation
 
 ### Removed
 
