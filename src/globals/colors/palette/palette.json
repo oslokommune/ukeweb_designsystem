@@ -14,6 +14,11 @@
   "palette": {
     "colors": [
       {
+        "name": "blue-dark",
+        "hex": "#2a2859",
+        "dark": true
+      },
+      {
         "name": "blue",
         "hex": "#6fe9ff"
       },

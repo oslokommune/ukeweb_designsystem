@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 - atoms-forms-checkbox: fixed focus state.
+- globals-colors-palette: added blue dark to palette.
 - atoms-forms-dropdown: fixes hover/focus states
 - molecules-forms-search_field: fixes hover/focus states
 - utils-form-component: fixes hover/focus states
