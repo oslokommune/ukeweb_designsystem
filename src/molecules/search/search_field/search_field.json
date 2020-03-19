@@ -1,7 +1,7 @@
 {
   "devtools": {
     "tags": ["search", "input", "searchfield"],
-    "modifiers": ["right", "left"]
+    "modifiers": ["osg-searchfield--right", "osg-searchfield--left"]
   },
   "searchField": {
     "id": "searchfield",
