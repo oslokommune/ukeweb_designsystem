@@ -13,6 +13,9 @@ See README.md for release description.
 
 - atoms-forms-checkbox: fixed focus state.
 - globals-colors-palette: added blue dark to palette.
+- atoms-forms-dropdown: fixes hover/focus states
+- molecules-forms-search_field: fixes hover/focus states
+- utils-form-component: fixes hover/focus states
 
 ### Added
 
@@ -30,7 +33,7 @@ See README.md for release description.
 
 ### Fixed
 - atoms-forms-checkbox: changed textcolor for checked items from hover blue to dark blue.
-- global: adjusted header sizes based on latest values from design. 
+- global: adjusted header sizes based on latest values from design.
 
 ## [0.36.0] - 2020-03-05
 
@@ -41,7 +44,7 @@ See README.md for release description.
 
 ### Added
 
-- utils: added common form style class for easier implementation of form components. 
+- utils: added common form style class for easier implementation of form components.
 - molecules-search-search_field: added search field component for forms.
 - atoms-forms-dropdown: added single select dropdown menu for forms.
 - global: added new icons.
@@ -52,7 +55,7 @@ See README.md for release description.
 
 ### Changed
 
-- atoms-forms-checkbox: Replaced old checkbox with new styleguide design. 
+- atoms-forms-checkbox: Replaced old checkbox with new styleguide design.
 
 
 ## [0.35.10] - 2020-01-14
@@ -86,7 +89,7 @@ See README.md for release description.
 
 ### Fixed
 
-- organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image. 
+- organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image.
 
 ## [0.35.5] - 2019-11-01
 
