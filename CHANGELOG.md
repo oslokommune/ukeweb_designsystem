@@ -18,6 +18,7 @@ See README.md for release description.
 - utils-form-component: fixes hover/focus states
 
 ### Added
+- molecules-forms-input_date: adds component
 - utils: adds input validation
 
 ### Removed
