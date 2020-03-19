@@ -1,16 +1,16 @@
 <div class="osg-input osg-input-date">
   <label class="osg-input-date__label">
-    Label
+    {{ props.label }}
     <input
             class="osg-input__input osg-input-date__input"
             type="date"
-            aria-invalid="false"
+            aria-invalid="{{ props.isInvalid }}"
             autocomplete="off"
-            name="inputName"
-            value="2020-03-16"
-            placeholder="dd.mm.åååå"
-            max="2020-03-16"
-            min="1970-01-01"
+            name="{{ props.inputName }}"
+            value="{{ props.value }}"
+            placeholder="{{ props.placeholder }}"
+            max="{{ props.max }}"
+            min="{{ props.min }}"
     />
     <span class="osg-input-date__icon osg-icon osg-u-icon-calendar" aria-hidden="true"></span>
   </label>

@@ -1,1 +1,14 @@
-{}
+{
+  "devtools": {
+    "tags": ["form", "input", "date"]
+  },
+  "props": {
+    "label": "Label",
+    "inputName": "inputName",
+    "placeholder": "dd.mm.åååå",
+    "max": "2020-03-16",
+    "min": "1970-01-01",
+    "value": "2020-03-16",
+    "isInvalid": false
+  }
+}
