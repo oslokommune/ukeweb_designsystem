@@ -2,7 +2,7 @@
   "devtools": {
     "tags": ["form", "input", "date"]
   },
-  "props": {
+  "inputDate": {
     "label": "Label",
     "inputName": "inputName",
     "placeholder": "dd.mm.åååå",
