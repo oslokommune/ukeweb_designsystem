@@ -11,10 +11,18 @@ See README.md for release description.
 
 ### Fixed
 
+- atoms-forms-checkbox: fixed focus state.
+- globals-colors-palette: added blue dark to palette.
+- atoms-forms-dropdown: fixes hover/focus states
+- molecules-forms-search_field: fixes hover/focus states
+- utils-form-component: fixes hover/focus states
+
 ### Added
 - global: added variable color-white
 - global: added variable color-disabled
 - molecules-pagination: added component
+- molecules-forms-input_date: adds component
+- utils: adds input validation
 
 ### Removed
 

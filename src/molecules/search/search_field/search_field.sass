@@ -2,9 +2,6 @@
   position: relative
   &__input
     outline: none
-  &__input:hover ~ &__icon,
-  &__input:focus ~ &__icon
-    color: $osg-color-blue-hover
 
   &__icon
     pointer-events: none
@@ -13,7 +10,7 @@
     top: 50%
     transform: translateY(-50%)
 
-  &--left & 
+  &--left &
     &__icon
       display: flex
       left: 15px
@@ -23,7 +20,7 @@
       &:focus
         padding-left: 48px
         padding-right: 18px
-        
+
   &--right &
     &__icon
       display: flex
