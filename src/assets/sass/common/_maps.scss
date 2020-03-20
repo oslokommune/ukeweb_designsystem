@@ -6,7 +6,7 @@
 // https://github.com/sass/sass/issues/1088
 
 $osg-colors: (
-  "white": white,
+  "white": $osg-color-white,
   "beige": $osg-color-beige,
   "beige-dark": $osg-color-beige-dark,
   "black": $osg-color-black,
@@ -34,6 +34,7 @@ $osg-button-colors: (
 );
 
 $osg-named-colors: (
+  "disabled": $osg-color-disabled $osg-color-disabled,
   "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
   "primary": $osg-color-blue-light $osg-color-green-dark,
   "success": $osg-color-green-light $osg-color-green-dark,
@@ -140,7 +141,7 @@ $osg-icons: (
   "linked-in": "\e926",
   "twitter": "\e927",
   "heart-plus": "\e928",
-  "clock": "\e935", 
+  "clock": "\e935",
   "garbage": "\e942",
   "tickets": "\e938",
   "email": "\e929",

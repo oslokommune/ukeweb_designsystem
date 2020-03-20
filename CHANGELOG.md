@@ -20,6 +20,8 @@ See README.md for release description.
 ### Added
 - molecules-forms-input_date: adds component
 - utils: adds input validation
+- global: added variable color-white
+- global: added variable color-disabled
 
 ### Removed
 
