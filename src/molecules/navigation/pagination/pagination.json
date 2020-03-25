@@ -2,5 +2,9 @@
   "devtools": {
     "tags": ["pagination", "paging"]
   },
-  "props": {}
+  "pagination": {
+    "indexes": [1, 2, 3, 4, 5],
+    "activeIndex": 1,
+    "limit": 2
+  }
 }
