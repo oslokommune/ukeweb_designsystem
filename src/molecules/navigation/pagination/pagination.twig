@@ -1,3 +1,5 @@
+{% set limit = pagination.limit | default(2)%}
+
 <div class="osg-pagination">
   <button
     class="osg-pagination__item osg-pagination__item--prev"
@@ -8,14 +10,14 @@
     <span class="osg-sr-only">Vis forrige side</span>
   </button>
   {% for index in pagination.indexes %}
-  {% if index == 1 or index == pagination.indexes|length or index >= pagination.activeIndex - pagination.limit and index <= pagination.activeIndex + pagination.limit %}
+  {% if index == 1 or index == pagination.indexes|length or index >= pagination.activeIndex - limit and index <= pagination.activeIndex + limit %}
   <button
     class="osg-pagination__item {{index == pagination.activeIndex ? 'osg-pagination__item--active' : '' }}"
   >
     <span class="osg-sr-only">Vis side </span>
     {{ index }}
   </button>
-  {% else %}
+  {% elseif index >= pagination.activeIndex - limit - 1 and index <= pagination.activeIndex + limit + 1 %}
   <span class="osg-pagination__item-spacer">&hellip;</span>
   {% endif %}
   {% endfor %}
