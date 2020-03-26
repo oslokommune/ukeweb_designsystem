@@ -25,6 +25,7 @@ See README.md for release description.
 - utils: adds input validation
 - global: added variable color-white
 - global: added variable color-disabled
+- global: adds ghost button modifier
 
 ### Removed
 

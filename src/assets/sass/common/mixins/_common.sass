@@ -73,6 +73,18 @@
       background-color: transparent
       color: $osg-color-blue-hover
 
+  &--ghost
+    background-color: transparent
+    border-color: transparent
+    &:not(:disabled)
+      \:not(.osg-icon)
+        text-decoration: underline
+      &:focus,
+      &:hover
+        background-color: $osg-color-grey-light
+        border-color: $osg-color-grey-light
+        color: $osg-color-blue-hover
+
 =osg-common-button--circle
   border-radius: 50%
   // force 1x1 ratio
