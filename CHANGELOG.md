@@ -18,6 +18,9 @@ See README.md for release description.
 - utils-form-component: fixes hover/focus states
 
 ### Added
+- global: added variable color-white
+- global: added variable color-disabled
+- molecules-pagination: added component
 - molecules-forms-input_date: adds component
 - utils: adds input validation
 - global: added variable color-white

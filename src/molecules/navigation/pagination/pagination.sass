@@ -1,0 +1,33 @@
+.osg-pagination
+  &__item
+    @include osg-common-button-circle
+    &:not(:disabled)
+      cursor: pointer
+    &--active
+      background-color: $osg-color-blue-dark
+      color: $osg-color-white
+      &:focus,
+      &:hover:not(:disabled)
+        background-color: $osg-color-blue-hover
+        color: $osg-color-white
+    &-spacer
+      margin: 0 $osg-space-2
+    &--next,
+    &--prev
+      transform: rotate(90deg)
+      vertical-align: bottom
+      &::before
+        color: $osg-color-blue-dark
+        content: "\e939"
+        display: inline-block
+        font-family: "Oslo Icons"
+        font-size: 32px
+      &:focus,
+      &:hover
+        &::before
+          color: $osg-color-blue-hover
+      &:disabled::before
+        color: $osg-color-disabled
+        cursor: default
+    &--prev
+      transform: rotate(-90deg)
