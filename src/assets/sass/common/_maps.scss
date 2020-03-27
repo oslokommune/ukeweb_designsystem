@@ -35,7 +35,7 @@ $osg-button-colors: (
 );
 
 $osg-named-colors: (
-  "disabled": $osg-color-disabled $osg-color-disabled,
+  "disabled": $osg-color-grey-light $osg-color-disabled,
   "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
   "primary": $osg-color-blue-light $osg-color-green-dark,
   "success": $osg-color-green-light $osg-color-green-dark,
