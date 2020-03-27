@@ -16,6 +16,7 @@ See README.md for release description.
 - atoms-forms-dropdown: fixes hover/focus states
 - molecules-forms-search_field: fixes hover/focus states
 - utils-form-component: fixes hover/focus states
+- atoms-buttons-button: Blue light added as color option.
 
 ### Added
 - global: added variable color-white
