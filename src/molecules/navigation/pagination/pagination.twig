@@ -1,6 +1,6 @@
 {% set limit = pagination.limit | default(2)%}
 
-<div class="osg-pagination">
+<nav class="osg-pagination" aria-label="Sideinndeling">
   <button
     class="osg-pagination__item osg-pagination__item--prev"
     {% if pagination.activeIndex == pagination.indexes[0] %}
@@ -13,6 +13,7 @@
   {% if index == 1 or index == pagination.indexes|length or index >= pagination.activeIndex - limit and index <= pagination.activeIndex + limit %}
   <button
     class="osg-pagination__item {{index == pagination.activeIndex ? 'osg-pagination__item--active' : '' }}"
+    {{ index == pagination.activeIndex ? 'aria-current="page"' : '' }}
   >
     <span class="osg-sr-only">Vis side </span>
     {{ index }}
@@ -29,4 +30,4 @@
   >
     <span class="osg-sr-only">Vis neste side</span>
   </button>
-</div>
+</nav>

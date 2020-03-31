@@ -7,7 +7,7 @@
   {% include 'atoms/forms/text_field/text_field.twig' %}
   {% embed 'atoms/buttons/button/button.twig' %}
     {% block content %}
-      <i class='osg-u-icon-{{ searchBar.buttonIcon | default('magnifying-glass-small') }}'></i>
+      <span class='osg-icon osg-u-icon-{{ searchBar.buttonIcon | default('magnifying-glass-small') }}' aria-hidden="true"></span>
     {% endblock %}
   {% endembed %}
 </div>
