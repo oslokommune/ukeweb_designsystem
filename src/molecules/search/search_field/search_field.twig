@@ -1,15 +1,18 @@
 {% set modifiers = searchField.modifiers | default(null) %}
 {% set searchFieldValue = searchField.value | default(null) %}
+{% set label = searchField.label | default(null) %}
 
 <div class="osg-searchfield {{ modifiers }}">
+  <label>
+    <span class="osg-sr-only">{{ label }}</span>
   <input
     class="osg-searchfield__input osg-u-text-5 osg-form-component"
     id="{{searchField.id}}"
     name="{{searchField.name}}"
     type="search"
     value="{{searchFieldValue}}"
-    title="title"
     placeholder="{{searchField.placeholder}}"
     required/>
-  <i class="osg-searchfield__icon osg-u-icon-magnifying-glass-small"></i>
+  <span class="osg-searchfield__icon osg-icon osg-u-icon-magnifying-glass-small" aria-hidden="true"></span>
+  </label>
 </div>
