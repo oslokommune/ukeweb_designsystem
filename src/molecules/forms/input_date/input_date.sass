@@ -6,9 +6,13 @@
   &__input
     $icon-padding: $osg-space-2 * 2 + 32px
     appearance: none
+    background-color: $osg-color-white
     border: 2px solid $osg-color-blue-dark
     border-radius: 0
     box-sizing: border-box
+    color: inherit
+    font-family: inherit
+    font-size: inherit
     height: 50px
     outline: none
     padding: $osg-space-2 $icon-padding $osg-space-2 $osg-space-3
@@ -21,8 +25,6 @@
     &:focus,
     &:hover
       border-color: $osg-color-blue-hover
-      ~ .osg-input-date__icon
-        color: $osg-color-blue-hover
     &[aria-invalid="true"]
       border-color: $osg-color-red
   &__icon

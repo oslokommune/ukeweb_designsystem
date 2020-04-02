@@ -10,10 +10,12 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
-
+- atoms-forms-text_field: fix A11y, adds label
+- atoms-icons-icon: fix A11y, removes aria-label (handle outside of component), adds aria-hidden
 - atoms-forms-checkbox: fixed focus state.
 - globals-colors-palette: added blue dark to palette.
 - atoms-forms-dropdown: fixes hover/focus states
+- molecules-forms-search_field: fix A11y, adds label
 - molecules-forms-search_field: fixes hover/focus states
 - utils-form-component: fixes hover/focus states
 - atoms-buttons-button: Blue light added as color option.

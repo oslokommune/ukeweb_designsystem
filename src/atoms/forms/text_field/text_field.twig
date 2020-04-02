@@ -5,6 +5,10 @@
 {% set textFieldAutocomplete = textField.autocomplete | default('on') %}
 
 <div class="osg-text-field {{ textFieldVariant }} {{ textFieldstate }} {{ textFieldModifiers }}">
+  {% if textFieldVariant == 'osg-v-default' %}
+  <label>
+    <span class="osg-sr-only">{{ textField.placeholder }}</span>
+  {% endif %}
   <input
     class="osg-text-field__input osg-u-text-5"
     id="{{ textField.id }}"
@@ -14,9 +18,11 @@
     required
     {% if textFieldVariant == 'osg-v-default' %}
       placeholder="{{ textField.placeholder }}"
-      title="{{ textField.placeholder }}"
     {% endif %}
     autocomplete="{{ textFieldAutocomplete }}"/>
+  {% if textFieldVariant == 'osg-v-default' %}
+  </label>
+  {% endif %}
   {% if textFieldVariant == 'osg-v-floating-label' %}
     <label class="osg-text-field__label osg-u-text-5" for="{{ textField.id }}">
       {{ textField.placeholder }}
