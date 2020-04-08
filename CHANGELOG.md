@@ -10,6 +10,9 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- global-icons: **BREAKING** changed style to follow BEM, use block class `.osg-icon` on all icons
+- utils-spacing: fix bloated style
+- global-font: fix blocking font face Oslo Sans with swap
 - atoms-forms-text_field: fix A11y, adds label
 - atoms-icons-icon: fix A11y, removes aria-label (handle outside of component), adds aria-hidden
 - atoms-forms-checkbox: fixed focus state.
