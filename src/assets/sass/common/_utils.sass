@@ -204,22 +204,6 @@
   .osg-u-text-grayscale-#{$name}
     color: #{$color} !important
 
-.osg-icon
-  font-family: 'Oslo Icons'
-  font-size: 32px
-  font-style: normal
-  display: inline-flex
-  line-height: 1
-  &:before,
-  &:hover:before
-    color: inherit
-
-// Generating icon classes
-@each $name, $content in $osg-icons
-  .osg-u-icon-#{$name}
-    &:before
-      content: "#{$content}"
-
 // generating text align classes
 @each $name in $osg-alignment
   .osg-u-text-#{$name}

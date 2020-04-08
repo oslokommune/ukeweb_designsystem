@@ -75,7 +75,7 @@ These classes should be added to any element to set styles directly to it.
 
 | Name                    | Description                 |
 | ----------------------- | --------------------------- |
-| .osg-u-icon-[icon name] | Specifies a predefined icon |
+| .osg-icon--[icon name] | Specifies a predefined icon |
 
 ## Body Classes
 

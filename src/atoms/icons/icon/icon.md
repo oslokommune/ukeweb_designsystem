@@ -7,4 +7,4 @@ Displays svg icons. Use in combination with an icon util class. Read the docs (i
 | Attribute | Type   | Values                    | Default                    | Description                                   |
 | --------- | ------ | ------------------------- | -------------------------- | --------------------------------------------- |
 | variant   | String | See variant options below | "osg-v-default"            | Name of the variant                           |
-| modifiers | String | Any global css class      | "osg-u-icon-chevron-right" | Root class to modify styles                   |
+| modifiers | String | Any global css class      | "osg-icon--chevron-right" | Root class to modify styles                   |
