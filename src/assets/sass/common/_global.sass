@@ -30,7 +30,6 @@ a
     color: $osg-color-purple-visited
   &:hover
     color: $osg-color-blue-hover
-    text-decoration: underline
   &:active
     color: $osg-color-blue-dark
 
@@ -68,7 +67,14 @@ h1, h2, h3, h4, h5
     @extend .osg-u-text-5
   strong
     font-weight: 500
-
+  a
+    +osg-common-underline($osg-color-blue-dark)
+    text-decoration: none
+    &:active, &:visited
+      color: $osg-color-blue-dark
+    &:hover, &:focus
+      background-image: linear-gradient(to bottom, $osg-color-blue-hover, $osg-color-blue-hover)
+      color: $osg-color-blue-hover
 
 .container.osg-is-big
   width: 100%
