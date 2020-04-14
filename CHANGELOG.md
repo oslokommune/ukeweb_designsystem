@@ -19,6 +19,8 @@ See README.md for release description.
 - molecules-forms-search_field: fixes hover/focus states
 - utils-form-component: fixes hover/focus states
 - atoms-buttons-button: Blue light added as color option.
+- global: fixed default link styles for osg-content
+- molecules-data_display-icon_link: fixed hover state 
 
 ### Added
 - global: added variable color-white
