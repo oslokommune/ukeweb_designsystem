@@ -10,6 +10,7 @@ This component is used as a search field in forms.
 | \*id          | String | Clean text content            | null            | input id attribute    |
 | \*placeholder | String | Clean text content            | null            | input placeholder attribute                       |
 | \*name        | String | Clean text content            | null            | input name attribute                                               |
+| \*label        | String | Clean text content            | null            | input label                                              |
 
 ### Modifier Options
 

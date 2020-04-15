@@ -6,13 +6,13 @@
     "icons": {
       "entries": [
         {
-          "modifiers": "osg-u-icon-calendar",
+          "modifiers": "osg-icon--calendar",
           "text": "Consequat 22.turpis<br/>kl.15:30",
           "linkText": "Dolor inn i ipsum",
           "link": "#"
         },
         {
-          "modifiers": "osg-u-icon-location-pin",
+          "modifiers": "osg-icon--location-pin",
           "text": "Aenean vitae tortor",
           "linkText": "Mauris ultrices",
           "link": "#"

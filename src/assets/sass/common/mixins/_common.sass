@@ -41,39 +41,72 @@
   min-width: 60px
   min-height: 50px
   text-decoration: none
+  &:disabled
+    background-color: $osg-color-grey-light
+    border-color: $osg-color-white
+    color: $osg-color-disabled
+    cursor: default
+
+  .osg-icon
+    margin: -8px 0
+  &--icon-right
+    .osg-icon
+      margin-left: $osg-space-2
+  &--icon-left
+    .osg-icon
+      margin-right: $osg-space-2
+
   &--circle
-    +osg-common-button-circle
+    +osg-common-button--circle
 
   @each $name, $text, $background in $osg-button-colors
     &--#{$name}
       color: $text
-      background: $background
+      background-color: $background
       border: 2px solid $background
-      &:visited
-        color: $text
-        background: $background
-        border: 2px solid $background
-      &:focus, &:hover
-        color: white
-        background: $osg-color-blue-hover
-        border-color: $osg-color-blue-hover
-        text-decoration: none
-      &.osg-button--outline.osg-button--active
-        &, &:focus, &:hover, &:visited
+      &:not(:disabled)
+        &:visited
           color: $text
           background-color: $background
+          border: 2px solid $background
+        &:focus, &:hover
+          color: white
+          background-color: $osg-color-blue-hover
+          border-color: $osg-color-blue-hover
+          text-decoration: none
+      &.osg-button--outline.osg-button--active
+        &:not(:disabled)
+          &, &:focus, &:hover, &:visited
+            color: $text
+            background-color: $background
 
   &--outline
     background-color: transparent
     color: $osg-color-blue-dark
-    &:visited
-      background-color: transparent
-      color: $osg-color-blue-dark
-    &:focus, &:hover
-      background-color: transparent
-      color: $osg-color-blue-hover
+    &:not(:disabled)
+      &:visited
+        background-color: transparent
+        color: $osg-color-blue-dark
+      &:focus, &:hover
+        background-color: transparent
+        color: $osg-color-blue-hover
 
-=osg-common-button-circle
+  &--ghost
+    background-color: transparent
+    border-color: transparent
+    &:not(:disabled)
+      \:not(.osg-icon)
+        text-decoration: underline
+      &:focus,
+      &:hover
+        background-color: $osg-color-grey-light
+        border-color: $osg-color-grey-light
+        color: $osg-color-blue-hover
+    &:disabled
+      background-color: transparent
+      border-color: transparent
+
+=osg-common-button--circle
   border-radius: 50%
   // force 1x1 ratio
   &:before
@@ -81,3 +114,28 @@
     display: inline-block
     vertical-align: middle
     padding-top: 100%
+
+=osg-common-button-circle
+  $border-size: 2px
+  $size: 36px
+  background-color: transparent
+  border: $border-size solid transparent
+  border-radius: 50%
+  display: inline-block
+  font-size: inherit
+  height: $size
+  line-height: $size - ($border-size * 2)
+  margin: $osg-space-1 / 2
+  outline: none
+  padding: 0
+  width: $size
+  &:focus,
+  &:hover:not(:disabled)
+    border-color: $osg-color-blue-hover
+    color: $osg-color-blue-hover
+
+=osg-common-underline($color)
+  background-image: linear-gradient(to bottom, $color, $color)
+  background-position: 0 1.33em
+  background-repeat: repeat-x
+  background-size: 1px 1px

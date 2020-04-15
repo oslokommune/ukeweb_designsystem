@@ -9,13 +9,46 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed
+### Fixed 
 
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.37.0] - 2020-04-15
+
+### Fixed
+- utils-spacing: fix bloated style
+- global-font: fix blocking font face Oslo Sans with swap
+- atoms-forms-text_field: fix A11y, adds label
+- atoms-icons-icon: fix A11y, removes aria-label (handle outside of component), adds aria-hidden
+- atoms-forms-checkbox: fixed focus state.
+- globals-colors-palette: added blue dark to palette.
+- atoms-forms-dropdown: fixes hover/focus states
+- molecules-forms-search_field: fix A11y, adds label
+- molecules-forms-search_field: fixes hover/focus states
+- utils-form-component: fixes hover/focus states
+- atoms-buttons-button: Blue light added as color option.
+- global: fixed default link styles for osg-content
+- molecules-data_display-icon_link: fixed hover state 
+
+### Added
+- global: added variable color-white
+- global: added variable color-disabled
+- molecules-pagination: added component
+- molecules-forms-input_date: adds component
+- utils: adds input validation
+- global: added variable color-white
+- global: added variable color-disabled
+- global: adds ghost button modifier
+
+### Removed
+
+### Changed
+- global-icons: changed style to follow BEM, use block class `.osg-icon` on all icons
+
 
 ## [0.36.2] - 2020-03-13
 
@@ -27,7 +60,7 @@ See README.md for release description.
 
 ### Fixed
 - atoms-forms-checkbox: changed textcolor for checked items from hover blue to dark blue.
-- global: adjusted header sizes based on latest values from design. 
+- global: adjusted header sizes based on latest values from design.
 
 ## [0.36.0] - 2020-03-05
 
@@ -38,7 +71,7 @@ See README.md for release description.
 
 ### Added
 
-- utils: added common form style class for easier implementation of form components. 
+- utils: added common form style class for easier implementation of form components.
 - molecules-search-search_field: added search field component for forms.
 - atoms-forms-dropdown: added single select dropdown menu for forms.
 - global: added new icons.
@@ -49,7 +82,7 @@ See README.md for release description.
 
 ### Changed
 
-- atoms-forms-checkbox: Replaced old checkbox with new styleguide design. 
+- atoms-forms-checkbox: Replaced old checkbox with new styleguide design.
 
 
 ## [0.35.10] - 2020-01-14
@@ -83,7 +116,7 @@ See README.md for release description.
 
 ### Fixed
 
-- organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image. 
+- organisms-cards-card: added null check to figure. Fix problem where empty figure renders as non existing image.
 
 ## [0.35.5] - 2019-11-01
 

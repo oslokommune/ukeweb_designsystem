@@ -13,7 +13,7 @@
     </div>
     {% embed 'atoms/buttons/button/button.twig' %}
       {% block content %}
-        <i class='osg-u-icon-{{ expandBox.buttonIcon | default('chevron-down') }}'></i>
+        <span class='osg-icon osg-icon--{{ expandBox.buttonIcon | default('chevron-down') }}'></span>
       {% endblock %}
     {% endembed %}
   </div>
