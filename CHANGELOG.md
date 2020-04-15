@@ -9,6 +9,16 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
+### Fixed 
+
+### Added
+
+### Removed
+
+### Changed
+
+## [0.37.0] - 2020-04-15
+
 ### Fixed
 - utils-spacing: fix bloated style
 - global-font: fix blocking font face Oslo Sans with swap
