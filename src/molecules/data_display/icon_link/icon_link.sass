@@ -2,6 +2,12 @@
   a
     display: flex
     flex-direction: row
+  a:hover &
+    &__heading
+      +osg-common-underline($osg-color-blue-hover)
+  
+  &__heading
+    display: inline-block
 
   &__link-icon > *
     margin: 0 15px 0 0
