@@ -4,14 +4,12 @@
     display: block
     width: 100%
     border: none
-    padding: 0
     margin: 0
     text-decoration: none
-    background: transparent
     text-align: left
     color: $osg-color-black
     background-color: white
-    padding: $osg-space-3 $osg-space-2 
+    padding: $osg-space-3 $osg-space-2
     +osg-mq-tablet-and-up
       padding: $osg-space-3
     +osg-mq-desktop-and-up
@@ -24,7 +22,6 @@
   &__overlay-wrapper
     display: none
 
-  // can't use ^= because we cannot garantee that the state modifier class is the first class defined on the element
   &--state-important &__trigger:after,
   &--state-important &__trigger:before
     position: absolute
@@ -37,6 +34,7 @@
       right: 30px
       top: 30px
 
+  &--state-critical &__trigger:after,
   &--state-critical &__trigger:before
     position: absolute
     right: 20px
@@ -57,7 +55,9 @@
         padding: $osg-space-4 ($osg-space-4 + $osg-space-3 + 32px) $osg-space-4 $osg-space-4
   &--state-important &
     &__trigger
-      @extend .osg-u-icon-exclamation-mark-circle
+      @extend .osg-icon
+      @extend .osg-icon--exclamation-mark-circle
+      font-size: inherit
       &:before
         font-size: 32px
   &--state-critical &

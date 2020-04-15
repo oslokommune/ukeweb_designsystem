@@ -1,15 +1,15 @@
 <div class="osg-u-docs-icons">
-  <p>The icons can be used as background by setting the util class to osg-u-icon- followed by the icons name.</p>
+  <p>The icons can be used as background by setting the util class to <code>osg-icon osg-icon--modifier</code> replacing the modifier with the icons name.</p>
   <br>
   <p>You can use the color-text utils to color the icons like this:</p>
-  <pre>&lt;i class="osg-u-icon-exclamation-mark-circle osg-u-color-text-red"&gt;&lt;/i&gt;</pre>
+  <pre>&lt;span class="osg-icon osg-icon--exclamation-mark-circle osg-u-color-text-red"&gt;&lt;/span&gt;</pre>
   <p>To get this:</p>
-  <i class="osg-u-icon-exclamation-mark-circle osg-u-color-text-red"></i>
+  <span class="osg-icon osg-icon--exclamation-mark-circle osg-u-color-text-red"></span>
   <br><br>
   <p>You can use the heading and text utils to change the size like this:</p>
-  <pre>&lt;i class="osg-u-icon-exclamation-mark-circle osg-u-heading-1"&gt;&lt;/i&gt;</pre>
+  <pre>&lt;span class="osg-icon osg-icon--exclamation-mark-circle osg-u-heading-1"&gt;&lt;/span&gt;</pre>
   <p>To get this:</p>
-  <i class="osg-u-icon-exclamation-mark-circle osg-u-heading-1"></i>
+  <span class="osg-icon osg-icon--exclamation-mark-circle osg-u-heading-1"></span>
   <br><br>
 </div>
 <div class="osg-icons-cols">
@@ -19,7 +19,7 @@
       {% include 'atoms/icons/icon/icon.twig'
         with {
           icon: {
-            modifiers: 'osg-u-icon-' ~ item.name
+            modifiers: 'osg-icon--' ~ item.name
           }
         }
       %}

@@ -71,12 +71,6 @@ These classes should be added to any element to set styles directly to it.
 | .osg-u-direction-[flex direction name] | Shortcut class for setting flex-direction   |
 | .osg-u-text-[text alignment name]      | Shortcut class for setting text-align value |
 
-### Icons
-
-| Name                    | Description                 |
-| ----------------------- | --------------------------- |
-| .osg-u-icon-[icon name] | Specifies a predefined icon |
-
 ## Body Classes
 
 These optional utility classes should be added to the body tag, when needed.
