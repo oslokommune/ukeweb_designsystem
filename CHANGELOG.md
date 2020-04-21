@@ -11,13 +11,17 @@ See README.md for release description.
 
 ### Fixed 
 
-- molecules-data_display-icon_link: hoverstate now works with headings spanning over multiple lines.
-
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.37.1] - 2020-04-21
+
+### Fixed 
+
+- molecules-data_display-icon_link: hoverstate now works with headings spanning over multiple lines.
 
 ## [0.37.0] - 2020-04-15
 
