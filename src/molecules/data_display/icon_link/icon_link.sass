@@ -2,12 +2,23 @@
   a
     display: flex
     flex-direction: row
+  
+  &__heading, &__description
+    display: inline
+
+  &__heading + &__description
+    display: inline-block
+
   a:hover &
     &__heading
       +osg-common-underline($osg-color-blue-hover)
-  
-  &__heading
-    display: inline
+    
+    &__description
+      +osg-common-underline($osg-color-blue-hover)
 
+    &__heading + .osg-icon-link__description
+      background-image: none
+      padding-top: $osg-space-1
+    
   &__link-icon > *
     margin: 0 15px 0 0
