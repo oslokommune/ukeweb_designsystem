@@ -11,13 +11,18 @@ See README.md for release description.
 
 ### Fixed 
 
-- molecules-data_display-icon_link: fixed bug in spacing between heading and text.
-
 ### Added
 
 ### Removed
 
 ### Changed
+
+## [0.37.1] - 2020-04-22
+
+### Fixed 
+
+- molecules-data_display-icon_link: fixed bug in spacing between heading and text.
+
 
 ## [0.37.1] - 2020-04-21
 
