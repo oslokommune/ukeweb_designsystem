@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed 
 
+- molecules-data_display-icon_link: fixed bug in spacing between heading and text.
+
 ### Added
 
 ### Removed
