@@ -4,7 +4,7 @@
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
-    "build:icons": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/atoms/icons/icon/\"",
+    "build:icons": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 1000 --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/atoms/icons/icon/\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
