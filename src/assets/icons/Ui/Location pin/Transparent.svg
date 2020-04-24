@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Location pin/Transparent</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Location-pin/Transparent" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Kart-Pin">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <g id="Group" transform="translate(2.000000, 0.000000)" fill="#2A2859">
+                <path d="M14,0 C17.392,0 20.784,1.294 23.373,3.882 C28.549,9.059 28.549,17.451 23.373,22.627 L23.373,22.627 L14,32 L4.627,22.627 C-0.549,17.451 -0.549,9.058 4.627,3.882 L4.627,3.882 L4.90742898,3.60966582 C7.45828571,1.20322194 10.7291429,0 14,0 Z M14,2 C10.994,2 8.167,3.171 6.042,5.297 C1.654,9.685 1.654,16.826 6.042,21.214 L6.042,21.214 L14,29.172 L21.958,21.213 C26.347,16.825 26.347,9.685 21.958,5.296 C19.833,3.171 17.006,2 14,2 Z M14,10.1 C15.6568542,10.1 17,11.4431458 17,13.1 C17,14.7568542 15.6568542,16.1 14,16.1 C12.3431458,16.1 11,14.7568542 11,13.1 C11,11.4431458 12.3431458,10.1 14,10.1 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

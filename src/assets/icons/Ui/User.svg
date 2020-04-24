@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/User</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/User" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bruker">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <g id="Group" transform="translate(1.000000, 1.000000)" fill="#2A2859">
+                <path d="M15,0 C23.284,0 30,6.716 30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 Z M19.307,19 L10.693,19 L8.075,25.983 C10.083,27.253 12.453,28 15,28 C17.547,28 19.917,27.253 21.925,25.983 L21.925,25.983 L19.307,19 Z M15,2 C7.832,2 2,7.832 2,15 C2,18.873 3.712,22.346 6.408,24.73 L6.408,24.73 L9.307,17 L20.693,17 L23.592,24.73 C26.288,22.346 28,18.873 28,15 C28,7.832 22.168,2 15,2 Z M15,7.6 C17.0434536,7.6 18.7,9.25654643 18.7,11.3 C18.7,13.3434536 17.0434536,15 15,15 C12.9565464,15 11.3,13.3434536 11.3,11.3 C11.3,9.25654643 12.9565464,7.6 15,7.6 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

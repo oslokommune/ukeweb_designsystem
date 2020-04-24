@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Skilt/Handicap</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Skilt/Handicap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Handicap">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <g id="Group" transform="translate(8.000000, 2.000000)" fill="#2A2859">
+                <path d="M11,7 L11,15.26 C11.316,15.481 11.613,15.726 11.888,15.994 L11.888,15.994 L17,17.209 L17,26 L15,26 L15,18.791 L13.51,18.439 C13.823,19.233 14,20.095 14,21 C14,24.866 10.866,28 7,28 C3.134,28 0,24.866 0,21 C0,18.357 1.465,16.059 3.627,14.867 L3.627,14.867 L2.921,13.221 L5.313,7 L11,7 Z M7,16 C6.766,16 6.543,16.038 6.317,16.069 L6.317,16.069 L7.919,19.807 L6.081,20.594 L4.427,16.735 C2.979,17.612 2,19.187 2,21 C2,23.757 4.243,26 7,26 C9.757,26 12,23.757 12,21 C12,18.243 9.757,16 7,16 Z M9,9 L6.687,9 L5.079,13.18 L5.501,14.165 C5.985,14.059 6.485,14 7,14 C7.695,14 8.366,14.105 9,14.294 L9,14.294 L9,9 Z M9.5,0 C10.8807119,0 12,1.11928813 12,2.5 C12,3.88071187 10.8807119,5 9.5,5 C8.11928813,5 7,3.88071187 7,2.5 C7,1.11928813 8.11928813,0 9.5,0 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Skilt/Tram</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Skilt/Tram" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trikk">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <g id="Group" transform="translate(4.000000, 0.000000)" fill="#2A2859">
+                <path d="M7.177,28 L5.977,32 L3.823,32 L5.023,28 L7.177,28 Z M18.654,28 L19.854,32 L17.7,32 L16.5,28 L18.654,28 Z M20.449,0 L20.712,5 L24,5 L24,12 L22,12 L22,7 L20.817,7 L21.504,20.057 L20.347,27 L3.653,27 L2.496,20.057 L3.183,7 L2,7 L2,12 L0,12 L0,5 L3.288,5 L3.551,0 L20.449,0 Z M19.32,21 L4.68,21 L4.847,22 L8.5,22 L8.5,23.317 L5.162,23.887 L5.347,25 L18.653,25 L18.839,23.887 L15.5,23.317 L15.5,22 L19.153,22 L19.32,21 Z M18.815,7 L5.186,7 L4.554,19 L19.446,19 L18.815,7 Z M18.551,2 L5.449,2 L5.291,5 L18.709,5 L18.551,2 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Skilt/Dog</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Skilt/Dog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hund">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <g id="Group" transform="translate(0.000000, 1.000000)" fill="#2A2859">
+                <path d="M24.772,5.27 L26.085,5.845 L25.331,8.163 L32,9.116 L32,10.567 C32,12.449 30.725,14.083 28.899,14.54 L28.899,14.54 L26.557,14.908 L25.606,16.175 L26.707,17.276 L25.293,18.69 L24.394,17.791 L24,18.316 L24,28.983 L22,28.983 L22,24.765 L9.376,22.02 L6,26.541 L6,29 L4,29 L4,15.251 L0.476,11.699 L1.54,10.706 L5.477,14 L18.758,13.984 L19.667,13.064 L18.293,11.69 L19.707,10.276 L20.883,11.452 L23.079,8.543 L24.772,5.27 Z M21.095,14.491 L19.71,15.983 L6,16 L6,23.496 L8.672,19.784 L22,22.702 L22,17.65 L22.966,16.362 L21.095,14.491 Z M24.443,10.057 L22.311,12.881 L24.177,14.747 L25.444,13.058 L28.501,12.581 C29.264,12.387 29.869,11.689 29.981,10.848 L29.981,10.848 L24.443,10.057 Z M9.6949879,0.2646083 L18.195037,8.7646574 L16.780837,10.1788574 L8.2807879,1.6788083 L9.6949879,0.2646083 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

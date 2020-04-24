@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Smilies/Sad</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Smilies/Sad" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sad" fill-rule="nonzero">
+            <g id="Group" opacity="0" fill="#EAEAEA">
+                <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+            </g>
+            <path d="M16,1 C24.2842712,1 31,7.71572875 31,16 C31,24.2842712 24.2842712,31 16,31 C7.71572875,31 1,24.2842712 1,16 C1,7.71572875 7.71572875,1 16,1 Z M16,3 C8.82029825,3 3,8.82029825 3,16 C3,23.1797017 8.82029825,29 16,29 C23.1797017,29 29,23.1797017 29,16 C29,8.82029825 23.1797017,3 16,3 Z M16,15.9640383 C19.7118238,15.9640383 23.1090072,18.0188502 24.8376183,21.2846189 L24.9777778,21.5595513 L23.1822222,22.4404487 C21.8379975,19.7004812 19.051944,17.9640383 16,17.9640383 C13.0434293,17.9640383 10.3363906,19.5936493 8.94798707,22.1865391 L8.81777778,22.4404487 L7.02222222,21.5595513 C8.70250319,18.1345919 12.18507,15.9640383 16,15.9640383 Z" id="Combined-Shape" fill="#2A2859"></path>
+            <circle id="Oval" fill="#2A2859" cx="12" cy="11.96" r="2"></circle>
+            <circle id="Oval" fill="#2A2859" cx="20" cy="11.96" r="2"></circle>
+        </g>
+    </g>
+</svg>

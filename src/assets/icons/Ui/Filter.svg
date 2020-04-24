@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Filter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Filter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Filter">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <path d="M3,3 L3,11 L12,20 L12,29 L20,29 L20,20.249 L29,11 L29,3 L3,3 Z M27,5 L27,9 L5,9 L5,5 L27,5 Z M18,19.437 L18,27 L14,27 L14,19.172 L5.828,11 L26.209,11 L18,19.437 Z" id="Shape" fill="#2A2859"></path>
+        </g>
+    </g>
+</svg>

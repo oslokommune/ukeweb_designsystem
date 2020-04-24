@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Skilt/Cafe</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Skilt/Cafe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Kafe">
+            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
+            <path d="M29,27 L29,29 L3,29 L3,27 L29,27 Z M29,14 L29,19 L27,18.946 L27,15.946 L25.1,16 C24.596,21.089 20.293,25.076 15.075,25.076 C9.52,25.076 5,20.556 5,15 L5,15 L5,14 L29,14 Z M23.089,16 L7.062,16 C7.556,19.983 10.961,23.076 15.075,23.076 C19.189,23.076 22.594,19.983 23.089,16 L23.089,16 Z M18.331,2.447 L19.682,5.101 L18.373,9.122 L19.369,11.079 L17.586,11.986 L16.215,9.291 L17.523,5.27 L16.549,3.354 L18.331,2.447 Z M13.528,2.447 L14.878,5.101 L13.57,9.122 L14.565,11.079 L12.783,11.986 L11.412,9.291 L12.72,5.27 L11.746,3.354 L13.528,2.447 Z" id="Combined-Shape" fill="#2A2859"></path>
+        </g>
+    </g>
+</svg>
