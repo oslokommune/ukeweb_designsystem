@@ -9,24 +9,26 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed 
+### Fixed
 
 ### Added
 
 ### Removed
+- atoms-icons-icon: removes duplicate helthcare icon
 
 ### Changed
+- atoms-icons-icon: changes x icon name to close
 
 ## [0.37.1] - 2020-04-22
 
-### Fixed 
+### Fixed
 
 - molecules-data_display-icon_link: fixed bug in spacing between heading and text.
 
 
 ## [0.37.1] - 2020-04-21
 
-### Fixed 
+### Fixed
 
 - molecules-data_display-icon_link: hoverstate now works with headings spanning over multiple lines.
 
@@ -45,7 +47,7 @@ See README.md for release description.
 - utils-form-component: fixes hover/focus states
 - atoms-buttons-button: Blue light added as color option.
 - global: fixed default link styles for osg-content
-- molecules-data_display-icon_link: fixed hover state 
+- molecules-data_display-icon_link: fixed hover state
 
 ### Added
 - global: added variable color-white

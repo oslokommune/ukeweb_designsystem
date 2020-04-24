@@ -5,7 +5,6 @@
     <desc>Created with Sketch.</desc>
     <g id="Atoms/Ikoner/Ui/Download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Download">
-            <polygon id="Fill-1" fill="#FFD400" opacity="0" points="0 32 32 32 32 0.001 0 0.001"></polygon>
             <path d="M3.0003,19.8753 L3,29 L29,29 L29.0003,20.0003 L31.0003,20.0003 L31.0003,31.0003 L1.0003,31.0003 L1.0003,19.8753 L3.0003,19.8753 Z M23.0002,23.7503 L23.0002,26.2503 L9.0002,26.2503 L9.0002,23.7503 L23.0002,23.7503 Z M17.0003,1.0003 L17.0003,18.2093 L22.2930932,12.9181932 L23.7073068,14.3324068 L16.0002,22.0395136 L8.29309322,14.3324068 L9.70730678,12.9181932 L15.0003,18.2113 L15.0003,1.0003 L17.0003,1.0003 Z" id="Combined-Shape" fill="#2A2859" fill-rule="nonzero"></path>
         </g>
     </g>

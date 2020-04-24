@@ -5,7 +5,6 @@
     <desc>Created with Sketch.</desc>
     <g id="Atoms/Ikoner/Skilt/Museum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Museum">
-            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
             <g id="Group" transform="translate(1.000000, 1.000000)" fill="#2A2859">
                 <path d="M15,0 L30,7.5 L30,13 L27,13 L27,24 L30,24 L30,30 L0,30 L0,24 L3,24 L3,13 L0,13 L0,7.5 L15,0 Z M28,26 L2,26 L2,28 L28,28 L28,26 Z M7,13 L5,13 L5,24 L7,24 L7,13 Z M12,13 L9,13 L9,24 L12,24 L12,13 Z M16,13 L14,13 L14,24 L16,24 L16,13 Z M21,13 L18,13 L18,24 L21,24 L21,13 Z M25,13 L23,13 L23,24 L25,24 L25,13 Z M15,2.236 L2,8.736 L2,11 L28,11 L28,8.736 L15,2.236 Z M13.802,4.755 L14.996,8.118 L15.026,8.118 L16.168,4.755 L18,4.755 L18,10 L16.756,10 L16.785,6.289 L16.763,6.289 L15.4,10 L14.511,10 L13.185,6.289 L13.163,6.289 L13.193,10 L12,10 L12,4.755 L13.802,4.755 Z" id="Combined-Shape"></path>
             </g>

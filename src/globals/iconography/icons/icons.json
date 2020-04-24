@@ -13,207 +13,73 @@
   },
   "icons": {
     "items": [
-      {
-        "name": "chevron-right"
-      },
-      {
-        "name": "chevron-down"
-      },
-      {
-        "name": "chevron-left"
-      },
-      {
-        "name": "chevron-up"
-      },
-      {
-        "name": "24h"
-      },
-      {
-        "name": "backpack"
-      },
-      {
-        "name": "bike"
-      },
-      {
-        "name": "bus"
-      },
-      {
-        "name": "cafe"
-      },
-      {
-        "name": "calendar"
-      },
-      {
-        "name": "coin-stacks"
-      },
-      {
-        "name": "crane"
-      },
-      {
-        "name": "dog"
-      },
-      {
-        "name": "drone"
-      },
-      {
-        "name": "exclamation-mark-circle"
-      },
-      {
-        "name": "filter"
-      },
-      {
-        "name": "fire-emblem"
-      },
-      {
-        "name": "handicap"
-      },
-      {
-        "name": "house-heart"
-      },
-      {
-        "name": "location-pin"
-      },
-      {
-        "name": "magnifying-glass-big"
-      },
-      {
-        "name": "magnifying-glass-small"
-      },
-      {
-        "name": "menu"
-      },
-      {
-        "name": "minus-sign"
-      },
-      {
-        "name": "museum"
-      },
-      {
-        "name": "park"
-      },
-      {
-        "name": "plus-sign"
-      },
-      {
-        "name": "recycling"
-      },
-      {
-        "name": "restaurant"
-      },
-      {
-        "name": "swingset"
-      },
-      {
-        "name": "toilet"
-      },
-      {
-        "name": "tram"
-      },
-      {
-        "name": "user"
-      },
-      {
-        "name": "water-faucet"
-      },
-      {
-        "name": "close"
-      },
-      {
-        "name": "facebook"
-      },
-      {
-        "name": "instagram"
-      },
-      {
-        "name": "linked-in"
-      },
-      {
-        "name": "twitter"
-      },
-      {
-        "name": "heart-plus"
-      },
-      {
-        "name": "clock"
-      },
-      {
-        "name": "garbage"
-      },
-      {
-        "name": "tickets"
-      },
-      {
-        "name": "email"
-      },
-      {
-        "name": "chevron-thin-up"
-      },
-      {
-        "name": "chevron-thin-down"
-      },
-      {
-        "name": "elevator"
-      },
-      {
-        "name": "street-vendor"
-      },
-      {
-        "name": "coffee-cup"
-      },
-      {
-        "name": "defibrillator"
-      },
-      {
-        "name": "bathroom"
-      },
-      {
-        "name": "healthcare"
-      },
-      {
-        "name": "livingroom"
-      },
-      {
-        "name": "wardrobe"
-      },
-      {
-        "name": "bedroom"
-      },
-      {
-        "name": "wifi"
-      },
-      {
-        "name": "stairs"
-      },
-      {
-        "name": "download"
-      },
-      {
-        "name": "expand"
-      },
-      {
-        "name": "minimize"
-      },
-      {
-        "name": "attachment"
-      },
-      {
-        "name": "edit"
-      },
-      {
-        "name": "thumbs-up"
-      },
-      {
-        "name": "thumbs-down"
-      },
-      {
-        "name": "smile"
-      },
-      {
-        "name": "neutral"
-      },
-      {
-        "name": "sad"
-      }
+      { "name": "24h" },
+      { "name": "attachment" },
+      { "name": "backpack" },
+      { "name": "bathroom" },
+      { "name": "bedroom" },
+      { "name": "bike" },
+      { "name": "bus" },
+      { "name": "cafe" },
+      { "name": "calendar" },
+      { "name": "chevron-down" },
+      { "name": "chevron-left" },
+      { "name": "chevron-right" },
+      { "name": "chevron-thin-down" },
+      { "name": "chevron-thin-up" },
+      { "name": "chevron-up" },
+      { "name": "clock" },
+      { "name": "close" },
+      { "name": "coffee-cup" },
+      { "name": "coin-stacks" },
+      { "name": "crane" },
+      { "name": "defibrillator" },
+      { "name": "dog" },
+      { "name": "download" },
+      { "name": "drone" },
+      { "name": "edit" },
+      { "name": "elevator" },
+      { "name": "email" },
+      { "name": "exclamation-mark-circle" },
+      { "name": "exclamation-mark-square" },
+      { "name": "expand" },
+      { "name": "facebook" },
+      { "name": "filter" },
+      { "name": "fire-emblem" },
+      { "name": "garbage" },
+      { "name": "handicap" },
+      { "name": "heart-plus" },
+      { "name": "house-heart" },
+      { "name": "instagram" },
+      { "name": "linked-in" },
+      { "name": "livingroom" },
+      { "name": "location-pin" },
+      { "name": "magnifying-glass-big" },
+      { "name": "magnifying-glass-small" },
+      { "name": "menu" },
+      { "name": "minimize" },
+      { "name": "minus-sign" },
+      { "name": "museum" },
+      { "name": "neutral" },
+      { "name": "park" },
+      { "name": "plus-sign" },
+      { "name": "recycling" },
+      { "name": "restaurant" },
+      { "name": "sad" },
+      { "name": "smile" },
+      { "name": "stairs" },
+      { "name": "street-vendor" },
+      { "name": "swingset" },
+      { "name": "thumbs-down" },
+      { "name": "thumbs-up" },
+      { "name": "tickets" },
+      { "name": "toilet" },
+      { "name": "tram" },
+      { "name": "twitter" },
+      { "name": "user" },
+      { "name": "wardrobe" },
+      { "name": "water-faucet" },
+      { "name": "wifi" }
     ]
   }
 }

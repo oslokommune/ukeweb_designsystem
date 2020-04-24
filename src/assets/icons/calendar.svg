@@ -5,7 +5,6 @@
     <desc>Created with Sketch.</desc>
     <g id="Atoms/Ikoner/Ui/Calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Kalender">
-            <polygon id="Path" points="0 0 32 0 32 32 0 32"></polygon>
             <g id="Group" transform="translate(3.000000, 2.000000)" fill="#2A2859">
                 <path d="M6,0 L6,3 L20,3 L20,0 L22,0 L22,3 L26,3 L26,28 L0,28 L0,3 L4,3 L4,0 L6,0 Z M24,11 L2,11 L2,26 L24,26 L24,11 Z M18,14 C19.6568542,14 21,15.3431458 21,17 C21,18.6568542 19.6568542,20 18,20 C16.3431458,20 15,18.6568542 15,17 C15,15.3431458 16.3431458,14 18,14 Z M24,5 L2,5 L2,9 L24,9 L24,5 Z" id="Combined-Shape"></path>
             </g>
