@@ -15,6 +15,7 @@ See README.md for release description.
 
 ### Removed
 - atoms-icons-icon: removes duplicate helthcare icon
+- atoms-icons-icon: replaces old unicode characters. if icons have been used w/o the icon component you need to migrate by replacing, ie for chevron-right `content: "\e908"` with `content: map.get($osg-icons, "chevron-right")`
 
 ### Changed
 - atoms-icons-icon: changes x icon name to close
