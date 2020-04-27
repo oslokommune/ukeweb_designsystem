@@ -5,6 +5,8 @@
 // Using scss syntax for this to enable multiline maps
 // https://github.com/sass/sass/issues/1088
 
+@import "_iconMap";
+
 $osg-colors: (
   "white": $osg-color-white,
   "beige": $osg-color-beige,
