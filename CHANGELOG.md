@@ -9,9 +9,10 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed 
+### Fixed
 
 ### Added
+- global-font: adds woff2 format
 
 ### Removed
 
@@ -19,14 +20,14 @@ See README.md for release description.
 
 ## [0.37.2] - 2020-04-22
 
-### Fixed 
+### Fixed
 
 - molecules-data_display-icon_link: fixed bug in spacing between heading and text.
 
 
 ## [0.37.1] - 2020-04-21
 
-### Fixed 
+### Fixed
 
 - molecules-data_display-icon_link: hoverstate now works with headings spanning over multiple lines.
 
@@ -45,7 +46,7 @@ See README.md for release description.
 - utils-form-component: fixes hover/focus states
 - atoms-buttons-button: Blue light added as color option.
 - global: fixed default link styles for osg-content
-- molecules-data_display-icon_link: fixed hover state 
+- molecules-data_display-icon_link: fixed hover state
 
 ### Added
 - global: added variable color-white
