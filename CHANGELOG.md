@@ -18,7 +18,7 @@ See README.md for release description.
 
 ### Changed
 
-## [0.37.1] - 2020-04-22
+## [0.37.2] - 2020-04-22
 
 ### Fixed
 
