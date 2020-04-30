@@ -10,6 +10,7 @@
   </button>
 {% endif %}
   <video id="video"
+         class="osg-video__video"
     {{ video.variant is defined and video.variant == "osg-v-default" ? "controls" : "" }}
     preload="auto"
     {% if video.posterUrl %}

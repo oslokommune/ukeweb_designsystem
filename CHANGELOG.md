@@ -20,6 +20,7 @@ See README.md for release description.
 
 ### Changed
 - atoms-icons-icon: changes x icon name to close
+- organisms-media-video: changes styling to follow BEM and not element selectors
 
 ## [0.37.2] - 2020-04-22
 
