@@ -1,6 +1,9 @@
 {% set heroIsLinkFullSize = hero.link is defined and hero.link is not empty %}
 {% set heroVariant = hero.variant | default(null) %}
 {% set heroModifiers = hero.modifiers | default(null) %}
+{% if 'osg-hero--circle' in heroModifiers %}
+  {% set shapeModifiers = 'osg-shape--circle' %}
+{% endif %}
 
 {% if heroIsLinkFullSize %}
   <a href="{{ hero.link.url }}" title="{{ hero.link.title }}" class="osg-hero {{ heroVariant }} {{ heroModifiers }}">
@@ -8,7 +11,7 @@
   <div class="osg-hero {{ heroVariant }} {{ heroModifiers }}">
 {% endif %}
   <div class="osg-hero__image">
-    {% include 'atoms/decorators/shape/shape.twig' %}
+    {% include 'atoms/decorators/shape/shape.twig' with { 'shape': { 'variant': 'osg-v-image', 'modifiers': shapeModifiers | default(null) } } %}
   </div>
   <div class="osg-hero__content">
     {% block content %}
