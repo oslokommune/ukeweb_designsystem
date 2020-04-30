@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Time</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Time" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Time" transform="translate(1.000000, 1.000000)" fill="#2A2859">
+            <path d="M15,0 C23.28375,0 30,6.71625 30,15 C30,23.285 23.28375,30 15,30 C6.71625,30 0,23.285 0,15 C0,6.71625 6.71625,0 15,0 Z M15,2.14875 C7.9025,2.14875 2.14875,7.9025 2.14875,15 C2.14875,22.09625 7.9025,27.85125 15,27.85125 C22.0975,27.85125 27.85125,22.09625 27.85125,15 C27.85125,7.9025 22.0975,2.14875 15,2.14875 Z M15,6 L15,15 L22,14.4047422 L22,17 L13,17 L13,6 L15,6 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Skilt/Drone</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Skilt/Drone" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Drone">
+            <g id="Group" transform="translate(0.000000, 8.000000)" fill="#2A2859">
+                <path d="M10,6.25277607e-13 L10,1 L6,1.8 L6,4 L26,4 L26,1.8 L22,1 L22,6.25277607e-13 L32,6.25277607e-13 L32,1 L28,1.8 L28,4 L30,4 L30,9 L25.083,10.147 L26.962,16.725 L25.038,17.274 L23.138,10.624 L22,10.903 L21,15 L11,15 L10,10.92 L8.857,10.64 L6.961,17.274 L5.038,16.725 L6.913,10.164 L2,9 L2,4 L4,4 L4,1.8 L0,1 L0,6.25277607e-13 L10,6.25277607e-13 Z M28.045,6 L3.969,6 L3.948,7.38 L10.475,8.978 L11.653,9.266 L11.942,10.444 L12.569,13 L19.429,13 L20.057,10.429 L20.345,9.249 L21.524,8.96 L28.024,7.368 L28.045,6 Z M16,9 C16.5522847,9 17,9.44771525 17,10 C17,10.5522847 16.5522847,11 16,11 C15.4477153,11 15,10.5522847 15,10 C15,9.44771525 15.4477153,9 16,9 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
