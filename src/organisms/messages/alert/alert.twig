@@ -17,9 +17,7 @@
       {% endfor %}
     {% endif %}
   >
-    {% if 'osg-alert--state-important' in alertModifiers %}
-      {% include 'atoms/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--exclamation-mark-circle' } } %}
-    {% endif %}
+    {% include 'atoms/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--exclamation-mark-circle' } } %}
     {% block content %}
     {% endblock %}
   </a>
