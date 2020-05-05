@@ -17,6 +17,7 @@
       {% endfor %}
     {% endif %}
   >
+    {% include 'atoms/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--exclamation-mark-circle' } } %}
     {% block content %}
     {% endblock %}
   </a>

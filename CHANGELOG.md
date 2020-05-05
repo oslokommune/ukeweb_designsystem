@@ -20,6 +20,7 @@ See README.md for release description.
 
 ### Changed
 - atoms-icons-icon: changes x icon name to close
+- organisms-messages-alert: moves important icon from style to markup
 
 ## [0.37.2] - 2020-04-22
 

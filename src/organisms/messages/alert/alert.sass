@@ -18,12 +18,14 @@
       text-decoration: none
       cursor: pointer
       color: initial
+    .osg-icon
+      display: none
   &__overlay,
   &__overlay-wrapper
     display: none
 
-  &--state-important &__trigger:after,
-  &--state-important &__trigger:before
+  &--state-important &__trigger .osg-icon
+    display: inline-flex
     position: absolute
     right: 10px
     top: 15px
@@ -55,8 +57,6 @@
         padding: $osg-space-4 ($osg-space-4 + $osg-space-3 + 32px) $osg-space-4 $osg-space-4
   &--state-important &
     &__trigger
-      @extend .osg-icon
-      @extend .osg-icon--exclamation-mark-circle
       font-size: inherit
       &:before
         font-size: 32px
