@@ -174,7 +174,7 @@
 
 // generating typography classes for headers
 @each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-typographies-header
-  .osg-u-heading-#{$name}
+  .osg-u-heading-#{$name}, %osg-u-heading-#{$name}
     font-size: $size-mobile !important
     font-weight: $weight !important
     @if $name == "1"
@@ -188,7 +188,7 @@
 
 // generating typography classes for other text
 @each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-typographies
-  .osg-u-text-#{$name}
+  .osg-u-text-#{$name}, %osg-u-text-#{$name}
     font-size: $size-mobile !important
     line-height: 1.5em !important
     font-weight: $weight !important
