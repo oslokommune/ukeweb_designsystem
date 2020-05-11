@@ -10,11 +10,13 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- utils: Added placeholder selectors for icon and typography styles
 
 ### Added
 - global-font: adds woff2 format
 
 ### Removed
+- organisms-headings-promo: removed pattern
 
 ### Changed
 
