@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Close</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Path" fill="#2A2859" points="14.5333333 16 5 6.46666667 6.46666667 5 16 14.5333333 25.5333333 5 27 6.46666667 17.4666667 16 27 25.5333333 25.5333333 27 16 17.4666667 6.46666667 27 5 25.5333333"></polygon>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="close"><polygon id="Path" class="cls-1" points="14.53 16 5 6.47 6.47 5 16 14.53 25.53 5 27 6.47 17.47 16 27 25.53 25.53 27 16 17.47 6.47 27 5 25.53 14.53 16"/></g></svg>

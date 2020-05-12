@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Chevron/Chevron-left</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Chevron/Chevron-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M6.85714286,15.8571429 L16.8571429,25.8571429 L21.1428571,21.5714286 L15.4285714,15.8571429 L21.1428571,10.1428571 L16.8571429,5.85714286 L6.85714286,15.8571429 Z M24,10.1428571 L18.2857143,15.8571429 L24,21.5714286 L16.8571429,28.7142857 L4,15.8571429 L16.8571429,3 L24,10.1428571 Z" id="Shape" fill="#2A2859"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="chevron-left"><path id="Shape" class="cls-1" d="M6.86,15.86l10,10,4.28-4.29-5.71-5.71,5.71-5.72L16.86,5.86ZM24,10.14l-5.71,5.72L24,21.57l-7.14,7.14L4,15.86,16.86,3Z"/></g></svg>

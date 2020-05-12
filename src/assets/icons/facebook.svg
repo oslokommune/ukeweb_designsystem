@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Social/Facebook</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Social/Facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M16,3 C8.82029297,3 3,8.85586276 3,16.0794474 C3,22.6077777 7.75391211,28.018786 13.96875,29 L13.96875,19.8602252 L10.6679688,19.8602252 L10.6679688,16.0794474 L13.96875,16.0794474 L13.96875,13.1978817 C13.96875,9.91984515 15.9095586,8.10915915 18.879043,8.10915915 C20.3013496,8.10915915 21.7890625,8.36461711 21.7890625,8.36461711 L21.7890625,11.5833874 L20.149793,11.5833874 C18.534873,11.5833874 18.03125,12.5916033 18.03125,13.6259526 L18.03125,16.0794474 L21.6367188,16.0794474 L21.0603516,19.8602252 L18.03125,19.8602252 L18.03125,29 C24.2460879,28.018786 29,22.6077777 29,16.0794474 C29,8.85586276 23.179707,3 16,3 Z" id="Facebook-icon" fill="#2A2859"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="facebook"><path id="Facebook-icon" class="cls-1" d="M16,3a13.09,13.09,0,0,0-2,26V19.86h-3.3V16.08H14V13.2c0-3.28,1.94-5.09,4.91-5.09a20.34,20.34,0,0,1,2.91.25v3.22H20.15A1.89,1.89,0,0,0,18,13.63v2.45h3.61l-.58,3.78H18V29A13.09,13.09,0,0,0,16,3Z"/></g></svg>

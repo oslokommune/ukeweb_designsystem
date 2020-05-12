@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Tjenester/Heart-plus</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Tjenester/Heart-plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Bolig-og-sosiale-tjenester">
-            <path d="M16,1 L28,11 L28,32 L4,32 L4,2 L9.781,2 L10.646,5.461 L16,1 Z M16,3.604 L6,11.937 L6,30 L26,30 L26,11.937 L16,3.604 Z M10.184,14.184 C11.759,12.607 14.323,12.608 15.9,14.184 L15.9,14.184 L15.999,14.285 L16.099,14.185 C17.675,12.609 20.24,12.609 21.816,14.185 C23.391,15.76 23.391,18.325 21.816,19.901 L21.816,19.901 L16,25.717 L10.184,19.9 C8.608,18.324 8.608,15.76 10.184,14.184 Z M20.403,15.598 C19.606,14.802 18.311,14.802 17.514,15.598 L17.514,15.598 L16,17.112 L14.486,15.599 C14.088,15.201 13.565,15.002 13.042,15.002 C12.519,15.002 11.996,15.201 11.598,15.599 C10.802,16.395 10.802,17.69 11.598,18.487 L11.598,18.487 L16,22.889 L20.403,18.486 C21.199,17.69 21.199,16.394 20.403,15.598 Z M8.219,4 L6,4 L6,9.333 L8.94,6.883 L8.219,4 Z" id="Combined-Shape" fill="#2A2859"></path>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="house-heart"><path id="Combined-Shape" class="cls-1" d="M16,1,28,11V32H4V2H9.78l.87,3.46Zm0,2.6L6,11.94V30H26V11.94ZM10.18,14.18a4.06,4.06,0,0,1,5.72,0h0l.1.1.1-.1a4,4,0,0,1,5.72,5.72h0L16,25.72,10.18,19.9A4.06,4.06,0,0,1,10.18,14.18ZM20.4,15.6a2,2,0,0,0-2.89,0h0L16,17.11,14.49,15.6A2.05,2.05,0,0,0,13,15a2,2,0,0,0-1.44,3.49h0l4.4,4.4,4.4-4.4A2,2,0,0,0,20.4,15.6ZM8.22,4H6V9.33L8.94,6.88Z"/></g></svg>

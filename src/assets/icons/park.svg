@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Tjenester/Park</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Tjenester/Park" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Natur,-kultur-og-fritid">
-            <g id="Group" fill="#2A2859">
-                <path d="M5,29 L5,32 L3,32 L3,29 L5,29 Z M19,29 L19,32 L17,32 L17,29 L19,29 Z M25,0 C28.866,0 32,3.134 32,7 C32,10.526 29.391,13.434 26,13.92 L26,13.92 L26,17.086 L27.793,15.293 L29.207,16.707 L26,19.914 L26,32 L24,32 L24,13.92 C20.609,13.434 18,10.526 18,7 C18,3.134 21.134,0 25,0 Z M22,26 L22,28 L0,28 L0,26 L22,26 Z M22,19 L22,21 L19,21 L19,22 L22,22 L22,24 L19,24 L19,25 L17,25 L17,24 L5,24 L5,25 L3,25 L3,24 L0,24 L0,22 L3,22 L3,21 L0,21 L0,19 L22,19 Z M17,21 L5,21 L5,22 L17,22 L17,21 Z M25,2 C22.243,2 20,4.243 20,7 C20,9.757 22.243,12 25,12 C27.757,12 30,9.757 30,7 C30,4.243 27.757,2 25,2 Z M11.999,4.003 L12,6.003 C10.731,6.004 9.565,6.586 8.801,7.601 L8.801,7.601 L8.501,8 L7.503,8 L7.199,7.602 C6.435,6.586 5.269,6.004 4,6.003 L4,6.003 L4,4.003 C5.503,4.004 6.911,4.549 8,5.528 C9.089,4.548 10.496,4.003 11.999,4.003 L11.999,4.003 Z" id="Combined-Shape"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="park"><path id="Combined-Shape" class="cls-1" d="M5,29v3H3V29Zm14,0v3H17V29ZM25,0a7,7,0,0,1,1,13.92h0v3.17l1.79-1.8,1.42,1.42L26,19.91V32H24V13.92A7,7,0,0,1,25,0ZM22,26v2H0V26Zm0-7v2H19v1h3v2H19v1H17V24H5v1H3V24H0V22H3V21H0V19Zm-5,2H5v1H17ZM25,2a5,5,0,1,0,5,5A5,5,0,0,0,25,2ZM12,4V6A4,4,0,0,0,8.8,7.6h0L8.5,8h-1l-.3-.4A4,4,0,0,0,4,6H4V4A6,6,0,0,1,8,5.53,6,6,0,0,1,12,4Z"/></g></svg>

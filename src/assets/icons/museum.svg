@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Skilt/Museum</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Skilt/Museum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Museum">
-            <g id="Group" transform="translate(1.000000, 1.000000)" fill="#2A2859">
-                <path d="M15,0 L30,7.5 L30,13 L27,13 L27,24 L30,24 L30,30 L0,30 L0,24 L3,24 L3,13 L0,13 L0,7.5 L15,0 Z M28,26 L2,26 L2,28 L28,28 L28,26 Z M7,13 L5,13 L5,24 L7,24 L7,13 Z M12,13 L9,13 L9,24 L12,24 L12,13 Z M16,13 L14,13 L14,24 L16,24 L16,13 Z M21,13 L18,13 L18,24 L21,24 L21,13 Z M25,13 L23,13 L23,24 L25,24 L25,13 Z M15,2.236 L2,8.736 L2,11 L28,11 L28,8.736 L15,2.236 Z M13.802,4.755 L14.996,8.118 L15.026,8.118 L16.168,4.755 L18,4.755 L18,10 L16.756,10 L16.785,6.289 L16.763,6.289 L15.4,10 L14.511,10 L13.185,6.289 L13.163,6.289 L13.193,10 L12,10 L12,4.755 L13.802,4.755 Z" id="Combined-Shape"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="museum"><path id="Combined-Shape" class="cls-1" d="M16,1,31,8.5V14H28V25h3v6H1V25H4V14H1V8.5ZM29,27H3v2H29ZM8,14H6V25H8Zm5,0H10V25h3Zm4,0H15V25h2Zm5,0H19V25h3Zm4,0H24V25h2ZM16,3.24,3,9.74V12H29V9.74ZM14.8,5.75,16,9.12h0l1.14-3.37H19V11H17.76l0-3.71h0L16.4,11h-.89L14.19,7.29h0l0,3.71H13V5.75Z"/></g></svg>

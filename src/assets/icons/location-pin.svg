@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Location pin/Red</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Location-pin/Red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Kart-Pin">
-            <path d="M16,0 C19.392,0 22.784,1.294 25.373,3.882 C30.549,9.059 30.549,17.451 25.373,22.627 L25.373,22.627 L16,32 L6.627,22.627 C1.451,17.451 1.451,9.058 6.627,3.882 L6.627,3.882 L6.90742898,3.60966582 C9.45828571,1.20322194 12.7291429,0 16,0 Z M16,2 C12.994,2 10.167,3.171 8.042,5.297 C3.654,9.685 3.654,16.826 8.042,21.214 L8.042,21.214 L16,29.172 L23.958,21.213 C28.347,16.825 28.347,9.685 23.958,5.296 C21.833,3.171 19.006,2 16,2 Z" id="Combined-Shape" fill="#2A2859"></path>
-            <circle id="Oval" fill="#2A2859" cx="16" cy="13.1" r="3"></circle>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="lacation-pin"><path id="Combined-Shape" class="cls-1" d="M16,0a13.26,13.26,0,0,1,9.37,22.63h0L16,32,6.63,22.63a13.25,13.25,0,0,1,0-18.75h0l.28-.27A13.19,13.19,0,0,1,16,0Zm0,2A11.26,11.26,0,0,0,8,21.21H8l8,8,8-8A11.26,11.26,0,0,0,16,2Z"/><circle id="Oval" cx="16" cy="13.1" r="3"/></g></svg>
