@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Smilies/Smile</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Smilies/Smile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Smille" fill-rule="nonzero">
-            <path d="M16,1 C24.2842712,1 31,7.71572875 31,16 C31,24.2842712 24.2842712,31 16,31 C7.71572875,31 1,24.2842712 1,16 C1,7.71572875 7.71572875,1 16,1 Z M16,3 C8.82029825,3 3,8.82029825 3,16 C3,23.1797017 8.82029825,29 16,29 C23.1797017,29 29,23.1797017 29,16 C29,8.82029825 23.1797017,3 16,3 Z M8,15 C8,19.418278 11.581722,23 16,23 C20.3349143,23 23.8645429,19.5521622 23.9961932,15.2491793 L24,15 L26,15 C26,20.5228475 21.5228475,25 16,25 C10.5707601,25 6.15206828,20.6733292 6.0038418,15.2799048 L6,15 L8,15 Z" id="Combined-Shape" fill="#2A2859"></path>
-            <circle id="Oval" fill="#2A2859" cx="12" cy="11" r="2"></circle>
-            <circle id="Oval" fill="#2A2859" cx="20" cy="11" r="2"></circle>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g id="smile"><path id="Combined-Shape" d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,2A13,13,0,1,0,29,16,13,13,0,0,0,16,3ZM8,15a8,8,0,0,0,16,.25V15h2a10,10,0,0,1-20,.28V15Z"/><circle id="Oval" cx="12" cy="11" r="2"/><circle id="Oval-2" data-name="Oval" cx="20" cy="11" r="2"/></g></svg>

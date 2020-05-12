@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Sok/Search-small</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Sok/Search-small" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M14,4 C19.5228475,4 24,8.4771525 24,14 C24,16.3837496 23.1659405,18.5726941 21.7737339,20.2909211 L28,26.5180373 L26.5182959,28 L20.2909211,21.7737339 C18.5726941,23.1659405 16.3837496,24 14,24 C8.4771525,24 4,19.5228475 4,14 C4,8.4771525 8.4771525,4 14,4 Z M14,5.97530864 C9.57015439,5.98029979 5.98029979,9.57015439 5.97530864,14 C5.97530864,18.4319147 9.56808534,22.0246914 14,22.0246914 C18.4319147,22.0246914 22.0246914,18.4319147 22.0246914,14 C22.0246914,9.56808534 18.4319147,5.97530864 14,5.97530864 Z" id="Combined-Shape" fill="#2A2859"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="magnifying-glass-small"><path id="Combined-Shape" class="cls-1" d="M14,4a10,10,0,0,1,7.77,16.29L28,26.52,26.52,28l-6.23-6.23A10,10,0,1,1,14,4Zm0,2a8,8,0,1,0,8,8A8,8,0,0,0,14,6Z"/></g></svg>

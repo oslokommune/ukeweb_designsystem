@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Chevron/Chevron-up</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Chevron/Chevron-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M15.9971429,8.85714286 L5.99714286,18.8571429 L10.2828571,23.1428571 L15.9971429,17.4285714 L21.7114286,23.1428571 L25.9971429,18.8571429 L15.9971429,8.85714286 Z M10.2828571,26 L3.14,18.8571429 L15.9971429,6 L28.8542857,18.8571429 L21.7114286,26 L15.9971429,20.2857143 L10.2828571,26 Z" id="Shape" fill="#2A2859"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="chevron-up"><path id="Shape" class="cls-1" d="M16,8.86l-10,10,4.28,4.28L16,17.43l5.71,5.71L26,18.86ZM10.28,26,3.14,18.86,16,6,28.85,18.86,21.71,26,16,20.29Z"/></g></svg>

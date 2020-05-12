@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Ui/Alert/Alert-square</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Ui/Alert/Alert-square" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M16,1 C24.284,1 31,7.716 31,16 C31,24.284 24.284,31 16,31 C7.716,31 1,24.284 1,16 C1,7.716 7.716,1 16,1 Z M16,3 C8.82029825,3 3,8.82029825 3,16 C3,23.1797017 8.82029825,29 16,29 C23.1797017,29 29,23.1797017 29,16 C29,8.82029825 23.1797017,3 16,3 Z M17.754,21.25 L17.754,24.75 L14.25,24.75 L14.25,21.25 L17.754,21.25 Z M17.5,7 L17.1370968,19 L14.8629032,19 L14.5,7 L17.5,7 Z" id="Combined-Shape" fill="#2A2859"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="exclamation-mark-square"><path id="Combined-Shape" class="cls-1" d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,2A13,13,0,1,0,29,16,13,13,0,0,0,16,3Zm1.75,18.25v3.5h-3.5v-3.5ZM17.5,7l-.36,12H14.86L14.5,7Z"/></g></svg>

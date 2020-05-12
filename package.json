@@ -4,7 +4,7 @@
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
-    "build:icons": "npm run build:icons:font && npm run build:icons:docs",
+    "build:icons": "npm run build:icons:docs && npm run build:icons:font",
     "build:icons:font": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/assets/sass/common/\"",
     "build:icons:docs": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/icons.json.njk\" --dest-template \"src/globals/iconography/icons/\"",
     "test": "echo \"Error: no test specified\" && exit 1"
