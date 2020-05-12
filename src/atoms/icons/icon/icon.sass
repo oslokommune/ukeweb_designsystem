@@ -1,4 +1,4 @@
-.osg-icon
+.osg-icon, %osg-icon
   font-size: 32px
   display: inline-flex
   &:before
@@ -11,6 +11,6 @@
 
 // Generating icon classes
 @each $name, $content in $osg-icons
-  .osg-icon--#{$name}
+  .osg-icon--#{$name}, %osg-icon--#{$name}
     &:before
       content: "#{$content}"

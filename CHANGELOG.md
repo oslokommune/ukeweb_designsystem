@@ -10,11 +10,13 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- utils: Added placeholder selectors for icon and typography styles
 
 ### Added
 - global-font: adds woff2 format
 
 ### Removed
+- organisms-headings-promo: removed pattern
 - atoms-icons-icon: removes duplicate helthcare icon
 - atoms-icons-icon: replaces old unicode characters. if icons have been used w/o the icon component you need to migrate by replacing, ie for chevron-right `content: "\e908"` with `content: map-get($osg-icons, "chevron-right")`
 
