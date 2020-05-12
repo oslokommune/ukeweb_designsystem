@@ -17,8 +17,13 @@ See README.md for release description.
 
 ### Removed
 - organisms-headings-promo: removed pattern
+- atoms-icons-icon: removes duplicate helthcare icon
+- atoms-icons-icon: replaces old unicode characters. if icons have been used w/o the icon component you need to migrate by replacing, ie for chevron-right `content: "\e908"` with `content: map-get($osg-icons, "chevron-right")`
 
 ### Changed
+- atoms-icons-icon: changes x icon name to close
+- organisms-media-video: changes styling to follow BEM and not element selectors
+- organisms-messages-alert: moves important icon from style to markup
 
 ## [0.37.2] - 2020-04-22
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Expand</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Expand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28,20 L28,28 L20,28 L20,26 L26,26 L26,20 L28,20 Z M4,28 L4,20 L6,20 L6,26 L12,26 L12,28 L4,28 Z M12,4 L12,6 L6,5.999 L6,12 L4,12 L4,4 L12,4 Z M28,4 L28,12 L26,12 L26,6 L20,6 L20,4 L28,4 Z" id="Expand" fill="#2A2859"></path>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Atoms/Ikoner/Ui/Minimize</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/Ikoner/Ui/Minimize" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28,20 L28,22 L22,22 L22,28 L20,28 L20,20 L28,20 Z M12,28 L10,28 L10,22 L4,22 L4,20 L12,20 L12,28 Z M12,4 L12,12 L4,12 L4,10 L10,10 L10,4 L12,4 Z M22,4 L22,10 L28,10 L28,12 L20,12 L20,4 L22,4 Z" id="Minimize" fill="#2A2859"></path>
+    </g>
+</svg>
