@@ -10,6 +10,16 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+
+### Added
+
+### Removed
+
+### Changed
+
+## [0.38.0] - 2020-05-20
+
+### Fixed
 - utils: Added placeholder selectors for icon and typography styles
 
 ### Added
