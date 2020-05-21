@@ -17,6 +17,7 @@
       {% endfor %}
     {% endif %}
   >
+    {% include 'atoms/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--exclamation-mark-circle' } } %}
     {% block content %}
     {% endblock %}
   </a>
@@ -27,7 +28,7 @@
         {% if alertHasButton %}
           {% embed 'atoms/buttons/button/button.twig' %}
             {% block content %}
-              <span class='osg-icon osg-icon--{{ alert.closeButtonIcon | default('x') }}'>
+              <span class='osg-icon osg-icon--{{ alert.closeButtonIcon | default('close') }}'>
                 <span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span>
               </span>
             {% endblock %}

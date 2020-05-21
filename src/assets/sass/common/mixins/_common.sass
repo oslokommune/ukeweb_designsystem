@@ -6,7 +6,7 @@
 // Is prefixed with osg-common-
 
 =osg-common-blockquote
-  @extend .osg-u-text-1
+  @extend %osg-u-text-1
   position: relative
   background-color: $osg-color-beige
   padding: 105px 15px 50px 30px
@@ -16,16 +16,16 @@
   a
     text-decoration: none
   p
-    @extend .osg-u-text-1
+    @extend %osg-u-text-1
   footer, & > cite
-    @extend .osg-u-text-3
+    @extend %osg-u-text-3
     display: block
     line-height: 33px
     padding-top: 20px
     +osg-mq-tablet-and-up
       padding-top: 40px
   &:before
-    @extend .osg-u-heading-1
+    @extend %osg-u-heading-1
     content: '"'
     position: absolute
     top: 50px

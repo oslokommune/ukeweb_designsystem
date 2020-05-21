@@ -1,0 +1,21 @@
+{
+  "devtools": {
+    "preset": "clean",
+    "sections": {
+      "docs": {
+        "visible":  false
+      }
+    },
+    "tags": [
+      "icon",
+      "icons"
+    ]
+  },
+  "icons": {
+    "items": [
+      {% for glyph in glyphs -%}
+        { "name": "{{ glyph.name | replace(" ", "-") | lower }}" }{% if loop.last %}{% else %},{% endif %}
+      {% endfor %}
+    ]
+  }
+}

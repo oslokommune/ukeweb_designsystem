@@ -9,7 +9,7 @@ See README.md for release description.
 
 ## [Unreleased] - YYYY-MM-DD
 
-### Fixed 
+### Fixed
 
 ### Added
 
@@ -17,16 +17,34 @@ See README.md for release description.
 
 ### Changed
 
-## [0.37.1] - 2020-04-22
+## [0.38.0] - 2020-05-20
 
-### Fixed 
+### Fixed
+- utils: Added placeholder selectors for icon and typography styles
+
+### Added
+- global-font: adds woff2 format
+- atoms-icons-icon: adds new icons
+
+### Removed
+- organisms-headings-promo: removed pattern
+- atoms-icons-icon: removes duplicate helthcare icon
+
+### Changed
+- atoms-icons-icon: replaces old unicode characters. if icons have been used w/o the icon component you need to migrate by replacing, ie for chevron-right `content: "\e908"` with `content: map-get($osg-icons, "chevron-right")`
+- atoms-icons-icon: changes x icon name to close
+- organisms-media-video: changes styling to follow BEM and not element selectors
+- organisms-messages-alert: moves important icon from style to markup
+
+## [0.37.2] - 2020-04-22
+
+### Fixed
 
 - molecules-data_display-icon_link: fixed bug in spacing between heading and text.
 
-
 ## [0.37.1] - 2020-04-21
 
-### Fixed 
+### Fixed
 
 - molecules-data_display-icon_link: hoverstate now works with headings spanning over multiple lines.
 
@@ -45,7 +63,7 @@ See README.md for release description.
 - utils-form-component: fixes hover/focus states
 - atoms-buttons-button: Blue light added as color option.
 - global: fixed default link styles for osg-content
-- molecules-data_display-icon_link: fixed hover state 
+- molecules-data_display-icon_link: fixed hover state
 
 ### Added
 - global: added variable color-white
