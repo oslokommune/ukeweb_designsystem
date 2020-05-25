@@ -12,6 +12,7 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+- molecules-data_display-icon_link: adds BEM class to a tag
 
 ### Removed
 
