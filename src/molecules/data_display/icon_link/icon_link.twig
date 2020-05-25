@@ -5,7 +5,7 @@
 {% set iconLinkModifiers = iconLink.modifiers | default(null) %}
 
 <div class="osg-icon-link {{ iconLinkVariant }} {{ iconLinkModifiers }}">
-  <a href="{{ iconLink.url }}"
+  <a class="osg-icon-link__link" href="{{ iconLink.url }}"
     {% if iconLinkHasDataAttrs %}
       {% for dataAttr in iconLink.dataAttrs %}
         {{ dataAttr.key }}="{{ dataAttr.val }}"
