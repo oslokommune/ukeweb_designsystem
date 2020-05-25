@@ -17,6 +17,17 @@ See README.md for release description.
 
 ### Changed
 
+## [0.38.1] - 2020-05-25
+
+### Fixed
+
+### Added
+- molecules-data_display-icon_link: adds BEM class to a tag
+
+### Removed
+
+### Changed
+
 ## [0.38.0] - 2020-05-20
 
 ### Fixed
