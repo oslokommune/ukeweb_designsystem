@@ -9,11 +9,7 @@
     text-align: left
     color: $osg-color-black
     background-color: white
-    padding: $osg-space-3 $osg-space-2
-    +osg-mq-tablet-and-up
-      padding: $osg-space-3
-    +osg-mq-desktop-and-up
-      padding: $osg-space-4
+    padding: $osg-space-3
     &:hover
       text-decoration: none
       cursor: pointer
@@ -27,34 +23,18 @@
   &--state-important &__trigger .osg-icon
     display: inline-flex
     position: absolute
-    right: 10px
+    right: 15px
     top: 15px
-    +osg-mq-tablet-and-up
-      right: 15px
-      top: 15px
-    +osg-mq-desktop-and-up
-      right: 30px
-      top: 30px
 
   &--state-critical &__trigger:after,
   &--state-critical &__trigger:before
     position: absolute
-    right: 20px
+    right: 25px
     top: 25px
-    +osg-mq-tablet-and-up
-      right: 25px
-      top: 25px
-    +osg-mq-desktop-and-up
-      right: 40px
-      top: 40px
 
   &--state-important &, &--state-critical &
     &__trigger
-      padding: $osg-space-3 ($osg-space-2 + $osg-space-2 + 32px) $osg-space-3 $osg-space-2
-      +osg-mq-tablet-and-up
-        padding: $osg-space-3 ($osg-space-3 + $osg-space-3 + 32px) $osg-space-3 $osg-space-3
-      +osg-mq-desktop-and-up
-        padding: $osg-space-4 ($osg-space-4 + $osg-space-3 + 32px) $osg-space-4 $osg-space-4
+      padding: $osg-space-3 ($osg-space-3 + $osg-space-3 + 32px) $osg-space-3 $osg-space-3
   &--state-important &
     &__trigger
       font-size: inherit
