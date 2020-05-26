@@ -10,6 +10,8 @@
     color: $osg-color-black
     background-color: white
     padding: $osg-space-3
+    +osg-mq-desktop-and-up
+      padding: $osg-space-4
     &:hover
       text-decoration: none
       cursor: pointer
@@ -25,16 +27,24 @@
     position: absolute
     right: 15px
     top: 15px
+    +osg-mq-desktop-and-up
+      right: 30px
+      top: 30px
 
   &--state-critical &__trigger:after,
   &--state-critical &__trigger:before
     position: absolute
     right: 25px
     top: 25px
+    +osg-mq-desktop-and-up
+      right: 40px
+      top: 40px
 
   &--state-important &, &--state-critical &
     &__trigger
-      padding: $osg-space-3 ($osg-space-3 + $osg-space-3 + 32px) $osg-space-3 $osg-space-3
+      padding-right: ($osg-space-3 + $osg-space-3 + 32px)
+      +osg-mq-desktop-and-up
+        padding-right: ($osg-space-4 + $osg-space-3 + 32px)
   &--state-important &
     &__trigger
       font-size: inherit
