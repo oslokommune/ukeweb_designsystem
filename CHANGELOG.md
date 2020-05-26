@@ -11,6 +11,8 @@ See README.md for release description.
 
 ### Fixed
 
+- organisms-messages-alert: updated spacing values.
+
 ### Added
 
 ### Removed
