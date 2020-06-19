@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 See README.md for release description.
 
+
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
@@ -14,6 +15,7 @@ See README.md for release description.
 ### Added
 
 ### Removed
+- atoms-icons-icon: removes non-web icons
 
 ### Changed
 

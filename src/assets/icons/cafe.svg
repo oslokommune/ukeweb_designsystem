@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Atoms/Ikoner/Skilt/Cafe</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Atoms/Ikoner/Skilt/Cafe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Kafe">
-            <path d="M29,27 L29,29 L3,29 L3,27 L29,27 Z M29,14 L29,19 L27,18.946 L27,15.946 L25.1,16 C24.596,21.089 20.293,25.076 15.075,25.076 C9.52,25.076 5,20.556 5,15 L5,15 L5,14 L29,14 Z M23.089,16 L7.062,16 C7.556,19.983 10.961,23.076 15.075,23.076 C19.189,23.076 22.594,19.983 23.089,16 L23.089,16 Z M18.331,2.447 L19.682,5.101 L18.373,9.122 L19.369,11.079 L17.586,11.986 L16.215,9.291 L17.523,5.27 L16.549,3.354 L18.331,2.447 Z M13.528,2.447 L14.878,5.101 L13.57,9.122 L14.565,11.079 L12.783,11.986 L11.412,9.291 L12.72,5.27 L11.746,3.354 L13.528,2.447 Z" id="Combined-Shape" fill="#2A2859"></path>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="café"><path id="Combined-Shape" class="cls-1" d="M29,27v2H3V27Zm0-13v5L27,19V16L25.1,16A10.07,10.07,0,0,1,5,15H5V14Zm-5.91,2h-16a8.08,8.08,0,0,0,16,0ZM18.33,2.45,19.68,5.1l-1.31,4,1,2L17.59,12l-1.37-2.7,1.3-4-1-1.92Zm-4.8,0L14.88,5.1l-1.31,4,1,2L12.78,12l-1.37-2.7,1.31-4-1-1.92Z"/></g></svg>
