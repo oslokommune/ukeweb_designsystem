@@ -17,6 +17,17 @@ See README.md for release description.
 
 ### Changed
 
+## [0.39.0] - 2020-06-19
+
+### Fixed
+
+### Added
+
+### Removed
+- atoms-icons-icon: removes non-web icons
+
+### Changed
+
 # [0.38.1] - 2020-05-26
 
 ### Fixed
