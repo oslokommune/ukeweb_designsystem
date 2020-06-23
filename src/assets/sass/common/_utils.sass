@@ -64,42 +64,6 @@
     margin-top: $size !important
     margin-bottom: $size !important
 
-// generate spacing classes for mobile
-+osg-mq-mobile-only
-  @each $name, $size in $osg-spacing-sizes
-    .osg-u-padding-#{$name}-mobile-only
-      padding: $size $size $size $size !important
-    .osg-u-margin-#{$name}-mobile-only
-      margin: $size $size $size $size !important
-    .osg-u-padding-bottom-#{$name}-mobile-only
-      padding-bottom: $size !important
-    .osg-u-margin-bottom-#{$name}-mobile-only
-      margin-bottom: $size !important
-    .osg-u-padding-top-#{$name}-mobile-only
-      padding-top: $size !important
-    .osg-u-margin-top-#{$name}-mobile-only
-      margin-top: $size !important
-    .osg-u-padding-left-#{$name}-mobile-only
-      padding-left: $size !important
-    .osg-u-margin-left-#{$name}-mobile-only
-      margin-left: $size !important
-    .osg-u-padding-right-#{$name}-mobile-only
-      padding-right: $size !important
-    .osg-u-margin-right-#{$name}-mobile-only
-      margin-right: $size !important
-    .osg-u-padding-horizontal-#{$name}-mobile-only
-      padding-left: $size !important
-      padding-right: $size !important
-    .osg-u-margin-horizontal-#{$name}-mobile-only
-      margin-left: $size !important
-      margin-right: $size !important
-    .osg-u-padding-vertical-#{$name}-mobile-only
-      padding-top: $size !important
-      padding-bottom: $size !important
-    .osg-u-margin-vertical-#{$name}-mobile-only
-      margin-top: $size !important
-      margin-bottom: $size !important
-
 // generate spacing classes for tablet
 +osg-mq-tablet-and-up
   @each $name, $size in $osg-spacing-sizes

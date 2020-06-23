@@ -17,6 +17,17 @@ See README.md for release description.
 
 ### Changed
 
+## [0.40.0] - 2020-06-23
+
+### Fixed
+
+### Added
+
+### Removed
+- utils: removes mobile only spacing utils. migrate by using mobile first approach
+
+### Changed
+
 ## [0.39.0] - 2020-06-19
 
 ### Fixed
