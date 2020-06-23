@@ -14,6 +14,7 @@ See README.md for release description.
 ### Added
 
 ### Removed
+- utils: removes mobile only spacing utils. migrate by using mobile first approach
 
 ### Changed
 
