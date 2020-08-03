@@ -12,8 +12,11 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+- assets: adds correct logotype
+- assets: adds [Apple webpage icon](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
 ### Removed
+- assets: removes incorrect logotypes
 
 ### Changed
 
