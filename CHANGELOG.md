@@ -12,6 +12,16 @@ See README.md for release description.
 ### Fixed
 
 ### Added
+
+### Removed
+
+### Changed
+
+## [0.41.0] - 2020-08-03
+
+### Fixed
+
+### Added
 - assets: adds correct logotype
 - assets: adds [Apple webpage icon](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
