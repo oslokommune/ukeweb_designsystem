@@ -16,6 +16,7 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+- atoms-buttons-button: changes default color from red to blue-dark
 
 ## [0.41.0] - 2020-08-03
 
