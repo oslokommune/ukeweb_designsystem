@@ -1,12 +1,12 @@
 .osg-button, %osg-button
-  color: $osg-color-blue-dark
-  background: $osg-color-red
-  border: 2px solid $osg-color-red
+  color: $osg-color-blue-light
+  background: $osg-color-blue-dark
+  border: 2px solid $osg-color-blue-dark
   &:not(:disabled)
     &:visited
-      color: $osg-color-blue-dark
-      background: $osg-color-red
-      border: 2px solid $osg-color-red
+      color: $osg-color-blue-light
+      background: $osg-color-blue-dark
+      border: 2px solid $osg-color-blue-dark
     &:focus, &:hover
       color: white
       background: $osg-color-blue-hover
@@ -14,8 +14,8 @@
       text-decoration: none
     &.osg-button--outline.osg-button--active
       &, &:focus, &:hover, &:visited
-        color: $osg-color-blue-dark
-        background-color: $osg-color-red
+        color: $osg-color-blue-light
+        background: $osg-color-blue-dark
   +osg-common-button
   font-size: inherit
   line-height: inherit

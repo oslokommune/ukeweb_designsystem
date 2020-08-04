@@ -29,7 +29,7 @@ $osg-colors: (
 
 $osg-button-colors: (
   ("red", $osg-color-blue-dark, $osg-color-red),
-  ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),
+  /* INFO: omitted since it's default style ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),*/
   ("blue-light", $osg-color-blue-dark, $osg-color-blue-light),
   ("green-dark", $osg-color-green-light, $osg-color-green-dark),
   ("green-light", $osg-color-green-dark, $osg-color-green-light),
