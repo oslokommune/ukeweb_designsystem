@@ -16,11 +16,14 @@ See README.md for release description.
 ### Removed
 
 ### Changed
+
+## [0.42.0] - 2020-08-04
+
+### Changed
 - atoms-buttons-button: changes default color from red to blue-dark
 
-## [0.41.0] - 2020-08-03
 
-### Fixed
+## [0.41.0] - 2020-08-03
 
 ### Added
 - assets: adds correct logotype
@@ -29,29 +32,15 @@ See README.md for release description.
 ### Removed
 - assets: removes incorrect logotypes
 
-### Changed
-
 ## [0.40.0] - 2020-06-23
-
-### Fixed
-
-### Added
 
 ### Removed
 - utils: removes mobile only spacing utils. migrate by using mobile first approach
 
-### Changed
-
 ## [0.39.0] - 2020-06-19
-
-### Fixed
-
-### Added
 
 ### Removed
 - atoms-icons-icon: removes non-web icons
-
-### Changed
 
 # [0.38.1] - 2020-05-26
 
@@ -61,14 +50,8 @@ See README.md for release description.
 
 ## [0.38.1] - 2020-05-25
 
-### Fixed
-
 ### Added
 - molecules-data_display-icon_link: adds BEM class to a tag
-
-### Removed
-
-### Changed
 
 ## [0.38.0] - 2020-05-20
 
