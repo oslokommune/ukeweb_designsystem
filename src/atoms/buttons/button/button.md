@@ -31,7 +31,7 @@ Here you can see the different uses of the variants and modifiers with buttons: 
 
 ### Color options
 
-- "blue-dark"
+- "blue-dark" (default)
 - "blue-light"
 - "green-dark"
 - "green-light"

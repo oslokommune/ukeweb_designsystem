@@ -7,7 +7,7 @@
     "expandableAreaId": "expand_area_id"
   },
   "button": {
-    "modifiers": "osg-button--circle",
+    "modifiers": "osg-button--circle osg-button--red",
     "dataAttrs": [
       {
         "key": "aria-label",
