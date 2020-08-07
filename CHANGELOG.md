@@ -14,6 +14,7 @@ See README.md for release description.
 ### Added
 
 ### Removed
+- mixins: removes osg-mq-until. migrate by using mobile first approach
 
 ### Changed
 

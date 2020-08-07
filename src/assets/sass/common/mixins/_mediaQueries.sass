@@ -9,16 +9,12 @@
   @media screen and (min-width: $device)
     @content
 
-=osg-mq-until($device)
-  @media screen and (max-width: $device - 1px)
-    @content
-
 =osg-mq-mobile-only
   @media screen and (max-width: $osg-tablet - 1px)
     @content
 
 =osg-mq-tablet-and-up
-  @media screen and (min-width: $osg-tablet), print
+  @media screen and (min-width: $osg-tablet)
     @content
 
 =osg-mq-desktop-and-up
