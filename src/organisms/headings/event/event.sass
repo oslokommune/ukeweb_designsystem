@@ -5,12 +5,13 @@
       padding-right: 570px
 
   &__image
-    .osg-figure
-      display: block
-    +osg-mq-mobile-only()
-      margin-bottom: -80px
+    margin-bottom: -80px
+    +osg-mq-tablet-and-up
+      margin-bottom: 0
     +osg-mq-desktop-and-up
       margin-top: 40px
+    .osg-figure
+      display: block
     picture
       order: 2
       +osg-mq-desktop-and-up

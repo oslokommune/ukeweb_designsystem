@@ -10,6 +10,10 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- organisms-messages-alert: fixes mobile last media query usage
+- organisms-navigation-hero: fixes mobile last media query usage
+- organisms-navigation-call_to_action: fixes mobile last media query usage
+- organisms-headings-event: fixes mobile last media query usage
 
 ### Added
 

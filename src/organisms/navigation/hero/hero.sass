@@ -47,9 +47,11 @@
       border-radius: 50%
 
   &--center-mobile-only &
-    +osg-mq-mobile-only
+    &__image
+      text-align: center
+    +osg-mq-tablet-and-up
       &__image
-        text-align: center
+        text-align: left
 
   &--right
     +osg-hero--right('.osg-hero')
