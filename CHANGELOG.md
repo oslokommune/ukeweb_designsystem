@@ -14,6 +14,7 @@ See README.md for release description.
 - organisms-navigation-hero: fixes mobile last media query usage
 - organisms-navigation-call_to_action: fixes mobile last media query usage
 - organisms-headings-event: fixes mobile last media query usage
+- atoms-buttons-button: fixes ghost button text color
 
 ### Added
 
