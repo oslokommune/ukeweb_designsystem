@@ -10,18 +10,24 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+
+### Added
+
+### Removed
+
+### Changed
+
+## [0.43.0] - 2020-08-11
+
+### Fixed
 - organisms-messages-alert: fixes mobile last media query usage
 - organisms-navigation-hero: fixes mobile last media query usage
 - organisms-navigation-call_to_action: fixes mobile last media query usage
 - organisms-headings-event: fixes mobile last media query usage
 - atoms-buttons-button: fixes ghost button text color
 
-### Added
-
 ### Removed
 - mixins: removes osg-mq-until. migrate by using mobile first approach
-
-### Changed
 
 ## [0.42.2] - 2020-08-04
 
