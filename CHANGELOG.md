@@ -10,8 +10,10 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+- molecules-search-search_field: fixes cancel icon size
 
 ### Added
+- global: adds `.osg-sr-only--focusable`
 
 ### Removed
 
