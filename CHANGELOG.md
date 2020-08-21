@@ -14,6 +14,7 @@ See README.md for release description.
 
 ### Added
 - global: adds `.osg-sr-only--focusable`
+- mixins: adds deprecation warning to `osg-mq-mobile-only`
 
 ### Removed
 
