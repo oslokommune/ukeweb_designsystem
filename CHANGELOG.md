@@ -17,6 +17,7 @@ See README.md for release description.
 - mixins: adds deprecation warning to `osg-mq-mobile-only`
 
 ### Removed
+- mixins: removes redundant media query `osg-mq-from`. use predefined breakpoint mixins instead
 
 ### Changed
 
