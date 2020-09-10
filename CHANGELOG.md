@@ -11,6 +11,7 @@ See README.md for release description.
 
 ### Fixed
 - molecules-search-search_field: fixes cancel icon size
+- molecules-navigation-navbar_menu_services: Removed usage of deprecated mobile first media query
 
 ### Added
 - global: adds `.osg-sr-only--focusable`
