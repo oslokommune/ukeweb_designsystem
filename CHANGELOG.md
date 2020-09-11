@@ -11,14 +11,14 @@ See README.md for release description.
 
 ### Fixed
 - molecules-search-search_field: fixes cancel icon size
-- molecules-navigation-navbar_menu_services: Removed usage of deprecated mobile first media query
+- molecules-navigation-navbar_menu_services: Removed usage of deprecated mobile last media query
 
 ### Added
 - global: adds `.osg-sr-only--focusable`
-- mixins: adds deprecation warning to `osg-mq-mobile-only`
 
 ### Removed
 - mixins: removes redundant media query `osg-mq-from`. use predefined breakpoint mixins instead
+- mixins: removes mobile last media query `osg-mq-mobile-only`
 
 ### Changed
 
