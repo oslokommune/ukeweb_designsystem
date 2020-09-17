@@ -10,6 +10,16 @@ See README.md for release description.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Fixed
+
+### Added
+
+### Removed
+
+### Changed
+
+## [0.44.0] - 2020-09-17
+
+### Fixed
 - molecules-search-search_field: fixes cancel icon size
 - molecules-navigation-navbar_menu_services: Removed usage of deprecated mobile last media query
 
