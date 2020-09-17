@@ -17,6 +17,21 @@ See README.md for release description.
 
 ### Changed
 
+## [0.44.0] - 2020-09-17
+
+### Fixed
+- molecules-search-search_field: fixes cancel icon size
+- molecules-navigation-navbar_menu_services: Removed usage of deprecated mobile last media query
+
+### Added
+- global: adds `.osg-sr-only--focusable`
+
+### Removed
+- mixins: removes redundant media query `osg-mq-from`. use predefined breakpoint mixins instead
+- mixins: removes mobile last media query `osg-mq-mobile-only`
+
+### Changed
+
 ## [0.43.0] - 2020-08-11
 
 ### Fixed

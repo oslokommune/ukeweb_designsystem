@@ -1,12 +1,14 @@
 {
   "name": "styleguide",
-  "version": "0.43.0",
+  "version": "0.44.0",
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
     "build:icons": "npm run build:icons:docs && npm run build:icons:font",
     "build:icons:font": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/assets/sass/common/\"",
     "build:icons:docs": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/icons.json.njk\" --dest-template \"src/globals/iconography/icons/\"",
+    "commit": "cz",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,26 @@
     "minireset.css": "0.0.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0",
+    "standard-version": "^9.0.0",
     "webfont": "^9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

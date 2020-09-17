@@ -8,6 +8,22 @@ This repository aims to only contain files related to consumption of components/
 
 To aid in development of these patterns run `docker-compose up` and point your browser to `localhost:9000`.
 
+### Commit
+Follow [Conventional Commits](https://www.conventionalcommits.org/)
+```
+npm run commit
+```
+
+### Release
+Bump version & generate [CHANGELOG](CHANGELOG.md) based on commit/s
+```
+npm run release
+```
+Verify everything looks good & push tags
+```
+git push --follow-tags
+```
+
 ## Consumption
 
 ### General
@@ -35,3 +51,4 @@ Check out [this list](docs/utils) for all the util classes with descriptions.
 - To get tips and best practices for developing the Style guide, [read this](docs/bestPractises).
 - If you work for UKE contributing to this repository, [read this](docs/workflow) for a detailed overview of the work flow.
 - The style guide only logs changes to patterns and util classes, so use other classes, mixins, functions, variables etc at you own risk.
+- [Icon Font](/src/atoms/icons/icon/README.md)

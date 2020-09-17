@@ -5,14 +5,6 @@
 // Provides mixins to wrap device spesific styles in.
 // Is prefixed with osg-mq-
 
-=osg-mq-from($device)
-  @media screen and (min-width: $device)
-    @content
-
-=osg-mq-mobile-only
-  @media screen and (max-width: $osg-tablet - 1px)
-    @content
-
 =osg-mq-tablet-and-up
   @media screen and (min-width: $osg-tablet)
     @content

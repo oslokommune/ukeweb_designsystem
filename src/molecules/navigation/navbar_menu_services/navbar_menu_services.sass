@@ -24,7 +24,7 @@ $osg-hamburger-mobile-line-gap: 10px
         border: 2px solid
 
       &__text
-        +osg-mq-mobile-only
+        @media (max-width: $osg-tablet - 1px)
           +osg-sr-only
 
       &__text-close
@@ -85,7 +85,7 @@ $osg-hamburger-mobile-line-gap: 10px
     nav
       height: auto
       .osg-hamburger-button
-        +osg-mq-mobile-only
+        @media (max-width: $osg-tablet - 1px)
           color: #2a2859 !important
           background: #f9c66b !important
           border: 2px solid #f9c66b !important
