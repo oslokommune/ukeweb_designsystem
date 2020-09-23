@@ -11,7 +11,9 @@
         background-color: $osg-color-blue-hover
         color: $osg-color-white
     &-spacer
+      display: inline-block
       margin: 0 $osg-space-2
+      transform: translateY(-5px)
     &--next,
     &--prev
       transform: rotate(90deg)
@@ -26,8 +28,7 @@
       &:hover
         &::before
           color: $osg-color-blue-hover
-      &:disabled::before
-        color: $osg-color-disabled
-        cursor: default
+      &:disabled
+        visibility: hidden
     &--prev
       transform: rotate(-90deg)
