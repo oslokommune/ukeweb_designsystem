@@ -15,8 +15,6 @@ These classes should be added to any element to set styles directly to it.
 | .osg-u-color-text-[color]         | Specifies a color for text with a color from the official color palette                            |
 | .osg-u-color-bg-[color]           | Specifies a color for the background of the element with a color from the official color palette   |
 | .osg-u-color-[state color]        | Specifies a color for the background and text with colors from the official state system           |
-| .osg-u-text-grayscale-[grayscale] | Specifies a gray color for text with a color from the official gray scale                          |
-| .osg-u-bg-grayscale-[grayscale]   | Specifies a gray color for the background of the element with a color from the official gray scale |
 
 ### Text
 
