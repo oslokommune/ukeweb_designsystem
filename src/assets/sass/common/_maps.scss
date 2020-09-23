@@ -45,18 +45,6 @@ $osg-named-colors: (
   "danger": $osg-color-red $osg-color-green-dark
 );
 
-$osg-grayscale: (
-  10: $osg-color-grayscale-10,
-  20: $osg-color-grayscale-20,
-  30: $osg-color-grayscale-30,
-  40: $osg-color-grayscale-40,
-  50: $osg-color-grayscale-50,
-  60: $osg-color-grayscale-60,
-  70: $osg-color-grayscale-70,
-  80: $osg-color-grayscale-80,
-  90: $osg-color-grayscale-90
-);
-
 // used to generate spacing classes in utils.sass
 $osg-spacing-sizes: (
   "none": $osg-space-none,

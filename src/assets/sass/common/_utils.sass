@@ -159,13 +159,6 @@
     +osg-mq-desktop-and-up
       font-size: $size-desktop !important
 
-// generating color helper classes
-@each $name, $color in $osg-grayscale
-  .osg-u-bg-grayscale-#{$name}
-    background-color: #{$color} !important
-  .osg-u-text-grayscale-#{$name}
-    color: #{$color} !important
-
 // generating text align classes
 @each $name in $osg-alignment
   .osg-u-text-#{$name}
