@@ -1,21 +1,29 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+## 0.45.0 (2020-10-06)
 
-See README.md for release description.
 
-## [Unreleased] - YYYY-MM-DD
+### ⚠ BREAKING CHANGES
 
-### Fixed
+* **utils:** remove unused bg/text-grayscale util
+* **utils:** remove font family from text-is utils
+* **media-queries:** remove mobile last osg-mq-mobile-only
 
-### Added
+### Features
 
-### Removed
+* **pagination:** change style on spacer & disabled prev/next ([35a882d](https://github.com/oslokommune/styleguide/commit/35a882d73bc59829082ee4642b4d9f044ff5ed3d))
 
-### Changed
+
+### Bug Fixes
+
+* **font:** "ironic" sans-serif font replaced with real sans-serif ([2876b8e](https://github.com/oslokommune/styleguide/commit/2876b8eb920103d1a624f2dd272496e566228aa3))
+* **icon:** fix invalid html ([e5e1dd1](https://github.com/oslokommune/styleguide/commit/e5e1dd13bdb03a5ef5c2fcbaccb50c52b0d8c046))
+* **icon_link:** fix header & description on separate lines OKN-2705 ([f6106bb](https://github.com/oslokommune/styleguide/commit/f6106bb93c2df4582ccee36d9fa015dd25eed141))
+* **media-queries:** remove mobile last osg-mq-mobile-only ([625f45a](https://github.com/oslokommune/styleguide/commit/625f45aa8e8762e8686ef7ab8b4b0100e22acc74))
+* **utils:** remove font family from text-is utils ([dd19b22](https://github.com/oslokommune/styleguide/commit/dd19b22ab28f7a9c5b2cc0a1c28893e99176876e))
+* **utils:** remove unused bg/text-grayscale util ([ac20b16](https://github.com/oslokommune/styleguide/commit/ac20b16d02d8f33dd2766c4e31b8926c7b7a77d4))
 
 ## [0.44.0] - 2020-09-17
 
