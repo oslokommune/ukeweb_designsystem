@@ -2,6 +2,10 @@
   position: relative
   &__input
     outline: none
+    font-size: $osg-font-size-16
+    +osg-mq-desktop-and-up
+      font-size: $osg-font-size-18
+
     &::-webkit-search-cancel-button
       appearance: none
       background-color: $osg-color-yellow
