@@ -4,8 +4,11 @@
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
-    "build:icons": "npm run build:icons:docs && npm run build:icons:font",
-    "build:icons:font": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/assets/sass/common/\"",
+    "build:icons": "npm run build:icons:minimize && run-p build:icons:svg build:icons:font",
+    "build:icons:minimize": "svgo src/assets/icons/*.svg --disable=removeViewBox --enable=removeDimensions",
+    "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
+    "build:icons:font": "npm run build:icons:docs && npm run build:icons:webfont",
+    "build:icons:webfont": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/_iconMap.scss.njk\" --dest-template \"src/assets/sass/common/\"",
     "build:icons:docs": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --formats 'woff','woff2' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/atoms/icons/icon/icons.json.njk\" --dest-template \"src/globals/iconography/icons/\"",
     "commit": "cz",
     "release": "standard-version",
@@ -26,7 +29,10 @@
     "@commitlint/config-conventional": "^9.1.2",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^4.3.0",
+    "npm-run-all": "^4.1.5",
     "standard-version": "^9.0.0",
+    "svgo": "^1.3.2",
+    "svgstore-cli": "^2.0.0",
     "webfont": "^9.0.0"
   },
   "husky": {
