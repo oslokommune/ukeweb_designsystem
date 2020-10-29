@@ -17,6 +17,7 @@
       { "name": "attachment" },
       { "name": "backpack" },
       { "name": "bike" },
+      { "name": "briefcase" },
       { "name": "bus" },
       { "name": "cafe" },
       { "name": "calendar" },
