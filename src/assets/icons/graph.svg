@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-  <g id="graph">
-    <path d="M29,1V8H27V4.42l-9.62,9.63L8.74,5.3,4.59,9.46,3.17,8,8.75,2.46l8.63,8.75L25.59,3H22V1ZM26.89,16H23.72V29h3.17Zm-9.31,4H14.41v9h3.17ZM8.27,15H5.1V29H8.27Zm2-2V29h2.14V18h7.17V29h2.14V14h7.17V29H31v2H1V29H3.1V13Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M29 1v7h-2V4.42l-9.62 9.63L8.74 5.3 4.59 9.46 3.17 8l5.58-5.54 8.63 8.75L25.59 3H22V1zm-2.11 15h-3.17v13h3.17zm-9.31 4h-3.17v9h3.17zm-9.31-5H5.1v14h3.17zm2-2v16h2.14V18h7.17v11h2.14V14h7.17v15H31v2H1v-2h2.1V13z"/></svg>

@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="crane"><path id="Shape" class="cls-1" d="M31,13V7H16V0H8V7H1v6H8V32h8V13h7v5H20v6h8V18H25V13Zm-5,7v2H22V20ZM10,2h4V7H10Zm0,14h4v5H10Zm0-2V9h4v5ZM3,11V9H8v2Zm7,19V23h4v7ZM16,9H29v2H16Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M31 13V7H16V0H8v7H1v6h7v19h8V13h7v5h-3v6h8v-6h-3v-5zm-5 7v2h-4v-2zM10 2h4v5h-4zm0 14h4v5h-4zm0-2V9h4v5zm-7-3V9h5v2zm7 19v-7h4v7zm6-21h13v2H16z" fill-rule="evenodd"/></svg>
