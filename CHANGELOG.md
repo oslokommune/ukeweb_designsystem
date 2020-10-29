@@ -23,7 +23,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **pagination:** change style on spacer & disabled prev/next ([35a882d](https://github.com/oslokommune/styleguide/commit/35a882d73bc59829082ee4642b4d9f044ff5ed3d))
 
-
 ### Bug Fixes
 
 * **font:** "ironic" sans-serif font replaced with real sans-serif ([2876b8e](https://github.com/oslokommune/styleguide/commit/2876b8eb920103d1a624f2dd272496e566228aa3))
