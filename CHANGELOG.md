@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.45.1](https://github.com/oslokommune/styleguide/compare/v0.45.0...v0.45.1) (2020-10-29)
+
+
+### Features
+
+* **icon:** add icon for briefcase ([e8e0f27](https://github.com/oslokommune/styleguide/commit/e8e0f27796b9f3281a4461f2424153d283279db0))
+* **icons:** add svg icon sprite ([3478eca](https://github.com/oslokommune/styleguide/commit/3478ecacf56e16d76876f291ca610fd13f3ae162))
+
 ## 0.45.0 (2020-10-06)
 
 
@@ -14,7 +22,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * **pagination:** change style on spacer & disabled prev/next ([35a882d](https://github.com/oslokommune/styleguide/commit/35a882d73bc59829082ee4642b4d9f044ff5ed3d))
-
 
 ### Bug Fixes
 

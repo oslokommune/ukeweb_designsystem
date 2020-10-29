@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><g id="clock"><path id="Combined-Shape" class="cls-1" d="M16,1A15,15,0,1,1,1,16,15,15,0,0,1,16,1Zm0,2.15A12.85,12.85,0,1,0,28.85,16,12.85,12.85,0,0,0,16,3.15ZM16,7v9l7-.6V18H14V7Z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 1A15 15 0 111 16 15 15 0 0116 1zm0 2.15A12.85 12.85 0 1028.85 16 12.85 12.85 0 0016 3.15zM16 7v9l7-.6V18h-9V7z" fill-rule="evenodd"/></svg>
