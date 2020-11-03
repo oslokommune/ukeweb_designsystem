@@ -58,6 +58,7 @@
       { "name": "linked-in" },
       { "name": "list" },
       { "name": "location-pin" },
+      { "name": "location-pin-filled" },
       { "name": "magnifying-glass-big" },
       { "name": "magnifying-glass-small" },
       { "name": "map" },
