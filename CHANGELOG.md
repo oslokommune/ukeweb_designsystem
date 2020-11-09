@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.45.2](https://github.com/oslokommune/styleguide/compare/v0.45.1...v0.45.2) (2020-11-09)
+
+
+### Features
+
+* **icons:** add location pin filled icon ([4bf889e](https://github.com/oslokommune/styleguide/commit/4bf889e333cf86d701ef0cbe3bfdce59c5ab91fe))
+
 ### [0.45.1](https://github.com/oslokommune/styleguide/compare/v0.45.0...v0.45.1) (2020-10-29)
 
 
