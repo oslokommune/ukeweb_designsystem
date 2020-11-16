@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.46.0](https://github.com/oslokommune/styleguide/compare/v0.45.2...v0.46.0) (2020-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **utils:** remove okpl/bootstrap spacing variables
+* **link-button:** remove duplicate styles
+
+### Features
+
+* **common-button-circle:** change hover color ([bad46c0](https://github.com/oslokommune/styleguide/commit/bad46c0a9fd78ecc477bfdfb677b19de01a849dd))
+
+
+### Bug Fixes
+
+* **link-button:** remove duplicate styles ([3155af2](https://github.com/oslokommune/styleguide/commit/3155af273adfcfda8726653536334c6ec399d43d))
+* **utils:** remove okpl/bootstrap spacing variables ([488109f](https://github.com/oslokommune/styleguide/commit/488109f243860d693fbde286edd218d2e2830f81))
+
 ### [0.45.2](https://github.com/oslokommune/styleguide/compare/v0.45.1...v0.45.2) (2020-11-09)
 
 

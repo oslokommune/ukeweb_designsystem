@@ -31,7 +31,7 @@ Example of clickable pattern with circular image, text on the left of the image 
     "variant": "osg-v-image"
   },
   "figure": {
-    "modifiers": "osg-u-padding-bottom-medium-mobile-only",
+    "modifiers": "osg-u-padding-bottom-4-mobile-only",
     "caption": "Dolor sit amet",
     "img": {
       "alt": "Lorem ipsum dolor sit amet.",
