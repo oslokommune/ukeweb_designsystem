@@ -25,11 +25,7 @@ These are used to make spacing util classes. See the [utils docs](../utils) to s
 | Name               | Default | Decription                                               |
 | ------------------ | ------- | -------------------------------------------------------- |
 | \$osg-space-none   | 0       | To remove padding/margin with util classes. Should be 0. |
-| \$osg-space-tiny   | 10px    | Tiny padding/margin util classes                         |
-| \$osg-space-small  | 20px    | Small padding/margin util classes                        |
-| \$osg-space-medium | 30px    | Medium padding/margin util classes                       |
-| \$osg-space-large  | 40px    | Large padding/margin util classes                        |
-| \$osg-space-huge   | 60px    | Huge padding/margin util classes                         |
+| \$osg-space-[1..7]  | [5..100]px    | Large padding/margin util classes                        |
 
 ## Media Queries
 
