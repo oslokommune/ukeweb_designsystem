@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.46.1](https://github.com/oslokommune/styleguide/compare/v0.46.0...v0.46.1) (2021-01-29)
+
+
+### Features
+
+* **icon:** added document icon ([d4122f6](https://github.com/oslokommune/styleguide/commit/d4122f6b364130f17291a96e770f3fe83762987d))
+
+
+### Bug Fixes
+
+* **button:** ghost button underline ([2ae87ae](https://github.com/oslokommune/styleguide/commit/2ae87ae0965f5e29dd33c7474e97528e19b2d82f))
+
 ## [0.46.0](https://github.com/oslokommune/styleguide/compare/v0.45.2...v0.46.0) (2020-11-16)
 
 
