@@ -97,12 +97,14 @@
     color: $osg-color-blue-dark
     &:not(:disabled)
       \:not(.osg-icon)
-        text-decoration: underline
+        +osg-common-underline($osg-color-blue-dark)
       &:focus,
       &:hover
         background-color: $osg-color-grey-light
         border-color: $osg-color-grey-light
         color: $osg-color-blue-hover
+        \:not(.osg-icon)
+          background-image: none
     &:disabled
       background-color: transparent
       border-color: transparent
