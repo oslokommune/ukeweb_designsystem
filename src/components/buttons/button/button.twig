@@ -1,15 +1,16 @@
-{% set buttonHasDataAttrs = button.dataAttrs is defined and button.dataAttrs is not empty %}
-{% set buttonVariant = button.variant | default('osg-v-default') %}
-{% set buttonModifiers = button.modifiers | default('osg-button--blue-dark') %}
+{% set componentHasAttrs = component.attrs is defined and component.attrs is not empty %}
+{% set componentModifiers = component.modifiers.split(' ') | default([]) %}
+{% set componentClasses = ['osg-button']|merge(componentModifiers) %}
 
 <button
-  class="osg-button {{ buttonVariant }} {{ buttonModifiers }} "
-  {% if buttonHasDataAttrs %}
-    {% for dataAttr in button.dataAttrs %}
-      {{ dataAttr.key }}="{{ dataAttr.val }}"
+  class="{{ componentClasses|join(' ') }}"
+  {% if componentHasAttrs %}
+    {% for attr in component.attrs %}
+      {{ attr.key }}="{{ attr.val }}"
     {% endfor %}
   {% endif %}
 >
   {% block content %}
+    Button text
   {% endblock %}
 </button>

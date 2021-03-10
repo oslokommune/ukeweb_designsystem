@@ -1,5 +1,5 @@
 <div class="osg-content">
-  <p>These are states that chooses both text and background color. The util classes are prefixed with osg-u-color followed by a state name.</p>
+  <p>...text...</p>
 </div>
 <div class="osg-state">
   {% for item in state.colors %}
@@ -8,13 +8,10 @@
       <h2 class="osg-u-heading-3">
         {{ item.name }}
       </h2>
-      <h3 class="osg-u-text-4">
-        Classes
-      </h3>
       <ul class="osg-u-text-6">
         <li>osg-u-color-{{ item.name }}</li>
-        <li>hex background: {{ item.bgHex }}</li>
-        <li>hex text: {{ item.hex }}</li>
+        <li>background: {{ item.bgHex }}</li>
+        <li>text: {{ item.hex }}</li>
       </ul>
     </div>
   {% endfor %}

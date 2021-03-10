@@ -7,18 +7,18 @@
 {% endset %}
 
 <div class="osg-shape-hero {{ shapeHeroVariant }} {{ shapeHeroModifiers }}">
-  {% embed 'atoms/decorators/shape/shape.twig' %}
+  {% embed 'components/decorators/shape/shape.twig' %}
     {% block content %}
       <div class="osg-shape-hero__content">
         {{ shapeHeroContent }}
       </div>
     {% endblock %}
   {% endembed %}
-  {% embed 'atoms/decorators/shape/shape.twig' with shapeHero.imageShape %}
+  {% embed 'components/decorators/shape/shape.twig' with shapeHero.imageShape %}
     {% block figureContent %}
       {% if shapeHeroVariant != 'osg-v-circle' %}
         <div class="osg-shape-hero__circle-shape osg-u-color-bg-{{ shapeHeroBgColor }}">
-          {% include 'atoms/decorators/shape/shape.twig' with shapeHero.circleShape only %}
+          {% include 'components/decorators/shape/shape.twig' with shapeHero.circleShape only %}
         </div>
       {% endif %}
     {% endblock %}

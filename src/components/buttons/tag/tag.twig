@@ -1,7 +1,13 @@
-{% set state = "osg-tag--" ~ tag.state | default('success') %}
-{% set tagVariant = tag.variant | default('osg-v-default') %}
-{% set tagModifiers = tag.modifiers | default(null) %}
+{% set componentHasAttrs = component.attrs is defined and component.attrs is not empty %}
+{% set componentModifiers = component.modifiers.split(' ') | default([]) %}
+{% set componentClasses = ['osg-tag']|merge(componentModifiers) %}
 
-<a href="{{ tag.url }}" class="osg-tag {{ tagVariant }} {{ state }} {{ tagModifiers }}">
-  {{ tag.content }}
+<a href="{{ component.url }}"
+  class="{{ componentClasses|join(' ') }}"
+  {% if componentHasAttrs %}
+    {% for attr in component.attrs %}
+      {{ attr.key }}="{{ attr.val }}"
+    {% endfor %}
+  {% endif %}>
+  {{ component.content }}
 </a>

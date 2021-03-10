@@ -1,0 +1,124 @@
+$osg-button-colors: (
+  ("red", $osg-color-blue-dark, $osg-color-red),
+  ("blue-light", $osg-color-blue-dark, $osg-color-blue-light),
+  ("green-dark", $osg-color-white, $osg-color-green-dark),
+  ("green-light", $osg-color-green-dark, $osg-color-green-light),
+  ("yellow", $osg-color-blue-dark, $osg-color-yellow)
+);
+
+.osg-button {
+  color: $osg-color-white;
+  background: $osg-color-blue-dark;
+  border: 2px solid $osg-color-blue-dark;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  min-width: 60px;
+  min-height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:not(:disabled) {
+    &:visited {
+      color: $osg-color-blue-light;
+      background: $osg-color-blue-dark;
+      border: 2px solid $osg-color-blue-dark;
+    }
+    &:focus, &:hover {
+      color: white;
+      background: $osg-color-blue-hover;
+      border-color: $osg-color-blue-hover;
+      text-decoration: underline;
+    }
+  }
+
+  &:disabled {
+    background-color: $osg-color-grey-light;
+    border-color: $osg-color-grey-light;
+    color: $osg-color-disabled;
+    cursor: default;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    // force 1x1 ratio
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      padding-top: 100%;
+    }
+    &:not(:disabled) {
+      &:focus, &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $osg-color-blue-dark;
+    &:not(:disabled) {
+      &:visited {
+        background-color: transparent;
+        color: $osg-color-blue-dark;
+      }
+      &:focus, &:hover {
+        background-color: transparent;
+        color: $osg-color-blue-hover;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: $osg-color-blue-dark;
+    text-decoration: underline;
+    &:not(:disabled) {
+      &:focus, &:hover {
+        background-color: $osg-color-grey-light;
+        border-color: $osg-color-grey-light;
+        color: $osg-color-blue-hover;
+        text-decoration: underline;
+      }
+    }
+    &:disabled {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  @each $name, $text, $background in $osg-button-colors {
+    &--#{$name} {
+      color: $text;
+      background-color: $background;
+      border: 2px solid $background;
+      &:not(:disabled) {
+        &:visited {
+          color: $text;
+          background-color: $background;
+          border: 2px solid $background;
+        }
+        &:focus, &:hover {
+          color: white;
+          background-color: $osg-color-blue-hover;
+          border-color: $osg-color-blue-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .osg-icon {
+    margin: -8px 0;
+    &--icon-right {
+      margin-left: $osg-space-2;
+    }
+    &--icon-left {
+      margin-right: $osg-space-2;
+    }
+  }
+}

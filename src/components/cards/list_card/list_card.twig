@@ -8,14 +8,14 @@
 
 <div class="osg-list-card {{ listCardModifiers }}">
   <a href="{{ listCard.url }}">
-    {% include 'atoms/decorators/shape/shape.twig' %}
+    {% include 'components/decorators/shape/shape.twig' %}
     {% if hasStateText %}
       <div class="osg-list-card__state-text osg-u-heading-3">
         {{ listCard.stateText }}
       </div>
     {% endif %}
   </a>
-  {% embed 'molecules/content_display/content_box/content_box.twig' %}
+  {% embed 'components/content_display/content_box/content_box.twig' %}
     {% block content %}
       {{ listCardContent }}
       {% if hasSearchResult %}

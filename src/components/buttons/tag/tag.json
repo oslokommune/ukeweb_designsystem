@@ -1,9 +1,39 @@
 {
   "devtools": {
-    "tags": ["keyword", "related", "items"]
+    "tags": [
+      "keyword",
+      "related",
+      "items"
+    ],
+    "modifiers": [
+      {
+        "type": "title",
+        "content": "- States"
+      },
+      {
+        "type": "modifier",
+        "class": "osg-tag--muted"
+      },
+      {
+        "type": "modifier",
+        "class": "osg-tag--primary"
+      },
+      {
+        "type": "modifier",
+        "class": "osg-tag--success"
+      },
+      {
+        "type": "modifier",
+        "class": "osg-tag--warning"
+      },
+      {
+        "type": "modifier",
+        "class": "osg-tag--danger"
+      }
+    ]
   },
-  "tag": {
-    "content": "Nunc elit risus",
+  "component": {
+    "content": "Tag text",
     "url": "#lorem"
   }
 }

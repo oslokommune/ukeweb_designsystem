@@ -7,7 +7,7 @@
 {% set headerModifiers = header.modifiers | default(null) %}
 
 <header class="osg-header {{ headerVariant }} {{ headerModifiers }}">
-  {% include 'molecules/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
+  {% include 'components/navigation/navbar_menu/navbar_menu.twig' with { navbarMenu: header.navbarMenu } %}
   <div class="osg-header__title">
     {% if hasTitleText and hasTitleTitle and hasTitleUrl %}
     <h1 class="osg-u-text-4">

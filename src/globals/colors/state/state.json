@@ -3,7 +3,7 @@
     "preset": "clean",
     "sections": {
       "docs": {
-        "visible":  false
+        "visible": false
       }
     },
     "tags": [
@@ -17,6 +17,11 @@
         "name": "muted",
         "bgHex": "#e6e6e6",
         "hex": "#333333"
+      },
+      {
+        "name": "disabled",
+        "bgHex": "darken(white, 40%)",
+        "hex": "#f9f9f9"
       },
       {
         "name": "primary",

@@ -27,15 +27,6 @@ $osg-colors: (
   "yellow": $osg-color-yellow
 );
 
-$osg-button-colors: (
-  ("red", $osg-color-blue-dark, $osg-color-red),
-  /* INFO: omitted since it's default style ("blue-dark", $osg-color-blue-light, $osg-color-blue-dark),*/
-  ("blue-light", $osg-color-blue-dark, $osg-color-blue-light),
-  ("green-dark", $osg-color-green-light, $osg-color-green-dark),
-  ("green-light", $osg-color-green-dark, $osg-color-green-light),
-  ("yellow", $osg-color-blue-dark, $osg-color-yellow)
-);
-
 $osg-named-colors: (
   "disabled": $osg-color-grey-light $osg-color-disabled,
   "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,

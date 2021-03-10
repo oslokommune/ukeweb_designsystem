@@ -11,14 +11,14 @@
       {% block titleContent %}
       {% endblock %}
     </div>
-    {% embed 'atoms/buttons/button/button.twig' %}
+    {% embed 'components/buttons/button/button.twig' %}
       {% block content %}
-        {% include 'atoms/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--' ~ expandBox.buttonIcon | default('chevron-down') } } %}
+        {% include 'components/icons/icon/icon.twig' with { 'icon': { 'modifiers': 'osg-icon--' ~ expandBox.buttonIcon | default('chevron-down') } } %}
       {% endblock %}
     {% endembed %}
   </div>
   <div class="osg-expand-box__content" id="{{ expandBox.expandableAreaId }}">
-    {% embed 'molecules/content_display/content_box/content_box.twig' %}
+    {% embed 'components/content_display/content_box/content_box.twig' %}
       {% block content %}
         {{ expandBoxContent }}
       {% endblock %}

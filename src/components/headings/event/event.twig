@@ -16,7 +16,7 @@
   {% endblock %}
   <div class="osg-event__image">
     <div class="osg-event__image-container">
-      {% include 'atoms/decorators/figure/figure.twig' %}
+      {% include 'components/decorators/figure/figure.twig' %}
       {% if hasStateText %}
         <div class="osg-event__state-text osg-u-heading-1">
           {{ event.stateText }}
@@ -24,7 +24,7 @@
       {% endif %}
     </div>
     <div class="osg-event__info osg-u-text-6">
-      {% embed 'molecules/data_display/info_list/info_list.twig' %}
+      {% embed 'components/data_display/info_list/info_list.twig' %}
         {% block content %}
           {{ eventListContent }}
         {% endblock %}

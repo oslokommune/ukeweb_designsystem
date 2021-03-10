@@ -20,10 +20,10 @@
   {% endif %}
     <div class="osg-card__image-container">
       {% if hasCardFigure and cardUrlTitle is not null %}
-        {% include 'atoms/decorators/figure/figure.twig' %}
+        {% include 'components/decorators/figure/figure.twig' %}
       {% endif %}
     </div>
-    {% embed 'molecules/content_display/content_box/content_box.twig' %}
+    {% embed 'components/content_display/content_box/content_box.twig' %}
       {% block content %}
         {{ cardContent }}
       {% endblock %}

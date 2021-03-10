@@ -4,7 +4,7 @@
   <ul>
     {% for icon in infoList.icons.entries %}
     <li class="osg-u-text-4">
-      {% include 'atoms/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
+      {% include 'components/icons/icon/icon.twig' with { modifiers: icon.modifiers } %}
       {% if icon.text is defined and icon.text is not empty %}
         <p>{{ icon.text|raw }}</p>
       {% endif %}
