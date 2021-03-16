@@ -16,7 +16,7 @@
   {% for item in icons.items %}
     <div class="osg-icons-cols__col">
       <p class="osg-u-padding-bottom-2">{{ item.name }}</p>
-      {% include 'components/icons/icon/icon.twig'
+      {% include 'components/decorators/icon/icon.twig'
         with {
           icon: {
             modifiers: 'osg-icon--' ~ item.name

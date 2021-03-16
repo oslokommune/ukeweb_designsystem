@@ -1,16 +1,110 @@
-{% set componentHasAttrs = component.attrs is defined and component.attrs is not empty %}
-{% set componentModifiers = component.modifiers.split(' ') | default([]) %}
-{% set componentClasses = ['osg-button']|merge(componentModifiers) %}
-
-<button
-  class="{{ componentClasses|join(' ') }}"
-  {% if componentHasAttrs %}
-    {% for attr in component.attrs %}
-      {{ attr.key }}="{{ attr.val }}"
-    {% endfor %}
-  {% endif %}
->
-  {% block content %}
+<h2 class="osg-u-heading-4 osg-u-margin-bottom-1">Default</h2>
+<div class="osg-container">
+  <button class="osg-button" data-target="lorem1" aria-label="press me">
+      Button text
+  </button>
+  <button class="osg-button" data-target="lorem1" aria-label="press me">
+      Button text<span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button" data-target="lorem1" aria-label="press me">
+      <span class='osg-icon osg-icon--bike'></span>
+  </button>
+  <button class="osg-button" data-target="lorem1" aria-label="press me" disabled="true">
+      Button text
+  </button>
+  <button class="osg-button" data-target="lorem1" aria-label="press me" disabled="true">
+      Button text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button" data-target="lorem1" aria-label="press me" disabled="true">
+      <span class='osg-icon osg-icon--bike'></span>
+  </button>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Outline</h2>
+<div class="osg-container">
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me">
     Button text
-  {% endblock %}
-</button>
+  </button>
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me">
+    Button text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me" disabled="true">
+    Button text
+  </button>
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me" disabled="true">
+    Button text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--outline" data-target="lorem1" aria-label="press me" disabled="true">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Text</h2>
+<div class="osg-container">
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me">
+    Button text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me" disabled="true">
+    Button text
+  </button>
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me" disabled="true">
+    Button text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--text" data-target="lorem1" aria-label="press me" disabled="true">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Circle</h2>
+<div class="osg-container">
+  <button class="osg-button osg-button--circle" data-target="lorem1" aria-label="press me">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+  <button class="osg-button osg-button--circle" data-target="lorem1" aria-label="press me" disabled="true">
+    <span class='osg-icon osg-icon--bike'></span>
+  </button>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Colors</h2>
+<div class="osg-container">
+  <button class="osg-button osg-button--blue-dark" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--blue-light" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--green-dark" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--green-light" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--yellow" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+  <button class="osg-button osg-button--red" data-target="lorem1" aria-label="press me">
+    Button text
+  </button>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Anchor</h2>
+<div class="osg-container">
+  <a href="#" class="osg-button osg-button--blue-dark" data-target="lorem1" aria-label="press me">
+    Anchor text
+  </a>
+  <a href="#"  class="osg-button osg-button--blue-light" data-target="lorem1" aria-label="press me">
+    Anchor text <span class='osg-icon osg-icon--icon-right osg-icon--bike'></span>
+  </a>
+  <a href="#"  class="osg-button osg-button--green-dark" data-target="lorem1" aria-label="press me">
+    <span class='osg-icon osg-icon--bike'></span>
+  </a>
+</div>
+<h2 class="osg-u-heading-4 osg-u-margin-top-5 osg-u-margin-bottom-1">Input</h2>
+<div class="osg-container">
+  <input type="submit" value="Submit" class="osg-button osg-button--blue-dark" />
+  <input type="reset" value="Reset" class="osg-button osg-button--red" />
+</div>

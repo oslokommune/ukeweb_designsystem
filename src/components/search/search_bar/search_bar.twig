@@ -4,7 +4,7 @@
 {% set textFieldValue = textField.value | default(null) %}
 
 <div class="osg-searchbar {{ searchBarVariant }} {{ searchBarModifiers }}">
-  {% include 'components/forms/text_field/text_field.twig' %}
+  {% include 'components/forms/input/text_field.twig' %}
   {% embed 'components/buttons/button/button.twig' %}
     {% block content %}
       <span class='osg-icon osg-icon--{{ searchBar.buttonIcon | default('magnifying-glass-small') }}' aria-hidden="true"></span>

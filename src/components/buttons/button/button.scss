@@ -18,6 +18,7 @@ $osg-button-colors: (
   min-height: 50px;
   text-decoration: none;
   cursor: pointer;
+  font-size: 18px;
 
   &:not(:disabled) {
     &:visited {
