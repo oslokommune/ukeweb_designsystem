@@ -27,11 +27,11 @@ a
   text-decoration: none
   color: $osg-color-blue-dark
   &:visited
-    @extend %osg-state-visited-text
+    @extend %osg-state-bg-visited
   &:hover
-    @extend %osg-state-hover-text
+    @extend %osg-state-bg-hover
   &:active
-    color: $osg-color-blue-dark
+    @extend %osg-state-bg-active
 
 hr
   height: 1px
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5
       color: $osg-color-blue-dark
     &:hover, &:focus
       background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast)
-      @extend %osg-state-hover-text
+      @extend %osg-state-text-hover
 
 .container.osg-is-big
   width: 100%

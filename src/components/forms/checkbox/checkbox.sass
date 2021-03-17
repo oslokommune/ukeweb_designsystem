@@ -35,7 +35,7 @@
     border-style: hidden
 
   &:hover span
-    @extend %osg-state-hover-text
+    @extend %osg-state-text-hover
     border-color: $osg-color-blue-contrast
 
   & input:focus ~ &__checkmark
@@ -43,20 +43,20 @@
     border-color: $osg-color-blue-contrast
 
   & input:focus ~ &__text
-    @extend %osg-state-hover-text
+    @extend %osg-state-text-hover
 
   & input:checked ~ &__checkmark:after
     display: block
 
   & input:checked ~ &__checkmark
-    @extend %osg-state-hover-bg
+    @extend %osg-state-bg-hover
 
   & input:checked ~ span
     font-weight: 500
     color: $osg-color-blue-dark
     border-color: $osg-color-blue-contrast
   & input:checked ~ span:hover
-    @extend %osg-state-hover-text
+    @extend %osg-state-text-hover
 
   & input:disabled:checked ~ &__checkmark
     background-color: $osg-color-grayscale-40

@@ -7,9 +7,9 @@
 
 // generating color classes
 @each $name, $color in $osg-colors
-  .osg-u-color-text-#{$name}
+  .osg-color-text-#{$name}
     color: $color !important
-  .osg-u-color-bg-#{$name}
+  .osg-color-bg-#{$name}
     background-color: $color !important
 
 @each $name, $tuple in $osg-state-colors
@@ -18,11 +18,11 @@
     background-color: nth($tuple, 1) !important
     color: nth($tuple, 2) !important
 
-  .osg-state-#{$name}-bg, %osg-state-#{$name}-bg
+  .osg-state-bg-#{$name}, %osg-state-bg-#{$name}
     background-color: nth($tuple, 1) !important
 
-  .osg-state-#{$name}-text, %osg-state-#{$name}-text
-    color: nth($tuple, 2) !important
+  .osg-state-text-#{$name}, %osg-state-text-#{$name}
+    color: nth($tuple, 1) !important
 
 // generating font weight classes
 @each $name, $size in $osg-font-weights
