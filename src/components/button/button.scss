@@ -27,17 +27,16 @@ $osg-button-colors: (
       border: 2px solid $osg-color-blue-dark;
     }
     &:focus, &:hover {
-      color: white;
-      background: $osg-color-blue-hover;
-      border-color: $osg-color-blue-hover;
+      @extend %osg-state-hover;
+      border-color: $osg-color-blue-contrast;
       text-decoration: underline;
     }
   }
 
   &:disabled {
-    background-color: $osg-color-grey-light;
-    border-color: $osg-color-grey-light;
-    color: $osg-color-disabled;
+    @extend %osg-state-disabled-text;
+    background-color: $osg-color-gray-light;
+    border-color: $osg-color-gray-light;
     cursor: default;
   }
 
@@ -66,8 +65,8 @@ $osg-button-colors: (
         color: $osg-color-blue-dark;
       }
       &:focus, &:hover {
+        @extend %osg-state-hover-text;
         background-color: transparent;
-        color: $osg-color-blue-hover;
         text-decoration: underline;
       }
     }
@@ -80,9 +79,9 @@ $osg-button-colors: (
     text-decoration: underline;
     &:not(:disabled) {
       &:focus, &:hover {
-        background-color: $osg-color-grey-light;
-        border-color: $osg-color-grey-light;
-        color: $osg-color-blue-hover;
+        @extend %osg-state-hover-text;
+        background-color: $osg-color-gray-light;
+        border-color: $osg-color-gray-light;
         text-decoration: underline;
       }
     }
@@ -104,9 +103,9 @@ $osg-button-colors: (
           border: 2px solid $background;
         }
         &:focus, &:hover {
+          @extend %osg-state-hover-bg;
           color: white;
-          background-color: $osg-color-blue-hover;
-          border-color: $osg-color-blue-hover;
+          border-color: $osg-color-blue-contrast;
           text-decoration: underline;
         }
       }

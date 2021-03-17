@@ -1,5 +1,5 @@
 <div class="osg-content">
-  <p>...text...</p>
+  <p>Official color palette</p>
 </div>
 <div class="osg-palette">
   {% for item in palette.colors %}
@@ -19,5 +19,26 @@
     </div>
   {% endfor %}
 </div>
-
+<h2 class="osg-u-heading-2 osg-u-margin-top-5 osg-u-margin-bottom-2">Digital</h2>
+<div class="osg-content">
+  <p>Colors used only for digital purposes</p>
+</div>
+<div class="osg-palette">
+  {% for item in digital.colors %}
+    <div
+      class="osg-palette__item osg-u-color-bg-{{ item.name }} {{ item.dark|default(false) ? 'osg-dark' : 'osg-light' }}">
+      <h2 class="osg-u-heading-3">
+        {{ item.name }}
+      </h2>
+      <h3 class="osg-u-text-4">
+        Classes
+      </h3>
+      <ul class="osg-u-text-6">
+        <li>osg-u-color-text-{{ item.name }}</li>
+        <li>osg-u-color-bg-{{ item.name }}</li>
+        <li>color: {{ item.hex }}</li>
+      </ul>
+    </div>
+  {% endfor %}
+</div>
 

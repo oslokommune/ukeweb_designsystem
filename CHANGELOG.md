@@ -219,7 +219,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Fixed
 
-- organisms-cards-card: new modifier for grey background.
+- organisms-cards-card: new modifier for gray background.
 - atoms-icons-icon: added new icon modifiers to example list.
 
 ### Added

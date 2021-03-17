@@ -42,7 +42,7 @@
   min-height: 50px
   text-decoration: none
   &:disabled
-    background-color: $osg-color-grey-light
+    background-color: $osg-color-gray-light
     border-color: $osg-color-white
     color: $osg-color-disabled
     cursor: default
@@ -71,8 +71,8 @@
           border: 2px solid $background
         &:focus, &:hover
           color: white
-          background-color: $osg-color-blue-hover
-          border-color: $osg-color-blue-hover
+          background-color: $osg-color-hover
+          border-color: $osg-color-hover
           text-decoration: none
       &.osg-button--outline.osg-button--active
         &:not(:disabled)
@@ -89,7 +89,7 @@
         color: $osg-color-blue-dark
       &:focus, &:hover
         background-color: transparent
-        color: $osg-color-blue-hover
+        color: $osg-color-hover
 
   &--ghost
     background-color: transparent
@@ -100,9 +100,9 @@
         +osg-common-underline($osg-color-blue-dark)
       &:focus,
       &:hover
-        background-color: $osg-color-grey-light
-        border-color: $osg-color-grey-light
-        color: $osg-color-blue-hover
+        background-color: $osg-color-gray-light
+        border-color: $osg-color-gray-light
+        color: $osg-color-hover
         \:not(.osg-icon)
           background-image: none
     &:disabled
@@ -134,9 +134,9 @@
   width: $size
   &:focus,
   &:hover:not(:disabled)
-    background-color: $osg-color-grey-light
-    border-color: $osg-color-grey-light
-    color: $osg-color-blue-hover
+    background-color: $osg-color-gray-light
+    border-color: $osg-color-gray-light
+    color: $osg-color-hover
 
 =osg-common-underline($color)
   background-image: linear-gradient(to right, $color, $color)

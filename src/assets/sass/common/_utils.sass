@@ -12,10 +12,16 @@
   .osg-u-color-bg-#{$name}
     background-color: $color !important
 
-@each $name, $tuple in $osg-named-colors
+@each $name, $tuple in $osg-state-colors
   // $osg-named-colors is a map from name to a tuple with two color values which we extract using the nth function
-  .osg-u-color-#{$name}
+  .osg-state-#{$name}, %osg-state-#{$name}
     background-color: nth($tuple, 1) !important
+    color: nth($tuple, 2) !important
+
+  .osg-state-#{$name}-bg, %osg-state-#{$name}-bg
+    background-color: nth($tuple, 1) !important
+
+  .osg-state-#{$name}-text, %osg-state-#{$name}-text
     color: nth($tuple, 2) !important
 
 // generating font weight classes
@@ -222,12 +228,12 @@
   padding: 5px 20px 5px 20px
   border: 2px solid $osg-color-blue-dark
   &:hover
-    border-color: $osg-color-blue-hover
+    border-color: $osg-color-blue-contrast
   &:focus
     border-width: 4px
     padding-left: 18px
     padding-right: 18px
-    border-color: $osg-color-blue-hover
+    border-color: $osg-color-blue-contrast
 
 .osg-input-validation
   margin: $osg-space-1 0
@@ -238,7 +244,6 @@
     background-color: $osg-color-yellow
   &--success
     background-color: $osg-color-green
-
 
 /* animations */
 @keyframes scale-up

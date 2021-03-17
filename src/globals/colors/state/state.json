@@ -14,34 +14,37 @@
   "state": {
     "colors": [
       {
-        "name": "muted",
-        "bgHex": "#e6e6e6",
-        "hex": "#333333"
+        "name": "primary"
       },
       {
-        "name": "disabled",
-        "bgHex": "darken(white, 40%)",
-        "hex": "#f9f9f9"
+        "name": "disabled"
       },
       {
-        "name": "primary",
-        "bgHex": "#b3f5ff",
-        "hex": "#034b45"
+        "name": "success"
       },
       {
-        "name": "success",
-        "bgHex": "#4e807c",
-        "hex": "#034b45"
+        "name": "warning"
       },
       {
-        "name": "warning",
-        "bgHex": "#f9c66b",
-        "hex": "#034b45"
+        "name": "danger"
       },
       {
-        "name": "danger",
-        "bgHex": "#ff8274",
-        "hex": "#034b45"
+        "name": "active"
+      },
+      {
+        "name": "active-light"
+      },
+      {
+        "name": "hover"
+      },
+      {
+        "name": "hover-light"
+      },
+      {
+        "name": "visited"
+      },
+      {
+        "name": "visited-light"
       }
     ]
   }

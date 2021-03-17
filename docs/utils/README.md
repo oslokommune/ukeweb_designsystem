@@ -10,11 +10,11 @@ These classes should be added to any element to set styles directly to it.
 
 ### Color
 
-| Name                              | Description                                                                                        |
-| --------------------------------- | -------------------------------------------------------------------------------------------------- |
-| .osg-u-color-text-[color]         | Specifies a color for text with a color from the official color palette                            |
-| .osg-u-color-bg-[color]           | Specifies a color for the background of the element with a color from the official color palette   |
-| .osg-u-color-[state color]        | Specifies a color for the background and text with colors from the official state system           |
+| Name                       | Description                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------------ |
+| .osg-u-color-text-[color]  | Specifies a color for text with a color from the official color palette                          |
+| .osg-u-color-bg-[color]    | Specifies a color for the background of the element with a color from the official color palette |
+| .osg-u-color-[state color] | Specifies a color for the background and text with colors from the official state system         |
 
 ### Text
 
@@ -22,7 +22,7 @@ These classes should be added to any element to set styles directly to it.
 | ---------------------------- | ---------------------------------------- |
 | .osg-u-text-is-[font weight] | Specifies a font weight for the element  |
 | .osg-u-text-is-italic        | Makes the text style italic              |
-| .osg-u-heading-[typography]   | Specifies a predefined header typography |
+| .osg-u-heading-[typography]  | Specifies a predefined header typography |
 | .osg-u-text-[typography]     | Specifies a predefined text typography   |
 
 ### Spacing
@@ -92,8 +92,8 @@ These optional utility classes should be added to the body tag, when needed.
 - green: (#43f8b6)
 - green-dark: (#034b45)
 - green-light: (#c7f6c9)
-- grey: (#f2f2f2)
-- grey-light: (#f9f9f9)
+- gray: (#f2f2f2)
+- gray-light: (#f9f9f9)
 - red: (#ff8274)
 - yellow: (#f9c66b)
 

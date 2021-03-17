@@ -10,10 +10,10 @@
       background-color: white
 
 // looping map from maps.scss
-@each $name, $tuple in $osg-named-colors
+@each $name, $tuple in $osg-state-colors
   +osg-text-field-helper($name, nth($tuple, 1), nth($tuple, 2))
 @each $name, $tuple in $osg-colors
-  +osg-text-field-helper($name, nth($tuple, 1), $osg-color-grey-light)
+  +osg-text-field-helper($name, nth($tuple, 1), $osg-color-gray-light)
 
 .osg-text-field
   display: flex
@@ -21,7 +21,7 @@
   flex-grow: 1
   position: relative
   &__input
-    background-color: $osg-color-grey-light
+    background-color: $osg-color-gray-light
     outline: none
     border: none
     height: 60px

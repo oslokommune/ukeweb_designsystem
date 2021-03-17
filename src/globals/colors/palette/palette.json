@@ -3,7 +3,7 @@
     "preset": "clean",
     "sections": {
       "docs": {
-        "visible":  false
+        "visible": false
       }
     },
     "tags": [
@@ -27,39 +27,25 @@
         "hex": "#b3f5ff"
       },
       {
-        "name": "blue-hover",
-        "hex": "#1f42aa",
+        "name": "green-dark",
+        "hex": "#034b45",
         "dark": true
-      },
-      {
-        "name": "purple-visited",
-        "hex": "#8d50b1",
-        "dark": true
-      },
-      {
-        "name": "purple-visited-light",
-        "hex": "#e0adff"
       },
       {
         "name": "green",
         "hex": "#43f8b6"
       },
       {
-        "name": "green-dark",
-        "hex": "#034b45",
-        "dark": true
-      },
-      {
         "name": "green-light",
         "hex": "#4e807c"
       },
       {
-        "name": "beige",
-        "hex": "#f8f0dd"
-      },
-      {
         "name": "beige-dark",
         "hex": "#d0bfae"
+      },
+      {
+        "name": "beige",
+        "hex": "#f8f0dd"
       },
       {
         "name": "yellow",
@@ -70,17 +56,84 @@
         "hex": "#ff8274"
       },
       {
-        "name": "grey",
-        "hex": "#f2f2f2"
+        "name": "white",
+        "hex": "#ffffff"
       },
       {
-        "name": "grey-light",
-        "hex": "#f9f9f9"
+        "name": "grayscale-10",
+        "hex": "darken(white, 10%)"
+      },
+      {
+        "name": "grayscale-20",
+        "hex": "darken(white, 20%)"
+      },
+      {
+        "name": "grayscale-30",
+        "hex": "darken(white, 30%)"
+      },
+      {
+        "name": "grayscale-40",
+        "hex": "darken(white, 40%)"
+      },
+      {
+        "name": "grayscale-50",
+        "hex": "darken(white, 50%)"
+      },
+      {
+        "name": "grayscale-60",
+        "hex": "darken(white, 60%)",
+        "dark": true
+      },
+      {
+        "name": "grayscale-70",
+        "hex": "darken(white, 70%)",
+        "dark": true
+      },
+      {
+        "name": "grayscale-80",
+        "hex": "darken(white, 80%)",
+        "dark": true
+      },
+      {
+        "name": "grayscale-90",
+        "hex": "darken(white, 90%)",
+        "dark": true
       },
       {
         "name": "black",
+        "hex": "#000000",
+        "dark": true
+      }
+    ]
+  },
+  "digital": {
+    "colors": [
+      {
+        "name": "gray-dark",
         "hex": "#2c2c2c",
         "dark": true
+      },
+      {
+        "name": "gray",
+        "hex": "#f2f2f2"
+      },
+      {
+        "name": "gray-light",
+        "hex": "#f9f9f9"
+      },
+      {
+        "name": "blue-contrast",
+        "hex": "#1f42aa",
+        "dark": true
+      },
+      {
+        "name": "purple",
+        "hex": "#8d50b1",
+        "dark": true
+      },
+      {
+        "name": "purple-light",
+        "hex": "#e0adff"
       }
     ]
   }

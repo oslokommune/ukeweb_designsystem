@@ -18,7 +18,7 @@
     align-self: baseline
     +osg-mq-desktop-and-up
       margin-top: 3px
-  
+
   &__checkmark:after
     content: ""
     display: none
@@ -30,33 +30,33 @@
     width: 5px
     top: 50%
     left: 50%
-    
+
   &__text
     border-style: hidden
 
   &:hover span
-    color: $osg-color-blue-hover
-    border-color: $osg-color-blue-hover
+    @extend %osg-state-hover-text
+    border-color: $osg-color-blue-contrast
 
   & input:focus ~ &__checkmark
     outline: -webkit-focus-ring-color auto 5px
-    border-color: $osg-color-blue-hover
-  
+    border-color: $osg-color-blue-contrast
+
   & input:focus ~ &__text
-    color: $osg-color-blue-hover
+    @extend %osg-state-hover-text
 
   & input:checked ~ &__checkmark:after
     display: block
 
   & input:checked ~ &__checkmark
-    background-color: $osg-color-blue-hover
+    @extend %osg-state-hover-bg
 
   & input:checked ~ span
     font-weight: 500
     color: $osg-color-blue-dark
-    border-color: $osg-color-blue-hover
+    border-color: $osg-color-blue-contrast
   & input:checked ~ span:hover
-    color: $osg-color-blue-hover
+    @extend %osg-state-hover-text
 
   & input:disabled:checked ~ &__checkmark
     background-color: $osg-color-grayscale-40
@@ -66,4 +66,3 @@
     border-color: $osg-color-grayscale-40
     pointer-events: none
     background-color: none
-    

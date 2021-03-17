@@ -26,7 +26,7 @@
       <div class="osg-alert__overlay-top">
         <div class="osg-alert__white-space"></div>
         {% if alertHasButton %}
-          {% embed 'components/buttons/button/button.twig' %}
+          {% embed 'components/button/button.twig' %}
             {% block content %}
               <span class='osg-icon osg-icon--{{ alert.closeButtonIcon | default('close') }}'>
                 <span class='osg-sr-only'>{{ alert.closeButtonSrText }}</span>

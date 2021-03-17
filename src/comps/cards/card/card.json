@@ -11,7 +11,7 @@
       "event"
     ],
     "modifiers": [
-      "osg-card--grey", 
+      "osg-card--gray",
       "osg-card--animate"
     ]
   },

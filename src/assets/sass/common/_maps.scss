@@ -14,26 +14,41 @@ $osg-colors: (
   "black": $osg-color-black,
   "blue": $osg-color-blue,
   "blue-dark": $osg-color-blue-dark,
-  "blue-hover": $osg-color-blue-hover,
+  "blue-contrast": $osg-color-blue-contrast,
   "blue-light": $osg-color-blue-light,
   "green": $osg-color-green,
   "green-dark": $osg-color-green-dark,
   "green-light": $osg-color-green-light,
-  "grey": $osg-color-grey,
-  "grey-light": $osg-color-grey-light,
-  "purple-visited": $osg-color-purple-visited,
-  "purple-visited-light": $osg-color-purple-visited-light,
+  "gray-dark": $osg-color-gray-dark,
+  "gray": $osg-color-gray,
+  "gray-light": $osg-color-gray-light,
   "red": $osg-color-red,
-  "yellow": $osg-color-yellow
+  "yellow": $osg-color-yellow,
+  "purple": $osg-color-purple,
+  "purple-light": $osg-color-purple-light,
+  "grayscale-10": $osg-color-grayscale-10,
+  "grayscale-20": $osg-color-grayscale-20,
+  "grayscale-30": $osg-color-grayscale-30,
+  "grayscale-40": $osg-color-grayscale-40,
+  "grayscale-50": $osg-color-grayscale-50,
+  "grayscale-60": $osg-color-grayscale-60,
+  "grayscale-70": $osg-color-grayscale-70,
+  "grayscale-80": $osg-color-grayscale-80,
+  "grayscale-90": $osg-color-grayscale-90
 );
 
-$osg-named-colors: (
-  "disabled": $osg-color-grey-light $osg-color-disabled,
-  "muted": $osg-color-grayscale-10 $osg-color-grayscale-80,
-  "primary": $osg-color-blue-light $osg-color-green-dark,
+$osg-state-colors: (
+  "disabled": $osg-color-gray-light $osg-color-grayscale-40,
+  "primary": $osg-color-blue-dark $osg-color-white,
   "success": $osg-color-green-light $osg-color-green-dark,
-  "warning": $osg-color-yellow $osg-color-green-dark,
-  "danger": $osg-color-red $osg-color-green-dark
+  "warning": $osg-color-yellow $osg-color-blue-dark,
+  "danger": $osg-color-red $osg-color-blue-dark,
+  "active": $osg-color-blue-contrast $osg-color-white,
+  "active-light": $osg-color-blue-light $osg-color-blue-dark,
+  "hover": $osg-color-blue-contrast $osg-color-white,
+  "hover-light": $osg-color-blue-light $osg-color-blue-dark,
+  "visited": $osg-color-purple $osg-color-white,
+  "visited-light": $osg-color-purple-light $osg-color-blue-dark
 );
 
 // used to generate spacing classes in utils.sass
