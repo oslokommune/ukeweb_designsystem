@@ -1,0 +1,28 @@
+$osg-state-colors: (
+  "disabled": $osg-color-gray-light $osg-color-grayscale-40,
+  "primary": $osg-color-blue-dark $osg-color-white,
+  "success": $osg-color-green-light $osg-color-green-dark,
+  "warning": $osg-color-yellow $osg-color-blue-dark,
+  "danger": $osg-color-red $osg-color-blue-dark,
+  "active": $osg-color-blue-contrast $osg-color-white,
+  "active-light": $osg-color-blue-light $osg-color-blue-dark,
+  "hover": $osg-color-blue-contrast $osg-color-white,
+  "hover-light": $osg-color-blue-light $osg-color-blue-dark,
+  "visited": $osg-color-purple $osg-color-white,
+  "visited-light": $osg-color-purple-light $osg-color-blue-dark
+);
+
+@each $name, $tuple in $osg-state-colors {
+  .osg-state-#{$name}, %osg-state-#{$name} {
+    background-color: nth($tuple, 1) !important;
+    color: nth($tuple, 2) !important;
+  }
+
+  .osg-state-bg-#{$name}, %osg-state-bg-#{$name} {
+    background-color: nth($tuple, 1) !important;
+  }
+
+  .osg-state-text-#{$name}, %osg-state-text-#{$name} {
+    color: nth($tuple, 1) !important;
+  }
+}

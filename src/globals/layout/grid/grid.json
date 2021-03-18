@@ -1,0 +1,13 @@
+{
+  "devtools": {
+    "preset": "clean",
+    "sections": {
+      "docs": {
+        "visible": false
+      }
+    },
+    "tags": [
+      "grid"
+    ]
+  }
+}

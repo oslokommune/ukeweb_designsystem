@@ -1,0 +1,163 @@
+$osg-spacing-sizes: (
+  "none": $osg-space-none,
+  "1": $osg-space-1,
+  "2": $osg-space-2,
+  "3": $osg-space-3,
+  "4": $osg-space-4,
+  "5": $osg-space-5,
+  "6": $osg-space-6,
+  "7": $osg-space-7
+);
+
+@each $name, $size in $osg-spacing-sizes {
+  .osg-padding-#{$name} {
+    padding: $size $size $size $size !important;
+  }
+  .osg-margin-#{$name} {
+    margin: $size $size $size $size !important;
+  }
+  .osg-padding-bottom-#{$name} {
+    padding-bottom: $size !important;
+  }
+  .osg-margin-bottom-#{$name} {
+    margin-bottom: $size !important;
+  }
+  .osg-padding-top-#{$name} {
+    padding-top: $size !important;
+  }
+  .osg-margin-top-#{$name} {
+    margin-top: $size !important;
+  }
+  .osg-padding-left-#{$name} {
+    padding-left: $size !important;
+  }
+  .osg-margin-left-#{$name} {
+    margin-left: $size !important;
+  }
+  .osg-padding-right-#{$name} {
+    padding-right: $size !important;
+  }
+  .osg-margin-right-#{$name} {
+    margin-right: $size !important;
+  }
+  .osg-padding-horizontal-#{$name} {
+    padding-left: $size !important;
+    padding-right: $size !important;
+  }
+  .osg-margin-horizontal-#{$name} {
+    margin-left: $size !important;
+    margin-right: $size !important;
+  }
+  .osg-padding-vertical-#{$name} {
+    padding-top: $size !important;
+    padding-bottom: $size !important;
+  }
+  .osg-margin-vertical-#{$name} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+}
+
+// generate spacing classes for tablet
+@include osg-mq-tablet-and-up {
+  @each $name, $size in $osg-spacing-sizes {
+    .osg-padding-#{$name}-tablet-andp {
+      padding: $size $size $size $size !important;
+    }
+    .osg-margin-#{$name}-tablet-andp {
+      margin: $size $size $size $size !important;
+    }
+    .osg-padding-bottom-#{$name}-tablet-andp {
+      padding-bottom: $size !important;
+    }
+    .osg-margin-bottom-#{$name}-tablet-andp {
+      margin-bottom: $size !important;
+    }
+    .osg-padding-top-#{$name}-tablet-andp {
+      padding-top: $size !important;
+    }
+    .osg-margin-top-#{$name}-tablet-andp {
+      margin-top: $size !important;
+    }
+    .osg-padding-left-#{$name}-tablet-andp {
+      padding-left: $size !important;
+    }
+    .osg-margin-left-#{$name}-tablet-andp {
+      margin-left: $size !important;
+    }
+    .osg-padding-right-#{$name}-tablet-andp {
+      padding-right: $size !important;
+    }
+    .osg-margin-right-#{$name}-tablet-andp {
+      margin-right: $size !important;
+    }
+    .osg-padding-horizontal-#{$name}-tablet-andp {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+    .osg-margin-horizontal-#{$name}-tablet-andp {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+    .osg-padding-vertical-#{$name}-tablet-andp {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+    .osg-margin-vertical-#{$name}-tablet-andp {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+  }
+}
+
+// generate spacing classes for desktop
+@include osg-mq-desktop-and-up {
+  @each $name, $size in $osg-spacing-sizes {
+    .osg-padding-#{$name}-desktop-andp {
+      padding: $size $size $size $size !important;
+    }
+    .osg-margin-#{$name}-desktop-andp {
+      margin: $size $size $size $size !important;
+    }
+    .osg-padding-bottom-#{$name}-desktop-andp {
+      padding-bottom: $size !important;
+    }
+    .osg-margin-bottom-#{$name}-desktop-andp {
+      margin-bottom: $size !important;
+    }
+    .osg-padding-top-#{$name}-desktop-andp {
+      padding-top: $size !important;
+    }
+    .osg-margin-top-#{$name}-desktop-andp {
+      margin-top: $size !important;
+    }
+    .osg-padding-left-#{$name}-desktop-andp {
+      padding-left: $size !important;
+    }
+    .osg-margin-left-#{$name}-desktop-andp {
+      margin-left: $size !important;
+    }
+    .osg-padding-right-#{$name}-desktop-andp {
+      padding-right: $size !important;
+    }
+    .osg-margin-right-#{$name}-desktop-andp {
+      margin-right: $size !important;
+    }
+    .osg-padding-horizontal-#{$name}-desktop-andp {
+      padding-left: $size !important;
+      padding-right: $size !important;
+    }
+    .osg-margin-horizontal-#{$name}-desktop-andp {
+      margin-left: $size !important;
+      margin-right: $size !important;
+    }
+    .osg-padding-vertical-#{$name}-desktop-andp {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+    .osg-margin-vertical-#{$name}-desktop-andp {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+  }
+}
