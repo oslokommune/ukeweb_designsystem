@@ -1,0 +1,11 @@
+$osg-direction: (
+  "row-reverse",
+  "column-reverse"
+);
+
+// generating flex direction classes
+@each $name in $osg-direction {
+  .osg-u-direction-#{$name} {
+    flex-direction: #{$name} !important;
+  }
+}
