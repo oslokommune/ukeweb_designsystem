@@ -3,13 +3,9 @@
 // ============================================================================
 //
 // Provides a set of global styles available for consumers and patterns.
+@import "content"
 
 /* ---------------- GENERAL -----------------*/
-@import '~minireset.css/minireset.sass'
-@import 'global/osloSans'
-@import 'global/osloIcons'
-@import 'global/content'
-
 body
   font-family: 'Oslo Sans', sans-serif
   font-size: 100%
@@ -27,11 +23,11 @@ a
   text-decoration: none
   color: $osg-color-blue-dark
   &:visited
-    @extend %osg-state-bg-visited
+    @extend %osg-state-text-visited
   &:hover
-    @extend %osg-state-bg-hover
+    @extend %osg-state-text-hover
   &:active
-    @extend %osg-state-bg-active
+    @extend %osg-state-text-active
 
 hr
   height: 1px

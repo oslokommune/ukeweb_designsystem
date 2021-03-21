@@ -3,7 +3,9 @@
 // ============================================================================
 //
 // This file is the entry file for all global sass in this project.
+@import '~minireset.css/minireset.sass';
 
-@import "resources"
-@import "common/global"
-@import "common/utils"
+@import "mixins";
+@import "base";
+@import "generators";
+@import "global";
