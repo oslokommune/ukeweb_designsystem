@@ -1,0 +1,10 @@
+{
+  "devtools": {
+    "tags": [
+      "ul",
+      "ol",
+      "unordered",
+      "ordered"
+    ]
+  }
+}

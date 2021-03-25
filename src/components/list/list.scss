@@ -1,0 +1,17 @@
+ul.osg-list {
+  list-style: disc;
+}
+
+ol.osg-list {
+  list-style: decimal;
+}
+
+ul.osg-list,
+ol.osg-list {
+  padding-left: 20px;
+
+  &--clean {
+    padding-left: 0;
+    list-style: none;
+  }
+}

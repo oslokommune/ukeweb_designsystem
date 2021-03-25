@@ -18,15 +18,17 @@ $osg-button-colors: (
   min-height: 50px;
   text-decoration: none;
   cursor: pointer;
-  font-size: 18px;
 
   &:not(:disabled) {
-    &:visited {
+    &:active, &--active {
+      @extend %osg-state-active;
+    }
+    &:visited, &--visited {
       color: $osg-color-blue-light;
       background: $osg-color-blue-dark;
       border: 2px solid $osg-color-blue-dark;
     }
-    &:focus, &:hover {
+    &:focus, &:hover, &--focus, &--hover {
       @extend %osg-state-hover;
       border-color: $osg-color-blue-contrast;
       text-decoration: underline;
@@ -64,7 +66,6 @@ $osg-button-colors: (
         color: $osg-color-blue-dark;
       }
       &:focus, &:hover {
-        @extend %osg-state-text-hover;
         background-color: transparent;
         text-decoration: underline;
       }
@@ -78,7 +79,6 @@ $osg-button-colors: (
     text-decoration: underline;
     &:not(:disabled) {
       &:focus, &:hover {
-        @extend %osg-state-text-hover;
         background-color: $osg-color-gray-light;
         border-color: $osg-color-gray-light;
         text-decoration: underline;

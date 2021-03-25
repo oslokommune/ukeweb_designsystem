@@ -1,0 +1,17 @@
+a.osg-link {
+  background-image: linear-gradient(to right, $osg-color-blue-dark, $osg-color-blue-dark);
+  background-position: 0 1.33em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+
+  text-decoration: none;
+  color: $osg-color-blue-dark;
+
+  &:active, &:visited, &--active, &--visited {
+    color: $osg-color-blue-dark;
+  }
+  &:hover, &:focus, &--hover, &--focus {
+    background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast);
+    @extend %osg-state-text-hover;
+  }
+}
