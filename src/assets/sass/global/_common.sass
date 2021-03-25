@@ -3,9 +3,23 @@
 // ============================================================================
 //
 // Provides a set of global styles available for consumers and patterns.
-@import "content"
+
+$osg-content-pre-padding: 1.25em 1.5em
+
+$osg-content-table-cell-border: 1px solid $osg-color-grayscale-90
+$osg-content-table-cell-border-width: 0 0 1px
+$osg-content-table-cell-padding: 0.5em 0.75em
+$osg-content-table-cell-heading-color: $osg-color-grayscale-90
+$osg-content-table-head-cell-border-width: 0 0 2px
+$osg-content-table-head-cell-color: $osg-color-grayscale-90
+$osg-content-table-foot-cell-border-width: 2px 0 0
+$osg-content-table-foot-cell-color: $osg-color-grayscale-90
 
 /* ---------------- GENERAL -----------------*/
+*
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+
 body
   font-family: 'Oslo Sans', sans-serif
   font-size: 100%
@@ -13,21 +27,22 @@ body
   color: $osg-color-blue-dark
 
 p
-  font-size: $osg-font-size-16
-  line-height: 1.5em
-  font-weight: 300
-  +osg-mq-tablet-and-up
-    font-size: $osg-font-size-18
+  @extend %osg-text-5
 
 a
+  background-image: linear-gradient(to right, $osg-color-blue-dark, $osg-color-blue-dark)
+  background-position: 0 1.33em
+  background-repeat: repeat-x
+  background-size: 1px 1px
+
   text-decoration: none
   color: $osg-color-blue-dark
-  &:visited
-    @extend %osg-state-text-visited
-  &:hover
+
+  &:active, &:visited
+    color: $osg-color-blue-dark
+  &:hover, &:focus
+    background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast)
     @extend %osg-state-text-hover
-  &:active
-    @extend %osg-state-text-active
 
 hr
   height: 1px
@@ -46,41 +61,94 @@ hr
       width: auto
       white-space: normal
 
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5, h6
   hyphens: auto
-
-.osg-content, %osg-content
-  @extend %osg-content-wrapper
-  blockquote
-    +osg-common-blockquote
-  p
-    @extend %osg-text-5
-  h1, h2, h3, h4, h5
-    margin-bottom: 0.4em
-    hyphens: auto
-  h1
-    @extend %osg-heading-1
-  h2
-    @extend %osg-heading-2
-  h3
-    @extend %osg-heading-3
-  h4
-    @extend %osg-heading-4
-  h5
-    @extend %osg-heading-5
-  ul li, ol li
-    @extend %osg-text-5
-  strong
-    font-weight: 500
-  a
-    +osg-common-underline($osg-color-blue-dark)
-    text-decoration: none
-    &:active, &:visited
-      color: $osg-color-blue-dark
-    &:hover, &:focus
-      background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast)
-      @extend %osg-state-text-hover
 
 .container.osg-is-big
   width: 100%
   max-width: 1920 - (2 * $osg-gap)
+
+blockquote
+  +osg-common-blockquote
+h1, h2, h3, h4, h5, h6
+  margin-bottom: 0.4em
+h1
+  @extend %osg-heading-1
+h2
+  @extend %osg-heading-2
+h3
+  @extend %osg-heading-3
+h4
+  @extend %osg-heading-4
+h5
+  @extend %osg-heading-5
+h6
+  @extend %osg-heading-6
+ul li, ol li
+  @extend %osg-text-5
+strong
+  font-weight: 500
+
+ol
+  list-style: decimal outside
+  margin-left: 2em
+  margin-top: 1em
+ul
+  list-style: disc outside
+  margin-left: 2em
+  margin-top: 1em
+  ul
+    list-style-type: circle
+    margin-top: 0.5em
+    ul
+      list-style-type: square
+dd
+  margin-left: 2em
+figure
+  margin-left: 2em
+  margin-right: 2em
+  text-align: center
+  &:not(:first-child)
+    margin-top: 2em
+  &:not(:last-child)
+    margin-bottom: 2em
+  img
+    display: inline-block
+  figcaption
+    font-style: italic
+pre
+  -webkit-overflow-scrolling: touch
+  overflow-x: auto
+  padding: $osg-content-pre-padding
+  white-space: pre
+  word-wrap: normal
+sup,
+sub
+  font-size: 75%
+table
+  width: 100%
+  td,
+  th
+    border: $osg-content-table-cell-border
+    border-width: $osg-content-table-cell-border-width
+    padding: $osg-content-table-cell-padding
+    vertical-align: top
+  th
+    color: $osg-content-table-cell-heading-color
+    text-align: left
+  thead
+    td,
+    th
+      border-width: $osg-content-table-head-cell-border-width
+      color: $osg-content-table-head-cell-color
+  tfoot
+    td,
+    th
+      border-width: $osg-content-table-foot-cell-border-width
+      color: $osg-content-table-foot-cell-color
+  tbody
+    tr
+      &:last-child
+        td,
+        th
+          border-bottom-width: 0
