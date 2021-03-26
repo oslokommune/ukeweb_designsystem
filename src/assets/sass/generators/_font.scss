@@ -33,13 +33,13 @@ $osg-font-alignment: (
 
 // generating font weight classes
 @each $name, $size in $osg-font-weights {
-  .osg-text-is-#{$name} {
+  .osg-text-#{$name} {
     font-weight: $size !important;
   }
 }
 
 // italic font class
-.osg-text-is-italic {
+.osg-text-italic {
   font-style: italic !important;
 }
 

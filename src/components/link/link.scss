@@ -5,13 +5,36 @@ a.osg-link {
   background-size: 1px 1px;
 
   text-decoration: none;
-  color: $osg-color-blue-dark;
+  color: inherit;
 
-  &:active, &:visited, &--active, &--visited {
-    color: $osg-color-blue-dark;
+  @extend %osg-text-5;
+
+  &--external {
+    &::after,
+    &:hover::after {
+      font-family: 'Oslo Icons' !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      content: map-get($osg-icons, "new-window") !important;
+      font-size: 20px !important;
+      margin-left: 2px !important;
+      display: inline;
+      vertical-align: bottom;
+    }
   }
-  &:hover, &:focus, &--hover, &--focus {
+
+  &:visited, &--visited {
+    background-image: linear-gradient(to right, $osg-color-purple, $osg-color-purple);
+    @extend %osg-state-text-visited;
+  }
+  &:hover, &--hover, &:focus, &--focus {
     background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast);
     @extend %osg-state-text-hover;
+  }
+  &:active, &--active {
+    background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast);
+    @extend %osg-state-text-active;
   }
 }

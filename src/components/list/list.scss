@@ -14,4 +14,21 @@ ol.osg-list {
     padding-left: 0;
     list-style: none;
   }
+
+  &--chevron {
+    @extend .osg-list--clean;
+
+    li::before {
+      font-family: 'Oslo Icons' !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      content: map-get($osg-icons, "chevron-right") !important;
+      font-size: 20px !important;
+      margin-left: 2px !important;
+      display: inline;
+      vertical-align: bottom;
+    }
+  }
 }
