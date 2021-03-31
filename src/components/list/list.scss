@@ -9,6 +9,11 @@ ol.osg-list {
 ul.osg-list,
 ol.osg-list {
   padding-left: 20px;
+  @extend %osg-text-5;
+
+  li {
+    padding-bottom: 10px;
+  }
 
   &--clean {
     padding-left: 0;
