@@ -33,7 +33,7 @@ $osg-font-alignment: (
 
 // generating font weight classes
 @each $name, $size in $osg-font-weights {
-  .osg-text-#{$name} {
+  .osg-text-#{$name}, %osg-text-#{$name} {
     font-weight: $size !important;
   }
 }
