@@ -7,7 +7,7 @@ a.osg-link {
   text-decoration: none;
   color: inherit;
 
-  @extend %osg-text-5;
+  font-size: inherit;
 
   &--external {
     &::after,

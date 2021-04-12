@@ -1,13 +1,13 @@
-ul.osg-list {
+ul.osg-list, ul.osg-list ul {
   list-style: disc;
 }
 
-ol.osg-list {
+ol.osg-list, ol.osg-list ol {
   list-style: decimal;
 }
 
-ul.osg-list,
-ol.osg-list {
+ul.osg-list, ul.osg-list ul,
+ol.osg-list, ol.osg-list ol {
   padding-left: 20px;
   @extend %osg-text-5;
 
@@ -15,13 +15,21 @@ ol.osg-list {
     padding-bottom: 10px;
   }
 
-  &--clean {
+  &--clean, &--clean ul {
     padding-left: 0;
     list-style: none;
+
+    ul {
+      padding-left: 20px;
+    }
   }
 
-  &--chevron {
+  &--chevron, &--chevron ul {
     @extend .osg-list--clean;
+
+    ul {
+      padding-left: 20px;
+    }
 
     li::before {
       font-family: 'Oslo Icons' !important;

@@ -1,0 +1,32 @@
+.osg-content {
+  h1 {
+    @extend %osg-heading-1;
+  }
+  h2 {
+    @extend %osg-heading-2;
+  }
+  h3 {
+    @extend %osg-heading-3;
+  }
+  h4 {
+    @extend %osg-heading-4;
+  }
+  h5 {
+    @extend %osg-heading-5;
+  }
+  h6 {
+    @extend %osg-heading-6;
+  }
+
+  p {
+    @extend %osg-text-5;
+  }
+
+  ul, ol {
+    @extend .osg-list;
+  }
+
+  figure {
+    @extend .osg-blockquote;
+  }
+}

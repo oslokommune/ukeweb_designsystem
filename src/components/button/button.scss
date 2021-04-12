@@ -18,6 +18,8 @@ $osg-button-colors: (
   min-height: 50px;
   text-decoration: none;
   cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
 
   &:not(:disabled) {
     &:active, &--active {
