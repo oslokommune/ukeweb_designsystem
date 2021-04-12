@@ -7,33 +7,57 @@ $osg-button-colors: (
 );
 
 .osg-button {
+  align-items: center;
   color: $osg-color-white;
   background: $osg-color-blue-dark;
   border: 2px solid $osg-color-blue-dark;
-  display: inline-flex;
   justify-content: center;
-  align-items: center;
-  padding: 12px;
   min-width: 60px;
   min-height: 50px;
+  padding: 12px;
   text-decoration: none;
   cursor: pointer;
   font-size: inherit;
   font-weight: inherit;
 
   &:not(:disabled) {
-    &:active, &--active {
-      @extend %osg-state-active;
-    }
-    &:visited, &--visited {
+    &:link,
+    &:visited {
       color: $osg-color-blue-light;
       background: $osg-color-blue-dark;
       border: 2px solid $osg-color-blue-dark;
     }
-    &:focus, &:hover, &--focus, &--hover {
+    &:focus,
+    &:hover {
       @extend %osg-state-hover;
-      border-color: $osg-color-blue-contrast;
       text-decoration: underline;
+    }
+    &:active {
+      @extend %osg-state-active;
+      text-decoration: none;
+    }
+    &--visited {
+      color: $osg-color-blue-light;
+      background: $osg-color-blue-dark;
+      border: 2px solid $osg-color-blue-dark;
+    }
+    &--focus,
+    &--hover {
+      @extend %osg-state-hover;
+      text-decoration: underline;
+    }
+    &--active {
+      @extend %osg-state-active;
+    }
+    > span.osg-icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    > span.osg-icon:before {
+      text-decoration: none;
+    }
+    > span.osg-icon:before:hover {
+      text-decoration: none;
     }
   }
 
@@ -61,14 +85,22 @@ $osg-button-colors: (
 
   &--outline {
     background-color: transparent;
+    border-color: $osg-color-blue-dark;
     color: $osg-color-blue-dark;
+    outline: none;
     &:not(:disabled) {
+      &:link,
       &:visited {
         background-color: transparent;
-        color: $osg-color-blue-dark;
+        color: $osg-color-blue-contrast;
       }
-      &:focus, &:hover {
-        background-color: transparent;
+      &:focus,
+      &:hover {
+        background-color: $osg-color-white !important;
+        border-color: $osg-color-blue-contrast !important;
+        box-shadow: none;
+        color: $osg-color-blue-contrast !important;
+        outline-style: none;
         text-decoration: underline;
       }
     }
