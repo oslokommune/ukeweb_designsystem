@@ -1,71 +1,17 @@
-$osg-button-colors: (
-  ("red", $osg-color-blue-dark, $osg-color-red),
-  ("blue-light", $osg-color-blue-dark, $osg-color-blue-light),
-  ("green-dark", $osg-color-white, $osg-color-green-dark),
-  ("green-light", $osg-color-green-dark, $osg-color-green-light),
-  ("yellow", $osg-color-blue-dark, $osg-color-yellow)
-);
-
 .osg-button {
-  align-items: center;
   color: $osg-color-white;
   background: $osg-color-blue-dark;
   border: 2px solid $osg-color-blue-dark;
-  justify-content: center;
-  min-width: 60px;
-  min-height: 50px;
-  padding: 12px;
+  min-height: 3.125rem;
+  padding: .75rem;
   text-decoration: none;
   cursor: pointer;
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 400;
 
-  &:not(:disabled) {
-    &:link,
-    &:visited {
-      color: $osg-color-blue-light;
-      background: $osg-color-blue-dark;
-      border: 2px solid $osg-color-blue-dark;
-    }
-    &:focus,
-    &:hover {
-      @extend %osg-state-hover;
-      text-decoration: underline;
-    }
-    &:active {
-      @extend %osg-state-active;
-      text-decoration: none;
-    }
-    &--visited {
-      color: $osg-color-blue-light;
-      background: $osg-color-blue-dark;
-      border: 2px solid $osg-color-blue-dark;
-    }
-    &--focus,
-    &--hover {
-      @extend %osg-state-hover;
-      text-decoration: underline;
-    }
-    &--active {
-      @extend %osg-state-active;
-    }
-    > span.osg-icon {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    > span.osg-icon:before {
-      text-decoration: none;
-    }
-    > span.osg-icon:before:hover {
-      text-decoration: none;
-    }
-  }
-
-  &:disabled {
-    @extend %osg-state-disabled;
-    border-color: $osg-color-gray-light;
-    cursor: default;
-  }
+  /**
+   * Button types
+   */
 
   &--circle {
     border-radius: 50%;
@@ -76,11 +22,6 @@ $osg-button-colors: (
       vertical-align: middle;
       padding-top: 100%;
     }
-    &:not(:disabled) {
-      &:focus, &:hover {
-        text-decoration: none;
-      }
-    }
   }
 
   &--outline {
@@ -88,21 +29,11 @@ $osg-button-colors: (
     border-color: $osg-color-blue-dark;
     color: $osg-color-blue-dark;
     outline: none;
-    &:not(:disabled) {
-      &:link,
-      &:visited {
-        background-color: transparent;
-        color: $osg-color-blue-contrast;
-      }
-      &:focus,
-      &:hover {
-        background-color: $osg-color-white !important;
-        border-color: $osg-color-blue-contrast !important;
-        box-shadow: none;
-        color: $osg-color-blue-contrast !important;
-        outline-style: none;
-        text-decoration: underline;
-      }
+
+    &:hover {
+      background-color: transparent !important;
+      border-color: $osg-color-blue-contrast;
+      @extend .osg-state-text-hover;
     }
   }
 
@@ -111,47 +42,143 @@ $osg-button-colors: (
     border-color: transparent;
     color: $osg-color-blue-dark;
     text-decoration: underline;
-    &:not(:disabled) {
-      &:focus, &:hover {
-        background-color: $osg-color-gray-light;
-        border-color: $osg-color-gray-light;
-        text-decoration: underline;
-      }
-    }
-    &:disabled {
-      background-color: transparent;
-      border-color: transparent;
+
+    &:hover {
+      background-color: $osg-color-gray-light !important;
+      border-color: $osg-color-gray-light !important;
+      @extend .osg-state-text-hover;
     }
   }
 
-  @each $name, $text, $background in $osg-button-colors {
-    &--#{$name} {
-      color: $text;
-      background-color: $background;
-      border: 2px solid $background;
-      &:not(:disabled) {
-        &:visited {
-          color: $text;
-          background-color: $background;
-          border: 2px solid $background;
-        }
-        &:focus, &:hover {
-          @extend %osg-state-bg-hover;
-          color: white;
-          border-color: $osg-color-blue-contrast;
-          text-decoration: underline;
-        }
-      }
+  /**
+   * Button states
+   */
+
+  &:visited, &--visited {
+    @extend %osg-state-visited;
+  }
+  &:hover, &--hover, &:focus, &--focus {
+    @extend %osg-state-hover;
+    text-decoration: underline;
+  }
+  &:active, &--active {
+    @extend %osg-state-active;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    @extend %osg-state-disabled;
+    border-color: $osg-color-gray-light;
+    cursor: default;
+    text-decoration: none;
+
+    &--text {
+      background-color: transparent;
+    }
+
+    &:visited, &:hover, &:active, &:focus {
+      @extend %osg-state-disabled;
     }
   }
+
+  /**
+   * Button with icon
+   */
 
   .osg-icon {
     margin: -8px 0;
+    vertical-align: middle;
+
+    &::before {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     &--icon-right {
       margin-left: $osg-space-2;
     }
     &--icon-left {
       margin-right: $osg-space-2;
+    }
+  }
+
+  /**
+   * Button color generator
+   */
+  &--red {
+    color: $osg-color-blue-dark;
+    background-color: $osg-color-red;
+    border: 2px solid $osg-color-red;
+
+    &.osg-button--outline {
+      background-color: transparent;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
+    }
+  }
+
+  &--yellow {
+    color: $osg-color-blue-dark;
+    background-color: $osg-color-yellow;
+    border: 2px solid $osg-color-yellow;
+
+    &.osg-button--outline {
+      background-color: transparent;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
+    }
+  }
+
+  &--green-dark {
+    color: $osg-color-white;
+    background-color: $osg-color-green-dark;
+    border: 2px solid $osg-color-green-dark;
+
+    &.osg-button--outline {
+      background-color: transparent;
+      color: $osg-color-green-dark;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
+      color: $osg-color-green-dark;
+    }
+  }
+
+  &--green-light {
+    color: $osg-color-green-dark;
+    background-color: $osg-color-green-light;
+    border: 2px solid $osg-color-green-light;
+
+    &.osg-button--outline {
+      background-color: transparent;
+      color: $osg-color-green-dark;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
+      color: $osg-color-green-dark;
+    }
+  }
+
+  &--blue-light {
+    color: $osg-color-blue-dark;
+    background-color: $osg-color-blue-light;
+    border: 2px solid $osg-color-blue-light;
+
+    &.osg-button--outline {
+      background-color: transparent;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
     }
   }
 }
