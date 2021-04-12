@@ -8,11 +8,10 @@ ol.osg-list, ol.osg-list ol {
 
 ul.osg-list, ul.osg-list ul,
 ol.osg-list, ol.osg-list ol {
-  padding-left: 20px;
-  @extend %osg-text-5;
+  padding-left: 1.25rem;
 
-  li {
-    padding-bottom: 10px;
+  li + li, ul, ol {
+    padding-top: 10px;
   }
 
   &--clean, &--clean ul {
@@ -20,28 +19,31 @@ ol.osg-list, ol.osg-list ol {
     list-style: none;
 
     ul {
-      padding-left: 20px;
+      padding-left: 1.25rem;
     }
   }
 
   &--chevron, &--chevron ul {
     @extend .osg-list--clean;
 
+    padding-left: 1.25rem;
+
     ul {
-      padding-left: 20px;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      position: relative;
     }
 
     li::before {
       font-family: 'Oslo Icons' !important;
-      font-style: normal;
-      font-weight: 400 !important;
-      text-transform: none;
-      -webkit-font-smoothing: antialiased;
+      font-size: inherit;
+      line-height: inherit;
       content: map-get($osg-icons, "chevron-right") !important;
-      font-size: 20px !important;
-      margin-left: 2px !important;
-      display: inline;
-      vertical-align: bottom;
+      position: absolute;
+      bottom: 0.15rem;
+      margin-left: -1.25rem;
     }
   }
 }

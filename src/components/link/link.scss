@@ -9,19 +9,16 @@ a.osg-link {
 
   font-size: inherit;
 
+  position: relative;
+
   &--external {
     &::after,
     &:hover::after {
       font-family: 'Oslo Icons' !important;
-      font-style: normal;
-      font-weight: 400 !important;
-      text-transform: none;
-      -webkit-font-smoothing: antialiased;
+      font-size: inherit;
       content: map-get($osg-icons, "new-window") !important;
-      font-size: 20px !important;
-      margin-left: 2px !important;
-      display: inline;
-      vertical-align: bottom;
+      position: absolute;
+      bottom: 3px;
     }
   }
 
