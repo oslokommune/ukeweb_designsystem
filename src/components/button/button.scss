@@ -2,7 +2,7 @@
   color: $osg-color-white;
   background: $osg-color-blue-dark;
   border: 2px solid $osg-color-blue-dark;
-  padding: .75rem;
+  padding: .625rem .9375rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -14,13 +14,18 @@
    * Button sizes
    */
   &--small {
-    padding: .5rem;
-    @extend %osg-text-6;
+    padding: .3125rem .625rem;
+    font-size: $osg-font-size-16 !important;
   }
 
   &--large {
-    padding: 1rem;
-    @extend %osg-text-3;
+    padding: .938rem 1.875rem;
+    font-size: $osg-font-size-20 !important;
+  }
+
+  &--fullwidth {
+    display: block;
+    width: 100%;
   }
 
   /**
@@ -41,6 +46,7 @@
   }
 
   &--circle {
+    @extend .osg-button--icon-only;
     border-radius: 50%;
     // force 1x1 ratio
     &:before {
@@ -79,7 +85,20 @@
 
   &:active, &--active {
     @extend %osg-state-active;
+    border-color: $osg-color-blue-contrast;
     text-decoration: none;
+
+    &.osg-button--outline {
+      background-color: $osg-color-blue-contrast !important;
+      color: $osg-color-white !important;
+    }
+
+    &.osg-button--text {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      text-decoration: underline;
+      color: $osg-color-blue-contrast !important;
+    }
   }
 
   &:disabled {
@@ -88,11 +107,31 @@
     cursor: default;
     text-decoration: none;
 
-    &:visited, &:hover, &:active, &:focus {
+    &.osg-button--outline {
+      background-color: transparent !important;
+      border-color: $osg-color-grayscale-40 !important;
+    }
+
+    &.osg-button--text {
+      background-color: transparent !important;
+      border-color: transparent;
+      text-decoration: underline;
+    }
+
+    &:hover, &:active {
       @extend %osg-state-disabled;
 
-      &.osg-button--outline, &.osg-button--text {
-        @extend %osg-state-disabled;
+      &.osg-button--outline {
+        background-color: transparent !important;
+        border-color: $osg-color-grayscale-40 !important;
+        color: $osg-color-grayscale-40 !important;
+      }
+
+      &.osg-button--text {
+        background-color: transparent !important;
+        border-color: transparent;
+        color: $osg-color-grayscale-40 !important;
+        text-decoration: underline;
       }
     }
   }
@@ -118,6 +157,10 @@
     &--icon-left {
       margin-right: $osg-space-2;
     }
+  }
+
+  &--icon-only {
+    padding: .625rem;
   }
 
   /**
