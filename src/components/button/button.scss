@@ -2,16 +2,43 @@
   color: $osg-color-white;
   background: $osg-color-blue-dark;
   border: 2px solid $osg-color-blue-dark;
-  min-height: 3.125rem;
   padding: .75rem;
   text-decoration: none;
   cursor: pointer;
-  font-size: inherit;
-  font-weight: 400;
+  display: inline-block;
+
+  @extend %osg-text-5;
+  font-weight: 500 !important;
+
+  /**
+   * Button sizes
+   */
+  &--small {
+    padding: .5rem;
+    @extend %osg-text-6;
+  }
+
+  &--large {
+    padding: 1rem;
+    @extend %osg-text-3;
+  }
 
   /**
    * Button types
    */
+  &--outline {
+    background-color: transparent;
+    border-color: $osg-color-blue-dark;
+    color: $osg-color-blue-dark;
+    outline: none;
+  }
+
+  &--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: $osg-color-blue-dark;
+    text-decoration: underline;
+  }
 
   &--circle {
     border-radius: 50%;
@@ -24,43 +51,32 @@
     }
   }
 
-  &--outline {
-    background-color: transparent;
-    border-color: $osg-color-blue-dark;
-    color: $osg-color-blue-dark;
-    outline: none;
-
-    &:hover {
-      background-color: transparent !important;
-      border-color: $osg-color-blue-contrast;
-      @extend .osg-state-text-hover;
-    }
-  }
-
-  &--text {
-    background-color: transparent;
-    border-color: transparent;
-    color: $osg-color-blue-dark;
-    text-decoration: underline;
-
-    &:hover {
-      background-color: $osg-color-gray-light !important;
-      border-color: $osg-color-gray-light !important;
-      @extend .osg-state-text-hover;
-    }
-  }
-
   /**
    * Button states
    */
-
   &:visited, &--visited {
     @extend %osg-state-visited;
   }
+
   &:hover, &--hover, &:focus, &--focus {
     @extend %osg-state-hover;
+    border: 2px solid $osg-color-blue-contrast;
     text-decoration: underline;
+
+    &.osg-button--outline {
+      background-color: transparent !important;
+      color: $osg-color-blue-contrast;
+      border-color: $osg-color-blue-contrast;
+      @extend .osg-state-text-hover;
+    }
+
+    &.osg-button--text {
+      background-color: $osg-color-gray-light !important;
+      border-color: $osg-color-gray-light;
+      @extend .osg-state-text-hover;
+    }
   }
+
   &:active, &--active {
     @extend %osg-state-active;
     text-decoration: none;
@@ -72,19 +88,18 @@
     cursor: default;
     text-decoration: none;
 
-    &--text {
-      background-color: transparent;
-    }
-
     &:visited, &:hover, &:active, &:focus {
       @extend %osg-state-disabled;
+
+      &.osg-button--outline, &.osg-button--text {
+        @extend %osg-state-disabled;
+      }
     }
   }
 
   /**
    * Button with icon
    */
-
   .osg-icon {
     margin: -8px 0;
     vertical-align: middle;
@@ -106,7 +121,7 @@
   }
 
   /**
-   * Button color generator
+   * Button colors
    */
   &--red {
     color: $osg-color-blue-dark;
