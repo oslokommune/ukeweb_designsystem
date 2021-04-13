@@ -1,0 +1,9 @@
+.osg-test {
+  @extend .osg-padding-5;
+
+  background-color: $osg-color-green-light;
+
+  &--blue {
+    background-color: $osg-color-blue-light;
+  }
+}
