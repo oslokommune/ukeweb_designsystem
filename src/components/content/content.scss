@@ -1,32 +1,45 @@
 .osg-content {
-  h1 {
-    @extend %osg-heading-1;
-  }
   h2 {
     @extend %osg-heading-2;
   }
+
   h3 {
     @extend %osg-heading-3;
+
+    @extend .osg-margin-bottom-2;
   }
+
   h4 {
     @extend %osg-heading-4;
   }
+
   h5 {
     @extend %osg-heading-5;
+
+    @extend .osg-margin-bottom-2;
   }
+
   h6 {
     @extend %osg-heading-6;
+
+    @extend .osg-margin-bottom-1;
   }
 
   p {
-    @extend %osg-text-5;
+    @extend .osg-paragraph;
+
+    @extend .osg-margin-bottom-3;
   }
 
   ul, ol {
     @extend .osg-list;
+
+    @extend .osg-margin-bottom-3;
   }
 
   figure {
     @extend .osg-blockquote;
+
+    @extend .osg-margin-bottom-3;
   }
 }

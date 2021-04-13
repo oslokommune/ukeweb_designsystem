@@ -1,0 +1,7 @@
+.osg-paragraph {
+  @extend %osg-text-5;
+
+  &--lead {
+    @extend %osg-text-1;
+  }
+}

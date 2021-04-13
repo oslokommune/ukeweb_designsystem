@@ -1,13 +1,11 @@
 .osg-blockquote {
   @extend %osg-text-1;
 
-  position: relative;
   background-color: $osg-color-beige;
-  padding: 105px 15px 50px 30px;
+  padding: 50px 30px;
 
   @include osg-mq-tablet-and-up {
-    padding: 130px 120px 100px 120px;
-    line-height: 45px;
+    padding: 100px 75px;
   }
 
   a {
@@ -21,21 +19,9 @@
   footer, & > cite {
     @extend %osg-text-3;
     display: block;
-    line-height: 33px;
-    padding-top: 20px;
+    padding-top: 15px;
     @include osg-mq-tablet-and-up {
-      padding-top: 40px;
-    }
-  }
-
-  &:before {
-    @extend %osg-heading-1;
-    content: '"';
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    @include osg-mq-tablet-and-up {
-      left: 50px;
+      padding-top: 30px;
     }
   }
 }
