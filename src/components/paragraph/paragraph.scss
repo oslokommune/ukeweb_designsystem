@@ -1,8 +1,7 @@
 .osg-paragraph {
-  $self: &;
   @extend %osg-text-5;
 
-  &#{$self + "--lead"} {
+  &.osg-paragraph--lead {
     @extend %osg-text-1;
   }
 }

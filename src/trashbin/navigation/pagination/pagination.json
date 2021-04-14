@@ -1,9 +1,0 @@
-{
-  "devtools": {
-    "tags": ["pagination", "paging"]
-  },
-  "pagination": {
-    "indexes": [1, 2, 3, 4, 5],
-    "activeIndex": 1
-  }
-}

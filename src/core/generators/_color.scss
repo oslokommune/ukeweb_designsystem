@@ -1,0 +1,40 @@
+@use "assets/sass/base/variables" as *;
+
+$osg-colors: (
+  "white": $osg-color-white,
+  "beige": $osg-color-beige,
+  "beige-dark": $osg-color-beige-dark,
+  "black": $osg-color-black,
+  "blue": $osg-color-blue,
+  "blue-dark": $osg-color-blue-dark,
+  "blue-contrast": $osg-color-blue-contrast,
+  "blue-light": $osg-color-blue-light,
+  "green": $osg-color-green,
+  "green-dark": $osg-color-green-dark,
+  "green-light": $osg-color-green-light,
+  "gray-dark": $osg-color-gray-dark,
+  "gray": $osg-color-gray,
+  "gray-light": $osg-color-gray-light,
+  "red": $osg-color-red,
+  "yellow": $osg-color-yellow,
+  "purple": $osg-color-purple,
+  "purple-light": $osg-color-purple-light,
+  "grayscale-10": $osg-color-grayscale-10,
+  "grayscale-20": $osg-color-grayscale-20,
+  "grayscale-30": $osg-color-grayscale-30,
+  "grayscale-40": $osg-color-grayscale-40,
+  "grayscale-50": $osg-color-grayscale-50,
+  "grayscale-60": $osg-color-grayscale-60,
+  "grayscale-70": $osg-color-grayscale-70,
+  "grayscale-80": $osg-color-grayscale-80,
+  "grayscale-90": $osg-color-grayscale-90
+);
+
+@each $name, $color in $osg-colors {
+  .osg-color-text-#{$name} {
+    color: $color !important;
+  }
+  .osg-color-bg-#{$name} {
+    background-color: $color !important;
+  }
+}

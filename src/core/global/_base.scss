@@ -1,0 +1,12 @@
+@use "../base/variables" as *;
+
+body {
+  font-family: 'Oslo Sans', sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  color: $osg-color-blue-dark;
+}
+
+strong {
+  @extend %osg-text-medium;
+}

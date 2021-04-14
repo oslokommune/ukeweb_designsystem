@@ -1,0 +1,91 @@
+@use "../base/variables" as *;
+
+// id, mobile size, tablet size, desktop size and weight
+$osg-font-sizes-header: (
+  ("1", $osg-font-size-28, $osg-font-size-40, $osg-font-size-54, 400),
+  ("2", $osg-font-size-24, $osg-font-size-30, $osg-font-size-36, 400),
+  ("3", $osg-font-size-22, $osg-font-size-26, $osg-font-size-30, 400),
+  ("4", $osg-font-size-20, $osg-font-size-24, $osg-font-size-24, 500),
+  ("5", $osg-font-size-18, $osg-font-size-20, $osg-font-size-22, 500),
+  ("6", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500)
+);
+
+$osg-font-sizes: (
+  ("1", $osg-font-size-22, $osg-font-size-24, $osg-font-size-30, 300),
+  ("2", $osg-font-size-20, $osg-font-size-22, $osg-font-size-24, 300),
+  ("3", $osg-font-size-18, $osg-font-size-18, $osg-font-size-20, 300),
+  ("4", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 500),
+  ("5", $osg-font-size-16, $osg-font-size-16, $osg-font-size-18, 300),
+  ("6", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 500),
+  ("7", $osg-font-size-14, $osg-font-size-14, $osg-font-size-14, 300)
+);
+
+$osg-font-weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+$osg-font-alignment: (
+  "left",
+  "right",
+  "center"
+);
+
+// generating font weight classes
+@each $name, $size in $osg-font-weights {
+  .osg-text-#{$name}, %osg-text-#{$name} {
+    font-weight: $size !important;
+  }
+}
+
+// italic font class
+.osg-text-italic {
+  font-style: italic !important;
+}
+
+// generating font classes for headers
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-font-sizes-header {
+  .osg-heading-#{$name}, %osg-heading-#{$name} {
+    font-size: $size-mobile !important;
+    font-weight: $weight !important;
+    @if $name == "1" {
+      letter-spacing: -0.4px !important;
+    }
+    @else {
+      letter-spacing: -0.2px !important;
+    }
+
+    @include osg-mq-tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+
+    @include osg-mq-desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating typography classes for other text
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $osg-font-sizes {
+  .osg-text-#{$name}, %osg-text-#{$name} {
+    font-size: $size-mobile !important;
+    line-height: 1.5em !important;
+    font-weight: $weight !important;
+
+    @include osg-mq-tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+    @include osg-mq-desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating text align classes
+@each $name in $osg-font-alignment {
+  .osg-text-#{$name} {
+    text-align: #{$name} !important;
+  }
+}

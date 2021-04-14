@@ -1,0 +1,37 @@
+@use "../link/link";
+
+.osg-untitled {
+  @extend .osg-link;
+
+  background-image: none !important;
+  display: flex;
+
+  > * {
+    display: inline-block;
+  }
+
+  .icon {
+    @extend .osg-margin-right-2;
+  }
+
+  h4 {
+    @extend %osg-heading-4, .osg-margin-bottom-1;
+    display: inline-block;
+
+    /* Mixin på bg-image? */
+    background-image: linear-gradient(to right, $osg-color-blue-dark, $osg-color-blue-dark);
+    background-position: 0 1.33em;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+  }
+
+  p {
+    @extend %osg-text-5;
+  }
+
+  &--external {
+    h4 {
+      @include link.external(1.8rem)
+    }
+  }
+}

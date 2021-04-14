@@ -1,9 +1,0 @@
-{
-  "video": {
-    "posterUrl": "/assets/images/lecturecap.jpg",
-    "videoUrl": "https://player.vimeo.com/external/287202045.hd.mp4?s=319ad96cc79db86253fb8298313c881094529ccf&profile_id=174",
-    "subtitlesUrl": "/assets/video/lecturecap_en.vtt",
-    "playBtnText": "Play",
-    "variant": "osg-v-video-custom-controls"
-  }
-}
