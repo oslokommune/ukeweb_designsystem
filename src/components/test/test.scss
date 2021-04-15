@@ -1,9 +1,11 @@
+@use "core/config/colors" as *;
+
 .osg-test {
   @extend .osg-padding-5;
 
-  background-color: $osg-color-green-light;
+  background-color: $green-light;
 
   &--blue {
-    background-color: $osg-color-blue-light;
+    background-color: $blue-light;
   }
 }

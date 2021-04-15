@@ -1,3 +1,5 @@
+@use "core/config/icons" as *;
+
 ul.osg-list, ul.osg-list ul {
   list-style: disc;
 }
@@ -36,7 +38,7 @@ ol.osg-list, ol.osg-list ol {
       font-family: 'Oslo Icons' !important;
       font-size: inherit;
       line-height: inherit;
-      content: map-get($osg-icons, "chevron-right") !important;
+      content: map-get($icons, "chevron-right") !important;
       margin-left: -1.25rem;
       display: inline-block;
       width: 1.25rem;

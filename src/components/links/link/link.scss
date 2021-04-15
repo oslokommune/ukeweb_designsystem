@@ -1,9 +1,12 @@
+@use "core/config/colors" as *;
+@use "core/config/icons" as *;
+
 @mixin external($height) {
   &::after,
   &:hover::after {
     font-family: 'Oslo Icons' !important;
     font-size: inherit;
-    content: map-get($osg-icons, "new-window") !important;
+    content: map-get($icons, "new-window") !important;
     display: inline-block;
     width: 1rem;
     height: $height;
@@ -18,7 +21,7 @@ a.osg-link {
    * using background-image fixes this. However, you are not allowed to style
    * background-image in :visited state, so it remains the color set here.
    */
-  background-image: linear-gradient(to right, $osg-color-blue-dark, $osg-color-blue-dark);
+  background-image: linear-gradient(to right, $blue-dark, $blue-dark);
   background-position: 0 1.33em;
   background-repeat: repeat-x;
   background-size: 1px 1px;
@@ -32,14 +35,14 @@ a.osg-link {
   }
 
   &:visited, &--visited {
-    @extend %osg-state-text-visited;
+    @extend .osg-state-text-visited;
   }
   &:hover, &--hover, &:focus, &--focus {
-    background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast);
-    @extend %osg-state-text-hover;
+    background-image: linear-gradient(to right, $blue-contrast, $blue-contrast);
+    @extend .osg-state-text-hover;
   }
   &:active, &--active {
-    background-image: linear-gradient(to right, $osg-color-blue-contrast, $osg-color-blue-contrast);
-    @extend %osg-state-text-active;
+    background-image: linear-gradient(to right, $blue-contrast, $blue-contrast);
+    @extend .osg-state-text-active;
   }
 }

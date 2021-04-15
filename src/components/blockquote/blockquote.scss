@@ -1,11 +1,15 @@
+@use "core/config/colors" as *;
+@use "core/config/spacing" as *;
+@use "core/mixins/mq" as *;
+
 .osg-blockquote {
-  @extend %osg-text-1;
+  @extend .osg-text-1;
 
-  background-color: $osg-color-beige;
-  padding: 50px 30px;
+  background-color: $beige;
+  padding: $space-5 $space-4;
 
-  @include osg-mq-tablet-and-up {
-    padding: 100px 75px;
+  @include tablet-and-up {
+    padding: $space-7 $space-6;
   }
 
   a {
@@ -13,15 +17,15 @@
   }
 
   p {
-    @extend %osg-text-1;
+    @extend .osg-text-1;
   }
 
   footer, & > cite {
-    @extend %osg-text-3;
+    @extend .osg-text-3;
     display: block;
-    padding-top: 15px;
-    @include osg-mq-tablet-and-up {
-      padding-top: 30px;
+    padding-top: $space-3;
+    @include tablet-and-up {
+      padding-top: $space-4;
     }
   }
 }

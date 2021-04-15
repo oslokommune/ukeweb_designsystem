@@ -1,4 +1,5 @@
-@use "../link/link";
+@use "core/config/colors" as *;
+@use "components/links/link/link";
 
 .osg-untitled {
   @extend .osg-link;
@@ -15,18 +16,18 @@
   }
 
   h4 {
-    @extend %osg-heading-4, .osg-margin-bottom-1;
+    @extend .osg-heading-4, .osg-margin-bottom-1;
     display: inline-block;
 
     /* Mixin på bg-image? */
-    background-image: linear-gradient(to right, $osg-color-blue-dark, $osg-color-blue-dark);
+    background-image: linear-gradient(to right, $blue-dark, $blue-dark);
     background-position: 0 1.33em;
     background-repeat: repeat-x;
     background-size: 1px 1px;
   }
 
   p {
-    @extend %osg-text-5;
+    @extend .osg-text-5;
   }
 
   &--external {

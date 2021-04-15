@@ -1,0 +1,27 @@
+@use "core/mixins/mq";
+
+.osg-palette {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    padding: 20px;
+    flex: 1;
+    min-width: calc(100%);
+
+    @include mq.tablet-and-up {
+      min-width: calc(100% / 3);
+    }
+
+    &.osg-light {
+      h2,h3,p,ul li {
+        color: black;
+      }
+    }
+    &.osg-dark {
+      h2,h3,p,ul li {
+        color: white;
+      }
+    }
+  }
+}

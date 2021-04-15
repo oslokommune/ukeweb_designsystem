@@ -1,0 +1,40 @@
+@use "core/config/colors" as *;
+
+$colors: (
+  "white": $white,
+  "beige": $beige,
+  "beige-dark": $beige-dark,
+  "black": $black,
+  "blue": $blue,
+  "blue-dark": $blue-dark,
+  "blue-contrast": $blue-contrast,
+  "blue-light": $blue-light,
+  "green": $green,
+  "green-dark": $green-dark,
+  "green-light": $green-light,
+  "gray-dark": $gray-dark,
+  "gray": $gray,
+  "gray-light": $gray-light,
+  "red": $red,
+  "yellow": $yellow,
+  "purple": $purple,
+  "purple-light": $purple-light,
+  "grayscale-10": $grayscale-10,
+  "grayscale-20": $grayscale-20,
+  "grayscale-30": $grayscale-30,
+  "grayscale-40": $grayscale-40,
+  "grayscale-50": $grayscale-50,
+  "grayscale-60": $grayscale-60,
+  "grayscale-70": $grayscale-70,
+  "grayscale-80": $grayscale-80,
+  "grayscale-90": $grayscale-90
+);
+
+@each $name, $color in $colors {
+  .osg-color-text-#{$name} {
+    color: $color !important;
+  }
+  .osg-color-bg-#{$name} {
+    background-color: $color !important;
+  }
+}

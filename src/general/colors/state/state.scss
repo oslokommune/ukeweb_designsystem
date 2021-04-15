@@ -1,0 +1,16 @@
+@use "core/mixins/mq";
+
+.osg-state {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    padding: 20px;
+    flex: 1;
+    min-width: calc(100%);
+
+    @include mq.tablet-and-up {
+      min-width: calc(100% / 3);
+    }
+  }
+}

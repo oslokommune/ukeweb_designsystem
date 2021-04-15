@@ -1,0 +1,31 @@
+@use "core/config/colors" as *;
+
+$state-colors: (
+  "disabled": $gray-light $grayscale-40,
+  "primary": $blue-dark $white,
+  "success": $green-light $green-dark,
+  "warning": $yellow $blue-dark,
+  "danger": $red $blue-dark,
+  "active": $blue-contrast $white,
+  "active-light": $blue-light $blue-dark,
+  "hover": $blue-contrast $white,
+  "hover-light": $blue-light $blue-dark,
+  "visited": $purple $white,
+  "visited-light": $purple-light $blue-dark
+);
+
+@each $name, $tuple in $state-colors {
+  .osg-state-#{$name} {
+    background-color: nth($tuple, 1) !important;
+    border: 2px solid nth($tuple, 1);
+    color: nth($tuple, 2) !important;
+  }
+
+  .osg-state-bg-#{$name} {
+    background-color: nth($tuple, 1) !important;
+  }
+
+  .osg-state-text-#{$name} {
+    color: nth($tuple, 1) !important;
+  }
+}

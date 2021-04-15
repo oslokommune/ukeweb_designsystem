@@ -1,0 +1,123 @@
+@use "core/config/fonts";
+@use "core/mixins/mq";
+
+// Fonts
+// ============================================================================
+//
+//  Includes all font face variants for Oslo Sans.
+//  Medium is used as the bold font, so font-weight: bold will use OsloSans-Medium
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") );
+  $formats: ( otf: "opentype", ttf: "truetype" );
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: $src;
+  }
+}
+
+@include font-face('Oslo Sans', '#{fonts.$path}/OsloSans-Regular', 400, null, 'woff2' 'woff');
+@include font-face('Oslo Sans', '#{fonts.$path}/OsloSans-RegularItalic', 400, italic, 'woff2' 'woff');
+@include font-face('Oslo Sans', '#{fonts.$path}/OsloSans-Light', 300, null, 'woff2' 'woff');
+@include font-face('Oslo Sans', '#{fonts.$path}/OsloSans-Medium', 500, null, 'woff2' 'woff');
+@include font-face('Oslo Sans', '#{fonts.$path}/OsloSans-Bold', 700, null, 'woff2' 'woff');
+
+@include font-face('Oslo Icons', '#{fonts.$path}/OsloIcons', normal, normal, 'woff2' 'woff');
+
+// id, mobile size, tablet size, desktop size and weight
+$header-sizes: (
+  ("1", fonts.$size-28, fonts.$size-40, fonts.$size-54, 400),
+  ("2", fonts.$size-24, fonts.$size-30, fonts.$size-36, 400),
+  ("3", fonts.$size-22, fonts.$size-26, fonts.$size-30, 400),
+  ("4", fonts.$size-20, fonts.$size-24, fonts.$size-24, 500),
+  ("5", fonts.$size-18, fonts.$size-20, fonts.$size-22, 500),
+  ("6", fonts.$size-16, fonts.$size-16, fonts.$size-18, 500)
+);
+
+$text-sizes: (
+  ("1", fonts.$size-22, fonts.$size-24, fonts.$size-30, 300),
+  ("2", fonts.$size-20, fonts.$size-22, fonts.$size-24, 300),
+  ("3", fonts.$size-18, fonts.$size-18, fonts.$size-20, 300),
+  ("4", fonts.$size-16, fonts.$size-16, fonts.$size-18, 500),
+  ("5", fonts.$size-16, fonts.$size-16, fonts.$size-18, 300),
+  ("6", fonts.$size-14, fonts.$size-14, fonts.$size-14, 500),
+  ("7", fonts.$size-14, fonts.$size-14, fonts.$size-14, 300)
+);
+
+$weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+$alignments: (
+  "left",
+  "right",
+  "center"
+);
+
+// generating font weight classes
+@each $name, $size in $weights {
+  .osg-text-#{$name} {
+    font-weight: $size !important;
+  }
+}
+
+// italic font class
+.osg-text-italic {
+  font-style: italic !important;
+}
+
+// generating font classes for headers
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $header-sizes {
+  .osg-heading-#{$name} {
+    font-size: $size-mobile !important;
+    font-weight: $weight !important;
+
+    @if $name == "1" {
+      letter-spacing: -0.4px !important;
+    }
+    @else {
+      letter-spacing: -0.2px !important;
+    }
+
+    @include mq.tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+    @include mq.desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating typography classes for other text
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $text-sizes {
+  .osg-text-#{$name}, %osg-text-#{$name} {
+    font-size: $size-mobile !important;
+    line-height: 1.5em !important;
+    font-weight: $weight !important;
+
+    @include mq.tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+    @include mq.desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating text align classes
+@each $name in $alignments {
+  .osg-text-#{$name} {
+    text-align: #{$name} !important;
+  }
+}

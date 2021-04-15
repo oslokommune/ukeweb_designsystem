@@ -1,3 +1,5 @@
+@use "core/config/colors" as *;
+
 .osg-table {
   th, td {
     padding: 10px 0;
@@ -6,7 +8,7 @@
   thead {
     tr {
       th {
-        border-bottom: 1px solid $osg-color-black;
+        border-bottom: 1px solid $black;
       }
       th:not(:first-child) {
         padding-left: 60px;
@@ -17,7 +19,7 @@
   tbody {
     tr {
       th, td {
-        border-bottom: 1px solid $osg-color-gray;
+        border-bottom: 1px solid $gray;
       }
       td:not(:first-child) {
         padding-left: 60px;

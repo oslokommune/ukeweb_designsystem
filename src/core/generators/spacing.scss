@@ -1,17 +1,18 @@
-@use "../base/variables" as *;
+@use "core/config/spacing" as *;
+@use "core/mixins/mq";
 
-$osg-spacing-sizes: (
-  "none": $osg-space-none,
-  "1": $osg-space-1,
-  "2": $osg-space-2,
-  "3": $osg-space-3,
-  "4": $osg-space-4,
-  "5": $osg-space-5,
-  "6": $osg-space-6,
-  "7": $osg-space-7
+$spacing-sizes: (
+  "none": $space-none,
+  "1": $space-1,
+  "2": $space-2,
+  "3": $space-3,
+  "4": $space-4,
+  "5": $space-5,
+  "6": $space-6,
+  "7": $space-7
 );
 
-@each $name, $size in $osg-spacing-sizes {
+@each $name, $size in $spacing-sizes {
   .osg-padding-#{$name} {
     padding: $size $size $size $size !important;
   }
@@ -61,8 +62,8 @@ $osg-spacing-sizes: (
 }
 
 // generate spacing classes for tablet
-@include osg-mq-tablet-and-up {
-  @each $name, $size in $osg-spacing-sizes {
+@include mq.tablet-and-up {
+  @each $name, $size in $spacing-sizes {
     .osg-padding-#{$name}-tablet-and-up {
       padding: $size $size $size $size !important;
     }
@@ -113,8 +114,8 @@ $osg-spacing-sizes: (
 }
 
 // generate spacing classes for desktop
-@include osg-mq-desktop-and-up {
-  @each $name, $size in $osg-spacing-sizes {
+@include mq.desktop-and-up {
+  @each $name, $size in $spacing-sizes {
     .osg-padding-#{$name}-desktop-and-up {
       padding: $size $size $size $size !important;
     }

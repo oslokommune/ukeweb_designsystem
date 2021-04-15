@@ -1,7 +1,7 @@
 .osg-paragraph {
-  @extend %osg-text-5;
+  @extend .osg-text-5;
 
   &.osg-paragraph--lead {
-    @extend %osg-text-1;
+    @extend .osg-text-1;
   }
 }

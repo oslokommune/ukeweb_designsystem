@@ -1,4 +1,6 @@
-.osg-icon, %osg-icon {
+@use "core/config/icons" as *;
+
+.osg-icon {
   font-size: 2rem;
   display: inline-block;
 
@@ -14,7 +16,7 @@
 }
 
 // Generating icon classes
-@each $name, $content in $osg-icons {
+@each $name, $content in $icons {
   .osg-icon--#{$name}, %osg-icon--#{$name} {
     &:before {
       content: "#{$content}";
