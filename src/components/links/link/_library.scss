@@ -1,0 +1,49 @@
+@use "system/colors" as *;
+@use "system/icons" as *;
+@use "system/state" as *;
+
+@mixin external-icon($height) {
+  &::after,
+  &:hover::after {
+    font-family: 'Oslo Icons' !important;
+    font-size: inherit;
+    content: map-get($icons, "new-window") !important;
+    display: inline-block;
+    width: 1rem;
+    height: $height;
+    vertical-align: bottom;
+    text-align: right;
+  }
+}
+
+%osg-link {
+  /**
+   * Links that wrap multiple lines does not get underline if using text-decoration,
+   * using background-image fixes this. However, you are not allowed to style
+   * background-image in :visited state, so it remains the color set here.
+   */
+  background-image: linear-gradient(to right, $blue-dark, $blue-dark);
+  background-position: 0 1.33em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  text-decoration: none;
+
+  color: inherit;
+  font-size: inherit;
+
+  &--external {
+    @include external-icon(1.25rem);
+  }
+
+  &:visited, &--visited {
+    @extend %osg-state-text-visited !optional;
+  }
+  &:hover, &--hover, &:focus, &--focus {
+    background-image: linear-gradient(to right, $blue-contrast, $blue-contrast);
+    @extend %osg-state-text-hover !optional;
+  }
+  &:active, &--active {
+    background-image: linear-gradient(to right, $blue-contrast, $blue-contrast);
+    @extend %osg-state-text-active !optional;
+  }
+}

@@ -1,8 +1,10 @@
 @use "system/colors" as *;
-@use "components/links/link/link";
+@use "system/fonts" as *;
+@use "system/spacing" as *;
+@use "components/links/link/library" as *;
 
 .osg-untitled {
-  @extend .osg-link;
+  @extend %osg-link;
 
   background-image: none !important;
   display: flex;
@@ -12,11 +14,11 @@
   }
 
   .icon {
-    @extend .osg-margin-right-2;
+    @extend %osg-margin-right-2;
   }
 
   h4 {
-    @extend .osg-heading-4, .osg-margin-bottom-1;
+    @extend %osg-heading-4, %osg-margin-bottom-1;
     display: inline-block;
 
     /* Mixin på bg-image? */
@@ -27,12 +29,12 @@
   }
 
   p {
-    @extend .osg-text-5;
+    @extend %osg-text-5;
   }
 
   &--external {
     h4 {
-      @include link.external(1.8rem)
+      @include external-icon(1.8rem)
     }
   }
 }

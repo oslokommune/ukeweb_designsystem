@@ -1,63 +1,48 @@
 @use "system/spacing" as *;
 @use "system/mixins/mq";
 
-$spacing-sizes: (
-  "none": $space-none,
-  "1": $space-1,
-  "2": $space-2,
-  "3": $space-3,
-  "4": $space-4,
-  "5": $space-5,
-  "6": $space-6,
-  "7": $space-7
-);
-
 @each $name, $size in $spacing-sizes {
   .osg-padding-#{$name} {
-    padding: $size $size $size $size !important;
+    @extend %osg-padding-#{$name};
   }
   .osg-margin-#{$name} {
-    margin: $size $size $size $size !important;
+    @extend %osg-margin-#{$name};
   }
   .osg-padding-bottom-#{$name} {
-    padding-bottom: $size !important;
+    @extend %osg-padding-bottom-#{$name};
   }
   .osg-margin-bottom-#{$name} {
-    margin-bottom: $size !important;
+    @extend %osg-margin-bottom-#{$name};
   }
   .osg-padding-top-#{$name} {
-    padding-top: $size !important;
+    @extend %osg-padding-top-#{$name};
   }
   .osg-margin-top-#{$name} {
-    margin-top: $size !important;
+    @extend %osg-margin-top-#{$name};
   }
   .osg-padding-left-#{$name} {
-    padding-left: $size !important;
+    @extend %osg-padding-left-#{$name};
   }
   .osg-margin-left-#{$name} {
-    margin-left: $size !important;
+    @extend %osg-margin-left-#{$name};
   }
   .osg-padding-right-#{$name} {
-    padding-right: $size !important;
+    @extend %osg-padding-right-#{$name};
   }
   .osg-margin-right-#{$name} {
-    margin-right: $size !important;
+    @extend %osg-margin-right-#{$name};
   }
   .osg-padding-horizontal-#{$name} {
-    padding-left: $size !important;
-    padding-right: $size !important;
+    @extend %osg-padding-horizontal-#{$name};
   }
   .osg-margin-horizontal-#{$name} {
-    margin-left: $size !important;
-    margin-right: $size !important;
+    @extend %osg-margin-horizontal-#{$name};
   }
   .osg-padding-vertical-#{$name} {
-    padding-top: $size !important;
-    padding-bottom: $size !important;
+    @extend %osg-padding-vertical-#{$name};
   }
   .osg-margin-vertical-#{$name} {
-    margin-top: $size !important;
-    margin-bottom: $size !important;
+    @extend %osg-margin-vertical-#{$name};
   }
 }
 
@@ -65,50 +50,46 @@ $spacing-sizes: (
 @include mq.tablet-and-up {
   @each $name, $size in $spacing-sizes {
     .osg-padding-#{$name}-tablet-and-up {
-      padding: $size $size $size $size !important;
+      @extend %osg-padding-#{$name}-tablet-and-up;
     }
     .osg-margin-#{$name}-tablet-and-up {
-      margin: $size $size $size $size !important;
+      @extend %osg-margin-#{$name}-tablet-and-up;
     }
     .osg-padding-bottom-#{$name}-tablet-and-up {
-      padding-bottom: $size !important;
+      @extend %osg-padding-bottom-#{$name}-tablet-and-up;
     }
     .osg-margin-bottom-#{$name}-tablet-and-up {
-      margin-bottom: $size !important;
+      @extend %osg-margin-bottom-#{$name}-tablet-and-up;
     }
     .osg-padding-top-#{$name}-tablet-and-up {
-      padding-top: $size !important;
+      @extend %osg-padding-top-#{$name}-tablet-and-up;
     }
     .osg-margin-top-#{$name}-tablet-and-up {
-      margin-top: $size !important;
+      @extend %osg-margin-top-#{$name}-tablet-and-up;
     }
     .osg-padding-left-#{$name}-tablet-and-up {
-      padding-left: $size !important;
+      @extend %osg-padding-left-#{$name}-tablet-and-up;
     }
     .osg-margin-left-#{$name}-tablet-and-up {
-      margin-left: $size !important;
+      @extend %osg-margin-left-#{$name}-tablet-and-up;
     }
     .osg-padding-right-#{$name}-tablet-and-up {
-      padding-right: $size !important;
+      @extend %osg-padding-right-#{$name}-tablet-and-up;
     }
     .osg-margin-right-#{$name}-tablet-and-up {
-      margin-right: $size !important;
+      @extend %osg-margin-right-#{$name}-tablet-and-up;
     }
     .osg-padding-horizontal-#{$name}-tablet-and-up {
-      padding-left: $size !important;
-      padding-right: $size !important;
+      @extend %osg-padding-horizontal-#{$name}-tablet-and-up;
     }
     .osg-margin-horizontal-#{$name}-tablet-and-up {
-      margin-left: $size !important;
-      margin-right: $size !important;
+      @extend %osg-margin-horizontal-#{$name}-tablet-and-up;
     }
     .osg-padding-vertical-#{$name}-tablet-and-up {
-      padding-top: $size !important;
-      padding-bottom: $size !important;
+      @extend %osg-padding-vertical-#{$name}-tablet-and-up;
     }
     .osg-margin-vertical-#{$name}-tablet-and-up {
-      margin-top: $size !important;
-      margin-bottom: $size !important;
+      @extend %osg-margin-vertical-#{$name}-tablet-and-up;
     }
   }
 }
@@ -117,50 +98,46 @@ $spacing-sizes: (
 @include mq.desktop-and-up {
   @each $name, $size in $spacing-sizes {
     .osg-padding-#{$name}-desktop-and-up {
-      padding: $size $size $size $size !important;
+      @extend %osg-padding-#{$name}-desktop-and-up;
     }
     .osg-margin-#{$name}-desktop-and-up {
-      margin: $size $size $size $size !important;
+      @extend %osg-margin-#{$name}-desktop-and-up;
     }
     .osg-padding-bottom-#{$name}-desktop-and-up {
-      padding-bottom: $size !important;
+      @extend %osg-padding-bottom-#{$name}-desktop-and-up;
     }
     .osg-margin-bottom-#{$name}-desktop-and-up {
-      margin-bottom: $size !important;
+      @extend %osg-margin-bottom-#{$name}-desktop-and-up;
     }
     .osg-padding-top-#{$name}-desktop-and-up {
-      padding-top: $size !important;
+      @extend %osg-padding-top-#{$name}-desktop-and-up;
     }
     .osg-margin-top-#{$name}-desktop-and-up {
-      margin-top: $size !important;
+      @extend %osg-margin-top-#{$name}-desktop-and-up;
     }
     .osg-padding-left-#{$name}-desktop-and-up {
-      padding-left: $size !important;
+      @extend %osg-padding-left-#{$name}-desktop-and-up;
     }
     .osg-margin-left-#{$name}-desktop-and-up {
-      margin-left: $size !important;
+      @extend %osg-margin-left-#{$name}-desktop-and-up;
     }
     .osg-padding-right-#{$name}-desktop-and-up {
-      padding-right: $size !important;
+      @extend %osg-padding-right-#{$name}-desktop-and-up;
     }
     .osg-margin-right-#{$name}-desktop-and-up {
-      margin-right: $size !important;
+      @extend %osg-margin-right-#{$name}-desktop-and-up;
     }
     .osg-padding-horizontal-#{$name}-desktop-and-up {
-      padding-left: $size !important;
-      padding-right: $size !important;
+      @extend %osg-padding-horizontal-#{$name}-desktop-and-up;
     }
     .osg-margin-horizontal-#{$name}-desktop-and-up {
-      margin-left: $size !important;
-      margin-right: $size !important;
+      @extend %osg-margin-horizontal-#{$name}-desktop-and-up;
     }
     .osg-padding-vertical-#{$name}-desktop-and-up {
-      padding-top: $size !important;
-      padding-bottom: $size !important;
+      @extend %osg-padding-vertical-#{$name}-desktop-and-up;
     }
     .osg-margin-vertical-#{$name}-desktop-and-up {
-      margin-top: $size !important;
-      margin-bottom: $size !important;
+      @extend %osg-margin-vertical-#{$name}-desktop-and-up;
     }
   }
 }
