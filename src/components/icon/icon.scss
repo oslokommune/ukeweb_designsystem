@@ -1,4 +1,4 @@
-@use "system/icons" as *;
+@use "system/icons";
 
 .osg-icon {
   font-size: 2rem;
@@ -16,7 +16,7 @@
 }
 
 // Generating icon classes
-@each $name, $content in $icons {
+@each $name, $content in icons.$icons {
   .osg-icon--#{$name}, %osg-icon--#{$name} {
     &:before {
       content: "#{$content}";

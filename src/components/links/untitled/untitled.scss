@@ -1,40 +1,43 @@
-@use "system/colors" as *;
-@use "system/fonts" as *;
-@use "system/spacing" as *;
-@use "components/links/link/library" as *;
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "components/links/link/library";
 
 .osg-untitled {
-  @extend %osg-link;
-
-  background-image: none !important;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
   display: flex;
 
   > * {
     display: inline-block;
   }
 
-  .icon {
+  &__icon {
     @extend %osg-margin-right-2;
   }
 
-  h4 {
-    @extend %osg-heading-4, %osg-margin-bottom-1;
-    display: inline-block;
+  &__main {
+    h4 {
+      @extend %osg-heading-4, %osg-margin-bottom-1;
+      @include library.underline(colors.$blue-dark);
+      display: inline-block;
+    }
 
-    /* Mixin på bg-image? */
-    background-image: linear-gradient(to right, $blue-dark, $blue-dark);
-    background-position: 0 1.33em;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
+    p {
+      @extend %osg-text-5;
+    }
   }
 
-  p {
-    @extend %osg-text-5;
-  }
+  @include library.states {
+    .osg-untitled__main h4 {
+      background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
+    }
+  };
 
   &--external {
-    h4 {
-      @include external-icon(1.8rem)
+    .osg-untitled__main h4 {
+      @include library.external-icon(1.8rem);
     }
   }
 }
