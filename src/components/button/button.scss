@@ -1,6 +1,6 @@
-@use "core/config/colors" as *;
-@use "core/config/fonts" as *;
-@use "core/config/spacing" as *;
+@use "system/colors" as *;
+@use "system/fonts" as *;
+@use "system/spacing" as *;
 
 .osg-button {
   color: $white;

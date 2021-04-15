@@ -1,5 +1,5 @@
-@use "core/config/colors" as *;
-@use "core/config/icons" as *;
+@use "system/colors" as *;
+@use "system/icons" as *;
 
 @mixin external($height) {
   &::after,

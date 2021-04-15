@@ -1,4 +1,4 @@
-@use "core/config/grid";
+@use "../grid";
 
 @mixin tablet-and-up {
   @media screen and (min-width: grid.$tablet) {

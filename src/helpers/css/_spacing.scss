@@ -1,5 +1,5 @@
-@use "core/config/spacing" as *;
-@use "core/mixins/mq";
+@use "system/spacing" as *;
+@use "system/mixins/mq";
 
 $spacing-sizes: (
   "none": $space-none,

@@ -1,9 +1,10 @@
-@use "core/config/colors" as *;
-@use "core/config/spacing" as *;
-@use "core/mixins/mq" as *;
+@use "system/colors" as *;
+@use "system/spacing" as *;
+@use "system/fonts" as *;
+@use "system/mixins/mq" as *;
 
 .osg-blockquote {
-  @extend .osg-text-1;
+  @extend %osg-text-1;
 
   background-color: $beige;
   padding: $space-5 $space-4;
@@ -17,11 +18,11 @@
   }
 
   p {
-    @extend .osg-text-1;
+    @extend %osg-text-1;
   }
 
   footer, & > cite {
-    @extend .osg-text-3;
+    @extend %osg-text-3;
     display: block;
     padding-top: $space-3;
     @include tablet-and-up {

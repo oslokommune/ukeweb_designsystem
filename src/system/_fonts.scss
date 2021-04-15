@@ -1,0 +1,110 @@
+@use "mixins/mq";
+
+// --------------- FONT ---------------*/
+$path: '../assets/fonts' !default;
+
+$size-54: 3.375rem;
+$size-40: 2.5rem;
+$size-36: 2.25rem;
+$size-30: 1.875rem;
+$size-28: 1.75rem;
+$size-26: 1.625rem;
+$size-24: 1.5rem;
+$size-22: 1.375rem;
+$size-20: 1.25rem;
+$size-19: 1.1875rem;
+$size-18: 1.125rem;
+$size-17: 1.0625rem;
+$size-16: 1rem;
+$size-14: .875rem;
+$size-13: .812rem;
+
+// id, mobile size, tablet size, desktop size and weight
+$header-sizes: (
+  ("1", $size-28, $size-40, $size-54, 400),
+  ("2", $size-24, $size-30, $size-36, 400),
+  ("3", $size-22, $size-26, $size-30, 400),
+  ("4", $size-20, $size-24, $size-24, 500),
+  ("5", $size-18, $size-20, $size-22, 500),
+  ("6", $size-16, $size-16, $size-18, 500)
+);
+
+$text-sizes: (
+  ("1", $size-22, $size-24, $size-30, 300),
+  ("2", $size-20, $size-22, $size-24, 300),
+  ("3", $size-18, $size-18, $size-20, 300),
+  ("4", $size-16, $size-16, $size-18, 500),
+  ("5", $size-16, $size-16, $size-18, 300),
+  ("6", $size-14, $size-14, $size-14, 500),
+  ("7", $size-14, $size-14, $size-14, 300)
+);
+
+$weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+$alignments: (
+  "left",
+  "right",
+  "center"
+);
+
+// generating font weight classes
+@each $name, $size in $weights {
+  %osg-text-#{$name}, %osg-text-#{$name} {
+    font-weight: $size !important;
+  }
+}
+
+// italic font class
+%osg-text-italic {
+  font-style: italic !important;
+}
+
+// generating font classes for headers
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $header-sizes {
+  %osg-heading-#{$name} {
+    font-size: $size-mobile !important;
+    font-weight: $weight !important;
+
+    @if $name == "1" {
+      letter-spacing: -0.4px !important;
+    }
+    @else {
+      letter-spacing: -0.2px !important;
+    }
+
+    @include mq.tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+    @include mq.desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating typography classes for other text
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $text-sizes {
+  %osg-text-#{$name} {
+    font-size: $size-mobile !important;
+    line-height: 1.5em !important;
+    font-weight: $weight !important;
+
+    @include mq.tablet-and-up {
+      font-size: $size-tablet !important;
+    }
+    @include mq.desktop-and-up {
+      font-size: $size-desktop !important;
+    }
+  }
+}
+
+// generating text align classes
+@each $name in $alignments {
+  %osg-text-#{$name} {
+    text-align: #{$name} !important;
+  }
+}
