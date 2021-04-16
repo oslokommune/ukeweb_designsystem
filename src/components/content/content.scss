@@ -1,5 +1,8 @@
 @use "system/fonts";
 @use "system/spacing";
+@use "components/blockquote/blockquote";
+@use "components/list/list";
+@use "components/paragraph/paragraph";
 
 .osg-content {
   h2 {
@@ -23,14 +26,14 @@
   }
 
   p {
-    //@extend .osg-paragraph, %osg-margin-bottom-3;
+    @extend .osg-paragraph, %osg-margin-bottom-3;
   }
 
   ul, ol {
-    //@extend .osg-list, %osg-margin-bottom-3;
+    @extend .osg-list, %osg-margin-bottom-3;
   }
 
   figure {
-    //@extend .osg-blockquote, %osg-margin-bottom-3;
+    @extend .osg-blockquote, %osg-margin-bottom-3;
   }
 }
