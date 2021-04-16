@@ -1,17 +1,18 @@
-@use "system/colors" as *;
-@use "system/fonts" as *;
-@use "system/spacing" as *;
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "system/state";
 
 .osg-button {
-  color: $white;
-  background: $blue-dark;
-  border: 2px solid $blue-dark;
+  color: colors.$white;
+  background: colors.$blue-dark;
+  border: 2px solid colors.$blue-dark;
   padding: .625rem .9375rem;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
 
-  @extend .osg-text-5;
+  @extend %osg-text-5;
   font-weight: 500 !important;
 
   /**
@@ -19,12 +20,12 @@
    */
   &--small {
     padding: .3125rem .625rem;
-    font-size: $size-16 !important;
+    font-size: fonts.$size-16 !important;
   }
 
   &--large {
     padding: .938rem 1.875rem;
-    font-size: $size-20 !important;
+    font-size: fonts.$size-20 !important;
   }
 
   &--fullwidth {
@@ -37,15 +38,15 @@
    */
   &--outline {
     background-color: transparent;
-    border-color: $blue-dark;
-    color: $blue-dark;
+    border-color: colors.$blue-dark;
+    color: colors.$blue-dark;
     outline: none;
   }
 
   &--text {
     background-color: transparent;
     border-color: transparent;
-    color: $blue-dark;
+    color: colors.$blue-dark;
     text-decoration: underline;
   }
 
@@ -65,55 +66,55 @@
    * Button states
    */
   &:visited, &--visited {
-    @extend .osg-state-visited;
+    @extend %osg-state-visited;
   }
 
   &:hover, &--hover, &:focus, &--focus {
-    @extend .osg-state-hover;
-    border: 2px solid $blue-contrast;
+    @extend %osg-state-hover;
+    border: 2px solid colors.$blue-contrast;
     text-decoration: underline;
 
     &.osg-button--outline {
       background-color: transparent !important;
-      color: $blue-contrast;
-      border-color: $blue-contrast;
-      @extend .osg-state-text-hover;
+      color: colors.$blue-contrast;
+      border-color: colors.$blue-contrast;
+      @extend %osg-state-text-hover;
     }
 
     &.osg-button--text {
-      background-color: $gray-light !important;
-      border-color: $gray-light;
-      @extend .osg-state-text-hover;
+      background-color: colors.$gray-light !important;
+      border-color: colors.$gray-light;
+      @extend %osg-state-text-hover;
     }
   }
 
   &:active, &--active {
-    @extend .osg-state-active;
-    border-color: $blue-contrast;
+    @extend %osg-state-active;
+    border-color: colors.$blue-contrast;
     text-decoration: none;
 
     &.osg-button--outline {
-      background-color: $blue-contrast !important;
-      color: $white !important;
+      background-color: colors.$blue-contrast !important;
+      color: colors.$white !important;
     }
 
     &.osg-button--text {
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
-      color: $blue-contrast !important;
+      color: colors.$blue-contrast !important;
     }
   }
 
   &:disabled {
-    @extend .osg-state-disabled;
-    border-color: $gray-light;
+    @extend %osg-state-disabled;
+    border-color: colors.$gray-light;
     cursor: default;
     text-decoration: none;
 
     &.osg-button--outline {
       background-color: transparent !important;
-      border-color: $grayscale-40 !important;
+      border-color: colors.$grayscale-40 !important;
     }
 
     &.osg-button--text {
@@ -123,18 +124,18 @@
     }
 
     &:hover, &:active {
-      @extend .osg-state-disabled;
+      @extend %osg-state-disabled;
 
       &.osg-button--outline {
         background-color: transparent !important;
-        border-color: $grayscale-40 !important;
-        color: $grayscale-40 !important;
+        border-color: colors.$grayscale-40 !important;
+        color: colors.$grayscale-40 !important;
       }
 
       &.osg-button--text {
         background-color: transparent !important;
         border-color: transparent;
-        color: $grayscale-40 !important;
+        color: colors.$grayscale-40 !important;
         text-decoration: underline;
       }
     }
@@ -156,10 +157,10 @@
     }
 
     &--icon-right {
-      margin-left: $space-2;
+      margin-left: spacing.$space-2;
     }
     &--icon-left {
-      margin-right: $space-2;
+      margin-right: spacing.$space-2;
     }
   }
 
@@ -171,9 +172,9 @@
    * Button colors
    */
   &--red {
-    color: $blue-dark;
-    background-color: $red;
-    border: 2px solid $red;
+    color: colors.$blue-dark;
+    background-color: colors.$red;
+    border: 2px solid colors.$red;
 
     &.osg-button--outline {
       background-color: transparent;
@@ -185,9 +186,9 @@
   }
 
   &--yellow {
-    color: $blue-dark;
-    background-color: $yellow;
-    border: 2px solid $yellow;
+    color: colors.$blue-dark;
+    background-color: colors.$yellow;
+    border: 2px solid colors.$yellow;
 
     &.osg-button--outline {
       background-color: transparent;
@@ -199,41 +200,41 @@
   }
 
   &--green-dark {
-    color: $white;
-    background-color: $green-dark;
-    border: 2px solid $green-dark;
+    color: colors.$white;
+    background-color: colors.$green-dark;
+    border: 2px solid colors.$green-dark;
 
     &.osg-button--outline {
       background-color: transparent;
-      color: $green-dark;
+      color: colors.$green-dark;
     }
     &.osg-button--text {
       background-color: transparent;
       border: 2px solid transparent;
-      color: $green-dark;
+      color: colors.$green-dark;
     }
   }
 
   &--green-light {
-    color: $green-dark;
-    background-color: $green-light;
-    border: 2px solid $green-light;
+    color: colors.$green-dark;
+    background-color: colors.$green-light;
+    border: 2px solid colors.$green-light;
 
     &.osg-button--outline {
       background-color: transparent;
-      color: $green-dark;
+      color: colors.$green-dark;
     }
     &.osg-button--text {
       background-color: transparent;
       border: 2px solid transparent;
-      color: $green-dark;
+      color: colors.$green-dark;
     }
   }
 
   &--blue-light {
-    color: $blue-dark;
-    background-color: $blue-light;
-    border: 2px solid $blue-light;
+    color: colors.$blue-dark;
+    background-color: colors.$blue-light;
+    border: 2px solid colors.$blue-light;
 
     &.osg-button--outline {
       background-color: transparent;

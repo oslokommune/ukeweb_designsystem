@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "components/links/link/library";
+@use "components/links/link/mixins";
 
 .osg-untitled {
   color: inherit;
@@ -20,7 +20,7 @@
   &__main {
     h4 {
       @extend %osg-heading-4, %osg-margin-bottom-1;
-      @include library.underline(colors.$blue-dark);
+      @include mixins.underline(colors.$blue-dark);
       display: inline-block;
     }
 
@@ -29,7 +29,7 @@
     }
   }
 
-  @include library.states {
+  @include mixins.states {
     .osg-untitled__main h4 {
       background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
     }
@@ -37,7 +37,7 @@
 
   &--external {
     .osg-untitled__main h4 {
-      @include library.external-icon(1.8rem);
+      @include mixins.external-icon(1.8rem);
     }
   }
 }

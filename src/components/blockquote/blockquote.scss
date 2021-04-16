@@ -1,16 +1,16 @@
-@use "system/colors" as *;
-@use "system/spacing" as *;
-@use "system/fonts" as *;
-@use "system/mixins/mq" as *;
+@use "system/colors";
+@use "system/spacing";
+@use "system/fonts";
+@use "system/mixins/mq";
 
 .osg-blockquote {
   @extend %osg-text-1;
 
-  background-color: $beige;
-  padding: $space-5 $space-4;
+  background-color: colors.$beige;
+  padding: spacing.$space-5 spacing.$space-4;
 
-  @include tablet-and-up {
-    padding: $space-7 $space-6;
+  @include mq.tablet-and-up {
+    padding: spacing.$space-7 spacing.$space-6;
   }
 
   a {
@@ -24,9 +24,9 @@
   footer, & > cite {
     @extend %osg-text-3;
     display: block;
-    padding-top: $space-3;
-    @include tablet-and-up {
-      padding-top: $space-4;
+    padding-top: spacing.$space-3;
+    @include mq.tablet-and-up {
+      padding-top: spacing.$space-4;
     }
   }
 }

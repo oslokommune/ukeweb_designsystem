@@ -19,7 +19,7 @@
   /**
    * Links that wrap multiple lines does not get underline if using text-decoration,
    * using background-image fixes this. However, you are not allowed to style
-   * background-image in :visited state, so it remains the color set here.
+   * background-image in :visited state, so it keeps the color set here.
    */
   background-image: linear-gradient(to right, $color, $color);
   background-position: 0 1.33em;

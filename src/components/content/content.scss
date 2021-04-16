@@ -1,33 +1,36 @@
+@use "system/fonts";
+@use "system/spacing";
+
 .osg-content {
   h2 {
-    @extend .osg-heading-2;
+    @extend %osg-heading-2;
   }
 
   h3 {
-    @extend .osg-heading-3, .osg-margin-bottom-2;
+    @extend %osg-heading-3, %osg-margin-bottom-2;
   }
 
   h4 {
-    @extend .osg-heading-4;
+    @extend %osg-heading-4;
   }
 
   h5 {
-    @extend .osg-heading-5, .osg-margin-bottom-2;
+    @extend %osg-heading-5, %osg-margin-bottom-2;
   }
 
   h6 {
-    @extend .osg-heading-6, .osg-margin-bottom-1;
+    @extend %osg-heading-6, %osg-margin-bottom-1;
   }
 
   p {
-    @extend .osg-paragraph, .osg-margin-bottom-3;
+    //@extend .osg-paragraph, %osg-margin-bottom-3;
   }
 
   ul, ol {
-    @extend .osg-list, .osg-margin-bottom-3;
+    //@extend .osg-list, %osg-margin-bottom-3;
   }
 
   figure {
-    @extend .osg-blockquote, .osg-margin-bottom-3;
+    //@extend .osg-blockquote, %osg-margin-bottom-3;
   }
 }

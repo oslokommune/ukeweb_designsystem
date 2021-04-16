@@ -1,16 +1,16 @@
 @use "system/colors";
-@use "library";
+@use "mixins";
 
 .osg-link {
   color: inherit;
   font-size: inherit;
   text-decoration: none;
-  @include library.underline(colors.$blue-dark);
-  @include library.states {
+  @include mixins.underline(colors.$blue-dark);
+  @include mixins.states {
     background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
   };
 
   &--external {
-    @include library.external-icon(1.25rem);
+    @include mixins.external-icon(1.25rem);
   }
 }

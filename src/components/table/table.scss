@@ -1,4 +1,4 @@
-@use "system/colors" as *;
+@use "system/colors";
 
 .osg-table {
   th, td {
@@ -8,7 +8,7 @@
   thead {
     tr {
       th {
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid colors.$black;
       }
       th:not(:first-child) {
         padding-left: 60px;
@@ -19,7 +19,7 @@
   tbody {
     tr {
       th, td {
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid colors.$gray;
       }
       td:not(:first-child) {
         padding-left: 60px;
