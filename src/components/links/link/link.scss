@@ -11,6 +11,13 @@
   };
 
   &--external {
-    @include mixins.external-icon(1.25rem);
+    @include mixins.external-icon();
+  }
+}
+
+p a.osg-link.osg-link--external {
+  &::after,
+  &:hover::after {
+    margin-bottom: 0.4325em;
   }
 }

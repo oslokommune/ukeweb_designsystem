@@ -1,17 +1,17 @@
 @use "system/icons";
 @use "system/state";
 
-@mixin external-icon($height) {
+@mixin external-icon() {
   &::after,
   &:hover::after {
     font-family: 'Oslo Icons' !important;
     font-size: inherit;
     content: map-get(icons.$icons, "new-window") !important;
-    display: inline-block;
-    width: 1rem;
-    height: $height;
+    width: 1em;
+    height: 1em;
     vertical-align: bottom;
-    text-align: right;
+    display: inline-block;
+    margin-bottom: 0.813rem;
   }
 }
 
@@ -22,7 +22,7 @@
    * background-image in :visited state, so it keeps the color set here.
    */
   background-image: linear-gradient(to right, $color, $color);
-  background-position: 0 1.33em;
+  background-position: 0 1.093em;
   background-repeat: repeat-x;
   background-size: 1px 1px;
 }

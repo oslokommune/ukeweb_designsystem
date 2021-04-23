@@ -1,10 +1,13 @@
 @use "system/fonts";
 @use "system/spacing";
 @use "components/blockquote/blockquote";
+@use "components/links/link/link";
 @use "components/list/list";
 @use "components/paragraph/paragraph";
 
 .osg-content {
+  @extend %osg-text-5;
+
   h2 {
     @extend %osg-heading-2;
   }
@@ -27,6 +30,10 @@
 
   p {
     @extend .osg-paragraph, %osg-margin-bottom-3;
+  }
+
+  a {
+    @extend .osg-link;
   }
 
   ul, ol {

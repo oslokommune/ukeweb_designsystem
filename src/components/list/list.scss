@@ -1,15 +1,9 @@
-@use "system/icons" as *;
+@use "system/colors";
+@use "system/icons";
+@use "system/spacing";
 
-ul.osg-list, ul.osg-list ul {
-  list-style: disc;
-}
-
-ol.osg-list, ol.osg-list ol {
-  list-style: decimal;
-}
-
-ul.osg-list, ul.osg-list ul,
-ol.osg-list, ol.osg-list ol {
+.osg-list, .osg-list ul,
+.osg-list, .osg-list ol {
   padding-left: 1.25rem;
 
   li + li, ul, ol {
@@ -18,7 +12,7 @@ ol.osg-list, ol.osg-list ol {
 
   &--clean, &--clean ul {
     padding-left: 0;
-    list-style: none;
+    list-style: none !important;
 
     ul {
       padding-left: 1.25rem;
@@ -35,10 +29,10 @@ ol.osg-list, ol.osg-list ol {
     }
 
     li::before {
-      font-family: 'Oslo Icons' !important;
+      font-family: 'Oslo Icons';
       font-size: inherit;
       line-height: inherit;
-      content: map-get($icons, "chevron-right") !important;
+      content: map-get(icons.$icons, "chevron-right");
       margin-left: -1.25rem;
       display: inline-block;
       width: 1.25rem;
@@ -46,4 +40,24 @@ ol.osg-list, ol.osg-list ol {
       vertical-align: middle;
     }
   }
+
+  &--toc {
+    @extend .osg-list--clean;
+
+    li {
+      @extend %osg-padding-2;
+      border-top: 1px solid colors.$grayscale-40;
+    }
+    li:last-of-type {
+      border-bottom: 1px solid colors.$grayscale-40;
+    }
+  }
+}
+
+ul.osg-list, .osg-list ul {
+  list-style: disc;
+}
+
+ol.osg-list, .osg-list ol {
+  list-style: decimal;
 }

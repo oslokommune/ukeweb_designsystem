@@ -21,12 +21,12 @@ $size-13: .812rem;
 
 // id, mobile size, tablet size, desktop size and weight
 $header-sizes: (
-  ("1", $size-28, $size-40, $size-54, 400),
-  ("2", $size-24, $size-30, $size-36, 400),
-  ("3", $size-22, $size-26, $size-30, 400),
-  ("4", $size-20, $size-24, $size-24, 500),
-  ("5", $size-18, $size-20, $size-22, 500),
-  ("6", $size-16, $size-16, $size-18, 500)
+  ("1", $size-28, $size-40, $size-54, 400, 1.3em),
+  ("2", $size-24, $size-30, $size-36, 400, 1.2em),
+  ("3", $size-22, $size-26, $size-30, 400, 1.2em),
+  ("4", $size-20, $size-24, $size-24, 500, 1.185em),
+  ("5", $size-18, $size-20, $size-22, 500, 1.185em),
+  ("6", $size-16, $size-16, $size-18, 500, 1.1em)
 );
 
 $text-sizes: (
@@ -65,10 +65,11 @@ $alignments: (
 }
 
 // generating font classes for headers
-@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $header-sizes {
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight, $line-height in $header-sizes {
   %osg-heading-#{$name} {
     font-size: $size-mobile !important;
     font-weight: $weight !important;
+    line-height: $line-height !important;
 
     @if $name == "1" {
       letter-spacing: -0.4px !important;

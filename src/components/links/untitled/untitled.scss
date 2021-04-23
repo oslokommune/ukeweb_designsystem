@@ -8,10 +8,7 @@
   font-size: inherit;
   text-decoration: none;
   display: flex;
-
-  > * {
-    display: inline-block;
-  }
+  align-items: flex-start;
 
   &__icon {
     @extend %osg-margin-right-2;
@@ -20,7 +17,6 @@
   &__main {
     h4 {
       @extend %osg-heading-4, %osg-margin-bottom-1;
-      @include mixins.underline(colors.$blue-dark);
       display: inline-block;
     }
 
@@ -31,13 +27,14 @@
 
   @include mixins.states {
     .osg-untitled__main h4 {
+      @include mixins.underline(colors.$blue-dark);
       background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
     }
   };
 
   &--external {
     .osg-untitled__main h4 {
-      @include mixins.external-icon(1.8rem);
+      @include mixins.external-icon();
     }
   }
 }

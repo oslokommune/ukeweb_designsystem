@@ -1,0 +1,17 @@
+@use "system/icons";
+@use "system/spacing";
+@use "components/list/list";
+
+.osg-breadcrumb {
+  @extend .osg-list--chevron;
+
+  li {
+    display: inline;
+  }
+  li + li {
+    @extend %osg-margin-left-4;
+  }
+  li::before {
+    content: map-get(icons.$icons, "chevron-left") !important;
+  }
+}
