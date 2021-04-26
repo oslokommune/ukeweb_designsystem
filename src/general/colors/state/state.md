@@ -1,0 +1,1 @@
+Use "-light" version on dark backgrounds.
