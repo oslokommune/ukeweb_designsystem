@@ -10,42 +10,5 @@
       "colors",
       "palette"
     ]
-  },
-  "state": {
-    "colors": [
-      {
-        "name": "primary"
-      },
-      {
-        "name": "disabled"
-      },
-      {
-        "name": "success"
-      },
-      {
-        "name": "warning"
-      },
-      {
-        "name": "danger"
-      },
-      {
-        "name": "active"
-      },
-      {
-        "name": "active-light"
-      },
-      {
-        "name": "hover"
-      },
-      {
-        "name": "hover-light"
-      },
-      {
-        "name": "visited"
-      },
-      {
-        "name": "visited-light"
-      }
-    ]
   }
 }
