@@ -1,17 +1,26 @@
+@use "system/colors";
 @use "system/icons";
 @use "system/spacing";
-@use "components/list/list";
 
-.osg-breadcrumb {
-  @extend .osg-list--chevron;
+.osg-breadcrumb, .osg-breadcrumb ul {
+  list-style: none !important;
 
   li {
     display: inline;
   }
+
   li + li {
-    @extend %osg-margin-left-4;
+    @extend %osg-margin-left-2;
   }
+
   li::before {
-    content: map-get(icons.$icons, "chevron-left") !important;
+    font-family: 'Oslo Icons';
+    font-size: inherit;
+    line-height: inherit;
+    content: map-get(icons.$icons, "chevron-left");
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: middle;
   }
 }
