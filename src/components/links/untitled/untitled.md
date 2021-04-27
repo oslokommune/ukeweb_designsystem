@@ -1,5 +1,2 @@
-Som hovedregel skal denne kun brukes i en 3 kolonners grid.
-
-* test
-* test
-* test
+###### Use
+- As a main rule each row should hold no more than 3 untitled
