@@ -2,8 +2,7 @@
 @use "system/icons";
 @use "system/spacing";
 
-.osg-list, .osg-list ul,
-.osg-list, .osg-list ol {
+.osg-list, .osg-list ul, .osg-list ol {
   padding-left: 1.25rem;
 
   li + li, ul, ol {

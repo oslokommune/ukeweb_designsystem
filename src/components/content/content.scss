@@ -8,6 +8,10 @@
 .osg-content {
   @extend %osg-text-5;
 
+  :last-child {
+    @extend %osg-margin-bottom-none;
+  }
+
   h2 {
     @extend %osg-heading-2;
   }

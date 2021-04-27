@@ -17,7 +17,7 @@ $state-colors: (
 @each $name, $tuple in $state-colors {
   %osg-state-#{$name} {
     background-color: nth($tuple, 1) !important;
-    border: 2px solid nth($tuple, 1);
+    border: 2px solid nth($tuple, 1) !important;
     color: nth($tuple, 2) !important;
   }
 
