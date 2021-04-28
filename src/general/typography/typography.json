@@ -3,7 +3,7 @@
     "preset": "clean",
     "sections": {
       "docs": {
-        "visible":  false
+        "visible": true
       }
     },
     "tags": [
