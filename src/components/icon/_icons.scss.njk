@@ -1,4 +1,4 @@
-$osg-icons: (
+$icons: (
   {% for glyph in glyphs -%}
     "{{ glyph.name | replace(" ", "-") | lower }}": "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}",
   {% endfor %}
