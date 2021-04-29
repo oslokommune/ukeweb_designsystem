@@ -1,3 +1,23 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
 .osg-header {
-  color: red;
+  @extend %osg-padding-horizontal-5;
+  @extend %osg-padding-vertical-4;
+  background-color: colors.$white;
+
+  .osg-logo {
+    @extend %osg-color-text-blue-dark;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    svg {
+      fill: currentColor;
+      height: 4.0625rem;
+    }
+  }
 }
