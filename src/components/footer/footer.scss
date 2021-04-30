@@ -1,0 +1,29 @@
+@use "system/colors";
+@use "system/state";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-footer {
+  @extend %osg-color-bg-blue-dark;
+  @extend %osg-color-text-white;
+  @extend %osg-text-3;
+  @extend %osg-padding-vertical-5;
+
+  @extend %osg-padding-horizontal-3;
+  @extend %osg-padding-horizontal-none-desktop-and-up;
+
+  h2 {
+    @extend %osg-heading-4;
+    @extend %osg-padding-bottom-3;
+  }
+
+  a:active,
+  a:focus,
+  a:hover {
+    @extend %osg-state-text-hover-light;
+  }
+
+  a:visited {
+    @extend %osg-state-text-visited;
+  }
+}
