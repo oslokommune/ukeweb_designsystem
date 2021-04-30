@@ -4,14 +4,8 @@
 @use "system/mixins/mq";
 
 .osg-header {
-  //@extend %osg-padding-horizontal-0;
   @extend %osg-padding-horizontal-4-desktop-and-up;
-  // @extend %osg-padding-vertical-2;
   background-color: colors.$white;
-
-  @include mq.tablet-and-up {
-    //background-color: pink;
-  }
 
   &__left {
     display: flex !important;
@@ -26,7 +20,6 @@
   }
 
   border-bottom: 1px solid colors.$grayscale-40
-
 }
 
 .osg-logo {
