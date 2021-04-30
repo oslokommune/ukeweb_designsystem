@@ -23,9 +23,10 @@
     font-size: fonts.$size-16 !important;
   }
 
-  &--large {
+  &.osg-button--large {
+    @extend %osg-text-3;
+    font-weight: 500 !important;
     padding: .938rem 1.875rem;
-    font-size: fonts.$size-20 !important;
   }
 
   &--fullwidth {
