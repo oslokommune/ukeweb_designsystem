@@ -9,27 +9,36 @@
     font-family: 'Oslo Icons' !important;
     font-size: 0.6em;
     content: map-get(icons.$icons, "new-window") !important;
-    width: 1em;
-    height: 1em;
     display: inline-block;
   }
 }
 
-@mixin underline($color) {
-  /**
-   * Links that wrap multiple lines does not get underline if using text-decoration,
-   * using background-image fixes this. However, you are not allowed to style
-   * background-image in :visited state, so it keeps the color set here.
-   */
-  background-image: linear-gradient(to right, $color, $color);
-  background-position: 0 1.33em;
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
+@mixin chevron-icon() {
+  text-decoration: none;
+  position: relative;
+  padding-left: 0.9em;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before,
+  &:hover::before {
+    @extend %osg-margin-right-1;
+    font-family: 'Oslo Icons' !important;
+    font-size: 1em;
+    content: map-get(icons.$icons, "chevron-right") !important;
+    display: inline-block;
+    position: absolute;
+    left: -0.2em;
+    bottom: 0;
+  }
 }
 
 @mixin states {
   &:visited, &--visited {
     @extend %osg-state-text-visited;
+    @content;
   }
   &:hover, &--hover, &:focus, &--focus {
     @extend %osg-state-text-hover;

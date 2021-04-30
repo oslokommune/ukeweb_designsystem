@@ -2,15 +2,16 @@
 @use "mixins";
 
 .osg-link {
-  color: inherit;
-  font-size: inherit;
-  text-decoration: none;
-  @include mixins.underline(colors.$blue-dark);
-  @include mixins.states {
-    background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
-  };
+  text-decoration: underline;
+  word-wrap: break-word;
+
+  @include mixins.states;
 
   &--external {
     @include mixins.external-icon();
+  }
+
+  &--chevron {
+    @include mixins.chevron-icon();
   }
 }

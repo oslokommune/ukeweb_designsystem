@@ -27,8 +27,7 @@
 
   @include mixins.states {
     .osg-untitled__main h4 {
-      @include mixins.underline(colors.$blue-dark);
-      background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
+      text-decoration: underline;
     }
   };
 

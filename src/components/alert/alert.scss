@@ -42,8 +42,7 @@
 
   @include mixins.states {
     .osg-alert__main h2 {
-      @include mixins.underline(colors.$blue-dark);
-      background-image: linear-gradient(to right, colors.$blue-contrast, colors.$blue-contrast);
+      text-decoration: underline;
     }
   }
 
