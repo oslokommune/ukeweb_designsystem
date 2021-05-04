@@ -1,26 +1,7 @@
-@use "system/icons";
-
 .osg-icon {
-  font-size: 2rem;
-  line-height: 1.35rem;
   display: inline-block;
-
-  &:before {
-    font-family: 'Oslo Icons';
-    font-style: normal;
-    line-height: 1;
-  }
-  &:before,
-  &:hover:before {
-    color: inherit;
-  }
-}
-
-// Generating icon classes
-@each $name, $content in icons.$icons {
-  .osg-icon--#{$name}, %osg-icon--#{$name} {
-    &:before {
-      content: "#{$content}";
-    }
-  }
+  font-family: 'Oslo Icons';
+  font-size: inherit;
+  font-style: normal;
+  line-height: 1.5em;
 }

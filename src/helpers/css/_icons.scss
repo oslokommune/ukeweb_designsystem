@@ -1,0 +1,10 @@
+// Generating icon classes
+@use "system/icons";
+
+@each $name, $content in icons.$icons {
+  .osg-icon--#{$name}, %osg-icon--#{$name} {
+    &:before {
+      content: "#{$content}";
+    }
+  }
+}
