@@ -4,12 +4,10 @@
 @use "system/spacing";
 
 .osg-footer {
-  @extend %osg-color-bg-blue-dark;
-  @extend %osg-color-text-white;
+  @extend %osg-color-bg-blue-dark, %osg-color-text-white;
   @extend %osg-text-3;
   @extend %osg-padding-vertical-5;
-  @extend %osg-padding-horizontal-3;
-  @extend %osg-padding-horizontal-none-desktop-and-up;
+  @extend %osg-padding-horizontal-3, %osg-padding-horizontal-none-desktop-and-up;
 
   h2 {
     @extend %osg-heading-4;
