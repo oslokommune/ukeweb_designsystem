@@ -16,7 +16,8 @@
 @mixin chevron-icon() {
   text-decoration: none;
   position: relative;
-  padding-left: 0.9em;
+  padding-left: 1.2em;
+  margin-left: 0;
 
   &:hover {
     text-decoration: underline;
@@ -24,13 +25,12 @@
 
   &::before,
   &:hover::before {
-    @extend %osg-margin-right-1;
     font-family: 'Oslo Icons' !important;
     font-size: 1em;
     content: map-get(icons.$icons, "chevron-right") !important;
     display: inline-block;
     position: absolute;
-    left: -0.2em;
+    left: 0;
     bottom: 0;
   }
 }
