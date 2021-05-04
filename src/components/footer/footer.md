@@ -1,1 +1,1 @@
-It's a footer. Yay.
+This component takes the full page width.

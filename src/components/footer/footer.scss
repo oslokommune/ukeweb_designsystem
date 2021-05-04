@@ -8,13 +8,12 @@
   @extend %osg-color-text-white;
   @extend %osg-text-3;
   @extend %osg-padding-vertical-5;
-
   @extend %osg-padding-horizontal-3;
   @extend %osg-padding-horizontal-none-desktop-and-up;
 
   h2 {
     @extend %osg-heading-4;
-    @extend %osg-padding-bottom-3;
+    @extend %osg-margin-bottom-3;
   }
 
   a:active,
