@@ -15,11 +15,12 @@
 
     a {
       @include mixins.states;
-      @include mixins.chevron-icon();
+      @include mixins.icon-left("arrow");
+      margin-left: 8px;
 
       &::before,
       &:hover::before {
-        content: map-get(icons.$icons, "arrow") !important;
+        left: -8px;
       }
     }
   }

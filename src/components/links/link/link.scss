@@ -12,7 +12,11 @@
     @include mixins.external-icon();
   }
 
-  &--chevron {
-    @include mixins.chevron-icon();
+  &--chevron-right {
+    @include mixins.icon-left("chevron-right");
+  }
+
+  &--chevron-left {
+    @include mixins.icon-left("chevron-left");
   }
 }
