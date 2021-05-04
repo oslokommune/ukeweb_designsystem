@@ -1,0 +1,29 @@
+@use "system/colors";
+@use "system/icons";
+@use "system/fonts";
+@use "system/spacing";
+@use "components/links/link/mixins";
+
+.osg-toc {
+  @extend %osg-text-4;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    @extend %osg-padding-3;
+    border-top: 2px solid colors.$gray;
+
+    a {
+      @include mixins.states;
+      @include mixins.chevron-icon();
+
+      &::before,
+      &:hover::before {
+        content: map-get(icons.$icons, "arrow") !important;
+      }
+    }
+  }
+  li:last-of-type {
+    border-bottom: 2px solid colors.$gray;
+  }
+}
