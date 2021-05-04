@@ -1,1 +1,1 @@
-Official icons
+Official icons for digital use.
