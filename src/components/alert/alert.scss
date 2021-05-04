@@ -1,13 +1,14 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
+@use "system/mixins/mq";
 @use "components/links/link/mixins";
 
 .osg-alert {
   background-color: colors.$white;
 
   a {
-    @extend %osg-padding-4;
+    @extend %osg-padding-3, %osg-padding-4-desktop-and-up;
     align-items: flex-start;
     color: inherit;
     display: flex;
@@ -25,9 +26,20 @@
     @extend %osg-margin-right-3;
     flex: 0 0 auto;
     line-height: 0;
+
+    img {
+      width: 60px;
+      height: 60px;
+
+      @include mq.desktop-and-up {
+        width: 70px;
+        height: 70px;
+      }
+    }
   }
 
   &__main {
+    @extend %osg-margin-right-3;
     flex-grow: 4;
 
     h2 {
@@ -36,7 +48,7 @@
     }
 
     p {
-      @extend %osg-text-5;
+      @extend %osg-text-7;
     }
   }
 
@@ -51,6 +63,11 @@
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    line-height: 0;
+
+    .osg-icon {
+      line-height: 1em !important;
+    }
   }
 
   &--critical {
@@ -66,6 +83,8 @@
         box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
         height: 12px;
         width: 12px;
+        margin-right: 9px;
+        margin-top: 9px;
       }
     }
   }

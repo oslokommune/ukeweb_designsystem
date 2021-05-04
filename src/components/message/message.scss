@@ -3,7 +3,7 @@
 @use "system/spacing";
 
 .osg-message {
-  @extend %osg-padding-4;
+  @extend %osg-padding-3, %osg-padding-4-desktop-and-up;
   background-color: colors.$beige;
 
   h2 {
