@@ -1,0 +1,28 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "system/mixins/mq";
+
+.banner {
+  @extend %osg-padding-3, %osg-padding-5-tablet-and-up;
+  @extend %osg-text-2;
+
+  h2 {
+    @extend %osg-heading-3;
+  }
+
+  background-color: colors.$white;
+
+  &.yellow {
+    background-color: colors.$yellow;
+  }
+  &.blue-light {
+    background-color: colors.$blue-light;
+  }
+  &.gray {
+    background-color: colors.$gray;
+  }
+  &.beige {
+    background-color: colors.$beige;
+  }
+}
