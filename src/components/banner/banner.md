@@ -4,7 +4,7 @@ There are 5 different background colors supported.
 
 Default is white, but you can add the classes `yellow`, `blue-light`, `gray` and `beige` to the `<section>`-tag to get other colors.
 
-Layout variants:
+This component is "mix-and-match", some suggested layout variants:
 
 - List of links, no header
 - Header (full width), and two columns with links.
