@@ -1,58 +1,33 @@
 @use "system/colors";
 @use "system/fonts";
-@use "system/spacing";
 @use "system/icons";
+@use "system/spacing";
 @use "system/state";
 
 .osg-text-field {
-  border: 2px solid colors.$blue-dark;
-  height: 3.188rem;
-  font: inherit;
-  margin-top: spacing.$space-1;
-  padding: spacing.$space-2 spacing.$space-3;
-  width: 100%;
-
-  @extend %osg-text-5;
-  font-weight: 300 !important;
-
-  &:hover:enabled, &--hover {
-    border-color: colors.$blue-contrast;
-  }
-
-  &:focus:enabled, &--focus {
-    border: 4px solid colors.$blue-contrast;
-    outline-style: none;
-  }
-
-  &:disabled {
-    @extend %osg-state-disabled;
-    border: 2px solid colors.$grayscale-40 !important;
-  }
-
-  &__error {
+  &--error {
     border-color: colors.$red;
-    font-weight: 300 !important;
+    font-weight: 300;
   }
 
   &__error-message {
     background: rgba(255, 130, 116, 0.6);
-    border: 2px transparent;
     height: 3.125rem;
     margin-top: spacing.$space-2;
+    padding: .813rem spacing.$space-3
   }
 
-  &__type {
-    border: none;
-    padding: 0 !important;
-    height: unset;
+  &__required {
+    height: 1.625rem;
+    margin-top: spacing.$space-1;
+    padding: 0;
     @extend %osg-text-7;
   }
 
   &__countdown-characters {
-    border: none;
     text-align: right;
-    padding-top: 0;
     padding-right: 0;
+    padding-top: 0;
     @extend %osg-text-7;
   }
 
@@ -70,30 +45,5 @@
   &[type="search"]:focus::-webkit-search-cancel-button {
     opacity: 1;
     pointer-events: all;
-  }
-}
-
-.osg-label {
-  cursor: pointer;
-  display: block;
-  font: inherit;
-  position: relative;
-
-  @extend %osg-text-5;
-  font-weight: 500 !important;
-
-  &:focus-within {
-    color: colors.$blue-contrast;
-  }
-
-  &--disabled {
-    color: colors.$grayscale-40;
-  }
-
-  .osg-icon {
-    bottom: 12px;
-    font-size: inherit;
-    position: absolute;
-    right: spacing.$space-3;
   }
 }

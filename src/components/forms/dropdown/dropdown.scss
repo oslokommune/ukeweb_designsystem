@@ -1,0 +1,30 @@
+@use "system/colors";
+@use "system/icons";
+@use "system/spacing";
+
+.osg-dropdown {
+  position: relative;
+
+  &:after {
+    color: inherit;
+    content: map-get(icons.$icons, "chevron-thin-down");
+    font-family: 'Oslo Icons';
+    font-size: 32px;
+    pointer-events: none;
+    position: absolute;
+    right: 14px;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+
+  select {
+    cursor: pointer;
+    outline: none;
+    padding: spacing.$space-1 spacing.$space-3;
+    padding-right: 50px;
+
+    &:focus {
+      padding-right: 48px;
+    }
+  }
+}
