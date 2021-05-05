@@ -170,6 +170,14 @@
     padding: .625rem;
   }
 
+  &--icon-large {
+    line-height: 2em !important;
+
+    .osg-icon {
+      font-size: 1.778em;
+    }
+  }
+
   /**
    * Button colors
    */
