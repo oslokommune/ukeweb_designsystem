@@ -18,7 +18,7 @@
   /**
    * Button sizes
    */
-  &--small {
+  &.osg-button--small {
     padding: .3125rem .625rem;
     font-size: fonts.$size-16 !important;
   }
@@ -52,14 +52,15 @@
   }
 
   &--circle {
-    @extend .osg-button--icon-only;
     border-radius: 50%;
-    // force 1x1 ratio
-    &:before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      padding-top: 100%;
+    padding: .625rem .90575rem;
+
+    &.osg-button--small {
+      padding: .3125rem .5625rem;
+    }
+
+    &.osg-button--large {
+      padding: .938rem 1.25rem;
     }
   }
 
@@ -146,7 +147,7 @@
    * Button with icon
    */
   .osg-icon {
-    margin: -8px 0;
+    line-height: 1em;
     vertical-align: middle;
 
     &::before {
@@ -236,6 +237,20 @@
     color: colors.$blue-dark;
     background-color: colors.$blue-light;
     border: 2px solid colors.$blue-light;
+
+    &.osg-button--outline {
+      background-color: transparent;
+    }
+    &.osg-button--text {
+      background-color: transparent;
+      border: 2px solid transparent;
+    }
+  }
+
+  &--gray {
+    color: colors.$blue-dark;
+    background-color: colors.$gray-light;
+    border: 2px solid colors.$gray-light;
 
     &.osg-button--outline {
       background-color: transparent;
