@@ -3,7 +3,7 @@
 @use "system/spacing";
 @use "system/mixins/mq";
 
-.banner {
+.osg-banner {
   @extend %osg-padding-3, %osg-padding-5-tablet-and-up;
   @extend %osg-text-2;
 
@@ -13,16 +13,16 @@
 
   background-color: colors.$white;
 
-  &.yellow {
+  &--yellow {
     background-color: colors.$yellow;
   }
-  &.blue-light {
+  &--blue-light {
     background-color: colors.$blue-light;
   }
-  &.gray {
+  &--gray {
     background-color: colors.$gray;
   }
-  &.beige {
+  &--beige {
     background-color: colors.$beige;
   }
 }
