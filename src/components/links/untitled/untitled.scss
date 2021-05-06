@@ -14,25 +14,25 @@
     @extend %osg-margin-right-2;
   }
 
-  &__main {
-    h4 {
+  &__content {
+    & .osg-untitled__heading {
       @extend %osg-heading-4, %osg-margin-bottom-1;
       display: inline-block;
     }
 
-    p {
+    & .osg-untitled__text {
       @extend %osg-text-5;
     }
   }
 
   @include mixins.states {
-    .osg-untitled__main h4 {
+    .osg-untitled__content .osg-untitled__heading {
       text-decoration: underline;
     }
   };
 
   &--external {
-    .osg-untitled__main h4 {
+    & .osg-untitled__content .osg-untitled__heading {
       @include mixins.icon-right("new-window");
     }
   }
