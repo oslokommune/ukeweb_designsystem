@@ -2,14 +2,14 @@
 @use "system/state";
 @use "system/spacing";
 
-@mixin external-icon() {
+@mixin icon-right($icon, $size: 0.6em) {
   &::after,
   &:hover::after {
-    @extend %osg-margin-left-1;
     font-family: 'Oslo Icons' !important;
-    font-size: 0.6em;
-    content: map-get(icons.$icons, "new-window") !important;
+    font-size: $size;
+    content: map-get(icons.$icons, $icon) !important;
     display: inline-block;
+    margin-left: 0.4em;
   }
 }
 

@@ -33,7 +33,7 @@
 
   &--external {
     .osg-untitled__main h4 {
-      @include mixins.external-icon();
+      @include mixins.icon-right("new-window");
     }
   }
 }
