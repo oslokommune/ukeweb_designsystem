@@ -9,7 +9,7 @@
   @include mixins.states;
 
   &--external {
-    @include mixins.external-icon();
+    @include mixins.icon-right("new-window");
   }
 
   &--chevron-right {
