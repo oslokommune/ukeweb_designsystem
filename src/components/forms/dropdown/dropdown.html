@@ -4,9 +4,9 @@
     <div class="column is-4">
       <div class="osg-devtools-code">
         <label class="osg-label">
-          Dropdown label
+          Default
           <div class="osg-dropdown">
-            <select class="osg-form-component">
+            <select class="osg-dropdown__select">
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
             </select>
@@ -17,9 +17,22 @@
     <div class="column is-4">
       <div class="osg-devtools-code">
         <label class="osg-label osg-label--disabled">
-          Dropdown label
+          Disabled
           <div class="osg-dropdown">
-            <select class="osg-form-component osg-form-component--disabled" disabled="disabled">
+            <select class="osg-dropdown__select osg-dropdown__disabled" disabled="disabled">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </select>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="column is-4">
+      <div class="osg-devtools-code">
+        <label class="osg-label">
+          Error/invalid
+          <div class="osg-dropdown">
+            <select class="osg-dropdown__select osg-dropdown__select--error">
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
             </select>

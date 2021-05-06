@@ -1,20 +1,28 @@
 @use "system/colors";
-@use "system/fonts";
 @use "system/icons";
 @use "system/spacing";
 @use "system/state";
+@use "mixins";
 
 .osg-text-field {
+  @include mixins.form-component;
+
   &--error {
-    border-color: colors.$red;
-    font-weight: 300;
+    border: 2px solid colors.$red;
+
+    &:focus:enabled {
+      border: 4px solid colors.$red;
+    }
   }
 
   &__error-message {
     background: rgba(255, 130, 116, 0.6);
     height: 3.125rem;
     margin-top: spacing.$space-2;
-    padding: .813rem spacing.$space-3
+    padding: .813rem spacing.$space-3;
+    font-weight: 300 !important;
+
+    @extend %osg-text-6;
   }
 
   &__required {

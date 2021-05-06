@@ -3,21 +3,9 @@
 @use "system/spacing";
 @use "system/state";
 
-.osg-form-component {
-  appearance: none;
-  background-color: colors.$white;
-  border-radius: 0;
-  font: inherit;
-  height: 3.188rem;
-  margin-top: spacing.$space-1;
-  padding: spacing.$space-2 spacing.$space-3;
-  width: 100%;
-
-  @extend %osg-text-5;
-  font-weight: 300 !important;
-
-  &:enabled {
-    border: 2px solid colors.$blue-dark;
+@mixin form-states() {
+  &:disabled, &__disabled {
+    border-color: colors.$grayscale-40;
   }
 
   &:hover:enabled, &--hover {
@@ -26,24 +14,34 @@
 
   &:focus:enabled, &--focus {
     border: 4px solid colors.$blue-contrast;
-    outline-style: none;
     padding-left: 13px;
   }
+}
 
-  &:disabled, &--disabled {
-    border: 2px solid colors.$grayscale-40;
-  }
+@mixin form-component() {
+  appearance: none;
+  background-color: colors.$white;
+  border: 2px solid colors.$blue-dark;
+  border-radius: 0;
+  font: inherit;
+  height: 3.188rem;
+  margin-top: spacing.$space-1;
+  outline-style: none;
+  padding: spacing.$space-2 spacing.$space-3;
+  position: relative;
+  width: 100%;
 
-  + span.osg-icon {
+  @extend %osg-text-5;
+  font-weight: 300 !important;
+
+  @include form-states;
+
+  & + span.osg-icon {
     cursor: default !important;
     bottom: 12px;
     font-size: inherit;
     position: absolute;
     right: spacing.$space-3;
-  }
-
-  &--error {
-    border-color: colors.$red !important;
   }
 }
 

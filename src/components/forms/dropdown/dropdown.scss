@@ -1,6 +1,7 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
+@use "components/forms/text/mixins";
 
 .osg-dropdown {
   position: relative;
@@ -13,18 +14,26 @@
     pointer-events: none;
     position: absolute;
     right: 14px;
-    top: 55%;
+    top: 32px;
     transform: translateY(-50%);
   }
 
-  select {
+  &__select {
+    @include mixins.form-component;
+
     cursor: pointer;
-    outline: none;
-    padding: spacing.$space-1 spacing.$space-3;
     padding-right: 50px;
 
     &:focus {
       padding-right: 48px;
+    }
+
+    &--error {
+      border: 2px solid colors.$red;
+      &:focus,
+      &:active {
+        border: 4px solid colors.$red;
+      }
     }
   }
 }
