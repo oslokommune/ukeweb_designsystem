@@ -9,7 +9,7 @@
   @extend %osg-padding-vertical-5;
   @extend %osg-padding-horizontal-3, %osg-padding-horizontal-none-desktop-and-up;
 
-  &__header {
+  &__heading {
     @extend %osg-heading-4;
     @extend %osg-margin-bottom-3;
   }
