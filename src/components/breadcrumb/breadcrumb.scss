@@ -6,14 +6,13 @@
 .osg-breadcrumb {
   @extend %osg-text-7;
 
-  ul {
+  &__list {
     list-style: none !important;
 
-    li {
+    & .osg-breadcrumb__item {
       display: inline;
     }
-
-    li + li {
+    & .osg-breadcrumb__item + & .osg-breadcrumb__item {
       @extend %osg-margin-left-2;
     }
   }

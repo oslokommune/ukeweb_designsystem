@@ -13,15 +13,7 @@
     padding: spacing.$space-7 spacing.$space-6;
   }
 
-  a {
-    text-decoration: none;
-  }
-
-  p {
-    @extend %osg-text-1;
-  }
-
-  footer, & > cite {
+  &__figcaption {
     @extend %osg-text-3;
     display: block;
     padding-top: spacing.$space-3;

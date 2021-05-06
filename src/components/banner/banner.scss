@@ -1,16 +1,10 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/mixins/mq";
 
 .osg-banner {
   @extend %osg-padding-3, %osg-padding-5-tablet-and-up;
   @extend %osg-text-2;
-
-  h2 {
-    @extend %osg-heading-3;
-  }
-
   background-color: colors.$white;
 
   &--yellow {
@@ -25,4 +19,9 @@
   &--beige {
     background-color: colors.$beige;
   }
+
+  &__header {
+    @extend %osg-heading-3;
+  }
+
 }
