@@ -40,8 +40,28 @@
     @extend .osg-link;
   }
 
-  ul, ol {
-    @extend .osg-list, %osg-margin-bottom-3;
+  ul {
+    @extend .osg-unordered-list, %osg-margin-bottom-3;
+    ul ul {
+      @extend %osg-padding-top-2;
+      @extend %osg-margin-bottom-none;
+      padding-left: 1.25rem;
+    }
+    li + li {
+      @extend %osg-padding-top-2;
+    }
+  }
+
+  ol {
+    @extend .osg-ordered-list, %osg-margin-bottom-3;
+    ol ol {
+      @extend %osg-padding-top-2;
+      @extend %osg-margin-bottom-none;
+      padding-left: 1.25rem;
+    }
+    li + li {
+      @extend %osg-padding-top-2;
+    }
   }
 
   figure {
