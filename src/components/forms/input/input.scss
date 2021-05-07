@@ -1,10 +1,8 @@
 @use "system/colors";
-@use "system/icons";
 @use "system/spacing";
-@use "system/state";
 @use "mixins";
 
-.osg-text-field {
+.osg-input-field {
   @include mixins.form-component;
 
   &--error {
@@ -29,13 +27,7 @@
     height: 1.625rem;
     margin-top: spacing.$space-1;
     padding: 0;
-    @extend %osg-text-7;
-  }
 
-  &__countdown-characters {
-    text-align: right;
-    padding-right: 0;
-    padding-top: 0;
     @extend %osg-text-7;
   }
 
