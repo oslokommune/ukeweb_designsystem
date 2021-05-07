@@ -2,7 +2,7 @@
 @use "system/spacing";
 @use "mixins";
 
-.osg-text-field {
+.osg-input-field {
   @include mixins.form-component;
 
   &--error {
