@@ -1,0 +1,16 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-infobox {
+  @extend %osg-padding-3;
+  background-color: colors.$blue-light;
+
+  &__heading {
+    @extend %osg-heading-4;
+  }
+
+  &__text {
+    @extend %osg-text-5;
+  }
+}
