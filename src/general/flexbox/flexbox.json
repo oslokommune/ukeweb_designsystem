@@ -1,0 +1,8 @@
+{
+  "devtools": {
+    "preset": "clean"
+  },
+  "tags": [
+    "flex"
+  ]
+}

@@ -1,0 +1,82 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-image {
+  line-height: 0;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--symbol {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      background-color: colors.$white;
+      content: "";
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 50%;
+    }
+
+    &::after {
+      background-color: colors.$yellow;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 50%;
+    }
+
+    &-top-right {
+      &::before,
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &-bottom-left {
+      &::before,
+      &::after {
+        bottom: 0;
+        top: auto;
+      }
+    }
+
+    &-bottom-right {
+      &::before,
+      &::after {
+        bottom: 0;
+        left: auto;
+        right: 0;
+        top: auto;
+      }
+    }
+
+    &-red {
+      &::after {
+        background-color: colors.$red;
+      }
+    }
+
+    &-green {
+      &::after {
+        background-color: colors.$green-light;
+      }
+    }
+  }
+
+  &__caption {
+    @extend %osg-text-7;
+    @extend %osg-margin-top-3;
+  }
+}
