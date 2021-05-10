@@ -3,19 +3,19 @@
   <div class="columns is-multiline">
     <div class="column is-4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Label text
-          <input class="osg-input-field" type="text" autocomplete="on" placeholder="Input text">
-        </label>
+        <input class="osg-input-field" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text">
       </div>
     </div>
   </div>
 
-  <h2 class="osg-heading-3 osg-margin-top-5 osg-margin-bottom-1">Input text without label</h2>
+  <h2 class="osg-heading-3 osg-margin-top-5 osg-margin-bottom-1">Input text with label</h2>
   <div class="columns is-multiline">
     <div class="column is-4">
       <div class="osg-devtools-code">
-        <input class="osg-input-field" type="text" autocomplete="on" placeholder="Input text" aria-label="Label default text">
+        <label class="osg-label">
+          Label text
+          <input class="osg-input-field" type="text" autocomplete="on" placeholder="Input text">
+        </label>
       </div>
     </div>
   </div>

@@ -15,9 +15,8 @@
 
   &__error-message {
     background: rgba(255, 130, 116, 0.6);
-    height: 3.125rem;
     margin-top: spacing.$space-2;
-    padding: .813rem spacing.$space-3;
+    padding: spacing.$space-3;
     font-weight: 300 !important;
 
     @extend %osg-text-6;
