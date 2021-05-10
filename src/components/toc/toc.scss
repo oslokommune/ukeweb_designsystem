@@ -6,25 +6,20 @@
 
 .osg-toc {
   @extend %osg-text-4;
-  padding-left: 0;
-  list-style: none;
+  @extend %osg-padding-left-none;
 
-  li {
-    @extend %osg-padding-3;
+  &__item {
+    @extend %osg-padding-vertical-3;
+    @extend %osg-padding-horizontal-2;
     border-top: 2px solid colors.$gray;
-
-    a {
-      @include mixins.states;
-      @include mixins.icon-left("arrow");
-      margin-left: 8px;
-
-      &::before,
-      &:hover::before {
-        left: -8px;
-      }
-    }
   }
-  li:last-of-type {
+
+  &__item:last-of-type {
     border-bottom: 2px solid colors.$gray;
+  }
+
+  &__link {
+    @include mixins.states;
+    @include mixins.icon-left("arrow");
   }
 }
