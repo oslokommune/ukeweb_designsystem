@@ -1,0 +1,16 @@
+@use "components/forms/input/mixins";
+
+.osg-textarea {
+  @include mixins.form-component;
+  resize: none;
+
+  &:focus {
+    padding: .5rem 3rem .5rem .813rem;
+  }
+
+  &__countdown-characters {
+    display: block;
+    text-align: right;
+    @extend %osg-text-7;
+  }
+}
