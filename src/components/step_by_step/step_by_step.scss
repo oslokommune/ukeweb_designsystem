@@ -1,0 +1,37 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-step-by-step {
+  list-style: none;
+  counter-reset: orderedlist;
+
+  &__item {
+    @extend %osg-margin-bottom-3;
+  }
+
+  &__item::before {
+    @extend %osg-heading-6, %osg-text-center;
+    @extend %osg-margin-right-1;
+
+    counter-increment: orderedlist;
+    content: counter(orderedlist);
+
+    border: 2px solid colors.$blue-dark;
+    border-radius: 100%;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    padding-top: 0.15em;
+    padding-left: 0.1em;
+  }
+
+  &__heading {
+    @extend %osg-heading-6;
+    display: inline;
+  }
+
+  &__text {
+    @extend %osg-margin-top-1;
+  }
+}
