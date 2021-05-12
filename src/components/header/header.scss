@@ -1,10 +1,9 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/mixins/mq";
 
 .osg-header {
-  @extend %osg-padding-horizontal-4-desktop-and-up;
+  @extend %osg-padding-horizontal-4-breakpoint-large;
   background-color: colors.$white;
   border-bottom: 1px solid colors.$grayscale-40;
 

@@ -4,8 +4,8 @@
   @include mixins.form-component;
   resize: none;
 
-  &:focus {
-    padding: .5rem 3rem .5rem .813rem;
+  &::placeholder {
+    color: inherit;
   }
 
   &__countdown-characters {

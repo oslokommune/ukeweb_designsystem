@@ -5,15 +5,6 @@
       "docs": {
         "visible": true
       }
-    },
-    "tags": [
-      "font",
-      "size",
-      "heading",
-      "headings",
-      "text",
-      "typography"
-    ]
-  },
-  "fontSizes": {}
+    }
+  }
 }

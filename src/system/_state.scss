@@ -1,17 +1,17 @@
-@use "system/colors" as *;
+@use "system/colors";
 
 $state-colors: (
-  "disabled": $gray-light $grayscale-40,
-  "primary": $blue-dark $white,
-  "success": $green-light $green-dark,
-  "warning": $yellow $blue-dark,
-  "danger": $red $blue-dark,
-  "active": $blue-contrast $white,
-  "active-light": $blue-light $blue-dark,
-  "hover": $blue-contrast $white,
-  "hover-light": $blue-light $blue-dark,
-  "visited": $purple $white,
-  "visited-light": $purple-light $blue-dark
+  "disabled": colors.$gray-light colors.$grayscale-40,
+  "primary": colors.$blue-dark colors.$white,
+  "success": colors.$green-light colors.$green-dark,
+  "warning": colors.$yellow colors.$blue-dark,
+  "danger": colors.$red colors.$blue-dark,
+  "active": colors.$blue-contrast colors.$white,
+  "active-light": colors.$blue-light colors.$blue-dark,
+  "hover": colors.$blue-contrast colors.$white,
+  "hover-light": colors.$blue-light colors.$blue-dark,
+  "visited": colors.$purple colors.$white,
+  "visited-light": colors.$purple-light colors.$blue-dark
 );
 
 @each $name, $tuple in $state-colors {

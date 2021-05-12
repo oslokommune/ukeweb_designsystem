@@ -1,0 +1,20 @@
+@use "system/breakpoints";
+
+$gutter: 16px !default;
+$gutter-large: 30px !default;
+
+.osg-container {
+  margin: 0 $gutter;
+
+  @include breakpoints.medium {
+    margin: 0 $gutter-large;
+  }
+
+  &--gutterless {
+    margin: 0;
+  }
+
+  &--no-overflow-x {
+    overflow-x: hidden;
+  }
+}

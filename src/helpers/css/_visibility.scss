@@ -1,8 +1,38 @@
-$displays: 'block' 'inline' 'inline-block';
+@use "system/breakpoints";
+
+$displays: 'none' 'block' 'inline' 'inline-block';
 
 @each $display in $displays {
   .osg-#{$display} {
     display: #{$display} !important;
+  }
+
+  @include breakpoints.medium {
+    .osg-#{$display}-breakpoint-medium {
+      display: #{$display} !important;
+    }
+  }
+
+  @include breakpoints.large {
+    .osg-#{$display}-breakpoint-large {
+      display: #{$display} !important;
+    }
+  }
+}
+
+.osg-invisible {
+  visibility: hidden !important;
+
+  @include breakpoints.medium {
+    .osg-invisible-breakpoint-medium {
+      visibility: hidden !important;
+    }
+  }
+
+  @include breakpoints.large {
+    .osg-invisible-breakpoint-large {
+      visibility: hidden !important;
+    }
   }
 }
 
@@ -15,12 +45,4 @@ $displays: 'block' 'inline' 'inline-block';
   position: absolute !important;
   white-space: nowrap !important;
   width: 0.01em !important;
-}
-
-.osg-hidden {
-  display: none !important;
-}
-
-.osg-invisible {
-  visibility: hidden !important;
 }

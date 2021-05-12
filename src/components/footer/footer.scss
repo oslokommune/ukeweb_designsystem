@@ -7,7 +7,7 @@
   @extend %osg-color-bg-blue-dark, %osg-color-text-white;
   @extend %osg-text-3;
   @extend %osg-padding-vertical-5;
-  @extend %osg-padding-horizontal-3, %osg-padding-horizontal-none-desktop-and-up;
+  @extend %osg-padding-horizontal-3, %osg-padding-horizontal-none-breakpoint-large;
 
   &__heading {
     @extend %osg-heading-4;
