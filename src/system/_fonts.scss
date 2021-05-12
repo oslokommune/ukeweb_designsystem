@@ -1,4 +1,4 @@
-@use "mixins/mq";
+@use "breakpoints";
 
 // --------------- FONT ---------------*/
 $path: '../assets/fonts' !default;
@@ -78,10 +78,10 @@ $alignments: (
       letter-spacing: -0.2px !important;
     }
 
-    @include mq.tablet-and-up {
+    @include breakpoints.medium {
       font-size: $size-tablet !important;
     }
-    @include mq.desktop-and-up {
+    @include breakpoints.large {
       font-size: $size-desktop !important;
     }
   }
@@ -94,10 +94,10 @@ $alignments: (
     line-height: 1.5em !important;
     font-weight: $weight !important;
 
-    @include mq.tablet-and-up {
+    @include breakpoints.medium {
       font-size: $size-tablet !important;
     }
-    @include mq.desktop-and-up {
+    @include breakpoints.large {
       font-size: $size-desktop !important;
     }
   }

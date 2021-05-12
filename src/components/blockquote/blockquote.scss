@@ -1,7 +1,7 @@
+@use "system/breakpoints";
 @use "system/colors";
-@use "system/spacing";
 @use "system/fonts";
-@use "system/mixins/mq";
+@use "system/spacing";
 
 .osg-blockquote {
   @extend %osg-text-1;
@@ -9,7 +9,7 @@
   background-color: colors.$beige;
   padding: spacing.$space-5 spacing.$space-4;
 
-  @include mq.tablet-and-up {
+  @include breakpoints.medium {
     padding: spacing.$space-7 spacing.$space-6;
   }
 
@@ -17,7 +17,7 @@
     @extend %osg-text-3;
     display: block;
     padding-top: spacing.$space-3;
-    @include mq.tablet-and-up {
+    @include breakpoints.medium {
       padding-top: spacing.$space-4;
     }
   }

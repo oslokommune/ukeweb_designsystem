@@ -7,7 +7,7 @@
   background-color: colors.$blue-light;
 
   &__heading {
-    @extend %osg-heading-4;
+    @extend %osg-heading-5, %osg-margin-bottom-2;
   }
 
   &__text {

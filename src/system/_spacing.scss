@@ -1,4 +1,4 @@
-@use "system/mixins/mq";
+@use "system/breakpoints";
 
 // --------------- SPACING ---------------*/
 
@@ -71,104 +71,102 @@ $spacing-sizes: (
   }
 }
 
-// generate spacing classes for tablet
-@include mq.tablet-and-up {
+@include breakpoints.medium {
   @each $name, $size in $spacing-sizes {
-    %osg-padding-#{$name}-tablet-and-up {
+    %osg-padding-#{$name}-breakpoint-medium {
       padding: $size $size $size $size !important;
     }
-    %osg-margin-#{$name}-tablet-and-up {
+    %osg-margin-#{$name}-breakpoint-medium {
       margin: $size $size $size $size !important;
     }
-    %osg-padding-bottom-#{$name}-tablet-and-up {
+    %osg-padding-bottom-#{$name}-breakpoint-medium {
       padding-bottom: $size !important;
     }
-    %osg-margin-bottom-#{$name}-tablet-and-up {
+    %osg-margin-bottom-#{$name}-breakpoint-medium {
       margin-bottom: $size !important;
     }
-    %osg-padding-top-#{$name}-tablet-and-up {
+    %osg-padding-top-#{$name}-breakpoint-medium {
       padding-top: $size !important;
     }
-    %osg-margin-top-#{$name}-tablet-and-up {
+    %osg-margin-top-#{$name}-breakpoint-medium {
       margin-top: $size !important;
     }
-    %osg-padding-left-#{$name}-tablet-and-up {
+    %osg-padding-left-#{$name}-breakpoint-medium {
       padding-left: $size !important;
     }
-    %osg-margin-left-#{$name}-tablet-and-up {
+    %osg-margin-left-#{$name}-breakpoint-medium {
       margin-left: $size !important;
     }
-    %osg-padding-right-#{$name}-tablet-and-up {
+    %osg-padding-right-#{$name}-breakpoint-medium {
       padding-right: $size !important;
     }
-    %osg-margin-right-#{$name}-tablet-and-up {
+    %osg-margin-right-#{$name}-breakpoint-medium {
       margin-right: $size !important;
     }
-    %osg-padding-horizontal-#{$name}-tablet-and-up {
+    %osg-padding-horizontal-#{$name}-breakpoint-medium {
       padding-left: $size !important;
       padding-right: $size !important;
     }
-    %osg-margin-horizontal-#{$name}-tablet-and-up {
+    %osg-margin-horizontal-#{$name}-breakpoint-medium {
       margin-left: $size !important;
       margin-right: $size !important;
     }
-    %osg-padding-vertical-#{$name}-tablet-and-up {
+    %osg-padding-vertical-#{$name}-breakpoint-medium {
       padding-top: $size !important;
       padding-bottom: $size !important;
     }
-    %osg-margin-vertical-#{$name}-tablet-and-up {
+    %osg-margin-vertical-#{$name}-breakpoint-medium {
       margin-top: $size !important;
       margin-bottom: $size !important;
     }
   }
 }
 
-// generate spacing classes for desktop
-@include mq.desktop-and-up {
+@include breakpoints.large {
   @each $name, $size in $spacing-sizes {
-    %osg-padding-#{$name}-desktop-and-up {
+    %osg-padding-#{$name}-breakpoint-large {
       padding: $size $size $size $size !important;
     }
-    %osg-margin-#{$name}-desktop-and-up {
+    %osg-margin-#{$name}-breakpoint-large {
       margin: $size $size $size $size !important;
     }
-    %osg-padding-bottom-#{$name}-desktop-and-up {
+    %osg-padding-bottom-#{$name}-breakpoint-large {
       padding-bottom: $size !important;
     }
-    %osg-margin-bottom-#{$name}-desktop-and-up {
+    %osg-margin-bottom-#{$name}-breakpoint-large {
       margin-bottom: $size !important;
     }
-    %osg-padding-top-#{$name}-desktop-and-up {
+    %osg-padding-top-#{$name}-breakpoint-large {
       padding-top: $size !important;
     }
-    %osg-margin-top-#{$name}-desktop-and-up {
+    %osg-margin-top-#{$name}-breakpoint-large {
       margin-top: $size !important;
     }
-    %osg-padding-left-#{$name}-desktop-and-up {
+    %osg-padding-left-#{$name}-breakpoint-large {
       padding-left: $size !important;
     }
-    %osg-margin-left-#{$name}-desktop-and-up {
+    %osg-margin-left-#{$name}-breakpoint-large {
       margin-left: $size !important;
     }
-    %osg-padding-right-#{$name}-desktop-and-up {
+    %osg-padding-right-#{$name}-breakpoint-large {
       padding-right: $size !important;
     }
-    %osg-margin-right-#{$name}-desktop-and-up {
+    %osg-margin-right-#{$name}-breakpoint-large {
       margin-right: $size !important;
     }
-    %osg-padding-horizontal-#{$name}-desktop-and-up {
+    %osg-padding-horizontal-#{$name}-breakpoint-large {
       padding-left: $size !important;
       padding-right: $size !important;
     }
-    %osg-margin-horizontal-#{$name}-desktop-and-up {
+    %osg-margin-horizontal-#{$name}-breakpoint-large {
       margin-left: $size !important;
       margin-right: $size !important;
     }
-    %osg-padding-vertical-#{$name}-desktop-and-up {
+    %osg-padding-vertical-#{$name}-breakpoint-large {
       padding-top: $size !important;
       padding-bottom: $size !important;
     }
-    %osg-margin-vertical-#{$name}-desktop-and-up {
+    %osg-margin-vertical-#{$name}-breakpoint-large {
       margin-top: $size !important;
       margin-bottom: $size !important;
     }

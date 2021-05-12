@@ -1,6 +1,6 @@
 @use "system/colors";
 @use "system/spacing";
-@use "system/mixins/mq";
+@use "system/breakpoints";
 
 .osg-logo {
   @extend %osg-color-text-blue-dark;
@@ -16,7 +16,7 @@
     fill: currentColor;
     height: 3.1875rem;
 
-    @include mq.tablet-and-up {
+    @include breakpoints.medium {
       height: 4.0625rem;
     }
   }
