@@ -37,6 +37,10 @@ $columns: (
 
     &:not(:last-child) {
       margin-bottom: $column-gap;
+
+      @include breakpoints.medium {
+        margin-bottom: $column-gap-large;
+      }
     }
 
     &:last-child {
