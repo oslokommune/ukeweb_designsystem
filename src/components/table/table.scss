@@ -1,29 +1,48 @@
 @use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "system/mixins/mq";
 
 .osg-table {
-  th, td {
-    padding: 10px 0;
+
+  width: 100%;
+  @extend %osg-text-left;
+  @extend %osg-margin-bottom-6;
+
+  &__caption {
+    @extend %osg-heading-4;
+    @extend %osg-text-left;
   }
 
-  thead {
-    tr {
-      th {
-        border-bottom: 1px solid colors.$black;
-      }
-      th:not(:first-child) {
-        padding-left: 60px;
-      }
+  &__head {
+    .osg-table__heading {
+      @extend %osg-heading-4;
     }
   }
 
-  tbody {
-    tr {
-      th, td {
-        border-bottom: 1px solid colors.$gray;
-      }
-      td:not(:first-child) {
-        padding-left: 60px;
-      }
+  &__body {
+    .osg-table__row:nth-child(odd) {
+      @extend %osg-color-bg-beige;
+    }
+  }
+
+  &__heading, &__cell {
+    @extend %osg-padding-3;
+  }
+
+  &__heading:first-child, &__cell:first-child {
+    @extend %osg-padding-left-4-tablet-and-up;
+    @extend %osg-padding-left-6-desktop-and-up;
+  }
+
+  &__heading:last-child, &__cell:last-child {
+    @extend %osg-padding-right-4-tablet-and-up;
+    @extend %osg-padding-right-6-desktop-and-up;
+  }
+
+  &--left-right {
+    .osg-table__heading:last-child, .osg-table__cell:last-child {
+      @extend %osg-text-right;
     }
   }
 }

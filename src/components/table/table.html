@@ -1,36 +1,111 @@
 <div class="container is-fluid osg-margin-vertical-3">
-  <h2 class="osg-heading-3 osg-margin-bottom-1">Default</h2>
-  <div class="osg-devtools-code">
-    <table class="osg-table">
-      <thead>
-        <tr>
-          <th>Breakpoint</th>
-          <th>Class</th>
-          <th>Dimensions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>mobile</th>
-          <td>-</td>
-          <td>&lt;576px</td>
-        </tr>
-        <tr>
-          <th>tablet</th>
-          <td>.osg-mq-tablet-and-up</td>
-          <td>≥769px</td>
-        </tr>
-        <tr>
-          <th>desktop</th>
-          <td>.osg-mq-desktop-and-up</td>
-          <td>≥1024px</td>
-        </tr>
-        <tr>
-          <th>widescreen</th>
-          <td>.osg-mq-widescreen-and-up</td>
-          <td>≥1216px</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="columns is-multiline">
+    <div class="column is-12">
+      <h2 class="osg-heading-3 osg-margin-bottom-1">Default</h2>
+      <div class="osg-devtools-code">
+        <table class="osg-table">
+          <thead class="osg-table__head">
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Some</th>
+              <th class="osg-table__heading">Neat</th>
+              <th class="osg-table__heading">Datapoints</th>
+              <th class="osg-table__heading">Sum</th>
+              <th class="osg-table__heading">Average</th>
+            </tr>
+          </thead>
+          <tbody class="osg-table__body">
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Donec eget rhoncus</th>
+              <td class="osg-table__cell">Sed egestas maximus</td>
+              <td class="osg-table__cell">3.1415926535</td>
+              <td class="osg-table__cell">3.1415926535</td>
+              <td class="osg-table__cell">3.1415926535</td>
+            </tr>
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Cras a nunc</th>
+              <td class="osg-table__cell">Mauris vel ex</td>
+              <td class="osg-table__cell">10</td>
+              <td class="osg-table__cell">13.1415926535</td>
+              <td class="osg-table__cell">6.57079632675</td>
+            </tr>
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Aenean</th>
+              <td class="osg-table__cell">Nullam</td>
+              <td class="osg-table__cell">33.33</td>
+              <td class="osg-table__cell">46.4715926535</td>
+              <td class="osg-table__cell">15.4905308845</td>
+            </tr>
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Integer maximus</th>
+              <td class="osg-table__cell">Nunc id egestas quam</td>
+              <td class="osg-table__cell">42</td>
+              <td class="osg-table__cell">88.4715926535</td>
+              <td class="osg-table__cell">22.117898163375</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="column is-12">
+      <h2 class="osg-heading-3 osg-margin-bottom-1">Caption</h2>
+      <div class="osg-devtools-code">
+        <table class="osg-table">
+          <caption class="osg-table__caption">This is the table caption</caption>
+          <thead class="osg-table__head">
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Column 1, bla bla</th>
+              <th class="osg-table__heading">Column 2, ta da</th>
+              <th class="osg-table__heading">Column 3, hey ho</th>
+            </tr>
+          </thead>
+          <tbody class="osg-table__body">
+            <tr class="osg-table__row">
+              <td class="osg-table__cell" colspan="2" class="osg-table__cell">Colspan 2, Sed egestas maximus. Donec tincidunt ipsum nec lacus posuere, in gravida erat suscipit.</td>
+              <td class="osg-table__cell">Banana</td>
+            </tr>
+            <tr class="osg-table__row">
+              <td class="osg-table__cell" colspan="2" class="osg-table__cell">Colpsna 2, Mauris vel ex. Sed blandit eros non enim euismod lacinia.</td>
+              <td class="osg-table__cell">Apple</td>
+            </tr>
+            <tr class="osg-table__row">
+              <td class="osg-table__cell">Nunc id egestas quam</td>
+              <td class="osg-table__cell">42</td>
+              <td class="osg-table__cell">49</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="column is-12">
+      <h2 class="osg-heading-3 osg-margin-bottom-1">Left / right</h2>
+      <div class="osg-devtools-code">
+        <table class="osg-table osg-table--left-right">
+          <thead class="osg-table__head">
+            <tr class="osg-table__row">
+              <th class="osg-table__heading">Lefty</th>
+              <th class="osg-table__heading">Righty</th>
+            </tr>
+          </thead>
+          <tbody class="osg-table__body">
+            <tr class="osg-table__row">
+              <td class="osg-table__cell">Sed egestas maximus</td>
+              <td class="osg-table__cell">3.1415926535</td>
+            </tr>
+            <tr class="osg-table__row">
+              <td class="osg-table__cell">Mauris vel ex</td>
+              <td class="osg-table__cell">10</td>
+            </tr>
+            <tr class="osg-table__row">
+              <td class="osg-table__cell">Nullam</td>
+              <td class="osg-table__cell">33.33</tdclass=>
+            </tr>
+            <tr class="osg-table__row">
+              <td class="osg-table__cell">Nunc id egestas quam</td>
+              <td class="osg-table__cell">42</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
