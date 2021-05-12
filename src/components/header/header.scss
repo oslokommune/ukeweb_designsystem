@@ -6,20 +6,21 @@
 .osg-header {
   @extend %osg-padding-horizontal-4-desktop-and-up;
   background-color: colors.$white;
+  border-bottom: 1px solid colors.$grayscale-40;
 
-  &__left {
+  .replace-in-html-with-helpers {
     display: flex !important;
     align-items: center;
     justify-content: left;
+    height: 100%;
   }
 
-  &__right {
+  .replace-in-html-with-helpers {
     display: flex !important;
     align-items: center;
     justify-content: right;
+    height: 100%;
   }
-
-  border-bottom: 1px solid colors.$grayscale-40
 }
 
 
