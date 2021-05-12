@@ -5,6 +5,10 @@
 .osg-input-field {
   @include mixins.form-component;
 
+  &::placeholder {
+    color: inherit;
+  }
+
   &--error {
     border: 2px solid colors.$red;
 
