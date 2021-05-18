@@ -3,7 +3,7 @@
 @use "system/spacing";
 
 .osg-banner {
-  @extend %osg-padding-3, %osg-padding-5-breakpoint-medium;
+  @extend %osg-padding-vertical-3, %osg-padding-vertical-5-breakpoint-medium;
   @extend %osg-text-2;
   background-color: colors.$white;
 
