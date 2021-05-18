@@ -18,4 +18,16 @@
   &--chevron-left {
     @include mixins.icon-left("chevron-left");
   }
+
+  &--state-light {
+    &:visited, &-visited {
+      @extend %osg-state-text-visited-light;
+    }
+    &:hover, &-hover, &:focus, &-focus {
+      @extend %osg-state-text-hover-light;
+    }
+    &:active, &-active {
+      @extend %osg-state-text-active-light;
+    }
+  }
 }

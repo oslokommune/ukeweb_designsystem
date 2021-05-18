@@ -1,5 +1,4 @@
 @use "system/colors";
-@use "system/state";
 @use "system/fonts";
 @use "system/spacing";
 
@@ -7,16 +6,4 @@
   @extend %osg-color-bg-blue-dark, %osg-color-text-white;
   @extend %osg-text-3;
   @extend %osg-padding-vertical-5;
-  @extend %osg-padding-horizontal-3, %osg-padding-horizontal-none-breakpoint-large;
-
-  &__heading {
-    @extend %osg-heading-4;
-    @extend %osg-margin-bottom-3;
-  }
-
-  & .osg-link:active,
-  & .osg-link:focus,
-  & .osg-link:hover {
-    @extend %osg-state-text-hover-light;
-  }
 }
