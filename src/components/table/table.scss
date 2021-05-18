@@ -4,10 +4,8 @@
 @use "system/spacing";
 
 .osg-table {
-
   width: 100%;
   @extend %osg-text-left;
-  @extend %osg-margin-bottom-6;
 
   &__caption {
     @extend %osg-heading-4;
