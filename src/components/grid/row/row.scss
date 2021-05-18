@@ -80,6 +80,10 @@ $columns: (
           margin-left: $column-size;
         }
       }
+
+      &--offset-none-breakpoint-medium {
+        margin-left: 0;
+      }
     }
 
     @include breakpoints.large {
@@ -92,6 +96,10 @@ $columns: (
         &--offset-#{$column-number}-breakpoint-large {
           margin-left: $column-size;
         }
+      }
+
+      &--offset-none-breakpoint-large {
+        margin-left: 0;
       }
     }
   }

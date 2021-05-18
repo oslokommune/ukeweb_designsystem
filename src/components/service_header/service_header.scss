@@ -1,0 +1,5 @@
+@use "system/spacing";
+
+.osg-service-header {
+  @extend %osg-padding-top-5, %osg-padding-bottom-6;
+}
