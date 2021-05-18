@@ -3,6 +3,7 @@
 @use "system/spacing";
 
 .osg-image {
+  display: block;
   line-height: 0;
 
   &--circle {
@@ -10,7 +11,6 @@
   }
 
   &--shape {
-    display: inline-block;
     position: relative;
 
     &::before {
@@ -68,9 +68,15 @@
       }
     }
 
-    &-green {
+    &-green-light {
       &::after {
         background-color: colors.$green-light;
+      }
+    }
+
+    &-blue-light {
+      &::after {
+        background-color: colors.$blue-light;
       }
     }
   }
