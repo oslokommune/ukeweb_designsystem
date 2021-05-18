@@ -1,4 +1,4 @@
-$flex-direction-values: row, row-reverse, column, column-reverse;
+$flex-direction-values: 'row', 'row-reverse', 'column', 'column-reverse';
 @each $value in $flex-direction-values {
   .osg-flex-direction-#{$value} {
     flex-direction: $value !important;

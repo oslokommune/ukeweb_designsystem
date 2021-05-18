@@ -17,4 +17,9 @@ $gutter-large: 30px !default;
   &--no-overflow-x {
     overflow-x: hidden;
   }
+
+  &--content-limit {
+    max-width: 1236px;
+    margin: 0 auto;
+  }
 }
