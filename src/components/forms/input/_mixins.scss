@@ -6,6 +6,7 @@
 @mixin form-states() {
   &:disabled, &--disabled {
     border-color: colors.$grayscale-40;
+    color: colors.$grayscale-40;
 
     &:after {
       color: colors.$grayscale-40 !important;
