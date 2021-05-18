@@ -1,5 +1,14 @@
+@use "system/fonts";
 @use "system/spacing";
 
 .osg-service-header {
   @extend %osg-padding-top-5, %osg-padding-bottom-6;
+
+  &__heading {
+    @extend %osg-heading-1, %osg-margin-bottom-3;
+  }
+
+  &__lead {
+    @extend %osg-text-1;
+  }
 }
