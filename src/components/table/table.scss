@@ -4,7 +4,10 @@
 @use "system/spacing";
 
 .osg-table {
-  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+
   @extend %osg-text-left;
 
   &__caption {
@@ -14,6 +17,7 @@
 
   &__head {
     .osg-table__heading {
+      vertical-align: top;
       @extend %osg-heading-4;
     }
   }
