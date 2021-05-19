@@ -4,6 +4,7 @@
 @use "components/links/link/link";
 @use "components/list/list";
 @use "components/paragraph/paragraph";
+@use "components/table/table";
 
 .osg-content {
   @extend %osg-text-5;
@@ -67,4 +68,29 @@
   figure {
     @extend .osg-blockquote, %osg-margin-bottom-3;
   }
+
+  table {
+    @extend .osg-table;
+
+    caption {
+      @extend .osg-table__caption;
+    }
+
+    thead {
+      @extend .osg-table__head;
+    }
+
+    tbody {
+      @extend .osg-table__body;
+    }
+
+    tr {
+      @extend .osg-table__row;
+    }
+
+    th, td {
+      @extend .osg-table__cell;
+    }
+  }
+
 }
