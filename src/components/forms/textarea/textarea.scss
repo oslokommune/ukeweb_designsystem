@@ -2,6 +2,8 @@
 
 .osg-textarea {
   @include mixins.form-component;
+  @include mixins.form-states;
+
   resize: none;
 
   &::placeholder {
