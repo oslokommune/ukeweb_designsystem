@@ -70,6 +70,7 @@ $alignments: (
     font-size: $size-mobile !important;
     font-weight: $weight !important;
     line-height: 1.5em !important;
+    hyphens: auto;
 
     @if $name == "1" {
       letter-spacing: -0.4px !important;

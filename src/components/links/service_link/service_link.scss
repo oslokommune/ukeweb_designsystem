@@ -8,17 +8,20 @@
   font-size: inherit;
   text-decoration: none;
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
 
   &__icon {
-    @extend %osg-heading-3, %osg-margin-right-3;
+    @extend %osg-heading-3, %osg-margin-right-2;
+
+    > * {
+      line-height: 1.4em !important;
+    }
   }
 
   &__content {
     & .osg-service-link__heading {
       @extend %osg-heading-4;
       display: inline-block;
-      line-height: 1.9em !important;
     }
 
     & .osg-service-link__text {
