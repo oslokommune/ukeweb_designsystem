@@ -11,10 +11,10 @@
   flex-direction: row;
 
   &__icon {
-    @extend %osg-heading-3, %osg-margin-right-2;
+    @extend %osg-heading-3, %osg-margin-right-3;
 
     > * {
-      line-height: 1.4em !important;
+      line-height: 1.2em !important;
     }
   }
 

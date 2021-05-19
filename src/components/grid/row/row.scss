@@ -55,6 +55,11 @@ $columns: (
     max-width: 100%;
     padding: $column-gap;
 
+    &--stack {
+      padding-top: $column-gap * 2;
+      padding-bottom: $column-gap * 2;
+    }
+
     @include breakpoints.medium {
       padding: $column-gap-large;
     }
