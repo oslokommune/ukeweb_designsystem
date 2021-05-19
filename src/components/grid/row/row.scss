@@ -1,7 +1,8 @@
 @use "system/breakpoints";
+@use "system/spacing";
 
-$column-gap: 8px !default;
-$column-gap-large: 15px !default;
+$column-gap: spacing.$space-3 / 2 !default;
+$column-gap-large: spacing.$space-4 / 2 !default;
 
 $columns: (
   1: 8.3333%,
