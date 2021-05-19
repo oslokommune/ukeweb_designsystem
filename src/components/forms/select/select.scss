@@ -20,6 +20,7 @@
 
   &__select {
     @include mixins.form-component;
+    @include mixins.form-states;
 
     cursor: pointer;
     padding-right: spacing.$space-5;

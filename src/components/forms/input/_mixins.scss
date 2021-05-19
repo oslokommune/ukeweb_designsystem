@@ -21,6 +21,14 @@
     border: 4px solid colors.$blue-contrast;
     padding: .5rem .813rem;
   }
+
+  &--error {
+    border: 2px solid colors.$red;
+
+    &:focus:enabled {
+      border: 4px solid colors.$red;
+    }
+  }
 }
 
 @mixin form-component() {
