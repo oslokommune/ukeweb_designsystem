@@ -3,7 +3,7 @@
 @use "system/spacing";
 @use "components/links/link/mixins";
 
-.osg-untitled {
+.osg-service-link {
   color: inherit;
   font-size: inherit;
   text-decoration: none;
@@ -11,28 +11,29 @@
   align-items: flex-start;
 
   &__icon {
-    @extend %osg-margin-right-2;
+    @extend %osg-heading-3, %osg-margin-right-3;
   }
 
   &__content {
-    & .osg-untitled__heading {
-      @extend %osg-heading-4, %osg-margin-bottom-1;
+    & .osg-service-link__heading {
+      @extend %osg-heading-4;
       display: inline-block;
+      line-height: 1.9em !important;
     }
 
-    & .osg-untitled__text {
+    & .osg-service-link__text {
       @extend %osg-text-5;
     }
   }
 
   @include mixins.states {
-    .osg-untitled__content .osg-untitled__heading {
+    .osg-service-link__content .osg-service-link__heading {
       text-decoration: underline;
     }
   };
 
   &--external {
-    & .osg-untitled__content .osg-untitled__heading {
+    & .osg-service-link__content .osg-service-link__heading {
       @include mixins.icon-right("new-window");
     }
   }
