@@ -6,20 +6,4 @@
   @extend %osg-padding-horizontal-4-breakpoint-large;
   background-color: colors.$white;
   border-bottom: 1px solid colors.$grayscale-40;
-
-  .replace-in-html-with-helpers {
-    display: flex !important;
-    align-items: center;
-    justify-content: left;
-    height: 100%;
-  }
-
-  .replace-in-html-with-helpers {
-    display: flex !important;
-    align-items: center;
-    justify-content: right;
-    height: 100%;
-  }
 }
-
-

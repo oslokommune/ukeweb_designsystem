@@ -1,6 +1,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
+@use "system/breakpoints";
 
 .osg-banner {
   @extend %osg-padding-vertical-3, %osg-padding-vertical-5-breakpoint-medium;
@@ -19,9 +20,4 @@
   &--beige {
     background-color: colors.$beige;
   }
-
-  &__heading {
-    @extend %osg-heading-3;
-  }
-
 }
