@@ -3,25 +3,20 @@
 @use "system/spacing";
 
 .osg-memberlist {
-
   &__heading {
     @extend %osg-heading-2;
   }
-
   &__member {
-    @extend %osg-margin-bottom-2;
+    @extend %osg-padding-vertical-3;
+    border-bottom: 1px solid colors.$grayscale-20;
   }
-
   &__image {
 
   }
-
   &__name {
     @extend %osg-heading-5;
   }
-
   &__info {
 
   }
-
 }
