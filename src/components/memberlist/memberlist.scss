@@ -1,0 +1,27 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-memberlist {
+
+  &__heading {
+    @extend %osg-heading-2;
+  }
+
+  &__member {
+    @extend %osg-margin-bottom-2;
+  }
+
+  &__image {
+
+  }
+
+  &__name {
+    @extend %osg-heading-5;
+  }
+
+  &__info {
+
+  }
+
+}
