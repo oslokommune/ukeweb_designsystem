@@ -1,0 +1,81 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "system/state";
+
+.osg-card-untitled {
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      * {
+        @extend %osg-state-text-hover;
+      }
+
+      .osg-card-untitled__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    @extend %osg-padding-vertical-3, %osg-padding-horizontal-2;
+    background-color: colors.$gray-light;
+
+    @include breakpoints.medium {
+      padding: spacing.$space-4 spacing.$space-3 !important;
+    }
+
+    @include breakpoints.large {
+      padding: spacing.$space-4 !important;
+    }
+  }
+
+  &__heading {
+    @extend %osg-heading-5, %osg-margin-bottom-3;
+  }
+
+  &__text {
+    @extend %osg-text-5;
+  }
+
+  &__smalltext {
+    @extend %osg-text-7, %osg-margin-bottom-3;
+  }
+
+  &__actions {
+    @extend %osg-margin-top-4;
+  }
+
+  &__footer {
+    @extend %osg-padding-2;
+    @extend %osg-text-7;
+    background-color: colors.$gray;
+
+    @include breakpoints.medium {
+      padding: spacing.$space-2 spacing.$space-3 !important;
+    }
+
+    @include breakpoints.large {
+      padding: spacing.$space-2 spacing.$space-4 !important;
+    }
+  }
+
+  &--status {
+    border-left: 10px solid colors.$yellow;
+
+    &--red {
+      border-color: colors.$red;
+    }
+
+    &--blue {
+      border-color: colors.$blue;
+    }
+
+    &--green {
+      border-color: colors.$green;
+    }
+  }
+}

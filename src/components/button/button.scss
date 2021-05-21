@@ -85,7 +85,7 @@
 
     &.osg-button--text {
       background-color: colors.$gray-light !important;
-      border-color: colors.$gray-light;
+      border-color: colors.$gray-light !important;
       @extend %osg-state-text-hover;
     }
   }
@@ -147,7 +147,7 @@
    * Button with icon
    */
   .osg-icon {
-    line-height: 1em;
+    line-height: 1em !important;
     vertical-align: middle;
 
     &::before {

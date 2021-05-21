@@ -3,6 +3,8 @@
 @use "blockquote/blockquote";
 @use "breadcrumb/breadcrumb";
 @use "button/button";
+@use "cards/card/card";
+@use "cards/card_untitled/card_untitled";
 @use "content/content";
 @use "footer/footer";
 @use "grid/container/container";
@@ -10,6 +12,7 @@
 @use "header/header";
 @use "icon/icon";
 @use "image/image";
+@use "image_carousel/image_carousel";
 @use "infobox/infobox";
 @use "forms/input/input";
 @use "forms/textarea/textarea";
