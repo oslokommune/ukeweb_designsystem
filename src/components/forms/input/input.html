@@ -5,7 +5,9 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <input class="osg-input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text">
+        <div class="osg-input">
+          <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text">
+        </div>
       </div>
     </div>
   </div>
@@ -16,10 +18,12 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Label text
-          <input class="osg-input" type="text" autocomplete="on" placeholder="Input text">
-        </label>
+        <div class="osg-input">
+          <label class="osg-input__label">
+            Label text
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+          </label>
+        </div>
       </div>
     </div>
   </div>
@@ -30,36 +34,44 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Hover
-          <input class="osg-input osg-input--hover" type="text" autocomplete="on" placeholder="Input text">
-        </label>
+        <div class="osg-input osg-input--hover">
+          <label class="osg-input__label">
+            Hover
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Focus/active
-          <input class="osg-input osg-input--focus" type="text" autocomplete="on" placeholder="Input text">
-        </label>
+        <div class="osg-input osg-input--focus">
+          <label class="osg-input__label">
+            Focus/active
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label osg-label--disabled">
-          Disabled
-          <input class="osg-input" type="text" autocomplete="on" placeholder="Input text" disabled="disabled">
-        </label>
+        <div class="osg-input osg-input--disabled">
+          <label class="osg-input__label">
+            Disabled
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text" disabled="disabled">
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Error/invalid
-          <input class="osg-input osg-input--error" type="text" autocomplete="on" placeholder="Input text">
-          <span class="osg-icon osg-icon--exclamation-mark-circle" aria-label="Invalid value"></span>
-        </label>
-        <div class="osg-input__error-message" aria-live="polite">Error message</div>
+        <div class="osg-input osg-input--error">
+          <label class="osg-input__label">
+            Error/invalid
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+            <span class="osg-icon osg-icon--exclamation-mark-circle" aria-label="Invalid value"></span>
+          </label>
+          <div class="osg-input__error-message" aria-live="polite">Error message</div>
+        </div>
       </div>
     </div>
   </div>
@@ -70,17 +82,19 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Search
-          <input class="osg-input osg-input" type="search" autocomplete="on" placeholder="Search word">
-        </label>
+        <div class="osg-input osg-input--search">
+          <label class="osg-input__label">
+            Search
+            <input class="osg-input__input" type="search" autocomplete="on" placeholder="Search word">
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
         <label class="osg-label">
           Required text
-          <input class="osg-input osg-input" type="text" autocomplete="on" placeholder="Input text">
+          <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
         </label>
         <div class="osg-input__required">* Required</div>
       </div>
@@ -89,7 +103,7 @@
       <div class="osg-devtools-code">
         <label class="osg-label">
           Optional text
-          <input class="osg-input osg-input" type="text" autocomplete="on" placeholder="Input text">
+          <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
         </label>
         <div class="osg-input__required">(optional)</div>
       </div>
@@ -98,7 +112,7 @@
       <div class="osg-devtools-code">
         <label class="osg-label">
           Phone nr
-          <input class="osg-input osg-input" type="telf" autocomplete="on" placeholder="+47">
+          <input class="osg-input__input" type="telf" autocomplete="on" placeholder="+47">
         </label>
       </div>
     </div>
@@ -106,7 +120,7 @@
       <div class="osg-devtools-code">
         <label class="osg-label">
           E-mail
-          <input class="osg-input osg-input" type="email" autocomplete="on" placeholder="your@email.com">
+          <input class="osg-input__input" type="email" autocomplete="on" placeholder="your@email.com">
         </label>
       </div>
     </div>
@@ -114,7 +128,7 @@
       <div class="osg-devtools-code">
         <label class="osg-label">
           Counter
-          <input class="osg-input osg-input" type="number" placeholder="number" min="0" max="15">
+          <input class="osg-input__input" type="number" placeholder="number" min="0" max="15">
         </label>
       </div>
     </div>

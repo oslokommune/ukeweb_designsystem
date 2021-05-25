@@ -1,14 +1,15 @@
 @use "components/forms/input/mixins";
 
 .osg-textarea {
+  @include mixins.form-states;
+
   &::placeholder {
     color: inherit;
   }
 
   &__label {
     @include mixins.form-label;
-    @extend %osg-text-5;
-    font-weight: 500 !important;
+    @extend %osg-text-6;
   }
 
   &__textarea {
@@ -17,8 +18,8 @@
   }
 
   &__countdown-characters {
+    @extend %osg-text-7;
     display: block;
     text-align: right;
-    @extend %osg-text-7;
   }
 }

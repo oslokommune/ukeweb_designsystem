@@ -3,55 +3,47 @@
 @use "mixins";
 
 .osg-input {
-  @include mixins.form-component;
+  @include mixins.form-states;
 
-  &::placeholder {
-    color: inherit;
+  &__input {
+    @include mixins.form-component;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    &[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      background: url(../../../assets/icons/cross-circle.svg) no-repeat;
+      background-size: contain;
+      height: 1.125rem;
+      margin-right: -5px;
+      opacity: 0;
+      pointer-events: none;
+      width: 1.125rem;
+    }
+
+    &[type="search"]:focus::-webkit-search-cancel-button {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 
-  &--error {
-    border: 2px solid colors.$red;
+  &__label {
+    @include mixins.form-label;
   }
 
   &__error-message {
     background: rgba(255, 130, 116, 0.6);
     margin-top: spacing.$space-2;
     padding: spacing.$space-3;
-    font-weight: 300 !important;
-
-    @extend %osg-text-6;
+    @extend %osg-text-7;
   }
 
   &__required {
     height: 1.625rem;
     margin-top: spacing.$space-1;
     padding: 0;
-
     @extend %osg-text-7;
   }
-
-  &[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    background: url(../../../assets/icons/cross-circle.svg) no-repeat;
-    background-size: contain;
-    height: 1.125rem;
-    margin-right: -5px;
-    opacity: 0;
-    pointer-events: none;
-    width: 1.125rem;
-  }
-
-  &[type="search"]:focus::-webkit-search-cancel-button {
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
-.osg-label {
-  @include mixins.form-label;
-}
-
-.osg-label {
-  @extend %osg-text-5;
-  font-weight: 500 !important;
 }
