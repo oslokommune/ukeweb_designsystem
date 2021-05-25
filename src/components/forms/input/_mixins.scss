@@ -4,9 +4,10 @@
 @use "system/state";
 
 @mixin form-states() {
-  &--hover &__input,
-  &--hover &__textarea,
-  &--hover &__select select {
+  &--hover &__input, &__input:hover,
+  &--hover &__textarea, &__textarea:hover
+  &--hover &__select select, &__select select:hover,
+  &--error &__input:hover, &--error &__textarea:hover, &--error &__select select:hover {
     border-color: colors.$blue-contrast;
   }
 
