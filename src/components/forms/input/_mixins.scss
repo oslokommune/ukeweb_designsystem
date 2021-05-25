@@ -64,4 +64,8 @@
   display: block;
   font: inherit;
   position: relative;
+
+  &--disabled {
+    color: colors.$grayscale-40;
+  }
 }
