@@ -2,7 +2,7 @@
 @use "system/spacing";
 @use "mixins";
 
-.osg-input-field {
+.osg-input {
   @include mixins.form-component;
 
   &::placeholder {
@@ -11,10 +11,6 @@
 
   &--error {
     border: 2px solid colors.$red;
-
-    &:focus:enabled {
-      border: 4px solid colors.$red;
-    }
   }
 
   &__error-message {
@@ -49,4 +45,13 @@
     opacity: 1;
     pointer-events: all;
   }
+}
+
+.osg-label {
+  @include mixins.form-label;
+}
+
+.osg-label {
+  @extend %osg-text-5;
+  font-weight: 500 !important;
 }
