@@ -73,18 +73,16 @@
   &--critical {
     .osg-alert__status .osg-alert__symbol {
       &:after {
-        border-radius: 50%;
-        content: "";
-        display: inline-block;
-      }
-      &:after {
         animation: alert-critical-pulse 2s infinite;
         background-color: colors.$red;
+        border-radius: 50%;
         box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
+        content: "";
+        display: inline-block;
         height: 12px;
-        width: 12px;
         margin-right: 9px;
         margin-top: 9px;
+        width: 12px;
       }
     }
   }

@@ -5,7 +5,6 @@
 @use "system/state";
 
 .osg-card-untitled {
-
   &__link {
     text-decoration: none;
 
@@ -53,6 +52,7 @@
     @extend %osg-padding-2;
     @extend %osg-text-7;
     background-color: colors.$gray;
+    flex-basis: 100%;
 
     @include breakpoints.medium {
       padding: spacing.$space-2 spacing.$space-3 !important;
@@ -63,19 +63,63 @@
     }
   }
 
+  &__status {
+    @extend %osg-margin-left-3;
+
+    .osg-icon {
+      line-height: 1em !important;
+      font-size: fonts.$size-26;
+    }
+  }
+
+  &__symbol {
+    &:after {
+      animation: card-untitled-red-pulse 2s infinite;
+      background-color: colors.$red;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
+      content: "";
+      display: inline-block;
+      height: 12px;
+      margin-right: 9px;
+      margin-top: 9px;
+      width: 12px;
+    }
+  }
+
   &--status {
     border-left: 10px solid colors.$yellow;
 
     &--red {
       border-color: colors.$red;
+
+      & .osg-card-untitled__content {
+        display: flex;
+      }
     }
 
     &--blue {
       border-color: colors.$blue;
+
+      & .osg-card-untitled__content {
+        display: flex;
+      }
     }
 
     &--green {
       border-color: colors.$green;
     }
+  }
+}
+
+@keyframes card-untitled-red-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
+  }
+  80% {
+    box-shadow: 0 0 0 10px rgba(colors.$red, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(colors.$red, 0);
   }
 }
