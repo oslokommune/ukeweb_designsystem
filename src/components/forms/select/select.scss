@@ -4,25 +4,32 @@
 @use "components/forms/input/mixins";
 
 .osg-select {
+  @include mixins.form-states;
   position: relative;
 
-  &:after {
-    color: inherit;
-    content: map-get(icons.$icons, "chevron-thin-down");
-    font-family: 'Oslo Icons';
-    font-size: 32px;
-    pointer-events: none;
-    position: absolute;
-    right: 14px;
-    top: 32px;
-    transform: translateY(-50%);
+  &__label {
+    @include mixins.form-label;
   }
 
   &__select {
-    @include mixins.form-component;
-    @include mixins.form-states;
+    position: relative;
 
-    cursor: pointer;
-    padding-right: spacing.$space-5;
+    & select {
+      @include mixins.form-component;
+      cursor: pointer;
+      padding-right: spacing.$space-5;
+    }
+
+    &:after {
+      color: inherit;
+      content: map-get(icons.$icons, "chevron-thin-down");
+      font-family: 'Oslo Icons';
+      font-size: 32px;
+      pointer-events: none;
+      position: absolute;
+      right: 14px;
+      top: 32px;
+      transform: translateY(-50%);
+    }
   }
 }

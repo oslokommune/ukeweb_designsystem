@@ -5,25 +5,28 @@
 
 @mixin form-states() {
   &--hover &__input,
-  &--hover &__textarea {
+  &--hover &__textarea,
+  &--hover &__select select {
     border-color: colors.$blue-contrast;
   }
 
-  &__input:focus, &__textarea:focus,
-  &--error &__input:focus, &--error &__textarea:focus,
-  &--focus &__input, &--focus &__textarea {
+  &__input:focus, &__textarea:focus, &__select select:focus,
+  &--error &__input:focus, &--error &__textarea:focus, &--error &__select select:focus,
+  &--focus &__input, &--focus &__textarea, &--focus &__select select {
     border: 4px solid colors.$blue-contrast;
     padding: .5rem .813rem;
   }
 
   &--error &__input,
-  &--error &__textarea {
+  &--error &__textarea,
+  &--error &__select select {
     border: 2px solid colors.$red;
   }
 
   &:disabled,
   &--disabled &__input, &--disabled &__textarea,
-  &--disabled &__label {
+  &--disabled &__label,
+  &--disabled &__select select {
     border-color: colors.$grayscale-40;
     color: colors.$grayscale-40;
 

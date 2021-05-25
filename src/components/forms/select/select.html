@@ -6,10 +6,12 @@
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
         <div class="osg-select">
-          <select class="osg-select__select" aria-label="Select an option">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-          </select>
+          <div class="osg-select__select">
+            <select aria-label="Select an option">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -21,15 +23,17 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Label select
-          <div class="osg-select">
-            <select class="osg-select__select">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-        </label>
+        <div class="osg-select">
+          <label class="osg-select__label">
+            Label select
+            <div class="osg-select__select">
+              <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
     </div>
   </div>
@@ -40,54 +44,62 @@
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Hover
-          <div class="osg-select">
-            <select class="osg-select__select osg-select__select--hover">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-        </label>
+        <div class="osg-select osg-select--hover">
+          <label class="osg-select__label">
+            Hover
+            <div class="osg-select__select">
+              <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Focus/active
-          <div class="osg-select">
-            <select class="osg-select__select osg-select__select--focus">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-        </label>
+        <div class="osg-select osg-select--focus">
+          <label class="osg-select__label">
+            Focus/active
+            <div class="osg-select__select">
+              <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label osg-label--disabled">
-          Disabled
-          <div class="osg-select osg-select--disabled">
-            <select class="osg-select__select" disabled="disabled">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-        </label>
+        <div class="osg-select osg-select--disabled">
+          <label class="osg-select__label">
+            Disabled
+            <div class="osg-select__select">
+              <select disabled="disabled">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4">
       <div class="osg-devtools-code">
-        <label class="osg-label">
-          Error/invalid
-          <div class="osg-select">
-            <select class="osg-select__select osg-select__select--error">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-            </select>
-          </div>
-        </label>
+        <div class="osg-select osg-select--error">
+          <label class="osg-select__label">
+            Error/invalid
+            <div class="osg-select__select">
+              <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </label>
+        </div>
       </div>
   </div>
 </div>
