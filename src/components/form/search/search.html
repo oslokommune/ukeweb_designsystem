@@ -6,10 +6,10 @@
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
         <div class="osg-search">
-          <div class="osg-search__form">
+          <form action="" method="GET" class="osg-search__form">
             <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" />
-            <button class="osg-search__button"><span class="osg-sr-only">Search</span></button>
-          </div>
+            <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+          </form>
         </div>
       </div>
     </div>
@@ -19,10 +19,10 @@
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
         <div class="osg-search osg-search--circle">
-          <div class="osg-search__form">
+          <form action="" method="GET" class="osg-search__form">
             <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" />
-            <button class="osg-search__button"><span class="osg-sr-only">Search</span></button>
-          </div>
+            <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+          </form>
         </div>
       </div>
     </div>
@@ -42,6 +42,12 @@
       <h2 class="osg-heading-3">Dropdown</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
+      <label class="osg-switch osg-margin-bottom-3" aria-labelledby="on">
+        <input type="checkbox" class="osg-switch__input" id="components-form-search-dropdown" checked="checked">
+        <span class="osg-switch__background"></span>
+        <span class="osg-switch__slider"></span>
+        <span class="osg-switch__label-text">Dropdown</span>
+      </label>
       <div class="osg-devtools-code">
         <div class="osg-search osg-search--inline" role="combobox">
           <div class="osg-search__form">
