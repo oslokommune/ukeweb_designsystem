@@ -1,0 +1,111 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/fonts";
+@use "system/icons";
+@use "system/spacing";
+@use "system/state";
+
+.osg-search-untitled {
+  display: flex;
+
+  &__search {
+    background-color: colors.$yellow;
+    color: colors.$blue-dark;
+    flex: 1 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: calc(100% - 100px);
+  }
+
+  &__image {
+    @extend %osg-margin-left-4;
+    display: none;
+    flex: 1 0;
+    line-height: 0;
+
+    @include breakpoints.medium {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    @extend %osg-padding-3;
+    @extend %osg-text-3;
+    border: none;
+    border-radius: 0;
+    color: colors.$blue-dark;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+  }
+
+  &__button {
+    background-color: colors.$red;
+    border: 2px solid colors.$red;
+    border-radius: 50%;
+    cursor: pointer;
+
+    font-size: inherit;
+    padding: 0.35em .4725em;
+
+    &::after {
+      font-family: 'Oslo Icons' !important;
+      font-size: fonts.$size-30;
+      line-height: 1em;
+      content: map-get(icons.$icons, 'magnifying-glass-small') !important;
+    }
+
+    &:hover {
+      @extend %osg-state-hover;
+    }
+  }
+
+  &--red {
+    & .osg-search-untitled__search {
+      background-color: colors.$red;
+    }
+
+    & .osg-search-untitled__button {
+      background-color: colors.$yellow;
+    }
+  }
+
+  &--blue-dark {
+    & .osg-search-untitled__search {
+      background-color: colors.$blue-dark;
+      color: colors.$white;
+    }
+
+    & .osg-search-untitled__button {
+      background-color: colors.$blue-light;
+      border-color: colors.$blue-light;
+    }
+  }
+
+  &--green-dark {
+    & .osg-search-untitled__search {
+      background-color: colors.$green-dark;
+      color: colors.$white;
+    }
+
+    & .osg-search-untitled__button {
+      background-color: colors.$green-light;
+      border-color: colors.$green-light;
+    }
+  }
+}
