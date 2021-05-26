@@ -33,17 +33,14 @@
     @include mixins.form-label;
   }
 
-  &__error-message {
-    background: rgba(255, 130, 116, 0.6);
-    margin-top: spacing.$space-2;
-    padding: spacing.$space-3;
-    @extend %osg-text-7;
-  }
-
   &__required {
     height: 1.625rem;
     margin-top: spacing.$space-1;
     padding: 0;
     @extend %osg-text-7;
+  }
+
+  &__error-message {
+    @include mixins.error-message;
   }
 }

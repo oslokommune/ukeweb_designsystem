@@ -32,4 +32,8 @@
       transform: translateY(-50%);
     }
   }
+
+  &__error-message {
+    @include mixins.error-message;
+  }
 }

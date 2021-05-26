@@ -9,7 +9,6 @@
 
   &__label {
     @include mixins.form-label;
-    @extend %osg-text-6;
   }
 
   &__textarea {
@@ -21,5 +20,9 @@
     @extend %osg-text-7;
     display: block;
     text-align: right;
+  }
+
+  &__error-message {
+    @include mixins.error-message;
   }
 }
