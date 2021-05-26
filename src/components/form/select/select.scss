@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
-@use "components/forms/input/mixins";
+@use "components/form/input/mixins";
 
 .osg-select {
   @include mixins.form-states;

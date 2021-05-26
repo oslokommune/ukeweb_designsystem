@@ -88,13 +88,25 @@
   }
 
   &--status {
-    border-left: 10px solid colors.$yellow;
+    border-left: 10px solid colors.$gray;
+
+    &--yellow {
+      border-color: colors.$yellow;
+
+      & .osg-card-untitled__footer {
+        background-color: colors.$beige;
+      }
+    }
 
     &--red {
       border-color: colors.$red;
 
       & .osg-card-untitled__content {
         display: flex;
+      }
+
+      & .osg-card-untitled__footer {
+        background-color: colors.$red-light;
       }
     }
 
@@ -104,10 +116,22 @@
       & .osg-card-untitled__content {
         display: flex;
       }
+
+      & .osg-card-untitled__footer {
+        background-color: colors.$blue-light;
+      }
     }
 
     &--green {
       border-color: colors.$green;
+
+      & .osg-card-untitled__footer {
+        background-color: colors.$green-light;
+      }
+    }
+
+    &--no-bar {
+      border-left: none;
     }
   }
 }

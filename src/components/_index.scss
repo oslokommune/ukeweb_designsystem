@@ -14,9 +14,11 @@
 @use "image/image";
 @use "image_carousel/image_carousel";
 @use "infobox/infobox";
-@use "forms/input/input";
-@use "forms/textarea/textarea";
-@use "forms/select/select";
+@use "form/input/input";
+@use "form/search/search";
+@use "form/select/select";
+@use "form/switch/switch";
+@use "form/textarea/textarea";
 @use "links/link/link";
 @use "links/service_link/service_link";
 @use "list/list";
