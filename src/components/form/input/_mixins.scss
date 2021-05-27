@@ -4,7 +4,7 @@
 @use "system/state";
 
 @mixin error-message() {
-  background: rgba(255, 130, 116, 0.6);
+  background: colors.$red-light;
   margin-top: spacing.$space-2;
   padding: spacing.$space-3;
   @extend %osg-text-7;
