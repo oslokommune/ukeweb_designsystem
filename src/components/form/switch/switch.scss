@@ -1,3 +1,4 @@
+@use "components/form/input/mixins";
 @use "system/colors";
 @use "system/fonts";
 @use "system/icons";
@@ -57,7 +58,10 @@
     border: 2px solid colors.$red;
   }
 
-  &--error &__background,
+  &--error &__background {
+    background: colors.$red none repeat scroll 0 0 !important;
+  }
+
   &--error &__label-text,
   &--error &__slider {
     border-color: colors.$red;
@@ -97,6 +101,7 @@
     left: 43px;
     position: absolute;
     top: 0;
+    white-space: nowrap;
   }
 
   &__slider {
@@ -128,4 +133,8 @@
   }
 
   @include switch-states;
+}
+
+.osg-error-message {
+  @include mixins.error-message;
 }

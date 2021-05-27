@@ -1,0 +1,73 @@
+@use "components/form/input/mixins";
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-radio {
+  @extend %osg-text-5;
+  color: colors.$blue-dark;
+  display: flex;
+  margin-top: spacing.$space-2;
+
+  &:focus-within {
+    &__label {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    margin-left: spacing.$space-2;
+    line-height: 1;
+    transition: 180ms all ease-in-out;
+    opacity: 0.8;
+  }
+
+  &__input {
+    display: flex;
+
+    & input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:focus + &__control {
+        box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
+      }
+    }
+  }
+
+  & input + &__control::before {
+    content: "";
+    width: 0.4em;
+    height: 0.4em;
+    box-shadow: inset 0.5em 0.5em white;
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);
+  }
+
+  & input:checked + &__control::before {
+    transform: scale(1);
+  }
+
+  & input:checked + &__control {
+    background-color: colors.$blue-dark;
+  }
+
+  &__control {
+    align-items: center;
+    background-color: colors.$white;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    transform: translateY(-0.05em);
+    width: 1em;
+  }
+}
+
+.osg--error-message {
+  @include mixins.error-message;
+}
