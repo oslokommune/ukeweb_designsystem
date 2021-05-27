@@ -7,6 +7,7 @@
   @extend %osg-text-5;
   color: colors.$blue-dark;
   display: flex;
+  height: 1.125rem;
   margin-top: spacing.$space-2;
 
   &:focus-within {
@@ -24,6 +25,7 @@
   }
 
   &__input {
+    align-items: center;
     display: flex;
 
     & input {
@@ -55,6 +57,10 @@
     background-color: colors.$blue-dark;
   }
 
+  & input:checked ~ &__label {
+    @extend %osg-text-4;
+  }
+
   &__control {
     align-items: center;
     background-color: colors.$white;
@@ -65,6 +71,55 @@
     justify-content: center;
     transform: translateY(-0.05em);
     width: 1em;
+  }
+
+  &--hover, &:hover,
+  &--focus, &:focus {
+    & input:checked + .osg-radio__control {
+      background-color: colors.$blue-contrast;
+    }
+
+    .osg-radio__control {
+      border-color: colors.$blue-contrast;
+    }
+
+    .osg-radio__label {
+      color: colors.$blue-contrast;
+    }
+  }
+
+  &--focus, &:focus {
+    .osg-radio__label {
+      @extend %osg-text-4;
+    }
+  }
+
+  &--disabled, &--disabled:hover {
+    & input:disabled:checked + .osg-radio__control {
+      background-color: colors.$grayscale-40;
+    }
+
+    .osg-radio__control {
+      border-color: colors.$grayscale-40;
+    }
+
+    .osg-radio__label {
+      color: colors.$grayscale-40;
+    }
+  }
+
+  &--error {
+    & input:checked + .osg-radio__control {
+      background-color: colors.$red;
+    }
+
+    .osg-radio__control {
+      border-color: colors.$red;
+    }
+
+    .osg-radio__label {
+      color: colors.$red;
+    }
   }
 }
 
