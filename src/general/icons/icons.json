@@ -1,11 +1,6 @@
 {
   "devtools": {
     "preset": "clean",
-    "sections": {
-      "docs": {
-        "visible": true
-      }
-    },
     "tags": [
       "icon",
       "icons"

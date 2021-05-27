@@ -1,14 +1,9 @@
 {
   "devtools": {
     "preset": "clean",
-    "sections": {
-      "docs": {
-        "visible": true
-      }
-    },
     "tags": [
       "colors",
-      "palette"
+      "state"
     ]
   }
 }

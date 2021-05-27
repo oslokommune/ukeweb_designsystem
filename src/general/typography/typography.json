@@ -1,10 +1,5 @@
 {
   "devtools": {
-    "preset": "clean",
-    "sections": {
-      "docs": {
-        "visible": true
-      }
-    }
+    "preset": "clean"
   }
 }
