@@ -4,7 +4,7 @@
 @use "system/spacing";
 @use "system/state";
 
-.osg-card-untitled {
+.osg-status-card {
   &__link {
     text-decoration: none;
 
@@ -13,7 +13,7 @@
         @extend %osg-state-text-hover;
       }
 
-      .osg-card-untitled__heading {
+      .osg-status-card__heading {
         text-decoration: underline;
       }
     }
@@ -74,7 +74,7 @@
 
   &__symbol {
     &:after {
-      animation: card-untitled-red-pulse 2s infinite;
+      animation: status-card-red-pulse 2s infinite;
       background-color: colors.$red;
       border-radius: 50%;
       box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
@@ -93,7 +93,7 @@
     &--yellow {
       border-color: colors.$yellow;
 
-      & .osg-card-untitled__footer {
+      & .osg-status-card__footer {
         background-color: colors.$beige;
       }
     }
@@ -101,11 +101,11 @@
     &--red {
       border-color: colors.$red;
 
-      & .osg-card-untitled__content {
+      & .osg-status-card__content {
         display: flex;
       }
 
-      & .osg-card-untitled__footer {
+      & .osg-status-card__footer {
         background-color: colors.$red-light;
       }
     }
@@ -113,11 +113,11 @@
     &--blue {
       border-color: colors.$blue;
 
-      & .osg-card-untitled__content {
+      & .osg-status-card__content {
         display: flex;
       }
 
-      & .osg-card-untitled__footer {
+      & .osg-status-card__footer {
         background-color: colors.$blue-light;
       }
     }
@@ -125,7 +125,7 @@
     &--green {
       border-color: colors.$green;
 
-      & .osg-card-untitled__footer {
+      & .osg-status-card__footer {
         background-color: colors.$green-light;
       }
     }
@@ -136,7 +136,7 @@
   }
 }
 
-@keyframes card-untitled-red-pulse {
+@keyframes status-card-red-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
   }
