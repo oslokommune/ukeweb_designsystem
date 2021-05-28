@@ -1,0 +1,67 @@
+@use "system/colors";
+//@use "system/fonts";
+@use "system/spacing";
+@use "system/icons";
+
+.osg-pagination {
+  &__item {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    color: colors.$blue-dark;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    height: 2.25em;
+    width: 2.25em;
+    padding-top: 0.25em;
+
+    &:visited,
+    &:hover,
+    &:active {
+      color: colors.$blue-dark;
+      background-color: colors.$gray-light;
+      border-color: colors.$gray-light;
+    }
+
+    &--active {
+      cursor: default;
+      background-color: colors.$blue-dark !important;
+      border-color: colors.$blue-dark !important;
+      color: colors.$white !important;
+    }
+
+    &--next,
+    &--previous {
+      transform: rotate(270deg);
+      vertical-align: bottom;
+      &::before {
+        color: colors.$blue-dark;
+        display: inline-block;
+        font-size: 2em;
+        font-family: 'Oslo Icons';
+        //line-height: 1em;
+        content: map-get(icons.$icons, 'chevron-thin-up');
+      }
+    }
+
+    &--next {
+      transform: rotate(90deg);
+    }
+
+    &--disabled {
+      visibility: hidden;
+    }
+
+    &--spacer {
+      cursor: default;
+      transform: translateY(-0.25rem);
+
+      &:visited,
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+}
