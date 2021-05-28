@@ -48,6 +48,18 @@
     transform: scale(0);
   }
 
+  &__control {
+    align-items: center;
+    background-color: colors.$white;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    transform: translateY(-0.05em);
+    width: 1em;
+  }
+
   & input:checked + &__control::before {
     transform: scale(1);
   }
@@ -61,28 +73,14 @@
     line-height: 1 !important;
   }
 
-  &__control {
-    align-items: center;
-    background-color: colors.$white;
-    border: 0.15em solid currentColor;
-    border-radius: 50%;
-    display: flex;
-    height: 1em;
-    justify-content: center;
-    transform: translateY(-0.05em);
-    width: 1em;
-  }
-
   &--hover, &:hover,
   &--focus, &:focus {
     & input:checked + .osg-radio__control {
       background-color: colors.$blue-contrast;
     }
-
     .osg-radio__control {
       border-color: colors.$blue-contrast;
     }
-
     .osg-radio__label {
       color: colors.$blue-contrast;
     }
@@ -99,11 +97,9 @@
     & input:disabled:checked + .osg-radio__control {
       background-color: colors.$grayscale-40;
     }
-
     .osg-radio__control {
       border-color: colors.$grayscale-40;
     }
-
     .osg-radio__label {
       color: colors.$grayscale-40;
     }
@@ -113,11 +109,9 @@
     & input:checked + .osg-radio__control {
       background-color: colors.$red;
     }
-
     .osg-radio__control {
       border-color: colors.$red;
     }
-
     .osg-radio__label {
       color: colors.$red;
     }
