@@ -10,6 +10,7 @@
   color: inherit;
   cursor: pointer;
   display: flex;
+  margin-bottom: spacing.$space-2;
 
   &:focus-within {
     color: colors.$blue-contrast;
@@ -130,4 +131,8 @@
       border: colors.$blue-contrast;
     }
   }
+}
+
+.osg-fieldset {
+  @include mixins.fieldset;
 }

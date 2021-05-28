@@ -4,11 +4,11 @@
 @use "system/spacing";
 @use "system/state";
 
-$osg-card-image-height-small: 200px;
-$osg-card-image-height-medium: 230px;
-$osg-card-image-height-large: 290px;
+$osg-card-portrait-image-height-small: 200px;
+$osg-card-portrait-image-height-medium: 230px;
+$osg-card-portrait-image-height-large: 290px;
 
-.osg-card {
+.osg-card-portrait {
   &__link {
     text-decoration: none;
 
@@ -17,7 +17,7 @@ $osg-card-image-height-large: 290px;
         @extend %osg-state-text-hover;
       }
 
-      .osg-card__heading {
+      .osg-card-portrait__heading {
         text-decoration: underline;
       }
     }
@@ -26,17 +26,17 @@ $osg-card-image-height-large: 290px;
   &__media {
     img {
       display: block;
-      height: $osg-card-image-height-small;
+      height: $osg-card-portrait-image-height-small;
       line-height: 0;
       object-fit: cover;
       width: 100%;
 
       @include breakpoints.medium {
-        height: $osg-card-image-height-medium;
+        height: $osg-card-portrait-image-height-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-card-image-height-large;
+        height: $osg-card-portrait-image-height-large;
       }
     }
   }
@@ -82,7 +82,7 @@ $osg-card-image-height-large: 290px;
   }
 
   &--actions {
-    & .osg-card__content {
+    & .osg-card-portrait__content {
       @include breakpoints.medium {
         padding: spacing.$space-4 spacing.$space-3 spacing.$space-3 spacing.$space-3 !important;
       }
@@ -94,14 +94,14 @@ $osg-card-image-height-large: 290px;
   }
 
   &--white {
-    & .osg-card__content,
-    & .osg-card__actions {
+    & .osg-card-portrait__content,
+    & .osg-card-portrait__actions {
       @extend %osg-color-bg-white;
     }
   }
 
   &--xs {
-    & .osg-card__content {
+    & .osg-card-portrait__content {
       @include breakpoints.medium {
         padding: spacing.$space-3 !important;
       }
@@ -111,19 +111,19 @@ $osg-card-image-height-large: 290px;
       }
     }
 
-    & .osg-card__heading {
+    & .osg-card-portrait__heading {
       @extend %osg-heading-5;
     }
 
-    & .osg-card__text {
+    & .osg-card-portrait__text {
       font-size: fonts.$size-16 !important;
     }
 
-    & .osg-card__published {
+    & .osg-card-portrait__published {
       @extend %osg-margin-top-3;
     }
 
-    & .osg-card__media {
+    & .osg-card-portrait__media {
       img {
         @include breakpoints.large {
           height: 213px;
