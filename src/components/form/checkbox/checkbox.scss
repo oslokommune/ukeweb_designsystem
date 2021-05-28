@@ -9,7 +9,7 @@
   align-items: center;
   color: inherit;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
 
   &:focus-within {
     color: colors.$blue-contrast;
@@ -49,8 +49,8 @@
 
   &:hover span,
   &--hover span{
-    border-color: colors.$blue-contrast;
-    color: colors.$blue-contrast;
+    border-color: colors.$blue-contrast !important;
+    color: colors.$blue-contrast !important;
   }
 
   &--error-message {
@@ -66,7 +66,7 @@
 
   & input:focus ~ &__text,
   &--focus &__text {
-    color: colors.$blue-contrast;
+    color: colors.$blue-contrast !important;
     @extend %osg-text-4;
   }
 

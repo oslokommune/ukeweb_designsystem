@@ -7,7 +7,7 @@
   counter-reset: orderedlist;
 
   &__item {
-    @extend %osg-margin-bottom-3;
+    @extend %osg-margin-bottom-4;
   }
 
   &__item::before {
