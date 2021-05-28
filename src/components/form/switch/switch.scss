@@ -2,6 +2,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/icons";
+@use "system/spacing";
 
 @mixin switch-states() {
   &:hover, &--hover {
@@ -54,11 +55,15 @@
     color: colors.$grayscale-40;
   }
 
+  &__input:disabled:checked ~ &__background {
+    background: colors.$grayscale-40 none repeat scroll 0 0;
+  }
+
   &--error {
     border: 2px solid colors.$red;
   }
 
-  &--error &__background {
+  &--error .osg-switch__input:checked ~ .osg-switch__background {
     background: colors.$red none repeat scroll 0 0 !important;
   }
 
@@ -74,11 +79,11 @@
   border-radius: 18px;
   border: 2px solid colors.$blue-dark;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-weight: 500;
   height: 27px;
+  margin-bottom: spacing.$space-2;
   position: relative;
-  vertical-align: top;
   width: 41px;
 
   &__input {
