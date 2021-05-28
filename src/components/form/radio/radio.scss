@@ -25,7 +25,6 @@
   }
 
   &__input {
-    align-items: center;
     display: flex;
 
     & input {
@@ -59,6 +58,7 @@
 
   & input:checked ~ &__label {
     @extend %osg-text-4;
+    line-height: 1 !important;
   }
 
   &__control {
@@ -91,6 +91,7 @@
   &--focus, &:focus {
     .osg-radio__label {
       @extend %osg-text-4;
+      line-height: 1 !important;
     }
   }
 
