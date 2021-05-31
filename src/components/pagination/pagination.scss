@@ -1,10 +1,14 @@
 @use "system/colors";
-//@use "system/fonts";
+@use "system/fonts";
 @use "system/spacing";
 @use "system/icons";
 
 .osg-pagination {
   &__item {
+
+    @extend %osg-text-5;
+
+
     border: 2px solid transparent;
     border-radius: 50%;
     color: colors.$blue-dark;
@@ -13,14 +17,18 @@
     text-decoration: none;
     height: 2.25em;
     width: 2.25em;
-    padding-top: 0.25em;
+    padding: 0.25em 0 0 0;
+    font-family: inherit;
+    background: none;
+    cursor: pointer;
+    margin: 0;
 
     &:visited,
     &:hover,
     &:active {
       color: colors.$blue-dark;
-      background-color: colors.$gray-light;
-      border-color: colors.$gray-light;
+      background-color: colors.$gray;
+      border-color: colors.$gray;
     }
 
     &--active {
@@ -48,8 +56,8 @@
       transform: rotate(90deg);
     }
 
-    &--disabled {
-      visibility: hidden;
+    &--hidden {
+      display: none;
     }
 
     &--spacer {
@@ -65,3 +73,14 @@
     }
   }
 }
+
+/*
+32x28
+4px top
+lh 24
+
+32x28
+4px top
+
+lh: normal
+*/
