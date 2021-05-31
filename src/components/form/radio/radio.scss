@@ -32,7 +32,7 @@
       width: 0;
       height: 0;
 
-      &:focus + &__control {
+      &:focus + &.osg-radio__control {
         box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
       }
     }
@@ -71,6 +71,11 @@
   & input:checked ~ &__label {
     @extend %osg-text-4;
     line-height: 1 !important;
+  }
+
+  & input:focus ~ .osg-radio__control {
+    outline: initial;
+    outline-style: auto;
   }
 
   &--hover, &:hover,

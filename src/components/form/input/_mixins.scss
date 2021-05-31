@@ -32,6 +32,8 @@
   &--error &__input:focus, &--error &__textarea:focus, &--error &__select select:focus,
   &--focus &__input, &--focus &__textarea, &--focus &__select select {
     border: 4px solid colors.$blue-contrast;
+    outline: initial;
+    outline-style: auto;
     padding: .5rem .813rem;
   }
 
