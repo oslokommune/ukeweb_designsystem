@@ -1,11 +1,35 @@
-.osg-typography-header-align {
-  height: 51px;
-  display: table-cell;
-  vertical-align: bottom;
+@use "system/fonts";
+
+// generating font weight classes
+@each $name, $size in fonts.$weights {
+  .osg-text-#{$name} {
+    @extend %osg-text-#{$name};
+  }
 }
 
-.osg-typography-text-align {
-  height: 36px;
-  display: table-cell;
-  vertical-align: bottom;
+// italic font class
+.osg-text-italic {
+  @extend %osg-text-italic;
 }
+
+// generating font classes for headers
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in fonts.$header-sizes {
+  .osg-heading-#{$name} {
+    @extend %osg-heading-#{$name};
+  }
+}
+
+// generating typography classes for other text
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in fonts.$text-sizes {
+  .osg-text-#{$name} {
+    @extend %osg-text-#{$name};
+  }
+}
+
+// generating text align classes
+@each $name in fonts.$alignments {
+  .osg-text-#{$name} {
+    @extend %osg-text-#{$name};
+  }
+}
+
