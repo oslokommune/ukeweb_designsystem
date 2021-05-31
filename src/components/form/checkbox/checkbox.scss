@@ -71,6 +71,11 @@
     @extend %osg-text-4;
   }
 
+  & input:focus + &__checkmark {
+    outline: initial;
+    outline-style: auto;
+  }
+
   & input:checked ~ &__checkmark:after,
   &--checked ~ &__checkmark:after {
     display: block;
