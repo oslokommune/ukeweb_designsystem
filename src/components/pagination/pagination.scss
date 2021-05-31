@@ -5,10 +5,7 @@
 
 .osg-pagination {
   &__item {
-
     @extend %osg-text-5;
-
-
     border: 2px solid transparent;
     border-radius: 50%;
     color: colors.$blue-dark;
@@ -17,11 +14,10 @@
     text-decoration: none;
     height: 2.25em;
     width: 2.25em;
-    padding: 0.25em 0 0 0;
+    line-height: 2.15em !important;
     font-family: inherit;
     background: none;
     cursor: pointer;
-    margin: 0;
 
     &:visited,
     &:hover,
@@ -47,8 +43,9 @@
         display: inline-block;
         font-size: 2em;
         font-family: 'Oslo Icons';
-        //line-height: 1em;
         content: map-get(icons.$icons, 'chevron-thin-up');
+        //height: inherit;
+        //width: inherit;
       }
     }
 
@@ -73,14 +70,3 @@
     }
   }
 }
-
-/*
-32x28
-4px top
-lh 24
-
-32x28
-4px top
-
-lh: normal
-*/
