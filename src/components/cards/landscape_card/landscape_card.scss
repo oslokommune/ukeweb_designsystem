@@ -1,3 +1,77 @@
-.osg-landscape-card {
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+@use "system/state";
 
+$osg-landscape-card-image-height-small: 200px;
+$osg-landscape-card-image-height-medium: 230px;
+$osg-landscape-card-image-height-large: 290px;
+
+.osg-landscape-card {
+  &__link {
+    display: flex;
+    text-decoration: none;
+
+    &:hover {
+      * {
+        @extend %osg-state-text-hover;
+      }
+
+      .osg-landscape-card__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__media {
+    img {
+      display: block;
+      height: $osg-landscape-card-image-height-small;
+      line-height: 0;
+      object-fit: cover;
+      width: 100%;
+
+      @include breakpoints.medium {
+        height: $osg-landscape-card-image-height-medium;
+      }
+
+      @include breakpoints.large {
+        height: $osg-landscape-card-image-height-large;
+      }
+    }
+  }
+
+  &__content {
+    @extend %osg-padding-horizontal-2;
+    @extend %osg-padding-vertical-3;
+    @extend %osg-color-bg-gray-light;
+
+    @include breakpoints.medium {
+      padding: spacing.$space-4 spacing.$space-3 !important;
+    }
+
+    @include breakpoints.large {
+      padding: spacing.$space-4 !important;
+    }
+  }
+
+  &__heading {
+    @extend %osg-heading-4, %osg-margin-bottom-1;
+  }
+
+  &__text {
+    @extend %osg-text-5;
+  }
+
+  &__published {
+    @extend %osg-text-7, %osg-margin-top-4;
+  }
+
+  &--white {
+    & .osg-landscape-card__content,
+    & .osg-landscape-card__actions {
+      @extend %osg-color-bg-white;
+    }
+  }
 }
