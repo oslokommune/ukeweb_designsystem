@@ -4,16 +4,17 @@
 @use "system/state";
 
 .osg-button {
-  color: colors.$white;
+  @extend %osg-text-5;
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
-  padding: .625rem .9375rem;
-  text-decoration: none;
+  color: colors.$white;
   cursor: pointer;
   display: inline-block;
-
-  @extend %osg-text-5;
+  font-family: inherit;
   font-weight: 500 !important;
+  padding: .625rem .9375rem;
+  text-decoration: none;
+
 
   /**
    * Button sizes

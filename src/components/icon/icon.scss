@@ -1,7 +1,26 @@
+@use "system/spacing";
+
 .osg-icon {
   display: inline-block;
   font-family: 'Oslo Icons';
   font-size: inherit;
   font-style: normal;
   line-height: 1em;
+
+  &--space-left {
+    @extend %osg-margin-left-2;
+  }
+
+  &--space-right {
+    @extend %osg-margin-right-2;
+  }
+
+  &--space-both {
+    @extend %osg-margin-horizontal-2;
+  }
+
+  &--paragraph {
+    line-height: 1.7em;
+    vertical-align: bottom;
+  }
 }
