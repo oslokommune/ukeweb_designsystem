@@ -95,9 +95,9 @@
         <div class="osg-input">
           <label class="osg-input__label">
             Required text
-            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-1">
           </label>
-          <div class="osg-input__required">* Required</div>
+          <div class="osg-input__required" id="required-1">* Required</div>
         </div>
       </div>
     </div>
@@ -106,10 +106,10 @@
         <div class="osg-input">
           <label class="osg-input__label">
             Optional text
-            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+            <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="optional-1">
           </label>
         </div>
-        <div class="osg-input__required">(optional)</div>
+        <div class="osg-input__required" id="optional-1">(optional)</div>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--4-breakpoint-medium">
