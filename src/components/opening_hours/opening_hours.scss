@@ -1,0 +1,44 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+
+.osg-opening-hours {
+  @extend %osg-padding-4;
+
+  &--with-border {
+    border: 1px solid colors.$yellow;
+  }
+
+  &__heading {
+    @extend %osg-heading-3;
+    @extend %osg-margin-bottom-3;
+  }
+
+  &__navigation {
+    @extend %osg-margin-bottom-3;
+
+  }
+
+  &__exceptions,
+  &__comment {
+    @extend %osg-margin-top-3;
+  }
+
+  &__exception-indicator {
+    @extend %osg-margin-left-1;
+  }
+
+  &__day {
+    &--today {
+      @extend %osg-text-medium;
+    }
+    &--past {
+      @extend %osg-color-text-grayscale-70;
+    }
+  }
+
+  &__time-separator {
+    @extend %osg-margin-horizontal-1;
+  }
+}
