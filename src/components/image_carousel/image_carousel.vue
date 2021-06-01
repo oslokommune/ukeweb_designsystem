@@ -19,10 +19,10 @@
       </div>
 
       <div class="osg-carousel__navigation">
-        <a class="osg-button osg-button--circle osg-button--large" :class="navigationArrowColor" @click="goToPrev">
+        <a class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
           <span class="osg-icon osg-icon--chevron-left"></span>
         </a>
-        <a class="osg-button osg-button--circle osg-button--large" :class="navigationArrowColor" @click="goToNext">
+        <a class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
           <span class="osg-icon osg-icon--chevron-right"></span>
         </a>
       </div>
@@ -78,11 +78,6 @@ export default {
     images: {
       type: Array,
       required: true
-    },
-
-    navigationArrowColor: {
-      type: String,
-      default: 'osg-button--yellow'
     }
   },
 

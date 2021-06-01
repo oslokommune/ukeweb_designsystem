@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let check = document.getElementById('components-form-search-untitled-dropdown');
+  let check = document.getElementById('components-form-search-seasons-dropdown');
   if (check) {
     check.addEventListener('change', function () {
-      let dropdowns = document.querySelectorAll('.osg-search-untitled__dropdown');
+      let dropdowns = document.querySelectorAll('.osg-search-seasons__dropdown');
       dropdowns.forEach((dropdown) => {
         if (this.checked) {
           dropdown.style.display = 'block';
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    let dropdowns = document.querySelectorAll('.osg-search-untitled__dropdown');
+    let dropdowns = document.querySelectorAll('.osg-search-seasons__dropdown');
     dropdowns.forEach((dropdown) => {
       if (this.checked) {
         dropdown.style.display = 'block';

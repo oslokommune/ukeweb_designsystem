@@ -5,7 +5,7 @@
 @use "system/spacing";
 @use "system/state";
 
-.osg-search-untitled {
+.osg-search-seasons {
   display: flex;
 
   &__main {
@@ -138,27 +138,27 @@
   }
 
   &--red {
-    & .osg-search-untitled__main {
+    & .osg-search-seasons__main {
       background-color: colors.$red;
     }
 
-    & .osg-search-untitled__button {
+    & .osg-search-seasons__button {
       background-color: colors.$yellow;
     }
   }
 
   &--blue-dark {
-    & .osg-search-untitled__main {
+    & .osg-search-seasons__main {
       background-color: colors.$blue-dark;
       color: colors.$white;
     }
 
-    & .osg-search-untitled__button {
+    & .osg-search-seasons__button {
       background-color: colors.$blue-light;
       border-color: colors.$blue-light;
     }
 
-    & .osg-search-untitled__input {
+    & .osg-search-seasons__input {
       &:hover,
       &:focus {
         border-color: colors.$blue-light !important;
@@ -167,17 +167,17 @@
   }
 
   &--green-dark {
-    & .osg-search-untitled__main {
+    & .osg-search-seasons__main {
       background-color: colors.$green-dark;
       color: colors.$white;
     }
 
-    & .osg-search-untitled__button {
+    & .osg-search-seasons__button {
       background-color: colors.$green-light;
       border-color: colors.$green-light;
     }
 
-    & .osg-search-untitled__input {
+    & .osg-search-seasons__input {
       &:hover,
       &:focus {
         border-color: colors.$blue-light !important;
