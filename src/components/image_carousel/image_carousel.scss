@@ -1,4 +1,5 @@
 @use "system/breakpoints";
+@use "system/fonts";
 @use "system/spacing";
 
 $osg-carousel-image-height-small: 290;
@@ -58,12 +59,20 @@ $osg-carousel-image-height-large: 725;
 
     > * {
       @extend %osg-margin-horizontal-4-breakpoint-medium;
+
+      @include breakpoints.large {
+        padding: 1rem;
+
+        & .osg-icon {
+          font-size: fonts.$size-30;
+        }
+      }
     }
   }
 
   &__info {
     padding: 0 spacing.$space-3;
-    @include breakpoints.medium {
+    @include breakpoints.large {
       padding: 0;
     }
   }
