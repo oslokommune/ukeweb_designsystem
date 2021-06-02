@@ -45,24 +45,34 @@
       <h2 class="osg-heading-3">Dropdown</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <label class="osg-switch osg-margin-bottom-3" aria-labelledby="on">
+      <label class="osg-switch osg-margin-bottom-3" aria-labelledby="dropdown-text">
         <input type="checkbox" class="osg-switch__input" id="components-form-search-dropdown" checked="checked">
         <span class="osg-switch__background"></span>
         <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text">Dropdown</span>
+        <span class="osg-switch__label-text" id="dropdown-text">Dropdown</span>
       </label>
       <div class="osg-devtools-code">
-        <div class="osg-search osg-search--inline" role="combobox">
-          <div class="osg-search__form">
-            <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
+        <div class="osg-search osg-search--inline">
+          <div
+            class="osg-search__form"
+            id="osg-search__form"
+            aria-expanded="true"
+            role="combobox"
+            aria-haspopup="listbox"
+            aria-owns="id-results">
+            <input
+              class="osg-search__input"
+              type="search"
+              autocomplete="off"
+              placeholder="Search"
               aria-label="Search" />
           </div>
-          <ol class="osg-search__dropdown" role="listbox">
-            <li><a href="javascript:void(0)" osg-search__dropdown__item">Item A</a></li>
-            <li><a href="javascript:void(0)" osg-search__dropdown__item">Item B</a></li>
-            <li><a href="javascript:void(0)" osg-search__dropdown__item">Item C</a></li>
-            <li><a href="javascript:void(0)" osg-search__dropdown__item">Item D</a></li>
-          </ol>
+          <ul class="osg-search__dropdown" role="listbox" id="id-results">
+            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item A</a></li>
+            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item B</a></li>
+            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item C</a></li>
+            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item D</a></li>
+          </ul>
         </div>
       </div>
       <p class="osg-text-5 osg-margin-top-3">
