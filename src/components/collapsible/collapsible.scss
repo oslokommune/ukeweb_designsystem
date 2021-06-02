@@ -1,0 +1,21 @@
+.osg-collapsible {
+  visibility: visible;
+
+  &--collapsed {
+    margin: 0 !important;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 !important;
+    visibility: hidden;
+  }
+
+  &--ease {
+    transition: opacity 0.3s ease-in;
+    transform: translateZ(0);
+    opacity: 1;
+
+    &.osg-collapsible--collapsed {
+      opacity: 0;
+    }
+  }
+}
