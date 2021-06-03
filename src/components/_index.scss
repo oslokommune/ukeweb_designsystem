@@ -6,6 +6,7 @@
 @use "cards/landscape_card/landscape_card";
 @use "cards/portrait_card/portrait_card";
 @use "cards/status_card/status_card";
+@use "collapsible/collapsible";
 @use "content/content";
 @use "footer/footer";
 @use "grid/container/container";
@@ -16,6 +17,7 @@
 @use "image_carousel/image_carousel";
 @use "infobox/infobox";
 @use "form/checkbox/checkbox";
+@use "form/fieldset/fieldset";
 @use "form/input/input";
 @use "form/radio/radio";
 @use "form/search/search";

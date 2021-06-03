@@ -3,22 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (check) {
     check.addEventListener('change', function () {
       let dropdowns = document.querySelectorAll('.osg-search-seasons__dropdown');
-      dropdowns.forEach((dropdown) => {
-        if (this.checked) {
-          dropdown.style.display = 'block';
-        } else {
-          dropdown.style.display = 'none';
-        }
-      });
-    });
+      let searchForms = document.querySelectorAll('.osg-search-seasons__input-wrapper');
 
-    let dropdowns = document.querySelectorAll('.osg-search-seasons__dropdown');
-    dropdowns.forEach((dropdown) => {
-      if (this.checked) {
-        dropdown.style.display = 'block';
-      } else {
-        dropdown.style.display = 'none';
-      }
+      dropdowns.forEach((dropdown) => {
+        dropdown.style.display = this.checked ? 'block' : 'none';
+      });
+
+      searchForms.forEach((searchForm) => {
+        this.checked
+        ? searchForm.setAttribute('aria-expanded', 'true')
+        : searchForm.setAttribute('aria-expanded', 'false')
+      });
     });
   }
 });
