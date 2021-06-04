@@ -57,23 +57,34 @@
       <h1 class="osg-heading-1">Finn en ansatt</h1>
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12 osg-row__column--5-breakpoint-medium">
-          <label class="osg-switch osg-margin-bottom-3" aria-labelledby="on">
+          <label class="osg-switch osg-margin-bottom-3" aria-labelledby="dropdown-text">
             <input type="checkbox" class="osg-switch__input" id="employee-search-form-search-dropdown">
             <span class="osg-switch__background"></span>
             <span class="osg-switch__slider"></span>
-            <span class="osg-switch__label-text">Vis autocomplete</span>
+            <span class="osg-switch__label-text" id="dropdown-text">Vis autocomplete</span>
           </label>
           <div class="osg-search osg-search--inline" role="combobox">
-            <div class="osg-search__form">
-              <input class="osg-search__input" type="search" autocomplete="off" placeholder="Etternavn">
+            <div
+              class="osg-search__form"
+              id="osg-search__form"
+              role="combobox"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              aria-owns="id-results">
+              <input class="osg-search__input"
+                type="search"
+                class="osg-search-seasons__input"
+                placeholder="Etternavn"
+                aria-label="Search"
+                autocomplete="off">
             </div>
-            <ol class="osg-search__dropdown" style="display: none;" role="listbox">
-              <li><a href="javascript:void(0)" osg-search__dropdown__item">Navnesen (2)</a></li>
-              <li><a href="javascript:void(0)" osg-search__dropdown__item">Hansen (9)</a></li>
-              <li><a href="javascript:void(0)" osg-search__dropdown__item">Nordstrand Lie (1)</a></li>
-              <li><a href="javascript:void(0)" osg-search__dropdown__item">Bertulfsen (3)</a></li>
-              <li><a href="javascript:void(0)" osg-search__dropdown__item">Haptilus (1)</a></li>
-            </ol>
+            <ul class="osg-search__dropdown" style="display: none;" role="listbox" id="id-results">
+              <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Navnesen (2)</a></li>
+              <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Hansen (9)</a></li>
+              <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Nordstrand Lie (1)</a></li>
+              <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Bertulfsen (3)</a></li>
+              <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Haptilus (1)</a></li>
+            </ul>
           </div>
         </div>
       </div>

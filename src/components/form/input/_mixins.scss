@@ -10,16 +10,6 @@
   @extend %osg-text-7;
 }
 
-@mixin fieldset(){
-  border: none;
-
-  legend {
-    @extend %osg-text-4;
-    margin-bottom: spacing.$space-2;
-  }
-
-}
-
 @mixin form-states() {
   &--hover &__input, &__input:hover,
   &--hover &__textarea, &__textarea:hover,

@@ -1,13 +1,16 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
+@use "system/state";
 
 
 .osg-opening-hours {
   @extend %osg-padding-4;
+  @extend %osg-text-5;
+  border: 1px solid colors.$yellow;
 
-  &--with-border {
-    border: 1px solid colors.$yellow;
+  &--without-border {
+    border: 1px solid transparent;
   }
 
   &__heading {
@@ -16,13 +19,16 @@
   }
 
   &__navigation {
-    @extend %osg-margin-bottom-3;
-
+    @extend %osg-margin-bottom-2;
+    @extend %osg-text-6;
   }
 
-  &__exceptions,
-  &__comment {
-    @extend %osg-margin-top-3;
+  &__week {
+    @extend %osg-text-7;
+  }
+
+  &__extra {
+    @extend %osg-margin-top-2;
   }
 
   &__exception-indicator {
@@ -30,11 +36,13 @@
   }
 
   &__day {
+    @extend %osg-margin-top-1;
+
     &--today {
       @extend %osg-text-medium;
     }
     &--past {
-      @extend %osg-color-text-grayscale-70;
+      color: colors.$grayscale-40;
     }
   }
 

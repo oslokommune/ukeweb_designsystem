@@ -1,0 +1,64 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-fieldset {
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &--default {
+    border: 1px solid colors.$grayscale-40;
+    padding: 0 spacing.$space-3 spacing.$space-3 spacing.$space-3;
+
+    legend {
+      @extend %osg-text-4;
+      padding: spacing.$space-1;
+    }
+  }
+
+  &--no-border {
+    border: none;
+    padding: 0;
+
+    legend {
+      @extend %osg-text-4;
+      margin-bottom: spacing.$space-2;
+      padding-bottom: spacing.$space-1;
+    }
+  }
+
+  &--border-under {
+    border: none;
+
+    legend {
+      @extend %osg-text-4;
+      margin-bottom: spacing.$space-2;
+      padding-bottom: spacing.$space-1;
+    }
+
+    legend + div {
+      border: 1px solid colors.$grayscale-40;
+      margin-left: spacing.$space-3;
+      padding: spacing.$space-3;
+    }
+  }
+
+  &--disabled,
+  &:disabled {
+    & legend {
+      color: colors.$grayscale-40;
+    }
+  }
+
+  &--error {
+    border-color: colors.$red;
+
+    & legend {
+      color: colors.$red;
+    }
+    & legend + div {
+      border-color: colors.$red;
+    }
+  }
+}
