@@ -50,6 +50,7 @@
       font-size: fonts.$size-30;
       line-height: 1em;
       content: map-get(icons.$icons, 'magnifying-glass-small') !important;
+      vertical-align: middle;
     }
 
     &:hover {
