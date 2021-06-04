@@ -1,8 +1,6 @@
 {
-  "devtools": {
-    "tags": [
-      "text",
-      "form"
-    ]
-  }
+  "tags": [
+    "text",
+    "form"
+  ]
 }

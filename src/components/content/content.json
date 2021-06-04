@@ -1,7 +1,5 @@
 {
-  "devtools": {
-    "tags": [
-      "content"
-    ]
-  }
+  "tags": [
+    "content"
+  ]
 }

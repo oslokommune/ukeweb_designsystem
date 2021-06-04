@@ -1,9 +1,7 @@
 {
-  "devtools": {
-    "preset": "clean",
-    "tags": [
-      "size",
-      "space"
-    ]
-  }
+  "preset": "clean",
+  "tags": [
+    "size",
+    "space"
+  ]
 }

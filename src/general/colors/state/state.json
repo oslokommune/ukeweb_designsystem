@@ -1,9 +1,7 @@
 {
-  "devtools": {
-    "preset": "clean",
-    "tags": [
-      "colors",
-      "state"
-    ]
-  }
+  "preset": "clean",
+  "tags": [
+    "colors",
+    "state"
+  ]
 }

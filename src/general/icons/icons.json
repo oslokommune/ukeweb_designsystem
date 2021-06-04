@@ -1,9 +1,7 @@
 {
-  "devtools": {
-    "preset": "clean",
-    "tags": [
-      "icon",
-      "icons"
-    ]
-  }
+  "preset": "clean",
+  "tags": [
+    "icon",
+    "icons"
+  ]
 }

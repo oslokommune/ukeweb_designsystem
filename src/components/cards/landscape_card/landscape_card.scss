@@ -4,14 +4,18 @@
 @use "system/spacing";
 @use "system/state";
 
-$osg-landscape-card-image-height-small: 200px;
-$osg-landscape-card-image-height-medium: 230px;
-$osg-landscape-card-image-height-large: 290px;
+$osg-landscape-card-height-breakpoint-medium: 221px;
+$osg-landscape-card-height-breakpoint-large: 230px;
+$osg-landscape-card-height-large-breakpoint-medium: 421px;
+$osg-landscape-card-height-large-breakpoint-large: 421px;
 
 .osg-landscape-card {
   &__link {
-    display: flex;
     text-decoration: none;
+
+    @include breakpoints.medium {
+      display: flex;
+    }
 
     &:hover {
       * {
@@ -25,29 +29,40 @@ $osg-landscape-card-image-height-large: 290px;
   }
 
   &__media {
+    width: 100%;
+
+    @include breakpoints.medium {
+      flex: 0 0;
+      min-width: 30%;
+      width: 30%;
+      max-width: 30%;
+    }
+
     img {
       display: block;
-      height: $osg-landscape-card-image-height-small;
       line-height: 0;
       object-fit: cover;
       width: 100%;
 
       @include breakpoints.medium {
-        height: $osg-landscape-card-image-height-medium;
+        height: $osg-landscape-card-height-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-landscape-card-image-height-large;
+        height: $osg-landscape-card-height-breakpoint-large;
       }
     }
   }
 
   &__content {
+    width: 100%;
+
     @extend %osg-padding-horizontal-2;
     @extend %osg-padding-vertical-3;
     @extend %osg-color-bg-gray-light;
 
     @include breakpoints.medium {
+      flex: 1 0;
       padding: spacing.$space-4 spacing.$space-3 !important;
     }
 
@@ -72,6 +87,40 @@ $osg-landscape-card-image-height-large: 290px;
     & .osg-landscape-card__content,
     & .osg-landscape-card__actions {
       @extend %osg-color-bg-white;
+    }
+  }
+
+  &--wide-image {
+    & .osg-landscape-card__media {
+      @include breakpoints.medium {
+        min-width: 58.333%;
+        width: 58.333%;
+        max-width: 58.333%;
+      }
+    }
+  }
+
+  &--small {
+    & .osg-landscape-card__content {
+
+    }
+  }
+
+  &--large {
+    & .osg-landscape-card__content {
+      @include breakpoints.medium {
+        padding: spacing.$space-5 spacing.$space-4 !important;
+      }
+    }
+
+    & .osg-landscape-card__media img {
+      @include breakpoints.medium {
+        height: $osg-landscape-card-height-large-breakpoint-medium;
+      }
+
+      @include breakpoints.large {
+        height: $osg-landscape-card-height-large-breakpoint-large;
+      }
     }
   }
 }

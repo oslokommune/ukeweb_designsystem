@@ -1,8 +1,6 @@
 {
-  "devtools": {
-    "tags": [
-      "block quote",
-      "figure"
-    ]
-  }
+  "tags": [
+    "block quote",
+    "figure"
+  ]
 }

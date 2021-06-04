@@ -1,14 +1,7 @@
 {
-  "devtools": {
-    "preset": "clean",
-    "sections": {
-      "docs": {
-        "visible": false
-      }
-    },
-    "tags": [
-      "media",
-      "query"
-    ]
-  }
+  "preset": "clean",
+  "tags": [
+    "media",
+    "query"
+  ]
 }

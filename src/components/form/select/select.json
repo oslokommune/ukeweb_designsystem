@@ -1,8 +1,6 @@
 {
-  "devtools": {
-    "tags": [
-      "select",
-      "form"
-    ]
-  }
+  "tags": [
+    "select",
+    "form"
+  ]
 }

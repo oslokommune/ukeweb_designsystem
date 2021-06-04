@@ -1,7 +1,5 @@
 {
-  "devtools": {
-    "tags": [
-      "grid"
-    ]
-  }
+  "tags": [
+    "grid"
+  ]
 }

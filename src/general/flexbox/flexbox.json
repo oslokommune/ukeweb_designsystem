@@ -1,7 +1,5 @@
 {
-  "devtools": {
-    "preset": "clean"
-  },
+  "preset": "clean",
   "tags": [
     "flex"
   ]
