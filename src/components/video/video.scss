@@ -1,0 +1,34 @@
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-video {
+
+  &--16x9 {
+    padding-top: calc(100%/16*9);
+    position: relative;
+    background-color: black;
+  }
+
+  &__heading {
+    @extend %osg-heading-3;
+    @extend %osg-margin-bottom-3;
+  }
+
+  &__video {
+    width: 100%;
+
+    &--16x9 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+    }
+  }
+
+  &__transcription-heading {
+    @extend %osg-heading-4;
+    @extend %osg-margin-vertical-2;
+  }
+}
