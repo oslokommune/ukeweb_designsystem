@@ -1,6 +1,6 @@
 ## General
 
-Can be placed side by side with another component/element on breakpoint medium.
+Can be placed side by side with another component/element on breakpoint medium and up.
 
 After the opening hours, you can add as many `<div class="osg-opening-hours__extra">...</div>` as you need to add other relevant content / components.
 ## Navigation
