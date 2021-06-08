@@ -123,4 +123,25 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       }
     }
   }
+
+  &--zoom {
+    & .osg-landscape-card__link {
+      & .osg-landscape-card__media {
+        overflow: hidden;
+
+        img {
+          transform: scale(1.0);
+          transition: all .5s
+        }
+      }
+
+      &:hover {
+        & .osg-landscape-card__media {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
 }

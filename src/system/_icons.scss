@@ -1,85 +1,175 @@
 $icons: (
-  "24h": "\ea01",
-  "arrow": "\ea02",
-  "attachment": "\ea03",
-  "backpack": "\ea04",
-  "bike": "\ea05",
-  "briefcase": "\ea06",
-  "bus": "\ea07",
-  "cafe": "\ea08",
-  "calendar": "\ea09",
-  "camera": "\ea0a",
-  "check": "\ea0b",
-  "check-circle": "\ea0c",
-  "chevron-down": "\ea0d",
-  "chevron-left": "\ea0e",
-  "chevron-right": "\ea0f",
-  "chevron-thin-down": "\ea10",
-  "chevron-thin-up": "\ea11",
-  "chevron-up": "\ea12",
-  "clock": "\ea13",
-  "close": "\ea14",
-  "coin-stacks": "\ea15",
-  "crane": "\ea16",
-  "cross": "\ea17",
-  "cross-circle": "\ea18",
-  "document": "\ea19",
-  "download": "\ea1a",
-  "edit": "\ea1b",
-  "email": "\ea1c",
-  "exclamation-mark-circle": "\ea1d",
-  "exclamation-mark-square": "\ea1e",
-  "expand": "\ea1f",
-  "facebook": "\ea20",
-  "filter": "\ea21",
-  "fire-emblem": "\ea22",
-  "graph": "\ea23",
-  "grid": "\ea24",
-  "handicap": "\ea25",
-  "heart": "\ea26",
-  "heart-plus": "\ea27",
-  "home": "\ea28",
-  "house-heart": "\ea29",
-  "information": "\ea2a",
-  "instagram": "\ea2b",
-  "language": "\ea2c",
-  "linked-in": "\ea2d",
-  "list": "\ea2e",
-  "location-pin": "\ea2f",
-  "location-pin-filled": "\ea30",
-  "magnifying-glass-big": "\ea31",
-  "magnifying-glass-small": "\ea32",
-  "map": "\ea33",
-  "menu": "\ea34",
-  "message": "\ea35",
-  "minimize": "\ea36",
-  "minus-sign": "\ea37",
-  "museum": "\ea38",
-  "neutral": "\ea39",
-  "new-window": "\ea3a",
-  "park": "\ea3b",
-  "picture": "\ea3c",
-  "plus-sign": "\ea3d",
-  "print": "\ea3e",
-  "question": "\ea3f",
-  "recycling": "\ea40",
-  "sad": "\ea41",
-  "save": "\ea42",
-  "share": "\ea43",
-  "smile": "\ea44",
-  "sound-off": "\ea45",
-  "sound-on": "\ea46",
-  "swingset": "\ea47",
-  "table": "\ea48",
-  "target": "\ea49",
-  "thumbs-down": "\ea4a",
-  "thumbs-up": "\ea4b",
-  "tickets": "\ea4c",
-  "trail": "\ea4d",
-  "tram": "\ea4e",
-  "twitter": "\ea4f",
-  "user": "\ea50",
-  "water-faucet": "\ea51",
-  "wifi": "\ea52",
+  
+    "24h": "\ea01",
+  
+    "arrow": "\ea02",
+  
+    "attachment": "\ea03",
+  
+    "backpack": "\ea04",
+  
+    "bike": "\ea05",
+  
+    "briefcase": "\ea06",
+  
+    "bus": "\ea07",
+  
+    "cafe": "\ea08",
+  
+    "calendar": "\ea09",
+  
+    "camera": "\ea0a",
+  
+    "check": "\ea0b",
+  
+    "check-circle": "\ea0c",
+  
+    "chevron-down": "\ea0d",
+  
+    "chevron-left": "\ea0e",
+  
+    "chevron-right": "\ea0f",
+  
+    "chevron-thin-down": "\ea10",
+  
+    "chevron-thin-up": "\ea11",
+  
+    "chevron-up": "\ea12",
+  
+    "clock": "\ea13",
+  
+    "close": "\ea14",
+  
+    "coin-stacks": "\ea15",
+  
+    "crane": "\ea16",
+  
+    "cross": "\ea17",
+  
+    "cross-circle": "\ea18",
+  
+    "document": "\ea19",
+  
+    "download": "\ea1a",
+  
+    "edit": "\ea1b",
+  
+    "email": "\ea1c",
+  
+    "exclamation-mark-circle": "\ea1d",
+  
+    "exclamation-mark-square": "\ea1e",
+  
+    "expand": "\ea1f",
+  
+    "facebook": "\ea20",
+  
+    "filter": "\ea21",
+  
+    "fire-emblem": "\ea22",
+  
+    "graph": "\ea23",
+  
+    "grid": "\ea24",
+  
+    "handicap": "\ea25",
+  
+    "heart": "\ea26",
+  
+    "heart-plus": "\ea27",
+  
+    "home": "\ea28",
+  
+    "house-heart": "\ea29",
+  
+    "information": "\ea2a",
+  
+    "instagram": "\ea2b",
+  
+    "language": "\ea2c",
+  
+    "linked-in": "\ea2d",
+  
+    "list": "\ea2e",
+  
+    "location-pin": "\ea2f",
+  
+    "location-pin-filled": "\ea30",
+  
+    "magnifying-glass-big": "\ea31",
+  
+    "magnifying-glass-small": "\ea32",
+  
+    "map": "\ea33",
+  
+    "menu": "\ea34",
+  
+    "message": "\ea35",
+  
+    "minimize": "\ea36",
+  
+    "minus-circle": "\ea37",
+  
+    "minus-circle-fill": "\ea38",
+  
+    "minus-sign": "\ea39",
+  
+    "museum": "\ea3a",
+  
+    "neutral": "\ea3b",
+  
+    "new-window": "\ea3c",
+  
+    "park": "\ea3d",
+  
+    "picture": "\ea3e",
+  
+    "plus-circle": "\ea3f",
+  
+    "plus-circle-fill": "\ea40",
+  
+    "plus-sign": "\ea41",
+  
+    "print": "\ea42",
+  
+    "question": "\ea43",
+  
+    "recycling": "\ea44",
+  
+    "sad": "\ea45",
+  
+    "save": "\ea46",
+  
+    "share": "\ea47",
+  
+    "smile": "\ea48",
+  
+    "sound-off": "\ea49",
+  
+    "sound-on": "\ea4a",
+  
+    "swingset": "\ea4b",
+  
+    "table": "\ea4c",
+  
+    "target": "\ea4d",
+  
+    "thumbs-down": "\ea4e",
+  
+    "thumbs-up": "\ea4f",
+  
+    "tickets": "\ea50",
+  
+    "trail": "\ea51",
+  
+    "tram": "\ea52",
+  
+    "twitter": "\ea53",
+  
+    "user": "\ea54",
+  
+    "water-faucet": "\ea55",
+  
+    "wifi": "\ea56",
   
 );
