@@ -1,0 +1,95 @@
+@use "system/breakpoints";
+@use "system/spacing";
+
+.osg-parent-modal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.osg-modal {
+  background: white;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & ~.osg-overlay {
+    display: none;
+  }
+
+  &--open,
+  &--open ~ .osg-overlay {
+    display: block;
+  }
+
+  @include breakpoints.medium {
+    background: none;
+    height: unset;
+    max-width: 100%;
+    position: relative;
+    width: 66.666%;
+    z-index: 100;
+  }
+
+  &__button {
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: spacing.$space-3;
+
+    @include breakpoints.medium {
+      background: transparent;
+      padding: 0;
+    }
+
+    div {
+      background-color: white;
+      flex-grow: 1;
+    }
+  }
+
+  &__content {
+    background: white;
+    max-height: 18.75rem;
+    overflow: auto;
+    padding: 0 spacing.$space-5 spacing.$space-5 spacing.$space-5;
+  }
+}
+
+.osg-overlay {
+  background: none;
+
+  @include breakpoints.medium {
+    background-color: black;
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.osg-devtools-code {
+  width: 100%;
+
+  .osg-overlay ~ pre {
+    position: absolute;
+    left: 0;
+    top: 23.875rem;
+    @include breakpoints.large {
+      top: 23.875rem;
+    }
+  }
+
+  @include breakpoints.medium {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+}
