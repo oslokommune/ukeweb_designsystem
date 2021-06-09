@@ -4,17 +4,15 @@
 @use "system/state";
 
 .osg-button {
-  @extend %osg-text-5;
+  @extend %osg-text-4;
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
   color: colors.$white;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-weight: 500 !important;
   padding: .625rem .9375rem;
   text-decoration: none;
-
 
   /**
    * Button sizes
@@ -172,10 +170,12 @@
   }
 
   &--icon-large {
-    line-height: 2em !important;
+    box-sizing: content-box;
+    line-height: 1.7777777777777777em !important;
+    height: 1.7777777777777777em;
 
     .osg-icon {
-      font-size: 1.778em;
+      font-size: 1.7777777777777777em;
     }
   }
 
