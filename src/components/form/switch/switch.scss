@@ -19,7 +19,9 @@
   &:focus-within, &--focus {
     border: 2px solid colors.$blue-contrast;
     outline: initial;
-    outline-style: auto;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: colors.$blue-contrast;
   }
 
   &__input:focus ~ &__label-text,

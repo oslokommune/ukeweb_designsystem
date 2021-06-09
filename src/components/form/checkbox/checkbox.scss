@@ -64,19 +64,21 @@
   }
 
   & input:focus ~ &__checkmark,
-  &--focus ~ &__checkmark {
-    border-width: 3px;
+  &--focus &__checkmark {
+    border-width: 2px;
     outline: initial;
-    outline-style: auto;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: colors.$blue-contrast;
   }
 
   & input:focus ~ &__text,
-  &--focus ~ &__text {
+  &--focus &__text {
     @extend %osg-text-4;
   }
 
-  & input:hover ~ span, &--hover ~ span,
-  & input:focus ~ span, &--focus ~ span,
+  & input:hover ~ span, &--hover span,
+  & input:focus ~ span, &--focus span,
   & input:checked:hover ~ span,
   & input:checked:focus ~ span {
     border-color: colors.$blue-contrast;
