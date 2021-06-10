@@ -13,4 +13,8 @@
   &__text {
     @extend %osg-text-5;
   }
+
+  &__text + &__text {
+    @extend %osg-margin-top-2;
+  }
 }
