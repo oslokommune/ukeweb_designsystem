@@ -57,19 +57,19 @@
     }
   }
 
-  &:focus-within {
+  &:focus-within &__checkmark,
+  & input:focus ~ &__checkmark,
+  &--focus &__checkmark {
     &:not([disabled]) {
       color: colors.$blue-contrast;
+      outline: initial;
+      outline-style: solid;
+      outline-width: 2px;
     }
   }
 
-  & input:focus ~ &__checkmark,
-  &--focus &__checkmark {
-    border-width: 2px;
-    outline: initial;
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: colors.$blue-contrast;
+  &:focus-visible ~ &__checkmark {
+    outline-style: none;
   }
 
   & input:focus ~ &__text,
