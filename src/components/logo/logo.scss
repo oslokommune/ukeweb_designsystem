@@ -20,4 +20,24 @@
       height: 4.0625rem;
     }
   }
+
+  &--green-dark svg {
+    fill: colors.$green-dark;
+  }
+
+  &--green-light svg {
+    fill: colors.$green-light;
+  }
+
+  &--blue-light svg {
+    fill: colors.$blue-light;
+  }
+
+  &--black svg {
+    fill: colors.$black;
+  }
+
+  &--white svg {
+    fill: colors.$white;
+  }
 }
