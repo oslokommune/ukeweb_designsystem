@@ -7,10 +7,10 @@
 .osg-opening-hours {
   @extend %osg-padding-4;
   @extend %osg-text-5;
-  border: 1px solid colors.$yellow;
+  border: 2px solid colors.$yellow;
 
   &--without-border {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
   }
 
   &__heading {
