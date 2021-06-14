@@ -4,30 +4,44 @@
 @use "system/state";
 
 .osg-button {
-  @extend %osg-text-5;
+  @extend %osg-text-4;
+  @extend %osg-padding-horizontal-3, %osg-padding-vertical-2;
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
   color: colors.$white;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-weight: 500 !important;
-  padding: .625rem .9375rem;
   text-decoration: none;
 
+  &__icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: 1em;
+    vertical-align: middle;
+
+    &--left {
+      @extend %osg-margin-right-2;
+    }
+
+    &--right {
+      @extend %osg-margin-left-2;
+    }
+  }
 
   /**
    * Button sizes
    */
   &.osg-button--small {
-    padding: .3125rem .625rem;
+    @extend %osg-padding-horizontal-2, %osg-padding-vertical-1;
     font-size: fonts.$size-16 !important;
   }
 
   &.osg-button--large {
-    @extend %osg-text-3;
+    @extend %osg-text-2;
+    @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
     font-weight: 500 !important;
-    padding: .938rem 1.875rem;
   }
 
   &--fullwidth {
@@ -53,15 +67,26 @@
   }
 
   &--circle {
+    @extend .osg-button--icon;
     border-radius: 50%;
-    padding: .625rem .90575rem;
+  }
+
+  &.osg-button--icon {
+    @extend %osg-padding-2;
+    width: 1.5em !important;
+    box-sizing: content-box;
 
     &.osg-button--small {
-      padding: .3125rem .5625rem;
+      @extend %osg-padding-1;
     }
 
     &.osg-button--large {
-      padding: .938rem 1.25rem;
+      @extend %osg-padding-3;
+    }
+    &.osg-button--large {
+      .osg-button__icon {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -122,7 +147,7 @@
 
     &.osg-button--text {
       background-color: transparent !important;
-      border-color: transparent;
+      border-color: transparent !important;
       text-decoration: underline;
     }
 
@@ -141,41 +166,6 @@
         color: colors.$grayscale-40 !important;
         text-decoration: underline;
       }
-    }
-  }
-
-  /**
-   * Button with icon
-   */
-  .osg-icon {
-    line-height: 1em !important;
-    vertical-align: middle;
-
-    &::before {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    &--icon-right {
-      margin-left: spacing.$space-2;
-    }
-    &--icon-left {
-      margin-right: spacing.$space-2;
-    }
-  }
-
-  &--icon-only {
-    padding: .625rem;
-  }
-
-  &--icon-large {
-    line-height: 2em !important;
-
-    .osg-icon {
-      font-size: 1.778em;
     }
   }
 

@@ -20,10 +20,10 @@
 
       <div class="osg-carousel__navigation">
         <a class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
-          <span class="osg-icon osg-icon--chevron-left"></span>
+          <span class="osg-button__icon osg-icons--chevron-left"></span>
         </a>
         <a class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
-          <span class="osg-icon osg-icon--chevron-right"></span>
+          <span class="osg-button__icon osg-icons--chevron-right"></span>
         </a>
       </div>
     </div>

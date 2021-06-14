@@ -57,26 +57,28 @@
     }
   }
 
-  &:focus-within {
+  &:focus-within &__checkmark,
+  & input:focus ~ &__checkmark,
+  &--focus &__checkmark {
     &:not([disabled]) {
       color: colors.$blue-contrast;
+      outline: initial;
+      outline-style: solid;
+      outline-width: 2px;
     }
   }
 
-  & input:focus ~ &__checkmark,
-  &--focus ~ &__checkmark {
-    border-width: 3px;
-    outline: initial;
-    outline-style: auto;
+  &:focus-visible ~ &__checkmark {
+    outline-style: none;
   }
 
   & input:focus ~ &__text,
-  &--focus ~ &__text {
+  &--focus &__text {
     @extend %osg-text-4;
   }
 
-  & input:hover ~ span, &--hover ~ span,
-  & input:focus ~ span, &--focus ~ span,
+  & input:hover ~ span, &--hover span,
+  & input:focus ~ span, &--focus span,
   & input:checked:hover ~ span,
   & input:checked:focus ~ span {
     border-color: colors.$blue-contrast;
