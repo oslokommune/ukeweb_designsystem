@@ -2,7 +2,9 @@
 @use "system/icons";
 
 @each $name, $content in icons.$icons {
-  .osg-icon--#{$name}, %osg-icon--#{$name} {
+  .osg-icons--#{$name} {
+    font-family: 'Oslo Icons';
+
     &:before {
       content: "#{$content}";
     }
