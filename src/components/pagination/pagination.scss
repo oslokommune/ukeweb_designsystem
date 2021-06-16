@@ -1,72 +1,11 @@
-@use "system/colors";
-@use "system/fonts";
 @use "system/spacing";
-@use "system/icons";
 
 .osg-pagination {
-  &__item {
-    @extend %osg-text-5;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    color: colors.$blue-dark;
+  &__spacer {
+    cursor: default;
+    transform: translateY(-0.25rem);
     display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    height: 2.25em;
-    width: 2.25em;
-    line-height: 2.15em !important;
-    font-family: inherit;
-    background: none;
-    cursor: pointer;
-
-    &:visited,
-    &:hover,
-    &:active {
-      color: colors.$blue-dark;
-      background-color: colors.$gray;
-      border-color: colors.$gray;
-    }
-
-    &--active {
-      cursor: default;
-      background-color: colors.$blue-dark !important;
-      border-color: colors.$blue-dark !important;
-      color: colors.$white !important;
-    }
-
-    &--next,
-    &--previous {
-      transform: rotate(270deg);
-      vertical-align: bottom;
-      &::before {
-        color: colors.$blue-dark;
-        display: inline-block;
-        font-size: 2em;
-        font-family: 'Oslo Icons';
-        content: map-get(icons.$icons, 'chevron-thin-up');
-        //height: inherit;
-        //width: inherit;
-      }
-    }
-
-    &--next {
-      transform: rotate(90deg);
-    }
-
-    &--hidden {
-      display: none;
-    }
-
-    &--spacer {
-      cursor: default;
-      transform: translateY(-0.25rem);
-
-      &:visited,
-      &:hover,
-      &:active {
-        background-color: transparent;
-        border-color: transparent;
-      }
-    }
+    //padding: 0 5px;
+    @extend %osg-padding-horizontal-1;
   }
 }
