@@ -9,12 +9,4 @@
   &__heading {
     @extend %osg-heading-5, %osg-margin-bottom-2;
   }
-
-  &__text {
-    @extend %osg-text-5;
-  }
-
-  &__text + &__text {
-    @extend %osg-margin-top-2;
-  }
 }
