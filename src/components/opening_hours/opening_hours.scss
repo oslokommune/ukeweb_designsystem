@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
@@ -8,6 +9,14 @@
   @extend %osg-padding-4;
   @extend %osg-text-5;
   border: 2px solid colors.$yellow;
+
+  table tr td {
+    @extend %osg-padding-bottom-1;
+  }
+
+  table td + td {
+    @extend %osg-padding-left-3;
+  }
 
   &--without-border {
     border: 2px solid transparent;
