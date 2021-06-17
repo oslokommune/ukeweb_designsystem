@@ -27,8 +27,9 @@ The following attributes are required for the `<video>`-tag:
 
 ### Video as animation
 
-If using the video as an animation, you can do the following changes to the attributes of the `<video>`-tag:
+If using the video as an animation, do the following changes to the attributes of the `<video>`-tag:
 
+- Add `role="presentation"` if the video is purley for used decoration.
 - Remove `controls` and `poster`.
 - Change `preload="metadata"` to `preload="auto"`.
 - Add `autoplay`, `loop` and `muted`.
@@ -41,3 +42,4 @@ If needed you can the following attributes to the `<video>`-tag.
 - `loop` - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-loop
 - `muted` - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-muted
 - `crossorigin` - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-crossorigin
+- `role="presentation"` - https://www.w3.org/TR/wai-aria-1.1/#presentation
