@@ -2,6 +2,7 @@
   visibility: visible;
 
   &--collapsed {
+    border: none !important;
     margin: 0 !important;
     max-height: 0;
     overflow: hidden;

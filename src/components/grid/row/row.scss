@@ -23,10 +23,10 @@ $columns: (
 .osg-row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -#{$column-gap};
+  margin: -#{$column-gap};
 
   @include breakpoints.medium {
-    margin: 0 -#{$column-gap-large};
+    margin: -#{$column-gap-large};
   }
 
   &--gapless {

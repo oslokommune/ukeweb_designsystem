@@ -15,8 +15,8 @@ $gutter-large: spacing.$space-4 !default;
     margin: 0;
   }
 
-  &--no-overflow-x {
-    overflow-x: hidden;
+  &--no-overflow {
+    overflow: hidden;
   }
 
   &--content-limit {
