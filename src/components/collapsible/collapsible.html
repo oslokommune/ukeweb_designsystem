@@ -1,6 +1,7 @@
 <div class="osg-container">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
+      <p class="osg-devtools-nondevmode osg-padding-20 osg-margin-bottom-30 osg-color-bg-yellow">Triggers get the <strong>.osg-collapsible__trigger--expanded</strong> modifier when content is expanded.</p>
       <h2 class="osg-heading-3">Default</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
@@ -36,42 +37,6 @@
           ipsum dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus
           at, molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere
           ut eget arcu.</p>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Custom examples</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-      <div class="osg-devtools-code">
-        <style>
-          .osg-link {
-            position: relative;
-          }
-
-          .osg-link.osg-collapsible__trigger::after {
-            font-family: 'Oslo Icons' !important;
-            font-size: 1em;
-            content: "\ea10";
-            padding-left: 5px;
-            position: absolute;
-            top: 1px;
-          }
-
-          .osg-link.osg-collapsible__trigger--expanded::after {
-            content: "\ea11";
-          }
-        </style>
-        <div class="osg-color-bg-yellow osg-padding-30">
-          <h4 class="osg-heading-4">
-            <a class="osg-link osg-collapsible__trigger" href="javascript:void(0)"
-              aria-controls="osg-collapsible-4">Trigger</a>
-          </h4>
-          <p aria-expanded="false" id="osg-collapsible-4"
-            class="osg-collapsible osg-collapsible--collapsed osg-collapsible--ease osg-text-5 osg-margin-top-15">Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in
-            cursus at, molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu
-            laoreet posuere ut eget arcu.</p>
-        </div>
       </div>
     </div>
   </div>
