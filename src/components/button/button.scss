@@ -75,6 +75,7 @@
   &.osg-button--icon {
     @extend %osg-padding-2;
     width: 1.5em !important;
+    line-height: 0 !important;
     box-sizing: content-box;
 
     &.osg-button--small {
@@ -86,6 +87,7 @@
     }
     &.osg-button--large {
       .osg-button__icon {
+        line-height: 2rem;
         font-size: 2rem;
       }
     }
