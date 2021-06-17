@@ -58,7 +58,7 @@ $osg-carousel-image-height-large: 725;
     top: 0;
 
     > * {
-      @extend %osg-margin-horizontal-4-breakpoint-medium;
+      @extend %osg-margin-horizontal-30-breakpoint-medium;
 
       @include breakpoints.large {
         padding: 1rem;
@@ -71,7 +71,7 @@ $osg-carousel-image-height-large: 725;
   }
 
   &__info {
-    padding: 0 spacing.$space-3;
+    padding: 0 spacing.$space-15;
     @include breakpoints.large {
       padding: 0;
     }

@@ -8,7 +8,7 @@
   background-color: colors.$white;
 
   a {
-    @extend %osg-padding-3, %osg-padding-4-breakpoint-large;
+    @extend %osg-padding-15, %osg-padding-30-breakpoint-large;
     align-items: flex-start;
     color: inherit;
     display: flex;
@@ -23,7 +23,7 @@
   }
 
   &__illustration {
-    @extend %osg-margin-right-3;
+    @extend %osg-margin-right-15;
     flex: 0 0 auto;
     line-height: 0;
 
@@ -42,7 +42,7 @@
     flex-grow: 4;
 
     h2 {
-      @extend %osg-heading-6, %osg-margin-bottom-1;
+      @extend %osg-heading-6, %osg-margin-bottom-50;
       display: inline-block;
     }
 
@@ -58,7 +58,7 @@
   }
 
   &__status {
-    @extend %osg-margin-left-3;
+    @extend %osg-margin-left-15;
     align-items: flex-start;
     display: flex;
     flex-grow: 1;

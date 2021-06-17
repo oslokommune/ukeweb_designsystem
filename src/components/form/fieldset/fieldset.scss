@@ -9,11 +9,11 @@
 
   &--default {
     border: 1px solid colors.$grayscale-40;
-    padding: 0 spacing.$space-3 spacing.$space-3 spacing.$space-3;
+    padding: 0 spacing.$space-15 spacing.$space-15 spacing.$space-15;
 
     legend {
       @extend %osg-text-4;
-      padding: spacing.$space-1;
+      padding: spacing.$space-50;
     }
   }
 
@@ -23,8 +23,8 @@
 
     legend {
       @extend %osg-text-4;
-      margin-bottom: spacing.$space-2;
-      padding-bottom: spacing.$space-1;
+      margin-bottom: spacing.$space-10;
+      padding-bottom: spacing.$space-50;
     }
   }
 
@@ -33,14 +33,14 @@
 
     legend {
       @extend %osg-text-4;
-      margin-bottom: spacing.$space-2;
-      padding-bottom: spacing.$space-1;
+      margin-bottom: spacing.$space-10;
+      padding-bottom: spacing.$space-50;
     }
 
     legend + div {
       border: 1px solid colors.$grayscale-40;
-      margin-left: spacing.$space-3;
-      padding: spacing.$space-3;
+      margin-left: spacing.$space-15;
+      padding: spacing.$space-15;
     }
   }
 

@@ -7,12 +7,12 @@
   counter-reset: orderedlist;
 
   &__item {
-    @extend %osg-margin-bottom-4;
+    @extend %osg-margin-bottom-30;
   }
 
   &__item::before {
     @extend %osg-heading-6, %osg-text-center;
-    @extend %osg-margin-right-1;
+    @extend %osg-margin-right-50;
 
     counter-increment: orderedlist;
     content: counter(orderedlist);
@@ -31,6 +31,6 @@
   }
 
   &__text {
-    @extend %osg-margin-top-1;
+    @extend %osg-margin-top-50;
   }
 }

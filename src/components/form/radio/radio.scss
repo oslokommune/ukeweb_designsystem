@@ -8,7 +8,7 @@
   color: colors.$blue-dark;
   display: flex;
   height: 1.125rem;
-  margin-top: spacing.$space-2;
+  margin-top: spacing.$space-10;
 
   &:focus-within {
     &__label {
@@ -18,7 +18,7 @@
   }
 
   &__label {
-    margin-left: spacing.$space-2;
+    margin-left: spacing.$space-10;
     line-height: 1;
     transition: 180ms all ease-in-out;
     opacity: 0.8;

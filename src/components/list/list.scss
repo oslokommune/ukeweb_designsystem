@@ -5,12 +5,12 @@
   list-style: disc;
 
   & & {
-    @extend %osg-padding-top-2;
+    @extend %osg-padding-top-10;
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-2;
+    @extend %osg-padding-top-10;
   }
 
   &--clean {
@@ -24,12 +24,12 @@
   list-style: decimal;
 
   & & {
-    @extend %osg-padding-top-2;
+    @extend %osg-padding-top-10;
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-2;
+    @extend %osg-padding-top-10;
   }
 
   &--lower-roman {

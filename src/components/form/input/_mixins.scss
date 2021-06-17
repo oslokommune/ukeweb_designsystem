@@ -5,8 +5,8 @@
 
 @mixin error-message() {
   background: colors.$red-light;
-  margin-top: spacing.$space-2;
-  padding: spacing.$space-3;
+  margin-top: spacing.$space-10;
+  padding: spacing.$space-15;
   @extend %osg-text-7;
 }
 
@@ -52,19 +52,19 @@
   color: colors.$blue-dark;
   font: inherit;
   height: 3.188rem;
-  margin-top: spacing.$space-1;
+  margin-top: spacing.$space-50;
   outline-style: none;
-  padding: spacing.$space-2 spacing.$space-3;
+  padding: spacing.$space-10 spacing.$space-15;
   position: relative;
   width: 100%;
   @extend %osg-text-5;
 
   & + span.osg-icon {
     cursor: default !important;
-    bottom: spacing.$space-3;
+    bottom: spacing.$space-15;
     font-size: inherit;
     position: absolute;
-    right: spacing.$space-3;
+    right: spacing.$space-15;
   }
 }
 

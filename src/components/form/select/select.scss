@@ -17,7 +17,7 @@
     & select {
       @include mixins.form-component;
       cursor: pointer;
-      padding-right: spacing.$space-5;
+      padding-right: spacing.$space-50;
     }
 
     &:after {

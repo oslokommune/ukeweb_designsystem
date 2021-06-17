@@ -100,13 +100,13 @@
     <glyph glyph-name="chevron-left"
       unicode="&#xEA10;"
       horiz-adv-x="512" d="M141.76 258.24L301.76 98.24L370.24 166.88L278.88 258.24L370.24 349.76L301.76 418.24zM416 349.76L324.64 258.24L416 166.88L301.76 52.64L96 258.24L301.76 464z" />
-    <glyph glyph-name="chevron-left-1"
+    <glyph glyph-name="chevron-left-50"
       unicode="&#x63;&#x68;&#x65;&#x76;&#x72;&#x6F;&#x6E;&#x5F;&#x6C;&#x65;&#x66;&#x74;"
       horiz-adv-x="512" d="M141.76 258.24L301.76 98.24L370.24 166.88L278.88 258.24L370.24 349.76L301.76 418.24zM416 349.76L324.64 258.24L416 166.88L301.76 52.64L96 258.24L301.76 464z" />
     <glyph glyph-name="chevron-right"
       unicode="&#xEA11;"
       horiz-adv-x="512" d="M370.24 258.24L210.24 418.24L141.76 349.76L233.12 258.24L141.76 166.88L210.24 98.24zM96 349.76L210.24 464L416 258.24L210.24 52.64L96 166.88L187.36 258.24z" />
-    <glyph glyph-name="chevron-right-1"
+    <glyph glyph-name="chevron-right-50"
       unicode="&#x63;&#x68;&#x65;&#x76;&#x72;&#x6F;&#x6E;&#x5F;&#x72;&#x69;&#x67;&#x68;&#x74;"
       horiz-adv-x="512" d="M370.24 258.24L210.24 418.24L141.76 349.76L233.12 258.24L141.76 166.88L210.24 98.24zM96 349.76L210.24 464L416 258.24L210.24 52.64L96 166.88L187.36 258.24z" />
     <glyph glyph-name="chevron-thin-down"

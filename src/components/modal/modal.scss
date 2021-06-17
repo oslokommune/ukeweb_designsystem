@@ -39,7 +39,7 @@
     background: white;
     display: flex;
     justify-content: flex-end;
-    padding: spacing.$space-3;
+    padding: spacing.$space-15;
 
     @include breakpoints.medium {
       background: transparent;
@@ -56,7 +56,7 @@
     background: white;
     max-height: 18.75rem;
     overflow: auto;
-    padding: 0 spacing.$space-5 spacing.$space-5 spacing.$space-5;
+    padding: 0 spacing.$space-50 spacing.$space-50 spacing.$space-50;
   }
 }
 

@@ -9,8 +9,8 @@
   @extend %osg-padding-left-none;
 
   &__item {
-    @extend %osg-padding-vertical-3;
-    @extend %osg-padding-horizontal-2;
+    @extend %osg-padding-vertical-15;
+    @extend %osg-padding-horizontal-10;
     border-top: 2px solid colors.$gray;
   }
 

@@ -10,7 +10,7 @@
     @extend %osg-heading-2;
   }
   &__member {
-    @extend %osg-padding-vertical-3;
+    @extend %osg-padding-vertical-15;
     border-bottom: 1px solid colors.$gray;
   }
   &__image {
@@ -18,7 +18,7 @@
   }
   &__name {
     @extend %osg-heading-5;
-    @extend %osg-margin-bottom-1;
+    @extend %osg-margin-bottom-50;
   }
   &__info {
 

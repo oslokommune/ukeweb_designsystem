@@ -4,7 +4,7 @@
 @use "system/breakpoints";
 
 .osg-banner {
-  @extend %osg-padding-vertical-3, %osg-padding-vertical-5-breakpoint-medium;
+  @extend %osg-padding-vertical-15, %osg-padding-vertical-50-breakpoint-medium;
   @extend %osg-text-2;
   background-color: colors.$white;
 

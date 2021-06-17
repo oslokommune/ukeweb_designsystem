@@ -2,10 +2,10 @@
 @use "system/spacing";
 
 .osg-service-header {
-  @extend %osg-padding-top-5, %osg-padding-bottom-6;
+  @extend %osg-padding-top-50, %osg-padding-bottom-75;
 
   &__heading {
-    @extend %osg-heading-1, %osg-margin-bottom-3;
+    @extend %osg-heading-1, %osg-margin-bottom-15;
   }
 
   &__lead {

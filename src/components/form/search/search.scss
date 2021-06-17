@@ -13,7 +13,7 @@
   }
 
   &__input {
-    @extend %osg-padding-horizontal-3, %osg-padding-vertical-2;
+    @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
     @extend %osg-color-text-blue-dark;
     border: 2px solid colors.$blue-dark;
     border-radius: 0;
@@ -29,14 +29,14 @@
 
     &:focus {
       border: 4px solid colors.$blue-contrast !important;
-      padding: spacing.$space-2 - 2px spacing.$space-3 - 2px !important;
+      padding: spacing.$space-10 - 2px spacing.$space-15 - 2px !important;
       margin-right: 1px;
       outline: none;
     }
   }
 
   &__button {
-    @extend %osg-margin-left-2;
+    @extend %osg-margin-left-10;
     background-color: colors.$blue-dark;
     border: 2px solid colors.$blue-dark;
     color: colors.$white;
@@ -59,7 +59,7 @@
   }
 
   &__dropdown {
-    @extend %osg-padding-vertical-3;
+    @extend %osg-padding-vertical-15;
     background-color: colors.$white;
     border: 2px solid colors.$gray-light;
     border-top: none;
@@ -71,7 +71,7 @@
 
     &__item {
       display: block;
-      padding: spacing.$space-1 spacing.$space-3;
+      padding: spacing.$space-5 spacing.$space-15;
       text-decoration: none;
 
       &:hover {

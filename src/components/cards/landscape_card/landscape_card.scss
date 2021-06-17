@@ -57,22 +57,22 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   &__content {
     width: 100%;
 
-    @extend %osg-padding-horizontal-2;
-    @extend %osg-padding-vertical-3;
+    @extend %osg-padding-horizontal-10;
+    @extend %osg-padding-vertical-15;
     @extend %osg-color-bg-gray-light;
 
     @include breakpoints.medium {
       flex: 1 0;
-      padding: spacing.$space-4 spacing.$space-3 !important;
+      padding: spacing.$space-30 spacing.$space-15 !important;
     }
 
     @include breakpoints.large {
-      padding: spacing.$space-4 !important;
+      padding: spacing.$space-30 !important;
     }
   }
 
   &__heading {
-    @extend %osg-heading-4, %osg-margin-bottom-1;
+    @extend %osg-heading-4, %osg-margin-bottom-50;
   }
 
   &__text {
@@ -80,7 +80,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &__published {
-    @extend %osg-text-7, %osg-margin-top-3;
+    @extend %osg-text-7, %osg-margin-top-15;
   }
 
   &--white {
@@ -109,7 +109,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   &--large {
     & .osg-landscape-card__content {
       @include breakpoints.medium {
-        padding: spacing.$space-5 spacing.$space-4 !important;
+        padding: spacing.$space-50 spacing.$space-30 !important;
       }
     }
 

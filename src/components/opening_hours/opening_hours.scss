@@ -6,16 +6,16 @@
 
 
 .osg-opening-hours {
-  @extend %osg-padding-4;
+  @extend %osg-padding-30;
   @extend %osg-text-5;
   border: 2px solid colors.$yellow;
 
   table tr td {
-    @extend %osg-padding-bottom-1;
+    @extend %osg-padding-bottom-50;
   }
 
   table td + td {
-    @extend %osg-padding-left-3;
+    @extend %osg-padding-left-15;
   }
 
   &--without-border {
@@ -24,11 +24,11 @@
 
   &__heading {
     @extend %osg-heading-3;
-    @extend %osg-margin-bottom-3;
+    @extend %osg-margin-bottom-15;
   }
 
   &__navigation {
-    @extend %osg-margin-bottom-2;
+    @extend %osg-margin-bottom-10;
     @extend %osg-text-6;
   }
 
@@ -37,15 +37,15 @@
   }
 
   &__extra {
-    @extend %osg-margin-top-2;
+    @extend %osg-margin-top-10;
   }
 
   &__exception-indicator {
-    @extend %osg-margin-left-1;
+    @extend %osg-margin-left-50;
   }
 
   &__day {
-    @extend %osg-margin-top-1;
+    @extend %osg-margin-top-50;
 
     &--today {
       @extend %osg-text-medium;
@@ -56,6 +56,6 @@
   }
 
   &__time-separator {
-    @extend %osg-margin-horizontal-1;
+    @extend %osg-margin-horizontal-50;
   }
 }

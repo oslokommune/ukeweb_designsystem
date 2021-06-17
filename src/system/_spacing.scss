@@ -3,23 +3,29 @@
 // --------------- SPACING ---------------*/
 
 $space-none: 0 !default;
-$space-1: 5px !default;
-$space-2: 10px !default;
-$space-3: 15px !default;
-$space-4: 30px !default;
-$space-5: 50px !default;
-$space-6: 75px !default;
-$space-7: 100px !default;
+$space-5: 5px !default;
+$space-10: 10px !default;
+$space-15: 15px !default;
+$space-20: 20px !default;
+$space-30: 30px !default;
+$space-40: 40px !default;
+$space-50: 50px !default;
+$space-60: 60px !default;
+$space-75: 75px !default;
+$space-100: 100px !default;
 
 $spacing-sizes: (
   "none": $space-none,
-  "1": $space-1,
-  "2": $space-2,
-  "3": $space-3,
-  "4": $space-4,
   "5": $space-5,
-  "6": $space-6,
-  "7": $space-7
+  "10": $space-10,
+  "15": $space-15,
+  "20": $space-20,
+  "30": $space-30,
+  "40": $space-40,
+  "50": $space-50,
+  "60": $space-60,
+  "75": $space-75,
+  "100": $space-100
 );
 
 @each $name, $size in $spacing-sizes {

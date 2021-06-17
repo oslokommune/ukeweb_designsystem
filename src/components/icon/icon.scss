@@ -8,15 +8,15 @@
   line-height: 1em;
 
   &--space-left {
-    @extend %osg-margin-left-2;
+    @extend %osg-margin-left-10;
   }
 
   &--space-right {
-    @extend %osg-margin-right-2;
+    @extend %osg-margin-right-10;
   }
 
   &--space-both {
-    @extend %osg-margin-horizontal-2;
+    @extend %osg-margin-horizontal-10;
   }
 
   &--paragraph {

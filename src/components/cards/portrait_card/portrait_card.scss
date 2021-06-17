@@ -42,35 +42,35 @@ $osg-portrait-card-image-height-large: 290px;
   }
 
   &__content {
-    @extend %osg-padding-horizontal-2;
-    @extend %osg-padding-vertical-3;
+    @extend %osg-padding-horizontal-10;
+    @extend %osg-padding-vertical-15;
     @extend %osg-color-bg-gray-light;
 
     @include breakpoints.medium {
-      padding: spacing.$space-4 spacing.$space-3 !important;
+      padding: spacing.$space-30 spacing.$space-15 !important;
     }
 
     @include breakpoints.large {
-      padding: spacing.$space-4 !important;
+      padding: spacing.$space-30 !important;
     }
   }
 
   &__actions {
-    @extend %osg-padding-horizontal-2;
-    @extend %osg-padding-bottom-3;
+    @extend %osg-padding-horizontal-10;
+    @extend %osg-padding-bottom-15;
     @extend %osg-color-bg-gray-light;
 
     @include breakpoints.medium {
-      padding: 0 spacing.$space-3 spacing.$space-4 spacing.$space-3 !important;
+      padding: 0 spacing.$space-15 spacing.$space-30 spacing.$space-15 !important;
     }
 
     @include breakpoints.large {
-      padding: 0 spacing.$space-4 spacing.$space-4 spacing.$space-4 !important;
+      padding: 0 spacing.$space-30 spacing.$space-30 spacing.$space-30 !important;
     }
   }
 
   &__heading {
-    @extend %osg-heading-4, %osg-margin-bottom-1;
+    @extend %osg-heading-4, %osg-margin-bottom-50;
   }
 
   &__text {
@@ -78,17 +78,17 @@ $osg-portrait-card-image-height-large: 290px;
   }
 
   &__published {
-    @extend %osg-text-7, %osg-margin-top-4;
+    @extend %osg-text-7, %osg-margin-top-30;
   }
 
   &--actions {
     & .osg-portrait-card__content {
       @include breakpoints.medium {
-        padding: spacing.$space-4 spacing.$space-3 spacing.$space-3 spacing.$space-3 !important;
+        padding: spacing.$space-30 spacing.$space-15 spacing.$space-15 spacing.$space-15 !important;
       }
 
       @include breakpoints.large {
-        padding: spacing.$space-4 spacing.$space-4 spacing.$space-3 spacing.$space-4 !important;
+        padding: spacing.$space-30 spacing.$space-30 spacing.$space-15 spacing.$space-30 !important;
       }
     }
   }
@@ -103,11 +103,11 @@ $osg-portrait-card-image-height-large: 290px;
   &--xs {
     & .osg-portrait-card__content {
       @include breakpoints.medium {
-        padding: spacing.$space-3 !important;
+        padding: spacing.$space-15 !important;
       }
 
       @include breakpoints.large {
-        padding: spacing.$space-3 !important;
+        padding: spacing.$space-15 !important;
       }
     }
 
@@ -120,7 +120,7 @@ $osg-portrait-card-image-height-large: 290px;
     }
 
     & .osg-portrait-card__published {
-      @extend %osg-margin-top-3;
+      @extend %osg-margin-top-15;
     }
 
     & .osg-portrait-card__media {

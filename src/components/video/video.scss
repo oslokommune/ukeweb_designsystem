@@ -11,7 +11,7 @@
 
   &__heading {
     @extend %osg-heading-3;
-    @extend %osg-margin-bottom-3;
+    @extend %osg-margin-bottom-15;
   }
 
   &__video {
@@ -29,6 +29,6 @@
 
   &__transcription-heading {
     @extend %osg-heading-4;
-    @extend %osg-margin-vertical-2;
+    @extend %osg-margin-vertical-10;
   }
 }

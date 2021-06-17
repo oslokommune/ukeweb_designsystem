@@ -29,17 +29,17 @@
   }
 
   &__heading, &__cell {
-    @extend %osg-padding-3;
+    @extend %osg-padding-15;
   }
 
   &__heading:first-child, &__cell:first-child {
-    @extend %osg-padding-left-4-breakpoint-medium;
-    @extend %osg-padding-left-6-breakpoint-large;
+    @extend %osg-padding-left-30-breakpoint-medium;
+    @extend %osg-padding-left-75-breakpoint-large;
   }
 
   &__heading:last-child, &__cell:last-child {
-    @extend %osg-padding-right-4-breakpoint-medium;
-    @extend %osg-padding-right-6-breakpoint-large;
+    @extend %osg-padding-right-30-breakpoint-medium;
+    @extend %osg-padding-right-75-breakpoint-large;
   }
 
   &--left-right {

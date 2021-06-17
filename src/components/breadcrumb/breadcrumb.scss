@@ -13,7 +13,7 @@
       display: inline;
     }
     & .osg-breadcrumb__item + & .osg-breadcrumb__item {
-      @extend %osg-margin-left-2;
+      @extend %osg-margin-left-10;
     }
   }
 }

@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="osg-carousel__info osg-margin-top-2">
+    <div class="osg-carousel__info osg-margin-top-10">
       <span v-if="currentImage">
         {{ currentImage.caption }}
       </span>

@@ -1,8 +1,8 @@
 @use "system/breakpoints";
 @use "system/spacing";
 
-$gutter: spacing.$space-3 !default;
-$gutter-large: spacing.$space-4 !default;
+$gutter: spacing.$space-15 !default;
+$gutter-large: spacing.$space-30 !default;
 
 .osg-container {
   margin: 0 $gutter;

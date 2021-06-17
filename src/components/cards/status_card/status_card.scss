@@ -20,20 +20,20 @@
   }
 
   &__content {
-    @extend %osg-padding-vertical-3, %osg-padding-horizontal-2;
+    @extend %osg-padding-vertical-15, %osg-padding-horizontal-10;
     background-color: colors.$gray-light;
 
     @include breakpoints.medium {
-      padding: spacing.$space-4 spacing.$space-3 !important;
+      padding: spacing.$space-30 spacing.$space-15 !important;
     }
 
     @include breakpoints.large {
-      padding: spacing.$space-4 !important;
+      padding: spacing.$space-30 !important;
     }
   }
 
   &__heading {
-    @extend %osg-heading-5, %osg-margin-bottom-3;
+    @extend %osg-heading-5, %osg-margin-bottom-15;
   }
 
   &__text {
@@ -41,30 +41,30 @@
   }
 
   &__smalltext {
-    @extend %osg-text-7, %osg-margin-bottom-3;
+    @extend %osg-text-7, %osg-margin-bottom-15;
   }
 
   &__actions {
-    @extend %osg-margin-top-4;
+    @extend %osg-margin-top-30;
   }
 
   &__footer {
-    @extend %osg-padding-2;
+    @extend %osg-padding-10;
     @extend %osg-text-7;
     background-color: colors.$gray;
     flex-basis: 100%;
 
     @include breakpoints.medium {
-      padding: spacing.$space-2 spacing.$space-3 !important;
+      padding: spacing.$space-10 spacing.$space-15 !important;
     }
 
     @include breakpoints.large {
-      padding: spacing.$space-2 spacing.$space-4 !important;
+      padding: spacing.$space-10 spacing.$space-30 !important;
     }
   }
 
   &__status {
-    @extend %osg-margin-left-3;
+    @extend %osg-margin-left-15;
 
     .osg-icon {
       line-height: 1em !important;

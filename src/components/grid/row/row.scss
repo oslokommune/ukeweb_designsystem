@@ -2,8 +2,8 @@
 @use "system/breakpoints";
 @use "system/spacing";
 
-$column-gap: math.div(spacing.$space-3, 2) !default;
-$column-gap-large: math.div(spacing.$space-4, 2) !default;
+$column-gap: math.div(spacing.$space-15, 2) !default;
+$column-gap-large: math.div(spacing.$space-30, 2) !default;
 
 $columns: (
   1: 8.3333%,

@@ -3,11 +3,11 @@
 @use "system/spacing";
 
 .osg-message {
-  @extend %osg-padding-3, %osg-padding-4-breakpoint-large;
+  @extend %osg-padding-15, %osg-padding-30-breakpoint-large;
   background-color: colors.$beige;
 
   &__heading {
-    @extend %osg-heading-6, %osg-margin-bottom-1;
+    @extend %osg-heading-6, %osg-margin-bottom-50;
   }
 
   &__text {
@@ -16,10 +16,10 @@
 
   &__list {
     @extend %osg-text-6;
-    @extend %osg-margin-top-3;
+    @extend %osg-margin-top-15;
 
     > * + * {
-      @extend %osg-margin-top-3;
+      @extend %osg-margin-top-15;
     }
   }
 }

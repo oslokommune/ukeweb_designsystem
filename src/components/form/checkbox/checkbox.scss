@@ -10,7 +10,7 @@
   color: inherit;
   cursor: pointer;
   display: flex;
-  margin-bottom: spacing.$space-2;
+  margin-bottom: spacing.$space-10;
 
   & input {
     cursor: pointer;
@@ -41,7 +41,7 @@
 
   &__text {
     border-style: hidden;
-    padding-left: spacing.$space-2;
+    padding-left: spacing.$space-10;
   }
 
   &--error-message {
