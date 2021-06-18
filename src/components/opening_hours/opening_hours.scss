@@ -68,7 +68,9 @@
   &__not-ordinary {
     @extend %osg-margin-top-15;
 
-    h3 {
+    h3.osg-collapsable--heading {
+      @extend %osg-heading-6;
+
       button {
         all: inherit;
         cursor: pointer;

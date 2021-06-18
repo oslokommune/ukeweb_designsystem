@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const collapsable = document.querySelector('.osg-opening-hours__not-ordinary');
+  const collapsable = document.querySelector('.osg-collapsable--trigger');
 
   if (!collapsable) {
     return;
   }
 
-  const headings = document.querySelectorAll('h3');
+  const headings = document.querySelectorAll('.osg-collapsable--heading');
 
   Array.prototype.forEach.call(headings, heading => {
     let btn = heading.querySelector('button');
