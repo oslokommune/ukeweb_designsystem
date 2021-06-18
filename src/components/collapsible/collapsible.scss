@@ -1,3 +1,8 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/icons";
+@use "system/spacing";
+
 .osg-collapsible {
   visibility: visible;
 
@@ -17,6 +22,65 @@
 
     &.osg-collapsible--collapsed {
       opacity: 0;
+    }
+  }
+
+  &--block {
+    @extend %osg-padding-15;
+  }
+
+  &__trigger {
+    &--block {
+      @extend %osg-padding-15;
+      @extend %osg-text-4;
+      background-color: colors.$gray-light;
+      border: none;
+      color: inherit;
+      display: block;
+      font-family: inherit;
+      position: relative;
+      text-align: left;
+      width: 100%;
+
+      &:hover {
+        background-color: colors.$gray;
+        cursor: pointer;
+      }
+
+      &::after {
+        font-family: 'Oslo Icons';
+        font-size: 1.5rem;
+        content: map-get(icons.$icons, 'chevron-thin-down');
+        position: absolute;
+        right: spacing.$space-15;
+      }
+    }
+
+    &--link {
+      @extend %osg-text-4;
+      color: inherit;
+      display: inline-block;
+      font-family: inherit;
+
+      &:hover {
+        color: colors.$blue-contrast;
+        cursor: pointer;
+      }
+
+      &::after {
+        @extend %osg-margin-left-5;
+        content: map-get(icons.$icons, 'chevron-thin-down');
+        font-family: 'Oslo Icons';
+        font-size: 1.5rem;
+        vertical-align: top;
+      }
+    }
+
+    &--expanded {
+      &.osg-collapsible__trigger--block::after,
+      &.osg-collapsible__trigger--link::after {
+        content: map-get(icons.$icons, 'chevron-thin-up');
+      }
     }
   }
 }

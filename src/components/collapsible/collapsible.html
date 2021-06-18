@@ -1,13 +1,16 @@
 <div class="osg-container">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <p class="osg-devtools-nondevmode osg-padding-20 osg-margin-bottom-30 osg-color-bg-yellow">Triggers get the <strong>.osg-collapsible__trigger--expanded</strong> modifier when content is expanded.</p>
+      <p class="osg-devtools-nondevmode osg-padding-20 osg-margin-bottom-30 osg-color-bg-yellow">
+        Triggers get the <strong>.osg-collapsible__trigger--expanded</strong> modifier when content is expanded.<br>
+        Triggers should be wrapper in heading elements where possible to help screen readers
+      </p>
       <h2 class="osg-heading-3">Default</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
-        <button class="osg-button osg-collapsible__trigger" aria-controls="osg-collapsible-1">Trigger</button>
-        <p aria-expanded="true" id="osg-collapsible-1" class="osg-collapsible osg-text-5 osg-margin-top-15">Lorem ipsum
+        <h3><button class="osg-button osg-collapsible__trigger" aria-expanded="true" aria-controls="osg-collapsible-1">Trigger</button></h3>
+        <p id="osg-collapsible-1" class="osg-collapsible osg-text-5 osg-margin-top-15">Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus at,
           molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere ut
           eget arcu.</p>
@@ -18,8 +21,8 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
-        <button class="osg-button osg-collapsible__trigger" aria-controls="osg-collapsible-2">Trigger</button>
-        <p aria-expanded="false" id="osg-collapsible-2"
+        <h3><button class="osg-button osg-collapsible__trigger" aria-expanded="false" aria-controls="osg-collapsible-2">Trigger</button></h3>
+        <p id="osg-collapsible-2"
           class="osg-collapsible osg-collapsible--collapsed osg-text-5 osg-margin-top-15">Lorem ipsum dolor sit amet,
           consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus at, molestie vel
           dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere ut eget arcu.
@@ -31,9 +34,30 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
-        <button class="osg-button osg-collapsible__trigger" aria-controls="osg-collapsible-3">Trigger</button>
-        <p aria-expanded="false" id="osg-collapsible-3"
+        <h3><button class="osg-button osg-collapsible__trigger" aria-expanded="false" aria-controls="osg-collapsible-3">Trigger</button></h3>
+        <p id="osg-collapsible-3"
           class="osg-collapsible osg-collapsible--collapsed osg-collapsible--ease osg-text-5 osg-margin-top-15">Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus
+          at, molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere
+          ut eget arcu.</p>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3">Styled</h2>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <div class="osg-devtools-code">
+        <h3><button class="osg-collapsible__trigger osg-collapsible__trigger--block" aria-expanded="false" aria-controls="osg-collapsible-4">Trigger</button></h3>
+        <p id="osg-collapsible-4"
+          class="osg-collapsible osg-collapsible--block osg-collapsible--collapsed osg-collapsible--ease osg-color-bg-gray-light osg-text-5">Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus
+          at, molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere
+          ut eget arcu.</p>
+      </div>
+      <div class="osg-devtools-code">
+        <h3><a class="osg-collapsible__trigger osg-collapsible__trigger--link" aria-expanded="false" aria-controls="osg-collapsible-5">Trigger</a></h3>
+        <p id="osg-collapsible-5"
+          class="osg-collapsible osg-collapsible--collapsed osg-collapsible--ease osg-text-5 osg-margin-top-5">Lorem
           ipsum dolor sit amet, consectetur adipiscing elit. Donec a fringilla erat. Sed eros urna, vulputate in cursus
           at, molestie vel dolor. Vestibulum vehicula placerat nisi et accumsan. Cras nec lorem nec arcu laoreet posuere
           ut eget arcu.</p>

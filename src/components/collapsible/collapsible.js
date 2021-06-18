@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (collapsible) {
         collapsible.classList.toggle('osg-collapsible--collapsed');
 
-        collapsible.setAttribute('aria-expanded',
+        e.target.setAttribute('aria-expanded',
           collapsible.classList.contains('osg-collapsible--collapsed') ? false : true
         );
         e.target.classList.toggle('osg-collapsible__trigger--expanded',
