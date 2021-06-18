@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const collapsable = document.querySelector('.osg-opening-hours__not-ordinary');
+
+  if (!collapsable) {
+    return;
+  }
+
   const headings = document.querySelectorAll('h3');
 
   Array.prototype.forEach.call(headings, heading => {
