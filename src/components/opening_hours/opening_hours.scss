@@ -10,12 +10,18 @@
   @extend %osg-text-5;
   border: 2px solid colors.$yellow;
 
-  table tr td {
-    @extend %osg-padding-bottom-50;
-  }
+  table {
+    @extend %osg-padding-bottom-5;
+    width: 100%;
 
-  table td + td {
-    @extend %osg-padding-left-15;
+    tr {
+      td:first-child {
+        width: 35%;
+      }
+      td + td {
+        width: 65%;
+      }
+    }
   }
 
   &--without-border {
@@ -41,11 +47,11 @@
   }
 
   &__exception-indicator {
-    @extend %osg-margin-left-50;
+    @extend %osg-margin-left-5;
   }
 
   &__day {
-    @extend %osg-margin-top-50;
+    @extend %osg-margin-top-5;
 
     &--today {
       @extend %osg-text-medium;
@@ -56,6 +62,6 @@
   }
 
   &__time-separator {
-    @extend %osg-margin-horizontal-50;
+    @extend %osg-margin-horizontal-5;
   }
 }
