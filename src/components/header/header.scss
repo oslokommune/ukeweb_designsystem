@@ -3,7 +3,10 @@
 @use "system/spacing";
 
 .osg-header {
-  @extend %osg-padding-horizontal-30-breakpoint-large;
+  @extend %osg-padding-left-none;
+  @extend %osg-padding-right-20;
+  @extend %osg-padding-left-30-breakpoint-large;
+  @extend %osg-padding-right-50-breakpoint-large;
   background-color: colors.$white;
   border-bottom: 1px solid colors.$gray;
 }
