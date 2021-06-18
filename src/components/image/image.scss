@@ -5,6 +5,13 @@
 .osg-image {
   display: block;
   line-height: 0;
+  object-fit: cover;
+  width: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
 
   &--circle {
     border-radius: 50%;
