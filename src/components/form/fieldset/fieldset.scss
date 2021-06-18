@@ -13,7 +13,7 @@
 
     legend {
       @extend %osg-text-4;
-      padding: spacing.$space-50;
+      padding: spacing.$space-5;
     }
   }
 
@@ -24,7 +24,7 @@
     legend {
       @extend %osg-text-4;
       margin-bottom: spacing.$space-10;
-      padding-bottom: spacing.$space-50;
+      padding-bottom: spacing.$space-5;
     }
   }
 
@@ -34,7 +34,7 @@
     legend {
       @extend %osg-text-4;
       margin-bottom: spacing.$space-10;
-      padding-bottom: spacing.$space-50;
+      padding-bottom: spacing.$space-5;
     }
 
     legend + div {
