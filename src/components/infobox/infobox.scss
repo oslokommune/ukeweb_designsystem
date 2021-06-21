@@ -3,10 +3,14 @@
 @use "system/spacing";
 
 .osg-infobox {
-  @extend %osg-padding-15;
+  @extend %osg-padding-30;
   background-color: colors.$blue-light;
 
   &__heading {
-    @extend %osg-heading-5, %osg-margin-bottom-10;
+    @extend %osg-heading-6, %osg-margin-bottom-5;
+  }
+
+  &--yellow {
+    background-color: colors.$yellow;
   }
 }
