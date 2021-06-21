@@ -100,7 +100,7 @@
   &__background {
     border-radius: inherit;
     display: block;
-    height: 23px;
+    height: 24px;
     position: relative;
     transition: all 0.15s ease-out 0s;
   }
@@ -117,10 +117,10 @@
     background-color: colors.$white;
     border: 2px solid colors.$blue-dark;
     border-radius: 13px;
-    height: 27px;
+    height: 26px;
     left: -2px;
     position: absolute;
-    top: -2px;
+    top: -1px;
     transition: left 0.15s ease-out 0s;
     width: 27px;
   }
