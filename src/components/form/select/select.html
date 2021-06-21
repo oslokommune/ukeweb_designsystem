@@ -1,4 +1,51 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <p class="osg-text-2">
+        Select element represents a control that provides a menu of options.
+      </p>
+      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+        <h2 class="osg-infobox__heading">Rules for components</h2>
+        <p class="osg-paragraph">?</p>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-devtools-heading">Default</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-select">
+            <div class="osg-select__select">
+              <select aria-label="Select an option">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-devtools-heading">With Label</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-select">
+            <label class="osg-select__label">
+              Label
+              <div class="osg-select__select">
+                <select>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-heading-3">Default</h2>
@@ -102,5 +149,6 @@
           <div class="osg-input__error-message" id="error-1">Error message</div>
         </div>
       </div>
+    </div>
   </div>
 </div>
