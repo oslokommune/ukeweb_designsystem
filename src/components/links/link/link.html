@@ -1,67 +1,85 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Default</h2>
+      <p class="osg-text-2">Link language: "read more", "click here", "more info" for screen readers this will not give informative information.</p>
     </div>
     <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">Default</h2>
+      <p class="osg-paragraph">For best practice (Universal design) a link should open in the same window.</p>
+      <p class="osg-paragraph osg-margin-left-15">- There should be a good reason for not following this rule, (eks opening PDF files) you then also have to use the external link icon.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <a href="javascript:void(0)" class="osg-link">Link</a>
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">External</h2>
+      <p class="osg-paragraph">Rule for external link is that it requires an external link icon after the text. Use the external link when you want to link to another website or a new domene. </p>
+      <p class="osg-paragraph osg-margin-left-15">- Exception on the rule is when we link to sudo domene. Then use default link.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <a href="javascript:void(0)" class="osg-link osg-link--external" target="_blank" aria-label="Opens in a new window">Link</a>
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">Chevron</h2>
+      <p class="osg-paragraph">Chevron icon left is used for links that will take you back, chevron icon right is used for links that take you forward.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <a href="javascript:void(0)" class="osg-link osg-link--chevron-left">Link</a>
+        </div>
+      </div>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <a href="javascript:void(0)" class="osg-link osg-link--chevron-right">Link</a>
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">In text</h2>
+      <p class="osg-text-5">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an <a
+        href="javascript:void(0)" class="osg-link">unknown printer</a> took a galley of type and scrambled it to make 
+        a type specimen book. It has survived not only five centuries, but also the <a href="javascript:void(0)"
+        class="osg-link osg-link--external" aria-label="Opens in a new window">leap into electronic</a> typesetting, 
+        remaining essentially unchanged.</p>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">Default</h2>
       <div class="osg-devtools-code">
         <a href="javascript:void(0)" class="osg-link">Link</a>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">External</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">External</h2>
       <div class="osg-devtools-code">
-        <a href="javascript:void(0)" class="osg-link osg-link--external" target="_blank">Link</a>
+        <a href="javascript:void(0)" class="osg-link osg-link--external" target="_blank" aria-label="Opens in a new window">Link</a>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Chevron</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">Chevron</h2>
       <div class="osg-devtools-code">
         <a href="javascript:void(0)" class="osg-link osg-link--chevron-left">Link</a>
       </div>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
         <a href="javascript:void(0)" class="osg-link osg-link--chevron-right">Link</a>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">State light</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <div class="osg-devtools-code">
-        <a href="javascript:void(0)" class="osg-link osg-link--state-light">Link</a>
-      </div>
-    </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">In text</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">In text</h2>
       <p class="osg-text-5">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an <a
-          href="javascript:void(0)" class="osg-link">unknown printer</a> took a galley of type and scrambled it to make
-        a
-        type
-        specimen book. It has survived not only five centuries, but also the <a href="javascript:void(0)"
-          class="osg-link osg-link--external">leap into electronic</a> typesetting, remaining essentially unchanged.</p>
-    </div>
-  </div>
-  <div class="osg-row osg-devtools-debug">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">States</h2>
+        href="javascript:void(0)" class="osg-link">unknown printer</a> took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the <a href="javascript:void(0)"
+        class="osg-link osg-link--external" aria-label="Opens in a new window">leap into electronic</a> typesetting, remaining essentially unchanged.</p>
     </div>
     <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-bottom-5">States</h2>
       <a href="javascript:void(0)" class="osg-link osg-link--visited">Visited</a>
       <a href="javascript:void(0)" class="osg-link osg-link--hover osg-margin-left-15">Hover</a>
       <a href="javascript:void(0)" class="osg-link osg-link--focus osg-margin-left-15">Focus</a>
@@ -76,44 +94,42 @@
       <a href="javascript:void(0)"
         class="osg-link osg-link--state-light osg-link--state-light-active osg-margin-left-15">Active</a>
     </div>
-  </div>
-  <div class="osg-row osg-devtools-debug">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Testcases</h2>
+      <h2 class="osg-heading-3 osg-margin-bottom-5">Testcases</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-1">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-2 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-3 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-4 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-5 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-6 osg-margin-left-15">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-1" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-2 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-3 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-4 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-5 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-heading-6 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-1">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-2 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-3 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-4 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-5 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-6 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-7 osg-margin-left-15">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-1" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-2 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-3 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-4 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-5 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-6 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external osg-text-7 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-1">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-2 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-3 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-4 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-5 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-6 osg-margin-left-15">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-1" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-2 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-3 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-4 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-5 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-heading-6 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-1">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-2 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-3 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-4 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-5 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-6 osg-margin-left-15">Link</a>
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-7 osg-margin-left-15">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-1" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-2 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-3 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-4 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-5 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-6 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-text-7 osg-margin-left-15" aria-label="Opens in a new window">Link</a>
     </div>
     <div
       class="osg-row__column osg-row__column--6 osg-row__column--3-breakpoint-medium osg-row__column--2-breakpoint-large">
@@ -121,29 +137,36 @@
     </div>
     <div
       class="osg-row__column osg-row__column--6 osg-row__column--3-breakpoint-medium osg-row__column--2-breakpoint-large">
-      <a href="javascript:void(0)" class="osg-link osg-link--external">Link spanning multiple lines</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--external" aria-label="Opens in a new window">
+        Link spanning multiple lines
+      </a>
     </div>
     <div
       class="osg-row__column osg-row__column--6 osg-row__column--3-breakpoint-medium osg-row__column--2-breakpoint-large">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right">Link spanning multiple lines</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right">
+        Link spanning multiple lines
+      </a>
     </div>
     <div
       class="osg-row__column osg-row__column--6 osg-row__column--3-breakpoint-medium osg-row__column--2-breakpoint-large">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external">Link spanning multiple
-        lines</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external" aria-label="Opens in a new window">
+        Link spanning multiple lines
+      </a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external osg-heading-1">External
-        chevron
-        link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external osg-heading-1" aria-label="Opens in a new window">
+        External chevron link
+      </a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external osg-text-1">External
-        chevron
-        link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external osg-text-1" aria-label="Opens in a new window">
+        External chevron link
+      </a>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external">External chevron link</a>
+      <a href="javascript:void(0)" class="osg-link osg-link--chevron-right osg-link--external" aria-label="Opens in a new window">
+        External chevron link
+      </a>
     </div>
   </div>
 </div>
