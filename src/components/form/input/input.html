@@ -6,15 +6,21 @@
       </p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">?</p>
+        <p class="osg-paragraph">
+          The input element should never take the 100% width of the page in medium and up breakpoints.
+        </p>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-input">
-            <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text">
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <div class="osg-input">
+                <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -23,11 +29,15 @@
       <h2 class="osg-devtools-heading">With label</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-input">
-            <label class="osg-input__label">
-              Label text
-              <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
-            </label>
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <div class="osg-input">
+                <label class="osg-input__label">
+                  Label text
+                  <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+                </label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -36,7 +46,7 @@
       <h2 class="osg-devtools-heading">Input types</h2>
       <p class="osg-paragraph">Use the correct input type when setting up.</p>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium osg-padding-top-none">
+    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input osg-input--search">
@@ -48,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium osg-padding-top-none">
+    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -81,8 +91,8 @@
               Optional text
               <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="optional-1">
             </label>
+            <div class="osg-input__required" id="optional-1">(optional)</div>
           </div>
-          <div class="osg-input__required" id="optional-1">(optional)</div>
         </div>
       </div>
     </div>

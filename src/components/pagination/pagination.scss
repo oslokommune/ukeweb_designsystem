@@ -8,4 +8,10 @@
     //padding: 0 5px;
     @extend %osg-padding-horizontal-50;
   }
+
+  .osg-button,
+  .osg-button--small,
+  .osg-button--cicle {
+    line-height: 1.5rem !important;
+  }
 }

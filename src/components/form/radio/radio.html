@@ -6,7 +6,9 @@
       </p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">?</p>
+        <p class="osg-paragraph">
+          The radio button text should never take the 100% width of the page in medium and up breakpoints.
+        </p>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
@@ -48,18 +50,23 @@
         </div>
       </div>
       <p class="osg-paragraph">
-        When error is used think about what information you give the user in the error message.
+        When error is used think about what information you give the user in the error message.<br/>
+        The length of the error message shouldn't take 100% of the width of the page.
       </p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <label class="osg-radio osg-radio--error">
-            <span class="osg-radio__input">
-              <input type="radio" name="radio-55" aria-describedby="error-1">
-              <span class="osg-radio__control"></span>
-            </span>
-            <span class="osg-radio__label">Error/invalid</span>
-          </label>
-          <div class="osg--error-message" id="error-1">Error message</div>
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <label class="osg-radio osg-radio--error">
+                <span class="osg-radio__input">
+                  <input type="radio" name="radio-55" aria-describedby="error-1">
+                  <span class="osg-radio__control"></span>
+                </span>
+                <span class="osg-radio__label">Error/invalid</span>
+              </label>
+              <div class="osg--error-message" id="error-1">Error message</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
