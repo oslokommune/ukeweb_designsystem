@@ -1,4 +1,52 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <p class="osg-text-2">
+        A textarea is a multiline text input control.
+      </p>
+      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+        <h2 class="osg-infobox__heading">Rules for components</h2>
+        <p class="osg-paragraph">
+          The textarea should never take the 100% width of the page in medium and up breakpoints.
+        </p>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-devtools-heading">Default</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+            <div class="osg-textarea">
+              <textarea class="osg-textarea__textarea" aria-label="Label text" placeholder="Write something here..."></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-devtools-heading">With label</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+            <div class="osg-textarea">
+              <label class="osg-textarea__label">
+                Text
+                <textarea class="osg-textarea__textarea" placeholder="Write something here..."></textarea>
+                <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-heading-3">Default</h2>

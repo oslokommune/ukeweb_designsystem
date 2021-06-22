@@ -6,30 +6,36 @@
       </p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">?</p>
+        <p class="osg-paragraph">
+          The content of the fieldset element should never take the 100% width of the page in medium and up breakpoints.
+        </p>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <fieldset class="osg-fieldset osg-fieldset--default">
-            <legend>Label text:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked">
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text">
-                Text
-              </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1">
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text">
-                Text
-              </span>
-            </label>
-          </fieldset>
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <fieldset class="osg-fieldset osg-fieldset--default">
+                <legend>Label text:</legend>
+                <label class="osg-checkbox">
+                  <input type="checkbox" name="checkbox-1" checked="checked">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Text
+                  </span>
+                </label>
+                <label class="osg-checkbox">
+                  <input type="checkbox" name="checkbox-1">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Text
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -37,25 +43,29 @@
       <h2 class="osg-devtools-heading">Label over</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <fieldset class="osg-fieldset osg-fieldset--border-under">
-            <legend>Label text:</legend>
-            <div>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" checked="checked">
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">
-                  Text
-                </span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1">
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">
-                  Text
-                </span>
-              </label>
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <fieldset class="osg-fieldset osg-fieldset--border-under">
+                <legend>Label text:</legend>
+                <div>
+                  <label class="osg-checkbox">
+                    <input type="checkbox" name="checkbox-1" checked="checked">
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">
+                      Text
+                    </span>
+                  </label>
+                  <label class="osg-checkbox">
+                    <input type="checkbox" name="checkbox-1">
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">
+                      Text
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
+          </div>
         </div>
       </div>
     </div>
@@ -63,23 +73,27 @@
       <h2 class="osg-devtools-heading">No border</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <fieldset class="osg-fieldset osg-fieldset--no-border">
-            <legend>Select the options:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked">
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text">
-                Option 1
-              </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1">
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text">
-                Option 2
-              </span>
-            </label>
-          </fieldset>
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <fieldset class="osg-fieldset osg-fieldset--no-border">
+                <legend>Select the options:</legend>
+                <label class="osg-checkbox">
+                  <input type="checkbox" name="checkbox-1" checked="checked">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Option 1
+                  </span>
+                </label>
+                <label class="osg-checkbox">
+                  <input type="checkbox" name="checkbox-1">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Option 2
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+          </div>
         </div>
       </div>
     </div>
