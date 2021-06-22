@@ -1,11 +1,48 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3">Default</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div id="vue1">
+            <osg-image-carousel :images="[
+              {
+                large: 'https://picsum.photos/seed/200/1920/725',
+                medium: 'https://picsum.photos/seed/200/1024/540',
+                small: 'https://picsum.photos/seed/200/768/290',
+                caption: 'Test Caption One',
+                srDescription: 'srDescription One'
+              },
+              {
+                large: 'https://picsum.photos/seed/475/1920/725',
+                medium: 'https://picsum.photos/seed/475/1024/540',
+                small: 'https://picsum.photos/seed/475/768/290',
+                caption: 'Test Caption Two',
+                srDescription: 'srDescription Two'
+              },
+              {
+                large: 'https://picsum.photos/seed/770/1920/725',
+                medium: 'https://picsum.photos/seed/770/1024/540',
+                small: 'https://picsum.photos/seed/770/768/290',
+                caption: 'Test Caption Three',
+                srDescription: 'srDescription Three'
+              }
+            ]"></osg-image-carousel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-heading-3">Default</h2>
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-devtools-code">
-        <div id="vue">
+        <div id="vue2">
           <osg-image-carousel :images="[
             {
               large: 'https://picsum.photos/seed/200/1920/725',
