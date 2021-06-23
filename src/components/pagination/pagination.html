@@ -1,192 +1,193 @@
 <div class="osg-container">
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Links, first page</h2>
-    </div>
     <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
+      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+        <h2 class="osg-infobox__heading">Component rules</h2>
+        As a guideline, you should have a maximum of 7 links/buttons within the next / previous arrows (spacers do not count).<br>
+        If you have more than 99 pages, use the rectangle modifier for page 100 and onwards.<br>
+        If you have <= 7 pages in total, you do not need to add spacers.<br>
+        On the first and last page, you should have a maximum of 6 links.
+      </div>
+      <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
-        <nav class="osg-pagination" aria-label="Pagination first page">
-          <a class="osg-button osg-button--small osg-button--circle" aria-current="page">
+        <nav class="osg-pagination" aria-label="Pagination">
+          <a href="javascript:void(0)" class="osg-pagination__previous" aria-label="Show previous page"></a>
+          <a href="javascript:void(0)" class="osg-pagination__item">
+            <span class="osg-sr-only">Go to page 1</span>
+            <span aria-hidden="true">1</span>
+          </a>
+          <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
+          <a href="javascript:void(0)" class="osg-pagination__item">
+            <span class="osg-sr-only">Go to page 97</span>
+            <span aria-hidden="true">97</span>
+          </a>
+          <a href="javascript:void(0)" class="osg-pagination__item">
+            <span class="osg-sr-only">Go to page 98</span>
+            <span aria-hidden="true">98</span>
+          </a>
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current" aria-current="page">
+            <span class="osg-sr-only">Page 99</span>
+            <span aria-hidden="true">99</span>
+          </a>
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
+            <span class="osg-sr-only">Go to page 100</span>
+            <span aria-hidden="true">100</span>
+          </a>
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
+            <span class="osg-sr-only">Go to page 101</span>
+            <span aria-hidden="true">101</span>
+          </a>
+          <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
+            <span class="osg-sr-only">Go to page 999</span>
+            <span aria-hidden="true">999</span>
+          </a>
+          <a href="javascript:void(0)" class="osg-pagination__next" aria-label="Show previous page"></a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
+      <h2 class="osg-devtools-heading">Links, first page</h2>
+      <div class="osg-devtools-code">
+        <nav class="osg-pagination" aria-label="Pagination, first page">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current" aria-current="page">
             <span class="osg-sr-only">Page 1</span>
             <span aria-hidden="true">1</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 2</span>
             <span aria-hidden="true">2</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 3</span>
             <span aria-hidden="true">3</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 4</span>
             <span aria-hidden="true">4</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 5</span>
             <span aria-hidden="true">5</span>
           </a>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 100</span>
             <span aria-hidden="true">100</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show next page"><span class="osg-button__icon osg-icons--chevron-right"></span></a>
+          <a href="javascript:void(0)" class="osg-pagination__next" aria-label="Show next page"></a>
         </nav>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Links, middle, on page 99</h2>
-    </div>
+
     <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
+      <h2 class="osg-devtools-heading">Links, middle, on page 100</h2>
       <div class="osg-devtools-code">
-        <nav class="osg-pagination" aria-label="Pagination first page">
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show previous page"><span class="osg-button__icon osg-icons--chevron-left"></span></a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+        <nav class="osg-pagination" aria-label="Pagination">
+          <a href="javascript:void(0)" class="osg-pagination__previous" aria-label="Show previous page"></a>
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 1</span>
             <span aria-hidden="true">1</span>
           </a>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
-            <span class="osg-sr-only">Go to page 97</span>
-            <span aria-hidden="true">97</span>
-          </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 98</span>
             <span aria-hidden="true">98</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--small osg-button--circle" aria-current="page">
-            <span class="osg-sr-only">Page 99</span>
-            <span aria-hidden="true">99</span>
-          </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
-            <span class="osg-sr-only">Go to page 100</span>
-            <span aria-hidden="true">100</span>
-          </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
-            <span class="osg-sr-only">Go to page 101</span>
-            <span aria-hidden="true">101</span>
-          </a>
-          <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
-            <span class="osg-sr-only">Go to page 999</span>
-            <span aria-hidden="true">999</span>
-          </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show next page"><span class="osg-button__icon osg-icons--chevron-right"></span></a>
-        </nav>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Links, middle, on page 100</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
-      <div class="osg-devtools-code">
-        <nav class="osg-pagination" aria-label="Pagination first page">
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show previous page"><span class="osg-button__icon osg-icons--chevron-left"></span></a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
-            <span class="osg-sr-only">Go to page 1</span>
-            <span aria-hidden="true">1</span>
-          </a>
-          <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
-            <span class="osg-sr-only">Go to page 98</span>
-            <span aria-hidden="true">98</span>
-          </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 99</span>
             <span aria-hidden="true">99</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--small" aria-current="page">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle" aria-current="page">
             <span class="osg-sr-only">Page 100</span>
             <span aria-hidden="true">100</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 101</span>
             <span aria-hidden="true">101</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 102</span>
             <span aria-hidden="true">102</span>
           </a>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 999</span>
             <span aria-hidden="true">999</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show next page"><span class="osg-button__icon osg-icons--chevron-right"></span></a>
+          <a href="javascript:void(0)" class="osg-pagination__next" aria-label="Show next page"></a>
         </nav>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Buttons, middle, on page 100</h2>
-    </div>
+
     <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
+      <h2 class="osg-devtools-heading">Buttons, middle, on page 100</h2>
       <div class="osg-devtools-code">
-        <nav class="osg-pagination" aria-label="Pagination first page">
-          <button class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show previous page"><span class="osg-button__icon osg-icons--chevron-left"></span></button>
-          <button class="osg-button osg-button--text osg-button--small osg-button--circle">
+        <nav class="osg-pagination" aria-label="Pagination">
+          <button class="osg-pagination__previous" aria-label="Show previous page"></button>
+          <button class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 1</span>
             <span aria-hidden="true">1</span>
           </button>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <button class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <button class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 98</span>
             <span aria-hidden="true">98</span>
           </button>
-          <button class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <button class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 99</span>
             <span aria-hidden="true">99</span>
           </button>
-          <button class="osg-button osg-button--small" aria-current="page">
+          <button class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle" aria-current="page">
             <span class="osg-sr-only">Page 100</span>
             <span aria-hidden="true">100</span>
           </button>
-          <button class="osg-button osg-button--text osg-button--small">
+          <button class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 101</span>
             <span aria-hidden="true">101</span>
           </button>
-          <button class="osg-button osg-button--text osg-button--small">
+          <button class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 102</span>
             <span aria-hidden="true">102</span>
           </button>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <button class="osg-button osg-button--text osg-button--small">
+          <button class="osg-pagination__item osg-pagination__item--rectangle">
             <span class="osg-sr-only">Go to page 999</span>
             <span aria-hidden="true">999</span>
           </button>
-          <button class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show next page"><span class="osg-button__icon osg-icons--chevron-right"></span></button>
+          <button class="osg-pagination__next" aria-label="Show next page"></button>
         </nav>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Last page</h2>
-    </div>
+
     <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-large">
+      <h2 class="osg-devtools-heading">Last page</h2>
       <div class="osg-devtools-code">
-        <nav class="osg-pagination" aria-label="Pagination first page">
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle" aria-label="Show previous page"><span class="osg-button__icon osg-icons--chevron-left"></span></a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+        <nav class="osg-pagination" aria-label="Pagination, last page">
+          <a href="javascript:void(0)" class="osg-pagination__previous" aria-label="Show previous page"></a>
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 1</span>
             <span aria-hidden="true">1</span>
           </a>
           <span class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 9</span>
             <span aria-hidden="true">9</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 10</span>
             <span aria-hidden="true">10</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 11</span>
             <span aria-hidden="true">12</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--text osg-button--small osg-button--circle">
+          <a href="javascript:void(0)" class="osg-pagination__item">
             <span class="osg-sr-only">Go to page 13</span>
             <span aria-hidden="true">13</span>
           </a>
-          <a href="javascript:void(0)" class="osg-button osg-button--small osg-button--circle" aria-current="page">
+          <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current" aria-current="page">
             <span class="osg-sr-only">Page 14</span>
             <span aria-hidden="true">14</span>
           </a>

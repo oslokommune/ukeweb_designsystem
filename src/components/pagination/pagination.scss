@@ -1,17 +1,76 @@
+@use "system/colors";
+@use "system/fonts";
 @use "system/spacing";
+@use "system/state";
+@use "system/icons";
 
 .osg-pagination {
   &__spacer {
     cursor: default;
     transform: translateY(-0.25rem);
     display: inline-block;
-    //padding: 0 5px;
-    @extend %osg-padding-horizontal-50;
+    @extend %osg-padding-horizontal-5;
   }
 
-  .osg-button,
-  .osg-button--small,
-  .osg-button--cicle {
-    line-height: 1.5rem !important;
+  &__item {
+    @extend %osg-padding-5;
+
+    line-height: 1.5rem;
+    box-sizing: content-box;
+    width: 1.5em;
+    background: transparent;
+    border: 2px solid transparent;
+    color: colors.$blue-dark;
+    display: inline-block;
+    font-family: inherit;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 50%;
+
+    font-size: fonts.$size-16 !important;
+    font-weight: 500; // @extend?
+    // ?? kan vi bruke text-5 eller noe?
+
+    &:hover, &:focus {
+      background-color: colors.$gray-light;
+      border-color: colors.$gray-light;
+      @extend %osg-state-text-hover;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      text-decoration: underline;
+      color: colors.$blue-contrast;
+    }
+
+    &--current {
+      color: colors.$white;
+      background: colors.$blue-dark;
+      border: 2px solid colors.$blue-dark;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        background: colors.$blue-contrast !important;
+        border: 2px solid colors.$blue-contrast !important;
+        text-decoration: underline !important;
+        color: colors.$white !important;
+      }
+    }
+
+    &--rectangle {
+      border-radius: 0;
+      width: auto;
+      @extend %osg-padding-horizontal-10, %osg-padding-vertical-5;
+    }
   }
+
+  &__next, &__previous {
+    // icon stuff here
+  }
+
+  &__next {
+    // chevron-thin-right here
+  }
+
 }
