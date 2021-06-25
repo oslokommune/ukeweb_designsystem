@@ -1,12 +1,10 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
   <div class="osg-container osg-container--content-limit">
     <div class="osg-row">
       <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Default</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-devtools-heading">Default</h2>
         <div class="osg-devtools-code">
-          <div class="osg-row">
+          <div class="osg-devtools-code__box">
             <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
               <div class="osg-opening-hours">
                 <h2 class="osg-heading-3 osg-margin-bottom-15">Opening hours for the cafeteria</h2>
@@ -23,14 +21,14 @@
                 </nav>
                 <table>
                   <caption>
-                    <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria <span>from 27th September to 3rd September</span></h2>
+                    <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
                   </caption>
                   <tr>
                     <th scope="col"><span class="osg-sr-only">Weekday</td></th>
                     <th scope="col"><span class="osg-sr-only">Time</span></th>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Mon:</td>
+                    <th scope="row">Mon:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -38,11 +36,11 @@
                     </td>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Tue:</td>
+                    <th scope="row">Tue:</td>
                     <td>Open 24 hours</td>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--today">
-                    <td scope="row">Wed:</td>
+                    <th scope="row">Wed:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -50,7 +48,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Thu:</td>
+                    <th scope="row">Thu:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -58,7 +56,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Fri:</td>
+                    <th scope="row">Fri:</td>
                     <td>
                       <time class="osg-opening-hours__time">09:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -68,11 +66,11 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Sat:</td>
+                    <th scope="row">Sat:</td>
                     <td>Closed</td>
                   </tr>
                   <tr>
-                    <td scope="row">Sun:</td>
+                    <th scope="row">Sun:</td>
                     <td>Closed</td>
                   </tr>
                 </table>
@@ -82,7 +80,7 @@
                 <div class="osg-opening-hours__extra">
                   <p class="osg-paragraph">
                     <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
-                    Vestibulum ullamcorper fermentum fermentum. Aenean leo auctor fermentum.
+                    It has survived not only five centuries, but also the leap into electronic.
                   </p>
                 </div>
                 <div class="osg-opening-hours__extra">
@@ -96,19 +94,278 @@
                       Exceptions from ordinary opening hours
                     </a>
                   </h3>
-                  <p
+                  <div
                     class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
                     id="osg-collapsible-1">
-                    24.12. Christmas eve: Closed<br />
-                    25.12. Christmas day: Closed<br />
-                    26.12. Boxing day: Closed<br />
-                    31.12. New Year's Eve: Closed<br />
-                    01.01. New Year's Day: Closed<br />
-                  </p>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-devtools-heading">No border</h2>
+        <div class="osg-devtools-code">
+          <div class="osg-devtools-code__box">
+            <div class="osg-row">
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+                <div class="osg-opening-hours osg-opening-hours--without-border">
+                  <h2 class="osg-heading-3 osg-margin-bottom-15">Opening hours for the cafeteria</h2>
+                  <div class="osg-opening-hours__week" aria-hidden="true">
+                    20. September - 26. September
+                  </div>
+                  <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
+                    <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
+                      <span class="osg-sr-only">Show </span>Previous week
+                    </a> -
+                    <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
+                      <span class="osg-sr-only">Show </span>Next week
+                    </a>
+                  </nav>
+                  <table>
+                    <caption>
+                      <h2 class="osg-sr-only" id="week-interval-caption-3">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                    </caption>
+                    <tr>
+                      <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                      <th scope="col"><span class="osg-sr-only">Time</span></th>
+                    </tr>
+                    <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                      <th scope="row">Mon:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                      <th scope="row">Tue:</td>
+                      <td>Open entire day</td>
+                    </tr>
+                    <tr class="osg-opening-hours__day osg-opening-hours__day--today">
+                      <th scope="row">Wed:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Thu:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Fri:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">09:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                        <span class="osg-sr-only">Exceptions from ordinary opening hours.</span>
+                        <span aria-hidden="true">*</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sat:</td>
+                      <td>Closed</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sun:</td>
+                      <td>Closed</td>
+                    </tr>
+                  </table>
+                  <div class="osg-opening-hours__extra">
+                    <span class="osg-text-7">* Exceptions from ordinary opening hours.</span>
+                  </div>
+                  <div class="osg-opening-hours__extra">
+                    <p class="osg-paragraph">
+                      <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
+                      It has survived not only five centuries, but also the leap into electronic.
+                    </p>
+                  </div>
+                  <div class="osg-opening-hours__extra">
+                    <a href="javascript:void(0)" class="osg-link">Lorem ipsum dolor sit amet</a>
+                  </div>
+                  <div class="osg-opening-hours__not-ordinary">
+                    <h3>
+                      <a
+                        class="osg-collapsible__trigger osg-collapsible__trigger--link"
+                        aria-expanded="false" aria-controls="osg-collapsible-2">
+                        Exceptions from ordinary opening hours
+                      </a>
+                    </h3>
+                    <div
+                      class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
+                      id="osg-collapsible-2">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-devtools-heading">No navigation</h2>
+        <div class="osg-devtools-code">
+          <div class="osg-devtools-code__box">
+            <div class="osg-row">
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+                <div class="osg-opening-hours">
+                  <div class="osg-opening-hours__heading">
+                    <h2>Opening hours for the cafeteria</h2>
+                  </div>
+                  <table>
+                    <caption>
+                      <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                    </caption>
+                    <tr>
+                      <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                      <th scope="col"><span class="osg-sr-only">Time</span></th>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Monday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Tuesday:</td>
+                      <td>Open entire day</td>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Wednesday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Thursday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Friday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">09:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Saturday:</td>
+                      <td>Closed</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sunday:</td>
+                      <td>Closed</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-devtools-heading">Half width</h2>
+        <div class="osg-devtools-code">
+          <div class="osg-devtools-code__box">
+            <div class="osg-row">
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+                <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+                <p class="osg-paragraph">
+                  Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.
+                </p>
+              </div>
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+                <div class="osg-opening-hours">
+                  <div class="osg-opening-hours__heading">
+                    <h2>Opening hours for the cafeteria</h2>
+                  </div>
+                  <table>
+                    <caption>
+                      <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                    </caption>
+                    <tr>
+                      <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                      <th scope="col"><span class="osg-sr-only">Time</span></th>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Monday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Tuesday:</td>
+                      <td>Open entire day</td>
+                    </tr>
+                    <tr class="osg-opening-hours__day">
+                      <th scope="row">Wednesday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Thursday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">07:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Friday:</td>
+                      <td>
+                        <time class="osg-opening-hours__time">09:30</time>
+                        <span class="osg-opening-hours__time-separator">-</span>
+                        <time class="osg-opening-hours__time">13:37</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Saturday:</td>
+                      <td>Closed</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sunday:</td>
+                      <td>Closed</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-devtools-heading">Norwegian version</h2>
+        <div class="osg-devtools-code">
+          <div class="osg-devtools-code__box">
+             <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
               <div class="osg-opening-hours">
                 <h2 class="osg-heading-3 osg-margin-bottom-15">Åpningstider id arcu lectus erat</h2>
                 <div class="osg-opening-hours__week" aria-hidden="true">
@@ -124,14 +381,14 @@
                 </nav>
                 <table>
                   <caption>
-                    <h2 class="osg-sr-only" id="week-interval-caption-2">Åpningstider id arcu lectus erat <span>from 27th September to 3rd September</span></h2>
+                    <h2 class="osg-sr-only" id="week-interval-caption-2">Åpningstider id arcu lectus erat fra 27.September to 3.September</h2>
                   </caption>
                   <tr>
                     <th scope="col"><span class="osg-sr-only">Ukedag</td></th>
                     <th scope="col"><span class="osg-sr-only">Tid</span></th>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Mandag:</td>
+                    <th scope="row">Mandag:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -139,11 +396,11 @@
                     </td>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Tirsdag:</td>
+                    <th scope="row">Tirsdag:</td>
                     <td>Åpent hele døgnet</td>
                   </tr>
                   <tr class="osg-opening-hours__day osg-opening-hours__day--today">
-                    <td scope="row">Onsdag:</td>
+                    <th scope="row">Onsdag:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -151,7 +408,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Torsdag:</td>
+                    <th scope="row">Torsdag:</td>
                     <td>
                       <time class="osg-opening-hours__time">07:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -159,7 +416,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Fredag:</td>
+                    <th scope="row">Fredag:</td>
                     <td>
                       <time class="osg-opening-hours__time">09:30</time>
                       <span class="osg-opening-hours__time-separator">-</span>
@@ -169,11 +426,11 @@
                     </td>
                   </tr>
                   <tr>
-                    <td scope="row">Lørdag:</td>
+                    <th scope="row">Lørdag:</td>
                     <td>Stengt</td>
                   </tr>
                   <tr>
-                    <td scope="row">Søndag:</td>
+                    <th scope="row">Søndag:</td>
                     <td>Stengt</td>
                   </tr>
                 </table>
@@ -183,119 +440,7 @@
                 <div class="osg-opening-hours__extra">
                   <p class="osg-paragraph">
                     <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
-                    Vestibulum ullamcorper fermentum fermentum. Aenean leo auctor fermentum.
-                  </p>
-                </div>
-                <div class="osg-opening-hours__extra">
-                  <a href="javascript:void(0)" class="osg-link">Lorem ipsum dolor sit amet</a>
-                </div>
-                <div class="osg-opening-hours__not-ordinary">
-                  <h3>
-                    <a
-                      class="osg-collapsible__trigger osg-collapsible__trigger--link"
-                      aria-expanded="false" aria-controls="osg-collapsible-2">
-                      Avvikende åpningstider
-                    </a>
-                  </h3>
-                  <p
-                    class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
-                    id="osg-collapsible-2">
-                    24.12. Julaften : Stengt <br>
-                    25.12. 1. juledag: Stengt <br>
-                    26.12. 2. juledag: Stengt <br>
-                    31.12. Nyttårsaften: Stengt <br>
-                    01.01. 1. nyttårsdag: Stengt<br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Without border</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12">
-        <div class="osg-devtools-code">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
-
-              <div class="osg-opening-hours osg-opening-hours--without-border">
-                <h2 class="osg-heading-3 osg-margin-bottom-15">Opening hours for the cafeteria</h2>
-                <div class="osg-opening-hours__week" aria-hidden="true">
-                  20. September - 26. September
-                </div>
-                <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
-                  <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
-                    <span class="osg-sr-only">Show </span>Previous week
-                  </a> -
-                  <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
-                    <span class="osg-sr-only">Show </span>Next week
-                  </a>
-                </nav>
-                <table>
-                  <caption>
-                    <h2 class="osg-sr-only" id="week-interval-caption-3">Opening hours for the cafeteria <span>from 27th September to 3rd September</span></h2>
-                  </caption>
-                  <tr>
-                    <th scope="col"><span class="osg-sr-only">Weekday</td></th>
-                    <th scope="col"><span class="osg-sr-only">Time</span></th>
-                  </tr>
-                  <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Mon:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr class="osg-opening-hours__day osg-opening-hours__day--past">
-                    <td scope="row">Tue:</td>
-                    <td>Open entire day</td>
-                  </tr>
-                  <tr class="osg-opening-hours__day osg-opening-hours__day--today">
-                    <td scope="row">Wed:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Thu:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Fri:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">09:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                      <span class="osg-sr-only">Exceptions from ordinary opening hours.</span>
-                      <span aria-hidden="true">*</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Sat:</td>
-                    <td>Closed</td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Sun:</td>
-                    <td>Closed</td>
-                  </tr>
-                </table>
-                <div class="osg-opening-hours__extra">
-                  <span class="osg-text-7">* Exceptions from ordinary opening hours.</span>
-                </div>
-                <div class="osg-opening-hours__extra">
-                  <p class="osg-paragraph">
-                    <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
-                    Vestibulum ullamcorper fermentum fermentum. Aenean leo auctor fermentum.
+                    Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å.
                   </p>
                 </div>
                 <div class="osg-opening-hours__extra">
@@ -306,17 +451,236 @@
                     <a
                       class="osg-collapsible__trigger osg-collapsible__trigger--link"
                       aria-expanded="false" aria-controls="osg-collapsible-3">
-                      Exceptions from ordinary opening hours
+                      Avvikende åpningstider
                     </a>
                   </h3>
-                  <p
-                    id="osg-collapsible-3"
-                    class="osg-collapsible osg-collapsible--collapsed osg-collapsible--ease osg-text-5 osg-margin-top-5">
-                    24.12.2021 Christmas: Close <br />
-                    25.12.2021 Christmas: Close <br />
-                    26.12.2021 Christmas: Close <br />
-                    31.12.2021 New year: Close <br />
-                    01.01.2022 New year: Close <br />
+                  <div
+                    class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
+                    id="osg-collapsible-3">
+                    <p>
+                      Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. 
+                      Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-container osg-container--content-limit">
+    <div class="osg-row">
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Default</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+          <div class="osg-opening-hours">
+            <h2 class="osg-heading-3 osg-margin-bottom-15">Opening hours for the cafeteria</h2>
+            <div class="osg-opening-hours__week" aria-hidden="true">
+              20. September - 26. September
+            </div>
+            <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
+              <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption">
+                <span class="osg-sr-only">Show </span>Previous week
+              </a> -
+              <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption">
+                <span class="osg-sr-only">Show </span>Next week
+              </a>
+            </nav>
+            <table>
+              <caption>
+                <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+              </caption>
+              <tr>
+                <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                <th scope="col"><span class="osg-sr-only">Time</span></th>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                <th scope="row">Mon:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                <th scope="row">Tue:</td>
+                <td>Open 24 hours</td>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--today">
+                <th scope="row">Wed:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Thu:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Fri:</td>
+                <td>
+                  <time class="osg-opening-hours__time">09:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                  <span class="osg-sr-only">Exceptions from ordinary opening hours.</span>
+                  <span aria-hidden="true">*</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Sat:</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <th scope="row">Sun:</td>
+                <td>Closed</td>
+              </tr>
+            </table>
+            <div class="osg-opening-hours__extra">
+              <span class="osg-text-7">* Exceptions from ordinary opening hours.</span>
+            </div>
+            <div class="osg-opening-hours__extra">
+              <p class="osg-paragraph">
+                <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
+                It has survived not only five centuries, but also the leap into electronic.
+              </p>
+            </div>
+            <div class="osg-opening-hours__extra">
+              <a href="javascript:void(0)" class="osg-link">Lorem ipsum dolor sit amet</a>
+            </div>
+            <div class="osg-opening-hours__not-ordinary">
+              <h3>
+                <a
+                  class="osg-collapsible__trigger osg-collapsible__trigger--link"
+                  aria-expanded="false" aria-controls="osg-collapsible-4">
+                  Exceptions from ordinary opening hours
+                </a>
+              </h3>
+              <div
+                class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
+                id="osg-collapsible-4">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Without border</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <div class="osg-row">
+          <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+
+            <div class="osg-opening-hours osg-opening-hours--without-border">
+              <h2 class="osg-heading-3 osg-margin-bottom-15">Opening hours for the cafeteria</h2>
+              <div class="osg-opening-hours__week" aria-hidden="true">
+                20. September - 26. September
+              </div>
+              <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
+                <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
+                  <span class="osg-sr-only">Show </span>Previous week
+                </a> -
+                <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-3">
+                  <span class="osg-sr-only">Show </span>Next week
+                </a>
+              </nav>
+              <table>
+                <caption>
+                  <h2 class="osg-sr-only" id="week-interval-caption-3">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                </caption>
+                <tr>
+                  <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                  <th scope="col"><span class="osg-sr-only">Time</span></th>
+                </tr>
+                <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                  <th scope="row">Mon:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                  <th scope="row">Tue:</td>
+                  <td>Open entire day</td>
+                </tr>
+                <tr class="osg-opening-hours__day osg-opening-hours__day--today">
+                  <th scope="row">Wed:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Thu:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Fri:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">09:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                    <span class="osg-sr-only">Exceptions from ordinary opening hours.</span>
+                    <span aria-hidden="true">*</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Sat:</td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sun:</td>
+                  <td>Closed</td>
+                </tr>
+              </table>
+              <div class="osg-opening-hours__extra">
+                <span class="osg-text-7">* Exceptions from ordinary opening hours.</span>
+              </div>
+              <div class="osg-opening-hours__extra">
+                <p class="osg-paragraph">
+                  <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
+                  It has survived not only five centuries, but also the leap into electronic.
+                </p>
+              </div>
+              <div class="osg-opening-hours__extra">
+                <a href="javascript:void(0)" class="osg-link">Lorem ipsum dolor sit amet</a>
+              </div>
+              <div class="osg-opening-hours__not-ordinary">
+                <h3>
+                  <a
+                    class="osg-collapsible__trigger osg-collapsible__trigger--link"
+                    aria-expanded="false" aria-controls="osg-collapsible-5">
+                    Exceptions from ordinary opening hours
+                  </a>
+                </h3>
+                <div
+                  class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
+                  id="osg-collapsible-5">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                   </p>
                 </div>
               </div>
@@ -328,67 +692,65 @@
         <h2 class="osg-heading-3">Plain without navigation</h2>
       </div>
       <div class="osg-row__column osg-row__column--12">
-        <div class="osg-devtools-code">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
-              <div class="osg-opening-hours">
-                <div class="osg-opening-hours__heading">
-                  <h2>Opening hours for the cafeteria</h2>
-                </div>
-                <table>
-                  <caption>
-                    <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria <span>from 27th September to 3rd September</span></h2>
-                  </caption>
-                  <tr>
-                    <th scope="col"><span class="osg-sr-only">Weekday</td></th>
-                    <th scope="col"><span class="osg-sr-only">Time</span></th>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Monday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Tuesday:</td>
-                    <td>Open entire day</td>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Wednesday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Thursday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Friday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">09:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Saturday:</td>
-                    <td>Closed</td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Sunday:</td>
-                    <td>Closed</td>
-                  </tr>
-                </table>
+        <div class="osg-row">
+          <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+            <div class="osg-opening-hours">
+              <div class="osg-opening-hours__heading">
+                <h2>Opening hours for the cafeteria</h2>
               </div>
+              <table>
+                <caption>
+                  <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                </caption>
+                <tr>
+                  <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                  <th scope="col"><span class="osg-sr-only">Time</span></th>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Monday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Tuesday:</td>
+                  <td>Open entire day</td>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Wednesday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">09:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturday:</td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sunday:</td>
+                  <td>Closed</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
@@ -397,72 +759,172 @@
         <h2 class="osg-heading-3">Half width on medium and up</h2>
       </div>
       <div class="osg-row__column osg-row__column--12">
-        <div class="osg-devtools-code">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-              <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+        <div class="osg-row">
+          <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+            <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+            <p class="osg-paragraph">
+              Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.
+            </p>
+          </div>
+          <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+            <div class="osg-opening-hours">
+              <div class="osg-opening-hours__heading">
+                <h2>Opening hours for the cafeteria</h2>
+              </div>
+              <table>
+                <caption>
+                  <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th September to 3rd September</h2>
+                </caption>
+                <tr>
+                  <th scope="col"><span class="osg-sr-only">Weekday</td></th>
+                  <th scope="col"><span class="osg-sr-only">Time</span></th>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Monday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Tuesday:</td>
+                  <td>Open entire day</td>
+                </tr>
+                <tr class="osg-opening-hours__day">
+                  <th scope="row">Wednesday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">07:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday:</td>
+                  <td>
+                    <time class="osg-opening-hours__time">09:30</time>
+                    <span class="osg-opening-hours__time-separator">-</span>
+                    <time class="osg-opening-hours__time">13:37</time>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturday:</td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sunday:</td>
+                  <td>Closed</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
+          <div class="osg-opening-hours">
+            <h2 class="osg-heading-3 osg-margin-bottom-15">Åpningstider id arcu lectus erat</h2>
+            <div class="osg-opening-hours__week" aria-hidden="true">
+              20. September - 26. September
+            </div>
+            <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
+              <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-2">
+                <span class="osg-sr-only">Vise </span>Forrige uke
+              </a> -
+              <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption-2">
+                <span class="osg-sr-only">Vise </span>Neste uke
+              </a>
+            </nav>
+            <table>
+              <caption>
+                <h2 class="osg-sr-only" id="week-interval-caption-2">Åpningstider id arcu lectus erat fra 27 September to 3rd September</h2>
+              </caption>
+              <tr>
+                <th scope="col"><span class="osg-sr-only">Ukedag</td></th>
+                <th scope="col"><span class="osg-sr-only">Tid</span></th>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                <th scope="row">Mandag:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--past">
+                <th scope="row">Tirsdag:</td>
+                <td>Åpent hele døgnet</td>
+              </tr>
+              <tr class="osg-opening-hours__day osg-opening-hours__day--today">
+                <th scope="row">Onsdag:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Torsdag:</td>
+                <td>
+                  <time class="osg-opening-hours__time">07:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Fredag:</td>
+                <td>
+                  <time class="osg-opening-hours__time">09:30</time>
+                  <span class="osg-opening-hours__time-separator">-</span>
+                  <time class="osg-opening-hours__time">13:37</time>
+                  <span class="osg-sr-only">Avvik fra ordinære åpningstider..</span>
+                  <span aria-hidden="true">*</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Lørdag:</td>
+                <td>Stengt</td>
+              </tr>
+              <tr>
+                <th scope="row">Søndag:</td>
+                <td>Stengt</td>
+              </tr>
+            </table>
+            <div class="osg-opening-hours__extra">
+              <span class="osg-text-7">* Avvik fra ordinære åpningstider.</span>
+            </div>
+            <div class="osg-opening-hours__extra">
               <p class="osg-paragraph">
-                Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.
+                <span class="osg-icon osg-icons--information" aria-hidden="true"></span>
+                Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å.
               </p>
             </div>
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-              <div class="osg-opening-hours">
-                <div class="osg-opening-hours__heading">
-                  <h2>Opening hours for the cafeteria</h2>
-                </div>
-                <table>
-                  <caption>
-                    <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria <span>from 27th September to 3rd September</span></h2>
-                  </caption>
-                  <tr>
-                    <th scope="col"><span class="osg-sr-only">Weekday</td></th>
-                    <th scope="col"><span class="osg-sr-only">Time</span></th>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Monday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Tuesday:</td>
-                    <td>Open entire day</td>
-                  </tr>
-                  <tr class="osg-opening-hours__day">
-                    <td scope="row">Wednesday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Thursday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">07:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Friday:</td>
-                    <td>
-                      <time class="osg-opening-hours__time">09:30</time>
-                      <span class="osg-opening-hours__time-separator">-</span>
-                      <time class="osg-opening-hours__time">13:37</time>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Saturday:</td>
-                    <td>Closed</td>
-                  </tr>
-                  <tr>
-                    <td scope="row">Sunday:</td>
-                    <td>Closed</td>
-                  </tr>
-                </table>
+            <div class="osg-opening-hours__extra">
+              <a href="javascript:void(0)" class="osg-link">Lorem ipsum dolor sit amet</a>
+            </div>
+            <div class="osg-opening-hours__not-ordinary">
+              <h3>
+                <a
+                  class="osg-collapsible__trigger osg-collapsible__trigger--link"
+                  aria-expanded="false" aria-controls="osg-collapsible-6">
+                  Avvikende åpningstider
+                </a>
+              </h3>
+              <div
+                class="osg-collapsible--ease osg-collapsible--collapsed osg-text-5 osg-margin-top-3"
+                id="osg-collapsible-6">
+                <p>
+                  Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. 
+                  Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet.
+                </p>
               </div>
             </div>
           </div>
