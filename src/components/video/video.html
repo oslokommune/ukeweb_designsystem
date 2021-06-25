@@ -8,7 +8,11 @@
         </p>
         <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
           <h2 class="osg-infobox__heading">Important</h2>
-          Video must follow rules set up by <a class="osg-link" href="https://designmanual.oslo.kommune.no/video" target="_blank">https://designmanual.oslo.kommune.no/video</a>.
+          <p class="osg-paragraph">Video must follow rules set up by <a class="osg-link" href="https://designmanual.oslo.kommune.no/video" target="_blank">https://designmanual.oslo.kommune.no/video</a>.</p>
+          <p class="osg-paragraph">
+            If there is information being represented only through visual means that is required for understanding, 
+            add a proper description within the source element.
+          </p>
         </div>
       </div>
       <div class="osg-row__column osg-row__column--12">
@@ -18,7 +22,7 @@
           <div class="osg-devtools-code__box">
             <h2 class="osg-video__heading">Video heading</h2>
             <div class="osg-video__video">
-              <video class="osg-video" aria-describedby="transcription" poster="https://ukeweb-public.s3.eu-central-1.amazonaws.com/video/poster.jpg" controls preload="metadata">
+              <video class="osg-video" aria-describedby="transcription1" poster="https://ukeweb-public.s3.eu-central-1.amazonaws.com/video/poster.jpg" controls preload="metadata">
                 <source type="video/webm" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/video/video.webm">
                 <source type="video/mp4" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/video/video.mp4">
                 <track kind="captions" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/video/captions_no.vtt" label="Norsk" srclang="no" default>
@@ -26,8 +30,8 @@
                 <p class="osg-paragraph">To view this video please upgrade to a web browser that supports HTML5 video</p>
               </video>
               <p class="osg-video__attribution">Video: Lorem ipsum, dolor sit amet. Creative Something License Example 4.0</p>
-              <div class="osg-video__transcription" id="transcription">
-                <h3 class="osg-video__transcription-heading">Transcription</h3>
+              <div class="osg-video__transcription">
+                <h3 class="osg-video__transcription-heading" id="transcription1">Transcription of the video</h3>
                 <div class="osg-video__transcription-text">
                   <p class="osg-paragraph">Transcription of, and info about, the video "Lorem ipsum dolor sit amet".</p>
                   <p class="osg-paragraph">Pellentesque faucibus odio non lectus vestibulum pulvinar ac vitae justo.</p>
@@ -47,10 +51,6 @@
           <p class="osg-paragraph">
             Animation clips are the only video clip that is allowed to auto start and go on a loop. No music.<br>
             Small animations can be fun, but think about what you want to add to the rest of the content.
-          </p>
-          <p class="osg-paragraph">
-            If the animation provides important information, remove role="presentation" and add a proper description of the animation 
-            within the source element.
           </p>
         </div>
         <div class="osg-devtools-code">
