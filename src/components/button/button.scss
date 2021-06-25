@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/state";
+@use "system/states";
 
 .osg-button {
   @extend %osg-text-4;
@@ -97,35 +97,37 @@
    * Button states
    */
   &:visited, &--visited {
-    @extend %osg-state-visited;
+    background-color: states.$visited !important;
+    border: 2px solid states.$visited !important;
+    color: states.$visited-text !important;
   }
 
   &:hover, &--hover, &:focus, &--focus {
-    @extend %osg-state-hover;
-    border: 2px solid colors.$blue-contrast;
+    background-color: states.$hover !important;
+    border: 2px solid states.$hover !important;
+    color: states.$hover-text !important;
     text-decoration: underline;
 
     &.osg-button--outline {
       background-color: transparent !important;
-      color: colors.$blue-contrast;
-      border-color: colors.$blue-contrast;
-      @extend %osg-state-text-hover;
+      border-color: states.$hover;
+      color: states.$hover !important;
     }
 
     &.osg-button--text {
       background-color: colors.$gray-light !important;
       border-color: colors.$gray-light !important;
-      @extend %osg-state-text-hover;
+      color: states.$hover !important;
     }
   }
 
   &:active, &--active {
-    @extend %osg-state-active;
-    border-color: colors.$blue-contrast;
+    background-color: states.$active !important;
+    border: 2px solid states.$active !important;
     text-decoration: none;
 
     &.osg-button--outline {
-      background-color: colors.$blue-contrast !important;
+      background-color: states.$hover !important;
       color: colors.$white !important;
     }
 
@@ -133,13 +135,14 @@
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
-      color: colors.$blue-contrast !important;
+      color: states.$hover !important;
     }
   }
 
   &:disabled {
-    @extend %osg-state-disabled;
-    border-color: colors.$gray-light;
+    background-color: states.$disabled !important;
+    border: 2px solid states.$disabled !important;
+    color: states.$disabled-text !important;
     cursor: default;
     text-decoration: none;
 
@@ -155,7 +158,9 @@
     }
 
     &:hover, &:active {
-      @extend %osg-state-disabled;
+      background-color: states.$disabled !important;
+      border: 2px solid states.$disabled !important;
+      color: states.$disabled-text !important;
 
       &.osg-button--outline {
         background-color: transparent !important;

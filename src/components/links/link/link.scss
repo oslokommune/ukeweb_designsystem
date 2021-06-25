@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "system/states";
 @use "mixins";
 
 .osg-link {
@@ -21,13 +22,13 @@
 
   &--state-light {
     &:visited, &-visited {
-      @extend %osg-state-text-visited-light;
+      color: states.$visited-light !important;
     }
     &:hover, &-hover, &:focus, &-focus {
-      @extend %osg-state-text-hover-light;
+      color: states.$hover-light !important;
     }
     &:active, &-active {
-      @extend %osg-state-text-active-light;
+      color: states.$active-light !important;
     }
   }
 }

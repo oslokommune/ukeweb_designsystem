@@ -1,0 +1,34 @@
+@use "system/colors";
+
+$primary: colors.$blue-dark;
+$primary-text: colors.$white;
+
+$disabled: colors.$gray-light;
+$disabled-text: colors.$grayscale-40;
+
+$success: colors.$green-light;
+$success-text: colors.$green-dark;
+
+$warning: colors.$yellow;
+$warning-text: colors.$blue-dark;
+
+$danger: colors.$red;
+$danger-text: colors.$blue-dark;
+
+$active: colors.$blue-contrast;
+$active-text: colors.$white;
+
+$active-light: colors.$blue-light;
+$active-light-text: colors.$blue-dark;
+
+$hover: colors.$blue-contrast;
+$hover-text: colors.$white;
+
+$hover-light: colors.$blue-light;
+$hover-light-text: colors.$blue-dark;
+
+$visited: colors.$purple;
+$visited-text: colors.$white;
+
+$visited-light: colors.$purple-light;
+$visited-light-text: colors.$blue-dark;

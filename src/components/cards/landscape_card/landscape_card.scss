@@ -2,7 +2,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/state";
+@use "system/states";
 
 $osg-landscape-card-height-breakpoint-medium: 221px;
 $osg-landscape-card-height-breakpoint-large: 230px;
@@ -19,7 +19,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
     &:hover {
       * {
-        @extend %osg-state-text-hover;
+        color: states.$hover !important;
       }
 
       .osg-landscape-card__heading {

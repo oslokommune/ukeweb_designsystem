@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/state";
+@use "system/states";
 
 @mixin error-message() {
   background: colors.$red-light;

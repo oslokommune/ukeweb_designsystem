@@ -1,5 +1,5 @@
 @use "system/icons";
-@use "system/state";
+@use "system/states";
 @use "system/spacing";
 
 @mixin icon-right($icon, $size: 0.6em) {
@@ -37,15 +37,15 @@
 
 @mixin states {
   &:visited, &--visited {
-    @extend %osg-state-text-visited;
+    color: states.$visited !important;
     @content;
   }
   &:hover, &--hover, &:focus, &--focus {
-    @extend %osg-state-text-hover;
+    color: states.$hover !important;
     @content;
   }
   &:active, &--active {
-    @extend %osg-state-text-active;
+    color: states.$active !important;
     @content;
   }
 }

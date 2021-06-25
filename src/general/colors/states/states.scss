@@ -1,0 +1,56 @@
+@use "system/states";
+
+.osg-states-primary {
+  background-color: states.$primary;
+  color: states.$primary-text;
+}
+
+.osg-states-disabled {
+  background-color: states.$disabled;
+  color: states.$disabled-text;
+}
+
+.osg-states-success {
+  background-color: states.$success;
+  color: states.$success-text;
+}
+
+.osg-states-warning {
+  background-color: states.$warning;
+  color: states.$warning-text;
+}
+
+.osg-states-danger {
+  background-color: states.$danger;
+  color: states.$danger-text;
+}
+
+.osg-states-active {
+  background-color: states.$active;
+  color: states.$active-text;
+}
+
+.osg-states-active-light {
+  background-color: states.$active-light;
+  color: states.$active-light-text;
+}
+
+.osg-states-hover {
+  background-color: states.$hover;
+  color: states.$hover-text;
+}
+
+.osg-states-hover-light {
+  background-color: states.$hover-light;
+  color: states.$hover-light-text;
+}
+
+.osg-states-visited {
+  background-color: states.$visited;
+  color: states.$visited-text;
+}
+
+.osg-states-visited-light {
+  background-color: states.$visited-light;
+  color: states.$visited-light-text;
+}

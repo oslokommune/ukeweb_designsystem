@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/fonts";
 @use "system/spacing";
-@use "system/state";
+@use "system/states";
 @use "system/icons";
 
 .osg-pagination {
@@ -34,7 +34,7 @@
     &:hover, &:focus {
       background-color: colors.$gray-light;
       border-color: colors.$gray-light;
-      @extend %osg-state-text-hover;
+      color: states.$hover !important;
     }
 
     &:active {

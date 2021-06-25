@@ -2,7 +2,7 @@
 @use "system/fonts";
 @use "system/icons";
 @use "system/spacing";
-@use "system/state";
+@use "system/states";
 
 .osg-search {
   @extend %osg-text-5;
@@ -54,7 +54,9 @@
     }
 
     &:hover {
-      @extend %osg-state-hover;
+      background-color: states.$hover !important;
+      border: 2px solid states.$hover !important;
+      color: states.$hover !important;
     }
   }
 
@@ -74,8 +76,8 @@
       text-decoration: none;
 
       &:hover {
-        @extend %osg-state-text-hover;
         background-color: colors.$gray-light;
+        color: states.$hover !important;
         text-decoration: underline;
       }
     }
