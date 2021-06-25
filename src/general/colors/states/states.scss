@@ -1,56 +1,67 @@
 @use "system/states";
 
 .osg-states-primary {
-  background-color: states.$primary;
-  color: states.$primary-text;
+  background-color: states.$primary !important;
+  border: 2px solid states.$primary !important;
+  color: states.$primary-text !important;
 }
 
 .osg-states-disabled {
-  background-color: states.$disabled;
-  color: states.$disabled-text;
+  background-color: states.$disabled !important;
+  border: 2px solid states.$disabled !important;
+  color: states.$disabled-text !important;
 }
 
 .osg-states-success {
-  background-color: states.$success;
-  color: states.$success-text;
+  background-color: states.$success !important;
+  border: 2px solid states.$success !important;
+  color: states.$success-text !important;
 }
 
 .osg-states-warning {
-  background-color: states.$warning;
-  color: states.$warning-text;
+  background-color: states.$warning !important;
+  border: 2px solid states.$warning !important;
+  color: states.$warning-text !important;
 }
 
 .osg-states-danger {
-  background-color: states.$danger;
-  color: states.$danger-text;
+  background-color: states.$danger !important;
+  border: 2px solid states.$danger !important;
+  color: states.$danger-text !important;
 }
 
 .osg-states-active {
-  background-color: states.$active;
-  color: states.$active-text;
+  background-color: states.$active !important;
+  border: 2px solid states.$active !important;
+  color: states.$active-text !important;
 }
 
 .osg-states-active-light {
-  background-color: states.$active-light;
-  color: states.$active-light-text;
+  background-color: states.$active-light !important;
+  border: 2px solid states.$active-light !important;
+  color: states.$active-light-text !important;
 }
 
 .osg-states-hover {
-  background-color: states.$hover;
-  color: states.$hover-text;
+  background-color: states.$hover !important;
+  border: 2px solid states.$hover !important;
+  color: states.$hover-text !important;
 }
 
 .osg-states-hover-light {
-  background-color: states.$hover-light;
-  color: states.$hover-light-text;
+  background-color: states.$hover-light !important;
+  border: 2px solid states.$hover-light !important;
+  color: states.$hover-light-text !important;
 }
 
 .osg-states-visited {
-  background-color: states.$visited;
-  color: states.$visited-text;
+  background-color: states.$visited !important;
+  border: 2px solid states.$visited !important;
+  color: states.$visited-text !important;
 }
 
 .osg-states-visited-light {
-  background-color: states.$visited-light;
-  color: states.$visited-light-text;
+  background-color: states.$visited-light !important;
+  border: 2px solid states.$visited-light !important;
+  color: states.$visited-light-text !important;
 }
