@@ -7,16 +7,6 @@
     margin-bottom: 0;
   }
 
-  &--default {
-    border: 1px solid colors.$grayscale-40;
-    padding: 0 spacing.$space-15 spacing.$space-15 spacing.$space-15;
-
-    legend {
-      @extend %osg-text-4;
-      padding: spacing.$space-5;
-    }
-  }
-
   &--no-border {
     border: none;
     padding: 0;
@@ -25,22 +15,6 @@
       @extend %osg-text-4;
       margin-bottom: spacing.$space-10;
       padding-bottom: spacing.$space-5;
-    }
-  }
-
-  &--border-under {
-    border: none;
-
-    legend {
-      @extend %osg-text-4;
-      margin-bottom: spacing.$space-10;
-      padding-bottom: spacing.$space-5;
-    }
-
-    legend + div {
-      border: 1px solid colors.$grayscale-40;
-      margin-left: spacing.$space-15;
-      padding: spacing.$space-15;
     }
   }
 
