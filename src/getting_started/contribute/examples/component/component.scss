@@ -1,0 +1,128 @@
+/**
+ * The purpose of this file is to show best practice for SCSS and BEM in OSG.
+ * Comments are plentiful because of this, but rarely necessary in actual components.
+ *
+ * Make sure to only @use from system and the component itself if SCSS is split into multiple files
+ */
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+/**
+ * The default styling for the component must be for the small breakpoint.
+ * Pay attention to the ordering of the styles.
+ * 1. Main class styles
+ * 2. Child element styles
+ * 3. Modifiers
+ */
+.osg-example-component {
+  /**
+   * 1. Main class styles
+   */
+
+  /**
+   * 2. Child element styles
+   */
+  &__header {
+    background-color: colors.$white;
+    display: flex;
+  }
+
+  /**
+  * Even though logo is a child of the header in the HTML markup it is not reflected in the BEM code.
+  * Nested elements are written as if they were level 1 elements, direct children of the main class.
+  */
+  &__logo {
+    @extend %osg-padding-horizontal-30, %osg-padding-vertical-20;
+    width: 100%;
+    line-height: 0;
+
+    /**
+     * Padding is overridden for the large breakpoint.
+     * Extending is not possible inside mixins so use spacing values directly.
+     */
+    @include breakpoints.large {
+      padding: spacing.$space-30 !important;
+    }
+
+    svg {
+      fill: colors.$blue-dark;
+      max-width: 130px;
+      line-height: 0;
+
+      @include breakpoints.large {
+        max-width: 160px;
+      }
+    }
+  }
+
+  &__picture {
+    max-width: 110px;
+    line-height: 0;
+
+    @include breakpoints.large {
+      max-width: 142px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @extend %osg-padding-30;
+    background-color: colors.$beige;
+  }
+
+  &__heading {
+    @extend %osg-heading-6;
+    @extend %osg-margin-bottom-30;
+  }
+
+  &__text {
+    @extend %osg-text-5;
+  }
+
+  &__footer {
+    background-color: colors.$white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100px;
+
+    &::after {
+      background-color: colors.$yellow;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 100px;
+      right: 0;
+      position: absolute;
+      top: 0;
+      width: 100px;
+    }
+
+    /**
+     * If by chance a naming conflict occurs in a component where mulitple areas share the same name and
+     * it cannot be resolved by renaming, use specificity to resolve the situation.
+     * Class resolves to: .osg-example-component__footer .osg-example-component__text
+     */
+    .osg-example-component__text {
+      @extend %osg-text-7;
+      @extend %osg-margin-left-30;
+    }
+  }
+
+  /**
+   * 3. Modifiers
+   *
+   * Adding a modifier to make the component in a green-light color
+   */
+  &--green-light {
+    .osg-example-component__content {
+      background-color: colors.$green-light;
+    }
+  }
+}

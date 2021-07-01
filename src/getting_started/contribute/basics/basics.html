@@ -1,0 +1,61 @@
+<div class="osg-container osg-container--gutterless osg-container--no-overflow">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+      <div class="osg-content">
+        <h2>Conceptual</h2>
+        <h4>General</h4>
+        <p>...</p>
+        <h4>Component</h4>
+        <p><strong>Should "this" be in Oslo style guide or in a project?</strong></p>
+        <p>Anything that goes into Oslo style guide must be approved by the designers and should be general enough that it can be used in multiple settings.</p>
+        <p><strong>How do we define a component?</strong></p>
+        <p>A new component is born when a selection of other components, html elements and/or styles are put together and has to follow a set of rules. Each component is independent and must not inherit styles of other components.</p>
+        <p><strong>Language</strong></p>
+        <p>Everything must be written in english with the exception of example texts which can be Lorem ipsum.</p>
+        <p><strong>Spacing</strong></p>
+        <p>A component should never have spacing applied to the outside of the component bounds.</p>
+        <p><strong>Font size</strong></p>
+        <p>Avoid setting font size on inline components as they will normally get their size from the context of which they are used in. Typical inline components are links and icons.</p>
+        <p><strong></strong></p>
+        <h4>Pages</h4>
+        <p>...</p>
+        <h2>Technical</h2>
+        <h4>Conventions</h4>
+        <p>BEM style, linting</p>
+        <h4>Repositories</h4>
+        <p>Oslo style guide consists of two repositories. Styleguide follows <a href="https://semver.org" target="_blank">semver.org</a> and each major version has a styleguide_devtools version that accompanies it.</p>
+        <p>
+          <strong>styleguide</strong>
+          <br>
+          The styleguide repository is the product. It consists of all the components, styles, fonts and icons that make up Oslo style guide.
+        </p>
+        <p>
+          <strong>styleguide_devtools</strong>
+          <br>
+          The styleguide_devtools repository consumes the styleguide repository (just like any project would) and creates the very application you now use to browse and contribute to the styleguide repository.
+        </p>
+        <h4>Framework</h4>
+        <p>
+          <strong>assets</strong> hold fonts, icons and images<br>
+          <strong>components</strong> has all of the components<br>
+          <strong>general</strong> hold css styles and its documentation<br>
+          <strong>getting_started</strong> documents how to consume and how to contribute<br>
+          <strong>pages</strong> hold examples of how a selection of components make a page<br>
+          <strong>system</strong> hold the core of the scss framework<br>
+          <strong>utils</strong> hold helper scripts for mundane tasks<br>
+        </p>
+        <h4>Develop</h4>
+        <p>formats: html(5), js (es...), vue (2), scss (dart sass), json (tags, preset)</p>
+        <p>index files</p>
+        <p><strong>devtools:</strong><br>
+          _ in dirs mean space<br>
+          supported classes in components:<br>
+          osg-devtools-code, osg-devtools-code__box, osg-devtools-code__box--{palette color}, osg-devtools-devmode, osg-devtools-nondevmode, osg-devtools-heading
+        </p>
+        <h4>Testing</h4>
+        <p>Browsers: Firefox, Chrome, Edge, Safari and Samsung Internet(!?)</p>
+        <p>UU...</p>
+      </div>
+    </div>
+  </div>
+</div>
