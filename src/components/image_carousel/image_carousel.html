@@ -1,12 +1,12 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-devtools-heading osg-devtools-nondevmode">Default</h2>
+      <h2 class="osg-devtools-heading">Default</h2>
     </div>
     <div class="osg-row__column osg-row__column--12 osg-padding-top-none">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div id="vue">
+          <div id="vue1">
             <osg-image-carousel :images="[
               {
                 large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
@@ -39,6 +39,47 @@
             ]"></osg-image-carousel>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+      <h2 class="osg-heading-3 osg-margin-bottom-30">Default</h2>
+    </div>
+    <div class="osg-row__column osg-row__column--12 osg-padding-top-none">
+      <div id="vue2">
+        <osg-image-carousel :images="[
+          {
+            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
+            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
+            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
+            caption: 'Test Caption One',
+            srDescription: 'srDescription One'
+          },
+          {
+            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
+            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
+            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
+            caption: 'Test Caption Two',
+            srDescription: 'srDescription Two'
+          },
+          {
+            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
+            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
+            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
+            caption: 'Test Caption Three',
+            srDescription: 'srDescription Three'
+          },
+          {
+            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
+            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
+            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+            caption: 'Test Caption Four',
+            srDescription: 'srDescription Four'
+          }
+        ]"></osg-image-carousel>
       </div>
     </div>
   </div>
