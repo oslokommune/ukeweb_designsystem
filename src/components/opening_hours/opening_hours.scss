@@ -14,6 +14,10 @@
     text-align: left;
     width: 100%;
 
+    th {
+      font-weight: 300;
+    }
+
     tr {
       td:first-child {
         width: 35%;
@@ -53,7 +57,8 @@
   &__day {
     @extend %osg-margin-top-5;
 
-    &--today {
+    &--today,
+    &--today th {
       @extend %osg-text-medium;
     }
     &--past {
