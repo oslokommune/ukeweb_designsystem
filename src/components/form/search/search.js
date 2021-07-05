@@ -1,17 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let check = document.getElementById('components-form-search-dropdown');
-  if (check) {
-    check.addEventListener('change', function () {
-      let dropdown = document.querySelector('.osg-search__dropdown');
-      let searchForm = document.querySelector('#osg-search__form');
+  let searchDropdownTriggers = document.querySelectorAll('.components-form-search-dropdown');
+  if (searchDropdownTriggers) {
+    searchDropdownTriggers.forEach(trigger => {
+      trigger.addEventListener('change', function () {
+        let dropdown = document.getElementById(this.getAttribute('aria-controls'));
+        if (dropdown) {
+          let searchForm = dropdown.previousElementSibling;
 
-      if (this.checked) {
-        dropdown.style.display = 'block';
-        searchForm.setAttribute('aria-expanded', 'true');
-      } else {
-        dropdown.style.display = 'none';
-        searchForm.setAttribute('aria-expanded', 'false');
-      }
+          if (this.checked) {
+            dropdown.style.display = 'block';
+            searchForm.setAttribute('aria-expanded', 'true');
+          } else {
+            dropdown.style.display = 'none';
+            searchForm.setAttribute('aria-expanded', 'false');
+          }
+        }
+      })
     });
   }
 });

@@ -1,4 +1,4 @@
-<div class="osg-container osg-padding-bottom-100 osg-devtools-nonedevmode">
+<div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
@@ -6,12 +6,14 @@
         <div class="osg-devtools-code__box">
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--8-breakpoint-medium">
-              <div class="osg-search">
-                <form action="" method="GET" class="osg-search__form">
-                  <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-                    aria-label="Search" />
-                  <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
-                </form>
+              <div class="osg-devtools-code__box__code">
+                <div class="osg-search">
+                  <form action="" method="GET" class="osg-search__form">
+                    <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
+                      aria-label="Search" />
+                    <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -24,12 +26,14 @@
         <div class="osg-devtools-code__box">
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--8-breakpoint-medium">
-              <div class="osg-search osg-search--circle">
-                <form action="" method="GET" class="osg-search__form">
-                  <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-                    aria-label="Search" />
-                  <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
-                </form>
+              <div class="osg-devtools-code__box__code">
+                <div class="osg-search osg-search--circle">
+                  <form action="" method="GET" class="osg-search__form">
+                    <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
+                      aria-label="Search" />
+                    <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -42,10 +46,12 @@
         <div class="osg-devtools-code__box">
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--8-breakpoint-medium">
-              <div class="osg-search osg-search--inline">
-                <div class="osg-search__form">
-                  <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-                    aria-label="Search" />
+              <div class="osg-devtools-code__box__code">
+                <div class="osg-search osg-search--inline">
+                  <div class="osg-search__form">
+                    <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
+                      aria-label="Search" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,7 +62,8 @@
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Dropdown</h2>
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text">
-        <input type="checkbox" class="osg-switch__input" id="components-form-search-dropdown" checked="checked">
+        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results"
+          checked="checked">
         <span class="osg-switch__background"></span>
         <span class="osg-switch__slider"></span>
         <span class="osg-switch__label-text" id="dropdown-text">Dropdown</span>
@@ -65,36 +72,106 @@
         <div class="osg-devtools-code__box">
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--8-breakpoint-medium">
-              <div class="osg-search osg-search--inline">
-                <div class="osg-search__form" id="osg-search__form" aria-expanded="true" role="combobox"
-                  aria-haspopup="listbox" aria-owns="id-results">
-                  <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-                    aria-label="Search" />
+              <div class="osg-devtools-code__box__code">
+                <div class="osg-search osg-search--inline">
+                  <div class="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox"
+                    aria-owns="id-results">
+                    <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
+                      aria-label="Search" />
+                  </div>
+                  <ul class="osg-search__dropdown" role="listbox" id="id-results">
+                    <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item A</a></li>
+                    <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item B</a></li>
+                    <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item C</a></li>
+                    <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item D</a></li>
+                  </ul>
                 </div>
-                <ul class="osg-search__dropdown" role="listbox" id="id-results">
-                  <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item A</a></li>
-                  <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item B</a></li>
-                  <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item C</a></li>
-                  <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item D</a></li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="osg-padding-top-75 osg-margin-top-75"></div>
+      <div class="osg-margin-top-100"></div>
     </div>
   </div>
 </div>
 
 
-<div class="osg-container osg-padding-bottom-100 osg-devtools-devmode">
+<div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Default</h2>
+      <h3 class="osg-heading-3">Default</h3>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <div class="osg-devtools-code">
+      <div class="osg-search">
+        <form action="" method="GET" class="osg-search__form">
+          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" />
+          <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+        </form>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Circle</h3>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <div class="osg-search osg-search--circle">
+        <form action="" method="GET" class="osg-search__form">
+          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" />
+          <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
+        </form>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Inline</h3>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <div class="osg-search osg-search--inline">
+        <div class="osg-search__form">
+          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" />
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Dropdown</h3>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text">
+        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-result"
+          checked="checked">
+        <span class="osg-switch__background"></span>
+        <span class="osg-switch__slider"></span>
+        <span class="osg-switch__label-text" id="dropdown-text">Dropdown</span>
+      </label>
+      <div class="osg-search osg-search--inline">
+        <div class="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox"
+          aria-owns="id-result">
+          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" />
+        </div>
+        <ul class="osg-search__dropdown" role="listbox" id="id-result">
+          <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item A</a></li>
+          <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item B</a></li>
+          <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item C</a></li>
+          <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item D</a></li>
+        </ul>
+      </div>
+      <p class="osg-text-5 osg-margin-top-15">
+        Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim
+        lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In
+        tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor
+        feugiat nunc, ut viverra nisl sapien non massa.
+      </p>
+      <p class="osg-text-5 osg-margin-top-15">
+        Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim
+        lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In
+        tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor
+        feugiat nunc, ut viverra nisl sapien non massa.
+      </p>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Testcases</h3>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <div class="osg-flex">
         <div class="osg-search">
           <form action="" method="GET" class="osg-search__form">
             <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
@@ -105,10 +182,7 @@
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Circle</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <div class="osg-devtools-code">
+      <div class="osg-flex">
         <div class="osg-search osg-search--circle">
           <form action="" method="GET" class="osg-search__form">
             <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
@@ -117,57 +191,6 @@
           </form>
         </div>
       </div>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Inline</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <div class="osg-devtools-code">
-        <div class="osg-search osg-search--inline">
-          <div class="osg-search__form">
-            <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-              aria-label="Search" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Dropdown</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text">
-        <input type="checkbox" class="osg-switch__input" id="components-form-search-dropdown" checked="checked">
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="dropdown-text">Dropdown</span>
-      </label>
-      <div class="osg-devtools-code">
-        <div class="osg-search osg-search--inline">
-          <div class="osg-search__form" id="osg-search__form" aria-expanded="true" role="combobox"
-            aria-haspopup="listbox" aria-owns="id-results">
-            <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search"
-              aria-label="Search" />
-          </div>
-          <ul class="osg-search__dropdown" role="listbox" id="id-results">
-            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item A</a></li>
-            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item B</a></li>
-            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item C</a></li>
-            <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Item D</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="osg-text-5 osg-margin-top-15">
-        Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim
-        lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In
-        tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor
-        feugiat nunc, ut viverra nisl sapien non massa.
-      </p>
-      <p class="osg-text-5 osg-margin-top-15">
-        Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim
-        lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In
-        tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor
-        feugiat nunc, ut viverra nisl sapien non massa.
-      </p>
     </div>
   </div>
 </div>
