@@ -1,31 +1,150 @@
-<div class="osg-container">
+<div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3 osg-margin-top-50">Default</h2>
+      <p class="osg-text-2">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+      </p>
+      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+        <h2 class="osg-infobox__heading">Important</h2>
+        <p class="osg-paragraph">
+          How the model box is triggered is up to the project and not decided in this component.
+        </p>
+      </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <button class="osg-button osg-modal__open">Open modal</button>
-      <div class="osg-devtools-code osg-parent-modal">
-        <div class="osg-modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
-          <div class="osg-modal__button">
-            <div></div>
-            <button class="osg-button osg-button--circle osg-button--yellow" aria-label="Close">
-              <span class="osg-button__icon osg-icons--close"></span>
-            </button>
+      <h2 class="osg-heading-3 osg-margin-top-50">Default</h2>
+      <p class="osg-text-2">
+        This component can contain different types of content. The component is just the box that you trigger.
+      </p>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <div class="osg-devtools-code" style="position:relative">
+        <div class="osg-devtools-code__box">
+          <button class="osg-button osg-modal-trigger osg-modal-trigger--scoped">Open modal</button>
+          <div class="osg-modal-content osg-modal-content--scoped" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
+            <div class="osg-modal-content__button">
+              <div></div>
+              <button class="osg-button osg-button--circle osg-button--yellow" aria-label="Close">
+                <span class="osg-button__icon osg-icons--close"></span>
+              </button>
+            </div>
+            <div class="osg-modal-content__content">
+              <div class="osg-row">
+                <div class="osg-row__column osg-row__column--8">
+                  <h3 class="osg-heading-3 osg-margin-bottom-30" id="modal-title">Modal example</h3>
+                  <fieldset class="osg-fieldset osg-fieldset--no-border">
+                    <legend>Lorem ipsum dolor sit amet</legend>
+                    <label class="osg-checkbox">
+                      <input type="checkbox">
+                      <span class="osg-checkbox__checkmark"></span>
+                      <span class="osg-checkbox__text">
+                        Text
+                      </span>
+                    </label>
+                    <label class="osg-checkbox">
+                      <input type="checkbox">
+                      <span class="osg-checkbox__checkmark"></span>
+                      <span class="osg-checkbox__text">
+                        Text
+                      </span>
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+                  <div class="osg-input">
+                    <label class="osg-input__label">
+                      Label text
+                      <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+                    </label>
+                  </div>
+                </div>
+                <div class="osg-row__column osg-row__column--12">
+                  <h3 class="osg-heading-6">Lorem ipsum dolor sit amet</h3>
+                  <ul class="osg-unordered-list">
+                    <li class="osg-unordered-list__item">Item</li>
+                    <li class="osg-unordered-list__item">Item</li>
+                    <li class="osg-unordered-list__item">Item</li>
+                  </ul>
+                </div>
+                <div class="osg-row__column osg-row__column--12">
+                  <button class="osg-button osg-margin-right-30">Button</button>
+                  <button class="osg-button osg-button--outline">Button 2</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="osg-modal__content">
-            <h3 class="osg-heading-3" id="modal-title">Modal example</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Sed libero enim, vehicula vel placerat ac, porttitor sit amet lacus. </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Sed libero enim, vehicula vel placerat ac, porttitor sit amet lacus. </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Sed libero enim, vehicula vel placerat ac, porttitor sit amet lacus. </p>
-          </div>
+          <div class="osg-modal-overlay osg-modal-overlay--scoped"></div>
         </div>
-        <div class="osg-overlay"></div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3 osg-margin-top-50">Default</h2>
+      <p class="osg-text-2">
+        This component can contain different types of content. The component is just the box that you trigger.
+      </p>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <button class="osg-button osg-modal-trigger">Open modal</button>
+      <div class="osg-modal-content" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
+        <div class="osg-modal-content__button">
+          <div></div>
+          <button class="osg-button osg-button--circle osg-button--yellow" aria-label="Close">
+            <span class="osg-button__icon osg-icons--close"></span>
+          </button>
+        </div>
+        <div class="osg-modal-content__content">
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--12">
+              <h3 class="osg-heading-3 osg-margin-bottom-30" id="modal-title">Modal example</h3>
+              <fieldset class="osg-fieldset osg-fieldset--no-border">
+                <legend>Lorem ipsum dolor sit amet</legend>
+                <label class="osg-checkbox">
+                  <input type="checkbox">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Text
+                  </span>
+                </label>
+                <label class="osg-checkbox">
+                  <input type="checkbox">
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">
+                    Text
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <div class="osg-input">
+                <label class="osg-input__label">
+                  Label text
+                  <input class="osg-input__input" type="text" autocomplete="on" placeholder="Input text">
+                </label>
+              </div>
+            </div>
+            <div class="osg-row__column osg-row__column--12">
+              <h3 class="osg-heading-6">Lorem ipsum dolor sit amet</h3>
+              <ul class="osg-unordered-list">
+                <li class="osg-unordered-list__item">Item</li>
+                <li class="osg-unordered-list__item">Item</li>
+                <li class="osg-unordered-list__item">Item</li>
+              </ul>
+            </div>
+            <div class="osg-row__column osg-row__column--12">
+              <button class="osg-button osg-margin-right-30">Button</button>
+              <button class="osg-button osg-button--outline">Button 2</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-modal-overlay"></div>
+    </div>
+  </div>
+</div>
+

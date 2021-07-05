@@ -1,14 +1,7 @@
 @use "system/breakpoints";
 @use "system/spacing";
 
-.osg-parent-modal {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.osg-modal {
+.osg-modal-content {
   background: white;
   display: none;
   height: 100%;
@@ -17,22 +10,33 @@
   top: 0;
   width: 100%;
 
-  & ~.osg-overlay {
-    display: none;
-  }
-
   &--open,
-  &--open ~ .osg-overlay {
+  &--open ~ .osg-modal-overlay {
     display: block;
   }
 
   @include breakpoints.medium {
     background: none;
+    bottom: 0;
     height: unset;
-    max-width: 100%;
+    left: 50%;
     position: relative;
+    right: 50%;
+    top: 0;
+    transform: translate(-50%, -30%);
     width: 66.666%;
     z-index: 100;
+  }
+
+  &--scoped {
+    height: unset;
+    left: unset;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: unset;
+    transform: none;
+    width: 100%;
   }
 
   &__button {
@@ -54,42 +58,37 @@
 
   &__content {
     background: white;
-    max-height: 18.75rem;
     overflow: auto;
     padding: 0 spacing.$space-50 spacing.$space-50 spacing.$space-50;
+    
+    @include breakpoints.medium {
+      height: 100vh;
+    }
   }
 }
 
-.osg-overlay {
+.osg-modal-overlay {
   background: none;
+  display: none;
 
   @include breakpoints.medium {
     background-color: black;
-    height: 100%;
+    bottom: 0;
     left: 0;
     opacity: .6;
     position: fixed;
-    top: 0;
-    width: 100%;
+    right: 0;
+    top: -5px;
     z-index: 10;
   }
-}
 
-.osg-devtools-code {
-  width: 100%;
-
-  .osg-overlay ~ pre {
+  &--scoped {
+    bottom: 60px;
+    height: unset;
+    left: 15px;
     position: absolute;
-    left: 0;
-    top: 23.875rem;
-    @include breakpoints.large {
-      top: 23.875rem;
-    }
-  }
-
-  @include breakpoints.medium {
-    position: relative;
-    top: unset;
-    left: unset;
+    right: 15px;
+    top: 15px;
+    width: unset;
   }
 }
