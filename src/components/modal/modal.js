@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.querySelector('.osg-modal');
+  const modals = document.querySelectorAll('.osg-modal');
+  const triggers = document.querySelectorAll('.osg-modal-trigger--scoped');
 
-  if (!modal) {
+  if (!modals) {
     return;
   }
 
-  const modalOpen = document.querySelector('.osg-modal__open');
-  const modalClose = document.querySelector('.osg-button--circle');
+  const openModals = document.querySelectorAll('.osg-modal-trigger');
+  const closeModals = document.querySelectorAll('.osg-modal-content__button');
+  const overlay = document.querySelectorAll('.osg-modal-overlay');
 
   function trapFocus(element) {
     var currentElement = element.currentTarget;
@@ -36,16 +38,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function toggleModal() {
-    modal.classList.toggle('osg-modal--open');
+  function toggleModal(event) {
+    const buttonTarget = event.target;
+    const isOpenButton = buttonTarget.classList.contains('osg-modal-trigger') || false;
+    const isCloseButton = buttonTarget.classList.contains('osg-button--circle') || false;
+    const isCloseSpan = buttonTarget.classList.contains('osg-button__icon') || false;
+    let modalElement;
 
-    (modal.getAttribute('aria-hidden') === 'true')
-      ? modal.setAttribute('aria-hidden', 'false')
-      : modal.setAttribute('aria-hidden', 'true');
+    if (isOpenButton) {
+      modalElement = buttonTarget.nextElementSibling;
+      if (buttonTarget.classList.contains('osg-modal-trigger--scoped')) {
+        triggers[0].style.display = 'none';
+      }
+    } else if (isCloseButton) {
+      modalElement = buttonTarget.parentElement.parentElement;
+      triggers[0].style.display = 'block';
+    } else if (isCloseSpan) {
+      modalElement = buttonTarget.parentElement.parentElement.parentElement;
+      triggers[0].style.display = 'block';
+    }
+
+    modalElement.classList.toggle('osg-modal-content--open');
+
+    if (modalElement.getAttribute('aria-hidden') === 'true') {
+      modalElement.setAttribute('aria-hidden', 'false');
+    } else {
+      modalElement.setAttribute('aria-hidden', 'true');
+    }
   }
 
-  modalOpen.addEventListener('click', toggleModal, false);
-  modalClose.addEventListener('click', toggleModal, false);
-  modal.addEventListener('keydown', trapFocus.bind(modal), false);
+  openModals.forEach((openModal) => {
+    openModal.addEventListener('click', toggleModal, false);
+  });
+  closeModals.forEach((closeModal) => {
+    closeModal.addEventListener('click', toggleModal, false);
+  });
+  modals.forEach((modal) => {
+    modal.addEventListener('click', trapFocus.bind(modal), false);
+  });
 
 });
