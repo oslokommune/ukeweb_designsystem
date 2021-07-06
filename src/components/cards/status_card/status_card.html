@@ -210,7 +210,7 @@
             position: relative;
           }
 
-          .osg-link.osg-collapsible__trigger::after {
+          .osg-link.osg-collapsible-trigger::after {
             font-family: 'Oslo Icons' !important;
             font-size: 1em;
             content: "\ea10";
@@ -218,7 +218,7 @@
             position: absolute;
           }
 
-          .osg-link.osg-collapsible__trigger--expanded::after {
+          .osg-link.osg-collapsible-trigger--expanded::after {
             content: "\ea11";
           }
         </style>
@@ -234,10 +234,11 @@
               interdum ipsum, ut pulvinar ex sapien at neque.</p>
             <div class="osg-status-card__actions">
               <p class="osg-text-center osg-margin-top-15">
-                <a href="javascript:void(0)" class="osg-link osg-collapsible__trigger"
+                <a href="javascript:void(0)" class="osg-link osg-collapsible-trigger"
                   aria-controls="custom-map-content">Collapsible content</a>
               </p>
-              <div id="custom-map-content" class="osg-collapsible osg-collapsible--collapsed osg-collapsible--ease">
+              <div id="custom-map-content"
+                class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
                 Insert MAP component here
               </div>
             </div>
