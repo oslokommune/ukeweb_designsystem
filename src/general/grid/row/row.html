@@ -1,13 +1,17 @@
 <div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
+      <p class="osg-text-2">Row completes a grid by allowing container, row, column and breakpoint combinations.</p>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Default</h3>
       <p class="osg-paragraph">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        The small breakpoint supports 6 columns on each line in a row whereas medium and up supports 12. Each column has
+        a 7.5px gap on each side in the small breakpoint and 15px gap on each side in medium and up.
       </p>
     </div>
   </div>
-  <div class="osg-devtools-code osg-devtools-code--no-space">
+  <div class="osg-devtools-code">
     <div class="osg-devtools-code__box">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--2 osg-row__column--1-breakpoint-medium">
@@ -53,11 +57,12 @@
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Column size</h3>
       <p class="osg-paragraph">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        Each column can occupy between 1 and 12 columns by using the column modifier on the column child of a row. In
+        combination with breakpoints a grid can be behave differently as screen size increase or decrease.
       </p>
     </div>
   </div>
-  <div class="osg-devtools-code osg-devtools-code--no-space">
+  <div class="osg-devtools-code">
     <div class="osg-devtools-code__box">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--8 osg-row__column--4-breakpoint-medium">
@@ -90,7 +95,7 @@
       </div>
     </div>
   </div>
-  <div class="osg-devtools-code osg-devtools-code--no-space">
+  <div class="osg-devtools-code">
     <div class="osg-devtools-code__box">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--8">
@@ -105,9 +110,10 @@
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Gapless</h3>
+      <p class="osg-paragraph">By using the gapless modifier on the row the column gap will be set to none.</p>
     </div>
   </div>
-  <div class="osg-devtools-code osg-devtools-code--no-space">
+  <div class="osg-devtools-code">
     <div class="osg-devtools-code__box">
       <div class="osg-row osg-row--gapless">
         <div class="osg-row__column osg-row__column--8">
@@ -123,7 +129,7 @@
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Column offset</h3>
       <p class="osg-paragraph">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        Control how far from the left a column starts by using the column offset modifier.
       </p>
     </div>
   </div>
@@ -145,7 +151,7 @@
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Column stack</h3>
       <p class="osg-paragraph">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        The column stack modifier doubles the vertical gap between each column.
       </p>
     </div>
   </div>
