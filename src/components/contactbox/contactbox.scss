@@ -1,0 +1,32 @@
+@use "system/colors";
+@use "system/fonts";
+@use "system/spacing";
+
+.osg-contactbox {
+
+  //@extend %osg-padding-30; // large
+  @extend %osg-padding-20;
+
+  border: 2px solid red;
+
+  &__heading {
+    @extend %osg-heading-3;
+  }
+
+  &__label {
+    @extend %osg-text-5;
+  }
+
+  &__value {
+    @extend %osg-text-5;
+  }
+
+
+  &--yellow {
+    background-color: colors.$yellow;
+  }
+
+  &--gray {
+    background-color: colors.$gray;
+  }
+}
