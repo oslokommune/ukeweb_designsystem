@@ -1,17 +1,19 @@
 <div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <p class="osg-text-2">Breadcrumb is a secondary navigation system that shows a user's location in a site or web app.</p>
+      <p class="osg-text-2">Breadcrumb is a secondary navigation system that shows a page or user's location in a site
+        or web
+        app.</p>
     </div>
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
-      <p class="osg-paragraph">Single level back. Same function as back button in browser, but shows the name of the previous site name.</p>
+      <p class="osg-paragraph">Single level back takes the visitor to a higher-level page.</p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <nav class="osg-breadcrumb" aria-label="breadcrumbs">
             <ul class="osg-breadcrumb__list">
               <li class="osg-breadcrumb__item">
-                <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 1</a>
+                <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 1</a>
               </li>
             </ul>
           </nav>
@@ -19,23 +21,27 @@
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-devtools-heading">Multiple level</h2>
-      <p class="osg-paragraph">Instead of using the browser's "Back" button or the site's primary navigation to return to a higher-level page, visitors can use the breadcrumbs with multiple levels.</p>
+      <h2 class="osg-devtools-heading">Multiple levels</h2>
+      <p class="osg-paragraph">Instead of using the browser's "Back" button or the site's primary navigation to return
+        to a higher-level page, visitors can use the breadcrumb with multiple levels.</p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <nav class="osg-breadcrumb" aria-label="breadcrumbs">
             <ul class="osg-breadcrumb__list">
               <li class="osg-breadcrumb__item">
-                <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 1</a>
+                <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 1</a>
               </li>
               <li class="osg-breadcrumb__item">
-                <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 2</a>
+                <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 2</a>
               </li>
               <li class="osg-breadcrumb__item">
-                <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 3</a>
+                <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 3</a>
               </li>
               <li class="osg-breadcrumb__item">
-                <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 4</a>
+                <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 4</a>
+              </li>
+              <li class="osg-breadcrumb__item">
+                <span class="osg-breadcrumb__active">Active</span>
               </li>
             </ul>
           </nav>
@@ -52,26 +58,29 @@
       <nav class="osg-breadcrumb" aria-label="breadcrumbs">
         <ul class="osg-breadcrumb__list">
           <li class="osg-breadcrumb__item">
-            <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 1</a>
+            <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 1</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Multiple level</h2>
+      <h2 class="osg-heading-3">Multiple levels</h2>
       <nav class="osg-breadcrumb" aria-label="breadcrumbs">
         <ul class="osg-breadcrumb__list">
           <li class="osg-breadcrumb__item">
-            <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 1</a>
+            <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 1</a>
           </li>
           <li class="osg-breadcrumb__item">
-            <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 2</a>
+            <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 2</a>
           </li>
           <li class="osg-breadcrumb__item">
-            <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 3</a>
+            <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 3</a>
           </li>
           <li class="osg-breadcrumb__item">
-            <a class="osg-link osg-link--chevron-left" href="javascript:void(0)">Item 4</a>
+            <a class="osg-breadcrumb__link" href="javascript:void(0)">Item 4</a>
+          </li>
+          <li class="osg-breadcrumb__item">
+            <span class="osg-breadcrumb__active">Active</span>
           </li>
         </ul>
       </nav>

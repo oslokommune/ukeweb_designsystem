@@ -2,6 +2,7 @@
 @use "system/icons";
 @use "system/fonts";
 @use "system/spacing";
+@use "system/states";
 
 .osg-breadcrumb {
   @extend %osg-text-7;
@@ -9,11 +10,62 @@
   &__list {
     list-style: none !important;
 
-    & .osg-breadcrumb__item {
+    .osg-breadcrumb__item {
       display: inline;
     }
-    & .osg-breadcrumb__item + & .osg-breadcrumb__item {
-      @extend %osg-margin-left-10;
+
+    .osg-breadcrumb__item + .osg-breadcrumb__item {
+      @extend %osg-margin-left-5;
+    }
+  }
+
+  &__link {
+    margin-left: 6px;
+    position: relative;
+    padding-left: 0.9em;
+    text-decoration: none;
+    word-wrap: break-word;
+
+    &::before,
+    &:hover::before {
+      content: map-get(icons.$icons, 'chevron-thin-left') !important;
+      display: inline-block;
+      font-family: 'Oslo Icons' !important;
+      font-size: 1em;
+      left: -6px;
+      position: absolute;
+      top: -.06em;
+    }
+
+    &:visited, &--visited {
+      color: states.$visited !important;
+    }
+    &:hover, &--hover, &:focus, &--focus {
+      color: states.$hover !important;
+      text-decoration: underline;
+    }
+    &:active, &--active {
+      color: states.$active !important;
+    }
+  }
+
+  &__active {
+    @extend %osg-text-6;
+    margin-left: 6px;
+    position: relative;
+    padding-left: 0.9em;
+    text-decoration: none;
+    word-wrap: break-word;
+
+    &::before,
+    &:hover::before {
+      content: map-get(icons.$icons, 'chevron-thin-left') !important;
+      display: inline-block;
+      font-family: 'Oslo Icons' !important;
+      font-size: 1em;
+      left: -6px;
+      position: absolute;
+      top: -.06em;
     }
   }
 }
