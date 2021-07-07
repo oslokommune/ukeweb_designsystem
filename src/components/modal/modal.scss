@@ -30,13 +30,12 @@
 
   &--scoped {
     height: unset;
+    margin: 1.875rem;
     left: unset;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     right: unset;
     transform: none;
-    width: 100%;
+    width: 94%;
   }
 
   &__button {
@@ -83,12 +82,12 @@
   }
 
   &--scoped {
-    bottom: 60px;
+    bottom: .938rem;
     height: unset;
-    left: 15px;
+    left: .938rem;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: .938rem;
+    top: .938rem;
     width: unset;
   }
 }
