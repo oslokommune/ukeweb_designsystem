@@ -1,1 +1,1 @@
-import './components/_index.js'
+import './packages/complete/_index.js'
