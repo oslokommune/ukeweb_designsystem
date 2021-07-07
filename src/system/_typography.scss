@@ -1,8 +1,6 @@
 @use "breakpoints";
 
 // --------------- FONT ---------------*/
-$path: '../assets/fonts' !default;
-
 $size-54: 3.375rem;
 $size-40: 2.5rem;
 $size-36: 2.25rem;
@@ -19,7 +17,7 @@ $size-16: 1rem;
 $size-14: .875rem;
 $size-13: .812rem;
 
-// id, mobile size, tablet size, desktop size and weight
+// id, small size, medium size, large size, weight
 $header-sizes: (
   ("1", $size-28, $size-40, $size-54, 400),
   ("2", $size-24, $size-30, $size-36, 400),
@@ -54,7 +52,7 @@ $alignments: (
 
 // generating font weight classes
 @each $name, $size in $weights {
-  %osg-text-#{$name}, %osg-text-#{$name} {
+  %osg-text-#{$name} {
     font-weight: $size !important;
   }
 }
@@ -65,9 +63,9 @@ $alignments: (
 }
 
 // generating font classes for headers
-@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $header-sizes {
+@each $name, $size-small, $size-medium, $size-large, $weight in $header-sizes {
   %osg-heading-#{$name} {
-    font-size: $size-mobile !important;
+    font-size: $size-small !important;
     font-weight: $weight !important;
     line-height: 1.5em !important;
     hyphens: auto;
@@ -80,26 +78,26 @@ $alignments: (
     }
 
     @include breakpoints.medium {
-      font-size: $size-tablet !important;
+      font-size: $size-medium !important;
     }
     @include breakpoints.large {
-      font-size: $size-desktop !important;
+      font-size: $size-large !important;
     }
   }
 }
 
 // generating typography classes for other text
-@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in $text-sizes {
+@each $name, $size-small, $size-medium, $size-large, $weight in $text-sizes {
   %osg-text-#{$name} {
-    font-size: $size-mobile !important;
+    font-size: $size-small !important;
     line-height: 1.5em !important;
     font-weight: $weight !important;
 
     @include breakpoints.medium {
-      font-size: $size-tablet !important;
+      font-size: $size-medium !important;
     }
     @include breakpoints.large {
-      font-size: $size-desktop !important;
+      font-size: $size-large !important;
     }
   }
 }

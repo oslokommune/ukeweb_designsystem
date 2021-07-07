@@ -1,7 +1,7 @@
-@use "system/fonts";
+@use "system/typography";
 
 // generating font weight classes
-@each $name, $size in fonts.$weights {
+@each $name, $size in typography.$weights {
   .osg-text-#{$name} {
     @extend %osg-text-#{$name};
   }
@@ -13,21 +13,21 @@
 }
 
 // generating font classes for headers
-@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in fonts.$header-sizes {
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in typography.$header-sizes {
   .osg-heading-#{$name} {
     @extend %osg-heading-#{$name};
   }
 }
 
 // generating typography classes for other text
-@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in fonts.$text-sizes {
+@each $name, $size-mobile, $size-tablet, $size-desktop, $weight in typography.$text-sizes {
   .osg-text-#{$name} {
     @extend %osg-text-#{$name};
   }
 }
 
 // generating text align classes
-@each $name in fonts.$alignments {
+@each $name in typography.$alignments {
   .osg-text-#{$name} {
     @extend %osg-text-#{$name};
   }

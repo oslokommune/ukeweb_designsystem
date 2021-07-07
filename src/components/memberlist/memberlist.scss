@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 
 .osg-memberlist {
@@ -21,6 +21,6 @@
     @extend %osg-margin-bottom-5;
   }
   &__info {
-    
+
   }
 }

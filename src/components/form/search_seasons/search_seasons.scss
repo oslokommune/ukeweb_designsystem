@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
@@ -78,7 +78,7 @@
     }
 
     @include breakpoints.large {
-      font-size: fonts.$size-24 !important;
+      font-size: typography.$size-24 !important;
     }
   }
 
@@ -97,7 +97,7 @@
 
     &::after {
       font-family: 'Oslo Icons' !important;
-      font-size: fonts.$size-30;
+      font-size: typography.$size-30;
       line-height: 1em;
       content: map-get(icons.$icons, 'magnifying-glass-small') !important;
       vertical-align: middle;
@@ -122,7 +122,7 @@
     z-index: 99999;
 
     @include breakpoints.large {
-      font-size: fonts.$size-20 !important;
+      font-size: typography.$size-20 !important;
     }
 
     &__item {

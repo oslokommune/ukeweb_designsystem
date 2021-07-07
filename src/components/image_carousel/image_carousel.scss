@@ -1,5 +1,5 @@
 @use "system/breakpoints";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 
 $osg-carousel-image-height-small: 290;
@@ -64,7 +64,7 @@ $osg-carousel-image-height-large: 725;
         padding: 1rem;
 
         & .osg-icon {
-          font-size: fonts.$size-30;
+          font-size: typography.$size-30;
         }
       }
     }

@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 @use "system/states";
 
@@ -36,7 +36,7 @@
    */
   &.osg-button--small {
     @extend %osg-padding-horizontal-10, %osg-padding-vertical-5;
-    font-size: fonts.$size-16 !important;
+    font-size: typography.$size-16 !important;
   }
 
   &.osg-button--large {

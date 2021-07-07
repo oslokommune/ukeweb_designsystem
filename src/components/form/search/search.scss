@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
@@ -46,7 +46,7 @@
 
     &::after {
       font-family: 'Oslo Icons' !important;
-      font-size: fonts.$size-30;
+      font-size: typography.$size-30;
       line-height: 1em;
       content: map-get(icons.$icons, 'magnifying-glass-small') !important;
       vertical-align: middle;
@@ -102,7 +102,7 @@
     &::after {
       content: map-get(icons.$icons, 'magnifying-glass-small') !important;
       font-family: 'Oslo Icons' !important;
-      font-size: fonts.$size-30;
+      font-size: typography.$size-30;
       line-height: 1em;
       position: absolute;
       right: 10px;

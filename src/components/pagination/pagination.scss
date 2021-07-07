@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 @use "system/states";
 @use "system/icons";
@@ -27,7 +27,7 @@
     text-align: center;
     border-radius: 50%;
 
-    font-size: fonts.$size-16 !important;
+    font-size: typography.$size-16 !important;
     font-weight: 500; // @extend?
     // ?? kan vi bruke text-5 eller noe?
 

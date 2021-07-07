@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 @use "system/states";
 
@@ -68,7 +68,7 @@
 
     .osg-icon {
       line-height: 1em !important;
-      font-size: fonts.$size-26;
+      font-size: typography.$size-26;
     }
   }
 

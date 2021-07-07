@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/fonts";
+@use "system/typography";
 @use "system/spacing";
 @use "system/states";
 
@@ -116,7 +116,7 @@ $osg-portrait-card-image-height-large: 290px;
     }
 
     & .osg-portrait-card__text {
-      font-size: fonts.$size-16 !important;
+      font-size: typography.$size-16 !important;
     }
 
     & .osg-portrait-card__published {

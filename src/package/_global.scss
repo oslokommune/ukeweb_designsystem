@@ -1,0 +1,32 @@
+@use "system/colors";
+@use "system/typography";
+@use "system/spacing";
+
+body {
+  font-family: 'Oslo Sans', sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: colors.$blue-dark;
+}
+
+strong {
+  @extend %osg-text-medium;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+}
+
+code {
+  @extend %osg-padding-5;
+  font-size: .8rem;
+  line-height: 1rem;
+  display: inline-block;
+  background-color: colors.$gray-light;
+  border: 1px solid colors.$grayscale-20;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  overflow-x: auto;
+  vertical-align: bottom;
+}
