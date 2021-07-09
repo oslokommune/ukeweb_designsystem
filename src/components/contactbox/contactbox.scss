@@ -3,24 +3,20 @@
 @use "system/spacing";
 
 .osg-contactbox {
-
-  //@extend %osg-padding-30; // large
   @extend %osg-padding-20;
-
-  border: 2px solid red;
+  @extend %osg-padding-30-breakpoint-large;
 
   &__heading {
     @extend %osg-heading-3;
   }
 
   &__label {
-    @extend %osg-text-5;
+    @extend %osg-text-4;
   }
 
   &__value {
     @extend %osg-text-5;
   }
-
 
   &--yellow {
     background-color: colors.$yellow;
