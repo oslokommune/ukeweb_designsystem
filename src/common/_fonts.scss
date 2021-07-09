@@ -1,6 +1,6 @@
 @use "mixins";
 
-$font-path: '../assets/fonts' !default;
+$font-path: '/node_modules/styleguide/src/assets/fonts' !default;
 
 @include mixins.font-face('Oslo Sans', '#{$font-path}/OsloSans-Regular', 400, null, 'woff2' 'woff');
 @include mixins.font-face('Oslo Sans', '#{$font-path}/OsloSans-RegularItalic', 400, italic, 'woff2' 'woff');
