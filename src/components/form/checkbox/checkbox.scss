@@ -6,11 +6,10 @@
 
 .osg-checkbox {
   @extend %osg-text-5;
-  align-items: center;
+  align-items: flex-start;
   color: inherit;
   cursor: pointer;
   display: flex;
-  margin-bottom: spacing.$space-10;
 
   & input {
     cursor: pointer;
@@ -41,7 +40,13 @@
 
   &__text {
     border-style: hidden;
+    hyphens: auto;
+    margin-top: -0.188rem;
     padding-left: spacing.$space-10;
+
+    &--align-top {
+      margin-top: -0.313rem;
+    }
   }
 
   &--error-message {
