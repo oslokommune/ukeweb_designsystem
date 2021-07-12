@@ -5,9 +5,9 @@
 
 .osg-radio {
   @extend %osg-text-5;
+  align-items: center;
   color: colors.$blue-dark;
   display: flex;
-  height: 1.125rem;
   margin-top: spacing.$space-10;
 
   &:focus-within {
@@ -17,9 +17,17 @@
     }
   }
 
+  &--text-align-top {
+    align-items: flex-start;
+
+    .osg-radio__label {
+        margin-top: -(spacing.$space-5);
+      }
+  }
+
   &__label {
+    hyphens: auto;
     margin-left: spacing.$space-10;
-    line-height: 1;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }

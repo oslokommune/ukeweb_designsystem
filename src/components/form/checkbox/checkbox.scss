@@ -6,7 +6,7 @@
 
 .osg-checkbox {
   @extend %osg-text-5;
-  align-items: flex-start;
+  align-items: center;
   color: inherit;
   cursor: pointer;
   display: flex;
@@ -17,11 +17,19 @@
     position: absolute;
   }
 
+  &--text-align-top {
+    align-items: flex-start;
+
+    .osg-checkbox__text {
+        margin-top: -(spacing.$space-5);
+      }
+  }
+
   &__checkmark {
     position: relative;
     border: 2px solid colors.$blue-dark;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: spacing.$space-20;
+    height: spacing.$space-20;
     flex-shrink: 0;
   }
 
@@ -30,23 +38,18 @@
     border-width: 0 2px 2px 0;
     content: "";
     display: none;
-    height: 0.625rem;
+    height: spacing.$space-10;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%) rotate(45deg);
     top: 50%;
-    width: .313rem;
+    width: spacing.$space-5;
   }
 
   &__text {
     border-style: hidden;
     hyphens: auto;
-    margin-top: -0.188rem;
     padding-left: spacing.$space-10;
-
-    &--align-top {
-      margin-top: -0.313rem;
-    }
   }
 
   &--error-message {
