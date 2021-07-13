@@ -13,14 +13,8 @@
     @extend %osg-padding-vertical-15;
     border-bottom: 1px solid colors.$gray;
   }
-  &__image {
-
-  }
   &__name {
     @extend %osg-heading-5;
     @extend %osg-margin-bottom-5;
-  }
-  &__info {
-
   }
 }
