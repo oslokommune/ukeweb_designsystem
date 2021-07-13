@@ -13,11 +13,11 @@
   }
 
   &--chevron-right {
-    @include mixins.icon-left("chevron-thin-right");
+    @include mixins.icon-left("chevron-right");
   }
 
   &--chevron-left {
-    @include mixins.icon-left("chevron-thin-left");
+    @include mixins.icon-left("chevron-left");
   }
 
   &--state-light {
