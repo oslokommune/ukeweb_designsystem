@@ -28,10 +28,9 @@
     border-radius: 50%;
 
     font-size: typography.$size-16 !important;
-    font-weight: 500; // @extend?
-    // ?? kan vi bruke text-5 eller noe?
+    font-weight: 500;
 
-    &:hover, &:focus {
+    &:hover,&:focus {
       background-color: colors.$gray-light;
       border-color: colors.$gray-light;
       color: states.$hover !important;
@@ -66,11 +65,40 @@
   }
 
   &__next, &__previous {
-    // icon stuff here
+    background: none;
+    border: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: 1em;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+
+    &::before,
+    &:hover::before {
+      font-family: 'Oslo Icons' !important;
+      font-size: 1em;
+      padding: 0.438rem;
+    }
+
+    &:hover::before {
+      background-color: colors.$gray-light !important;
+      border-radius: 50%;
+    }
+  }
+
+  &__previous {
+    &::before,
+    &:hover::before {
+      content: map-get(icons.$icons, 'chevron-thin-left') !important;
+    }
   }
 
   &__next {
-    // chevron-thin-right here
+    &::before,
+    &:hover::before {
+      content: map-get(icons.$icons, 'chevron-thin-right') !important;
+    }
   }
-
 }
