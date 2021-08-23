@@ -10,6 +10,14 @@
     @extend %osg-heading-3;
   }
 
+  &__description {
+    @extend %osg-text-4;
+  }
+
+  &__additional-info {
+    @extend %osg-text-5;
+  }
+
   &__label {
     @extend %osg-text-4;
   }
