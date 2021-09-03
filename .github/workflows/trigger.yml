@@ -1,0 +1,21 @@
+name: Trigger S3 build on devtools
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Expose version
+        id: version
+        run: |
+          echo "::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}"
+      - name: Call devtools workflow
+        run: |
+            curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_prod_s3.yml/dispatches \
+            -d '{ "ref": "main", "version": "${{ steps.version.outputs.VERSION }}" }'
