@@ -1,4 +1,4 @@
-name: Trigger S3 build on devtools
+name: Trigger workflow
 
 on:
   release:
@@ -8,11 +8,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Expose version
+      - name: Set version
         id: version
         run: |
           echo "::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}"
-      - name: Call devtools workflow
+
+      - name: Call workflow
         run: |
             curl -X POST \
             -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
