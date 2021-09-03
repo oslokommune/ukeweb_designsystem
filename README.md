@@ -11,8 +11,9 @@
 
 1. Update package.json with new version
 2. Update CHANGELOG.md
-3. Create new release at github.com with the same version as in package.json
-4. CI/CD workflows will make new versioned CSS and font files available on CDN
+3. Commit and push
+4. Create new release at github.com with the same version as in package.json
+5. CI/CD workflows will make new versioned CSS and font files available on CDN
 
 ## Icons
 
