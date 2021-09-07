@@ -1,16 +1,27 @@
-<div class="columns is-gapless">
-  <div class="column is-8">
-    <div class="osg-content">
-      <h4>Build</h4>
-      <h5>NPM</h5>
-      <p>
-        <code class="osg-code">npm install ok-osg</code>
-      </p>
-      <h5>Webpack</h5>
-      <p>Build. sass-dart.</p>
-      <h5>SASS</h5>
-      <p>If you chose NPM / SASS you can either <code class="osg-code">@use "~styleguide/src/osg.scss"</code> for the
-        complete package or individually include the components you want.</p>
+<div class="osg-container osg-container--gutterless osg-container--no-overflow">
+  <div class="osg-row">
+    <div class="osg-row__column">
+      <div class="osg-content">
+        <p>If you do not want to use pre-compiled CSS files in your project you can bundle and build <strong>Oslo style
+            guide</strong>
+          yourself or more fine grained control.
+        </p>
+        <p><strong>Install</strong><br>Add Oslo style guide to your project using for example npm: <code
+            class="osg-code">npm install git://github.com/oslokommune/styleguide.git#1.0</code>. Tune versioning
+          according
+          to <a href="https://semver.org" target="_blank">semver.org</a>. Available versions can be found at <a
+            href="https://github.com/oslokommune/styleguide/releases"
+            target="_blank">https://github.com/oslokommune/styleguide/releases</a>.
+        </p>
+        <p>
+          <strong>Build</strong><br>You need a build tool to compile your stylesheets. It needs to support the sass-dart
+          compiler.
+          <br>A basic webpack configuration:
+        </p>
+        <h5>SASS</h5>
+        <p>If you chose NPM / SASS you can either <code class="osg-code">@use "~styleguide/src/osg.scss"</code> for the
+          complete package or individually include the components you want.</p>
+      </div>
     </div>
   </div>
 </div>
