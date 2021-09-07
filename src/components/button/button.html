@@ -4,7 +4,7 @@
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12 osg-row__column--10-breakpoint-medium">
           <p class="osg-paragraph osg-margin-bottom-15">Innledning</p>
-          <h3 class="osg-heading-3 osg-margin-bottom-5">Default</h3>
+          <h2 class="osg-devtools-heading">Default</h2>
           <p class="osg-paragraph">Used for the most important action on a page - the main action. A page may sometimes contain more than one main action, but not many.</p>
           <div class="osg-devtools-code osg-margin-top-30">
             <div class="osg-devtools-code__box">
@@ -19,7 +19,7 @@
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12 osg-row__column--10-breakpoint-medium">
-          <h3 class="osg-heading-3 osg-margin-bottom-5">Outline</h3>
+          <h2 class="osg-devtools-heading">Outline</h2>
           <p class="osg-paragraph">Used in situations where the button is less important and not the main action.</p>
           <div class="osg-devtools-code osg-margin-top-30">
             <div class="osg-devtools-code__box">
@@ -34,7 +34,7 @@
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12 osg-row__column--10-breakpoint-medium">
-          <h3 class="osg-heading-3 osg-margin-bottom-5">Text</h3>
+          <h2 class="osg-devtools-heading">Text</h2>
           <p class="osg-paragraph">Used for the least important action.</p>
           <div class="osg-devtools-code osg-margin-top-30">
             <div class="osg-devtools-code__box">
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <h3 class="osg-heading-3 osg-margin-bottom-5">Colors</h3>
+      <h2 class="osg-devtools-heading">Colors</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <button class="osg-button">
@@ -123,19 +123,19 @@
         </div>
         <div class="osg-row__column osg-row__column--12">
           <div class="osg-devtools-code">
-            <button class="osg-button osg-button--circle">
+            <button class="osg-button osg-button--circle" aria-label="Next">
               <span class="osg-button__icon osg-icons--chevron-right"></span>
             </button>
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-devtools-debug">
-          <button class="osg-button osg-button--circle" disabled="disabled">
+          <button class="osg-button osg-button--circle" disabled="disabled" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--hover">
+          <button class="osg-button osg-button--circle osg-button--hover" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--active">
+          <button class="osg-button osg-button--circle osg-button--active" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
         </div>
@@ -151,7 +151,7 @@
             <button class="osg-button">
               <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Icon left
             </button>
-            <button class="osg-button osg-button--icon">
+            <button class="osg-button osg-button--icon" aria-label="Map">
               <span class="osg-button__icon osg-icons--map"></span>
             </button>
             <button class="osg-button">
@@ -163,7 +163,7 @@
           <button class="osg-button" disabled="disabled">
             <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Icon left
           </button>
-          <button class="osg-button osg-button--icon-only" disabled="disabled">
+          <button class="osg-button osg-button--icon-only" aria-label="Map" disabled="disabled">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
           <button class="osg-button" disabled="disabled">
@@ -173,7 +173,7 @@
           <button class="osg-button osg-button--outline">
             <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Button
           </button>
-          <button class="osg-button osg-button--outline osg-button--icon-only">
+          <button class="osg-button osg-button--outline osg-button--icon-only" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
           <button class="osg-button osg-button--outline">
@@ -183,7 +183,7 @@
           <button class="osg-button osg-button--outline" disabled="disabled">
             <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Button
           </button>
-          <button class="osg-button osg-button--outline osg-button--icon-only" disabled="disabled">
+          <button class="osg-button osg-button--outline osg-button--icon-only" aria-label="Map" disabled="disabled">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
           <button class="osg-button osg-button--outline" disabled="disabled">
@@ -193,7 +193,7 @@
           <button class="osg-button osg-button--text">
             <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Button
           </button>
-          <button class="osg-button osg-button--text osg-button--icon-only">
+          <button class="osg-button osg-button--text osg-button--icon-only" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
           <button class="osg-button osg-button--text">
@@ -203,17 +203,17 @@
           <button class="osg-button osg-button--text" disabled="disabled">
             <span class="osg-button__icon osg-button__icon--left osg-icons--map"></span>Button
           </button>
-          <button class="osg-button osg-button--text osg-button--icon-only" disabled="disabled">
+          <button class="osg-button osg-button--text osg-button--icon-only" aria-label="Map" disabled="disabled">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
           <button class="osg-button osg-button--text" disabled="disabled">
             Button<span class="osg-button__icon osg-button__icon--right osg-icons--map"></span>
           </button>
           <br>
-          <a href="javascript:void(0)" class="osg-button osg-button--circle">
+          <a href="javascript:void(0)" class="osg-button osg-button--circle" aria-label="Next">
             <span class="osg-button__icon osg-icons--chevron-right"></span>
           </a>
-          <button class="osg-button osg-button--circle">
+          <button class="osg-button osg-button--circle" aria-label="Next">
             <span class="osg-button__icon osg-icons--chevron-right"></span>
           </button>
         </div>
@@ -235,12 +235,15 @@
         </button>
       </div>
       <div class="osg-devtools-debug">
-        <button class="osg-button osg-button--circle osg-button--small"><span
-            class="osg-button__icon osg-icons--map"></span></button>
-        <button class="osg-button osg-button--circle"><span
-            class="osg-button__icon osg-icons--map"></span></button>
-        <button class="osg-button osg-button--circle osg-button--large"><span
-            class="osg-button__icon osg-icons--map"></span></button>
+        <button class="osg-button osg-button--circle osg-button--small" aria-label="Map">
+          <span class="osg-button__icon osg-icons--map"></span>
+        </button>
+        <button class="osg-button osg-button--circle" aria-label="Map">
+          <span class="osg-button__icon osg-icons--map"></span>
+        </button>
+        <button class="osg-button osg-button--circle osg-button--large" aria-label="Map">
+          <span class="osg-button__icon osg-icons--map"></span>
+        </button>
       </div>
       <div class="osg-devtools-code osg-margin-top-50">
         <button class="osg-button osg-button--fullwidth">
@@ -260,7 +263,7 @@
           Anchor Button <span class="osg-icon osg-button__icon--right osg-icon--map"></span>
         </a>
         <a href="javascript:void(0)" class="osg-button osg-button--green-dark osg-button--icon"
-         >
+          aria-label="Map">
           <span class="osg-button__icon osg-icons--map"></span>
         </a>
       </div>
@@ -286,7 +289,7 @@
             <div class="osg-row__column osg-row__column--4">
               <div class="osg-row">
                 <div class="osg-row__column osg-row__column--12">
-                  <h3 class="osg-heading-3 osg-margin-bottom-10">Default</h3>
+                  <h3 class="osg-heading-3 osg-margin-bottom-10">Default</h2>
                   <button class="osg-button osg-margin-right-15">
                     Button text
                   </button>
@@ -309,7 +312,7 @@
             <div class="osg-row__column osg-row__column--4">
               <div class="osg-row">
                 <div class="osg-row__column osg-row__column--12">
-                  <h3 class="osg-heading-3 osg-margin-bottom-10">Outline</h3>
+                  <h3 class="osg-heading-3 osg-margin-bottom-10">Outline</h2>
                   <button class="osg-button osg-button--outline osg-margin-right-15">
                     Button text
                   </button>
@@ -332,7 +335,7 @@
             <div class="osg-row__column osg-row__column--4">
               <div class="osg-row">
                 <div class="osg-row__column osg-row__column--12">
-                  <h3 class="osg-heading-3 osg-margin-bottom-10">Text</h3>
+                  <h3 class="osg-heading-3 osg-margin-bottom-10">Text</h2>
                   <button class="osg-button osg-button--text osg-margin-right-15">
                     Button text
                   </button>
@@ -359,7 +362,7 @@
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12">
-          <h3 class="osg-heading-3 osg-margin-bottom-10">Colors</h3>
+          <h3 class="osg-devtools-heading">Colors</h2>
           <button class="osg-button osg-margin-right-15">
             Button
           </button>
@@ -413,16 +416,16 @@
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12">
           <h3 class="osg-heading-3 osg-margin-bottom-10">Circle</h3>
-          <button class="osg-button osg-button--circle osg-margin-right-15">
+          <button class="osg-button osg-button--circle osg-margin-right-15" aria-label="Next">
             <span class="osg-button__icon osg-icons--chevron-right"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-margin-right-15" disabled="disabled">
+          <button class="osg-button osg-button--circle osg-margin-right-15" disabled="disabled" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--hover osg-margin-right-15">
+          <button class="osg-button osg-button--circle osg-button--hover osg-margin-right-15" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--active osg-margin-right-15">
+          <button class="osg-button osg-button--circle osg-button--active osg-margin-right-15" aria-label="Map">
             <span class="osg-button__icon osg-icons--map"></span>
           </button>
         </div>
@@ -494,24 +497,24 @@
           </button>
         </div>
         <div class="osg-row__column osg-row__column--3">
-          <button class="osg-button osg-button--circle osg-button--small osg-margin-right-15">
+          <button class="osg-button osg-button--circle osg-button--small osg-margin-right-15" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-margin-right-15">
+          <button class="osg-button osg-button--circle osg-margin-right-15" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--large">
+          <button class="osg-button osg-button--circle osg-button--large" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
         </div>
         <div class="osg-row__column osg-row__column--4">
-          <button class="osg-button osg-button--small osg-margin-right-15">
+          <button class="osg-button osg-button--small osg-margin-right-15" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-margin-right-15">
+          <button class="osg-button osg-margin-right-15" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-button--large">
+          <button class="osg-button osg-button--large" aria-label="Search">
             <span class="osg-button__icon osg-icons--magnifying-glass-small"></span>
           </button>
         </div>
