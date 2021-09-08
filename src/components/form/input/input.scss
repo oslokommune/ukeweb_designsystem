@@ -1,5 +1,6 @@
 @use "system/colors";
 @use "system/spacing";
+@use "system/typography";
 @use "mixins";
 
 .osg-input {
@@ -27,6 +28,18 @@
       opacity: 1;
       pointer-events: all;
     }
+
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button
+    {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"]
+    {
+      -moz-appearance: textfield;
+    }
   }
 
   &__label {
@@ -41,5 +54,31 @@
 
   &__error-message {
     @include mixins.error-message;
+  }
+
+  &__counter-nav {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: -20px;
+    margin-top: 5px;
+
+    &-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: typography.$size-18;
+      height: 20px;
+      padding: 0;;
+      text-align: center;
+      transform: translateX(-200%);
+      user-select: none;
+      width: 20px;
+      -webkit-transform: translateX(-200%);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+    }
   }
 }
