@@ -13,9 +13,6 @@ $gutter-large: spacing.$space-30 !default;
 
   &--gutterless {
     margin: 0;
-  }
-
-  &--no-overflow {
     overflow: hidden;
   }
 
