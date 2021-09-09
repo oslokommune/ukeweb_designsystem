@@ -8,9 +8,16 @@
         </p>
         <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
           <h2 class="osg-infobox__heading">Important</h2>
-          <p class="osg-paragraph">Video must follow rules set up by <a class="osg-link"
-              href="https://designmanual.oslo.kommune.no/video"
-              target="_blank">https://designmanual.oslo.kommune.no/video</a>.</p>
+          <p class="osg-paragraph">Video must follow rules set up by <a class="osg-link" href="https://designmanual.oslo.kommune.no/video" target="_blank">https://designmanual.oslo.kommune.no/video</a>.</p>
+          <p class="osg-paragraph osg-margin-top-10">The following attributes are required on the video-tag:</p>
+          <p class="osg-paragraph">controls - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controls" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph">preload="metadata" - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-preload" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph osg-margin-top-10">Additional relevant attributes:</p>
+          <p class="osg-paragraph">poster - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-poster" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph">loop - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-loop" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph">muted - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-muted" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph">crossorigin - <a class="osg-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-crossorigin" target="_blank">see documentation on MDN</a></p>
+          <p class="osg-paragraph">role="presentation" - <a class="osg-link" href="https://www.w3.org/TR/wai-aria-1.1/#presentation" target="_blank">see documentation on W3C</a></p>
         </div>
       </div>
       <div class="osg-row__column osg-row__column--12">
@@ -49,6 +56,13 @@
             </div>
           </div>
         </div>
+        <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+          <h2 class="osg-infobox__heading">Hosting your own video and CORS</h2>
+          <p class="osg-paragraph">When hosting your own video, you must provide one or more source-tags with webm and/or mp4 file types.</p>
+          <p class="osg-paragraph">You might have issues with CORS if you serve the video from another domain than the one used for the HTML.</p>
+          <p class="osg-paragraph osg-margin-top-10">To help fix this, add the attribute crossorigin="anonymous" to the video-tag.</p>
+          <p class="osg-paragraph">Be sure to also send the correct "Access-Control-*" headers from the server(s)/CDN-service you're using. Typically "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".</p>
+        </div>
       </div>
       <div class="osg-row__column osg-row__column--12">
         <h2 class="osg-devtools-heading">Animation</h2>
@@ -58,6 +72,15 @@
             Animation clips are the only video clips that are allowed to auto start and go on a loop. No audio
             allowed.<br>
             Small animations can be fun, but think about what you want to add to the rest of the content.
+          </p>
+          <p class="osg-paragraph osg-margin-top-10">
+            The following technical changes to the attributes of the video-tag are required:
+            <ul class="osg-unordered-list">
+              <li class="osg-unordered-list__item">Add role="presentation" if the video is purley for used decoration</li>
+              <li class="osg-unordered-list__item">Remove "controls" and "poster"</li>
+              <li class="osg-unordered-list__item">Change preload="metadata" to preload="auto"</li>
+              <li class="osg-unordered-list__item">Add "autoplay", "loop" and "muted"</li>
+            </ul>
           </p>
         </div>
         <div class="osg-devtools-code">
@@ -96,7 +119,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 <div class="osg-container osg-devtools-devmode">
