@@ -1,98 +1,147 @@
 <div class="osg-container osg-container--gutterless">
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+    <div class="osg-row__column osg-row__column--8">
       <div class="osg-content">
-        <h2>Conceptual</h2>
-        <h4>General</h4>
-        <p>...</p>
-        <h4>Component</h4>
-        <p><strong>Should "this" be in Oslo style guide or in a project?</strong></p>
-        <p>Anything that goes into Oslo style guide must be approved by the designers and should be general enough that
-          it can be used in multiple settings.</p>
-        <p><strong>How do we define a component?</strong></p>
-        <p>A new component is born when a selection of other components, html elements and/or styles are put together
-          and has to follow a set of rules. Each component is independent and must not inherit styles of other
-          components.</p>
-        <p><strong>Language</strong></p>
-        <p>Everything must be written in english with the exception of example texts which can be Lorem ipsum.</p>
-        <p><strong>Spacing</strong></p>
-        <p>A component should never have spacing applied to the outside of the component bounds.</p>
-        <p><strong>Font size</strong></p>
-        <p>Avoid setting font size on inline components as they will normally get their size from the context of which
-          they are used in. Typical inline components are links and icons.</p>
-        <p><strong></strong></p>
-        <h4>Pages</h4>
-        <p>...</p>
-        <h2>Technical</h2>
-        <h4>Conventions</h4>
-        <p>BEM style, linting</p>
-        <h4>Repositories</h4>
-        <p>Oslo style guide consists of two repositories. Styleguide follows <a href="https://semver.org"
-            target="_blank">semver.org</a> and each major version has a styleguide_devtools version that accompanies it.
+        <p>Contributions to Oslo style guide should be fun and painless. However, an understanding of how it's
+          built and what rules to follow is needed to maintain a high quality product.</p>
+        <h3>Concepts</h3>
+        <p>Oslo style guide is built and maintained to provide a set of styles and components commonly used in
+          oslo.kommune.no and related projects. It is not meant to solve all digital use-cases in Oslo kommune.</p>
+        <p>
+          <strong>Should "this" be in Oslo style guide?</strong><br>
+          If "this" qualifies as a component, is approved by a maintaining designer of Oslo style guide and is common
+          enough for use in multiple projects the answer is yes.
+        </p>
+        <p>
+          <strong>How do we define a component?</strong><br>
+          A component is a selection of other components, html elements and/or styles put together following a specific
+          set of rules as a group. Each component is <strong>independent</strong> and must not inherit from other
+          components. However, they may use common styles provided by Oslo style guide.
+        </p>
+        <h3>Technical</h3>
+        <p>
+          <strong>Understanding Oslo style guide repositories</strong><br>
+          Oslo style guide consists of two repositories. The <code class="osg-code">styleguide</code> repository, which
+          follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code
+            class="osg-code">styleguide_devtools</code> repository. Each major version of the latter will work against
+          the corresponding major version of the former.
         </p>
         <p>
           <strong>styleguide</strong>
           <br>
-          The styleguide repository is the product. It consists of all the components, styles, fonts and icons that make
-          up Oslo style guide.
+          The <code class="osg-code">styleguide</code> repository consists of raw files. Fonts, icons, css, js, vue,
+          html and json. This is what is "consumed" by projects.
+        </p>
+        <p>
+          The framework has a rather simple structure.<br>
+          <strong>assets</strong> hold fonts, icons and images<br>
+          <strong>common</strong> consists of global styles like reset, font, icons and body<br>
+          <strong>components</strong> has all of the components<br>
+          <strong>general</strong> generates css classes and its documentation which can be used directly in html<br>
+          <strong>getting_started</strong> documents how to consume and how to contribute<br>
+          <strong>packages</strong> contains combinations of style guide which lets you consume it in different
+          ways<br>
+          <strong>pages</strong> hold examples of how a selection of components can make a page<br>
+          <strong>system</strong> hold the core of the scss framework. It does not generate css by itself but is rather
+          consumed by components which in turn generate css<br>
+          <strong>utils</strong> hold helper scripts for mundane tasks<br>
         </p>
         <p>
           <strong>styleguide_devtools</strong>
           <br>
-          The styleguide_devtools repository consumes the styleguide repository (just like any project would) and
-          creates the very application you now use to browse and contribute to the styleguide repository.
+          The <code class="osg-code">styleguide_devtools</code> repository consumes the styleguide repository (just like
+          any project would) and is the very application you now use to browse and contribute to the styleguide
+          repository.<br><br>Write code in <code class="osg-code">styleguide</code>. View and verify in <code
+            class="osg-code">styleguide_devtools</code>.
         </p>
-        <h4>Framework</h4>
+        <h4>Developing</h4>
+        <p>First and foremost, study the examples provided in "Contribute". Both visually and code. They are created to
+          provide a reference for best practice and is what your code will be checked against in code reviews.</p>
+        <h5>General rules</h5>
         <p>
-          <strong>assets</strong> hold fonts, icons and images<br>
-          <strong>components</strong> has all of the components<br>
-          <strong>general</strong> hold css styles and its documentation<br>
-          <strong>getting_started</strong> documents how to consume and how to contribute<br>
-          <strong>pages</strong> hold examples of how a selection of components make a page<br>
-          <strong>system</strong> hold the core of the scss framework<br>
-          <strong>utils</strong> hold helper scripts for mundane tasks<br>
+          <strong>Spacing</strong><br>
+          A root element should never have margin. Spacing between components must be applied in projects /
+          contexts or it will decrease the reusability of the component.
         </p>
-        <h4>Develop</h4>
-        <p>formats: html(5), js (es...), vue (2), scss (dart sass), json (tags, preset)</p>
-        <p>index files</p>
-        <p><strong>devtools:</strong><br>
-          _ in dirs mean space<br>
-          supported classes in components:<br>
-          osg-devtools-code, osg-devtools-code__box, osg-devtools-code__box__code, osg-devtools-code__box--{palette
-          color}, osg-devtools-devmode, osg-devtools-nondevmode, osg-devtools-heading
+        <p>
+          <strong>Font size</strong><br>
+          Avoid setting font size on inline components as they will normally get their size from the context of which
+          they are used in. Typical inline components are links and icons.
+        </p>
+        <p>
+          <strong>BEM</strong><br>
+          Make sure to follow the <a href="https://en.bem.info/methodology/quick-start/" target="_blank">BEM naming
+            convention</a> for (S)CSS.<br>
+
+          Content of a component should always be "BEMified" if the content is required. Optional content must not be
+          "BEMified".
+          Content means text, headings and/or images. An exception to this rule is the grid system, if the grid system
+          is used in a component, do not "BEMify" it.
+        </p>
+        <p>
+          <strong>Formats</strong><br>
+          The following formats are supported.<br>
+          <strong>html</strong> for the component code<br>
+          <strong>js</strong> for the component javascript<br>
+          <strong>vue</strong> for the component vue code<br>
+          <strong>scss</strong> for the component styling<br>
+          <strong>json</strong> for the component configuration in devtools
+        </p>
+        <p>Make sure you add javascript and scss files to the corresponding _index files in the root folders or they
+          won't be included.</p>
+        <p>
+          <strong>Things with special meaning</strong><br>
+          <code class="osg-code">styleguide_devtools</code> will interpret the following cases in <code
+            class="osg-code">styleguide</code>:<br>
+          <strong>_</strong> in folder names will end up as a space when viewed in devtools<br>
+          <strong>osg-devtools-code</strong> applied as a class to an html element will make the innerHTML of the
+          element visible in a "View code" box. Adding a child element with the class <code
+            class="osg-code">osg-devtools-code__box</code> will instead only show the innerHTML of this element in "View
+          code." Giving more options in terms of layout. This class also supports colors by adding a modifier class
+          <code class="osg-code">osg-devtools-code__box--{palette
+          color}</code>. A child element of the <code class="osg-code">osg-devtools-code__box</code> with the class
+          <code class="osg-code">osg-devtools-code__box__code</code> will only show the innerHTML of this element in the
+          "View code" box, further enhancing the ability to customize the layout of the component and code examples.<br>
+          <strong>osg-devtools-devmode</strong> applied as a class to an html element will make the child elements only
+          visible on the "Developer" tab<br>
+          <strong>osg-devtools-nondevmode</strong> applied as a class to an html element will make the child elements
+          only visible on the "Overview" tab<br>
+          <strong>osg-devtools-heading</strong> applied as a class to a heading element followed by a paragraph will
+          create the desired spacing for the "Overview" tab.
         </p>
         <h4>Testing</h4>
-        <p>Browsers: Firefox, Chrome, Edge, Safari and Samsung Internet(!?)</p>
-        <p>UU...</p>
         <p>
-          - Innhold i komponenter skal BEMifiseres (bli en del av komponent) dersom komponenten alltid skal ha dette
-          innholdet
-          Med innhold menes f.eks, tekst, heading og bilde. Man må ikke alltid ha alle, men en eller flere.
-          Unntak til denne regelen er grid, det skal ikke bli en del av komponent.
-          - Illustrasjoner og bilder
-          Illustrasjoner finnes i 70x70 og 300x300. Det er 21 forskjellige illustrasjoner. Bildefiler kan hentes fra
-          følgende
-          S3-bucket:
-          70x70 https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/1.png til og med 21.png
-          300x300 https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/1.png til og med
-          21.png
-          Bilder - tar det med Stine på mandag.
-          Bilder finnes på følgende base-URL: https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/
-          Det er 32 bilder, 1.jpg til 32.jpg (*)
-          * på 220x275 så finnes kun bilde 20.jpg og 30.jpg
-          * på 2560, så mangler bilde 6.jpg, 8.jpg, 11.jpg og 16.jpg.
-          Mappenavn er som følger:
-          220x275/
-          300x300/
-          800x800/
-          768/
-          1024/
-          1920/
-          2560/
-          Eksempler:
-          https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg
-          https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg
-          https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg
+          The latest version of the following browsers must be supported fully:<br>
+          Firefox, Chrome, Edge, Safari and Samsung
+          Internet
+        </p>
+        <p>Full compability with WCAG 2.1.</p>
+        <h5>Example photos and illustrations</h5>
+        <p>
+          To make development easy you can use the following illustrations in 70x70 or 300x300 from 1 to 21.<br>
+          <code
+            class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/{1-21}.png</code>
+          <code
+            class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/{1-21}.png</code>
+        </p>
+        <p>
+          Photos can be found here:<br>
+          <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/</code><br><br>
+          There are 32 photos, 1.jpg to 32.jpg with the following exceptions:<br>
+          - 220x275 only has 20.jpg and 30.jpg.<br>
+          - 2560 is lacking photo 6.jpg, 8.jpg, 11.jpg and 16.jpg.<br><br>
+          Folder names:<br>
+          220x275/<br>
+          300x300/<br>
+          800x800/<br>
+          768/<br>
+          1024/<br>
+          1920/<br>
+          2560/<br><br>
+          Examples:<br>
+          <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg</code>
+          <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg</code>
+          <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg</code>
         </p>
       </div>
     </div>
