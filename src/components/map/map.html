@@ -1,0 +1,76 @@
+<div class="osg-container">
+  <div class="osg-container osg-container--content-limit">
+    <div class="osg-row">
+
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Single marker</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+        <div class="osg-devtools-code">
+          <script src='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js'></script>
+          <link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />          <div class="osg-map" id="osg-map"></div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Markers with clustering and fullscreen</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+        <div class="osg-devtools-code">
+          <div class="osg-map" id="osg-map2"></div>
+        </div>
+      </div>
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Static map</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+        <div class="osg-devtools-code">
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+              <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+              <p class="osg-paragraph">
+                Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.
+              </p>
+            </div>
+            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+              <img class="osg-image" src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,16/500x500.png?key=ozJ4wrFZpcxwcjYNzQn0&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="osg-row__column osg-row__column--12">
+        <h2 class="osg-heading-3">Static map, right column on medium</h2>
+      </div>
+      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+        <div class="osg-devtools-code">
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+              <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+              <p class="osg-paragraph">
+                Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.
+              </p>
+            </div>
+            <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+              <!--
+              <img class="osg-image" src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,16/380x380.png?key=ozJ4wrFZpcxwcjYNzQn0&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt">
+              -->
+              <div class="osg-map osg-map--static">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,15/380x380.png?key=ozJ4wrFZpcxwcjYNzQn0&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149">
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,17/300x300.png?key=ozJ4wrFZpcxwcjYNzQn0&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149">
+                  <img
+                    src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,15/300x300.png?key=ozJ4wrFZpcxwcjYNzQn0&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149"
+                    alt="Kartutsnitt">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
