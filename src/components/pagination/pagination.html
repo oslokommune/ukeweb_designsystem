@@ -9,6 +9,21 @@
         <p class="osg-paragraph">Shape changes form circle to square when number goes from 99 to 100.</p>
         <p class="osg-paragraph">The compoent supports the use of both links and buttons.</p>
       </div>
+      <h3 class="osg-devtools-heading">Vue component with buttons</h3>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div id="vue-pagination1">
+            <osg-pagination
+              :current-index=5
+              :limit=2
+              :first-page=1
+              :total-pages=16
+              :paginate="function() { return 1 }">
+            </osg-pagination>
+          </div>
+        </div>
+      </div>
+
       <h3 class="osg-devtools-heading">Default</h3>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
