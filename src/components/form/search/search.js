@@ -1,3 +1,5 @@
+import OsgSearch from './search.vue';
+
 document.addEventListener('DOMContentLoaded', function () {
   let searchDropdownTriggers = document.querySelectorAll('.components-form-search-dropdown');
   if (searchDropdownTriggers) {
@@ -16,6 +18,36 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       })
+    });
+  }
+
+  let osgSearchPlaceholder = document.getElementById('osg-search-vue')
+  if (osgSearchPlaceholder) {
+    Vue.component('osg-search', OsgSearch);
+    new Vue({
+      el: osgSearchPlaceholder,
+      data: () => ({
+        value: 'h',
+        items: []
+      }),
+      mounted() {
+        this.event('change', this.value);
+      },
+      methods: {
+        event(event, payload) {
+          if (event === 'change') {
+            if (payload[0] && payload[0].toLowerCase() === 'h') {
+              this.items = ['Hi', 'Hello']
+            } else {
+              this.items = []
+            }
+            this.value = payload
+          } else if (event === 'item') {
+            this.value = this.items[payload]
+          }
+          console.log(event, payload);
+        }
+      }
     });
   }
 });
