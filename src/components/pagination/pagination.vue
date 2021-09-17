@@ -1,32 +1,33 @@
 <template>
-  <nav class="osg-pagination" :aria-label="navLabel(currentIndex)">
+  <nav
+    class="osg-pagination" :aria-label="'Page ' + currentIndex">
     <button
       class="osg-pagination__previous"
-      v-show="currentIndex !== firstPage"
-      @click="paginate(currentIndex - 1)">
-      <span class="osg-sr-only">Show previous page</span>
+      v-show="showArrows && currentIndex > 1"
+      @click.prevent="itemClick('prev')">
+      <span class="osg-sr-only">{{ i18n.previousBtn }}</span>
     </button>
     <template v-for="index in totalPages">
       <button
         v-if="showItem(index)"
         class="osg-pagination__item"
-        v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': index > 99 }"
+        v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': squareMark }"
         :key="index"
         :disabled="index === currentIndex"
-        @click="paginate(index)"
+        @click.prevent="itemClick(index)"
       >
-        <span class="osg-sr-only">Show page </span>
+        <span class="osg-sr-only">{{ i18n.showPage }} </span>
         {{ index }}
       </button>
-      <span v-else-if="showSpacer(index)" class="osg-pagination__spacer" :key="index" aria-hidden="true">
+      <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true">
         &hellip;
       </span>
     </template>
     <button
       class="osg-pagination__next"
-      v-show="currentIndex !== totalPages"
-      @click="paginate(currentIndex + 1)">
-      <span class="osg-sr-only">Show next page</span>
+      v-show="showArrows && currentIndex < totalPages"
+      @click.prevent="itemClick('next')">
+      <span class="osg-sr-only">{{ i18n.nextBtn }}</span>
     </button>
   </nav>
 </template>
@@ -39,21 +40,35 @@ export default {
       type: Number,
       required: true
     },
-    firstPage: {
-      type: Number,
-      required: true
-    },
     currentIndex: {
       type: Number,
       required: true
     },
-    paginate: {
-      type: Function,
-      required: true
+    showArrows: {
+      type: Boolean,
+      default: true
+    },
+    threshold: {
+      type: Number,
+      default: 10
     },
     limit: {
       type: Number,
       default: 2
+    },
+    i18n: {
+      type: Object,
+      default: () => {
+        return {
+          previousBtn: 'Show previous page',
+          nextBtn: 'Show next page',
+          showPage: 'Show page'
+        }
+      }
+    },
+    squareMark: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -73,20 +88,11 @@ export default {
       return isFirst || isLast || isWithinLimit
     },
     showSpacer: function (index) {
-      return index >= this.limitMin - 1 && index <= this.limitMax + 1
+      return this.totalPages > this.threshold && (index >= this.limitMin - 1 && index <= this.limitMax + 1)
     },
-
-    navLabel: function (index) {
-      const isFirst = index === 1
-      const isLast = index === this.totalPages
-
-      if (index === isFirst) {
-        return 'first page'
-      } else if (index === isLast) {
-        return 'last page'
-      } else {
-        return 'page ' + index
-      }
+    itemClick(event) {
+      console.log(event)
+      this.$emit('item', event)
     }
   }
 }

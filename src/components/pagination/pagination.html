@@ -12,13 +12,14 @@
       <h3 class="osg-devtools-heading">Vue component with buttons</h3>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div id="vue-pagination1">
+          <div id="vue-pagination">
             <osg-pagination
-              :current-index=5
+              :current-index=2
               :limit=2
-              :first-page=1
-              :total-pages=16
-              :paginate="function() { return 1 }">
+              :total-pages=160
+              v-on:prev="event('prev', $event)"
+              v-on:next="event('next', $event)"
+              v-on:page="event('page', $event)">
             </osg-pagination>
           </div>
         </div>
