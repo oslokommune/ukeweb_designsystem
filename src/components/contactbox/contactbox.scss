@@ -3,15 +3,12 @@
 @use "system/spacing";
 
 .osg-contactbox {
-  @extend %osg-padding-20;
-  @extend %osg-padding-30-breakpoint-large;
-
   &__heading {
     @extend %osg-heading-3;
   }
 
   &__description {
-    @extend %osg-text-4;
+    @extend %osg-heading-6;
   }
 
   &__additional-info {
@@ -24,6 +21,12 @@
 
   &__value {
     @extend %osg-text-5;
+  }
+
+  &--yellow,
+  &--gray {
+    @extend %osg-padding-20;
+    @extend %osg-padding-30-breakpoint-large;
   }
 
   &--yellow {
