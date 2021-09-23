@@ -74,7 +74,8 @@
       padding: spacing.$space-5 spacing.$space-15;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &--focus {
         background-color: colors.$gray-light;
         color: states.$hover !important;
         text-decoration: underline;

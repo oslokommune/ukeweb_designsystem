@@ -197,8 +197,14 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div id="osg-search-vue">
-        <osg-search :value="value" :items="items" :input-focus-after-item-click="true" v-on:item="event('item', $event)"
-          v-on:change="event('change', $event)" v-on:enter="event('enter', $event)">
+        <osg-search
+          :value="value"
+          :items="items"
+          :input-focus-after-item-click="true"
+          v-on:item="event('item', $event)"
+          v-on:change="event('change', $event)"
+          v-on:enter="event('enter', $event)"
+          v-on:down="event('down', $event)">
         </osg-search>
       </div>
     </div>
