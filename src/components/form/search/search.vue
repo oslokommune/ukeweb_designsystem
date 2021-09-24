@@ -32,10 +32,11 @@
         v-on:keyup.down.prevent="setFocus($event)"
         v-on:keyup.up.prevent="setFocus($event)"
         :class="{ 'osg-search__dropdown__item--focus': index === focus }"
-        class="osg-search__dropdown__item"
+        class="osg-search__dropdown__item osg-flex osg-flex-direction-column"
         role="option"
         tabindex="0">
-        {{ item }}
+        <span class="osg-text-5">{{ item.item1 }}</span>
+        <span v-if="item.item2" class="osg-text-7">{{ item.item2 }}</span>
       </li>
     </ul>
   </div>
