@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
       el: osgSearchPlaceholder,
       data: () => ({
         value: 'h',
-        items: []
+        items: [],
+        focus: null
       }),
       mounted() {
         this.event('change', this.value);
@@ -37,13 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
         event(event, payload) {
           if (event === 'change') {
             if (payload[0] && payload[0].toLowerCase() === 'h') {
-              this.items = ['Hi', 'Hello']
+              this.items = [
+                {
+                  item1: 'Hi'
+                },
+                {
+                  item1: 'Hello'
+                },
+                {
+                  item1: 'Halo',
+                  item2: 'Greetings'
+                },
+              ]
             } else {
-              this.items = []
+              this.items = [];
             }
             this.value = payload
           } else if (event === 'item') {
-            this.value = this.items[payload]
+            this.value = this.items[payload];
           }
           console.log(event, payload);
         }
