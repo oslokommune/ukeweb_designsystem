@@ -267,4 +267,18 @@
       border: 2px solid transparent;
     }
   }
+
+  /**
+   * Dark mode
+   */
+  &--dark {
+    &.osg-button--outline {
+      color: colors.$white !important;
+
+      &:hover, &--hover, &:focus, &--focus {
+        border-color: states.$hover-light !important;
+        color: states.$hover-light !important;
+      }
+    }
+  }
 }
