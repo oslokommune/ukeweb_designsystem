@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             this.value = payload
           } else if (event === 'item') {
-            this.value = this.items[payload];
+            this.value = this.items[payload].item1;
           }
           console.log(event, payload);
         }

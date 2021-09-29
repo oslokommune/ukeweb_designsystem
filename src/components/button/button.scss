@@ -64,7 +64,6 @@
     background-color: transparent;
     border-color: transparent;
     color: colors.$blue-dark;
-    text-decoration: underline;
   }
 
   &--circle {
@@ -74,16 +73,18 @@
 
   &.osg-button--icon {
     @extend %osg-padding-10;
-    width: 1.5em !important;
+    width: 1.33375em !important;
     line-height: 0 !important;
     box-sizing: content-box;
 
     &.osg-button--small {
       @extend %osg-padding-5;
+      width: 1.5em !important;
     }
 
     &.osg-button--large {
       @extend %osg-padding-15;
+      width: 1.3335em !important;
     }
     &.osg-button--large {
       .osg-button__icon {
@@ -170,7 +171,7 @@
 
       &.osg-button--text {
         background-color: transparent !important;
-        border-color: transparent;
+        border-color: transparent !important;
         color: colors.$grayscale-40 !important;
         text-decoration: underline;
       }
