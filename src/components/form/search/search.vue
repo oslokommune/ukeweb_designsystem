@@ -1,30 +1,30 @@
 <template>
   <div class="osg-search osg-search--inline">
-    <div
-      class="osg-search__form"
-      role="combobox"
-      aria-expanded="true"
-      aria-haspopup="listbox"
-      aria-owns="id-results">
+    <div class="osg-search__form">
       <input
         v-on:keyup="$emit('change', $event.target.value)"
         v-on:keyup.enter="$emit('enter', $event.target.value)"
         v-on:keyup.down="setFocus($event)"
         v-on:keyup.up="setFocus($event)"
         :value="value"
+        :aria-expanded="ariaExpanded"
         class="osg-search__input"
         type="search"
-        aria-label="Search"
         ref="input"
         autocomplete="off"
-        placeholder="Type a word">
+        placeholder="Search"
+        aria-label="Search"
+        aria-haspopup="listbox"
+        aria-owns="id-results"
+        role="combobox" />
     </div>
     <ul
       v-if="items.length"
       ref="list"
       class="osg-search__dropdown"
       id="id-results"
-      role="listbox">
+      role="listbox"
+      aria-label="search results">
       <li
         v-for="(item, index) of items" :key="index"
         v-on:click.prevent="itemClick(index)"
@@ -59,6 +59,10 @@ export default {
     inputFocusAfterItemClick: {
       type: Boolean,
       default: true
+    },
+    ariaExpanded: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

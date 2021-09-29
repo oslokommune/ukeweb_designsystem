@@ -307,6 +307,7 @@
           :value="value"
           :items="items"
           :input-focus-after-item-click="true"
+          :aria-expanded="ariaExpanded"
           v-on:item="event('item', $event)"
           v-on:change="event('change', $event)"
           v-on:enter="event('enter', $event)"
