@@ -3,6 +3,7 @@
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
+@use "components/form/input/mixins";
 
 .osg-search {
   @extend %osg-text-5;
@@ -10,6 +11,10 @@
 
   &__form {
     display: flex;
+  }
+
+  &__label {
+    @include mixins.form-label;
   }
 
   &__input {
@@ -128,6 +133,12 @@
 
     & .osg-search__input {
       padding-right: 50px !important;
+    }
+
+    &-with-label {
+      &::after {
+        top: 37px;
+      }
     }
   }
 }
