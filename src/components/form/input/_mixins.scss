@@ -44,6 +44,7 @@
 
 @mixin form-component() {
   appearance: none;
+  -webkit-appearance: none;
   background-color: colors.$white;
   border: 2px solid states.$primary;
   border-radius: 0;
