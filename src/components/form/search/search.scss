@@ -96,6 +96,7 @@
       text-decoration: none;
 
       &:hover,
+      &:focus,
       &--focus {
         background-color: colors.$gray-light;
         color: states.$hover !important;
