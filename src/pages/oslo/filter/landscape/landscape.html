@@ -189,17 +189,18 @@
                 <div class="osg-row__column osg-row__column--12">
 
                   <div class="osg-search osg-margin-bottom-30">
-                    <div class="osg-search osg-search--inline">
+                    <div class="osg-search osg-search--inline osg-search--inline-with-label">
                       <div class="osg-search__form">
-                        <input class="osg-search__input" type="search" autocomplete="off" placeholder="Søk på navn" aria-label="Søk på navn">
+                        <label class="osg-search__label">Søk på navn
+                          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Navn" aria-label="Søk på navn">
+                        </label>
                       </div>
                     </div>
                   </div>
 
                   <h3 class="osg-heading-4 osg-margin-vertical-10">Filtrér på</h3>
-                  <h4 class="osg-heading-5 osg-margin-vertical-10">Utsteder</h4>
-
                   <form>
+                    <h4 class="osg-heading-5 osg-margin-vertical-10">Utsteder</h4>
                     <label class="osg-checkbox osg-margin-bottom-5">
                       <input type="checkbox">
                       <span class="osg-checkbox__checkmark"></span>
@@ -243,8 +244,30 @@
                       </span>
                     </label>
 
+                    <h4 class="osg-heading-5 osg-margin-vertical-10">Tidsrom</h4>
+                    <label class="osg-checkbox osg-margin-bottom-5">
+                      <input type="checkbox">
+                      <span class="osg-checkbox__checkmark"></span>
+                      <span class="osg-checkbox__text">
+                        Denne uken (40)
+                      </span>
+                    </label>
+                    <label class="osg-checkbox osg-margin-bottom-5">
+                      <input type="checkbox">
+                      <span class="osg-checkbox__checkmark"></span>
+                      <span class="osg-checkbox__text">
+                        Forrige uke (10)
+                      </span>
+                    </label>
+                    <label class="osg-checkbox osg-margin-bottom-5">
+                      <input type="checkbox">
+                      <span class="osg-checkbox__checkmark"></span>
+                      <span class="osg-checkbox__text">
+                        Alle (255)
+                      </span>
+                    </label>
+                    
                   </form>
-
                 </div>
               </div>
             </div>

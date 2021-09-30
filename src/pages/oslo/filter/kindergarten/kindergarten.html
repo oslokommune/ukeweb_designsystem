@@ -112,23 +112,6 @@
                 </div>
               </div>
               <div class="osg-row">
-                <!--
-                <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
-                  <div class="osg-portrait-card osg-portrait-card--xs">
-                    <a class="osg-portrait-card__link" href="javascript:void(0)">
-                      <div class="osg-portrait-card__media">
-                        <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg" alt="Lighthouse in the middle of the fjord">
-                      </div>
-                      <div class="osg-portrait-card__content">
-                        <h4 class="osg-portrait-card__heading">Abildsø menighetsbarnehage</h4>
-                        <p class="osg-portrait-card__text">Antall barn: 33</p>
-                        <p class="osg-portrait-card__text">Profil: Livssynsbarnehage</p>
-                        <p class="osg-portrait-card__text">Eier: Privat barnehage</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                -->
 
                 <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium osg-row__column--4-breakpoint-large">
                   <div class="osg-portrait-card osg-portrait-card--actions osg-portrait-card--white osg-portrait-card--xs">
@@ -219,7 +202,10 @@
               <div class="osg-row">
                 <div class="osg-row__column osg-row__column--12">
 
-                  <div class="osg-color-bg-grayscale-10 osg-padding-15 osg-margin-bottom-15 osg-text-5">
+                  <div class="osg-margin-bottom-15">
+                    <button class="osg-button osg-button--green-light osg-button--fullwidth">Gå videre med søknad</button>
+                  </div>
+                  <div class="osg-color-bg-grayscale-10 osg-padding-15 osg-margin-bottom-30 osg-text-5">
                     <h3 class="osg-heading-5 osg-margin-bottom-5">Din ønskeliste (3)</h3>
                     <ul class="osg-unordered-list">
                       <li class="osg-unordered-list__item"><a href="javascript:void(0)">Abildsø menighetsbarnehage</a></li>
@@ -227,21 +213,22 @@
                       <li class="osg-unordered-list__item"><a href="javascript:void(0)">Akersbakken barnehage</a></li>
                     </ul>
                   </div>
-                  <div class="osg-margin-bottom-30">
-                    <button class="osg-button osg-button--green-light osg-button--fullwidth">Gå videre</button>
-                  </div>
 
                   <div class="osg-search osg-margin-bottom-30">
-                    <div class="osg-search osg-search--inline">
+                    <div class="osg-search osg-search--inline osg-search--inline-with-label">
                       <div class="osg-search__form">
-                        <input class="osg-search__input" type="search" autocomplete="off" placeholder="Søk i nærheten av" aria-label="Søk i nærheten av">
+                        <label class="osg-search__label">Søk i nærheten av
+                          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Adresse" aria-label="Søk i nærheten av">
+                        </label>
                       </div>
                     </div>
                   </div>
                   <div class="osg-search osg-margin-bottom-30">
-                    <div class="osg-search osg-search--inline">
+                    <div class="osg-search osg-search--inline osg-search--inline-with-label">
                       <div class="osg-search__form">
-                        <input class="osg-search__input" type="search" autocomplete="off" placeholder="Søk etter barnehage" aria-label="Søk etter barnehage">
+                        <label class="osg-search__label">Søk etter barnehagenavn
+                          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Barnehagenavn" aria-label="Søk etter barnehage">
+                        </label>
                       </div>
                     </div>
                   </div>
