@@ -91,7 +91,8 @@
     z-index: 99999;
 
     &__item {
-      display: block;
+      display: flex;
+      flex-direction: column;
       padding: spacing.$space-5 spacing.$space-15;
       text-decoration: none;
 
