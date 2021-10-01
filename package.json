@@ -23,5 +23,8 @@
     "svgo": "^2.5.0",
     "svgstore-cli": "2.0.0",
     "webfont": "11.2.26"
+  },
+  "prettier": {
+    "printWidth": 400
   }
 }
