@@ -103,7 +103,8 @@
       vertical-align: middle;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: states.$hover !important;
       border: 2px solid states.$hover !important;
       color: states.$hover-text !important;
@@ -126,12 +127,14 @@
     }
 
     &__item {
-      display: block;
+      display: flex;
+      flex-direction: column;
       color: colors.$blue-dark;
       padding: spacing.$space-5 spacing.$space-15;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: colors.$gray-light;
         color: states.$hover !important;
         text-decoration: underline;

@@ -50,8 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
                   item2: 'Greetings'
                 },
               ]
+              this.ariaExpanded = 'true';
             } else {
               this.items = [];
+              this.ariaExpanded = 'false';
             }
             this.value = payload
           } else if (event === 'item') {
