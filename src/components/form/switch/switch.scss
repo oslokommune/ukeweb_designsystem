@@ -5,18 +5,23 @@
 @use "system/spacing";
 
 @mixin switch-states() {
-  &:hover, &--hover {
+  &:hover,
+  &--hover {
     border-color: colors.$blue-contrast;
   }
 
-  &:hover &__background, &--hover &__background,
-  &:hover &__label-text, &--hover &__label-text,
-  &:hover &__slider, &--hover &__slider {
+  &:hover &__background,
+  &--hover &__background,
+  &:hover &__label-text,
+  &--hover &__label-text,
+  &:hover &__slider,
+  &--hover &__slider {
     border-color: colors.$blue-contrast;
     color: colors.$blue-contrast;
   }
 
-  &:focus-within, &--focus {
+  &:focus-within,
+  &--focus {
     border: 2px solid colors.$blue-contrast;
     outline: initial;
     outline-style: solid;

@@ -16,27 +16,13 @@
         aria-label="Search"
         aria-haspopup="listbox"
         aria-owns="id-results"
-        role="combobox" />
+        role="combobox"
+      />
     </div>
-    <ul
-      v-if="items.length"
-      ref="list"
-      class="osg-search__dropdown"
-      id="id-results"
-      role="listbox"
-      aria-label="search results">
-      <li
-        v-for="(item, index) of items" :key="index"
-        v-on:click.prevent="itemClick(index)"
-        v-on:keyup.enter.prevent="itemClick(index)"
-        v-on:keyup.down.prevent="setFocus($event)"
-        v-on:keyup.up.prevent="setFocus($event)"
-        :class="{ 'osg-search__dropdown__item--focus': index === focus }"
-        class="osg-search__dropdown__item osg-flex osg-flex-direction-column"
-        role="option"
-        tabindex="0">
-        <span class="osg-text-5">{{ item.item1 }}</span>
-        <span v-if="item.item2" class="osg-text-7">{{ item.item2 }}</span>
+    <ul v-if="items.length" ref="list" class="osg-search__dropdown" id="id-results" role="listbox" aria-label="search results">
+      <li v-for="(item, index) of items" :key="index" v-on:click.prevent="itemClick(index)" v-on:keyup.enter.prevent="itemClick(index)" v-on:keyup.down.prevent="setFocus($event)" v-on:keyup.up.prevent="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': index === focus }" class="osg-search__dropdown__item osg-flex osg-flex-direction-column" role="option" tabindex="0">
+        <span class="osg-text-5">{{ item.item1 }}</span>
+        <span v-if="item.item2" class="osg-text-7">{{ item.item2 }}</span>
       </li>
     </ul>
   </div>
@@ -44,45 +30,45 @@
 
 <script>
 export default {
-  name: 'OsgSearch',
+  name: "OsgSearch",
   props: {
     value: {
       type: String,
-      default: ''
+      default: "",
     },
     items: {
       type: Array,
       default: () => {
-        return []
-      }
+        return [];
+      },
     },
     inputFocusAfterItemClick: {
       type: Boolean,
-      default: true
+      default: true,
     },
     ariaExpanded: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
-      focus: null
-    }
+      focus: null,
+    };
   },
   methods: {
     itemClick(index) {
-      this.$emit('item', index);
+      this.$emit("item", index);
       this.focus = null;
       if (this.inputFocusAfterItemClick) {
-        this.$refs.input.focus()
+        this.$refs.input.focus();
       }
     },
     setFocus(event) {
       const lastItem = this.items.length - 1;
 
       switch (event.code) {
-        case 'ArrowUp':
+        case "ArrowUp":
           if (this.focus === null || this.focus === 0) {
             this.focus = lastItem;
             this.$refs.list.lastChild.focus();
@@ -90,7 +76,7 @@ export default {
             this.focus--;
           }
           break;
-        case 'ArrowDown':
+        case "ArrowDown":
           if (this.focus === null || this.focus === lastItem) {
             this.focus = 0;
             this.$refs.list.firstChild.focus();
@@ -100,7 +86,7 @@ export default {
           break;
       }
       this.$refs.list.childNodes[this.focus].focus();
-    }
-  }
-}
+    },
+  },
+};
 </script>

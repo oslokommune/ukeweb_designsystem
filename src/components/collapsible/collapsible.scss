@@ -22,9 +22,9 @@
     }
 
     &::after {
-      font-family: 'Oslo Icons';
+      font-family: "Oslo Icons";
       font-size: 1.5rem;
-      content: map-get(icons.$icons, 'chevron-thin-down');
+      content: map-get(icons.$icons, "chevron-thin-down");
       position: absolute;
       right: spacing.$space-15;
     }
@@ -43,8 +43,8 @@
 
     &::after {
       @extend %osg-margin-left-5;
-      content: map-get(icons.$icons, 'chevron-thin-down');
-      font-family: 'Oslo Icons';
+      content: map-get(icons.$icons, "chevron-thin-down");
+      font-family: "Oslo Icons";
       font-size: 1.5rem;
       vertical-align: top;
     }
@@ -53,7 +53,7 @@
   &--expanded {
     &.osg-collapsible-trigger--block::after,
     &.osg-collapsible-trigger--link::after {
-      content: map-get(icons.$icons, 'chevron-thin-up');
+      content: map-get(icons.$icons, "chevron-thin-up");
     }
   }
 }

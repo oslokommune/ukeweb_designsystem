@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const countInput = document.querySelector('.osg-input__input--number');
+document.addEventListener("DOMContentLoaded", function () {
+  const countInput = document.querySelector(".osg-input__input--number");
 
   if (!countInput) {
     return;
   }
 
-  const btnUp = document.querySelector('.osg-input__counter-nav-button--up');
-  const btnDown = document.querySelector('.osg-input__counter-nav-button--down');
+  const btnUp = document.querySelector(".osg-input__counter-nav-button--up");
+  const btnDown = document.querySelector(".osg-input__counter-nav-button--down");
   const countMin = countInput.min;
   const countMax = countInput.max;
 
-  function increaseCount () {
+  function increaseCount() {
     let oldValue = parseFloat(countInput.value);
     let newVal;
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     countInput.value = newVal;
   }
 
-  function decreaseCount () {
+  function decreaseCount() {
     let oldValue = parseFloat(countInput.value);
     let newVal;
 
@@ -34,6 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
     countInput.value = newVal;
   }
 
-  btnUp.addEventListener('click', increaseCount, false);
-  btnDown.addEventListener('click', decreaseCount, false);
+  btnUp.addEventListener("click", increaseCount, false);
+  btnDown.addEventListener("click", decreaseCount, false);
 });

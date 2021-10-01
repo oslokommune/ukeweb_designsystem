@@ -21,13 +21,18 @@
   }
 
   &--state-light {
-    &:visited, &-visited {
+    &:visited,
+    &-visited {
       color: states.$visited-light !important;
     }
-    &:hover, &-hover, &:focus, &-focus {
+    &:hover,
+    &-hover,
+    &:focus,
+    &-focus {
       color: states.$hover-light !important;
     }
-    &:active, &-active {
+    &:active,
+    &-active {
       color: states.$active-light !important;
     }
   }

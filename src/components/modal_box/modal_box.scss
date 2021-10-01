@@ -59,7 +59,7 @@
     background: white;
     overflow: auto;
     padding: 0 spacing.$space-50 spacing.$space-50 spacing.$space-50;
-    
+
     @include breakpoints.medium {
       height: 100vh;
     }
@@ -74,7 +74,7 @@
     background-color: black;
     bottom: 0;
     left: 0;
-    opacity: .6;
+    opacity: 0.6;
     position: fixed;
     right: 0;
     top: -5px;
@@ -82,12 +82,12 @@
   }
 
   &--scoped {
-    bottom: .938rem;
+    bottom: 0.938rem;
     height: unset;
-    left: .938rem;
+    left: 0.938rem;
     position: absolute;
-    right: .938rem;
-    top: .938rem;
+    right: 0.938rem;
+    top: 0.938rem;
     width: unset;
   }
 }

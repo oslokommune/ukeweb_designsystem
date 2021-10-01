@@ -2,15 +2,13 @@ $medium: 769px !default;
 $large: 1024px !default;
 
 @mixin medium {
-  @media screen
-    and (min-width: $medium) {
-      @content
-  };
+  @media screen and (min-width: $medium) {
+    @content;
+  }
 }
 
 @mixin large {
-  @media screen
-    and (min-width: $large) {
-      @content
-  };
+  @media screen and (min-width: $large) {
+    @content;
+  }
 }

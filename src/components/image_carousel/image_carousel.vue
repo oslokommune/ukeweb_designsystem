@@ -1,11 +1,7 @@
 <template>
   <div class="osg-carousel">
     <div class="osg-carousel__content" ref="content">
-      <div
-        ref="track"
-        class="osg-carousel__track"
-        :style="{transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms`}"
-      >
+      <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
         <div class="osg-carousel__slides" ref="slides">
           <figure v-for="(image, index) in images" v-bind:key="index">
             <picture>
@@ -38,7 +34,7 @@
 
 <script>
 export default {
-  name: 'ImageCarousel',
+  name: "ImageCarousel",
 
   props: {
     /**
@@ -46,7 +42,7 @@ export default {
      */
     initialSlide: {
       type: Number,
-      default: 1
+      default: 1,
     },
 
     /**
@@ -54,7 +50,7 @@ export default {
      */
     speed: {
       type: Number,
-      default: 300
+      default: 300,
     },
 
     /**
@@ -63,7 +59,7 @@ export default {
      */
     timing: {
       type: String,
-      default: 'ease-in-out'
+      default: "ease-in-out",
     },
 
     /**
@@ -72,16 +68,16 @@ export default {
      */
     options: {
       type: Object,
-      default: () => null
+      default: () => null,
     },
 
     images: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
 
-  data () {
+  data() {
     return {
       slides: [],
       currentSlide: null,
@@ -94,172 +90,172 @@ export default {
       initialSettings: {
         initialSlide: this.initialSlide,
         speed: this.speed,
-        timing: this.timing
-      }
-    }
+        timing: this.timing,
+      },
+    };
   },
 
-  created () {
+  created() {
     // Read settings from options object
     if (this.options) {
       for (const key in this.options) {
-        this.initialSettings[key] = this.options[key]
+        this.initialSettings[key] = this.options[key];
       }
     }
 
     // Load settings
-    Object.assign(this.settings, this.initialSettings)
+    Object.assign(this.settings, this.initialSettings);
   },
 
-  mounted () {
+  mounted() {
     // Windows resize listener
-    window.addEventListener('resize', this.calculateWidthSlide)
+    window.addEventListener("resize", this.calculateWidthSlide);
 
     // Init carousel
-    this.reload()
+    this.reload();
   },
 
-  beforeDestroy () {
+  beforeDestroy() {
     // Remove resize listener
-    window.removeEventListener('resize', this.calculateWidthSlide)
+    window.removeEventListener("resize", this.calculateWidthSlide);
   },
 
   computed: {
     currentImage: function () {
       if (!this.images) {
-        return
+        return;
       }
 
-      return this.images[this.currentSlide - 1]
-    }
+      return this.images[this.currentSlide - 1];
+    },
   },
 
   methods: {
     // Reload carousel
-    reload () {
-      this.calculateWidthSlide()
-      this.prepareSettings()
-      this.prepareSlides()
-      this.prepareCarousel()
+    reload() {
+      this.calculateWidthSlide();
+      this.prepareSettings();
+      this.prepareSlides();
+      this.prepareCarousel();
     },
 
     /**
      * Set window & container width, remove transition and calculate transition offset
      */
-    calculateWidthSlide () {
-      this.widthContainer = this.$refs.content.clientWidth
-      this.widthSlide = this.widthContainer
+    calculateWidthSlide() {
+      this.widthContainer = this.$refs.content.clientWidth;
+      this.widthSlide = this.widthContainer;
 
       for (let i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.width = this.widthSlide + 'px'
+        this.slides[i].style.width = this.widthSlide + "px";
       }
 
-      this.transitionDelay = 0
-      this.translateX = this.currentSlide * this.widthSlide * -1
+      this.transitionDelay = 0;
+      this.translateX = this.currentSlide * this.widthSlide * -1;
     },
 
     /**
      * Convert HTML Collection to JS Array
      */
-    htmlCollectionToArray (collection) {
-      return Array.prototype.slice.call(collection, 0)
+    htmlCollectionToArray(collection) {
+      return Array.prototype.slice.call(collection, 0);
     },
 
     /**
      * Prepare settings object
      */
-    prepareSettings () {
-      this.settings = Object.assign({}, this.initialSettings)
+    prepareSettings() {
+      this.settings = Object.assign({}, this.initialSettings);
     },
 
     /**
      * Prepare slides classes and styles
      */
-    prepareSlides () {
-      const slideLenth = this.$refs.slides.children.length
-      const firstSlideClone = this.$refs.slides.children[0].cloneNode(true)
-      firstSlideClone.id = 'carousel-end-clone'
-      const lastSlideClone = this.$refs.slides.children[
-        slideLenth - 1
-      ].cloneNode(true)
-      lastSlideClone.id = 'carousel-start-clone'
+    prepareSlides() {
+      const slideLenth = this.$refs.slides.children.length;
+      const firstSlideClone = this.$refs.slides.children[0].cloneNode(true);
+      firstSlideClone.id = "carousel-end-clone";
+      const lastSlideClone = this.$refs.slides.children[slideLenth - 1].cloneNode(true);
+      lastSlideClone.id = "carousel-start-clone";
 
-      this.$refs.slides.insertBefore(lastSlideClone, this.$refs.slides.children[0])
-      this.$refs.slides.appendChild(firstSlideClone)
+      this.$refs.slides.insertBefore(lastSlideClone, this.$refs.slides.children[0]);
+      this.$refs.slides.appendChild(firstSlideClone);
 
-      this.slides = this.htmlCollectionToArray(this.$refs.slides.children)
+      this.slides = this.htmlCollectionToArray(this.$refs.slides.children);
     },
 
     /**
      * Prepare carousel styles
      */
-    prepareCarousel () {
-      this.widthSlide = this.widthContainer
+    prepareCarousel() {
+      this.widthSlide = this.widthContainer;
 
       for (let i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.width = this.widthSlide + 'px'
+        this.slides[i].style.width = this.widthSlide + "px";
       }
 
       if (this.currentSlide === null) {
-        this.currentSlide = this.settings.initialSlide
+        this.currentSlide = this.settings.initialSlide;
       }
 
-      this.goTo(this.currentSlide, false)
+      this.goTo(this.currentSlide, false);
     },
 
-    getNextSlide (index) {
+    getNextSlide(index) {
       switch (this.slides[index].id) {
-        case 'carousel-start-clone':
-          return this.slides.length - 2
-        case 'carousel-end-clone':
-          return 1
+        case "carousel-start-clone":
+          return this.slides.length - 2;
+        case "carousel-end-clone":
+          return 1;
         default:
-          return index
+          return index;
       }
     },
 
     // Go to next slide
-    goToNext () {
-      this.goTo(this.currentSlide + 1)
+    goToNext() {
+      this.goTo(this.currentSlide + 1);
     },
     // Go to previous slide
-    goToPrev () {
-      this.goTo(this.currentSlide - 1)
+    goToPrev() {
+      this.goTo(this.currentSlide - 1);
     },
 
     // Go to slide
-    goTo (index, transition = true) {
-      if (index < 0 || index > this.slides.length - 1 || this.isSlideChanging) { return }
+    goTo(index, transition = true) {
+      if (index < 0 || index > this.slides.length - 1 || this.isSlideChanging) {
+        return;
+      }
 
       if (transition) {
-        this.isSlideChanging = true
-        const nextSlide = this.getNextSlide(index)
+        this.isSlideChanging = true;
+        const nextSlide = this.getNextSlide(index);
 
         setTimeout(() => {
-          this.isSlideChanging = false
-        }, this.settings.speed)
+          this.isSlideChanging = false;
+        }, this.settings.speed);
 
         if (index !== nextSlide) {
           setTimeout(() => {
-            this.goTo(nextSlide, false)
-          }, this.settings.speed)
+            this.goTo(nextSlide, false);
+          }, this.settings.speed);
         }
       }
-      this.transitionDelay = transition ? this.settings.speed : 0
-      this.translateX = index * this.widthSlide * -1
+      this.transitionDelay = transition ? this.settings.speed : 0;
+      this.translateX = index * this.widthSlide * -1;
 
-      this.updateCurrentSlideIndex(index)
+      this.updateCurrentSlideIndex(index);
     },
 
-    updateCurrentSlideIndex (index) {
+    updateCurrentSlideIndex(index) {
       if (index === 0) {
-        this.currentSlide = this.images.length
-      } else if (index > (this.images.length)) {
-        this.currentSlide = 1
+        this.currentSlide = this.images.length;
+      } else if (index > this.images.length) {
+        this.currentSlide = 1;
       } else {
-        this.currentSlide = index
+        this.currentSlide = index;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

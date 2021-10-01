@@ -1,9 +1,7 @@
 <div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <p class="osg-text-2">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      </p>
+      <p class="osg-text-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Important</h2>
         <p class="osg-paragraph">Shape changes form circle to square when number goes from 99 to 100.</p>
@@ -13,14 +11,7 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="vue-pagination">
-            <osg-pagination
-              :current-index=2
-              :limit=2
-              :total-pages=160
-              v-on:prev="event('prev', $event)"
-              v-on:next="event('next', $event)"
-              v-on:page="event('page', $event)">
-            </osg-pagination>
+            <osg-pagination :current-index="2" :limit="2" :total-pages="160" v-on:prev="event('prev', $event)" v-on:next="event('next', $event)" v-on:page="event('page', $event)"> </osg-pagination>
           </div>
         </div>
       </div>
@@ -129,9 +120,7 @@
               <span class="osg-sr-only">Go to page 99</span>
               <span aria-hidden="true">99</span>
             </a>
-            <a href="javascript:void(0)"
-              class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle"
-              aria-current="page">
+            <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle" aria-current="page">
               <span class="osg-sr-only">Page 100</span>
               <span aria-hidden="true">100</span>
             </a>
@@ -225,8 +214,6 @@
     </div>
   </div>
 </div>
-
-
 
 <div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
@@ -325,9 +312,7 @@
           <span class="osg-sr-only">Go to page 99</span>
           <span aria-hidden="true">99</span>
         </a>
-        <a href="javascript:void(0)"
-          class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle"
-          aria-current="page">
+        <a href="javascript:void(0)" class="osg-pagination__item osg-pagination__item--current osg-pagination__item--rectangle" aria-current="page">
           <span class="osg-sr-only">Page 100</span>
           <span aria-hidden="true">100</span>
         </a>

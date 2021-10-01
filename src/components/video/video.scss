@@ -2,9 +2,8 @@
 @use "system/spacing";
 
 .osg-video {
-
   &--16x9 {
-    padding-top: calc(100%/16*9);
+    padding-top: calc(100% / 16 * 9);
     position: relative;
     background-color: black;
   }

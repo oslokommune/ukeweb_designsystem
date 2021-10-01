@@ -1,7 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "colors",
-    "state"
-  ]
+  "tags": ["colors", "state"]
 }

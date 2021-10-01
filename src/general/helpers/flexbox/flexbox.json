@@ -1,6 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "flex"
-  ]
+  "tags": ["flex"]
 }

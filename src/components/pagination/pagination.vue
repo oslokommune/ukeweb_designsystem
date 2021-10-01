@@ -1,32 +1,16 @@
 <template>
-  <nav
-    class="osg-pagination" :aria-label="'Page ' + currentIndex">
-    <button
-      class="osg-pagination__previous"
-      v-show="showArrows && currentIndex > 1"
-      @click.prevent="itemClick('prev')">
+  <nav class="osg-pagination" :aria-label="'Page ' + currentIndex">
+    <button class="osg-pagination__previous" v-show="showArrows && currentIndex > 1" @click.prevent="itemClick('prev')">
       <span class="osg-sr-only">{{ i18n.previousBtn }}</span>
     </button>
     <template v-for="index in totalPages">
-      <button
-        v-if="showItem(index)"
-        class="osg-pagination__item"
-        v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': squareMark }"
-        :key="index"
-        :disabled="index === currentIndex"
-        @click.prevent="itemClick(index)"
-      >
+      <button v-if="showItem(index)" class="osg-pagination__item" v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': squareMark }" :key="index" :disabled="index === currentIndex" @click.prevent="itemClick(index)">
         <span class="osg-sr-only">{{ i18n.showPage }} </span>
         {{ index }}
       </button>
-      <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true">
-        &hellip;
-      </span>
+      <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true"> &hellip; </span>
     </template>
-    <button
-      class="osg-pagination__next"
-      v-show="showArrows && currentIndex < totalPages"
-      @click.prevent="itemClick('next')">
+    <button class="osg-pagination__next" v-show="showArrows && currentIndex < totalPages" @click.prevent="itemClick('next')">
       <span class="osg-sr-only">{{ i18n.nextBtn }}</span>
     </button>
   </nav>
@@ -34,66 +18,66 @@
 
 <script>
 export default {
-  name: 'OsgPagination',
+  name: "OsgPagination",
   props: {
     totalPages: {
       type: Number,
-      required: true
+      required: true,
     },
     currentIndex: {
       type: Number,
-      required: true
+      required: true,
     },
     showArrows: {
       type: Boolean,
-      default: true
+      default: true,
     },
     threshold: {
       type: Number,
-      default: 10
+      default: 10,
     },
     limit: {
       type: Number,
-      default: 2
+      default: 2,
     },
     i18n: {
       type: Object,
       default: () => {
         return {
-          previousBtn: 'Show previous page',
-          nextBtn: 'Show next page',
-          showPage: 'Show page'
-        }
-      }
+          previousBtn: "Show previous page",
+          nextBtn: "Show next page",
+          showPage: "Show page",
+        };
+      },
     },
     squareMark: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     limitMax: function () {
-      return this.currentIndex + this.limit
+      return this.currentIndex + this.limit;
     },
     limitMin: function () {
-      return this.currentIndex - this.limit
-    }
+      return this.currentIndex - this.limit;
+    },
   },
   methods: {
     showItem: function (index) {
-      const isFirst = index === 1
-      const isLast = index === this.totalPages
-      const isWithinLimit = index >= this.limitMin && index <= this.limitMax
+      const isFirst = index === 1;
+      const isLast = index === this.totalPages;
+      const isWithinLimit = index >= this.limitMin && index <= this.limitMax;
 
-      return isFirst || isLast || isWithinLimit
+      return isFirst || isLast || isWithinLimit;
     },
     showSpacer: function (index) {
-      return this.totalPages > this.threshold && (index >= this.limitMin - 1 && index <= this.limitMax + 1)
+      return this.totalPages > this.threshold && index >= this.limitMin - 1 && index <= this.limitMax + 1;
     },
     itemClick(event) {
-      console.log(event)
-      this.$emit('item', event)
-    }
-  }
-}
+      console.log(event);
+      this.$emit("item", event);
+    },
+  },
+};
 </script>

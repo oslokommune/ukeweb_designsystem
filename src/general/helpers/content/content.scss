@@ -92,9 +92,9 @@
       @extend .osg-table__row;
     }
 
-    th, td {
+    th,
+    td {
       @extend .osg-table__cell;
     }
   }
-
 }

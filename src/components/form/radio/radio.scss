@@ -21,8 +21,8 @@
     align-items: flex-start;
 
     .osg-radio__label {
-        margin-top: -(spacing.$space-5);
-      }
+      margin-top: -(spacing.$space-5);
+    }
   }
 
   &__label {
@@ -88,8 +88,10 @@
     outline-color: colors.$blue-contrast;
   }
 
-  &--hover, &:hover,
-  &--focus, &:focus {
+  &--hover,
+  &:hover,
+  &--focus,
+  &:focus {
     & input:checked + .osg-radio__control {
       background-color: colors.$blue-contrast;
     }
@@ -101,14 +103,16 @@
     }
   }
 
-  &--focus, &:focus {
+  &--focus,
+  &:focus {
     .osg-radio__label {
       @extend %osg-text-4;
       line-height: 1 !important;
     }
   }
 
-  &--disabled, &--disabled:hover {
+  &--disabled,
+  &--disabled:hover {
     & input:disabled:checked + .osg-radio__control {
       background-color: colors.$grayscale-40;
     }

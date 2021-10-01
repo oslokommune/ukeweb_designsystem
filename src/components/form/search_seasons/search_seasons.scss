@@ -96,10 +96,10 @@
     }
 
     &::after {
-      font-family: 'Oslo Icons' !important;
+      font-family: "Oslo Icons" !important;
       font-size: typography.$size-30;
       line-height: 1em;
-      content: map-get(icons.$icons, 'magnifying-glass-small') !important;
+      content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
     }
 
@@ -115,7 +115,7 @@
     @extend %osg-padding-vertical-15;
     @extend %osg-text-5;
     background-color: colors.$white;
-    box-shadow: 0 7px 10px 0 rgba(0,0,0,.1);
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;
     list-style: none;
     right: 0;

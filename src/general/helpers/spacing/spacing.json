@@ -1,7 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "size",
-    "space"
-  ]
+  "tags": ["size", "space"]
 }

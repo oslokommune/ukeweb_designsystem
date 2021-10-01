@@ -14,41 +14,22 @@ $size-19: 1.1875rem;
 $size-18: 1.125rem;
 $size-17: 1.0625rem;
 $size-16: 1rem;
-$size-14: .875rem;
-$size-13: .812rem;
+$size-14: 0.875rem;
+$size-13: 0.812rem;
 
 // id, small size, medium size, large size, weight
-$header-sizes: (
-  ("1", $size-28, $size-40, $size-54, 400),
-  ("2", $size-24, $size-30, $size-36, 400),
-  ("3", $size-22, $size-26, $size-30, 400),
-  ("4", $size-20, $size-24, $size-24, 500),
-  ("5", $size-18, $size-20, $size-22, 500),
-  ("6", $size-16, $size-16, $size-18, 500)
-);
+$header-sizes: (("1", $size-28, $size-40, $size-54, 400), ("2", $size-24, $size-30, $size-36, 400), ("3", $size-22, $size-26, $size-30, 400), ("4", $size-20, $size-24, $size-24, 500), ("5", $size-18, $size-20, $size-22, 500), ("6", $size-16, $size-16, $size-18, 500));
 
-$text-sizes: (
-  ("1", $size-22, $size-24, $size-30, 300),
-  ("2", $size-20, $size-22, $size-24, 300),
-  ("3", $size-18, $size-18, $size-20, 300),
-  ("4", $size-16, $size-16, $size-18, 500),
-  ("5", $size-16, $size-16, $size-18, 300),
-  ("6", $size-14, $size-14, $size-14, 500),
-  ("7", $size-14, $size-14, $size-14, 300)
-);
+$text-sizes: (("1", $size-22, $size-24, $size-30, 300), ("2", $size-20, $size-22, $size-24, 300), ("3", $size-18, $size-18, $size-20, 300), ("4", $size-16, $size-16, $size-18, 500), ("5", $size-16, $size-16, $size-18, 300), ("6", $size-14, $size-14, $size-14, 500), ("7", $size-14, $size-14, $size-14, 300));
 
 $weights: (
   "light": 300,
   "regular": 400,
   "medium": 500,
-  "bold": 700
+  "bold": 700,
 );
 
-$alignments: (
-  "left",
-  "right",
-  "center"
-);
+$alignments: ("left", "right", "center");
 
 // generating font weight classes
 @each $name, $size in $weights {
@@ -72,8 +53,7 @@ $alignments: (
 
     @if $name == "1" {
       letter-spacing: -0.4px !important;
-    }
-    @else {
+    } @else {
       letter-spacing: -0.2px !important;
     }
 

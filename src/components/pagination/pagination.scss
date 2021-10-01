@@ -30,7 +30,8 @@
     font-size: typography.$size-16 !important;
     font-weight: 500;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
       background-color: colors.$gray-light;
       border-color: colors.$gray-light;
       color: states.$hover !important;
@@ -49,7 +50,8 @@
       border: 2px solid colors.$blue-dark;
       text-decoration: none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: colors.$blue-contrast !important;
         border: 2px solid colors.$blue-contrast !important;
         text-decoration: underline !important;
@@ -64,7 +66,8 @@
     }
   }
 
-  &__next, &__previous {
+  &__next,
+  &__previous {
     background: none;
     border: none;
     display: inline-block;
@@ -77,7 +80,7 @@
 
     &::before,
     &:hover::before {
-      font-family: 'Oslo Icons' !important;
+      font-family: "Oslo Icons" !important;
       font-size: 1em;
       padding: 0.438rem;
     }
@@ -91,14 +94,14 @@
   &__previous {
     &::before,
     &:hover::before {
-      content: map-get(icons.$icons, 'chevron-thin-left') !important;
+      content: map-get(icons.$icons, "chevron-thin-left") !important;
     }
   }
 
   &__next {
     &::before,
     &:hover::before {
-      content: map-get(icons.$icons, 'chevron-thin-right') !important;
+      content: map-get(icons.$icons, "chevron-thin-right") !important;
     }
   }
 }

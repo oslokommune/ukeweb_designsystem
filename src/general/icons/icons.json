@@ -1,7 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "icon",
-    "icons"
-  ]
+  "tags": ["icon", "icons"]
 }

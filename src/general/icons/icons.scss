@@ -3,7 +3,7 @@
 
 @each $name, $content in icons.$icons {
   .osg-icons--#{$name} {
-    font-family: 'Oslo Icons';
+    font-family: "Oslo Icons";
 
     &:before {
       content: "#{$content}";

@@ -1,207 +1,104 @@
 $icons: (
-  
-    "24h": "\ea01",
-  
-    "arrow": "\ea02",
-  
-    "attachment": "\ea03",
-  
-    "backpack": "\ea04",
-  
-    "bike": "\ea05",
-  
-    "briefcase": "\ea06",
-  
-    "bullseye": "\ea07",
-  
-    "bus": "\ea08",
-  
-    "cafe": "\ea09",
-  
-    "calendar": "\ea0a",
-  
-    "camera": "\ea0b",
-  
-    "check": "\ea0c",
-  
-    "check-big": "\ea0d",
-  
-    "check-circle": "\ea0e",
-  
-    "chevron-down": "\ea0f",
-  
-    "chevron-left": "\ea10",
-  
-    "chevron-right": "\ea11",
-  
-    "chevron-thin-down": "\ea12",
-  
-    "chevron-thin-left": "\ea13",
-  
-    "chevron-thin-right": "\ea14",
-  
-    "chevron-thin-up": "\ea15",
-  
-    "chevron-up": "\ea16",
-  
-    "clock": "\ea17",
-  
-    "close": "\ea18",
-  
-    "coin-stacks": "\ea19",
-  
-    "crane": "\ea1a",
-  
-    "cross": "\ea1b",
-  
-    "cross-circle": "\ea1c",
-  
-    "data": "\ea1d",
-  
-    "district": "\ea1e",
-  
-    "document": "\ea1f",
-  
-    "download": "\ea20",
-  
-    "edit": "\ea21",
-  
-    "email": "\ea22",
-  
-    "exclamation-mark-circle": "\ea23",
-  
-    "exclamation-mark-square": "\ea24",
-  
-    "exit": "\ea25",
-  
-    "expand": "\ea26",
-  
-    "eye": "\ea27",
-  
-    "facebook": "\ea28",
-  
-    "factory-fill": "\ea29",
-  
-    "feedback": "\ea2a",
-  
-    "filter": "\ea2b",
-  
-    "fire-emblem": "\ea2c",
-  
-    "graph": "\ea2d",
-  
-    "grid": "\ea2e",
-  
-    "handicap": "\ea2f",
-  
-    "heart": "\ea30",
-  
-    "heart-plus": "\ea31",
-  
-    "home": "\ea32",
-  
-    "house-heart": "\ea33",
-  
-    "information": "\ea34",
-  
-    "instagram": "\ea35",
-  
-    "invoice": "\ea36",
-  
-    "language": "\ea37",
-  
-    "linked-in": "\ea38",
-  
-    "list": "\ea39",
-  
-    "location-pin": "\ea3a",
-  
-    "location-pin-filled": "\ea3b",
-  
-    "magnifying-glass-big": "\ea3c",
-  
-    "magnifying-glass-small": "\ea3d",
-  
-    "map": "\ea3e",
-  
-    "menu": "\ea3f",
-  
-    "message": "\ea40",
-  
-    "minimize": "\ea41",
-  
-    "minus-circle": "\ea42",
-  
-    "minus-circle-fill": "\ea43",
-  
-    "minus-sign": "\ea44",
-  
-    "museum": "\ea45",
-  
-    "neutral": "\ea46",
-  
-    "new-window": "\ea47",
-  
-    "obstacle": "\ea48",
-  
-    "organization": "\ea49",
-  
-    "paint-bucket": "\ea4a",
-  
-    "park": "\ea4b",
-  
-    "picture": "\ea4c",
-  
-    "plus-circle": "\ea4d",
-  
-    "plus-circle-fill": "\ea4e",
-  
-    "plus-sign": "\ea4f",
-  
-    "print": "\ea50",
-  
-    "question": "\ea51",
-  
-    "recycling": "\ea52",
-  
-    "sad": "\ea53",
-  
-    "save": "\ea54",
-  
-    "share": "\ea55",
-  
-    "share-outline": "\ea56",
-  
-    "smile": "\ea57",
-  
-    "sound-off": "\ea58",
-  
-    "sound-on": "\ea59",
-  
-    "swingset": "\ea5a",
-  
-    "table": "\ea5b",
-  
-    "target": "\ea5c",
-  
-    "thumbs-down": "\ea5d",
-  
-    "thumbs-up": "\ea5e",
-  
-    "tickets": "\ea5f",
-  
-    "trail": "\ea60",
-  
-    "tram": "\ea61",
-  
-    "trash": "\ea62",
-  
-    "twitter": "\ea63",
-  
-    "user": "\ea64",
-  
-    "water-faucet": "\ea65",
-  
-    "wifi": "\ea66",
-  
+  "24h": "\ea01",
+  "arrow": "\ea02",
+  "attachment": "\ea03",
+  "backpack": "\ea04",
+  "bike": "\ea05",
+  "briefcase": "\ea06",
+  "bullseye": "\ea07",
+  "bus": "\ea08",
+  "cafe": "\ea09",
+  "calendar": "\ea0a",
+  "camera": "\ea0b",
+  "check": "\ea0c",
+  "check-big": "\ea0d",
+  "check-circle": "\ea0e",
+  "chevron-down": "\ea0f",
+  "chevron-left": "\ea10",
+  "chevron-right": "\ea11",
+  "chevron-thin-down": "\ea12",
+  "chevron-thin-left": "\ea13",
+  "chevron-thin-right": "\ea14",
+  "chevron-thin-up": "\ea15",
+  "chevron-up": "\ea16",
+  "clock": "\ea17",
+  "close": "\ea18",
+  "coin-stacks": "\ea19",
+  "crane": "\ea1a",
+  "cross": "\ea1b",
+  "cross-circle": "\ea1c",
+  "data": "\ea1d",
+  "district": "\ea1e",
+  "document": "\ea1f",
+  "download": "\ea20",
+  "edit": "\ea21",
+  "email": "\ea22",
+  "exclamation-mark-circle": "\ea23",
+  "exclamation-mark-square": "\ea24",
+  "exit": "\ea25",
+  "expand": "\ea26",
+  "eye": "\ea27",
+  "facebook": "\ea28",
+  "factory-fill": "\ea29",
+  "feedback": "\ea2a",
+  "filter": "\ea2b",
+  "fire-emblem": "\ea2c",
+  "graph": "\ea2d",
+  "grid": "\ea2e",
+  "handicap": "\ea2f",
+  "heart": "\ea30",
+  "heart-plus": "\ea31",
+  "home": "\ea32",
+  "house-heart": "\ea33",
+  "information": "\ea34",
+  "instagram": "\ea35",
+  "invoice": "\ea36",
+  "language": "\ea37",
+  "linked-in": "\ea38",
+  "list": "\ea39",
+  "location-pin": "\ea3a",
+  "location-pin-filled": "\ea3b",
+  "magnifying-glass-big": "\ea3c",
+  "magnifying-glass-small": "\ea3d",
+  "map": "\ea3e",
+  "menu": "\ea3f",
+  "message": "\ea40",
+  "minimize": "\ea41",
+  "minus-circle": "\ea42",
+  "minus-circle-fill": "\ea43",
+  "minus-sign": "\ea44",
+  "museum": "\ea45",
+  "neutral": "\ea46",
+  "new-window": "\ea47",
+  "obstacle": "\ea48",
+  "organization": "\ea49",
+  "paint-bucket": "\ea4a",
+  "park": "\ea4b",
+  "picture": "\ea4c",
+  "plus-circle": "\ea4d",
+  "plus-circle-fill": "\ea4e",
+  "plus-sign": "\ea4f",
+  "print": "\ea50",
+  "question": "\ea51",
+  "recycling": "\ea52",
+  "sad": "\ea53",
+  "save": "\ea54",
+  "share": "\ea55",
+  "share-outline": "\ea56",
+  "smile": "\ea57",
+  "sound-off": "\ea58",
+  "sound-on": "\ea59",
+  "swingset": "\ea5a",
+  "table": "\ea5b",
+  "target": "\ea5c",
+  "thumbs-down": "\ea5d",
+  "thumbs-up": "\ea5e",
+  "tickets": "\ea5f",
+  "trail": "\ea60",
+  "tram": "\ea61",
+  "trash": "\ea62",
+  "twitter": "\ea63",
+  "user": "\ea64",
+  "water-faucet": "\ea65",
+  "wifi": "\ea66",
 );

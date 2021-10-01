@@ -102,7 +102,6 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
   &--small {
     & .osg-landscape-card__content {
-
     }
   }
 
@@ -130,8 +129,8 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
         overflow: hidden;
 
         img {
-          transform: scale(1.0);
-          transition: all .5s
+          transform: scale(1);
+          transition: all 0.5s;
         }
       }
 

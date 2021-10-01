@@ -58,7 +58,7 @@ $colors: (
   "grayscale-60": $grayscale-60,
   "grayscale-70": $grayscale-70,
   "grayscale-80": $grayscale-80,
-  "grayscale-90": $grayscale-90
+  "grayscale-90": $grayscale-90,
 );
 
 @each $name, $color in $colors {

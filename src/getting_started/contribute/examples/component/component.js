@@ -6,12 +6,12 @@
  * Wrap the javascript in a DOMContentLoaded listener to make sure all the markup is loaded
  * before the script runs.
  */
-import OsgExampleComponent from './component.vue';
+import OsgExampleComponent from "./component.vue";
 
-document.addEventListener('DOMContentLoaded', function () {
-  let exampleComponent = document.getElementById('osg-example-component-vue')
+document.addEventListener("DOMContentLoaded", function () {
+  let exampleComponent = document.getElementById("osg-example-component-vue");
   if (exampleComponent) {
-    Vue.component('osg-example-component', OsgExampleComponent);
+    Vue.component("osg-example-component", OsgExampleComponent);
     new Vue({ el: exampleComponent });
   }
 });

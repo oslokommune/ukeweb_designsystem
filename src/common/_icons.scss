@@ -1,5 +1,5 @@
 @use "mixins";
 
-$icon-font-path: '/node_modules/styleguide/src/assets/fonts' !default;
+$icon-font-path: "/node_modules/styleguide/src/assets/fonts" !default;
 
-@include mixins.font-face('Oslo Icons', '#{$icon-font-path}/OsloIcons', normal, normal, 'woff2' 'woff');
+@include mixins.font-face("Oslo Icons", "#{$icon-font-path}/OsloIcons", normal, normal, "woff2" "woff");

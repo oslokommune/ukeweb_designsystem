@@ -25,7 +25,7 @@ $spacing-sizes: (
   "50": $space-50,
   "60": $space-60,
   "75": $space-75,
-  "100": $space-100
+  "100": $space-100,
 );
 
 @each $name, $size in $spacing-sizes {

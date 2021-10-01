@@ -5,8 +5,14 @@
 //  Medium is used as the bold font, so font-weight: bold will use OsloSans-Medium
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
-  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") );
-  $formats: ( otf: "opentype", ttf: "truetype" );
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_"),
+  );
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);

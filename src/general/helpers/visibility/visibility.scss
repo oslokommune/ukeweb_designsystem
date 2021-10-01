@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 
-$displays: 'none' 'block' 'inline' 'inline-block' 'flex' 'flex-inline';
+$displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
 @each $display in $displays {
   .osg-#{$display} {

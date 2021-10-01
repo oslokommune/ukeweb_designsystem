@@ -5,7 +5,7 @@
 @mixin icon-right($icon, $size: 0.6em) {
   &::after,
   &:hover::after {
-    font-family: 'Oslo Icons' !important;
+    font-family: "Oslo Icons" !important;
     font-size: $size;
     content: map-get(icons.$icons, $icon) !important;
     display: inline-block;
@@ -25,26 +25,31 @@
 
   &::before,
   &:hover::before {
-    font-family: 'Oslo Icons' !important;
+    font-family: "Oslo Icons" !important;
     font-size: 1em;
     content: map-get(icons.$icons, $icon) !important;
     display: inline-block;
     position: absolute;
     left: -6px;
-    top: -.06em;
+    top: -0.06em;
   }
 }
 
 @mixin states {
-  &:visited, &--visited {
+  &:visited,
+  &--visited {
     color: states.$visited !important;
     @content;
   }
-  &:hover, &--hover, &:focus, &--focus {
+  &:hover,
+  &--hover,
+  &:focus,
+  &--focus {
     color: states.$hover !important;
     @content;
   }
-  &:active, &--active {
+  &:active,
+  &--active {
     color: states.$active !important;
     @content;
   }

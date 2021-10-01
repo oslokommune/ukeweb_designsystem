@@ -14,14 +14,12 @@
     }
 
     &[type="number"]::-webkit-inner-spin-button,
-    &[type="number"]::-webkit-outer-spin-button
-    {
+    &[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
 
-    &[type="number"]
-    {
+    &[type="number"] {
       -moz-appearance: textfield;
     }
   }
@@ -53,7 +51,7 @@
       cursor: pointer;
       font-size: typography.$size-18;
       height: 20px;
-      padding: 0;;
+      padding: 0;
       text-align: center;
       transform: translateX(-200%);
       user-select: none;

@@ -21,8 +21,8 @@
     align-items: flex-start;
 
     .osg-checkbox__text {
-        margin-top: -(spacing.$space-5);
-      }
+      margin-top: -(spacing.$space-5);
+    }
   }
 
   &__checkmark {
@@ -85,8 +85,10 @@
     @extend %osg-text-4;
   }
 
-  & input:hover ~ span, &--hover span,
-  & input:focus ~ span, &--focus span,
+  & input:hover ~ span,
+  &--hover span,
+  & input:focus ~ span,
+  &--focus span,
   & input:checked:hover ~ span,
   & input:checked:focus ~ span {
     border-color: colors.$blue-contrast;

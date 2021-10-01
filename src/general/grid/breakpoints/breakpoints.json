@@ -1,7 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "media",
-    "query"
-  ]
+  "tags": ["media", "query"]
 }

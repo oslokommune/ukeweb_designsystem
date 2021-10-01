@@ -1,7 +1,4 @@
 {
   "preset": "clean",
-  "tags": [
-    "palette",
-    "colors"
-  ]
+  "tags": ["palette", "colors"]
 }
