@@ -61,12 +61,8 @@
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium osg-row__column--9-breakpoint-large">
               <div class="osg-row">
-                <div class="osg-row__column osg-row__column--8-breakpoint-medium osg-row__column--9-breakpoint-large osg-flex osg-flex-align-items-center">
+                <div class="osg-row__column osg-row__column--12">
                   <span class="osg-text-3">123 treff av 123 postjournaler</span>
-                </div>
-                <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-row__column--3-breakpoint-large osg-text-right">
-                  <button class="osg-button"><span class="osg-button__icon osg-icons--grid"></span><span class="osg-sr-only">Rutenettvising</span></button>
-                  <button class="osg-button osg-button--outline"><span class="osg-button__icon osg-icons--map"></span><span class="osg-sr-only">Kartvisning</span></button>
                 </div>
               </div>
             </div>
@@ -170,54 +166,57 @@
 
                   <h3 class="osg-heading-4 osg-margin-vertical-10">Filtrér på</h3>
                   <form>
-                    <h4 class="osg-heading-5 osg-margin-vertical-10">Utsteder</h4>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Bydel Sagene (40) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" disabled="disabled" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Kontrollutvalget (0) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Undervisningsbygg Oslo KF (25) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Oslo Havn KF (14) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" disabled="disabled" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Boligbygg (0) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Velferdsetaten (36) </span>
-                    </label>
-
-                    <h4 class="osg-heading-5 osg-margin-vertical-10">Tidsrom</h4>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Denne uken (40) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Forrige uke (10) </span>
-                    </label>
-                    <label class="osg-checkbox osg-margin-bottom-5">
-                      <input type="checkbox" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text"> Alle (255) </span>
-                    </label>
+                    <fieldset class="osg-fieldset osg-fieldset--no-border osg-margin-bottom-15">
+                      <legend>Utsteder</legend>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Bydel Sagene (40) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" disabled="disabled" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Kontrollutvalget (0) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Undervisningsbygg Oslo KF (25) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Oslo Havn KF (14) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" disabled="disabled" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Boligbygg (0) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Velferdsetaten (36) </span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="osg-fieldset osg-fieldset--no-border">
+                      <legend>Tidsrom</legend>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Denne uken (40) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Forrige uke (10) </span>
+                      </label>
+                      <label class="osg-checkbox">
+                        <input type="checkbox" />
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text"> Alle (255) </span>
+                      </label>
+                    </fieldset>
                   </form>
                 </div>
               </div>
