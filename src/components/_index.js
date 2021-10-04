@@ -5,4 +5,5 @@ import "./form/search/search.js";
 import "./form/search_seasons/search_seasons.js";
 import "./modal_box/modal_box.js";
 import "./map/map.js";
+import "./menu/menu.js";
 import "./pagination/pagination.js";
