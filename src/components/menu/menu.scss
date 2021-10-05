@@ -57,6 +57,10 @@ $osg-mobile-hamburger-line-width: 40px;
     width: inherit;
   }
 
+  span {
+    pointer-events: none;
+  }
+
   &:active,
   &:focus,
   &:hover {
@@ -165,7 +169,7 @@ $osg-mobile-hamburger-line-width: 40px;
           transform: translateY(-9px) translateY(50%) rotate(135deg);
           @include breakpoints.medium {
             right: 15px;
-            top: 33px;
+            top: 34px;
           }
         }
       }
