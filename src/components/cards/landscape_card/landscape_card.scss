@@ -33,9 +33,9 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
     @include breakpoints.medium {
       flex: 0 0;
-      min-width: 30%;
-      width: 30%;
-      max-width: 30%;
+      min-width: 34%;
+      width: 34%;
+      max-width: 34%;
     }
 
     img {
@@ -72,7 +72,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &__heading {
-    @extend %osg-heading-4, %osg-margin-bottom-50;
+    @extend %osg-heading-4, %osg-margin-bottom-20;
   }
 
   &__text {
