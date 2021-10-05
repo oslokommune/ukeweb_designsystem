@@ -1,0 +1,173 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/spacing";
+@use "system/states";
+@use "system/typography";
+
+// Common
+$osg-hamburger-width: 55px;
+$osg-hamburger-height: 55px;
+
+// Desktop
+$osg-desktop-hamburger-line-height: 2px;
+$osg-desktop-hamburger-line-gap: 8px;
+$osg-desktop-hamburger-line-width: 30px;
+
+// Mobile
+$osg-mobile-hamburger-line-height: 2px;
+$osg-mobile-hamburger-line-gap: 12px;
+$osg-mobile-hamburger-line-width: 40px;
+
+@function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
+  @return (($hamburgerHeight - $lineHeight) / 2) + $gap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+.osg-button-menu {
+  @extend %osg-text-4;
+  @extend %osg-padding-horizontal-15, %osg-padding-vertical-15;
+
+  border-radius: 50%;
+  border: none;
+  height: 60px;
+  width: 60px;
+  background-color: transparent;
+  color: colors.$blue-dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  position: relative;
+
+  @include breakpoints.medium {
+    border-radius: 0;
+    border: 2px solid colors.$blue-dark;
+    height: inherit;
+    width: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    border-color: colors.$blue-contrast;
+    color: colors.$blue-contrast;
+    .osg-button-menu__icon {
+      > span {
+        background-color: colors.$blue-contrast;
+      }
+    }
+  }
+
+  &:active,
+  &.osg-button-menu--close {
+    background-color: colors.$yellow;
+
+    @include breakpoints.medium {
+      background-color: colors.$blue-dark;
+      color: colors.$white;
+    }
+    .osg-button-menu__icon {
+      > span {
+        background-color: colors.$blue-contrast;
+
+        @include breakpoints.medium {
+          background-color: colors.$white;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include breakpoints.medium {
+      display: block;
+      float: left;
+    }
+  }
+
+  &__icon {
+    float: right;
+    width: 45px;
+
+    > span {
+      background: colors.$blue-dark;
+      height: $osg-mobile-hamburger-line-height;
+      margin-top: 2px;
+      position: absolute;
+      right: 10px;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: $osg-mobile-hamburger-line-width;
+
+      &:nth-child(1) {
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, -$osg-mobile-hamburger-line-gap);
+      }
+      &:nth-child(2) {
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, 0);
+      }
+      &:nth-child(3) {
+        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, $osg-mobile-hamburger-line-gap);
+      }
+
+      @include breakpoints.medium {
+        height: $osg-desktop-hamburger-line-height;
+        margin-top: 0;
+        right: 15px;
+        width: $osg-desktop-hamburger-line-width;
+
+        &:nth-child(1) {
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, -$osg-desktop-hamburger-line-gap);
+        }
+        &:nth-child(2) {
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, 0);
+        }
+        &:nth-child(3) {
+          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, $osg-desktop-hamburger-line-gap);
+        }
+      }
+    }
+
+    &--close {
+      > span {
+        background: colors.$black !important;
+        margin-top: 0;
+        right: 15px;
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        width: 30px;
+        @include breakpoints.medium {
+          background: colors.$white !important;
+        }
+
+        &:nth-child(1) {
+          top: 25px;
+          transform: translateY(5px) translateY(-50%) rotate(-135deg);
+          @include breakpoints.medium {
+            right: 15px;
+            top: 22px;
+          }
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          top: 37px;
+          transform: translateY(-9px) translateY(50%) rotate(135deg);
+          @include breakpoints.medium {
+            right: 15px;
+            top: 33px;
+          }
+        }
+      }
+    }
+  }
+}
