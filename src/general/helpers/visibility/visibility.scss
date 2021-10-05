@@ -22,17 +22,17 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
 .osg-invisible {
   visibility: hidden !important;
+}
 
-  @include breakpoints.medium {
-    .osg-invisible-breakpoint-medium {
-      visibility: hidden !important;
-    }
+@include breakpoints.medium {
+  .osg-invisible-breakpoint-medium {
+    visibility: hidden !important;
   }
+}
 
-  @include breakpoints.large {
-    .osg-invisible-breakpoint-large {
-      visibility: hidden !important;
-    }
+@include breakpoints.large {
+  .osg-invisible-breakpoint-large {
+    visibility: hidden !important;
   }
 }
 

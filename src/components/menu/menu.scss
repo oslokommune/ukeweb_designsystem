@@ -3,6 +3,7 @@
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
+@use "sass:math";
 
 // Common
 $osg-hamburger-width: 55px;
@@ -19,7 +20,7 @@ $osg-mobile-hamburger-line-gap: 12px;
 $osg-mobile-hamburger-line-width: 40px;
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
-  @return (($hamburgerHeight - $lineHeight) / 2) + $gap;
+  @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -56,6 +57,7 @@ $osg-mobile-hamburger-line-width: 40px;
     width: inherit;
   }
 
+  &:active,
   &:focus,
   &:hover {
     background-color: transparent;
@@ -68,7 +70,6 @@ $osg-mobile-hamburger-line-width: 40px;
     }
   }
 
-  &:active,
   &.osg-button-menu--close {
     background-color: colors.$yellow;
 
