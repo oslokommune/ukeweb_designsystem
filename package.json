@@ -26,5 +26,8 @@
   },
   "prettier": {
     "printWidth": 400
+  },
+  "dependencies": {
+    "@nrk/core-datepicker": "^3.1.0"
   }
 }

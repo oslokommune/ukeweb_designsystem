@@ -1,0 +1,32 @@
+@use "system/colors";
+@use "system/icons";
+@use "system/spacing";
+@use "system/typography";
+@use "../input/mixins";
+
+.osg-date {
+  @include mixins.form-states;
+  position: relative;
+
+  &::after {
+    content: map-get(icons.$icons, "calendar") !important;
+    font-family: "Oslo Icons" !important;
+    font-size: typography.$size-30;
+    line-height: 1em;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  &__label {
+    @include mixins.form-label;
+  }
+
+  &__input {
+    @include mixins.form-component;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}

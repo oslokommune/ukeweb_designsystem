@@ -1,0 +1,30 @@
+<!-- Overview mode -->
+<div class="osg-container osg-devtools-nondevmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-devtools-heading">Default</h3>
+      <p class="osg-paragraph">Short description of the default state of the component.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Developer mode -->
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-row">
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Default</h3>
+      <div class="osg-date">
+        <label class="osg-date__label">
+          Pick a date
+          <input type="text" pattern="\d{2}-\d{2}-\d{4}" class="osg-date__input" autocomplete="off" />
+        </label>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Vue</h3>
+      <div id="osg-date-vue">
+        <osg-date value="01-01-1970"></osg-date>
+      </div>
+    </div>
+  </div>
+</div>
