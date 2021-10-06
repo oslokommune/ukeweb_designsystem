@@ -3,6 +3,8 @@
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
+@use "system/visibility";
+@use "components/links/link/mixins";
 @use "sass:math";
 
 // Common
@@ -172,6 +174,96 @@ $osg-mobile-hamburger-line-width: 40px;
             top: 34px;
           }
         }
+      }
+    }
+  }
+}
+
+.osg-navbar-menu {
+  @extend %osg-padding-15;
+  border: 1px solid red;
+
+  &__collapsable-heading {
+    @extend %osg-none-breakpoint-medium;
+  }
+
+  &__heading {
+    display: none;
+    @extend %osg-block-breakpoint-medium;
+    @extend %osg-heading-5;
+  }
+
+  .osg-navbar-menu-link {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+
+    &__icon {
+      @extend %osg-heading-5, %osg-margin-right-15;
+
+      > * {
+        line-height: 1.2em !important;
+      }
+    }
+
+    &__content {
+      & .osg-navbar-menu-link__text {
+        @extend %osg-text-5;
+        display: inline-block;
+      }
+    }
+
+    @include mixins.states {
+      .osg-navbar-menu-link__content .osg-navbar-menu-link__text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__services {
+    @extend %osg-padding-15;
+
+    &__list {
+      @include breakpoints.medium {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          flex: 0 1 25%;
+        }
+      }
+    }
+  }
+
+  &__categories {
+    @extend %osg-padding-horizontal-15;
+    background-color: colors.$gray;
+    display: block;
+    @include breakpoints.medium {
+      display: flex;
+    }
+  }
+
+  &__footer {
+    @extend %osg-padding-horizontal-15;
+
+    display: block;
+    @include breakpoints.medium {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__list {
+      @extend %osg-padding-top-15;
+      display: block;
+      @include breakpoints.medium {
+        display: flex;
+      }
+
+      li {
+        @extend %osg-padding-right-15;
       }
     }
   }
