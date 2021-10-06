@@ -55,8 +55,8 @@ $osg-mobile-hamburger-line-width: 40px;
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
-    height: inherit;
-    width: inherit;
+    height: unset;
+    width: unset;
   }
 
   span {
@@ -181,7 +181,7 @@ $osg-mobile-hamburger-line-width: 40px;
 
 .osg-navbar-menu {
   @extend %osg-padding-15;
-  border: 1px solid red;
+  display: none;
 
   &__collapsable-heading {
     @extend %osg-none-breakpoint-medium;
