@@ -1,4 +1,5 @@
 @use "system/breakpoints";
+@use "system/visibility";
 
 $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
@@ -21,7 +22,7 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 }
 
 .osg-invisible {
-  visibility: hidden !important;
+  @extend %osg-invisible;
 }
 
 @include breakpoints.medium {
@@ -37,12 +38,5 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 }
 
 .osg-sr-only {
-  border: none !important;
-  clip: rect(0, 0, 0, 0) !important;
-  height: 0.01em !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 0.01em !important;
+  @extend %osg-sr-only;
 }
