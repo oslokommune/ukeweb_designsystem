@@ -226,6 +226,8 @@ $osg-mobile-hamburger-line-width: 40px;
     @extend %osg-padding-15;
 
     &__list {
+      display: none;
+
       @include breakpoints.medium {
         display: flex;
         flex-wrap: wrap;
@@ -243,6 +245,9 @@ $osg-mobile-hamburger-line-width: 40px;
     display: block;
     @include breakpoints.medium {
       display: flex;
+    }
+    ul {
+      display: none;
     }
   }
 
