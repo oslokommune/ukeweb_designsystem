@@ -1,6 +1,10 @@
+@use "system/typography";
+@use "system/colors";
+@use "system/spacing";
+
 .osg-map {
   width: 100%;
-  height: 300px;
+  height: 380px;
 
   &--static {
     height: 380px;
@@ -10,4 +14,25 @@
       width: 100%;
     }
   }
+
+  &__popup-content {
+    @extend %osg-text-5;
+    @extend %osg-padding-5;
+  }
+
+  &__heading {
+    @extend %osg-heading-5;
+    @extend %osg-margin-bottom-10;
+  }
+
+  &__label {
+    @extend %osg-text-medium;
+  }
+}
+
+// CSS that needs to be overridden from the default MapLibre styling.
+.mapboxgl-map,
+.maplibregl-map {
+  // MapLibre uses Helvetica as default. Set to inherit to use Oslo Sans.
+  font: inherit !important;
 }
