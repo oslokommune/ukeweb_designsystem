@@ -130,17 +130,11 @@
       line-height: 1em;
       position: absolute;
       right: 10px;
-      top: 10px;
+      bottom: 10px;
     }
 
     & .osg-search__input {
       padding-right: 50px !important;
-    }
-
-    &-with-label {
-      &::after {
-        top: 37px;
-      }
     }
   }
 }
