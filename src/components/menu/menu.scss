@@ -257,7 +257,6 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__footer {
-    @extend %osg-padding-horizontal-15;
     display: block;
 
     @include breakpoints.medium {
