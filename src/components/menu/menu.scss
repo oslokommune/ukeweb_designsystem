@@ -56,6 +56,7 @@ $osg-mobile-hamburger-line-width: 40px;
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
     height: unset;
+    margin-left: unset;
     width: unset;
   }
 
@@ -95,6 +96,7 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__text {
+    @extend %osg-text-5;
     display: none;
 
     @include breakpoints.medium {
@@ -180,18 +182,25 @@ $osg-mobile-hamburger-line-width: 40px;
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-15;
+  @extend %osg-padding-vertical-30, %osg-padding-horizontal-20;
   display: none;
+
+  @include breakpoints.medium {
+    padding-left: spacing.$space-50;
+    padding-right: spacing.$space-50;
+  }
 
   &__heading-collapsable {
     background-color: unset;
     border: none;
     padding-left: 0;
     cursor: pointer;
+    @extend %osg-heading-5;
     @extend %osg-none-breakpoint-medium;
 
     span {
       pointer-events: none;
+      vertical-align: middle;
     }
   }
 
@@ -235,23 +244,24 @@ $osg-mobile-hamburger-line-width: 40px;
       display: none;
 
       @include breakpoints.medium {
-        display: flex;
-        flex-wrap: wrap;
-
-        li {
-          flex: 0 1 25%;
-        }
+        margin-top: spacing.$space-15;
+        margin-bottom: spacing.$space-15;
       }
     }
   }
 
   &__categories {
     background-color: colors.$gray;
+    padding-top: spacing.$space-15;
+    padding-bottom: spacing.$space-15;
+
+    li {
+      margin-top: spacing.$space-15;
+    }
 
     @include breakpoints.medium {
-      ul {
-        flex-direction: column;
-        flex-wrap: wrap;
+      li {
+        margin-top: spacing.$space-30;
       }
     }
   }
