@@ -280,26 +280,38 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__footer {
-    display: block;
+    display: flex;
+    justify-content: start;
 
     @include breakpoints.medium {
-      display: flex;
       justify-content: space-between;
     }
 
     &__list {
       @extend %osg-padding-top-15;
       display: block;
+
       @include breakpoints.medium {
         display: flex;
+        justify-content: flex-start;
       }
 
       li {
         @extend %osg-padding-right-15;
+        @extend %osg-margin-bottom-15;
 
         .osg-icon {
           font-size: 2rem;
         }
+      }
+    }
+
+    &__list-media {
+      display: flex;
+      justify-content: flex-start;
+
+      @include breakpoints.medium {
+        justify-content: space-around;
       }
     }
   }
