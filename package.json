@@ -24,10 +24,10 @@
     "svgstore-cli": "2.0.0",
     "webfont": "11.2.26"
   },
-  "prettier": {
-    "printWidth": 400
-  },
   "dependencies": {
     "@nrk/core-datepicker": "^3.1.0"
+  },
+  "prettier": {
+    "printWidth": 400
   }
 }

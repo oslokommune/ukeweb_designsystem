@@ -1,6 +1,7 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
+@use "system/states";
 @use "system/typography";
 @use "../input/mixins";
 
@@ -8,18 +9,18 @@
   @include mixins.form-states;
   position: relative;
 
-  &::after {
-    content: map-get(icons.$icons, "calendar") !important;
-    font-family: "Oslo Icons" !important;
-    font-size: typography.$size-30;
-    line-height: 1em;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
-
   &__label {
     @include mixins.form-label;
+
+    &::after {
+      content: map-get(icons.$icons, "calendar") !important;
+      font-family: "Oslo Icons" !important;
+      font-size: typography.$size-30;
+      line-height: 1em;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
   }
 
   &__input {
@@ -27,6 +28,144 @@
 
     &::placeholder {
       color: inherit;
+    }
+  }
+
+  &__datepicker {
+    $padding: spacing.$space-10;
+    background-color: colors.$white;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    padding: $padding;
+    position: absolute;
+    width: 290px + ($padding * 2);
+    z-index: 99;
+
+    &__nav,
+    &__button {
+      border: 0 none;
+    }
+    &__button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: transparent;
+      font-size: typography.$size-24;
+      line-height: 30px;
+      text-align: center;
+
+      margin: 0 spacing.$space-5;
+      position: absolute;
+      top: spacing.$space-10;
+
+      &:disabled {
+        cursor: not-allowed;
+        color: states.$disabled-text;
+        &:hover {
+          background-color: transparent;
+          color: states.$disabled-text;
+        }
+      }
+      &:not(:disabled) {
+        cursor: pointer;
+      }
+      &:hover {
+        background-color: colors.$gray;
+        color: colors.$blue-contrast;
+      }
+      &--next {
+        right: 5px;
+
+        &::after {
+          content: map-get(icons.$icons, "chevron-thin-right") !important;
+          font-family: "Oslo Icons" !important;
+        }
+      }
+      &--prev {
+        left: 5px;
+
+        &::after {
+          content: map-get(icons.$icons, "chevron-thin-left") !important;
+          font-family: "Oslo Icons" !important;
+        }
+      }
+    }
+
+    /**
+    * nrk-core-datepicker styling
+    * - Element styles since missing classes on child component
+    */
+    &__calendar {
+      width: 100%;
+
+      caption,
+      th {
+        font-weight: normal;
+      }
+      caption {
+        font-size: typography.$size-18;
+        margin-bottom: spacing.$space-10;
+        margin-top: spacing.$space-5;
+        text-transform: capitalize;
+      }
+      thead {
+        border-bottom: 1px solid colors.$blue-dark;
+        border-top: 1px solid colors.$blue-dark;
+      }
+      th {
+        font-size: typography.$size-13;
+        padding: spacing.$space-5 0;
+        text-align: center;
+        text-transform: capitalize;
+      }
+      td {
+        text-align: center;
+        button {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          border: 2px solid transparent;
+          background-color: transparent;
+          font-size: inherit;
+
+          &:hover {
+            background-color: colors.$blue-dark;
+            color: colors.$white;
+          }
+          // next/prev month
+          &[data-adjacent="true"] {
+            font-size: typography.$size-13;
+          }
+          &:not(:disabled) {
+            cursor: pointer;
+          }
+          // today
+          &[aria-current="date"] {
+            background-color: colors.$beige;
+          }
+          // selected
+          &[autofocus] {
+            background-color: colors.$blue-dark;
+            border-color: colors.$blue-dark;
+            color: colors.$white;
+            &:focus,
+            &:hover {
+              background-color: colors.$blue-contrast;
+              border-color: colors.$blue-contrast;
+              color: colors.$white;
+            }
+          }
+          &:disabled {
+            color: states.$disabled-text;
+            &:hover {
+              background-color: transparent;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
     }
   }
 }
