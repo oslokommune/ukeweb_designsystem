@@ -182,7 +182,7 @@ $osg-mobile-hamburger-line-width: 40px;
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-vertical-30, %osg-padding-horizontal-20;
+  @extend %osg-padding-vertical-30;
   display: none;
 
   @include breakpoints.medium {
@@ -245,7 +245,14 @@ $osg-mobile-hamburger-line-width: 40px;
       display: none;
       margin-bottom: spacing.$space-15;
       margin-top: spacing.$space-30;
+      margin-left: - spacing.$space-15;
+      margin-right: - spacing.$space-15;
       padding-bottom: spacing.$space-15;
+      padding-top: spacing.$space-15;
+
+      li {
+        padding-left: spacing.$space-15;
+      }
 
       @include breakpoints.medium {
         background-color: unset;
@@ -258,11 +265,18 @@ $osg-mobile-hamburger-line-width: 40px;
   &__categories {
     padding-bottom: spacing.$space-15;
     padding-top: spacing.$space-5;
+    margin-right: - spacing.$space-15;
+    margin-left: - spacing.$space-15;
+
+    .osg-navbar-menu__heading-collapsable {
+      padding-left: .5rem;
+    }
 
     ul {
       background-color: colors.$gray;
       margin-bottom: spacing.$space-30;
       margin-top: spacing.$space-30;
+      padding-left: spacing.$space-15;
 
       li {
         margin-top: spacing.$space-15;
@@ -272,10 +286,13 @@ $osg-mobile-hamburger-line-width: 40px;
     @include breakpoints.medium {
       background-color: colors.$gray;
       padding-top: spacing.$space-15;
-
-      li {
-        margin-top: spacing.$space-30;
+      ul {
+        margin-left: 0;
+        li {
+          margin-top: spacing.$space-30;
+        }
       }
+
     }
   }
 
