@@ -96,7 +96,6 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__text {
-    @extend %osg-text-5;
     display: none;
 
     @include breakpoints.medium {
@@ -183,11 +182,12 @@ $osg-mobile-hamburger-line-width: 40px;
 
 .osg-navbar-menu {
   @extend %osg-padding-vertical-30;
+  padding-left: spacing.$space-20;
+
   display: none;
 
   @include breakpoints.medium {
-    padding-left: spacing.$space-50;
-    padding-right: spacing.$space-50;
+    padding-left: 0;
   }
 
   &__heading-collapsable {
@@ -240,59 +240,71 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__services {
+    @include breakpoints.medium {
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
+    }
+
     &__list {
       background-color: colors.$gray;
       display: none;
       margin-bottom: spacing.$space-15;
+      margin-left: - spacing.$space-20;
+      margin-right: - spacing.$space-20;
       margin-top: spacing.$space-30;
-      margin-left: - spacing.$space-15;
-      margin-right: - spacing.$space-15;
+
       padding-bottom: spacing.$space-15;
+      padding-left: spacing.$space-15;
       padding-top: spacing.$space-15;
 
-      li {
-        padding-left: spacing.$space-15;
-      }
 
       @include breakpoints.medium {
         background-color: unset;
-        margin-top: spacing.$space-15;
         margin-bottom: spacing.$space-15;
+        margin-left: - spacing.$space-15;
+        margin-right: - spacing.$space-15;
+        margin-top: spacing.$space-15;
+        padding-left: 0;
       }
     }
   }
 
   &__categories {
+    margin-left: - spacing.$space-20;
+    margin-right: - spacing.$space-20;
     padding-bottom: spacing.$space-15;
     padding-top: spacing.$space-5;
-    margin-right: - spacing.$space-15;
-    margin-left: - spacing.$space-15;
 
     .osg-navbar-menu__heading-collapsable {
-      padding-left: .5rem;
+      padding-left: 13px;
     }
 
     ul {
       background-color: colors.$gray;
-      margin-bottom: spacing.$space-30;
+      margin-bottom: spacing.$space-20;
       margin-top: spacing.$space-30;
-      padding-left: spacing.$space-15;
+      padding-left: spacing.$space-20;
 
       li {
         margin-top: spacing.$space-15;
+        margin-bottom: spacing.$space-15;
       }
     }
 
     @include breakpoints.medium {
       background-color: colors.$gray;
       padding-top: spacing.$space-15;
+      padding-left: 55px;
+      padding-right: 55px;
       ul {
         margin-left: 0;
+        margin-bottom: 0;
+        padding-left: spacing.$space-15;
+        padding-bottom: 0;
         li {
-          margin-top: spacing.$space-30;
+          margin-bottom: spacing.$space-30;
         }
       }
-
     }
   }
 
@@ -302,6 +314,8 @@ $osg-mobile-hamburger-line-width: 40px;
 
     @include breakpoints.medium {
       justify-content: space-between;
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
     }
 
     &__list {
