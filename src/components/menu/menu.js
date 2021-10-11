@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
     hamburgerButtonTrigger.addEventListener("click", (event) => {
       let iconButton = event.target.querySelector(".osg-button-menu__icon");
-      let navMenu = event.target.nextElementSibling;
+      let navMenu = event.target.parentNode.nextElementSibling;
 
       toggleAriaExpanded(hamburgerButtonTrigger);
       toggleDisplay(navMenu);

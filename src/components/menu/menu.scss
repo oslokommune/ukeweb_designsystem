@@ -34,6 +34,15 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 }
 
+.osg-button-position {
+  display: flex;
+  flex-direction: row-reverse;
+
+  @include breakpoints.medium {
+    display: unset;
+  }
+
+}
 .osg-button-menu {
   @extend %osg-text-4;
   @extend %osg-padding-horizontal-15, %osg-padding-vertical-15;
@@ -51,12 +60,14 @@ $osg-mobile-hamburger-line-width: 40px;
   text-align: center;
   outline: none;
   position: relative;
+  right: spacing.$space-20;
 
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
     height: unset;
     margin-left: unset;
+    right: unset;
     width: unset;
   }
 
