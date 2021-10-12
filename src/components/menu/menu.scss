@@ -194,16 +194,20 @@ $osg-mobile-hamburger-line-width: 40px;
 .osg-navbar-menu {
   @extend %osg-padding-vertical-30;
   padding-left: spacing.$space-20;
-
   display: none;
 
   @include breakpoints.medium {
     padding-left: 0;
   }
 
+  .osg-icon {
+    font-size: 2rem;
+  }
+
   &__heading-collapsable {
     background-color: unset;
     border: none;
+    color: colors.$blue-dark;
     padding-left: 0;
     cursor: pointer;
     @extend %osg-heading-5;
@@ -237,6 +241,11 @@ $osg-mobile-hamburger-line-width: 40px;
     }
 
     &__content {
+      line-height: 38px;
+      @include breakpoints.medium {
+        line-height: 24px;
+      }
+
       & .osg-navbar-menu-link__text {
         @extend %osg-text-5;
         display: inline-block;
@@ -262,7 +271,7 @@ $osg-mobile-hamburger-line-width: 40px;
       margin-bottom: spacing.$space-15;
       margin-left: - spacing.$space-20;
       margin-right: - spacing.$space-20;
-      margin-top: spacing.$space-30;
+      margin-top: spacing.$space-15;
 
       padding-bottom: spacing.$space-15;
       padding-left: spacing.$space-15;
