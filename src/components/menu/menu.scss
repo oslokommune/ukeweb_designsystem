@@ -192,7 +192,10 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   .osg-icon {
-    font-size: 2rem;
+    font-size: 1.875rem;
+    @include breakpoints.medium {
+      font-size: 2rem;
+    }
   }
 
   &__heading-collapsable {
@@ -296,10 +299,6 @@ $osg-mobile-hamburger-line-width: 40px;
     ul {
       background-color: colors.$gray;
       padding-left: spacing.$space-20;
-
-      li:not(:last-child) {
-        margin-bottom: spacing.$space-15;
-      }
     }
 
     @include breakpoints.medium {
