@@ -28,6 +28,8 @@ $osg-mobile-hamburger-line-width: 40px;
 .osg-button-position {
   display: flex;
   flex-direction: row-reverse;
+  position: sticky;
+  top: 0;
 
   @include breakpoints.medium {
     display: unset;
