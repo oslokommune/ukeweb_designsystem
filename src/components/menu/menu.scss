@@ -25,15 +25,6 @@ $osg-mobile-hamburger-line-width: 40px;
   @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0s !important;
-    transition-duration: 0s !important;
-  }
-}
-
 .osg-button-position {
   display: flex;
   flex-direction: row-reverse;
@@ -41,8 +32,8 @@ $osg-mobile-hamburger-line-width: 40px;
   @include breakpoints.medium {
     display: unset;
   }
-
 }
+
 .osg-button-menu {
   @extend %osg-text-4;
   @extend %osg-padding-horizontal-15, %osg-padding-vertical-15;
@@ -267,16 +258,10 @@ $osg-mobile-hamburger-line-width: 40px;
 
     &__list {
       background-color: colors.$gray;
-      display: none;
-      margin-bottom: spacing.$space-15;
       margin-left: - spacing.$space-20;
       margin-right: - spacing.$space-20;
-      margin-top: spacing.$space-15;
-
-      padding-bottom: spacing.$space-15;
+      margin-top: spacing.$space-10;
       padding-left: spacing.$space-15;
-      padding-top: spacing.$space-15;
-
 
       @include breakpoints.medium {
         background-color: unset;
@@ -285,6 +270,14 @@ $osg-mobile-hamburger-line-width: 40px;
         margin-right: - spacing.$space-15;
         margin-top: spacing.$space-15;
         padding-left: 0;
+      }
+
+      li:last-child {
+        margin-bottom: spacing.$space-10;
+
+        @include breakpoints.medium {
+          margin-bottom: unset;
+        }
       }
     }
   }
@@ -297,16 +290,14 @@ $osg-mobile-hamburger-line-width: 40px;
 
     .osg-navbar-menu__heading-collapsable {
       padding-left: 13px;
+      margin-bottom: spacing.$space-15;
     }
 
     ul {
       background-color: colors.$gray;
-      margin-bottom: spacing.$space-20;
-      margin-top: spacing.$space-30;
       padding-left: spacing.$space-20;
 
-      li {
-        margin-top: spacing.$space-15;
+      li:not(:last-child) {
         margin-bottom: spacing.$space-15;
       }
     }
@@ -319,6 +310,7 @@ $osg-mobile-hamburger-line-width: 40px;
       ul {
         margin-left: 0;
         margin-bottom: 0;
+        margin-top: spacing.$space-15;
         padding-left: spacing.$space-15;
         padding-bottom: 0;
         li {
@@ -365,5 +357,28 @@ $osg-mobile-hamburger-line-width: 40px;
         justify-content: space-around;
       }
     }
+  }
+}
+
+.osg-list-animate {
+  max-height: 0;
+  overflow: hidden;
+
+  @include breakpoints.medium {
+    max-height: unset;
+  }
+}
+
+.open-animate {
+  max-height: 695px;
+  transition: all 0.7s ease;
+}
+
+.close-animate {
+  max-height: 0px;
+  transition: all 0.7s ease;
+
+  @include breakpoints.medium {
+    max-height: unset;
   }
 }

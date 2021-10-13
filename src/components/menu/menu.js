@@ -57,10 +57,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   collapsableHeadings.forEach((collapsableHeading) => {
     collapsableHeading.addEventListener("click", (event) => {
-      let collapsableContent = event.target.nextElementSibling;
-      toggleDisplayResponsive(collapsableContent);
+      let collapsableContent = event.target.nextElementSibling.closest("ul") || event.target.nextElementSibling;
+      // let collapsableContent = event.target.closest("ul");
+      // toggleDisplayResponsive(collapsableContent);
       toggleAriaExpanded(event.target);
       toggleExpandIcon(event.target);
+      // debugger;
+      console.log('here');
+      if (collapsableContent.classList.contains("open-animate")) {
+        collapsableContent.classList.remove("open-animate");
+        collapsableContent.classList.add("close-animate");
+      } else {
+        collapsableContent.classList.add("open-animate");
+        collapsableContent.classList.remove("close-animate");
+      }
     });
   });
 });
