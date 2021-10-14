@@ -25,12 +25,14 @@ $osg-mobile-hamburger-line-width: 40px;
   @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0s !important;
-    transition-duration: 0s !important;
+.osg-button-position {
+  display: flex;
+  flex-direction: row-reverse;
+  position: sticky;
+  top: 0;
+
+  @include breakpoints.medium {
+    display: unset;
   }
 }
 
@@ -51,11 +53,14 @@ $osg-mobile-hamburger-line-width: 40px;
   text-align: center;
   outline: none;
   position: relative;
+  right: spacing.$space-20;
 
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
     height: unset;
+    margin-left: unset;
+    right: unset;
     width: unset;
   }
 
@@ -180,18 +185,33 @@ $osg-mobile-hamburger-line-width: 40px;
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-15;
+  @extend %osg-padding-vertical-30;
+  padding-left: spacing.$space-20;
   display: none;
+
+  @include breakpoints.medium {
+    padding-left: 0;
+  }
+
+  .osg-icon {
+    font-size: 1.5rem;
+    @include breakpoints.medium {
+      font-size: 2rem;
+    }
+  }
 
   &__heading-collapsable {
     background-color: unset;
     border: none;
+    color: colors.$blue-dark;
     padding-left: 0;
     cursor: pointer;
+    @extend %osg-heading-5;
     @extend %osg-none-breakpoint-medium;
 
     span {
       pointer-events: none;
+      vertical-align: middle;
     }
   }
 
@@ -212,11 +232,16 @@ $osg-mobile-hamburger-line-width: 40px;
       @extend %osg-heading-5, %osg-margin-right-15;
 
       > * {
-        line-height: 1.2em !important;
+        line-height: 1.5em !important;
       }
     }
 
     &__content {
+      line-height: 38px;
+      @include breakpoints.medium {
+        line-height: 24px;
+      }
+
       & .osg-navbar-menu-link__text {
         @extend %osg-text-5;
         display: inline-block;
@@ -231,49 +256,130 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__services {
+    @include breakpoints.medium {
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
+    }
+
     &__list {
-      display: none;
+      background-color: colors.$gray;
+      margin-left: - spacing.$space-20;
+      margin-right: - spacing.$space-20;
+      margin-top: spacing.$space-10;
+      padding-left: spacing.$space-15;
 
       @include breakpoints.medium {
-        display: flex;
-        flex-wrap: wrap;
+        background-color: unset;
+        margin-bottom: spacing.$space-15;
+        margin-left: - spacing.$space-15;
+        margin-right: - spacing.$space-15;
+        margin-top: spacing.$space-15;
+        padding-left: 0;
+      }
 
-        li {
-          flex: 0 1 25%;
+      li:last-child {
+        margin-bottom: spacing.$space-10;
+
+        @include breakpoints.medium {
+          margin-bottom: unset;
         }
       }
     }
   }
 
   &__categories {
-    background-color: colors.$gray;
+    margin-left: - spacing.$space-20;
+    margin-right: - spacing.$space-20;
+    padding-bottom: spacing.$space-15;
+    padding-top: spacing.$space-5;
+
+    .osg-navbar-menu__heading-collapsable {
+      padding-left: 13px;
+      margin-bottom: spacing.$space-15;
+    }
+
+    ul {
+      background-color: colors.$gray;
+      padding-left: spacing.$space-20;
+    }
 
     @include breakpoints.medium {
+      background-color: colors.$gray;
+      padding-top: spacing.$space-15;
+      padding-left: 55px;
+      padding-right: 55px;
       ul {
-        flex-direction: column;
-        flex-wrap: wrap;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: spacing.$space-15;
+        padding-left: spacing.$space-15;
+        padding-bottom: 0;
+        li {
+          margin-bottom: spacing.$space-30;
+        }
       }
     }
   }
 
   &__footer {
-    display: block;
+    display: flex;
+    justify-content: start;
 
     @include breakpoints.medium {
-      display: flex;
       justify-content: space-between;
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
     }
 
     &__list {
       @extend %osg-padding-top-15;
       display: block;
+
       @include breakpoints.medium {
         display: flex;
+        justify-content: flex-start;
       }
 
       li {
         @extend %osg-padding-right-15;
+        @extend %osg-margin-bottom-15;
+
+        .osg-icon {
+          font-size: 2rem;
+        }
       }
     }
+
+    &__list-media {
+      display: flex;
+      justify-content: flex-start;
+
+      @include breakpoints.medium {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.osg-list-animate {
+  max-height: 0;
+  overflow: hidden;
+
+  @include breakpoints.medium {
+    max-height: unset;
+  }
+}
+
+.open-animate {
+  max-height: 695px;
+  transition: all 0.7s ease;
+}
+
+.close-animate {
+  max-height: 0px;
+  transition: all 0.7s ease;
+
+  @include breakpoints.medium {
+    max-height: unset;
   }
 }

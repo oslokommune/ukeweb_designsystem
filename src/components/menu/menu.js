@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function toggleDisplayResponsive(elem) {
-    if (elem.classList.contains("osg-block")) {
-      elem.classList.remove("osg-block");
-      elem.classList.add("osg-none");
+  function toggleAnimation(elem) {
+    if (elem.classList.contains("open-animate")) {
+      elem.classList.remove("open-animate");
+      elem.classList.add("close-animate");
     } else {
-      elem.classList.add("osg-block");
-      elem.classList.remove("osg-none");
+      elem.classList.add("open-animate");
+      elem.classList.remove("close-animate");
     }
   }
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
     hamburgerButtonTrigger.addEventListener("click", (event) => {
       let iconButton = event.target.querySelector(".osg-button-menu__icon");
-      let navMenu = event.target.nextElementSibling;
+      let navMenu = event.target.parentNode.nextElementSibling;
 
       toggleAriaExpanded(hamburgerButtonTrigger);
       toggleDisplay(navMenu);
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   collapsableHeadings.forEach((collapsableHeading) => {
     collapsableHeading.addEventListener("click", (event) => {
-      let collapsableContent = event.target.nextElementSibling;
-      toggleDisplayResponsive(collapsableContent);
+      let collapsableContent = event.target.nextElementSibling.closest("ul") || event.target.nextElementSibling;
       toggleAriaExpanded(event.target);
       toggleExpandIcon(event.target);
+      toggleAnimation(collapsableContent);
     });
   });
 });

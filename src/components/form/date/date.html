@@ -2,8 +2,32 @@
 <div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
+      <p class="osg-text-2">Date (datepicker) is used for setting dates in a form.</p>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-devtools-heading">Default</h3>
-      <p class="osg-paragraph">Short description of the default state of the component.</p>
+      <p class="osg-paragraph">Simple form element for date input.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-date">
+            <label class="osg-date__label">
+              Type date
+              <input type="text" class="osg-date__input" autocomplete="off" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-devtools-heading">Datepicker</h3>
+      <p class="osg-paragraph">Vue version which includes a datepicker.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div id="osg-date-vue">
+            <osg-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></osg-date>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -15,15 +39,15 @@
       <h3 class="osg-heading-3">Default</h3>
       <div class="osg-date">
         <label class="osg-date__label">
-          Pick a date
-          <input type="text" pattern="\d{2}-\d{2}-\d{4}" class="osg-date__input" autocomplete="off" />
+          Type date
+          <input type="text" class="osg-date__input" autocomplete="off" />
         </label>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
-      <h3 class="osg-heading-3">Vue</h3>
-      <div id="osg-date-vue">
-        <osg-date value="01-01-1970"></osg-date>
+      <h3 class="osg-heading-3">Datepicker</h3>
+      <div id="osg-date-vue-dev">
+        <osg-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></osg-date>
       </div>
     </div>
   </div>
