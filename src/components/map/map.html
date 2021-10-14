@@ -14,35 +14,30 @@
       </div>
       <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
         <div class="osg-devtools-code">
-          <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
-          <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
-          <div class="osg-map" id="osg-map"></div>
+          <div class="osg-map" id="osg-map">
+            <osg-map ref="osgMap" :initial-point="{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', desc: 'the builder!' }" />
+          </div>
         </div>
       </div>
       <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Markers with clustering and fullscreen</h2>
+        <h2 class="osg-heading-3">Markers with clustering</h2>
       </div>
       <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
         <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map2"></div>
+          <div class="osg-map" id="osg-map2">
+            <osg-map
+              ref="osgMap2"
+              :inital-state="{
+              longitude: 10.74981,
+              latitude: 59.913008,
+              zoom: 10,
+              showPopups: false,
+            }"
+            />
+          </div>
         </div>
       </div>
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Various shapes</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map3"></div>
-        </div>
-      </div>
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Large polygon</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map4"></div>
-        </div>
-      </div>
+
       <div class="osg-row__column osg-row__column--12">
         <h2 class="osg-heading-3">Static map</h2>
       </div>

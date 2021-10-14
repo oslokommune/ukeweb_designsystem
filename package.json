@@ -28,6 +28,7 @@
     "printWidth": 400
   },
   "dependencies": {
-    "@nrk/core-datepicker": "^3.1.0"
+    "@nrk/core-datepicker": "^3.1.0",
+    "maplibre-gl": "^1.15.2"
   }
 }

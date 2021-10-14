@@ -1,0 +1,8 @@
+@use "maplibre-gl/dist/maplibre-gl";
+
+// CSS that needs to be overridden from the default MapLibre styling.
+.mapboxgl-map,
+.maplibregl-map {
+  // MapLibre uses Helvetica as default. Set to inherit to use Oslo Sans.
+  font: inherit !important;
+}
