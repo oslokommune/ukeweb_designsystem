@@ -33,6 +33,7 @@ $osg-mobile-hamburger-line-width: 40px;
 
   @include breakpoints.medium {
     display: unset;
+    position: unset;
   }
 }
 
