@@ -1,7 +1,7 @@
 @use "system/typography";
 @use "system/colors";
 @use "system/spacing";
-@use "./maplibre";
+@use "maplibre-gl/dist/maplibre-gl";
 
 .osg-map {
   &--static {

@@ -39,8 +39,8 @@ export default {
         };
       },
     },
-    initialPoint: {
-      type: Object,
+    initialPoints: {
+      type: Array,
       default: null,
     },
   },
@@ -90,9 +90,8 @@ export default {
 
     this.showPopups = this.initialState.showPopups;
 
-    // console.log(this.showPopups);
-    if (this.initialPoint) {
-      this.setPoints([this.initialPoint]);
+    if (this.initialPoints) {
+      this.setPoints(this.initialPoints);
     }
 
     var _this = this; // Scope this, bobby!
