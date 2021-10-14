@@ -194,7 +194,7 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   .osg-icon {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     @include breakpoints.medium {
       font-size: 2rem;
     }
@@ -232,7 +232,7 @@ $osg-mobile-hamburger-line-width: 40px;
       @extend %osg-heading-5, %osg-margin-right-15;
 
       > * {
-        line-height: 1.2em !important;
+        line-height: 1.5em !important;
       }
     }
 
