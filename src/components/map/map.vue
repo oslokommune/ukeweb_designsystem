@@ -1,5 +1,5 @@
 <template>
-  <div class="osg-map__container" ref="map"></div>
+  <div class="osg-map__container" ref="mapContainer"></div>
 </template>
 
 <script>
@@ -59,8 +59,10 @@ export default {
   },
 
   mounted() {
+    console.log(this.initialState.zoom);
+
     this.mapObject = new maplibregl.Map({
-      container: this.$refs.map,
+      container: this.$refs.mapContainer,
       style: this.mapStyle + "?key=" + this.apiKey,
       locale: this.locale,
       center: [this.initialState.longitude, this.initialState.latitude],
@@ -263,24 +265,19 @@ export default {
         source: dataSourceId,
         paint: {
           // Only hex codes and base HTML color name are supported, therefore we can't use the grayscale-*-colors here.
-          // @todo: DRY fargekoder. Kanskje definere et lite sett med ferdige komboer sammen med design.
           "fill-color": [
             "case",
-            ["==", ["get", "color"], "blue-light"],
-            "#b3f5ff",
-            ["==", ["get", "color"], "blue"],
-            "#6fe9ff",
-            ["==", ["get", "color"], "red"],
-            "#ff8274",
-            ["==", ["get", "color"], "gray-dark"],
-            "#2c2c2c",
-            ["==", ["get", "color"], "black"],
-            "black",
+            ["==", ["get", "highlight"], true],
+            "#6fe9ff", // Blue
             "#2a2859", // Default, blue-dark
           ],
-          "fill-opacity": 0.5,
+          "fill-opacity": [
+            "case",
+            ["==", ["get", "highlight"], true],
+            0.5,
+            0.1, // Default
+          ],
         },
-
         filter: ["==", "$type", "Polygon"],
       });
 
@@ -292,19 +289,11 @@ export default {
           // Only hex codes and base HTML color name are supported, therefore we can't use the grayscale-*-colors here.
           "line-color": [
             "case",
-            ["==", ["get", "color"], "blue-light"],
-            "#2a2859",
-            ["==", ["get", "color"], "blue"],
-            "#2a2859",
-            ["==", ["get", "color"], "red"],
-            "#ff8274",
-            ["==", ["get", "color"], "gray-dark"],
-            "#2c2c2c",
-            ["==", ["get", "color"], "black"],
-            "black",
+            ["==", ["get", "color"], "highlight"],
+            "#6fe9ff", // Blue
             "#2a2859", // Default, blue-dark
           ],
-          "line-width": 1,
+          "line-width": 2,
         },
         filter: ["==", "$type", "Polygon"],
       });
@@ -319,20 +308,7 @@ export default {
         source: dataSourceId,
         paint: {
           // Only hex codes and base HTML color name are supported, therefore we can't use the grayscale-*-colors here.
-          "line-color": [
-            "case",
-            ["==", ["get", "color"], "blue-light"],
-            "#b3f5ff",
-            ["==", ["get", "color"], "blue"],
-            "#6fe9ff",
-            ["==", ["get", "color"], "red"],
-            "#ff8274",
-            ["==", ["get", "color"], "gray-dark"],
-            "#2c2c2c",
-            ["==", ["get", "color"], "black"],
-            "black",
-            "#2a2859", // Default, blue-dark
-          ],
+          "line-color": "#ff8274", // Red
           "line-width": 2,
         },
         filter: ["==", "$type", "LineString"],
