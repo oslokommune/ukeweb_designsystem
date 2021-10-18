@@ -1,0 +1,53 @@
+@use "system/breakpoints";
+
+.osg-trigger-panel {
+  @include breakpoints.medium {
+    display: none;
+  }
+}
+.osg-slide-panel {
+  background-color: white;
+  height: auto;
+  left: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  @include breakpoints.medium {
+    background-color: unset;
+    height: unset;
+    left: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  &--open {
+    width: 100%;
+    left: 0;
+    transition: all 0.75s ease-in;
+
+    @include breakpoints.medium {
+      max-height: unset;
+      transition: unset;
+    }
+  }
+
+  &--close {
+    width: 100%;
+    left: 400px;
+    transition: all 0.75s ease-in;
+
+    @include breakpoints.medium {
+      left: 0;
+      max-height: unset;
+      transition: unset;
+    }
+  }
+
+  .osg-button-close {
+    @include breakpoints.medium {
+      display: none;
+    }
+  }
+}
