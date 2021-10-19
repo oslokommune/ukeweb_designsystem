@@ -8,21 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (mapElement) {
     Vue.component("osg-map", OsgMap);
     var app = new Vue({ el: mapElement });
+
+    // To interact with the map from the outside, you can do someting like this:
+    // app.$refs.osgMap.clearMapAndData()
+    // app.$refs.osgMap.setGeoJson("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson");
+    // app.$refs.osgMap.populateMap();
   }
 
   if (mapElement2) {
     Vue.component("osg-map", OsgMap);
     var app2 = new Vue({ el: mapElement2 });
-
-    app2.$refs.osgMap2.setClusteredGeoJson("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson");
-    app2.$refs.osgMap2.populateMap();
   }
 
   if (mapElement3) {
     Vue.component("osg-map", OsgMap);
     var app3 = new Vue({ el: mapElement3 });
-
-    app3.$refs.osgMap3.setGeoJson("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/dieselforbud.geojson");
-    app3.$refs.osgMap3.populateMap();
   }
 });

@@ -39,6 +39,14 @@ export default {
         };
       },
     },
+    initialGeoJson: {
+      // Can't set type, as MapLibre accepts both an URL and an object
+      default: null,
+    },
+    initialClusteredGeoJson: {
+      // Can't set type, as MapLibre accepts both an URL and an object
+      default: null,
+    },
     initialPoints: {
       type: Array,
       default: null,
@@ -59,8 +67,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.initialState.zoom);
-
     this.mapObject = new maplibregl.Map({
       container: this.$refs.mapContainer,
       style: this.mapStyle + "?key=" + this.apiKey,
@@ -94,6 +100,14 @@ export default {
 
     if (this.initialPoints) {
       this.setPoints(this.initialPoints);
+    }
+
+    if (this.initialGeoJson) {
+      this.setGeoJson(this.initialGeoJson);
+    }
+
+    if (this.initialClusteredGeoJson) {
+      this.setClusteredGeoJson(this.initialClusteredGeoJson);
     }
 
     var _this = this; // Scope this, bobby!
@@ -401,7 +415,11 @@ export default {
       // location of the feature, with HTML generated from its properties.
       this.mapObject.on("click", layerId, function (event) {
         let heading = event.features[0].properties.heading ?? "";
-        let description = event.features[0].properties.desc ?? "";
+        let description = event.features[0].properties.description ?? "";
+        if (description.length === 0) {
+          description = event.features[0].properties.desc ?? "";
+        }
+
         let additionalData = event.features[0].properties.data ? JSON.parse(event.features[0].properties.data) : [];
         let additionalDataHtml = "";
 

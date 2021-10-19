@@ -25,17 +25,21 @@
       <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
         <div class="osg-devtools-code">
           <div class="osg-map" id="osg-map2">
-            <osg-map ref="osgMap2" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: false, }" />
+            <osg-map ref="osgMap2" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
           </div>
         </div>
       </div>
+      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+        <h2 class="osg-infobox__heading">Highlighted polygon</h2>
+        If you need to hightlight a polygon, add <code>"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.
+      </div>
       <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Large polygon and lines</h2>
+        <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
       </div>
       <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
         <div class="osg-devtools-code">
           <div class="osg-map" id="osg-map3">
-            <osg-map ref="osgMap3" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: false, }" />
+            <osg-map ref="osgMap3" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
           </div>
         </div>
       </div>
