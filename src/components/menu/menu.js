@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  OsgMenu();
+});
+
+export function OsgMenu() {
   let hamburgerButtonTriggers = document.querySelectorAll(".osg-button-menu");
   let collapsableHeadings = document.querySelectorAll(".osg-navbar-menu__heading-collapsable");
 
@@ -63,4 +67,4 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleAnimation(collapsableContent);
     });
   });
-});
+}

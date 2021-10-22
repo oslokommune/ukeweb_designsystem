@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  OsgCollapsible();
+});
+
+export function OsgCollapsible() {
   const collapsibleTriggers = document.querySelectorAll(".osg-collapsible-trigger");
   collapsibleTriggers.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -14,4 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.blur();
     });
   });
-});
+}
