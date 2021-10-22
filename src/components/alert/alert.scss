@@ -16,12 +16,6 @@
     text-decoration: none;
   }
 
-  &--illustration {
-    a {
-      align-items: center;
-    }
-  }
-
   &__illustration {
     @extend %osg-margin-right-15;
     flex: 0 0 auto;
@@ -51,12 +45,6 @@
     }
   }
 
-  @include mixins.states {
-    .osg-alert__main h2 {
-      text-decoration: underline;
-    }
-  }
-
   &__status {
     @extend %osg-margin-left-15;
     align-items: flex-start;
@@ -67,6 +55,12 @@
 
     .osg-icon {
       line-height: 1em !important;
+    }
+  }
+
+  &--illustration {
+    a {
+      align-items: center;
     }
   }
 
@@ -84,6 +78,12 @@
         margin-top: 9px;
         width: 12px;
       }
+    }
+  }
+
+  @include mixins.states {
+    .osg-alert__main h2 {
+      text-decoration: underline;
     }
   }
 }

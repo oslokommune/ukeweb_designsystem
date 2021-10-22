@@ -131,11 +131,21 @@
   /**
    * 3. Modifiers
    *
-   * Adding a modifier to make the component in a green-light color
+   * Adding some modifiers to make the component in different colors
    */
   &--green-light {
     .osg-example-component__content {
       background-color: colors.$green-light;
+    }
+  }
+  &--red-light {
+    .osg-example-component__content {
+      background-color: colors.$red-light;
+    }
+  }
+  &--blue-light {
+    .osg-example-component__content {
+      background-color: colors.$blue-light;
     }
   }
 }
