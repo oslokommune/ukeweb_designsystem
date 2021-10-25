@@ -14,6 +14,7 @@
 
   &__item {
     @extend %osg-padding-5;
+    @extend %osg-text-medium;
 
     line-height: 1.5rem;
     box-sizing: content-box;
@@ -28,7 +29,6 @@
     border-radius: 50%;
 
     font-size: typography.$size-16 !important;
-    font-weight: 500;
 
     &:hover,
     &:focus {
@@ -71,7 +71,7 @@
     background: none;
     border: none;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: typography.$size-24;
     font-style: normal;
     line-height: 1em;
     vertical-align: middle;
@@ -81,7 +81,6 @@
     &::before,
     &:hover::before {
       font-family: "Oslo Icons" !important;
-      font-size: 1em;
       padding: 0.438rem;
     }
 
