@@ -57,7 +57,6 @@
     background-color: transparent;
     border-color: colors.$blue-dark;
     color: colors.$blue-dark;
-    outline: none;
   }
 
   &--text {
@@ -97,13 +96,6 @@
   /**
    * Button states
    */
-  &:visited,
-  &--visited {
-    background-color: states.$visited !important;
-    border: 2px solid states.$visited !important;
-    color: states.$visited-text !important;
-  }
-
   &:hover,
   &--hover,
   &:focus,

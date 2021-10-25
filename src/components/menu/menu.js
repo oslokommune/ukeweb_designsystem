@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function OsgMenu() {
   let hamburgerButtonTriggers = document.querySelectorAll(".osg-button-menu");
   let collapsableHeadings = document.querySelectorAll(".osg-navbar-menu__heading-collapsable");
 
@@ -44,14 +44,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
     hamburgerButtonTrigger.addEventListener("click", (event) => {
-      let iconButton = event.target.querySelector(".osg-button-menu__icon");
-      let navMenu = event.target.parentNode.nextElementSibling;
+      const iconButton = event.target.querySelector(".osg-button-menu__icon");
+      const navMenu = document.getElementById(event.target.getAttribute("aria-controls"));
 
       toggleAriaExpanded(hamburgerButtonTrigger);
       toggleDisplay(navMenu);
 
       iconButton.classList.toggle("osg-button-menu__icon--close");
       hamburgerButtonTrigger.classList.toggle("osg-button-menu--close");
+
+      document.dispatchEvent(
+        new CustomEvent("OsgMenuButtonClick", {
+          detail: {
+            button: event.target,
+            state: event.target.getAttribute("aria-expanded") === "true" ? "open" : "close",
+          },
+        })
+      );
     });
   });
 
@@ -63,4 +72,4 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleAnimation(collapsableContent);
     });
   });
-});
+}

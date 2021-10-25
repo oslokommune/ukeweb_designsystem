@@ -1,4 +1,4 @@
-import "./collapsible/collapsible.js";
+import "./collapsible/collapsible.init.js";
 import "./image_carousel/image_carousel.js";
 import "./form/date/date.js";
 import "./form/input/input.js";
@@ -6,6 +6,6 @@ import "./form/search/search.js";
 import "./form/search_seasons/search_seasons.js";
 import "./modal_box/modal_box.js";
 import "./map/map.js";
-import "./menu/menu.js";
+import "./menu/menu.init.js";
 import "./pagination/pagination.js";
 import "./slide_panel/slide_panel.js";

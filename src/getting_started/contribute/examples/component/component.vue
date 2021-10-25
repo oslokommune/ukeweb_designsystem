@@ -21,11 +21,11 @@
         </svg>
       </div>
       <div class="osg-example-component__picture">
-        <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" />
+        <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
       </div>
     </div>
     <div class="osg-example-component__content">
-      <h4 class="osg-example-component__heading">Vue example</h4>
+      <h2 class="osg-example-component__heading">Vue example</h2>
       <p class="osg-example-component__text">This component is brought to you through VueJS.</p>
     </div>
     <div class="osg-example-component__footer">
