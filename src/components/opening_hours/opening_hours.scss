@@ -10,11 +10,11 @@
 
   table {
     @extend %osg-padding-bottom-5;
-    text-align: left;
+    @extend %osg-text-left;
     width: 100%;
 
     th {
-      font-weight: 300;
+      @extend %osg-text-light;
     }
 
     tr {
