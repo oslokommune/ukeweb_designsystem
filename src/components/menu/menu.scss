@@ -264,16 +264,16 @@ $osg-mobile-hamburger-line-width: 40px;
 
     &__list {
       background-color: colors.$gray;
-      margin-left: - spacing.$space-20;
-      margin-right: - spacing.$space-20;
+      margin-left: -#{spacing.$space-20};
+      margin-right: -#{spacing.$space-20};
       margin-top: spacing.$space-10;
       padding-left: spacing.$space-15;
 
       @include breakpoints.medium {
         background-color: unset;
         margin-bottom: spacing.$space-15;
-        margin-left: - spacing.$space-15;
-        margin-right: - spacing.$space-15;
+        margin-left: -#{spacing.$space-15};
+        margin-right: -#{spacing.$space-15};
         margin-top: spacing.$space-15;
         padding-left: 0;
       }
@@ -289,8 +289,8 @@ $osg-mobile-hamburger-line-width: 40px;
   }
 
   &__categories {
-    margin-left: - spacing.$space-20;
-    margin-right: - spacing.$space-20;
+    margin-left: -#{spacing.$space-20};
+    margin-right: -#{spacing.$space-20};
     padding-bottom: spacing.$space-15;
     padding-top: spacing.$space-5;
 

@@ -48,8 +48,8 @@ export function OsgMenu() {
 
   hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
     hamburgerButtonTrigger.addEventListener("click", (event) => {
-      let iconButton = event.target.querySelector(".osg-button-menu__icon");
-      let navMenu = event.target.parentNode.nextElementSibling;
+      const iconButton = event.target.querySelector(".osg-button-menu__icon");
+      const navMenu = document.getElementById(event.target.getAttribute("aria-controls"));
 
       toggleAriaExpanded(hamburgerButtonTrigger);
       toggleDisplay(navMenu);
