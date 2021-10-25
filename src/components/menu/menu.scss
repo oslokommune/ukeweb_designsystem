@@ -186,8 +186,8 @@ $osg-mobile-hamburger-line-width: 40px;
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-vertical-30;
-  padding-left: spacing.$space-20;
+  @extend %osg-padding-vertical-30, %osg-padding-left-20;
+  background-color: colors.$white;
   display: none;
 
   @include breakpoints.medium {

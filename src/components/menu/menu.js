@@ -52,6 +52,15 @@ export function OsgMenu() {
 
       iconButton.classList.toggle("osg-button-menu__icon--close");
       hamburgerButtonTrigger.classList.toggle("osg-button-menu--close");
+
+      document.dispatchEvent(
+        new CustomEvent("OsgMenuButtonClick", {
+          detail: {
+            button: event.target,
+            state: event.target.getAttribute("aria-expanded") === "true" ? "open" : "close",
+          },
+        })
+      );
     });
   });
 
