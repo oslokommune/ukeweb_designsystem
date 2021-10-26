@@ -1,14 +1,11 @@
 @use "system/breakpoints";
-@use "system/spacing";
-
-$gutter: spacing.$space-15 !default;
-$gutter-large: spacing.$space-30 !default;
+@use "system/grid";
 
 .osg-container {
-  margin: 0 $gutter;
+  margin: 0 grid.$gutter;
 
   @include breakpoints.medium {
-    margin: 0 $gutter-large;
+    margin: 0 grid.$gutter-large;
   }
 
   &--gutterless {
@@ -17,7 +14,7 @@ $gutter-large: spacing.$space-30 !default;
   }
 
   &--content-limit {
-    max-width: 1236px;
+    max-width: grid.$content-width;
     margin: 0 auto;
   }
 }

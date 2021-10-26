@@ -1,0 +1,5 @@
+@use "system/spacing";
+
+$gutter: spacing.$space-15 !default;
+$gutter-large: spacing.$space-30 !default;
+$content-width: 1236px;
