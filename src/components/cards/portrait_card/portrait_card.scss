@@ -13,7 +13,8 @@ $osg-portrait-card-image-height-large: 290px;
     text-decoration: none;
 
     &:hover {
-      * {
+      .osg-portrait-card__link,
+      .osg-portrait-card__heading {
         color: states.$hover !important;
       }
 
