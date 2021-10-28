@@ -4,6 +4,10 @@ export function OsgSlidePanel(idContainer, idTriggerBtn, idSlide, idCloseBtn) {
     slidePanel = document.getElementById(idSlide),
     closeBtn = document.getElementById(idCloseBtn);
 
+  if (!container || !slideTrigger || !slidePanel || !closeBtn) {
+    return;
+  }
+
   slidePanel.style.left = container.offsetWidth + "px";
   container.style.height = window.getComputedStyle(slidePanel).height;
 
