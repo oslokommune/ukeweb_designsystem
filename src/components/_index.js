@@ -8,4 +8,4 @@ import "./modal_box/modal_box.js";
 import "./map/map.js";
 import "./menu/menu.init.js";
 import "./pagination/pagination.js";
-import "./slide_panel/slide_panel.js";
+import "./slide_panel/slide_panel.init.js";
