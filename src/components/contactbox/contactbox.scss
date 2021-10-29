@@ -17,6 +17,7 @@
 
   &__label {
     @extend %osg-text-4;
+    word-wrap: break-word;
   }
 
   &__value {
