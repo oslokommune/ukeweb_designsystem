@@ -73,12 +73,12 @@
                   <div class="osg-search__form">
                     <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results-1" />
                   </div>
-                  <ul class="osg-search__dropdown" role="listbox" id="id-results-1" aria-label="search results">
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item A</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item B</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item C</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item D</li>
-                  </ul>
+                  <div class="osg-search__dropdown" role="listbox" id="id-results-1" aria-label="search results">
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item A</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item B</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item C</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item D</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,12 +105,12 @@
                     >Search
                     <input class="osg-search__input" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-2" role="combobox" />
                   </label>
-                  <ul class="osg-search__dropdown" role="listbox" id="id-results-2" aria-label="search results">
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item A</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item B</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item C</li>
-                    <li role="option" tabindex="0" class="osg-search__dropdown__item">Item D</li>
-                  </ul>
+                  <div class="osg-search__dropdown" role="listbox" id="id-results-2" aria-label="search results">
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item A</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item B</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item C</a>
+                    <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item D</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -161,21 +161,21 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-3">
-        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-result-3" checked="checked" />
+        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-3" checked="checked" />
         <span class="osg-switch__background"></span>
         <span class="osg-switch__slider"></span>
         <span class="osg-switch__label-text" id="dropdown-text-3">Dropdown</span>
       </label>
       <div class="osg-search osg-search--inline">
         <div class="osg-search__form">
-          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-result-3" role="combobox" />
+          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Search" aria-label="Search" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-3" role="combobox" />
         </div>
-        <ul class="osg-search__dropdown" role="listbox" id="id-results-3" aria-label="search results">
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item A</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item B</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item C</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item D</li>
-        </ul>
+        <div class="osg-search__dropdown" role="listbox" id="id-results-3" aria-label="search results">
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item A</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item B</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item C</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item D</a>
+        </div>
       </div>
       <p class="osg-text-5 osg-margin-top-15">
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
@@ -189,7 +189,7 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-4">
-        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-result-4" checked="checked" />
+        <input type="checkbox" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-4" checked="checked" />
         <span class="osg-switch__background"></span>
         <span class="osg-switch__slider"></span>
         <span class="osg-switch__label-text" id="dropdown-text-4">Dropdown</span>
@@ -199,12 +199,12 @@
           >Search
           <input class="osg-search__input" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
         </label>
-        <ul class="osg-search__dropdown" role="listbox" id="id-results-4" aria-label="search results">
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item A</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item B</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item C</li>
-          <li role="option" tabindex="0" class="osg-search__dropdown__item">Item D</li>
-        </ul>
+        <div class="osg-search__dropdown" role="listbox" id="id-results-4" aria-label="search results">
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item A</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item B</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item C</a>
+          <a class="osg-search__dropdown__item" role="option" href="javascript:void(0)">Item D</a>
+        </div>
       </div>
       <p class="osg-text-5 osg-margin-top-15">
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
