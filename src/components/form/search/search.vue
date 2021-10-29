@@ -47,8 +47,8 @@ export default {
       default: true,
     },
     ariaExpanded: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: "false",
     },
   },
   data() {

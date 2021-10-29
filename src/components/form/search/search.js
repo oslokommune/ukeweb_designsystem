@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         value: "h",
         items: [],
         focus: null,
+        ariaExpanded: "false"
       }),
       mounted() {
         this.event("change", this.value);
