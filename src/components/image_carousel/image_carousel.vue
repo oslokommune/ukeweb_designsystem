@@ -1,6 +1,14 @@
 <template>
   <div class="osg-carousel">
     <div class="osg-carousel__content" ref="content">
+      <div class="osg-carousel__navigation">
+        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
+          <span class="osg-button__icon osg-icons--chevron-left" :aria-label="prev"></span>
+        </button>
+        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
+          <span class="osg-button__icon osg-icons--chevron-right" :aria-label="next"></span>
+        </button>
+      </div>
       <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
         <div class="osg-carousel__slides" ref="slides">
           <figure v-for="(image, index) in images" v-bind:key="index">
@@ -13,17 +21,7 @@
           </figure>
         </div>
       </div>
-
-      <div class="osg-carousel__navigation">
-        <a class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
-          <span class="osg-button__icon osg-icons--chevron-left"></span>
-        </a>
-        <a class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
-          <span class="osg-button__icon osg-icons--chevron-right"></span>
-        </a>
-      </div>
     </div>
-
     <div class="osg-carousel__info osg-margin-top-10">
       <span v-if="currentImage">
         {{ currentImage.caption }}
@@ -74,6 +72,16 @@ export default {
     images: {
       type: Array,
       required: true,
+    },
+
+    next: {
+      type: String,
+      default: "Next image",
+    },
+
+    prev: {
+      type: String,
+      default: "Previous image",
     },
   },
 
