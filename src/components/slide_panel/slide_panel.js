@@ -4,6 +4,10 @@ export function OsgSlidePanel(idContainer, idTriggerBtn, idSlide, idCloseBtn) {
     slidePanel = document.getElementById(idSlide),
     closeBtn = document.getElementById(idCloseBtn);
 
+  if (!container || !slideTrigger || !slidePanel || !closeBtn) {
+    return;
+  }
+
   slidePanel.style.left = container.offsetWidth + "px";
   container.style.height = window.getComputedStyle(slidePanel).height;
 
@@ -12,6 +16,12 @@ export function OsgSlidePanel(idContainer, idTriggerBtn, idSlide, idCloseBtn) {
     slidePanel.style.visibility = slidePanel.style.visibility == "visible" ? "none" : "visible";
     slidePanel.style.transition = "all 0.75s ease-in";
     closeBtn.tabIndex = closeBtn.tabIndex === -1 ? 0 : -1;
+
+    if (slideTrigger.getAttribute("aria-expanded") == "false") {
+      slideTrigger.setAttribute("aria-expanded", "true");
+    } else {
+      slideTrigger.setAttribute("aria-expanded", "false");
+    }
   }
 
   window.addEventListener("resize", () => {
