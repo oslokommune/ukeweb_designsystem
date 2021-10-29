@@ -1,6 +1,6 @@
 import OsgSearch from "./search.vue";
 
-document.addEventListener("DOMContentLoaded", function () {
+export function OsgSearchJs() {
   let searchDropdownTriggers = document.querySelectorAll(".components-form-search-dropdown");
   if (searchDropdownTriggers) {
     searchDropdownTriggers.forEach((trigger) => {
@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+}
 
+export function OsgSearchVue() {
   let osgSearchPlaceholder = document.getElementById("osg-search-vue");
   if (osgSearchPlaceholder) {
     Vue.component("osg-search", OsgSearch);
@@ -65,4 +67,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
-});
+}
