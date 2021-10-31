@@ -3,6 +3,10 @@ import OsgSearch from "./search.vue";
 export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
   let trigger = document.getElementById(triggerDropdownId);
 
+  if (!trigger) {
+    return;
+  }
+
   trigger.addEventListener("change", function () {
       let searchInput = document.getElementById(inputId);
       let dropdown = document.getElementById(dropdownId);
