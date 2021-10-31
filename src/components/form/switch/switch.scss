@@ -147,8 +147,8 @@
   }
 
   @include switch-states;
-}
 
-.osg-error-message {
-  @include mixins.error-message;
+  &__error-message {
+    @include mixins.error-message;
+  }
 }

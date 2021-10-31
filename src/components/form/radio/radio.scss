@@ -135,8 +135,8 @@
       color: colors.$red;
     }
   }
-}
 
-.osg--error-message {
-  @include mixins.error-message;
+  &__error-message {
+    @include mixins.error-message;
+  }
 }
