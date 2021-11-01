@@ -4,7 +4,8 @@
       <p class="osg-text-2">A radio button is a graphical control element that allows the user to choose only one of a predefined set of mutually exclusive options.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">The radio button text should never take the 100% width of the page in medium and up breakpoints.</p>
+        <p class="osg-paragraph">The radio button text should never take the 100% width of the page in medium and up breakpoints. 
+          Radio button groups should always be grouped using <b> &lt;fieldset&gt; </b> .</p>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
@@ -112,10 +113,8 @@
 
 <div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Default</h2>
-    </div>
     <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3">Default</h2>
       <label class="osg-radio">
         <span class="osg-radio__input">
           <input type="radio" name="radio-1" checked="checked" />
@@ -124,7 +123,7 @@
         <span class="osg-radio__label">Checked</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio">
         <span class="osg-radio__input">
           <input type="radio" name="radio-1" />
@@ -136,10 +135,8 @@
   </div>
 
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3 osg-margin-top-50">States</h2>
-    </div>
     <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-50">States</h2>
       <label class="osg-radio osg-radio--hover">
         <span class="osg-radio__input">
           <input type="radio" name="radio-2" checked="checked" />
@@ -155,7 +152,7 @@
         <span class="osg-radio__label">Hover</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--focus">
         <span class="osg-radio__input">
           <input type="radio" name="radio-3" checked="checked" />
@@ -171,7 +168,7 @@
         <span class="osg-radio__label">Focus/active</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--disabled">
         <span class="osg-radio__input">
           <input type="radio" name="radio-4" checked="checked" disabled="disabled" />
@@ -187,7 +184,7 @@
         <span class="osg-radio__label">Disabled</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--error">
         <span class="osg-radio__input">
           <input type="radio" name="radio-5" checked="checked" aria-describedby="error-2" />
