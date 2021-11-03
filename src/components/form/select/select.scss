@@ -24,11 +24,11 @@
       color: inherit;
       content: map-get(icons.$icons, "chevron-thin-down");
       font-family: "Oslo Icons";
-      font-size: 32px;
+      font-size: 2rem;
       pointer-events: none;
       position: absolute;
-      right: 14px;
-      top: 26px;
+      right: 0.875rem;
+      top: 1.625rem;
       transform: translateY(-50%);
     }
   }
