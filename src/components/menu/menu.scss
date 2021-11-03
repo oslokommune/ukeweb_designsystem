@@ -7,19 +7,26 @@
 @use "components/links/link/mixins";
 @use "sass:math";
 
-// Common
-$osg-hamburger-width: 55px;
-$osg-hamburger-height: 55px;
+// Small
+$osg-small-hamburger-line-height: 2px;
+$osg-small-hamburger-line-gap: 12px;
+$osg-small-hamburger-line-width: 35px;
+$osg-small-hamburger-width: 55px;
+$osg-small-hamburger-height: 55px;
 
-// Desktop
-$osg-desktop-hamburger-line-height: 2px;
-$osg-desktop-hamburger-line-gap: 8px;
-$osg-desktop-hamburger-line-width: 30px;
+// Medium
+$osg-medium-hamburger-line-height: 2px;
+$osg-medium-hamburger-line-gap: 8px;
+$osg-medium-hamburger-line-width: 26px;
+$osg-medium-hamburger-height: 46px;
+$osg-medium-hamburger-width: 46px;
 
-// Mobile
-$osg-mobile-hamburger-line-height: 2px;
-$osg-mobile-hamburger-line-gap: 12px;
-$osg-mobile-hamburger-line-width: 40px;
+// Large
+$osg-large-hamburger-line-height: 2px;
+$osg-large-hamburger-line-gap: 8px;
+$osg-large-hamburger-line-width: 30px;
+$osg-large-hamburger-height: 50px;
+$osg-large-hamburger-width: 50px;
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
   @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
@@ -39,7 +46,7 @@ $osg-mobile-hamburger-line-width: 40px;
 
 .osg-button-menu {
   @extend %osg-text-4;
-  @extend %osg-padding-horizontal-15, %osg-padding-vertical-15;
+  @extend %osg-padding-horizontal-10, %osg-padding-vertical-10;
 
   border-radius: 50%;
   border: none;
@@ -115,37 +122,54 @@ $osg-mobile-hamburger-line-width: 40px;
 
     > span {
       background: colors.$blue-dark;
-      height: $osg-mobile-hamburger-line-height;
+      height: $osg-small-hamburger-line-height;
       margin-top: 2px;
       position: absolute;
       right: 10px;
       transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      width: $osg-mobile-hamburger-line-width;
+      width: $osg-small-hamburger-line-width;
 
       &:nth-child(1) {
-        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, -$osg-mobile-hamburger-line-gap);
+        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, -$osg-small-hamburger-line-gap);
       }
       &:nth-child(2) {
-        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, 0);
+        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, 0);
       }
       &:nth-child(3) {
-        top: calculate-hamburger-line-position($osg-hamburger-height, $osg-mobile-hamburger-line-height, $osg-mobile-hamburger-line-gap);
+        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, $osg-small-hamburger-line-gap);
       }
 
       @include breakpoints.medium {
-        height: $osg-desktop-hamburger-line-height;
+        height: $osg-medium-hamburger-line-height;
         margin-top: 0;
         right: 15px;
-        width: $osg-desktop-hamburger-line-width;
+        width: $osg-medium-hamburger-line-width;
 
         &:nth-child(1) {
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, -$osg-desktop-hamburger-line-gap);
+          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, -$osg-medium-hamburger-line-gap);
         }
         &:nth-child(2) {
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, 0);
+          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, 0);
         }
         &:nth-child(3) {
-          top: calculate-hamburger-line-position($osg-hamburger-height, $osg-desktop-hamburger-line-height, $osg-desktop-hamburger-line-gap);
+          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, $osg-medium-hamburger-line-gap);
+        }
+      }
+
+      @include breakpoints.large {
+        height: $osg-medium-hamburger-line-height;
+        margin-top: 0;
+        right: 15px;
+        width: $osg-medium-hamburger-line-width;
+
+        &:nth-child(1) {
+          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, -$osg-medium-hamburger-line-gap);
+        }
+        &:nth-child(2) {
+          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, 0);
+        }
+        &:nth-child(3) {
+          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, $osg-medium-hamburger-line-gap);
         }
       }
     }
@@ -166,7 +190,11 @@ $osg-mobile-hamburger-line-width: 40px;
           transform: translateY(5px) translateY(-50%) rotate(-135deg);
           @include breakpoints.medium {
             right: 15px;
-            top: 22px;
+            top: 18px;
+          }
+          @include breakpoints.large {
+            right: 15px;
+            top: 19px;
           }
         }
         &:nth-child(2) {
@@ -177,7 +205,11 @@ $osg-mobile-hamburger-line-width: 40px;
           transform: translateY(-9px) translateY(50%) rotate(135deg);
           @include breakpoints.medium {
             right: 15px;
-            top: 34px;
+            top: 30px;
+          }
+          @include breakpoints.large {
+            right: 15px;
+            top: 31px;
           }
         }
       }
