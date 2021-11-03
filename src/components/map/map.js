@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let mapElement = document.getElementById("osg-map");
   let mapElement2 = document.getElementById("osg-map2");
   let mapElement3 = document.getElementById("osg-map3");
+  let mapElement4 = document.getElementById("osg-map4");
+  let mapElement5 = document.getElementById("osg-map5");
+  let mapElement6 = document.getElementById("osg-map6");
 
   if (mapElement) {
     Vue.component("osg-map", OsgMap);
@@ -23,5 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (mapElement3) {
     Vue.component("osg-map", OsgMap);
     var app3 = new Vue({ el: mapElement3 });
+  }
+
+  if (mapElement4) {
+    Vue.component("osg-map", OsgMap);
+    var app4 = new Vue({ el: mapElement4 });
+  }
+
+  if (mapElement5) {
+    Vue.component("osg-map", OsgMap);
+    var app5 = new Vue({ el: mapElement5 });
+  }
+
+  if (mapElement6) {
+    Vue.component("osg-map", OsgMap);
+    var app6 = new Vue({ el: mapElement6 });
   }
 });

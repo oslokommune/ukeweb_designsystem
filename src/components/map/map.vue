@@ -11,11 +11,11 @@ export default {
   props: {
     mapStyle: {
       type: String,
-      default: "https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/style.json",
+      default: "https://api.maptiler.com/maps/79adf164-6825-4f19-8239-52582627143a/style.json",
     },
     apiKey: {
       type: String,
-      default: "VW1Tn0fx1t3b6t0CHP6Q",
+      default: "l4ZxSXKkrA16jgVeYWUE",
     },
     locale: {
       type: Object,
@@ -131,8 +131,6 @@ export default {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
         if (this.pointsGeoJson !== null) {
-          // @todo: litt feilhåndtering???
-
           this.mapObject.addSource("points", {
             type: "geojson",
             data: this.pointsGeoJson,
@@ -225,7 +223,7 @@ export default {
           },
           properties: {
             heading: heading,
-            desc: description,
+            description: description,
           },
         });
       });
@@ -282,13 +280,13 @@ export default {
           "fill-color": [
             "case",
             ["==", ["get", "highlight"], true],
-            "#6fe9ff", // Blue
+            "#6fe9ff", // Highlight color, blue
             "#2a2859", // Default, blue-dark
           ],
           "fill-opacity": [
             "case",
             ["==", ["get", "highlight"], true],
-            0.5,
+            0.5, // Highlight opacity
             0.1, // Default
           ],
         },
@@ -303,8 +301,8 @@ export default {
           // Only hex codes and base HTML color name are supported, therefore we can't use the grayscale-*-colors here.
           "line-color": [
             "case",
-            ["==", ["get", "color"], "highlight"],
-            "#6fe9ff", // Blue
+            ["==", ["get", "highlight"], true],
+            "#2a2859", // Highlight color, blue-dark, same as default for now.
             "#2a2859", // Default, blue-dark
           ],
           "line-width": 2,

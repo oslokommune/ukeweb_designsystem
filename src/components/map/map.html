@@ -1,88 +1,121 @@
-<div class="osg-container">
-  <div class="osg-container osg-container--content-limit">
-    <div class="osg-row">
-      <div class="osg-row__column osg-row__column--12">
+<div class="osg-container osg-devtools-nondevmode">
+  <div class="osg-container">
+    <div class="osg-container osg-container--content-limit">
+      <div class="osg-row">
+        <div class="osg-row__column osg-row__column--12">
+          <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+            <h2 class="osg-infobox__heading">Technical details on the use of maps</h2>
+            <h3 class="osg-heading-6 osg-margin-top-10">API-keys</h3>
+            <p class="osg-paragraph">
+              The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.<br />
+              Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.<br />
+              If you do not change the key, you will get 403 Forbidden.
+            </p>
+            <h3 class="osg-heading-6 osg-margin-top-10">GeoJSON suported features</h3>
+            <p class="osg-paragraph">
+              The map supports the following GeoJSON features:<br />
+              FeatureCollection, with the following feature types: Polygon, LineString and Point.<br /><br />
+              It does not support GeometryCollection or the Multi*-variants of the feature types.
+            </p>
+            <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
+            <p class="osg-paragraph">
+              Popups appear by if the following conditions are met<br />
+              - <code>showPopups</code> is true, this can be set to false by overriding the property <code>initialState</code>.<br />
+              - When using GeoJSON: the feature has the property <code>description</code>. Optionally it can also have <code>heading</code>.<br />
+              - When using <code>initialPoints / setPoints</code>: <code>description</code> and optionally <code>heading</code> added to the array per point.<br />
+              - There is actually a string with data.<br />
+            </p>
+            <br />
+            <p class="osg-paragraph">
+              To display additional data after the heading and description, you can add an array called <code>data</code> to the feature properties.<br />
+              Each item in the array must contain <code>label</code> and <code>value</code>.<br />
+              This only works with GeoJSON, and not <code>initialPoints / setPoints</code>.
+            </p>
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Single marker</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-devtools-code">
+            <div class="osg-map" id="osg-map">
+              <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+            </div>
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Markers with clustering</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-devtools-code">
+            <div class="osg-map" id="osg-map2">
+              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
+            </div>
+          </div>
+        </div>
         <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
-          <h2 class="osg-infobox__heading">About API-keys</h2>
-          The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.<br />
-          In your project you need to provide your own key form Maptiler when calling <code>getNewMapObject()</code>, or using the static map API.<br />
-          If you do not change the key, you will get 403 Forbidden.
+          <h2 class="osg-infobox__heading">Highlighted polygon</h2>
+          If you need to hightlight a polygon, add <code>"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.
         </div>
-      </div>
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Single marker</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map">
-            <osg-map ref="osgMap" :initial-points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', desc: 'the builder!' }]" />
-          </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
         </div>
-      </div>
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Markers with clustering</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map2">
-            <osg-map ref="osgMap2" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
-          </div>
-        </div>
-      </div>
-      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
-        <h2 class="osg-infobox__heading">Highlighted polygon</h2>
-        If you need to hightlight a polygon, add <code>"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.
-      </div>
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-map" id="osg-map3">
-            <osg-map ref="osgMap3" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
-          </div>
-        </div>
-      </div>
-
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Static map</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-              <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
-              <p class="osg-paragraph">Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.</p>
-            </div>
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-              <img class="osg-image" src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,16/500x500.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt" />
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-devtools-code">
+            <div class="osg-map" id="osg-map3">
+              <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="osg-row__column osg-row__column--12">
-        <h2 class="osg-heading-3">Static map, right column on medium</h2>
-      </div>
-      <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-        <div class="osg-devtools-code">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
-              <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
-              <p class="osg-paragraph">Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.</p>
-            </div>
-            <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
-              <!--
-              <img class="osg-image" src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,16/380x380.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt">
-              -->
-              <div class="osg-map osg-map--static">
-                <picture>
-                  <source media="(min-width: 1024px)" srcset="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,15/380x380.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" />
-                  <source media="(min-width: 769px)" srcset="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,17/300x300.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" />
-                  <img src="https://api.maptiler.com/maps/ef955669-6ec4-4320-b5c3-bb2e0732700f/static/10.7391,59.9149,15/300x300.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt" />
-                </picture>
+        <!--
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Static map</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-devtools-code">
+            <div class="osg-row">
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+                <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
+                <p class="osg-paragraph">Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.</p>
+              </div>
+              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+                <img class="osg-image" src="https://api.maptiler.com/maps/79adf164-6825-4f19-8239-52582627143a/static/10.7391,59.9149,16/500x500.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt" />
               </div>
             </div>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="osg-container osg-devtools-devmode">
+  <div class="osg-container">
+    <div class="osg-container osg-container--content-limit">
+      <div class="osg-row">
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Single marker</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map4">
+            <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Markers with clustering</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map5">
+            <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map6">
+            <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
           </div>
         </div>
       </div>
