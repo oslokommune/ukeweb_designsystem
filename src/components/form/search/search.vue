@@ -21,7 +21,7 @@
     </div>
 
     <div v-if="items.length" ref="list" class="osg-search__dropdown" id="id-results" role="listbox" aria-label="search results">
-      <a v-for="(item, index) of items" :key="index" v-on:click.prevent="itemClick(index)" v-on:keyup.enter.prevent="itemClick(index)" v-on:keyup.down.prevent="setFocus($event)" v-on:keyup.up.prevent="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': index === focus }" class="osg-search__dropdown__item" role="option" href="javascript:void(0)">
+      <a v-for="(item, index) of items" :key="index" v-on:click.prevent="itemClick(index)" v-on:keyup.enter.prevent="itemClick(index)" v-on:keyup.down.prevent="setFocus($event)" v-on:keyup.up.prevent="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': index === focus }" class="osg-search__dropdown__item" role="option" >
         <span class="osg-text-5">{{ item.item1 }}</span>
         <span v-if="item.item2" class="osg-text-7">{{ item.item2 }}</span>
       </a>
