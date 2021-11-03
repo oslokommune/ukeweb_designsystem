@@ -8,25 +8,25 @@
 @use "sass:math";
 
 // Small
-$osg-small-hamburger-line-height: 2px;
-$osg-small-hamburger-line-gap: 12px;
-$osg-small-hamburger-line-width: 35px;
-$osg-small-hamburger-width: 55px;
-$osg-small-hamburger-height: 55px;
+$osg-small-hamburger-line-height: 0.125rem;
+$osg-small-hamburger-line-gap: 0.75rem;
+$osg-small-hamburger-line-width: 2.188rem;
+$osg-small-hamburger-width: 3.438rem;
+$osg-small-hamburger-height: 3.438rem;
 
 // Medium
-$osg-medium-hamburger-line-height: 2px;
-$osg-medium-hamburger-line-gap: 8px;
-$osg-medium-hamburger-line-width: 26px;
-$osg-medium-hamburger-height: 46px;
-$osg-medium-hamburger-width: 46px;
+$osg-medium-hamburger-line-height: 0.125rem;
+$osg-medium-hamburger-line-gap: 0.5rem;
+$osg-medium-hamburger-line-width: 1.625rem;
+$osg-medium-hamburger-height: 2.875rem;
+$osg-medium-hamburger-width: 2.875rem;
 
 // Large
-$osg-large-hamburger-line-height: 2px;
-$osg-large-hamburger-line-gap: 8px;
-$osg-large-hamburger-line-width: 30px;
-$osg-large-hamburger-height: 50px;
-$osg-large-hamburger-width: 50px;
+$osg-large-hamburger-line-height: 0.125rem;
+$osg-large-hamburger-line-gap: 0.5rem;
+$osg-large-hamburger-line-width: 1.875rem;
+$osg-large-hamburger-height: 3.125rem;
+$osg-large-hamburger-width: 3.125rem;
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
   @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
@@ -270,9 +270,10 @@ $osg-large-hamburger-width: 50px;
     }
 
     &__content {
-      line-height: 38px;
+      line-height: 2.375em;
+      word-break: break-word;
       @include breakpoints.medium {
-        line-height: 24px;
+        line-height: 3.125em;
       }
 
       & .osg-navbar-menu-link__text {
@@ -339,8 +340,8 @@ $osg-large-hamburger-width: 50px;
     @include breakpoints.medium {
       background-color: colors.$gray;
       padding-top: spacing.$space-15;
-      padding-left: 55px;
-      padding-right: 55px;
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
       ul {
         margin-left: 0;
         margin-bottom: 0;
