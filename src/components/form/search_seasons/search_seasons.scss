@@ -139,6 +139,21 @@
         color: states.$hover !important;
         text-decoration: underline;
       }
+
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: colors.$gray-light;
+          border-top: spacing.$space-5 solid colors.$gray-light;
+          border-bottom: spacing.$space-5 solid colors.$gray-light;
+          color: states.$hover !important;
+          margin: -5px -15px;
+          padding: 0 spacing.$space-15;
+          text-decoration: underline;
+        }
+      }
     }
   }
 

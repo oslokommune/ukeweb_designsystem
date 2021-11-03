@@ -23,9 +23,10 @@
 
     &::after {
       font-family: "Oslo Icons";
-      font-size: 1.5rem;
+      font-size: typography.$size-24;
       content: map-get(icons.$icons, "chevron-thin-down");
       position: absolute;
+      top: spacing.$space-15;
       right: spacing.$space-15;
     }
   }
@@ -45,7 +46,7 @@
       @extend %osg-margin-left-5;
       content: map-get(icons.$icons, "chevron-thin-down");
       font-family: "Oslo Icons";
-      font-size: 1.5rem;
+      font-size: typography.$size-24;
       vertical-align: top;
     }
   }

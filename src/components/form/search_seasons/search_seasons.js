@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function OsgSearchSeasons() {
   let searchSeasonsDropdownTriggers = document.querySelectorAll(".components-form-search-seasons-dropdown");
   if (searchSeasonsDropdownTriggers) {
     searchSeasonsDropdownTriggers.forEach((trigger) => {
@@ -16,4 +16,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-});
+}

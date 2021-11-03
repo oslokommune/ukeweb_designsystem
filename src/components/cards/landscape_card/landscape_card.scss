@@ -18,7 +18,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
 
     &:hover {
-      * {
+      .osg-landscape-card__content {
         color: states.$hover !important;
       }
 

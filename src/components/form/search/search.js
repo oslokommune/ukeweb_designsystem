@@ -1,26 +1,27 @@
 import OsgSearch from "./search.vue";
 
-document.addEventListener("DOMContentLoaded", function () {
-  let searchDropdownTriggers = document.querySelectorAll(".components-form-search-dropdown");
-  if (searchDropdownTriggers) {
-    searchDropdownTriggers.forEach((trigger) => {
-      trigger.addEventListener("change", function () {
-        let dropdown = document.getElementById(this.getAttribute("aria-controls"));
-        if (dropdown) {
-          let searchForm = dropdown.previousElementSibling;
+export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
+  let trigger = document.getElementById(triggerDropdownId);
 
-          if (this.checked) {
-            dropdown.style.display = "block";
-            searchForm.setAttribute("aria-expanded", "true");
-          } else {
-            dropdown.style.display = "none";
-            searchForm.setAttribute("aria-expanded", "false");
-          }
-        }
-      });
-    });
+  if (!trigger) {
+    return;
   }
 
+  trigger.addEventListener("change", function () {
+      let searchInput = document.getElementById(inputId);
+      let dropdown = document.getElementById(dropdownId);
+
+      if (this.checked) {
+        dropdown.style.display = "block";
+        searchInput.setAttribute("aria-expanded", "true");
+      } else {
+        dropdown.style.display = "none";
+        searchInput.setAttribute("aria-expanded", "false");
+      }
+  });
+}
+
+export function OsgSearchVue() {
   let osgSearchPlaceholder = document.getElementById("osg-search-vue");
   if (osgSearchPlaceholder) {
     Vue.component("osg-search", OsgSearch);
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         value: "h",
         items: [],
         focus: null,
+        ariaExpanded: "false"
       }),
       mounted() {
         this.event("change", this.value);
@@ -64,4 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
-});
+}

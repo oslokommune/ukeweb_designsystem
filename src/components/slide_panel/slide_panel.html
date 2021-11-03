@@ -4,10 +4,12 @@
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <button class="osg-button osg-trigger-panel">slide me!</button>
-          <div class="osg-slide-panel">
-            <p class="osg-text-2">This content will slide from left to right in small and show in medium and up devices.</p>
-            <button class="osg-button osg-button-close">Close</button>
+          <div class="osg-slide-panel" id="container-1">
+            <button class="osg-button" aria-expanded="false" id="trigger-1">slide me!</button>
+            <div class="osg-slide-panel__content" id="slide-content-1">
+              <button class="osg-button osg-button-close" id="close-1" tabindex="-1">Close</button>
+              <p class="osg-text-2">This content will slide from left to right in small and show in medium and up devices.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -18,19 +20,19 @@
 <div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
     <div class="osg-row__column osg-row__column--12">
-      <button class="osg-button osg-trigger-panel">slide me!</button>
-      <div class="osg-slide-panel">
-        <button class="osg-button osg-button-close">Close</button>
-        <div class="osg-row__column osg-row__column--12">
-          <h2 class="osg-heading-3">Lorem ipsum</h2>
-          <p class="osg-text-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-            in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+      <div class="osg-slide-panel" id="container-2">
+        <button class="osg-button" aria-expanded="false" id="trigger-2">slide me!</button>
+        <div class="osg-slide-panel__content" id="slide-content-2">
+          <button class="osg-button osg-button-close" id="close-2" tabindex="-1">Close</button>
+          <div class="osg-row__column osg-row__column--12">
+            <h2 class="osg-heading-3">Lorem ipsum</h2>
+            <p class="osg-text-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
     text-decoration: none;
 
     &:hover {
-      * {
+      .osg-status-card__content {
         color: states.$hover !important;
       }
 
