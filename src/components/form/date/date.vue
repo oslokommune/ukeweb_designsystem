@@ -105,7 +105,7 @@ export default {
       this.showDatepicker = bool;
     },
     onDatepickerOutside(event) {
-      if (!this.$el.contains(event.target)) {
+      if (!this.$el.contains(event.target) || event.keyCode === 27) {
         this.toggleDatepicker(false);
       }
     },

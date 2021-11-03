@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
@@ -72,18 +73,18 @@
 
   &.osg-button--icon {
     @extend %osg-padding-10;
-    width: 1.33375em !important;
+    width: 1.5rem !important;
     line-height: 0 !important;
     box-sizing: content-box;
 
     &.osg-button--small {
       @extend %osg-padding-5;
-      width: 1.5em !important;
+      width: 1.5rem !important;
     }
 
     &.osg-button--large {
       @extend %osg-padding-15;
-      width: 1.3335em !important;
+      width: 2rem !important;
     }
     &.osg-button--large {
       .osg-button__icon {

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+export function OsgInput() {
   const countInput = document.querySelector(".osg-input__input--number");
 
   if (!countInput) {
@@ -36,4 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   btnUp.addEventListener("click", increaseCount, false);
   btnDown.addEventListener("click", decreaseCount, false);
-});
+}
