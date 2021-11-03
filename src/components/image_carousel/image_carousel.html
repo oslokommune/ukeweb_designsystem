@@ -1,9 +1,7 @@
 <div class="osg-container osg-devtools-nondevmode">
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12 osg-padding-top-none">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="vue1">
@@ -47,10 +45,8 @@
 </div>
 <div class="osg-container osg-devtools-devmode">
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-bottom-30">Default</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12 osg-padding-top-none">
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3">Default</h2>
       <div id="vue2">
         <osg-image-carousel
           :images="[
@@ -81,6 +77,22 @@
             small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
             caption: 'Test Caption Four',
             srDescription: 'srDescription Four'
+          }
+        ]"
+        ></osg-image-carousel>
+      </div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-heading-3">1 image</h2>
+      <div id="vue3">
+        <osg-image-carousel
+          :images="[
+          {
+            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
+            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
+            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+            caption: 'Test Caption One',
+            srDescription: 'srDescription One'
           }
         ]"
         ></osg-image-carousel>

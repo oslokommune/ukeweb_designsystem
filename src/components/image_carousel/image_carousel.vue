@@ -1,7 +1,7 @@
 <template>
   <div class="osg-carousel">
     <div class="osg-carousel__content" ref="content">
-      <div class="osg-carousel__navigation">
+      <div class="osg-carousel__navigation" v-if="images.length > 1">
         <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
           <span class="osg-button__icon osg-icons--chevron-left" :aria-label="prev"></span>
         </button>
