@@ -47,19 +47,19 @@ export default {
     },
     days: {
       type: String,
-      default: "man,tir,ons,tor,fre,lør,søn",
+      default: "mon,tue,wed,thu,fri,sat,sun",
     },
     months: {
       type: String,
-      default: "januar,februar,mars,april,mai,juni,juli,august,september,oktober,november,desember",
+      default: "January,February,March,April,May,June,July,August,September,October,November,December",
     },
     btnPrevMonthLabel: {
       type: String,
-      default: "Forrige måned",
+      default: "Last month",
     },
     btnNextMonthLabel: {
       type: String,
-      default: "Neste måned",
+      default: "Next month",
     },
   },
 
