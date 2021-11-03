@@ -9,4 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     Vue.component("osg-image-carousel", OsgImageCarousel);
     new Vue({ el: "#vue2" });
   }
+  if (document.getElementById("vue3")) {
+    Vue.component("osg-image-carousel", OsgImageCarousel);
+    new Vue({ el: "#vue3" });
+  }
 });
