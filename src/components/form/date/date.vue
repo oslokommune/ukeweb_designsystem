@@ -80,6 +80,7 @@ export default {
     this.datepicker.addEventListener("datepicker.click.day", this.onDatepickerClickDay);
     window.addEventListener("click", this.onDatepickerOutside);
     window.addEventListener("keyup", this.onDatepickerOutside);
+    window.addEventListener("keydown", this.onDatepickerEscPressed);
   },
 
   destroyed() {
@@ -87,6 +88,7 @@ export default {
     this.datepicker.removeEventListener("datepicker.click.day", this.onDatepickerClickDay);
     window.removeEventListener("click", this.onDatepickerOutside);
     window.removeEventListener("keyup", this.onDatepickerOutside);
+    window.removeEventListener("keydown", this.onDatepickerEscPressed);
   },
 
   methods: {
@@ -106,6 +108,11 @@ export default {
     },
     onDatepickerOutside(event) {
       if (!this.$el.contains(event.target)) {
+        this.toggleDatepicker(false);
+      }
+    },
+    onDatepickerEscPressed(event) {
+      if (event.keyCode == 27) {
         this.toggleDatepicker(false);
       }
     },
