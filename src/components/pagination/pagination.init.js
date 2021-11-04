@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     new Vue({
       el: "#vue-pagination",
       data: () => ({
-        currentIndex: 1,
+        currentIndex: 99,
         limit: 2,
         totalPages: 160,
       }),
       methods: {
-        page: function (value) {
+        paginate: function (value) {
           this.currentIndex = value;
         },
       },
