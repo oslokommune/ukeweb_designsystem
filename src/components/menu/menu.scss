@@ -8,103 +8,58 @@
 @use "sass:math";
 
 // Small
-$osg-small-hamburger-line-height: 2px;
-$osg-small-hamburger-line-gap: 12px;
-$osg-small-hamburger-line-width: 35px;
-$osg-small-hamburger-width: 55px;
-$osg-small-hamburger-height: 55px;
+$osg-small-hamburger-line-height: 0.125rem;
+$osg-small-hamburger-line-gap: 0.75rem;
+$osg-small-hamburger-line-width: 2.188rem;
+$osg-small-hamburger-width: 3.438rem;
+$osg-small-hamburger-height: 3.438rem;
 
 // Medium
-$osg-medium-hamburger-line-height: 2px;
-$osg-medium-hamburger-line-gap: 8px;
-$osg-medium-hamburger-line-width: 26px;
-$osg-medium-hamburger-height: 46px;
-$osg-medium-hamburger-width: 46px;
+$osg-medium-hamburger-line-height: 0.125rem;
+$osg-medium-hamburger-line-gap: 0.5rem;
+$osg-medium-hamburger-line-width: 1.625rem;
+$osg-medium-hamburger-height: 2.875rem;
+$osg-medium-hamburger-width: 2.875rem;
 
 // Large
-$osg-large-hamburger-line-height: 2px;
-$osg-large-hamburger-line-gap: 8px;
-$osg-large-hamburger-line-width: 30px;
-$osg-large-hamburger-height: 50px;
-$osg-large-hamburger-width: 50px;
+$osg-large-hamburger-line-height: 0.125rem;
+$osg-large-hamburger-line-gap: 0.5rem;
+$osg-large-hamburger-line-width: 1.875rem;
+$osg-large-hamburger-height: 3.125rem;
+$osg-large-hamburger-width: 3.125rem;
 
 @function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
   @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
-}
-
-.osg-button-position {
-  display: flex;
-  flex-direction: row-reverse;
-  position: sticky;
-  top: 0;
-
-  @include breakpoints.medium {
-    display: unset;
-    position: unset;
-  }
 }
 
 .osg-button-menu {
   @extend %osg-text-4;
   @extend %osg-padding-horizontal-10, %osg-padding-vertical-10;
 
+  background-color: transparent;
   border-radius: 50%;
   border: none;
-  height: 60px;
-  width: 60px;
-  background-color: transparent;
   color: colors.$blue-dark;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  text-decoration: none;
-  text-align: center;
+  height: 60px;
   outline: none;
   position: relative;
-  right: spacing.$space-20;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
 
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
     height: unset;
     margin-left: unset;
-    right: unset;
     width: unset;
   }
 
   span {
     pointer-events: none;
-  }
-
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: transparent;
-    border-color: colors.$blue-contrast;
-    color: colors.$blue-contrast;
-    .osg-button-menu__icon {
-      > span {
-        background-color: colors.$blue-contrast;
-      }
-    }
-  }
-
-  &.osg-button-menu--close {
-    background-color: colors.$yellow;
-
-    @include breakpoints.medium {
-      background-color: colors.$blue-dark;
-      color: colors.$white;
-    }
-    .osg-button-menu__icon {
-      > span {
-        background-color: colors.$blue-contrast;
-
-        @include breakpoints.medium {
-          background-color: colors.$white;
-        }
-      }
-    }
   }
 
   &__text {
@@ -121,9 +76,8 @@ $osg-large-hamburger-width: 50px;
     width: 45px;
 
     > span {
-      background: colors.$blue-dark;
+      background-color: colors.$blue-dark;
       height: $osg-small-hamburger-line-height;
-      margin-top: 2px;
       position: absolute;
       right: 10px;
       transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -140,8 +94,8 @@ $osg-large-hamburger-width: 50px;
       }
 
       @include breakpoints.medium {
+        background-color: colors.$blue-dark;
         height: $osg-medium-hamburger-line-height;
-        margin-top: 0;
         right: 15px;
         width: $osg-medium-hamburger-line-width;
 
@@ -157,8 +111,8 @@ $osg-large-hamburger-width: 50px;
       }
 
       @include breakpoints.large {
+        background-color: colors.$blue-dark;
         height: $osg-medium-hamburger-line-height;
-        margin-top: 0;
         right: 15px;
         width: $osg-medium-hamburger-line-width;
 
@@ -215,10 +169,47 @@ $osg-large-hamburger-width: 50px;
       }
     }
   }
+
+  &:active,
+  &:focus,
+  &:hover {
+    border-color: colors.$blue-contrast;
+    color: colors.$blue-contrast;
+
+    @include breakpoints.medium {
+      background-color: transparent;
+    }
+
+    .osg-button-menu__icon {
+      > span {
+        background-color: colors.$blue-contrast;
+      }
+    }
+  }
+
+  &--close {
+    background-color: colors.$yellow;
+
+    @include breakpoints.medium {
+      background-color: colors.$blue-dark;
+      color: colors.$white;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: colors.$yellow;
+
+      @include breakpoints.medium {
+        background-color: colors.$blue-dark;
+        color: colors.$white;
+      }
+    }
+  }
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-vertical-30, %osg-padding-left-20;
+  @extend %osg-padding-vertical-30;
   background-color: colors.$white;
   display: none;
 
@@ -270,15 +261,15 @@ $osg-large-hamburger-width: 50px;
     }
 
     &__content {
-      line-height: 38px;
+      line-height: 2.375em;
       @include breakpoints.medium {
-        line-height: 24px;
+        line-height: 3.125em;
       }
+    }
 
-      & .osg-navbar-menu-link__text {
-        @extend %osg-text-5;
-        display: inline-block;
-      }
+    &__text {
+      @extend %osg-text-5;
+      display: inline-block;
     }
 
     @include mixins.states {
@@ -339,8 +330,8 @@ $osg-large-hamburger-width: 50px;
     @include breakpoints.medium {
       background-color: colors.$gray;
       padding-top: spacing.$space-15;
-      padding-left: 55px;
-      padding-right: 55px;
+      padding-left: spacing.$space-50;
+      padding-right: spacing.$space-50;
       ul {
         margin-left: 0;
         margin-bottom: 0;
