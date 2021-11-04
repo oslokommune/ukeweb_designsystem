@@ -52,7 +52,7 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="vue-pagination">
-            <osg-pagination :current-index="2" :limit="2" :total-pages="99" v-on:prev="event('prev', $event)" v-on:next="event('next', $event)" v-on:page="event('page', $event)"> </osg-pagination>
+            <osg-pagination :current-index="currentIndex" :limit="limit" :total-pages="totalPages" v-on:page="page" />
           </div>
         </div>
       </div>

@@ -7,5 +7,5 @@ import "./form/search_seasons/search_seasons.init.js";
 import "./modal_box/modal_box.js";
 import "./map/map.js";
 import "./menu/menu.init.js";
-import "./pagination/pagination.js";
+import "./pagination/pagination.init.js";
 import "./slide_panel/slide_panel.init.js";

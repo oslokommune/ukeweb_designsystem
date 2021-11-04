@@ -1,16 +1,16 @@
 <template>
   <nav class="osg-pagination" :aria-label="'Page ' + currentIndex">
-    <button class="osg-pagination__previous" v-show="showArrows && currentIndex > 1" @click.prevent="itemClick('prev')">
+    <button class="osg-pagination__previous" v-show="showArrows && currentIndex > 1" @click.prevent="page(currentIndex - 1)">
       <span class="osg-sr-only">{{ i18n.previousBtn }}</span>
     </button>
     <template v-for="index in totalPages">
-      <button v-if="showItem(index)" class="osg-pagination__item" v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': squareMark }" :key="index" :disabled="index === currentIndex" @click.prevent="itemClick(index)">
+      <button v-if="showItem(index)" class="osg-pagination__item" v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': index >= 100 }" :key="index" :disabled="index === currentIndex" @click.prevent="page(index)">
         <span class="osg-sr-only">{{ i18n.showPage }} </span>
         {{ index }}
       </button>
       <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true"> &hellip; </span>
     </template>
-    <button class="osg-pagination__next" v-show="showArrows && currentIndex < totalPages" @click.prevent="itemClick('next')">
+    <button class="osg-pagination__next" v-show="showArrows && currentIndex < totalPages" @click.prevent="page(currentIndex + 1)">
       <span class="osg-sr-only">{{ i18n.nextBtn }}</span>
     </button>
   </nav>
@@ -50,10 +50,6 @@ export default {
         };
       },
     },
-    squareMark: {
-      type: Boolean,
-      default: false,
-    },
   },
   computed: {
     limitMax: function () {
@@ -74,9 +70,8 @@ export default {
     showSpacer: function (index) {
       return this.totalPages > this.threshold && index >= this.limitMin - 1 && index <= this.limitMax + 1;
     },
-    itemClick(event) {
-      console.log(event);
-      this.$emit("item", event);
+    page: function (value) {
+      this.$emit("page", value);
     },
   },
 };
