@@ -34,7 +34,7 @@ $osg-large-hamburger-width: 3.125rem;
 
 .osg-button-menu {
   @extend %osg-text-4;
-  @extend %osg-padding-horizontal-10, %osg-padding-vertical-10;
+  @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
 
   background-color: transparent;
   border-radius: 50%;
@@ -233,6 +233,8 @@ $osg-large-hamburger-width: 3.125rem;
     @extend %osg-heading-5;
     @extend %osg-none-breakpoint-medium;
 
+    @extend %osg-margin-bottom-15;
+
     span {
       pointer-events: none;
       vertical-align: middle;
@@ -285,20 +287,21 @@ $osg-large-hamburger-width: 3.125rem;
       padding-right: spacing.$space-50;
     }
 
+    & .osg-navbar-menu__heading {
+      margin-left: spacing.$space-15 !important;
+    }
+
     &__list {
       background-color: colors.$gray;
-      margin-left: -#{spacing.$space-20};
-      margin-right: -#{spacing.$space-20};
-      margin-top: spacing.$space-10;
-      padding-left: spacing.$space-15;
+      margin-left: 0;
+      margin-right: 0;
 
       @include breakpoints.medium {
         background-color: unset;
         margin-bottom: spacing.$space-15;
-        margin-left: -#{spacing.$space-15};
-        margin-right: -#{spacing.$space-15};
         margin-top: spacing.$space-15;
         padding-left: 0;
+        flex-wrap: wrap;
       }
 
       li:last-child {
@@ -312,31 +315,23 @@ $osg-large-hamburger-width: 3.125rem;
   }
 
   &__categories {
-    margin-left: -#{spacing.$space-20};
-    margin-right: -#{spacing.$space-20};
     padding-bottom: spacing.$space-15;
     padding-top: spacing.$space-5;
 
-    .osg-navbar-menu__heading-collapsable {
-      padding-left: 13px;
-      margin-bottom: spacing.$space-15;
-    }
-
     ul {
       background-color: colors.$gray;
-      padding-left: spacing.$space-20;
     }
 
     @include breakpoints.medium {
       background-color: colors.$gray;
+      margin-left: 0;
+      margin-right: 0;
       padding-top: spacing.$space-15;
       padding-left: spacing.$space-50;
       padding-right: spacing.$space-50;
       ul {
-        margin-left: 0;
-        margin-bottom: 0;
         margin-top: spacing.$space-15;
-        padding-left: spacing.$space-15;
+        padding-left: 0;
         padding-bottom: 0;
         li {
           margin-bottom: spacing.$space-30;
@@ -351,6 +346,7 @@ $osg-large-hamburger-width: 3.125rem;
 
     @include breakpoints.medium {
       justify-content: space-between;
+      margin-left: 0;
       padding-left: spacing.$space-50;
       padding-right: spacing.$space-50;
     }
@@ -361,11 +357,10 @@ $osg-large-hamburger-width: 3.125rem;
 
       @include breakpoints.medium {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
       }
 
       li {
-        @extend %osg-padding-right-15;
         @extend %osg-margin-bottom-15;
 
         .osg-icon {
@@ -376,7 +371,7 @@ $osg-large-hamburger-width: 3.125rem;
 
     &__list-media {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
 
       @include breakpoints.medium {
         justify-content: space-around;
