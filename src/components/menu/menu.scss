@@ -244,6 +244,29 @@ $osg-large-hamburger-width: 3.125rem;
     @extend %osg-block-breakpoint-medium;
   }
 
+  &__list-animate {
+    max-height: 0;
+    overflow: hidden;
+
+    @include breakpoints.medium {
+      max-height: unset;
+    }
+
+    &--open {
+      max-height: 695px;
+      transition: all 0.7s ease;
+    }
+
+    &--close {
+      max-height: 0px;
+      transition: all 0.7s ease;
+
+      @include breakpoints.medium {
+        max-height: unset;
+      }
+    }
+  }
+
   &__link {
     color: inherit;
     display: flex;
@@ -374,28 +397,5 @@ $osg-large-hamburger-width: 3.125rem;
         justify-content: space-around;
       }
     }
-  }
-}
-
-.osg-list-animate {
-  max-height: 0;
-  overflow: hidden;
-
-  @include breakpoints.medium {
-    max-height: unset;
-  }
-}
-
-.open-animate {
-  max-height: 695px;
-  transition: all 0.7s ease;
-}
-
-.close-animate {
-  max-height: 0px;
-  transition: all 0.7s ease;
-
-  @include breakpoints.medium {
-    max-height: unset;
   }
 }

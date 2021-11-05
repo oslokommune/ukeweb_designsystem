@@ -23,12 +23,12 @@ export function OsgMenu() {
   }
 
   function toggleAnimation(elem) {
-    if (elem.classList.contains("open-animate")) {
-      elem.classList.remove("open-animate");
-      elem.classList.add("close-animate");
+    if (elem.classList.contains("osg-navbar-menu__list-animate--open")) {
+      elem.classList.remove("osg-navbar-menu__list-animate--open");
+      elem.classList.add("osg-navbar-menu__list-animate--close");
     } else {
-      elem.classList.add("open-animate");
-      elem.classList.remove("close-animate");
+      elem.classList.add("osg-navbar-menu__list-animate--open");
+      elem.classList.remove("osg-navbar-menu__list-animate--close");
     }
   }
 
