@@ -60,6 +60,7 @@ $osg-large-hamburger-width: 3.125rem;
 
   &__text {
     display: none;
+    pointer-events: none;
 
     @include breakpoints.medium {
       display: block;
@@ -69,7 +70,7 @@ $osg-large-hamburger-width: 3.125rem;
 
   &__icon {
     float: right;
-    width: 45px;
+    width: 2.5rem;
 
     > span {
       background-color: colors.$blue-dark;
@@ -140,11 +141,10 @@ $osg-large-hamburger-width: 3.125rem;
           top: 25px;
           transform: translateY(5px) translateY(-50%) rotate(-135deg);
           @include breakpoints.medium {
-            right: 15px;
+            right: 11px;
             top: 18px;
           }
           @include breakpoints.large {
-            right: 15px;
             top: 19px;
           }
         }
@@ -155,11 +155,10 @@ $osg-large-hamburger-width: 3.125rem;
           top: 37px;
           transform: translateY(-9px) translateY(50%) rotate(135deg);
           @include breakpoints.medium {
-            right: 15px;
+            right: 11px;
             top: 30px;
           }
           @include breakpoints.large {
-            right: 15px;
             top: 31px;
           }
         }
