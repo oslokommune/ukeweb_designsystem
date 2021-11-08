@@ -7,31 +7,6 @@
 @use "components/links/link/mixins";
 @use "sass:math";
 
-// Small
-$osg-small-hamburger-line-height: 0.125rem;
-$osg-small-hamburger-line-gap: 0.75rem;
-$osg-small-hamburger-line-width: 2.188rem;
-$osg-small-hamburger-width: 3.438rem;
-$osg-small-hamburger-height: 3.438rem;
-
-// Medium
-$osg-medium-hamburger-line-height: 0.125rem;
-$osg-medium-hamburger-line-gap: 0.5rem;
-$osg-medium-hamburger-line-width: 1.625rem;
-$osg-medium-hamburger-height: 2.875rem;
-$osg-medium-hamburger-width: 2.875rem;
-
-// Large
-$osg-large-hamburger-line-height: 0.125rem;
-$osg-large-hamburger-line-gap: 0.5rem;
-$osg-large-hamburger-line-width: 1.875rem;
-$osg-large-hamburger-height: 3.125rem;
-$osg-large-hamburger-width: 3.125rem;
-
-@function calculate-hamburger-line-position($hamburgerHeight, $lineHeight, $gap) {
-  @return (math.div($hamburgerHeight - $lineHeight, 2) + $gap);
-}
-
 .osg-button-menu {
   @extend %osg-text-4;
   @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
@@ -43,12 +18,12 @@ $osg-large-hamburger-width: 3.125rem;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  height: 60px;
+  height: 3.75rem;
   outline: none;
   position: relative;
   text-align: center;
   text-decoration: none;
-  width: 60px;
+  width: 3.75rem;
 
   @include breakpoints.medium {
     border-radius: 0;
@@ -74,54 +49,47 @@ $osg-large-hamburger-width: 3.125rem;
 
     > span {
       background-color: colors.$blue-dark;
-      height: $osg-small-hamburger-line-height;
+      height: 0.125rem;
       position: absolute;
       pointer-events: none;
       right: 10px;
       transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      width: $osg-small-hamburger-line-width;
+      width: 2.188rem;
 
       &:nth-child(1) {
-        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, -$osg-small-hamburger-line-gap);
+        top: 0.906rem;
       }
       &:nth-child(2) {
-        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, 0);
+        top: 1.656rem;
       }
       &:nth-child(3) {
-        top: calculate-hamburger-line-position($osg-small-hamburger-height, $osg-small-hamburger-line-height, $osg-small-hamburger-line-gap);
+        top: 2.406rem;
       }
 
       @include breakpoints.medium {
-        background-color: colors.$blue-dark;
-        height: $osg-medium-hamburger-line-height;
         right: 15px;
-        width: $osg-medium-hamburger-line-width;
+        width: 1.625rem;
 
         &:nth-child(1) {
-          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, -$osg-medium-hamburger-line-gap);
+          top: 0.875rem;
         }
         &:nth-child(2) {
-          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, 0);
+          top: 1.375rem;
         }
         &:nth-child(3) {
-          top: calculate-hamburger-line-position($osg-medium-hamburger-width, $osg-medium-hamburger-line-height, $osg-medium-hamburger-line-gap);
+          top: 1.875rem;
         }
       }
 
       @include breakpoints.large {
-        background-color: colors.$blue-dark;
-        height: $osg-medium-hamburger-line-height;
-        right: 15px;
-        width: $osg-medium-hamburger-line-width;
-
         &:nth-child(1) {
-          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, -$osg-medium-hamburger-line-gap);
+          top: 1rem;
         }
         &:nth-child(2) {
-          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, 0);
+          top: 1.5rem;
         }
         &:nth-child(3) {
-          top: calculate-hamburger-line-position($osg-large-hamburger-width, $osg-medium-hamburger-line-height, $osg-medium-hamburger-line-gap);
+          top: 2rem;
         }
       }
     }
