@@ -286,6 +286,7 @@
 
     @include breakpoints.medium {
       background-color: unset;
+      hyphens: auto;
       margin-bottom: spacing.$space-15;
       margin-top: spacing.$space-15;
       padding-left: 0;
