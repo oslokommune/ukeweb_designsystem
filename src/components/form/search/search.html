@@ -227,7 +227,12 @@
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-heading-3">Vue</h3>
       <div id="osg-search-vue">
-        <osg-search :value="value" :items="items" :input-focus-after-item-click="true" :aria-expanded="ariaExpanded" v-on:item="event('item', $event)" v-on:change="event('change', $event)" v-on:enter="event('enter', $event)" v-on:down="event('down', $event)"> </osg-search>
+        <osg-search id="osg-search-1" :value="value" :items="items" :input-focus-after-item-click="true" v-on:item-select="event('item-select', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
+          <template #listitem="{ item }">
+            <span class="osg-text-5">{{ item.text }}</span>
+            <span v-if="item.subtext" class="osg-text-7">{{ item.subtext }}</span>
+          </template>
+        </osg-search>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">

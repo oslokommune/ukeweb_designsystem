@@ -1,38 +1,44 @@
 <template>
-  <div class="osg-search osg-search--inline">
+  <div ref="search" class="osg-search osg-search--inline">
     <div class="osg-search__form">
       <input
-        v-on:keyup="$emit('change', $event.target.value)"
-        v-on:keyup.enter="$emit('enter', $event.target.value)"
+        v-on:keyup="$emit('input-change', $event.target.value)"
+        v-on:keyup.enter="$emit('input-enter', $event.target.value)"
         v-on:keyup.down="setFocus($event)"
         v-on:keyup.up="setFocus($event)"
+        v-on:focus="resetIndex()"
         :value="value"
-        :aria-expanded="ariaExpanded"
+        :aria-expanded="items.length"
         class="osg-search__input"
         type="search"
         ref="input"
         autocomplete="off"
-        placeholder="Search"
-        aria-label="Search"
+        :placeholder="placeholder"
+        :aria-label="ariaLabel"
         aria-haspopup="listbox"
-        aria-owns="id-results"
+        :aria-owns="id"
         role="combobox"
       />
     </div>
-
-    <div v-if="items.length" ref="list" class="osg-search__dropdown" id="id-results" role="listbox" aria-label="search results">
-      <a v-for="(item, index) of items" :key="index" v-on:click.prevent="itemClick(index)" v-on:keyup.enter.prevent="itemClick(index)" v-on:keyup.down.prevent="setFocus($event)" v-on:keyup.up.prevent="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': index === focus }" class="osg-search__dropdown__item" role="option" >
-        <span class="osg-text-5">{{ item.item1 }}</span>
-        <span v-if="item.item2" class="osg-text-7">{{ item.item2 }}</span>
-      </a>
-    </div>
+    <ul v-show="items.length" ref="list" class="osg-search__dropdown" :id="id" role="listbox" :aria-label="ariaLabelResults">
+      <li v-for="(item, itemIndex) of items" :tabindex="-1" :key="itemIndex" v-on:click.prevent="temClick(itemIndex)" v-on:keyup.enter.prevent="itemClick(itemIndex)" v-on:keyup.down.prevent.stop="setFocus($event)" v-on:keyup.up.prevent.stop="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }" class="osg-search__dropdown__item" role="option">
+        <slot name="listitem" :item="item">
+          <span class="osg-text-5">{{ item.text }}</span>
+        </slot>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: "OsgSearch",
+
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     value: {
       type: String,
       default: "",
@@ -47,20 +53,54 @@ export default {
       type: Boolean,
       default: true,
     },
-    ariaExpanded: {
+    placeholder: {
       type: String,
-      default: "false",
+      default: "Search",
+    },
+    ariaLabel: {
+      type: String,
+      default: "Search",
+    },
+    ariaLabelResults: {
+      type: String,
+      default: "Search results",
     },
   },
-  data() {
-    return {
-      focus: null,
-    };
+
+  data: () => ({
+    index: null,
+  }),
+
+  mounted() {
+    window.addEventListener("keydown", (e) => {
+      if (this.index !== null && (e.code === "ArrowDown" || e.code === "ArrowUp")) {
+        e.preventDefault();
+      }
+    });
+    this.$refs.search.addEventListener("focusout", (e) => {
+      if (!this.$refs.search.contains(e.relatedTarget)) {
+        this.resetIndex();
+        this.$emit("itemlist-blur");
+      }
+    });
   },
+
+  beforeDestroy() {
+    window.removeEventListener("keydown", "focusout");
+  },
+
+  watch: {
+    items(newValue) {
+      if (!this.items.length) {
+        this.index = null;
+      }
+    },
+  },
+
   methods: {
     itemClick(index) {
-      this.$emit("item", index);
-      this.focus = null;
+      this.$emit("item-select", index);
+      this.index = null;
       if (this.inputFocusAfterItemClick) {
         this.$refs.input.focus();
       }
@@ -70,23 +110,27 @@ export default {
 
       switch (event.code) {
         case "ArrowUp":
-          if (this.focus === null || this.focus === 0) {
-            this.focus = lastItem;
-            this.$refs.list.lastChild.focus();
-          } else if (this.focus > 0) {
-            this.focus--;
+          if (this.index === null || this.index === 0) {
+            this.$refs.input.focus();
+          } else if (this.index > 0) {
+            this.index--;
           }
           break;
         case "ArrowDown":
-          if (this.focus === null || this.focus === lastItem) {
-            this.focus = 0;
-            this.$refs.list.firstChild.focus();
-          } else if (this.focus < lastItem) {
-            this.focus++;
+          if (this.index === null) {
+            this.index = 0;
+          } else if (this.index < lastItem) {
+            this.index++;
           }
           break;
       }
-      this.$refs.list.childNodes[this.focus].focus();
+
+      if (this.$refs.list && this.$refs.list.childNodes[this.index]) {
+        this.$refs.list.childNodes[this.index].focus();
+      }
+    },
+    resetIndex() {
+      this.index = null;
     },
   },
 };

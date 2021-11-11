@@ -8,16 +8,16 @@ export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
   }
 
   trigger.addEventListener("change", function () {
-      let searchInput = document.getElementById(inputId);
-      let dropdown = document.getElementById(dropdownId);
+    let searchInput = document.getElementById(inputId);
+    let dropdown = document.getElementById(dropdownId);
 
-      if (this.checked) {
-        dropdown.style.display = "block";
-        searchInput.setAttribute("aria-expanded", "true");
-      } else {
-        dropdown.style.display = "none";
-        searchInput.setAttribute("aria-expanded", "false");
-      }
+    if (this.checked) {
+      dropdown.style.display = "block";
+      searchInput.setAttribute("aria-expanded", "true");
+    } else {
+      dropdown.style.display = "none";
+      searchInput.setAttribute("aria-expanded", "false");
+    }
   });
 }
 
@@ -30,38 +30,36 @@ export function OsgSearchVue() {
       data: () => ({
         value: "h",
         items: [],
-        focus: null,
-        ariaExpanded: "false"
       }),
       mounted() {
-        this.event("change", this.value);
+        this.event("input-change", this.value);
       },
       methods: {
         event(event, payload) {
-          if (event === "change") {
+          if (event === "input-change") {
             if (payload[0] && payload[0].toLowerCase() === "h") {
               this.items = [
                 {
-                  item1: "Hi",
+                  text: "Hi",
                 },
                 {
-                  item1: "Hello",
+                  text: "Hello",
                 },
                 {
-                  item1: "Halo",
-                  item2: "Greetings",
+                  text: "Halo",
+                  subtext: "Greetings",
                 },
               ];
-              this.ariaExpanded = "true";
             } else {
               this.items = [];
-              this.ariaExpanded = "false";
             }
             this.value = payload;
-          } else if (event === "item") {
+          } else if (event === "item-select") {
             this.value = this.items[payload].item1;
+            this.items = [];
+          } else if (event === "itemlist-blur") {
+            this.items = [];
           }
-          console.log(event, payload);
         },
       },
     });
