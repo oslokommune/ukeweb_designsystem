@@ -21,7 +21,7 @@
       />
     </div>
     <ul v-show="items.length" ref="list" class="osg-search__dropdown" :id="id" role="listbox" :aria-label="ariaLabelResults">
-      <li v-for="(item, itemIndex) of items" :tabindex="-1" :key="itemIndex" v-on:click.prevent="temClick(itemIndex)" v-on:keyup.enter.prevent="itemClick(itemIndex)" v-on:keyup.down.prevent.stop="setFocus($event)" v-on:keyup.up.prevent.stop="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }" class="osg-search__dropdown__item" role="option">
+      <li v-for="(item, itemIndex) of items" :tabindex="-1" :key="itemIndex" v-on:click.prevent="itemClick(itemIndex)" v-on:keyup.enter.prevent="itemClick(itemIndex)" v-on:keyup.down.prevent.stop="setFocus($event)" v-on:keyup.up.prevent.stop="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }" class="osg-search__dropdown__item" role="option">
         <slot name="listitem" :item="item">
           <span class="osg-text-5">{{ item.text }}</span>
         </slot>

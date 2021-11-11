@@ -55,7 +55,7 @@ export function OsgSearchVue() {
             }
             this.value = payload;
           } else if (event === "item-select") {
-            this.value = this.items[payload].item1;
+            this.value = this.items[payload].text;
             this.items = [];
           } else if (event === "itemlist-blur") {
             this.items = [];
