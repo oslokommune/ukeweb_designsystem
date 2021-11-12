@@ -24,9 +24,11 @@ export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
 export function OsgSearchVue() {
   let osgSearchPlaceholder = document.getElementById("osg-search-vue");
   if (osgSearchPlaceholder) {
-    Vue.component("osg-search", OsgSearch);
     new Vue({
       el: osgSearchPlaceholder,
+      components: {
+        OsgSearch,
+      },
       data: () => ({
         value: "h",
         items: [],

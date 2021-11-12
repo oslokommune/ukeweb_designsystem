@@ -103,7 +103,8 @@ export default {
   },
 
   beforeDestroy() {
-    window.removeEventListener("keydown", "focusout");
+    window.removeEventListener("keydown");
+    window.removeEventListener("focusout");
   },
 
   watch: {
