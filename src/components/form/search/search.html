@@ -227,7 +227,7 @@
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-heading-3">Vue</h3>
       <div id="osg-search-vue">
-        <osg-search id="osg-search-1" :value="value" :items="items" :input-focus-after-item-click="true" v-on:item-select="event('item-select', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
+        <osg-search id="osg-search-1" :value="value" :items="items" :item-list-scroll="true" :input-focus-after-item-select="true" v-on:item-select="event('item-select', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
           <template #listitem="{ item }">
             <span class="osg-text-5">{{ item.text }}</span>
             <span v-if="item.subtext" class="osg-text-7">{{ item.subtext }}</span>
@@ -237,6 +237,25 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <div class="osg-margin-top-100">&nbsp;</div>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3 class="osg-heading-3">Scroll in dropdown</h3>
+      <div class="osg-search osg-search--inline">
+        <label class="osg-search__label"
+          >Search
+          <input class="osg-search__input" id="input-4" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
+        </label>
+        <div class="osg-search__dropdown osg-search__dropdown--scroll" role="listbox" id="id-results-4" aria-label="search results">
+          <a class="osg-search__dropdown__item" role="option">Item A</a>
+          <a class="osg-search__dropdown__item" role="option">Item B</a>
+          <a class="osg-search__dropdown__item" role="option">Item C</a>
+          <a class="osg-search__dropdown__item" role="option">Item D</a>
+          <a class="osg-search__dropdown__item" role="option">Item E</a>
+          <a class="osg-search__dropdown__item" role="option">Item F</a>
+          <a class="osg-search__dropdown__item" role="option">Item G</a>
+          <a class="osg-search__dropdown__item" role="option">Item H</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -20,8 +20,21 @@
         role="combobox"
       />
     </div>
-    <ul v-show="items.length" ref="list" class="osg-search__dropdown" :id="id" role="listbox" :aria-label="ariaLabelResults">
-      <li v-for="(item, itemIndex) of items" :tabindex="-1" :key="itemIndex" v-on:click.prevent="itemClick(itemIndex)" v-on:keyup.enter.prevent="itemClick(itemIndex)" v-on:keyup.down.prevent.stop="setFocus($event)" v-on:keyup.up.prevent.stop="setFocus($event)" :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }" class="osg-search__dropdown__item" role="option">
+    <ul v-show="items.length" ref="list" class="osg-search__dropdown" :class="{ 'osg-search__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
+      <li
+        v-for="(item, itemIndex) of items"
+        :tabindex="-1"
+        :key="itemIndex"
+        v-on:click.prevent="itemSelect(itemIndex)"
+        v-on:keyup.enter.prevent="itemSelect(itemIndex)"
+        v-on:keyup.space.prevent="itemSelect(itemIndex)"
+        v-on:keyup.down.prevent.stop="setFocus($event)"
+        v-on:keyup.up.prevent.stop="setFocus($event)"
+        v-on:keyup.esc.prevent="resetAndFocus()"
+        :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }"
+        class="osg-search__dropdown__item"
+        role="option"
+      >
         <slot name="listitem" :item="item">
           <span class="osg-text-5">{{ item.text }}</span>
         </slot>
@@ -49,7 +62,7 @@ export default {
         return [];
       },
     },
-    inputFocusAfterItemClick: {
+    inputFocusAfterItemSelect: {
       type: Boolean,
       default: true,
     },
@@ -64,6 +77,10 @@ export default {
     ariaLabelResults: {
       type: String,
       default: "Search results",
+    },
+    itemListScroll: {
+      type: Boolean,
+      default: false,
     },
   },
 
@@ -98,10 +115,10 @@ export default {
   },
 
   methods: {
-    itemClick(index) {
+    itemSelect(index) {
       this.$emit("item-select", index);
-      this.index = null;
-      if (this.inputFocusAfterItemClick) {
+      if (this.inputFocusAfterItemSelect) {
+        this.resetIndex();
         this.$refs.input.focus();
       }
     },
@@ -131,6 +148,11 @@ export default {
     },
     resetIndex() {
       this.index = null;
+    },
+    resetAndFocus() {
+      this.resetIndex();
+      this.$refs.input.focus();
+      this.$emit("itemlist-blur");
     },
   },
 };

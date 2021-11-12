@@ -90,6 +90,11 @@
     position: absolute;
     z-index: 99999;
 
+    &--scroll {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
     &__item {
       display: flex;
       flex-direction: column;

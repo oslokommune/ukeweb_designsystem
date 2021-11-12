@@ -49,6 +49,26 @@ export function OsgSearchVue() {
                   text: "Halo",
                   subtext: "Greetings",
                 },
+                {
+                  text: "Halo",
+                  subtext: "Greetings",
+                },
+                {
+                  text: "Halo",
+                  subtext: "Greetings",
+                },
+                {
+                  text: "Halo",
+                  subtext: "Greetings",
+                },
+                {
+                  text: "Halo",
+                  subtext: "Greetings",
+                },
+                {
+                  text: "Halo",
+                  subtext: "Greetings",
+                },
               ];
             } else {
               this.items = [];
