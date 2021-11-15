@@ -3,7 +3,12 @@
     <div class="osg-search__form">
       <input
         v-on:keyup="$emit('input-change', $event.target.value)"
-        v-on:keyup.enter="$emit('input-enter', $event.target.value)"
+        v-on:keyup.enter="
+          $emit('input-enter', {
+            value: $event.target.value,
+            index: selectedIndex,
+          })
+        "
         v-on:keyup.down="setFocus($event)"
         v-on:keyup.up="setFocus($event)"
         v-on:focus="resetIndex()"
@@ -86,6 +91,7 @@ export default {
 
   data: () => ({
     index: null,
+    selectedIndex: null,
   }),
 
   mounted() {
@@ -118,6 +124,7 @@ export default {
   methods: {
     itemSelect(index) {
       this.$emit("item-select", index);
+      this.selectedIndex = index;
       if (this.inputFocusAfterItemSelect) {
         this.resetIndex();
         this.inputFocus();
