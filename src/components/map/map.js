@@ -1,3 +1,4 @@
+import Vue from "vue";
 import OsgMap from "./map.vue";
 
 document.addEventListener("DOMContentLoaded", function () {

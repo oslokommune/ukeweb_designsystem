@@ -1,3 +1,4 @@
+import Vue from "vue";
 import pagination from "./pagination.vue";
 
 document.addEventListener("DOMContentLoaded", function () {

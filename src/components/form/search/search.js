@@ -1,3 +1,4 @@
+import Vue from "vue";
 import OsgSearch from "./search.vue";
 
 export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
@@ -81,6 +82,8 @@ export function OsgSearchVue() {
             this.items = [];
           } else if (event === "itemlist-blur") {
             this.items = [];
+          } else if (event === "submit") {
+            console.log(payload);
           }
         },
       },

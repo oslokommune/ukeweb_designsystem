@@ -1,3 +1,4 @@
+import Vue from "vue";
 import OsgImageCarousel from "./image_carousel.vue";
 
 document.addEventListener("DOMContentLoaded", function () {

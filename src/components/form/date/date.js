@@ -1,3 +1,4 @@
+import Vue from "vue";
 import OsgDate from "./date.vue";
 
 document.addEventListener("DOMContentLoaded", function () {
