@@ -120,7 +120,7 @@ export default {
       this.$emit("item-select", index);
       if (this.inputFocusAfterItemSelect) {
         this.resetIndex();
-        this.$refs.input.focus();
+        this.inputFocus();
       }
     },
     setFocus(event) {
@@ -145,6 +145,7 @@ export default {
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {
         this.$refs.list.childNodes[this.index].focus();
+        this.$emit("item-focus", this.index);
       }
     },
     resetIndex() {
@@ -152,8 +153,12 @@ export default {
     },
     resetAndFocus() {
       this.resetIndex();
-      this.$refs.input.focus();
+      this.inputFocus();
       this.$emit("itemlist-blur");
+    },
+    inputFocus() {
+      this.$refs.input.focus();
+      this.$emit("input-focus", null);
     },
   },
 };
