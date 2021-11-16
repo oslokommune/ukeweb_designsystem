@@ -111,7 +111,7 @@ export default {
   watch: {
     items(newValue) {
       if (!this.items.length) {
-        this.index = null;
+        this.resetIndex();
       }
     },
   },
