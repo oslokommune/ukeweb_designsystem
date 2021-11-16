@@ -167,6 +167,7 @@ export default {
     },
     resetIndex() {
       this.index = null;
+      this.selectedIndex = null;
     },
     resetAndFocus() {
       this.resetIndex();
@@ -192,9 +193,7 @@ export default {
             break;
           default:
             this.$emit("input-change", event.target.value);
-            if (!this.keepInputFocusOnItemNav) {
-              this.resetIndex();
-            }
+            this.resetIndex();
         }
       }
     },
