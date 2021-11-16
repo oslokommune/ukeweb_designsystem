@@ -118,9 +118,7 @@ export default {
 
   watch: {
     items(newValue) {
-      if (!this.items.length) {
-        this.resetIndex();
-      }
+      this.resetIndex();
     },
   },
 
@@ -186,16 +184,18 @@ export default {
       });
     },
     inputChange(event) {
-      switch (event.code) {
-        case "ArrowUp":
-        case "ArrowDown":
-        case "Enter":
-          break;
-        default:
-          this.$emit("input-change", event.target.value);
-          if (!this.keepInputFocusOnItemNav) {
-            this.resetIndex();
-          }
+      if (this.value !== event.target.value) {
+        switch (event.code) {
+          case "ArrowUp":
+          case "ArrowDown":
+          case "Enter":
+            break;
+          default:
+            this.$emit("input-change", event.target.value);
+            if (!this.keepInputFocusOnItemNav) {
+              this.resetIndex();
+            }
+        }
       }
     },
   },
