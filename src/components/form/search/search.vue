@@ -62,6 +62,10 @@ export default {
         return [];
       },
     },
+    keepInputFocusOnItemNav: {
+      type: Boolean,
+      default: true,
+    },
     inputFocusAfterItemSelect: {
       type: Boolean,
       default: true,
@@ -81,6 +85,10 @@ export default {
     itemListScroll: {
       type: Boolean,
       default: false,
+    },
+    itemListScrollOffset: {
+      type: Number,
+      default: 100,
     },
   },
 
@@ -146,7 +154,16 @@ export default {
       }
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {
-        this.$refs.list.childNodes[this.index].focus();
+        if (!this.keepInputFocusOnItemNav) {
+          this.$refs.list.childNodes[this.index].focus();
+        } else {
+          this.selectedIndex = this.index;
+        }
+
+        if (this.keepInputFocusOnItemNav && this.itemListScroll) {
+          this.$refs.list.scrollTop = this.$refs.list.childNodes[this.index].offsetTop - this.itemListScrollOffset;
+        }
+
         this.$emit("item-focus", this.index);
       }
     },
@@ -170,7 +187,9 @@ export default {
     },
     inputChange(value) {
       this.$emit("input-change", value);
-      this.resetIndex();
+      if (!this.keepInputFocusOnItemNav) {
+        this.resetIndex();
+      }
     },
   },
 };
