@@ -189,6 +189,7 @@ export default {
       switch (event.code) {
         case "ArrowUp":
         case "ArrowDown":
+        case "Enter":
           break;
         default:
           this.$emit("input-change", event.target.value);
