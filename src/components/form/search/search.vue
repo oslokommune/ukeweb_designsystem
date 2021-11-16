@@ -2,7 +2,7 @@
   <div ref="search" class="osg-search osg-search--inline">
     <div class="osg-search__form">
       <input
-        v-on:keyup="inputChange($event.target.value)"
+        v-on:keyup="inputChange($event)"
         v-on:keyup.enter="submit($event.target.value)"
         v-on:keyup.down="setFocus($event)"
         v-on:keyup.up="setFocus($event)"
@@ -185,10 +185,16 @@ export default {
         index: this.selectedIndex,
       });
     },
-    inputChange(value) {
-      this.$emit("input-change", value);
-      if (!this.keepInputFocusOnItemNav) {
-        this.resetIndex();
+    inputChange(event) {
+      switch (event.code) {
+        case "ArrowUp":
+        case "ArrowDown":
+          break;
+        default:
+          this.$emit("input-change", event.target.value);
+          if (!this.keepInputFocusOnItemNav) {
+            this.resetIndex();
+          }
       }
     },
   },
