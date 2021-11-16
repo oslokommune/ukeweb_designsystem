@@ -168,6 +168,10 @@ export default {
     resetIndex() {
       this.index = null;
       this.selectedIndex = null;
+
+      if (this.itemListScroll && this.$refs.list) {
+        this.$refs.list.scrollTop = 0;
+      }
     },
     resetAndFocus() {
       this.resetIndex();
