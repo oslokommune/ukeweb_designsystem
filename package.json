@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "0.99.10",
+  "version": "0.99.11",
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
