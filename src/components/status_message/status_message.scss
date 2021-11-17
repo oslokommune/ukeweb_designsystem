@@ -1,0 +1,26 @@
+@use "system/colors";
+@use "system/spacing";
+@use "system/states";
+@use "system/typography";
+
+.osg-status-message {
+  @extend %osg-padding-20;
+  @extend %osg-text-5;
+  background-color: colors.$gray;
+
+  &--success {
+    background-color: states.$success;
+  }
+
+  &--info {
+    background-color: colors.$blue-light;
+  }
+
+  &--warning {
+    background-color: states.$warning;
+  }
+
+  &--danger {
+    background-color: states.$danger;
+  }
+}

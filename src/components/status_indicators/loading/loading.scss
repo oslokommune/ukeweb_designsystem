@@ -1,0 +1,9 @@
+@use "system/colors";
+@use "system/spacing";
+@use "system/typography";
+
+.osg-loading {
+  @extend %osg-padding-20;
+  @extend %osg-text-5;
+  background-color: colors.$blue-light;
+}
