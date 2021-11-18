@@ -20,16 +20,16 @@
             <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
             <p class="osg-paragraph">
               Popups appear by if the following conditions are met<br />
-              - <code>showPopups</code> is true, this can be set to false by overriding the property <code>initialState</code>.<br />
+              - <code>showPopups</code> is true, this can be set to false by overriding the property <code>state</code>.<br />
               - When using GeoJSON: the feature has the property <code>description</code>. Optionally it can also have <code>heading</code>.<br />
-              - When using <code>initialPoints / setPoints</code>: <code>description</code> and optionally <code>heading</code> added to the array per point.<br />
+              - When using <code>points</code>: <code>description</code> and optionally <code>heading</code> added to the array per point.<br />
               - There is actually a string with data.<br />
             </p>
             <br />
             <p class="osg-paragraph">
               To display additional data after the heading and description, you can add an array called <code>data</code> to the feature properties.<br />
               Each item in the array must contain <code>label</code> and <code>value</code>.<br />
-              This only works with GeoJSON, and not <code>initialPoints / setPoints</code>.
+              This only works with GeoJSON, and not <code>points</code>.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
             <div class="osg-map" id="osg-map">
-              <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+              <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
             <div class="osg-map" id="osg-map2">
-              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
+              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
             <div class="osg-map" id="osg-map3">
-              <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
+              <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map4">
-            <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+            <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">
@@ -107,7 +107,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map5">
-            <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :initial-state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" initial-clustered-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" />
+            <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">
@@ -115,7 +115,31 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map6">
-            <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" initial-geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
+            <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Reactivity points</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map7">
+            <osg-map ref="osgMap7" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="points" />
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Reactivity geoJson</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map8">
+            <osg-map ref="osgMap8" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJson" />
+          </div>
+        </div>
+        <div class="osg-row__column osg-row__column--12">
+          <h2 class="osg-heading-3">Reactivity state</h2>
+        </div>
+        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
+          <div class="osg-map" id="osg-map9">
+            <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
           </div>
         </div>
       </div>

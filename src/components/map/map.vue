@@ -28,7 +28,7 @@ export default {
         };
       },
     },
-    initialState: {
+    state: {
       type: Object,
       default: function () {
         return {
@@ -39,31 +39,55 @@ export default {
         };
       },
     },
-    initialGeoJson: {
+    geoJson: {
       // Can't set type, as MapLibre accepts both an URL and an object
       default: null,
     },
-    initialClusteredGeoJson: {
-      // Can't set type, as MapLibre accepts both an URL and an object
-      default: null,
-    },
-    initialPoints: {
+    points: {
       type: Array,
       default: null,
     },
+    clusteredPoints: {
+      type: Boolean,
+      default: false,
+    },
   },
 
-  data() {
-    return {
-      layerIds: [],
-      dataSourceIds: [],
-      mapObject: null,
-      geoJson: null,
-      clusteredGeoJson: null,
-      pointsGeoJson: null,
-      mapReady: false,
-      showPopups: true,
-    };
+  data: () => ({
+    layerIds: [],
+    dataSourceIds: [],
+    mapObject: null,
+    mapReady: false,
+    showPopups: true,
+  }),
+
+  computed: {
+    pointsGeoJson() {
+      if (this.points) {
+        let features = [];
+        this.points.forEach(function (point) {
+          let heading = point.heading ?? "";
+          let description = point.desc ?? "";
+          features.push({
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [point.latitude, point.longitude],
+            },
+            properties: {
+              heading: heading,
+              description: description,
+            },
+          });
+        });
+
+        return {
+          type: "FeatureCollection",
+          features: features,
+        };
+      }
+      return null;
+    },
   },
 
   mounted() {
@@ -71,8 +95,8 @@ export default {
       container: this.$refs.mapContainer,
       style: this.mapStyle + "?key=" + this.apiKey,
       locale: this.locale,
-      center: [this.initialState.longitude, this.initialState.latitude],
-      zoom: this.initialState.zoom,
+      center: [this.state.longitude, this.state.latitude],
+      zoom: this.state.zoom,
       dragRotate: false,
       locale: {
         "FullscreenControl.Enter": "Vis i fullskjerm",
@@ -96,19 +120,7 @@ export default {
     this.mapObject.addControl(scale);
     this.mapObject.scrollZoom.disable();
 
-    this.showPopups = this.initialState.showPopups;
-
-    if (this.initialPoints) {
-      this.setPoints(this.initialPoints);
-    }
-
-    if (this.initialGeoJson) {
-      this.setGeoJson(this.initialGeoJson);
-    }
-
-    if (this.initialClusteredGeoJson) {
-      this.setClusteredGeoJson(this.initialClusteredGeoJson);
-    }
+    this.showPopups = this.state.showPopups;
 
     var _this = this; // Scope this, bobby!
 
@@ -124,6 +136,36 @@ export default {
       _this.populateMap();
       // Popups.
     });
+  },
+
+  watch: {
+    pointsGeoJson: {
+      deep: true,
+      handler() {
+        this.clearMapAndData();
+        this.populateMap();
+      },
+    },
+    geoJson: {
+      deep: true,
+      handler() {
+        this.clearMapAndData();
+        this.populateMap();
+      },
+    },
+    state: {
+      deep: true,
+      handler() {
+        this.mapObject.setCenter([this.state.longitude, this.state.latitude]);
+        this.mapObject.setZoom(this.state.zoom);
+
+        if (this.state.showPopups !== this.showPopups) {
+          this.showPopups = this.state.showPopups;
+          this.clearMapAndData();
+          this.populateMap();
+        }
+      },
+    },
   },
 
   methods: {
@@ -144,102 +186,70 @@ export default {
         }
 
         if (this.geoJson !== null) {
-          this.mapObject.addSource("geoJson", {
-            type: "geojson",
-            data: this.geoJson,
-          });
-
-          this.dataSourceIds.push("geoJson");
-          this.$_addPolygonsLayer("geoJson-polygons", "geoJson");
-          this.$_addLinesLayer("geoJson-lines", "geoJson");
-          this.$_addPointsLayer("geoJson-points", "geoJson");
-
-          if (this.showPopups) {
-            this.$_addPopupsFromProperties("geoJson-polygons");
-            this.$_addPopupsFromProperties("geoJson-lines");
-            this.$_addPopupsFromProperties("geoJson-points");
-          }
-        }
-
-        if (this.clusteredGeoJson !== null) {
-          this.mapObject.addSource("clusteredGeoJson", {
-            type: "geojson",
-            data: this.clusteredGeoJson,
-            cluster: true,
-            clusterMaxZoom: 14, // Max zoom to cluster points on
-            clusterRadius: 50,
-          });
-
-          this.mapObject.addSource("clusteredGeoJson-shapes", {
-            type: "geojson",
-            data: this.clusteredGeoJson,
-          });
-
-          this.dataSourceIds.push("clusteredGeoJson");
-          this.dataSourceIds.push("clusteredGeoJson-shapes");
-
-          // Add shapes first
-          this.$_addPolygonsLayer("clusteredGeoJson-shapes-polygons", "clusteredGeoJson-shapes");
-          this.$_addLinesLayer("clusteredGeoJson-shapes-lines", "clusteredGeoJson-shapes");
-
-          // Then points/markers.
-          this.$_addClusterLayer("clusteredGeoJson-points", "clusteredGeoJson");
-
-          // Expand/zoom in on the cluster on click
-          var _this = this; // Scope this, bobby!
-          this.mapObject.on("click", "clusteredGeoJson-points", function (e) {
-            var features = _this.mapObject.queryRenderedFeatures(e.point, {
-              layers: ["clusteredGeoJson-points"],
+          if (!this.clusteredPoints) {
+            this.mapObject.addSource("geoJson", {
+              type: "geojson",
+              data: this.geoJson,
             });
-            var clusterId = features[0].properties.cluster_id;
-            _this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, function (err, zoom) {
-              if (err) return;
-              _this.mapObject.easeTo({
-                center: features[0].geometry.coordinates,
-                zoom: zoom,
+
+            this.dataSourceIds.push("geoJson");
+            this.$_addPolygonsLayer("geoJson-polygons", "geoJson");
+            this.$_addLinesLayer("geoJson-lines", "geoJson");
+            this.$_addPointsLayer("geoJson-points", "geoJson");
+
+            if (this.showPopups) {
+              this.$_addPopupsFromProperties("geoJson-polygons");
+              this.$_addPopupsFromProperties("geoJson-lines");
+              this.$_addPopupsFromProperties("geoJson-points");
+            }
+          } else {
+            this.mapObject.addSource("clusteredGeoJson", {
+              type: "geojson",
+              data: this.geoJson,
+              cluster: true,
+              clusterMaxZoom: 14, // Max zoom to cluster points on
+              clusterRadius: 50,
+            });
+
+            this.mapObject.addSource("clusteredGeoJson-shapes", {
+              type: "geojson",
+              data: this.geoJson,
+            });
+
+            this.dataSourceIds.push("clusteredGeoJson");
+            this.dataSourceIds.push("clusteredGeoJson-shapes");
+
+            // Add shapes first
+            this.$_addPolygonsLayer("clusteredGeoJson-shapes-polygons", "clusteredGeoJson-shapes");
+            this.$_addLinesLayer("clusteredGeoJson-shapes-lines", "clusteredGeoJson-shapes");
+
+            // Then points/markers.
+            this.$_addClusterLayer("clusteredGeoJson-points", "clusteredGeoJson");
+
+            // Expand/zoom in on the cluster on click
+            var _this = this; // Scope this, bobby!
+            this.mapObject.on("click", "clusteredGeoJson-points", function (e) {
+              var features = _this.mapObject.queryRenderedFeatures(e.point, {
+                layers: ["clusteredGeoJson-points"],
+              });
+              var clusterId = features[0].properties.cluster_id;
+              _this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, function (err, zoom) {
+                if (err) return;
+                _this.mapObject.easeTo({
+                  center: features[0].geometry.coordinates,
+                  zoom: zoom,
+                });
               });
             });
-          });
 
-          if (this.showPopups) {
-            this.$_addPopupsFromProperties("clusteredGeoJson-points-unclustered-points");
-            this.$_addPopupsFromProperties("clusteredGeoJson-shapes-polygons");
-            this.$_addPopupsFromProperties("clusteredGeoJson-shapes-lines");
+            if (this.showPopups) {
+              this.$_addPopupsFromProperties("clusteredGeoJson-points-unclustered-points");
+              this.$_addPopupsFromProperties("clusteredGeoJson-shapes-polygons");
+              this.$_addPopupsFromProperties("clusteredGeoJson-shapes-lines");
+            }
           }
         }
       }
-    },
-    setPoints(points) {
-      let features = [];
-
-      points.forEach(function (point) {
-        let heading = point.heading ?? "";
-        let description = point.desc ?? "";
-        features.push({
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [point.latitude, point.longitude],
-          },
-          properties: {
-            heading: heading,
-            description: description,
-          },
-        });
-      });
-
-      this.pointsGeoJson = {
-        type: "FeatureCollection",
-        features: features,
-      };
-    },
-    setGeoJson(geoJson) {
-      // GeoJson can be an actual object or an URL
-      this.geoJson = geoJson;
-    },
-    setClusteredGeoJson(geoJson) {
-      // GeoJson can be an actual object or an URL
-      this.clusteredGeoJson = geoJson;
     },
     clearMapAndData() {
       var _this = this; // Scope this, bobby!
@@ -258,10 +268,6 @@ export default {
 
       this.layerIds = [];
       this.dataSourceIds = [];
-
-      this.pointsGeoJson = null;
-      this.clusteredGeoJson = null;
-      this.geoJson = null;
     },
     // Private/protected method
     $_addPolygonsLayer(layerId, dataSourceId) {
