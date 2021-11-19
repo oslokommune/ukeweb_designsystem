@@ -235,7 +235,7 @@ export default {
     },
     // Private/protected method
     $_splitClusterDataAndAddToMap(geoJson) {
-      // Large data sets fails without and error message when points and ohter shapes are mixed in the same data source.
+      // Large data sets fails without and error message when points and other shapes are mixed in the same data source.
       // Therefore we split points and features into two separate data sets.
       let points = {
         type: "FeatureCollection",
