@@ -1,0 +1,10 @@
+@use "system/colors";
+
+.osg-divider {
+  background-color: colors.$gray;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+}
