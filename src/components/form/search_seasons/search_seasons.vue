@@ -62,7 +62,6 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "OsgSearchSeasons",
   props: {
@@ -146,22 +145,13 @@ export default {
   }),
 
   mounted() {
-    window.addEventListener("keydown", (e) => {
-      if (this.index !== null && (e.code === "ArrowDown" || e.code === "ArrowUp")) {
-        e.preventDefault();
-      }
-    });
-    this.$refs.search.addEventListener("focusout", (e) => {
-      if (!this.$refs.search.contains(e.relatedTarget)) {
-        this.resetIndex();
-        this.$emit("itemlist-blur");
-      }
-    });
+    window.addEventListener("keydown", this.eventKeyDown);
+    this.$refs.search.addEventListener("focusout", this.eventFocusOut);
   },
 
   beforeDestroy() {
-    window.removeEventListener("keydown");
-    window.removeEventListener("focusout");
+    window.removeEventListener("keydown", this.eventKeyDown);
+    window.removeEventListener("focusout", this.eventFocusOut);
   },
 
   computed: {
@@ -298,6 +288,17 @@ export default {
       this.$emit("input-change", value);
       this.resetIndex();
     },
-  }
+    eventFocusOut(event) {
+      if (!this.$refs.search.contains(event.relatedTarget)) {
+        this.resetIndex();
+        this.$emit("itemlist-blur");
+      }
+    },
+    eventKeyDown(event) {
+      if (this.index !== null && (event.code === "ArrowDown" || event.code === "ArrowUp")) {
+        event.preventDefault();
+      }
+    },
+  },
 };
 </script>
