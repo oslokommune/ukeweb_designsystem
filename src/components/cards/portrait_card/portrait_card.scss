@@ -1,8 +1,9 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/typography";
+@use "system/icons";
 @use "system/spacing";
 @use "system/states";
+@use "system/typography";
 
 $osg-portrait-card-image-height-small: 200px;
 $osg-portrait-card-image-height-medium: 230px;
@@ -149,6 +150,19 @@ $osg-portrait-card-image-height-large: 290px;
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+
+  &--external {
+    & .osg-portrait-card__link .osg-portrait-card__heading {
+      &::after,
+      &:hover::after {
+        font-family: "Oslo Icons" !important;
+        font-size: 0.6em;
+        content: map-get(icons.$icons, "new-window") !important;
+        display: inline-block;
+        margin-left: 0.4em;
       }
     }
   }

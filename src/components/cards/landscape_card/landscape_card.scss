@@ -1,8 +1,9 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/typography";
+@use "system/icons";
 @use "system/spacing";
 @use "system/states";
+@use "system/typography";
 
 $osg-landscape-card-height-breakpoint-medium: 221px;
 $osg-landscape-card-height-breakpoint-large: 230px;
@@ -100,11 +101,6 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
-  &--small {
-    & .osg-landscape-card__content {
-    }
-  }
-
   &--large {
     & .osg-landscape-card__content {
       @include breakpoints.medium {
@@ -140,6 +136,19 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+
+  &--external {
+    & .osg-landscape-card__link .osg-landscape-card__heading {
+      &::after,
+      &:hover::after {
+        font-family: "Oslo Icons" !important;
+        font-size: 0.6em;
+        content: map-get(icons.$icons, "new-window") !important;
+        display: inline-block;
+        margin-left: 0.4em;
       }
     }
   }
