@@ -131,6 +131,12 @@ $osg-portrait-card-image-height-large: 290px;
         }
       }
     }
+
+    & .osg-portrait-card__actions {
+      @include breakpoints.large {
+        padding: 0 spacing.$space-15 spacing.$space-15 spacing.$space-15 !important;
+      }
+    }
   }
 
   &--zoom {
