@@ -134,7 +134,8 @@
       text-decoration: none;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &--focus {
         background-color: colors.$gray-light;
         color: states.$hover !important;
         text-decoration: underline;
