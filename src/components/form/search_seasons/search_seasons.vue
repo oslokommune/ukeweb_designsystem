@@ -7,7 +7,7 @@
           <form class="osg-search-seasons__form" :action="action" method="GET">
             <div class="osg-search-seasons__input-wrapper" id="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results">
               <input
-                v-on:keyup="inputChange($event.target.value)"
+                v-on:keyup="inputChange($event)"
                 v-on:keyup.enter="submit($event.target.value)"
                 v-on:keyup.down="setFocus($event)"
                 v-on:keyup.up="setFocus($event)"
@@ -62,6 +62,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "OsgSearchSeasons",
   props: {
@@ -78,6 +79,14 @@ export default {
       default: () => {
         return [];
       },
+    },
+    keepInputFocusOnItemNav: {
+      type: Boolean,
+      default: true,
+    },
+    inputFocusAfterItemSelect: {
+      type: Boolean,
+      default: true,
     },
     title: {
       type: String,
@@ -121,10 +130,6 @@ export default {
       type: String,
       default: "",
     },
-    limit: {
-      type: Number,
-      default: 5,
-    },
     ariaLabel: {
       type: String,
       default: "Search",
@@ -136,6 +141,10 @@ export default {
     itemListScroll: {
       type: Boolean,
       default: false,
+    },
+    itemListScrollOffset: {
+      type: Number,
+      default: 100,
     },
   },
 
@@ -152,6 +161,12 @@ export default {
   beforeDestroy() {
     window.removeEventListener("keydown", this.eventKeyDown);
     window.removeEventListener("focusout", this.eventFocusOut);
+  },
+
+  watch: {
+    items() {
+      this.resetIndex();
+    },
   },
 
   computed: {
@@ -224,14 +239,6 @@ export default {
     },
   },
 
-  watch: {
-    items(newValue) {
-      if (!this.items.length) {
-        this.index = null;
-      }
-    },
-  },
-
   methods: {
     itemSelect(index) {
       this.$emit("item-select", index);
@@ -262,12 +269,26 @@ export default {
       }
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {
-        this.$refs.list.childNodes[this.index].focus();
+        if (!this.keepInputFocusOnItemNav) {
+          this.$refs.list.childNodes[this.index].focus();
+        } else {
+          this.selectedIndex = this.index;
+        }
+
+        if (this.keepInputFocusOnItemNav && this.itemListScroll) {
+          this.$refs.list.scrollTop = this.$refs.list.childNodes[this.index].offsetTop - this.itemListScrollOffset;
+        }
+
         this.$emit("item-focus", this.index);
       }
     },
     resetIndex() {
       this.index = null;
+      this.selectedIndex = null;
+
+      if (this.itemListScroll && this.$refs.list) {
+        this.$refs.list.scrollTop = 0;
+      }
     },
     resetAndFocus() {
       this.resetIndex();
@@ -284,9 +305,18 @@ export default {
         index: this.selectedIndex,
       });
     },
-    inputChange(value) {
-      this.$emit("input-change", value);
-      this.resetIndex();
+    inputChange(event) {
+      if (this.value !== event.target.value) {
+        switch (event.code) {
+          case "ArrowUp":
+          case "ArrowDown":
+          case "Enter":
+            break;
+          default:
+            this.$emit("input-change", event.target.value);
+            this.resetIndex();
+        }
+      }
     },
     eventFocusOut(event) {
       if (!this.$refs.search.contains(event.relatedTarget)) {
@@ -299,6 +329,6 @@ export default {
         event.preventDefault();
       }
     },
-  },
+  }
 };
 </script>

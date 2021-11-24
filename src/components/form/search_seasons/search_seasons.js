@@ -82,9 +82,8 @@ export const OsgSearchSeasonsInit = () => {
               this.items = [];
             }
             this.value = payload;
-          } else if (event === "item-select") {
+          } else if (event === "item-focus") {
             this.value = this.items[payload].text;
-            this.items = [];
           } else if (event === "itemlist-blur") {
             this.items = [];
           } else if (event === "submit") {
