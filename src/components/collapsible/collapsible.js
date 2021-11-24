@@ -3,25 +3,14 @@ export const OsgCollapsible = {
     window.addEventListener("OsgBreakpointChange", OsgCollapsible.handleBreakpointChange);
 
     OsgCollapsible.triggerIterator((item) => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
-        if (collapsible) {
-          collapsible.classList.toggle("osg-collapsible-content--collapsed");
-
-          e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-          e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-        }
-
-        e.target.blur();
-      });
+      item.addEventListener("click", OsgCollapsible.handleClick);
     });
   },
 
   unbind() {
     window.removeEventListener("OsgBreakpointChange", OsgCollapsible.handleBreakpointChange);
     OsgCollapsible.triggerIterator((item) => {
-      item.removeEventListener("click");
+      item.removeEventListener("click", OsgCollapsible.handleClick);
     });
   },
 
@@ -30,6 +19,20 @@ export const OsgCollapsible = {
     collapsibleTriggers.forEach((item) => {
       callback(item);
     });
+  },
+
+  handleClick(e) {
+    e.preventDefault();
+
+    const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
+    if (collapsible) {
+      collapsible.classList.toggle("osg-collapsible-content--collapsed");
+
+      e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
+      e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
+    }
+
+    e.target.blur();
   },
 
   handleBreakpointChange(e) {
