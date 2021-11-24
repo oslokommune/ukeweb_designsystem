@@ -1,33 +1,42 @@
-export const OsgCollapsible = () => {
-  window.addEventListener("OsgBreakpointChange", handleBreakpointChange);
+export const OsgCollapsible = {
+  bind() {
+    window.addEventListener("OsgBreakpointChange", OsgCollapsible.handleBreakpointChange);
 
-  triggerIterator((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
-      if (collapsible) {
-        collapsible.classList.toggle("osg-collapsible-content--collapsed");
+    OsgCollapsible.triggerIterator((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
+        if (collapsible) {
+          collapsible.classList.toggle("osg-collapsible-content--collapsed");
 
-        e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-        e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-      }
+          e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
+          e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
+        }
 
-      e.target.blur();
+        e.target.blur();
+      });
     });
-  });
+  },
 
-  function triggerIterator(callback) {
+  unbind() {
+    window.removeEventListener("OsgBreakpointChange", OsgCollapsible.handleBreakpointChange);
+    OsgCollapsible.triggerIterator((item) => {
+      item.removeEventListener("click");
+    });
+  },
+
+  triggerIterator(callback) {
     const collapsibleTriggers = document.querySelectorAll(".osg-collapsible-trigger");
     collapsibleTriggers.forEach((item) => {
       callback(item);
     });
-  }
+  },
 
-  function handleBreakpointChange(e) {
+  handleBreakpointChange(e) {
     const breakpoint = e.detail.breakpoint;
 
     if (breakpoint === "medium" || breakpoint === "large") {
-      triggerIterator((item) => {
+      OsgCollapsible.triggerIterator((item) => {
         const collapsible = document.getElementById(item.getAttribute("aria-controls"));
         if (collapsible && (collapsible.classList.contains("osg-collapsible-content--expanded-breakpoint-medium") || collapsible.classList.contains("osg-collapsible-content--expanded-breakpoint-large"))) {
           item.setAttribute("aria-expanded", true);
@@ -35,7 +44,7 @@ export const OsgCollapsible = () => {
         }
       });
     } else {
-      triggerIterator((item) => {
+      OsgCollapsible.triggerIterator((item) => {
         const collapsible = document.getElementById(item.getAttribute("aria-controls"));
         if (collapsible && (collapsible.classList.contains("osg-collapsible-content--expanded-breakpoint-medium") || collapsible.classList.contains("osg-collapsible-content--expanded-breakpoint-large"))) {
           item.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
@@ -43,5 +52,5 @@ export const OsgCollapsible = () => {
         }
       });
     }
-  }
+  },
 };
