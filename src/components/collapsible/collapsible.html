@@ -5,7 +5,8 @@
       <aside class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Important</h2>
         <p class="osg-content">
-          Triggers get the <strong>.osg-collapsible-trigger--expanded</strong> modifier when content is expanded.<br />
+          In order for collapsible to work correctly with ARIA attributes it relies on <a href="/#/general-grid-breakpoints" target="_parent">OsgBreakpointsInit</a>.
+          <br>
           Triggers should be wrapper in heading elements where possible to help screen readers
         </p>
       </aside>
@@ -85,6 +86,13 @@
       <p id="osg-collapsible-12" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease osg-text-5 osg-margin-top-15">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
       </p>
+    </div>
+    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+      <h2 class="osg-heading-3">Collapsed, expanded on medium and up</h2>
+    </div>
+    <div class="osg-row__column osg-row__column--12">
+      <h3><button class="osg-button osg-button--blue-light osg-collapsible-trigger osg-collapsible-trigger--hidden-breakpoint-medium" aria-expanded="false" aria-controls="osg-collapsible-16">Trigger</button></h3>
+      <p id="osg-collapsible-16" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--expanded-breakpoint-medium osg-text-5 osg-margin-top-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
     </div>
     <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Styled</h3>

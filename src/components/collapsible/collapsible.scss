@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/icons";
@@ -57,6 +58,18 @@
       content: map-get(icons.$icons, "chevron-thin-up");
     }
   }
+
+  &--hidden-breakpoint-medium {
+    @include breakpoints.medium {
+      display: none;
+    }
+  }
+
+  &--hidden-breakpoint-large {
+    @include breakpoints.medium {
+      display: none;
+    }
+  }
 }
 
 .osg-collapsible-content {
@@ -69,6 +82,28 @@
     overflow: hidden;
     padding: 0 !important;
     visibility: hidden;
+  }
+
+  &--expanded-breakpoint-medium {
+    @include breakpoints.medium {
+      border: initial !important;
+      margin: initial !important;
+      max-height: initial !important;
+      overflow: initial !important;
+      padding: initial !important;
+      visibility: initial !important;
+    }
+  }
+
+  &--expanded-breakpoint-large {
+    @include breakpoints.large {
+      border: initial !important;
+      margin: initial !important;
+      max-height: initial !important;
+      overflow: initial !important;
+      padding: initial !important;
+      visibility: initial !important;
+    }
   }
 
   &--ease {
