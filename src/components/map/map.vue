@@ -67,7 +67,12 @@ export default {
         let features = [];
         this.points.forEach(function (point) {
           let heading = point.heading ?? "";
-          let description = point.desc ?? "";
+          let description = point.description ?? "";
+          if (description.length === 0) {
+            description = point.properties.desc ?? "";
+          }
+          let openPopup = point.openPopup ?? false;
+
           features.push({
             type: "Feature",
             geometry: {
@@ -77,6 +82,7 @@ export default {
             properties: {
               heading: heading,
               description: description,
+              openPopup: openPopup,
             },
           });
         });
@@ -129,7 +135,7 @@ export default {
       _this.mapObject.addImage("location-pin-filled", image);
     });
 
-    this.mapObject.on("load", function () {
+    this.mapObject.on("load", () => {
       _this.mapReady = true;
 
       // If there is data available, show it now plz.
@@ -157,7 +163,6 @@ export default {
       handler() {
         this.mapObject.setCenter([this.state.longitude, this.state.latitude]);
         this.mapObject.setZoom(this.state.zoom);
-
         if (this.state.showPopups !== this.showPopups) {
           this.showPopups = this.state.showPopups;
           this.clearMapAndData();
@@ -168,7 +173,7 @@ export default {
   },
 
   methods: {
-    populateMap: function () {
+    populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
         if (this.pointsGeoJson !== null) {
@@ -202,7 +207,7 @@ export default {
               this.$_addPopupsFromProperties("geoJson-points");
             }
           } else {
-            if (typeof this.geoJson === "string" && this.geoJson.startsWith("http")) {
+            if (typeof this.geoJson === "string") {
               fetch(this.geoJson)
                 .then((response) => response.json())
                 .then((data) => {
@@ -279,8 +284,8 @@ export default {
 
       // Expand/zoom in on the cluster on click
       var _this = this; // Scope this, bobby!
-      this.mapObject.on("click", "clusteredGeoJson-points", function (e) {
-        var features = _this.mapObject.queryRenderedFeatures(e.point, {
+      this.mapObject.on("click", "clusteredGeoJson-points", function (event) {
+        var features = _this.mapObject.queryRenderedFeatures(event.point, {
           layers: ["clusteredGeoJson-points"],
         });
         var clusterId = features[0].properties.cluster_id;
@@ -301,6 +306,8 @@ export default {
     },
     // Private/protected method
     $_addPolygonsLayer(layerId, dataSourceId) {
+      this.$_openPopupAfterDataLoaded(dataSourceId);
+
       // Adds fill + line to get an outline / stroke on the polygon.
 
       let layerIdOutline = layerId + "-outline";
@@ -348,6 +355,8 @@ export default {
     },
     // Private/protected method
     $_addLinesLayer(layerId, dataSourceId) {
+      this.$_openPopupAfterDataLoaded(dataSourceId);
+
       this.layerIds.push(layerId);
 
       this.mapObject.addLayer({
@@ -364,6 +373,8 @@ export default {
     },
     // Private/protected method
     $_addPointsLayer(layerId, dataSourceId) {
+      this.$_openPopupAfterDataLoaded(dataSourceId);
+
       this.layerIds.push(layerId);
 
       this.mapObject.addLayer({
@@ -465,6 +476,7 @@ export default {
         _this.mapObject.getCanvas().style.cursor = "";
       });
     },
+    // Private/protected method
     $_getPopupHtml(feature) {
       let heading = feature.properties.heading ?? "";
       let description = feature.properties.description ?? "";
@@ -485,7 +497,7 @@ export default {
       }
 
       if (additionalData.length > 0) {
-        additionalData.forEach(function (data) {
+        additionalData.forEach((data) => {
           let label = data.label ?? "";
           let value = data.value ?? "";
 
@@ -500,6 +512,24 @@ export default {
       }
 
       return null;
+    },
+    // Private/protected method
+    $_openPopupAfterDataLoaded(dataSourceId) {
+      if (this.showPopups && this.clusteredPoints === false) {
+        this.mapObject.on("sourcedata", (event) => {
+          // https://maplibre.org/maplibre-gl-js-docs/api/events/#mapdataevent
+          if (event.isSourceLoaded && event.sourceId === dataSourceId && event.coord) {
+            let features = event.source.data.features;
+            if (typeof features === "object") {
+              features.forEach((feature) => {
+                if (feature.properties.openPopup) {
+                  new maplibregl.Popup().setLngLat(feature.geometry.coordinates).setHTML(this.$_getPopupHtml(feature)).addTo(this.mapObject);
+                }
+              });
+            }
+          }
+        });
+      }
     },
   },
 };
