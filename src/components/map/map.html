@@ -19,27 +19,36 @@
             </p>
             <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
             <p class="osg-paragraph">
-              Popups appear by if the following conditions are met<br />
+              Popups appear on click on a feature if the following conditions are met<br />
               - <code>showPopups</code> is true, this can be set to false by overriding the property <code>state</code>.<br />
-              - When using GeoJSON: the feature has the property <code>description</code>. Optionally it can also have <code>heading</code>.<br />
-              - When using <code>points</code>: <code>description</code> and optionally <code>heading</code> added to the array per point.<br />
+              - When using <code>geoJson</code>: the feature has the property <code>description</code>. Optionally it can also have <code>heading</code>.<br />
+              - When using <code>points</code>: <code>description</code> and optionally <code>heading</code> added to the array (per point).<br />
               - There is actually a string with data.<br />
+            </p>
+            <br />
+            <p class="osg-paragraph">
+              Popups appear after load if the following conditions are met<br />
+              - All of the conditions for on click are met.<br />
+              - When using <code>geoJson</code>: the feature has the property <code>openPopup</code>, with a value of <code>true</code>.<br />
+              - When using <code>points</code>: <code>openPopup</code> is added to the array (per point), with a value of <code>true</code>.<br />
+              - <code>clusteredPoints</code> is false.<br />
+              - Note: you should limit the number of opened popups to 1 or 2.
             </p>
             <br />
             <p class="osg-paragraph">
               To display additional data after the heading and description, you can add an array called <code>data</code> to the feature properties.<br />
               Each item in the array must contain <code>label</code> and <code>value</code>.<br />
-              This only works with GeoJSON, and not <code>points</code>.
+              This only works with the <code>geoJson</code> prop, and not the <code>points</code> prop.
             </p>
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">
-          <h2 class="osg-heading-3">Single marker</h2>
+          <h2 class="osg-heading-3">Single marker with automatic popup</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
             <div class="osg-map" id="osg-map">
-              <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+              <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
             </div>
           </div>
         </div>
@@ -95,11 +104,11 @@
     <div class="osg-container osg-container--content-limit">
       <div class="osg-row">
         <div class="osg-row__column osg-row__column--12">
-          <h2 class="osg-heading-3">Single marker</h2>
+          <h2 class="osg-heading-3">Single marker with automatic popup</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map4">
-            <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+            <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">

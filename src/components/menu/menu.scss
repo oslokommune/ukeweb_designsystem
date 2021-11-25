@@ -346,23 +346,31 @@
 
     @include breakpoints.medium {
       display: flex;
-      justify-content: space-between;
     }
 
     li {
-      @extend %osg-margin-bottom-10;
+      margin-bottom: 0;
+      margin-right: 30px;
 
       .osg-icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
+    }
+
+    &--miscellaneous {
+      justify-content: flext-start;
     }
 
     &--media {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
 
       @include breakpoints.medium {
-        justify-content: space-around;
+        justify-content: flex-end;
+
+        ul:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
