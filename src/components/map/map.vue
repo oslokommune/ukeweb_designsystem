@@ -19,7 +19,7 @@ export default {
     },
     locale: {
       type: Object,
-      default: function () {
+      default: () => {
         return {
           "FullscreenControl.Enter": "Vis i fullskjerm",
           "FullscreenControl.Exit": "Gå ut av fullskjermsvisning",
@@ -30,7 +30,7 @@ export default {
     },
     state: {
       type: Object,
-      default: function () {
+      default: () => {
         return {
           longitude: 10.74981,
           latitude: 59.913008,
@@ -65,7 +65,7 @@ export default {
     pointsGeoJson() {
       if (this.points) {
         let features = [];
-        this.points.forEach(function (point) {
+        this.points.forEach((point) => {
           let heading = point.heading ?? "";
           let description = point.description ?? "";
           if (description.length === 0) {
@@ -130,7 +130,7 @@ export default {
 
     var _this = this; // Scope this, bobby!
 
-    this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", function (error, image) {
+    this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
       if (error) throw error;
       _this.mapObject.addImage("location-pin-filled", image);
     });
@@ -223,13 +223,13 @@ export default {
     clearMapAndData() {
       var _this = this; // Scope this, bobby!
 
-      this.layerIds.forEach(function (element) {
+      this.layerIds.forEach((element) => {
         if (_this.mapObject.getLayer(element)) {
           _this.mapObject.removeLayer(element);
         }
       });
 
-      this.dataSourceIds.forEach(function (element) {
+      this.dataSourceIds.forEach((element) => {
         if (_this.mapObject.getSource(element)) {
           _this.mapObject.removeSource(element);
         }
@@ -284,12 +284,12 @@ export default {
 
       // Expand/zoom in on the cluster on click
       var _this = this; // Scope this, bobby!
-      this.mapObject.on("click", "clusteredGeoJson-points", function (event) {
+      this.mapObject.on("click", "clusteredGeoJson-points", (event) => {
         var features = _this.mapObject.queryRenderedFeatures(event.point, {
           layers: ["clusteredGeoJson-points"],
         });
         var clusterId = features[0].properties.cluster_id;
-        _this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, function (err, zoom) {
+        _this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, (err, zoom) => {
           if (err) return;
           _this.mapObject.easeTo({
             center: features[0].geometry.coordinates,
@@ -458,7 +458,7 @@ export default {
 
       // When a click event occurs on a feature in the layer, open a popup at the
       // location of the feature, with HTML generated from its properties.
-      this.mapObject.on("click", layerId, function (event) {
+      this.mapObject.on("click", layerId, (event) => {
         let html = _this.$_getPopupHtml(event.features[0]);
 
         if (typeof html === "string") {
@@ -467,12 +467,12 @@ export default {
       });
 
       // Change the cursor to a pointer when over the feature/layer.
-      this.mapObject.on("mouseenter", layerId, function () {
+      this.mapObject.on("mouseenter", layerId, () => {
         _this.mapObject.getCanvas().style.cursor = "pointer";
       });
 
       // Change it back to a pointer when it leaves.
-      this.mapObject.on("mouseleave", layerId, function () {
+      this.mapObject.on("mouseleave", layerId, () => {
         _this.mapObject.getCanvas().style.cursor = "";
       });
     },
