@@ -448,40 +448,10 @@ export default {
       // When a click event occurs on a feature in the layer, open a popup at the
       // location of the feature, with HTML generated from its properties.
       this.mapObject.on("click", layerId, function (event) {
-        let heading = event.features[0].properties.heading ?? "";
-        let description = event.features[0].properties.description ?? "";
-        if (description.length === 0) {
-          description = event.features[0].properties.desc ?? "";
-        }
+        let html = _this.$_getPopupHtml(event.features[0]);
 
-        let additionalData = event.features[0].properties.data ? JSON.parse(event.features[0].properties.data) : [];
-        let additionalDataHtml = "";
-
-        if (heading.length > 0) {
-          heading = "<h3 class='osg-map__heading'>" + heading + "</h3>";
-        }
-
-        // Need a better way to handle this in the future.
-        if (description === "null") {
-          description = "";
-        }
-
-        if (additionalData.length > 0) {
-          additionalData.forEach(function (data) {
-            let label = data.label ?? "";
-            let value = data.value ?? "";
-
-            if (label.length > 0 && value.length > 0) {
-              additionalDataHtml = additionalDataHtml + "<span class='osg-map__label'>" + label + "</span>: <span class='osg-map__value'>" + value + "</span><br>";
-            }
-          });
-        }
-
-        if (heading.length > 0 || description.length > 0) {
-          new maplibregl.Popup({ className: "osg-map__popup" })
-            .setLngLat(event.lngLat)
-            .setHTML("<div class='osg-map__popup-content'>" + heading + description + additionalDataHtml + "</div>")
-            .addTo(_this.mapObject);
+        if (typeof html === "string") {
+          new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
         }
       });
 
@@ -494,6 +464,42 @@ export default {
       this.mapObject.on("mouseleave", layerId, function () {
         _this.mapObject.getCanvas().style.cursor = "";
       });
+    },
+    $_getPopupHtml(feature) {
+      let heading = feature.properties.heading ?? "";
+      let description = feature.properties.description ?? "";
+      if (description.length === 0) {
+        description = feature.properties.desc ?? "";
+      }
+
+      let additionalData = feature.properties.data ? JSON.parse(feature.properties.data) : [];
+      let additionalDataHtml = "";
+
+      if (heading.length > 0) {
+        heading = "<h3 class='osg-map__heading'>" + heading + "</h3>";
+      }
+
+      // Need a better way to handle this in the future.
+      if (description === "null") {
+        description = "";
+      }
+
+      if (additionalData.length > 0) {
+        additionalData.forEach(function (data) {
+          let label = data.label ?? "";
+          let value = data.value ?? "";
+
+          if (label.length > 0 && value.length > 0) {
+            additionalDataHtml = additionalDataHtml + "<span class='osg-map__label'>" + label + "</span>: <span class='osg-map__value'>" + value + "</span><br>";
+          }
+        });
+      }
+
+      if (heading.length > 0 || description.length > 0) {
+        return "<div class='osg-map__popup-content'>" + heading + description + additionalDataHtml + "</div>";
+      }
+
+      return null;
     },
   },
 };
