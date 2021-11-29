@@ -9,6 +9,10 @@
   @include mixins.form-states;
   position: relative;
 
+  &__error-message {
+    @include mixins.error-message;
+  }
+
   &__label {
     @include mixins.form-label;
 
