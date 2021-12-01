@@ -9,11 +9,12 @@
 
 ### Production
 
-1. Update package.json with new version
-2. Update CHANGELOG.md
-3. Commit and push
-4. Create new release at github.com with the same version as in package.json
-5. CI/CD workflows will make new versioned CSS and font files available on CDN
+1. Git pull
+2. Update package.json with new version
+3. Update CHANGELOG.md
+4. Commit and push
+5. Create new release at github.com with the same version as in package.json
+6. CI/CD workflows will make new versioned CSS and font files available on CDN
 
 ## Icons
 
