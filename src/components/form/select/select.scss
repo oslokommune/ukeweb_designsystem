@@ -7,6 +7,12 @@
   @include mixins.form-states;
   position: relative;
 
+  &__required {
+    margin-top: spacing.$space-5;
+    padding: 0;
+    @extend %osg-text-7;
+  }
+
   &__label {
     @include mixins.form-label;
   }

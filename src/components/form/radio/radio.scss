@@ -17,6 +17,12 @@
     }
   }
 
+  &__required {
+    margin-top: spacing.$space-5;
+    padding: 0;
+    @extend %osg-text-7;
+  }
+
   &--text-align-top {
     align-items: flex-start;
 

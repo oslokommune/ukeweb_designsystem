@@ -33,6 +33,28 @@
         </div>
       </div>
     </div>
+
+    <div class="osg-row__column osg-row__column--12">
+      <h2 class="osg-devtools-heading">Required</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <fieldset class="osg-fieldset osg-fieldset--no-border">
+            <legend>Select the options:</legend>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" checked="checked" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 1 </span>
+            </label>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 2 </span>
+            </label>
+          </fieldset>
+          <div class="osg-fieldset__required" id="required-1">* Required</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -80,6 +102,7 @@
         </div>
       </fieldset>
     </div>
+
     <div class="osg-row__column osg-row__column--6-breakpoint-medium">
       <fieldset class="osg-fieldset osg-fieldset--no-border osg-fieldset--error" aria-describedby="error-1">
         <legend>Error:</legend>
@@ -98,5 +121,23 @@
         </div>
       </fieldset>
     </div>
+  </div>
+  <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-1">
+      <legend>Required</legend>
+      <div>
+        <label class="osg-checkbox">
+          <input type="checkbox" name="checkbox-1" checked="checked" />
+          <span class="osg-checkbox__checkmark"></span>
+          <span class="osg-checkbox__text"> Option 1 </span>
+        </label>
+        <label class="osg-checkbox">
+          <input type="checkbox" name="checkbox-1" />
+          <span class="osg-checkbox__checkmark"></span>
+          <span class="osg-checkbox__text"> Option 2 </span>
+        </label>
+      </div>
+    </fieldset>
+    <div class="osg-fieldset__required" id="required-1">* Required</div>
   </div>
 </div>

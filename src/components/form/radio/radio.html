@@ -4,8 +4,7 @@
       <p class="osg-text-2">A radio button is a graphical control element that allows the user to choose only one of a predefined set of mutually exclusive options.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">The radio button text should never take the 100% width of the page in medium and up breakpoints. 
-          Radio button groups should always be grouped using <b> &lt;fieldset&gt; </b> .</p>
+        <p class="osg-paragraph">The radio button text should never take the 100% width of the page in medium and up breakpoints. Radio button groups should always be grouped using <b> &lt;fieldset&gt; </b> .</p>
       </div>
     </div>
     <div class="osg-row__column osg-row__column--12">
@@ -56,6 +55,24 @@
                   </span>
                   <span class="osg-radio__label"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
                 </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-row">
+            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+              <div class="osg-devtools-code__box__code">
+                <label class="osg-radio osg-radio--text-align-top">
+                  <span class="osg-radio__input">
+                    <input type="radio" name="radio-11" />
+                    <span class="osg-radio__control"></span>
+                  </span>
+                  <span class="osg-radio__label">Text</span>
+                </label>
+                <div class="osg-radio__required" id="required-1">* Required</div>
               </div>
             </div>
           </div>
@@ -200,6 +217,23 @@
         <span class="osg-radio__label">Error/invalid</span>
       </label>
       <div class="osg-radio__error-message" id="error-2">Error message</div>
+    </div>
+    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+      <label class="osg-radio">
+        <span class="osg-radio__input">
+          <input type="radio" name="radio-6" checked="checked" aria-describedby="required-2" />
+          <span class="osg-radio__control"></span>
+        </span>
+        <span class="osg-radio__label">Required</span>
+      </label>
+      <label class="osg-radio">
+        <span class="osg-radio__input">
+          <input type="radio" name="radio-5" aria-describedby="required-2" />
+          <span class="osg-radio__control"></span>
+        </span>
+        <span class="osg-radio__label">Required</span>
+      </label>
+      <div class="osg-radio__required" id="required-1">* Required</div>
     </div>
   </div>
 </div>
