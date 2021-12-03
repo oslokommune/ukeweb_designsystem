@@ -42,6 +42,17 @@ $osg-portrait-card-image-height-large: 290px;
     }
   }
 
+  &__image-breakpoint--small {
+    & .osg-portrait-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
+      }
+    }
+  }
+
   &__content {
     @extend %osg-padding-horizontal-10;
     @extend %osg-padding-vertical-15;
