@@ -55,17 +55,6 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
-  &__image-breakpoint--small {
-    & .osg-landscape-card__media {
-      img {
-        display: none;
-        @include breakpoints.medium {
-          display: block;
-        }
-      }
-    }
-  }
-
   &__content {
     width: 100%;
 
@@ -160,6 +149,17 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
         content: map-get(icons.$icons, "new-window") !important;
         display: inline-block;
         margin-left: 0.4em;
+      }
+    }
+  }
+
+  &--image-breakpoint-medium {
+    & .osg-landscape-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
       }
     }
   }

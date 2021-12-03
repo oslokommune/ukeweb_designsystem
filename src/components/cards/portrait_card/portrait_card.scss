@@ -42,17 +42,6 @@ $osg-portrait-card-image-height-large: 290px;
     }
   }
 
-  &__image-breakpoint--small {
-    & .osg-portrait-card__media {
-      img {
-        display: none;
-        @include breakpoints.medium {
-          display: block;
-        }
-      }
-    }
-  }
-
   &__content {
     @extend %osg-padding-horizontal-10;
     @extend %osg-padding-vertical-15;
@@ -180,6 +169,17 @@ $osg-portrait-card-image-height-large: 290px;
         content: map-get(icons.$icons, "new-window") !important;
         display: inline-block;
         margin-left: 0.4em;
+      }
+    }
+  }
+
+  &--image-breakpoint-medium {
+    & .osg-portrait-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
       }
     }
   }
