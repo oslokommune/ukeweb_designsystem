@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "system/icons";
 @use "system/typography";
 @use "system/spacing";
 
@@ -33,6 +34,52 @@
     }
     & legend + div {
       border-color: colors.$red;
+    }
+  }
+
+  &--filter {
+    @extend %osg-margin-bottom-10, %osg-padding-bottom-10;
+
+    border: none;
+    border-bottom: 2px solid colors.$blue-dark;
+
+    legend {
+      @extend %osg-text-4;
+      width: 100%;
+
+      span {
+        display: block;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+          font-family: "Oslo Icons";
+          font-size: typography.$size-24;
+          content: map-get(icons.$icons, "plus-sign");
+          position: absolute;
+          top: 0;
+          right: spacing.$space-5;
+        }
+      }
+
+      span.osg-collapsible-trigger--expanded::after {
+        content: map-get(icons.$icons, "minus-sign");
+      }
+    }
+
+    > div:first-of-type {
+      margin-top: spacing.$space-10;
+    }
+
+    &:first-of-type {
+      legend {
+        @extend %osg-padding-top-10;
+        border-top: 2px solid colors.$blue-dark;
+      }
+    }
+
+    &:last-of-type {
+      @extend %osg-margin-bottom-none;
     }
   }
 }
