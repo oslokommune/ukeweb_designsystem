@@ -152,4 +152,15 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       }
     }
   }
+
+  &--image-breakpoint-medium {
+    & .osg-landscape-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
+      }
+    }
+  }
 }

@@ -8,6 +8,12 @@
     margin-bottom: 0;
   }
 
+  &__required {
+    margin-top: spacing.$space-5;
+    padding: 0;
+    @extend %osg-text-7;
+  }
+
   &--no-border {
     border: none;
     padding: 0;

@@ -172,4 +172,15 @@ $osg-portrait-card-image-height-large: 290px;
       }
     }
   }
+
+  &--image-breakpoint-medium {
+    & .osg-portrait-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
+      }
+    }
+  }
 }
