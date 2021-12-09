@@ -69,7 +69,7 @@ export default {
           let heading = point.heading ?? "";
           let description = point.description ?? "";
           if (description.length === 0) {
-            description = point.properties.desc ?? "";
+            description = point.desc ?? "";
           }
           let openPopup = point.openPopup ?? false;
 
@@ -77,7 +77,7 @@ export default {
             type: "Feature",
             geometry: {
               type: "Point",
-              coordinates: [point.latitude, point.longitude],
+              coordinates: [point.longitude, point.latitude],
             },
             properties: {
               heading: heading,
@@ -103,13 +103,6 @@ export default {
       locale: this.locale,
       center: [this.state.longitude, this.state.latitude],
       zoom: this.state.zoom,
-      dragRotate: false,
-      locale: {
-        "FullscreenControl.Enter": "Vis i fullskjerm",
-        "FullscreenControl.Exit": "Gå ut av fullskjermsvisning",
-        "NavigationControl.ZoomIn": "Zoom inn",
-        "NavigationControl.ZoomOut": "Zoom ut",
-      },
       dragRotate: false,
     });
 
