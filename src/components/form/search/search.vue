@@ -1,24 +1,27 @@
 <template>
   <div ref="search" class="osg-search osg-search--inline">
     <div class="osg-search__form">
-      <input
-        v-on:keyup="inputChange($event)"
-        v-on:keyup.enter="submit($event.target.value)"
-        v-on:keyup.down="setFocus($event)"
-        v-on:keyup.up="setFocus($event)"
-        v-on:focus="resetIndex()"
-        :value="value"
-        :aria-expanded="items.length"
-        class="osg-search__input"
-        type="search"
-        ref="input"
-        autocomplete="off"
-        :placeholder="placeholder"
-        :aria-label="ariaLabel"
-        aria-haspopup="listbox"
-        :aria-owns="id"
-        role="combobox"
-      />
+      <label class="osg-search__label"
+        >{{ label }}
+        <input
+          v-on:keyup="inputChange($event)"
+          v-on:keyup.enter="submit($event.target.value)"
+          v-on:keyup.down="setFocus($event)"
+          v-on:keyup.up="setFocus($event)"
+          v-on:focus="resetIndex()"
+          :value="value"
+          :aria-expanded="items.length"
+          class="osg-search__input"
+          type="search"
+          ref="input"
+          autocomplete="off"
+          :placeholder="placeholder"
+          :aria-label="ariaLabel"
+          aria-haspopup="listbox"
+          :aria-owns="id"
+          role="combobox"
+        />
+      </label>
     </div>
     <ul v-show="items.length" ref="list" class="osg-search__dropdown" :class="{ 'osg-search__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
       <li
@@ -89,6 +92,10 @@ export default {
     itemListScrollOffset: {
       type: Number,
       default: 100,
+    },
+    label: {
+      type: String,
+      default: "",
     },
   },
 

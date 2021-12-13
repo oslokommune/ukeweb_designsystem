@@ -3,7 +3,6 @@
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
-@use "components/form/input/mixins";
 
 .osg-search {
   @extend %osg-text-5;
@@ -14,7 +13,10 @@
   }
 
   &__label {
-    @include mixins.form-label;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    @extend %osg-text-4;
   }
 
   &__input {
