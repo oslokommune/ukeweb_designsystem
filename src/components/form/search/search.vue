@@ -11,7 +11,7 @@
           v-on:focus="resetIndex()"
           :value="value"
           :aria-expanded="items.length"
-          class="osg-search__input"
+          class="osg-search__input osg-margin-top-5"
           type="search"
           ref="input"
           autocomplete="off"

@@ -2,7 +2,7 @@
   <div class="osg-date">
     <label class="osg-date__label">
       {{ label }}
-      <input type="text" class="osg-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" />
+      <input type="text" class="osg-date__input osg-margin-top-5" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" />
     </label>
     <nrk-core-datepicker class="osg-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
       <fieldset class="osg-date__datepicker__nav">
