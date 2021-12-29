@@ -19,6 +19,18 @@ function handleClick(e) {
   e.target.blur();
 }
 
+function onEnterPress(e) {
+  e.preventDefault();
+  const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
+  if (e.keyCode === 13 && collapsible) {
+    collapsible.classList.toggle("osg-collapsible-content--collapsed");
+    e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
+    e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
+  }
+
+  e.target.blur();
+}
+
 function handleBreakpointChange(e) {
   const breakpoint = e.detail.breakpoint;
 
@@ -54,16 +66,19 @@ export const OsgCollapsible = {
 
   bindElement(element) {
     element.addEventListener("click", handleClick);
+    element.addEventListener("keypress", onEnterPress);
   },
 
   unbindElement(element) {
     element.removeEventListener("click", handleClick);
+    element.removeEventListener("keypress", onEnterPress);
   },
 
   bindAll() {
     window.addEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
       item.addEventListener("click", handleClick);
+      item.addEventListener("keypress", onEnterPress);
     });
   },
 
@@ -71,6 +86,7 @@ export const OsgCollapsible = {
     window.removeEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
       item.removeEventListener("click", handleClick);
+      item.removeEventListener("keypress", onEnterPress);
     });
   },
 };
