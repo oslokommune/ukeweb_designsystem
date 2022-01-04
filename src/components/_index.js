@@ -9,3 +9,4 @@ import "./map/map.js";
 import "./menu/menu.init.js";
 import "./pagination/pagination.init.js";
 import "./slide_panel/slide_panel.init.js";
+import "./form/textarea/textarea.init.js";
