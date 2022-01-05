@@ -22,6 +22,9 @@
 
   &__value {
     @extend %osg-text-5;
+    .osg-link {
+      word-break: break-all;
+    }
   }
 
   &--yellow,
