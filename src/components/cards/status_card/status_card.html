@@ -144,7 +144,7 @@
           <a class="osg-status-card__link" href="javascript:void(0)">
             <div class="osg-status-card__content">
               <p class="osg-status-card__pretext osg-flex osg-flex-align-items-center">
-                <span class="osg-icon osg-icon--space-right osg-icons--briefcase osg-text-2" aria-label="briefcase"></span>
+                <span class="osg-icon osg-icon--space-right osg-icons--briefcase osg-text-2" aria-label="briefcase" role="img"></span>
                 <span>Over 2000 years old </span>
               </p>
               <h5 class="osg-status-card__heading">Heading</h5>
@@ -167,8 +167,13 @@
             <h5 class="osg-status-card__heading">Heading</h5>
             <p class="osg-status-card__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
             <div class="osg-status-card__actions">
-              <h3 class="osg-block osg-text-center osg-text-6 osg-margin-top-15 osg-collapsible-trigger osg-collapsible-trigger--link" aria-expanded="false" aria-controls="custom-map-content">Collapsible content</h3>
-              <div id="custom-map-content" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">Insert MAP component here</div>
+              <h3 class="osg-block osg-text-center osg-text-6 osg-padding-5 osg-margin-vertical-15 osg-collapsible-trigger osg-collapsible-trigger--link" aria-expanded="false" aria-controls="custom-map-content-1" tabindex="0">Collapsible content</h3>
+              <div id="custom-map-content-1" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
+                <div class="osg-map" id="osg-map">
+                  <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]">
+                  </osg-map>
+                </div>
+              </div>
             </div>
           </div>
         </div>
