@@ -141,6 +141,14 @@
     &--no-bar {
       border-left: none;
     }
+
+    & .osg-status-card__collapsible {
+      &:active,
+      &:hover,
+      &:focus {
+        text-decoration: none !important;
+      }
+    }
   }
 }
 
