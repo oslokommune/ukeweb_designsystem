@@ -15,20 +15,17 @@ function handleClick(e) {
     e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
     e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
   }
-
-  e.target.blur();
 }
 
 function onEnterPress(e) {
   e.preventDefault();
   const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
-  if (e.keyCode === 13 && collapsible) {
+
+  if (e.code === 'Enter' && collapsible) {
     collapsible.classList.toggle("osg-collapsible-content--collapsed");
     e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
     e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
   }
-
-  e.target.blur();
 }
 
 function handleBreakpointChange(e) {

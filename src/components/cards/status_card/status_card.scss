@@ -45,7 +45,7 @@
   }
 
   &__actions {
-    @extend %osg-margin-top-30;
+    @extend %osg-padding-top-30;
   }
 
   &__footer {
@@ -98,7 +98,7 @@
       }
     }
 
-    &--red {
+    &--red, &--blue {
       border-color: colors.$red;
 
       & .osg-status-card__content {
@@ -107,6 +107,14 @@
 
       & .osg-status-card__footer {
         background-color: colors.$red-light;
+      }
+
+      & .osg-status-card__actions {
+        background-color: colors.$gray-light;
+        flex-basis: 100%;
+        @extend %osg-padding-horizontal-10;
+        @extend %osg-padding-top-10;
+        @extend %osg-padding-bottom-30;
       }
     }
 
@@ -132,6 +140,14 @@
 
     &--no-bar {
       border-left: none;
+    }
+
+    & .osg-status-card__collapsible {
+      &:active,
+      &:hover,
+      &:focus {
+        text-decoration: none !important;
+      }
     }
   }
 }
