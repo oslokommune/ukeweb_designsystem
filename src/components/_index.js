@@ -4,7 +4,7 @@ import "./form/date/date.js";
 import "./form/input/input.js";
 import "./form/search/search.init.js";
 import "./form/search_seasons/search_seasons.init.js";
-import "./modal_box/modal_box.js";
+import "./modal/modal.init.js";
 import "./map/map.js";
 import "./menu/menu.init.js";
 import "./pagination/pagination.init.js";

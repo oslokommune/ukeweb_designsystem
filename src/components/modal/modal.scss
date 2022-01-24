@@ -1,0 +1,74 @@
+@use "system/breakpoints";
+@use "system/spacing";
+
+$osg-modal-popup-height: 607px !default;
+$osg-modal-popup-width: 600px !default;
+
+.osg-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483647;
+
+  width: 100vw;
+  height: 100vh;
+
+  &__popup {
+    background: white;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    @include breakpoints.medium {
+      background: transparent;
+      height: $osg-modal-popup-height;
+      width: $osg-modal-popup-width;
+      margin: 0 auto;
+      position: static;
+    }
+  }
+
+  &--open {
+    display: flex;
+  }
+
+  &--scoped {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: spacing.$space-15;
+
+    @include breakpoints.medium {
+      background: transparent;
+      padding: 0;
+    }
+
+    div {
+      background-color: white;
+      flex-grow: 1;
+    }
+  }
+
+  &__content {
+    background: white;
+    overflow: auto;
+    padding: 0 spacing.$space-50 spacing.$space-50 spacing.$space-50;
+  }
+}
