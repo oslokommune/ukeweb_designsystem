@@ -70,14 +70,14 @@ function closeModal(modal) {
   }
 }
 
-export const OsgModalBox = {
+export const OsgModal = {
   init() {
-    OsgModalBox.unbindAll();
-    OsgModalBox.bindAll();
+    OsgModal.unbindAll();
+    OsgModal.bindAll();
   },
   initSingle(trigger) {
-    OsgModalBox.unbindSingle(trigger);
-    OsgModalBox.bindSingle(trigger);
+    OsgModal.unbindSingle(trigger);
+    OsgModal.bindSingle(trigger);
   },
   closeSingle(trigger) {
     closeModal(document.getElementById(trigger.getAttribute("aria-controls")));
@@ -91,13 +91,13 @@ export const OsgModalBox = {
   bindAll() {
     const triggers = document.querySelectorAll(".osg-modal-trigger");
     triggers.forEach((trigger) => {
-      OsgModalBox.bindSingle(trigger);
+      OsgModal.bindSingle(trigger);
     });
   },
   unbindAll() {
     const triggers = document.querySelectorAll(".osg-modal-trigger");
     triggers.forEach((trigger) => {
-      OsgModalBox.unbindSingle(trigger);
+      OsgModal.unbindSingle(trigger);
     });
   },
 };

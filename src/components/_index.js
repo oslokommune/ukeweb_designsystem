@@ -1,7 +1,8 @@
 import "./collapsible/collapsible.init.js";
 import "./image_carousel/image_carousel.init.js";
+import "./form/checkbox/checkbox.init.js";
 import "./form/date/date.js";
-import "./form/input/input.js";
+import "./form/input/input.init.js";
 import "./form/search/search.init.js";
 import "./form/search_seasons/search_seasons.init.js";
 import "./modal/modal.init.js";
