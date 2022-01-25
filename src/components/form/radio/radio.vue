@@ -1,16 +1,18 @@
 <template>
   <div>
-    <label class="osg-checkbox" :class="{ 'osg-checkbox--error': errorMessage }">
-      <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
-      <span class="osg-checkbox__checkmark"></span>
-      <span class="osg-checkbox__text">{{ label }}</span>
+    <label class="osg-radio" :class="{ 'osg-radio--error': errorMessage }">
+      <span class="osg-radio__input">
+        <input type="radio" v-model="selectedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
+        <span class="osg-radio__control"></span>
+      </span>
+      <span class="osg-radio__label">{{ label }}</span>
     </label>
-    <div v-if="errorMessage" class="osg-checkbox osg-checkbox--error-message" :id="errorId">{{ errorMessage }}</div>
+    <div v-if="errorMessage" class="osg-radio__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
 </template>
 <script>
 export default {
-  name: "OsgCheckbox",
+  name: "OsgRadio",
 
   props: {
     name: {
@@ -25,8 +27,8 @@ export default {
       type: String,
       required: true,
     },
-    checked: {
-      type: Boolean,
+    selected: {
+      type: String,
       required: true,
     },
     errorMessage: {
@@ -43,12 +45,12 @@ export default {
     conditionalErrorId() {
       return this.errorMessage ? this.errorId : "";
     },
-    checkedModel: {
+    selectedModel: {
       get() {
-        return this.checked;
+        return this.selected;
       },
       set(value) {
-        this.$emit("check", value);
+        this.$emit("select", value);
       }
     }
   },
