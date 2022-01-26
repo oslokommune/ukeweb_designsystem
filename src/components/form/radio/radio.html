@@ -241,7 +241,7 @@
     <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-heading-3 osg-margin-top-30">Vue</h2>
       <div id="osg-radio-vue-1">
-        <osg-radiogroup name="radiogrouptest" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></osg-radiogroup>
+        <osg-radiogroup name="radiogrouptest" :fieldset-text="fieldsetText" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></osg-radiogroup>
         <p class="osg-paragraph osg-margin-top-20">Value: {{ selectedValue }}</p>
       </div>
     </div>

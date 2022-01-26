@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
           "20": "Item 20",
           "40": "Item 40",
           "60": "Item 60",
-        }
-      }),
+        },
+        fieldsetText: "Select an option: "
+      })
     });
   }
 });

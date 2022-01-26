@@ -27,7 +27,6 @@ export default {
 
     fieldsetText: {
       type: String,
-      default: "Select an option: ",
       required: true
     },
 
