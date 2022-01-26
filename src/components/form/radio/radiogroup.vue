@@ -1,10 +1,9 @@
 <template>
   <div>
-    <ul :aria-describedby="conditionalErrorId">
-      <li v-for="(label, value, index) in items" :key="index">
-        <osg-radio :name="name" :label="label" :value="value" :selected="selectedModel" :has-error="errorMessage.length > 0 ? true : false" v-on:select="(value) => {selectedModel = value}"></osg-radio>
-      </li>
-    </ul>
+    <fieldset class="osg-fieldset osg-fieldset--no-border" :aria-describedby="conditionalErrorId">
+      <legend>{{ fieldsetText }}</legend>
+      <osg-radio v-for="(label, value, index) in items" :key="index" :name="name" :label="label" :value="value" :selected="selectedModel" :has-error="errorMessage.length > 0 ? true : false" v-on:select="(value) => {selectedModel = value}"></osg-radio>
+    </fieldset>
     <div v-if="errorMessage" class="osg-radio__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
 </template>
@@ -24,6 +23,12 @@ export default {
     items: {
       type: Object,
       required: true,
+    },
+
+    fieldsetText: {
+      type: String,
+      default: "Select an option: ",
+      required: true
     },
 
     errorMessage: {
