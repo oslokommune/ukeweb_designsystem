@@ -238,22 +238,11 @@
   </div>
 
   <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-row__column osg-row__column--12">
       <h2 class="osg-heading-3 osg-margin-top-30">Vue</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
       <div id="osg-radio-vue-1">
-        <ul>
-          <li>
-            <osg-radio selected="2" error-id="osg-vue-radio-component-1" label="Item 1" name="item" value="1" />
-          </li>
-          <li>
-            <osg-radio selected="2" error-id="osg-vue-radio-component-2" label="Item 2" name="item" value="2" />
-          </li>
-          <li>
-            <osg-radio selected="2" error-id="osg-vue-radio-component-3" label="Item 3" name="item" value="3" />
-          </li>
-        </ul>
+        <osg-radiogroup name="radiogrouptest" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></osg-radiogroup>
+        <p class="osg-paragraph osg-margin-top-20">Value: {{ selectedValue }}</p>
       </div>
     </div>
   </div>

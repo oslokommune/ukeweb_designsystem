@@ -1,14 +1,11 @@
 <template>
-  <div>
-    <label class="osg-radio" :class="{ 'osg-radio--error': errorMessage }">
-      <span class="osg-radio__input">
-        <input type="radio" v-model="selectedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
-        <span class="osg-radio__control"></span>
-      </span>
-      <span class="osg-radio__label">{{ label }}</span>
-    </label>
-    <div v-if="errorMessage" class="osg-radio__error-message" :id="errorId">{{ errorMessage }}</div>
-  </div>
+  <label class="osg-radio" :class="{ 'osg-radio--error': hasError }">
+    <span class="osg-radio__input">
+      <input type="radio" v-model="selectedModel" :value="value" :name="name" />
+      <span class="osg-radio__control"></span>
+    </span>
+    <span class="osg-radio__label">{{ label }}</span>
+  </label>
 </template>
 <script>
 export default {
@@ -31,20 +28,13 @@ export default {
       type: String,
       required: true,
     },
-    errorMessage: {
-      type: String,
-      default: ""
-    },
-    errorId: {
-      type: String,
-      required: true
+    hasError: {
+      type: Boolean,
+      default: false,
     }
   },
 
   computed: {
-    conditionalErrorId() {
-      return this.errorMessage ? this.errorId : "";
-    },
     selectedModel: {
       get() {
         return this.selected;
