@@ -3,39 +3,140 @@ import "./date_and_time.vue.js"; // For Vue filters
 import { OsgDateTime } from "./date_and_time.js"; // For JS
 
 document.addEventListener("DOMContentLoaded", function () {
-  const tableBody = document.getElementById("date-time-examples");
-
-  if (tableBody) {
-    const testCases = [new Date(2021, 11, 31, 23, 59, 59), new Date(2009, 3, 5, 2, 9, 7)];
-
+  const testCasesElement = document.getElementById("testcases");
+  if (testCasesElement) {
+    const testCases = [
+      {
+        dateFrom: new Date(2021, 11, 30, 8, 5, 32),
+        dateTo: null,
+        dateFromOptions: {},
+        dateToOptions: {},
+        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32))",
+      },
+      {
+        dateFrom: new Date(2021, 11, 30, 8, 5, 32),
+        dateTo: new Date(2022, 0, 5, 8, 5, 32),
+        dateFromOptions: {},
+        dateToOptions: {},
+        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2022, 0, 5, 8, 5, 32))",
+      },
+      {
+        dateFrom: new Date(2021, 11, 30, 8, 5, 32),
+        dateTo: new Date(2021, 11, 30, 16, 32, 50),
+        dateFromOptions: {
+          format: "time"
+        },
+        dateToOptions: {
+          format: "time"
+        },
+        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2021, 11, 30, 16, 32, 50), {format: \"time\"}, {format: \"time\"})",
+      },
+      {
+        dateFrom: new Date(2021, 11, 30, 8, 0, 0),
+        dateTo: new Date(2021, 11, 30, 16, 0, 0),
+        dateFromOptions: {
+          format: "time",
+          prefix: "kl. "
+        },
+        dateToOptions: {
+          format: "time"
+        },
+        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 0, 0), new Date(2021, 11, 30, 16, 0, 0), {format: \"time\", prefix: \"kl. \"}, {format: \"time\"})",
+      },
+      {
+        dateFrom: new Date(2022, 4, 15, 8, 0, 0),
+        dateTo: new Date(2022, 4, 15, 16, 0, 0),
+        dateFromOptions: {
+          format: "datetime",
+          time: {
+            prefix: " kl. "
+          }
+        },
+        dateToOptions: {
+          format: "time"
+        },
+        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: \"datetime\", time: {prefix: \" kl. \"}}, {format: \"time\"})",
+      },
+      {
+        dateFrom: new Date(2022, 4, 15, 8, 0, 0),
+        dateTo: new Date(2022, 4, 15, 16, 0, 0),
+        dateFromOptions: {
+          format: "datetime",
+          time: {
+            prefix: " kl. "
+          },
+          localeOptions: {
+            weekday: "long"
+          }
+        },
+        dateToOptions: {
+          format: "time"
+        },
+        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: \"datetime\", time: {prefix: \" kl. \"}, localeOptions: {weekday: \"long\"}}, {format: \"time\"})",
+      },
+      {
+        dateFrom: new Date(2022, 4, 15, 8, 0, 0),
+        dateTo: new Date(2022, 4, 20, 16, 0, 0),
+        dateFromOptions: {
+          prefix: "Fra ",
+          localeOptions: {
+            weekday: "long"
+          }
+        },
+        dateToOptions: {
+          prefix: " til ",
+          localeOptions: {
+            weekday: "long"
+          }
+        },
+        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 20, 16, 0, 0), {prefix: \"Fra \", localeOptions: {weekday: \"long\"}}, {prefix: \" til \", localeOptions: {weekday: \"long\"}})",
+      },
+      {
+        dateFrom: new Date(2022, 4, 15, 8, 0, 0),
+        dateTo: null,
+        dateFromOptions: {
+          format: "daytime",
+          time: {
+            prefix: ", kl. "
+          }
+        },
+        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), null, {format: \"daytime\", time: {prefix: \", kl. \"}}, {})",
+      }
+    ];
     testCases.forEach(function (testCase) {
-      tableBody.innerHTML += `<tr class="osg-table__row">
-                                <td class="osg-table__cell">Norwegian</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDate(testCase)}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDate(testCase, true)}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatTime(testCase)}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDateTime(testCase)}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDateTime(testCase, true)}</td>
-                              </tr>`;
-    });
+      if (! testCase.dateToOptions) {
+        testCase.dateToOptions = {};
+      }
 
-    testCases.forEach(function (testCase) {
-      tableBody.innerHTML += `<tr class="osg-table__row">
-                                <td class="osg-table__cell">English</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDate(testCase, false, "en")}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDate(testCase, true, "en")}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatTime(testCase)}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDateTime(testCase, false, "en")}</td>
-                                <td class="osg-table__cell">${OsgDateTime.formatDateTime(testCase, true, "en")}</td>
-                              </tr>`;
-    });
+      const testCaseElement = document.createElement("div");
+      testCaseElement.classList.add("osg-margin-bottom-30");
+      testCaseElement.innerHTML = "<div>no-NO: " + OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions) + "</div>";
 
-    new Vue({
-      el: "#date-time-vue-examples",
-      data: () => ({
-        testDate: new Date(2021, 11, 31, 23, 59, 59),
-      }),
-      template: "<div><p>{{ testDate | OsgFormatDate() }}, {{ testDate | OsgFormatDate(true) }}, {{ testDate | OsgFormatDate(true, 'en') }}</p><p>{{ testDate | OsgFormatTime() }}, {{ testDate | OsgFormatDateTime() }}, {{ testDate | OsgFormatDateTime(true, 'en') }}</p></div>",
+      testCase.dateFromOptions.locale = "en-GB";
+      testCase.dateToOptions.locale = "en-GB";
+
+      if (testCase.dateFromOptions.prefix) {
+        testCase.dateFromOptions.prefix = testCase.dateFromOptions.prefix.replace(/Fra/, "From").replace(/kl./, "at");
+      }
+      if (testCase.dateFromOptions.time && testCase.dateFromOptions.time.prefix) {
+        testCase.dateFromOptions.time.prefix = testCase.dateFromOptions.time.prefix.replace(/kl./, "at");
+      }
+      if (testCase.dateToOptions.prefix) {
+        testCase.dateToOptions.prefix = testCase.dateToOptions.prefix.replace(/til/, "to");
+      }
+
+      testCaseElement.innerHTML += "<div>en-GB: " + OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions) + "</div>";
+
+      testCaseElement.innerHTML += "<code class=\"osg-code osg-block osg-margin-top-10\">" + testCase.toString + "</code>";
+      testCasesElement.appendChild(testCaseElement);
     });
   }
+
+  new Vue({
+    el: "#date-time-vue-examples",
+    data: () => ({
+      testDate: new Date(2021, 11, 31, 23, 59, 59),
+    }),
+    template: "<div><p>Date: {{ testDate | OsgDateTimeFormat() }}, DateTime: {{ testDate | OsgDateTimeFormat(null, { format: \"datetime\" }) }}, <span v-html=\"'DoubleDate: ' + $options.filters.OsgDateTimeFormat(testDate, new Date())\"></span></p></div>",
+  });
 });

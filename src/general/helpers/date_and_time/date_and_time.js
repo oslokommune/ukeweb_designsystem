@@ -1,67 +1,112 @@
-const monthNames = {
-  no: ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"],
-  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-};
+function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions) {
+  let dateToString = "";
 
-function zeroPad(number) {
-  return number < 10 ? "0" + number : number;
-}
+  let dateFromString = dateFrom.toLocaleString(dateFromOptions.locale, dateFromOptions.localeOptions);
+  let timePrefix = dateFromOptions.time.prefix ? dateFromOptions.time.prefix : " ";
+  dateFromString = replaceLast(dateFromString, ", ", timePrefix);
+  dateFromString = dateFromOptions.prefix + dateFromString + dateFromOptions.suffix;
 
-function dateAsText(date, iso) {
-  const day = date.getDate();
-  const month = monthNames[iso][date.getMonth()];
-  const year = date.getFullYear();
+  if (dateTo) {
+    dateToString = dateTo.toLocaleString(dateToOptions.locale, dateToOptions.localeOptions);
 
-  switch (iso) {
-    case "no":
-      return `${day}. ${month} ${year}`;
-    case "en":
-      return `${zeroPad(day)} ${month} ${year}`;
+    timePrefix = dateToOptions.time.prefix ? dateToOptions.time.prefix : " ";
+    dateToString = replaceLast(dateToString, ", ", timePrefix);
+    dateToString = dateToOptions.prefix + dateToString + dateToOptions.suffix;
   }
+
+
+  return dateFromString + dateToString;
 }
 
-function dateAsNumbers(date, iso) {
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  switch (iso) {
-    case "no":
-      return `${day}.${month}.${year}`;
-    case "en":
-      return `${zeroPad(day)}.${zeroPad(month)}.${year}`;
+function replaceLast(initialString, stringToReplace, replaceString){
+  var a = initialString.split("");
+  var length = stringToReplace.length;
+  if(initialString.lastIndexOf(stringToReplace) != -1) {
+      for(var i = initialString.lastIndexOf(stringToReplace); i < initialString.lastIndexOf(stringToReplace) + length; i++) {
+          if(i == initialString.lastIndexOf(stringToReplace)) {
+              a[i] = replaceString;
+          }
+          else {
+              delete a[i];
+          }
+      }
   }
-}
 
-function dateToString(date, text, iso) {
-  return text ? dateAsText(date, iso) : dateAsNumbers(date, iso);
+  return a.join("");
 }
 
 export const OsgDateTime = {
-  formatDate(date, text = false, iso = "no") {
-    if (date instanceof Date && !isNaN(date)) {
-      switch (iso) {
-        case "no":
-        case "en":
-          return dateToString(date, text, iso);
-        default:
-          console.error("OsgDate.format: iso is unsupported");
+  format(dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) {
+    let defaults = {
+      locale: "no-NO",
+      prefix: "",
+      suffix: "",
+      time: {
+        prefix: "",
+      },
+      localeOptions: {
+        hourCycle: "h24",
+        calendar: "gregory",
+        timeZone: "Europe/Oslo"
       }
     }
-    console.error("OsgDate.format: date is not a Date object");
-  },
+    dateFromOptions.type = "from";
+    dateToOptions.type = "to";
 
-  formatTime(date) {
-    if (date instanceof Date && !isNaN(date)) {
-      const hours = date.getHours();
-      const minutes = date.getMinutes();
+    [dateFromOptions, dateToOptions].forEach(options => {
+      if (typeof options.localeOptions !== "object") {
+        options.localeOptions = {};
+      }
 
-      return `${zeroPad(hours)}:${zeroPad(minutes)}`;
-    }
-    console.error("OsgDate.format: date is not a Date object");
-  },
+      switch (options.format) {
+        case "time":
+          options.localeOptions = Object.assign({
+            hour: "numeric",
+            minute: "numeric",
+          }, options.localeOptions);
 
-  formatDateTime(date, text = false, iso = "no") {
-    return `${this.formatDate(date, text, iso)} ${this.formatTime(date)}`;
-  },
+          if (options.type === "to" && typeof options.prefix === "undefined") {
+            options.prefix = "&mdash;";
+          }
+          break;
+        case "datetime":
+          options.localeOptions = Object.assign({
+            year: "numeric",
+            month: "numeric",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+          }, options.localeOptions);
+
+          if (options.type === "to" && options.format === "time" && typeof options.prefix === "undefined") {
+            options.prefix = "&mdash;";
+          }
+          break;
+        case "daytime":
+          options.localeOptions = Object.assign({
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            hour: "numeric",
+            minute: "numeric",
+          }, options.localeOptions);
+          break;
+        case "custom":
+          options.localeOptions = Object.assign({}, options.localeOptions);
+          break;
+        default:
+          options.localeOptions = Object.assign({
+            year: "numeric",
+            month: "numeric",
+            day: "numeric"
+          }, options.localeOptions);
+
+          if (options.type === "to" && typeof options.prefix === "undefined") {
+            options.prefix = "&mdash;";
+          }
+      }
+    });
+
+    return formatDateTime(dateFrom, dateTo, Object.assign({}, defaults, dateFromOptions), Object.assign({}, defaults, dateToOptions));
+  }
 };
