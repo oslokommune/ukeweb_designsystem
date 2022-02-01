@@ -53,10 +53,11 @@
       @extend %osg-text-4;
       width: 100%;
 
-      span {
+      > * {
         display: block;
         cursor: pointer;
         position: relative;
+        text-decoration: none;
 
         &::after {
           font-family: "Oslo Icons";
@@ -68,7 +69,7 @@
         }
       }
 
-      span.osg-collapsible-trigger--expanded::after {
+      > *.osg-collapsible-trigger--expanded::after {
         content: map-get(icons.$icons, "minus-sign");
       }
     }
