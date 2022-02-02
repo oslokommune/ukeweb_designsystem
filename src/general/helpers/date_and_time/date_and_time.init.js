@@ -24,24 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFrom: new Date(2021, 11, 30, 8, 5, 32),
         dateTo: new Date(2021, 11, 30, 16, 32, 50),
         dateFromOptions: {
-          format: "time"
+          format: "time",
         },
         dateToOptions: {
-          format: "time"
+          format: "time",
         },
-        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2021, 11, 30, 16, 32, 50), {format: \"time\"}, {format: \"time\"})",
+        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2021, 11, 30, 16, 32, 50), {format: "time"}, {format: "time"})',
       },
       {
         dateFrom: new Date(2021, 11, 30, 8, 0, 0),
         dateTo: new Date(2021, 11, 30, 16, 0, 0),
         dateFromOptions: {
           format: "time",
-          prefix: "kl. "
+          prefix: "kl. ",
         },
         dateToOptions: {
-          format: "time"
+          format: "time",
         },
-        toString: "OsgDateTime.format(new Date(2021, 11, 30, 8, 0, 0), new Date(2021, 11, 30, 16, 0, 0), {format: \"time\", prefix: \"kl. \"}, {format: \"time\"})",
+        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 0, 0), new Date(2021, 11, 30, 16, 0, 0), {format: "time", prefix: "kl. "}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFromOptions: {
           format: "datetime",
           time: {
-            prefix: " kl. "
-          }
+            prefix: " kl. ",
+          },
         },
         dateToOptions: {
-          format: "time"
+          format: "time",
         },
-        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: \"datetime\", time: {prefix: \" kl. \"}}, {format: \"time\"})",
+        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -63,16 +63,16 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFromOptions: {
           format: "datetime",
           time: {
-            prefix: " kl. "
+            prefix: " kl. ",
           },
           localeOptions: {
-            weekday: "long"
-          }
+            weekday: "long",
+          },
         },
         dateToOptions: {
-          format: "time"
+          format: "time",
         },
-        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: \"datetime\", time: {prefix: \" kl. \"}, localeOptions: {weekday: \"long\"}}, {format: \"time\"})",
+        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}, localeOptions: {weekday: "long"}}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -80,16 +80,16 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFromOptions: {
           prefix: "Fra ",
           localeOptions: {
-            weekday: "long"
-          }
+            weekday: "long",
+          },
         },
         dateToOptions: {
           prefix: " til ",
           localeOptions: {
-            weekday: "long"
-          }
+            weekday: "long",
+          },
         },
-        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 20, 16, 0, 0), {prefix: \"Fra \", localeOptions: {weekday: \"long\"}}, {prefix: \" til \", localeOptions: {weekday: \"long\"}})",
+        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 20, 16, 0, 0), {prefix: "Fra ", localeOptions: {weekday: "long"}}, {prefix: " til ", localeOptions: {weekday: "long"}})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -97,14 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
         dateFromOptions: {
           format: "daytime",
           time: {
-            prefix: ", kl. "
-          }
+            prefix: ", kl. ",
+          },
         },
-        toString: "OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), null, {format: \"daytime\", time: {prefix: \", kl. \"}}, {})",
-      }
+        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), null, {format: "daytime", time: {prefix: ", kl. "}}, {})',
+      },
     ];
     testCases.forEach(function (testCase) {
-      if (! testCase.dateToOptions) {
+      if (!testCase.dateToOptions) {
         testCase.dateToOptions = {};
       }
 
@@ -127,16 +127,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       testCaseElement.innerHTML += "<div>en-GB: " + OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions) + "</div>";
 
-      testCaseElement.innerHTML += "<code class=\"osg-code osg-block osg-margin-top-10\">" + testCase.toString + "</code>";
+      testCaseElement.innerHTML += '<code class="osg-code osg-block osg-margin-top-10">' + testCase.toString + "</code>";
       testCasesElement.appendChild(testCaseElement);
     });
   }
 
-  new Vue({
-    el: "#date-time-vue-examples",
-    data: () => ({
-      testDate: new Date(2021, 11, 31, 23, 59, 59),
-    }),
-    template: "<div><p>Date: {{ testDate | OsgDateTimeFormat() }}, DateTime: {{ testDate | OsgDateTimeFormat(null, { format: \"datetime\" }) }}, <span v-html=\"'DoubleDate: ' + $options.filters.OsgDateTimeFormat(testDate, new Date())\"></span></p></div>",
-  });
+  if (document.getElementById("date-time-vue-examples")) {
+    new Vue({
+      el: "#date-time-vue-examples",
+      data: () => ({
+        testDate: new Date(2021, 11, 31, 23, 59, 59),
+      }),
+      template: '<div><p>Date: {{ testDate | OsgDateTimeFormat() }}, DateTime: {{ testDate | OsgDateTimeFormat(null, { format: "datetime" }) }}, <span v-html="\'DoubleDate: \' + $options.filters.OsgDateTimeFormat(testDate, new Date())"></span></p></div>',
+    });
+  }
 });
