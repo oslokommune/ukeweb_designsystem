@@ -23,53 +23,56 @@ export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
 }
 
 export function OsgSearchVue() {
-  let osgSearchPlaceholder = document.getElementById("osg-search-vue");
-  if (osgSearchPlaceholder) {
-    new Vue({
-      el: osgSearchPlaceholder,
-      components: {
-        OsgSearch,
-      },
-      data: () => ({
-        value: "h",
-        items: [],
-      }),
-      mounted() {
-        this.event("input-change", this.value);
-      },
-      methods: {
-        event(event, payload) {
-          if (event === "input-change") {
-            if (payload[0] && payload[0].toLowerCase() === "h") {
-              this.items = [
-                {
-                  text: "Hi",
-                },
-                {
-                  text: "Hello",
-                },
-                {
-                  text: "Halo",
-                  subtext: "Greetings",
-                },
-                {
-                  text: "Halo",
-                  subtext: "Greetings",
-                },
-              ];
-            } else {
-              this.items = [];
-            }
-            this.value = payload;
-          } else if (event === "item-focus") {
-            this.value = this.items[payload].text;
-          } else if (event === "itemlist-blur") {
-            this.items = [];
-          } else if (event === "submit") {
-            console.log(payload);
-          }
+  const vueElements = ["osg-search-vue-1", "osg-search-vue-2"];
+  vueElements.forEach((element) => {
+    let osgSearchPlaceholder = document.getElementById(element);
+    if (osgSearchPlaceholder) {
+      new Vue({
+        el: osgSearchPlaceholder,
+        components: {
+          OsgSearch,
         },
-      },
-    });
-  }
+        data: () => ({
+          value: "h",
+          items: [],
+        }),
+        mounted() {
+          this.event("input-change", this.value);
+        },
+        methods: {
+          event(event, payload) {
+            if (event === "input-change") {
+              if (payload[0] && payload[0].toLowerCase() === "h") {
+                this.items = [
+                  {
+                    text: "Hi",
+                  },
+                  {
+                    text: "Hello",
+                  },
+                  {
+                    text: "Halo",
+                    subtext: "Greetings",
+                  },
+                  {
+                    text: "Halo",
+                    subtext: "Greetings",
+                  },
+                ];
+              } else {
+                this.items = [];
+              }
+              this.value = payload;
+            } else if (event === "item-focus") {
+              this.value = this.items[payload].text;
+            } else if (event === "itemlist-blur") {
+              this.items = [];
+            } else if (event === "submit") {
+              console.log(payload);
+            }
+          },
+        },
+      });
+    }
+  });
 }

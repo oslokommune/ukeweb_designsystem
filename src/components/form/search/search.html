@@ -128,8 +128,8 @@
           <div class="osg-row">
             <div class="osg-row__column osg-row__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <div id="osg-search-vue">
-                  <osg-search :value="value" placeholder="Search" :items="items" id="id" aria-label="ariaLabel" label="Search"></osg-search>
+                <div id="osg-search-vue-1">
+                  <osg-search id="osg-search-1" :value="value" label="Search" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)"></osg-search>
                 </div>
               </div>
             </div>
@@ -245,8 +245,8 @@
     </div>
     <div class="osg-row__column osg-row__column--12">
       <h3 class="osg-heading-3">Vue</h3>
-      <div id="osg-search-vue">
-        <osg-search id="osg-search-1" :value="value" label="Search" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
+      <div id="osg-search-vue-2">
+        <osg-search id="osg-search-2" :value="value" label="Search" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
           <template #listitem="{ item }">
             <span class="osg-text-5">{{ item.text }}</span>
             <span v-if="item.subtext" class="osg-text-7">{{ item.subtext }}</span>
