@@ -4,7 +4,7 @@
       <label class="osg-search__label"
         >{{ label }}
         <input
-          v-on:keyup="inputChange($event)"
+          v-on:input="inputChange($event)"
           v-on:keyup.enter="submit($event.target.value)"
           v-on:keyup.down="setFocus($event)"
           v-on:keyup.up="setFocus($event)"
