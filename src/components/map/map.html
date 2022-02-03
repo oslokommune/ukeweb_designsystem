@@ -47,7 +47,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
-            <div class="osg-map" id="osg-map">
+            <div class="osg-map" id="osg-map" aria-hidden="true">
               <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
             </div>
           </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
-            <div class="osg-map" id="osg-map2">
+            <div class="osg-map" id="osg-map2" aria-hidden="true">
               <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
             </div>
           </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
-            <div class="osg-map" id="osg-map3">
+            <div class="osg-map" id="osg-map3" aria-hidden="true">
               <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
             </div>
           </div>
@@ -107,7 +107,7 @@
           <h2 class="osg-heading-3">Single marker with automatic popup</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map4">
+          <div class="osg-map" id="osg-map4" aria-hidden="true">
             <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
           </div>
         </div>
@@ -115,7 +115,7 @@
           <h2 class="osg-heading-3">Markers with clustering</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map5">
+          <div class="osg-map" id="osg-map5" aria-hidden="true">
             <osg-map ref="osgMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
           </div>
         </div>
@@ -123,7 +123,7 @@
           <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map6">
+          <div class="osg-map" id="osg-map6" aria-hidden="true">
             <osg-map ref="osgMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
           </div>
         </div>
@@ -131,7 +131,7 @@
           <h2 class="osg-heading-3">Reactivity points</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map7">
+          <div class="osg-map" id="osg-map7" aria-hidden="true">
             <osg-map ref="osgMap7" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="points" />
           </div>
         </div>
@@ -139,7 +139,7 @@
           <h2 class="osg-heading-3">Reactivity geoJson</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map8">
+          <div class="osg-map" id="osg-map8" aria-hidden="true">
             <osg-map ref="osgMap8" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJson" />
           </div>
         </div>
@@ -147,7 +147,7 @@
           <h2 class="osg-heading-3">Reactivity state</h2>
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-map" id="osg-map9">
+          <div class="osg-map" id="osg-map9" aria-hidden="true">
             <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
           </div>
         </div>
