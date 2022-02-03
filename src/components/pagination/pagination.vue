@@ -1,17 +1,17 @@
 <template>
-  <nav class="osg-pagination" :aria-label="'Page ' + currentIndex">
+  <nav class="osg-pagination" :aria-label="ariaLabel">
     <button class="osg-pagination__previous" v-show="showArrows && currentIndex > 1" @click.prevent="paginate(currentIndex - 1)">
-      <span class="osg-sr-only">{{ i18n.previousBtn }}</span>
+      <span class="osg-sr-only">{{ i18n.previousBtn }} {{ currentIndex - 1 }}</span>
     </button>
     <template v-for="index in totalPages">
-      <button v-if="showItem(index)" class="osg-pagination__item" v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': index >= 100 }" :key="index" :disabled="index === currentIndex" @click.prevent="paginate(index)">
-        <span class="osg-sr-only">{{ i18n.showPage }} </span>
+      <button v-if="showItem(index)" class="osg-pagination__item" v-bind:class="{ 'osg-pagination__item--current': index === currentIndex, 'osg-pagination__item--rectangle': index >= 100 }" :key="index" :disabled="index === currentIndex && disableCurrentIndexBtn" @click.prevent="paginate(index)">
+        <span class="osg-sr-only">{{ i18n.showPage }} {{ index }}</span>
         {{ index }}
       </button>
-      <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true"> &hellip; </span>
+      <span v-else-if="showSpacer(index)" :key="index" class="osg-pagination__spacer" aria-hidden="true">&hellip;</span>
     </template>
     <button class="osg-pagination__next" v-show="showArrows && currentIndex < totalPages" @click.prevent="paginate(currentIndex + 1)">
-      <span class="osg-sr-only">{{ i18n.nextBtn }}</span>
+      <span class="osg-sr-only">{{ i18n.nextBtn }} {{ currentIndex + 1 }}</span>
     </button>
   </nav>
 </template>
@@ -20,6 +20,10 @@
 export default {
   name: "OsgPagination",
   props: {
+    ariaLabel: {
+      type: String,
+      required: true,
+    },
     totalPages: {
       type: Number,
       required: true,
@@ -27,6 +31,10 @@ export default {
     currentIndex: {
       type: Number,
       required: true,
+    },
+    disableCurrentIndexBtn: {
+      type: Boolean,
+      default: true,
     },
     showArrows: {
       type: Boolean,

@@ -10,7 +10,7 @@
           v-on:keyup.up="setFocus($event)"
           v-on:focus="resetIndex()"
           :value="value"
-          :aria-expanded="items.length"
+          :aria-expanded="items.length ? 'true' : 'false'"
           class="osg-search__input osg-margin-top-5"
           type="search"
           ref="input"

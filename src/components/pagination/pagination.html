@@ -52,7 +52,7 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="vue-pagination">
-            <osg-pagination :current-index="currentIndex" :limit="limit" :total-pages="totalPages" v-on:paginate="paginate" />
+            <osg-pagination aria-label="Pagination demo" :disable-current-index-btn="false" :current-index="currentIndex" :limit="limit" :total-pages="totalPages" v-on:paginate="paginate" />
           </div>
         </div>
       </div>

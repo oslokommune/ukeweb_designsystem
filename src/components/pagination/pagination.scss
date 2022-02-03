@@ -58,6 +58,13 @@
         text-decoration: underline !important;
         color: colors.$white !important;
       }
+
+      &:disabled {
+        color: colors.$white !important;
+        background: colors.$blue-dark !important;
+        border: 2px solid colors.$blue-dark !important;
+        text-decoration: none !important;
+      }
     }
 
     &--rectangle {
