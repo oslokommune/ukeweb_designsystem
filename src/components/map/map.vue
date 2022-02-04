@@ -51,6 +51,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    loadMap: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   data: () => ({
@@ -59,6 +63,7 @@ export default {
     mapObject: null,
     mapReady: false,
     showPopups: true,
+    mapLoaded: false,
   }),
 
   computed: {
@@ -97,46 +102,19 @@ export default {
   },
 
   mounted() {
-    this.mapObject = new maplibregl.Map({
-      container: this.$refs.mapContainer,
-      style: this.mapStyle + "?key=" + this.apiKey,
-      locale: this.locale,
-      center: [this.state.longitude, this.state.latitude],
-      zoom: this.state.zoom,
-      dragRotate: false,
-    });
-
-    let nav = new maplibregl.NavigationControl({
-      showCompass: false,
-    });
-
-    let scale = new maplibregl.ScaleControl({
-      maxWidth: 80,
-      unit: "metric",
-    });
-
-    this.mapObject.addControl(nav, "top-left");
-    this.mapObject.addControl(scale);
-    this.mapObject.scrollZoom.disable();
-
-    this.showPopups = this.state.showPopups;
-
-    var _this = this; // Scope this, bobby!
-
-    this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
-      if (error) throw error;
-      _this.mapObject.addImage("location-pin-filled", image);
-    });
-
-    this.mapObject.on("load", () => {
-      _this.mapReady = true;
-
-      // If there is data available, show it now plz.
-      _this.populateMap();
-    });
+    if (this.loadMap) {
+      this.mapLoad();
+    }
   },
 
   watch: {
+    loadMap: {
+      handler(newValue) {
+        if (newValue) {
+          this.mapLoad();
+        }
+      },
+    },
     pointsGeoJson: {
       deep: true,
       handler() {
@@ -166,6 +144,50 @@ export default {
   },
 
   methods: {
+    mapLoad() {
+      if (!this.mapLoaded) {
+        this.mapLoaded = true;
+
+        this.mapObject = new maplibregl.Map({
+          container: this.$refs.mapContainer,
+          style: this.mapStyle + "?key=" + this.apiKey,
+          locale: this.locale,
+          center: [this.state.longitude, this.state.latitude],
+          zoom: this.state.zoom,
+          dragRotate: false,
+        });
+
+        let nav = new maplibregl.NavigationControl({
+          showCompass: false,
+        });
+
+        let scale = new maplibregl.ScaleControl({
+          maxWidth: 80,
+          unit: "metric",
+        });
+
+        this.mapObject.addControl(nav, "top-left");
+        this.mapObject.addControl(scale);
+        this.mapObject.scrollZoom.disable();
+
+        this.showPopups = this.state.showPopups;
+
+        var _this = this; // Scope this, bobby!
+
+        this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
+          if (error) throw error;
+          _this.mapObject.addImage("location-pin-filled", image);
+        });
+
+        this.mapObject.on("load", () => {
+          _this.mapReady = true;
+
+          // If there is data available, show it now plz.
+          _this.populateMap();
+        });
+      }
+    },
+
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let mapElement7 = document.getElementById("osg-map7");
   let mapElement8 = document.getElementById("osg-map8");
   let mapElement9 = document.getElementById("osg-map9");
+  let mapElement10 = document.getElementById("osg-map10");
 
   if (mapElement) {
     Vue.component("osg-map", OsgMap);
@@ -87,6 +88,16 @@ document.addEventListener("DOMContentLoaded", function () {
           this.state = { longitude: 10.64981, latitude: 59.915008, zoom: 15, showPopups: true };
         }, 15000);
       },
+    });
+  }
+
+  if (mapElement10) {
+    Vue.component("osg-map", OsgMap);
+    var app10 = new Vue({
+      el: mapElement10,
+      data: () => ({
+        loadMap: false,
+      }),
     });
   }
 });
