@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       el: mapElement10,
       data: () => ({
         loadMap: false,
+        state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true },
       }),
     });
   }

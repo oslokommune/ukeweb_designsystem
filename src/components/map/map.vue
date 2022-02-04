@@ -118,26 +118,32 @@ export default {
     pointsGeoJson: {
       deep: true,
       handler() {
-        this.clearMapAndData();
-        this.populateMap();
+        if (this.loadMap === true) {
+          this.clearMapAndData();
+          this.populateMap();
+        }
       },
     },
     geoJson: {
       deep: true,
       handler() {
-        this.clearMapAndData();
-        this.populateMap();
+        if (this.loadMap === true) {
+          this.clearMapAndData();
+          this.populateMap();
+        }
       },
     },
     state: {
       deep: true,
       handler() {
-        this.mapObject.setCenter([this.state.longitude, this.state.latitude]);
-        this.mapObject.setZoom(this.state.zoom);
-        if (this.state.showPopups !== this.showPopups) {
-          this.showPopups = this.state.showPopups;
-          this.clearMapAndData();
-          this.populateMap();
+        if (this.loadMap === true) {
+          this.mapObject.setCenter([this.state.longitude, this.state.latitude]);
+          this.mapObject.setZoom(this.state.zoom);
+          if (this.state.showPopups !== this.showPopups) {
+            this.showPopups = this.state.showPopups;
+            this.clearMapAndData();
+            this.populateMap();
+          }
         }
       },
     },
