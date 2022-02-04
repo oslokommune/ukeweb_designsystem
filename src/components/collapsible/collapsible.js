@@ -5,24 +5,27 @@ function triggerIterator(callback) {
   });
 }
 
-function handleClick(e) {
-  e.preventDefault();
+function handleCollapsible(e) {
+  toggleCollapsible(e);
 
-  const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
-  if (collapsible) {
-    collapsible.classList.toggle("osg-collapsible-content--collapsed");
+  let toggleEvent = new CustomEvent("OsgCollapsibleToggle", {
+    detail: {
+      target: e.target,
+      expanded: e.target.classList.contains("osg-collapsible-trigger--expanded")
+    }
+  });
 
-    e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
-    e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-  }
+  e.target.dispatchEvent(toggleEvent);
 }
 
-function onEnterPress(e) {
+function toggleCollapsible(e) {
   e.preventDefault();
+
   const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
 
-  if (e.code === 'Enter' && collapsible) {
+  if ((e.code && e.code === 'Enter' && collapsible) || (!e.code && collapsible) ){
     collapsible.classList.toggle("osg-collapsible-content--collapsed");
+
     e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
     e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
   }
@@ -62,28 +65,28 @@ export const OsgCollapsible = {
   },
 
   bindElement(element) {
-    element.addEventListener("click", handleClick);
-    element.addEventListener("keypress", onEnterPress);
+    element.addEventListener("click", handleCollapsible);
+    element.addEventListener("keyup", handleCollapsible);
   },
 
   unbindElement(element) {
-    element.removeEventListener("click", handleClick);
-    element.removeEventListener("keypress", onEnterPress);
+    element.removeEventListener("click", handleCollapsible);
+    element.removeEventListener("keyup", handleCollapsible);
   },
 
   bindAll() {
     window.addEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
-      item.addEventListener("click", handleClick);
-      item.addEventListener("keypress", onEnterPress);
+      item.addEventListener("click", handleCollapsible);
+      item.addEventListener("keyup", handleCollapsible);
     });
   },
 
   unbindAll() {
     window.removeEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
-      item.removeEventListener("click", handleClick);
-      item.removeEventListener("keypress", onEnterPress);
+      item.removeEventListener("click", handleCollapsible);
+      item.removeEventListener("keyup", handleCollapsible);
     });
   },
 };
