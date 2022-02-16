@@ -36,6 +36,7 @@ export default {
           latitude: 59.913008,
           zoom: 12,
           showPopups: true,
+          autoFitToBounds: true,
         };
       },
     },
@@ -212,20 +213,14 @@ export default {
 
         if (this.geoJson !== null) {
           if (!this.clusteredPoints) {
-            this.mapObject.addSource("geoJson", {
-              type: "geojson",
-              data: this.geoJson,
-            });
-
-            this.dataSourceIds.push("geoJson");
-            this.$_addPolygonsLayer("geoJson-polygons", "geoJson");
-            this.$_addLinesLayer("geoJson-lines", "geoJson");
-            this.$_addPointsLayer("geoJson-points", "geoJson");
-
-            if (this.showPopups) {
-              this.$_addPopupsFromProperties("geoJson-polygons");
-              this.$_addPopupsFromProperties("geoJson-lines");
-              this.$_addPopupsFromProperties("geoJson-points");
+            if (typeof this.geoJson === "string") {
+              fetch(this.geoJson)
+                .then((response) => response.json())
+                .then((data) => {
+                  this.$_addGeoJsonToMap(data);
+                });
+            } else {
+              this.$_addGeoJsonToMap(this.geoJson);
             }
           } else {
             if (typeof this.geoJson === "string") {
@@ -259,8 +254,94 @@ export default {
       this.layerIds = [];
       this.dataSourceIds = [];
     },
+    getBoundingBox(geoJson) {
+      if (!this.state.autoFitToBounds) {
+        return;
+      }
+
+      if (!geoJson.hasOwnProperty("type")) {
+        return;
+      }
+
+      let coordinates, boundingBox;
+
+      coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
+      boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
+      return coordinates.reduce((previous, coordinate) => {
+        return [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])];
+      }, boundingBox);
+    },
+    setBoundingBox(boundingBox) {
+      if (boundingBox) {
+        this.mapObject.fitBounds(boundingBox, {
+          padding: 30,
+          maxZoom: 16,
+        });
+      }
+    },
+    // Private/protected method
+    $_getCoordinatesForGeoJsonObject(geoJson) {
+      let coordinates;
+      if (geoJson.type === "Point") {
+        coordinates = [geoJson.coordinates];
+      } else if (geoJson.type === "LineString" || geoJson.type === "MultiPoint") {
+        coordinates = geoJson.coordinates;
+      } else if (geoJson.type === "Polygon" || geoJson.type === "MultiLineString") {
+        coordinates = geoJson.coordinates.reduce((part, partialLine) => {
+          return part.concat(partialLine);
+        }, []);
+      } else if (geoJson.type === "MultiPolygon") {
+        coordinates = geoJson.coordinates.reduce((part, polygon) => {
+          return part.concat(
+            polygon.reduce((points, point) => {
+              return points.concat(point);
+            }, [])
+          );
+        }, []);
+      } else if (geoJson.type === "Feature") {
+        coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson.geometry);
+      } else if (geoJson.type === "GeometryCollection") {
+        var _this = this; // Scope this, bobby!
+        coordinates = geoJson.geometries.reduce((part, geometryCollection) => {
+          return part.concat(_this.$_getCoordinatesForGeoJsonObject(geometryCollection));
+        }, []);
+      } else if (geoJson.type === "FeatureCollection") {
+        var _this = this; // Scope this, bobby!
+        coordinates = geoJson.features.reduce((part, featureCollection) => {
+          return part.concat(_this.$_getCoordinatesForGeoJsonObject(featureCollection));
+        }, []);
+      }
+      return coordinates;
+    },
+    // Private/protected method
+    $_addGeoJsonToMap(geoJson) {
+      let boundingBox = this.getBoundingBox(geoJson);
+      if (boundingBox) {
+        this.setBoundingBox(boundingBox);
+      }
+      this.mapObject.addSource("geoJson", {
+        type: "geojson",
+        data: geoJson,
+      });
+
+      this.dataSourceIds.push("geoJson");
+      this.$_addPolygonsLayer("geoJson-polygons", "geoJson");
+      this.$_addLinesLayer("geoJson-lines", "geoJson");
+      this.$_addPointsLayer("geoJson-points", "geoJson");
+
+      if (this.showPopups) {
+        this.$_addPopupsFromProperties("geoJson-polygons");
+        this.$_addPopupsFromProperties("geoJson-lines");
+        this.$_addPopupsFromProperties("geoJson-points");
+      }
+    },
     // Private/protected method
     $_splitClusterDataAndAddToMap(geoJson) {
+      let boundingBox = this.getBoundingBox(geoJson);
+      if (boundingBox) {
+        this.setBoundingBox(boundingBox);
+      }
+
       // Large data sets fails without and error message when points and other shapes are mixed in the same data source.
       // Therefore we split points and features into two separate data sets.
       let points = {

@@ -17,6 +17,12 @@
               FeatureCollection, with the following feature types: Polygon, LineString and Point.<br /><br />
               It does not support GeometryCollection or the Multi*-variants of the feature types.
             </p>
+            <h3 class="osg-heading-6 osg-margin-top-10">Fit map to bounds of data</h3>
+            <p class="osg-paragraph">
+              The map automatically zooms and pans to fit the maximum bounds of the given GeoJSON-data<br />
+              This overrides the center point and zoom level in <code>state</code>.<br />
+              To disable this, set the property <code>autoFitToBounds</code> in the <code>state</code> to <code>false</code>.
+            </p>
             <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
             <p class="osg-paragraph">
               Popups appear on click on a feature if the following conditions are met<br />
@@ -58,7 +64,7 @@
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-devtools-code">
             <div class="osg-map" id="osg-map2" aria-hidden="true">
-              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
+              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
             </div>
           </div>
         </div>
@@ -76,24 +82,6 @@
             </div>
           </div>
         </div>
-        <!--
-        <div class="osg-row__column osg-row__column--12">
-          <h2 class="osg-heading-3">Static map</h2>
-        </div>
-        <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
-          <div class="osg-devtools-code">
-            <div class="osg-row">
-              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-                <h2 class="osg-heading-2">Lorem ipsum dolor sit amet</h2>
-                <p class="osg-paragraph">Vivamus aliquam sagittis lacus, eu porta elit molestie sit amet. Cras ut turpis in nibh imperdiet aliquam et et neque. In ut sapien in ex pretium sollicitudin ut sed augue. Duis lacus velit, ornare et tortor nec, laoreet laoreet orci.</p>
-              </div>
-              <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
-                <img class="osg-image" src="https://api.maptiler.com/maps/79adf164-6825-4f19-8239-52582627143a/static/10.7391,59.9149,16/500x500.png?key=VW1Tn0fx1t3b6t0CHP6Q&markers=icon:https%3A%2F%2Fukeweb-public.s3.eu-central-1.amazonaws.com%2Fmap%2Flocation-pin-filled.png|anchor:center|10.7391,59.9149" alt="Kartutsnitt" />
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
       </div>
     </div>
   </div>
@@ -116,7 +104,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map5" aria-hidden="true">
-            <osg-map ref="osgMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
+            <osg-map ref="osgMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">
