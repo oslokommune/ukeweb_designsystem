@@ -154,47 +154,17 @@ export default {
     mapLoad() {
       if (!this.mapLoaded) {
         this.mapLoaded = true;
-
-        this.mapObject = new maplibregl.Map({
-          container: this.$refs.mapContainer,
-          style: this.mapStyle + "?key=" + this.apiKey,
-          locale: this.locale,
-          center: [this.state.longitude, this.state.latitude],
-          zoom: this.state.zoom,
-          dragRotate: false,
-        });
-
-        let nav = new maplibregl.NavigationControl({
-          showCompass: false,
-        });
-
-        let scale = new maplibregl.ScaleControl({
-          maxWidth: 80,
-          unit: "metric",
-        });
-
-        this.mapObject.addControl(nav, "top-left");
-        this.mapObject.addControl(scale);
-        this.mapObject.scrollZoom.disable();
-
-        this.showPopups = this.state.showPopups;
-
-        var _this = this; // Scope this, bobby!
-
-        this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
-          if (error) throw error;
-          _this.mapObject.addImage("location-pin-filled", image);
-        });
-
-        this.mapObject.on("load", () => {
-          _this.mapReady = true;
-
-          // If there is data available, show it now plz.
-          _this.populateMap();
-        });
+        if (typeof this.geoJson === "string") {
+          fetch(this.geoJson)
+            .then((response) => response.json())
+            .then((data) => {
+              this.$_createMapObject(data);
+            });
+        } else {
+          this.$_createMapObject(this.geoJson);
+        }
       }
     },
-
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
@@ -278,6 +248,70 @@ export default {
           maxZoom: 16,
         });
       }
+    },
+    // Private/protected method
+    $_createMapObject(geoJson) {
+      let mapConfig = {
+        container: this.$refs.mapContainer,
+        style: this.mapStyle + "?key=" + this.apiKey,
+        locale: this.locale,
+        dragRotate: false,
+      };
+
+      if (geoJson && this.state.autoFitToBounds) {
+        let boundingBox = this.getBoundingBox(geoJson);
+        if (boundingBox) {
+          mapConfig = {
+            ...mapConfig,
+            ...{
+              bounds: boundingBox,
+              fitBoundsOptions: {
+                padding: 30,
+                maxZoom: 16,
+              },
+            },
+          };
+        }
+      } else {
+        mapConfig = {
+          ...mapConfig,
+          ...{
+            center: [this.state.longitude, this.state.latitude],
+            zoom: this.state.zoom,
+          },
+        };
+      }
+
+      this.mapObject = new maplibregl.Map(mapConfig);
+
+      let nav = new maplibregl.NavigationControl({
+        showCompass: false,
+      });
+
+      let scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: "metric",
+      });
+
+      this.mapObject.addControl(nav, "top-left");
+      this.mapObject.addControl(scale);
+      this.mapObject.scrollZoom.disable();
+
+      this.showPopups = this.state.showPopups;
+
+      var _this = this; // Scope this, bobby!
+
+      this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
+        if (error) throw error;
+        _this.mapObject.addImage("location-pin-filled", image);
+      });
+
+      this.mapObject.on("load", () => {
+        _this.mapReady = true;
+
+        // If there is data available, show it now plz.
+        _this.populateMap();
+      });
     },
     // Private/protected method
     $_getCoordinatesForGeoJsonObject(geoJson) {

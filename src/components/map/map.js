@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var app7 = new Vue({
       el: mapElement7,
       data: () => ({
-        points: [{ latitude: 10.74981, longitude: 59.913008, heading: "Bob", description: "the builder!" }],
+        points: [{ longitude: 10.74981, latitude: 59.913008, heading: "Bob", description: "the builder!" }],
       }),
 
       mounted() {
         setTimeout(() => {
-          this.points.push({ latitude: 10.73981, longitude: 59.910008, heading: "Bar", description: "the builder!" });
+          this.points.push({ longitude: 10.73981, latitude: 59.910008, heading: "Bar", description: "the builder!" });
         }, 5000);
       },
     });

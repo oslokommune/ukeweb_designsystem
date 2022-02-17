@@ -17,10 +17,11 @@
               FeatureCollection, with the following feature types: Polygon, LineString and Point.<br /><br />
               It does not support GeometryCollection or the Multi*-variants of the feature types.
             </p>
-            <h3 class="osg-heading-6 osg-margin-top-10">Fit map to bounds of data</h3>
+            <h3 class="osg-heading-6 osg-margin-top-10">Fit map to bounds of GeoJSON-data</h3>
             <p class="osg-paragraph">
-              The map automatically zooms and pans to fit the maximum bounds of the given GeoJSON-data<br />
-              This overrides the center point and zoom level in <code>state</code>.<br />
+              The map automatically sets a center point and zooms to fit the maximum bounds of the given GeoJSON-data<br />
+              If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.<br />
+              This behvaiour overrides the center point and zoom level in <code>state</code>.<br />
               To disable this, set the property <code>autoFitToBounds</code> in the <code>state</code> to <code>false</code>.
             </p>
             <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
@@ -136,7 +137,7 @@
         </div>
         <div class="osg-row__column osg-row__column--12 osg-row__column--12-breakpoint-medium">
           <div class="osg-map" id="osg-map9" aria-hidden="true">
-            <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
+            <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
           </div>
         </div>
         <div class="osg-row__column osg-row__column--12">
@@ -149,7 +150,7 @@
               <span class="osg-checkbox__checkmark"></span>
               <span class="osg-checkbox__text">Load map</span>
             </label>
-            <osg-map :load-map="loadMap" :state="state" :points="[{ latitude: 10.74981, longitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" ref="osgMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" />
+            <osg-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" ref="osgMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" />
           </div>
         </div>
       </div>
