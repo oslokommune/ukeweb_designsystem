@@ -14,42 +14,47 @@
   }
 
   h2 {
-    @extend %osg-heading-2, %osg-margin-bottom-15;
+    @extend %osg-heading-3, %osg-margin-bottom-5, %osg-margin-bottom-10-breakpoint-medium;
   }
 
   h3 {
-    @extend %osg-heading-3, %osg-margin-bottom-10;
+    @extend %osg-heading-5, %osg-margin-bottom-5, %osg-margin-bottom-10-breakpoint-medium;
   }
 
   h4 {
-    @extend %osg-heading-4, %osg-margin-bottom-10;
-  }
-
-  h5 {
-    @extend %osg-heading-5, %osg-margin-bottom-10;
-  }
-
-  h6 {
     @extend %osg-heading-6, %osg-margin-bottom-5;
   }
 
   p {
-    @extend .osg-paragraph, %osg-margin-bottom-15;
+    @extend .osg-paragraph;
   }
 
-  p + h3 {
-    @extend %osg-margin-top-50;
+  p + p {
+    @extend %osg-margin-top-20;
   }
 
-  a {
+  p + h2 {
+    @extend %osg-margin-top-30, %osg-margin-top-50-breakpoint-medium;
+  }
+
+  p + h3,
+  p + h4 {
+    @extend %osg-margin-top-20;
+  }
+
+  h2 + h3 {
+    @extend %osg-margin-top-20;
+  }
+
+  a:not(.osg-button) {
     @extend .osg-link;
   }
 
   ul {
-    @extend .osg-unordered-list, %osg-margin-bottom-15;
+    @extend .osg-unordered-list, %osg-margin-vertical-20;
+    ul,
     ul ul {
-      @extend %osg-padding-top-10;
-      @extend %osg-margin-bottom-none;
+      @extend %osg-margin-vertical-none;
       padding-left: 1.25rem;
     }
     li + li {
@@ -58,10 +63,10 @@
   }
 
   ol {
-    @extend .osg-ordered-list, %osg-margin-bottom-15;
+    @extend .osg-ordered-list, %osg-margin-vertical-20;
+    ol,
     ol ol {
-      @extend %osg-padding-top-10;
-      @extend %osg-margin-bottom-none;
+      @extend %osg-margin-vertical-none;
       padding-left: 1.25rem;
     }
     li + li {
@@ -70,11 +75,11 @@
   }
 
   blockquote {
-    @extend .osg-blockquote, %osg-margin-bottom-15;
+    @extend .osg-blockquote, %osg-margin-vertical-30;
   }
 
   table {
-    @extend .osg-table;
+    @extend .osg-table, %osg-margin-vertical-30;
 
     caption {
       @extend .osg-table__caption;
