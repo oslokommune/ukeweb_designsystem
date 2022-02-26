@@ -38,10 +38,9 @@ $columns: (
   }
 
   &--gapless {
-    margin: 0;
+    margin: 0 !important;
 
     & > .osg-row__column {
-      margin: 0;
       padding: 0 !important;
     }
   }
