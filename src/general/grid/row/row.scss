@@ -2,8 +2,8 @@
 @use "system/breakpoints";
 @use "system/spacing";
 
-$column-gap: math.div(spacing.$space-20, 2) !default;
-$column-gap-large: math.div(spacing.$space-30, 2) !default;
+$column-gap: 8px !default;
+$column-gap-large: 15px !default;
 
 $columns: (
   1: 8.3333%,
@@ -29,24 +29,20 @@ $columns: (
     margin: -#{$column-gap-large};
   }
 
+  &:not(:last-child) {
+    margin-bottom: $column-gap;
+
+    @include breakpoints.medium {
+      margin-bottom: $column-gap-large;
+    }
+  }
+
   &--gapless {
     margin: 0;
 
     & > .osg-row__column {
       margin: 0;
       padding: 0 !important;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: $column-gap;
-
-      @include breakpoints.medium {
-        margin-bottom: $column-gap-large;
-      }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 
@@ -55,11 +51,6 @@ $columns: (
     flex: 1 1 0;
     max-width: 100%;
     padding: $column-gap;
-
-    &--stack {
-      padding-top: $column-gap * 2;
-      padding-bottom: $column-gap * 2;
-    }
 
     @include breakpoints.medium {
       padding: $column-gap-large;
