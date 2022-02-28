@@ -11,8 +11,8 @@ function handleCollapsible(e) {
   let toggleEvent = new CustomEvent("OsgCollapsibleToggle", {
     detail: {
       target: e.target,
-      expanded: e.target.classList.contains("osg-collapsible-trigger--expanded")
-    }
+      expanded: e.target.classList.contains("osg-collapsible-trigger--expanded"),
+    },
   });
 
   e.target.dispatchEvent(toggleEvent);
@@ -23,7 +23,7 @@ function toggleCollapsible(e) {
 
   const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
 
-  if ((e.code && e.code === 'Enter' && collapsible) || (!e.code && collapsible) ){
+  if ((e.code && e.code === "Enter" && collapsible) || (!e.code && collapsible)) {
     collapsible.classList.toggle("osg-collapsible-content--collapsed");
 
     e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
@@ -66,19 +66,19 @@ export const OsgCollapsible = {
 
   bindElement(element) {
     element.addEventListener("click", handleCollapsible);
-    element.addEventListener("keyup", handleCollapsible);
+    element.addEventListener("keypress", handleCollapsible);
   },
 
   unbindElement(element) {
     element.removeEventListener("click", handleCollapsible);
-    element.removeEventListener("keyup", handleCollapsible);
+    element.removeEventListener("keypress", handleCollapsible);
   },
 
   bindAll() {
     window.addEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
       item.addEventListener("click", handleCollapsible);
-      item.addEventListener("keyup", handleCollapsible);
+      item.addEventListener("keypress", handleCollapsible);
     });
   },
 
@@ -86,7 +86,7 @@ export const OsgCollapsible = {
     window.removeEventListener("OsgBreakpointChange", handleBreakpointChange);
     triggerIterator((item) => {
       item.removeEventListener("click", handleCollapsible);
-      item.removeEventListener("keyup", handleCollapsible);
+      item.removeEventListener("keypress", handleCollapsible);
     });
   },
 };
