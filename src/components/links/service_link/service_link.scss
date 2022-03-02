@@ -13,8 +13,11 @@
   &__icon {
     @extend %osg-heading-3, %osg-margin-right-15;
 
+    line-height: 1.875rem !important;
+
     > * {
-      line-height: 1.2em !important;
+      line-height: 1em !important;
+      margin-top: 1px;
     }
   }
 
