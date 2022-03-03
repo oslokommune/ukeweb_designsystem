@@ -1,0 +1,89 @@
+@use "system/breakpoints";
+@use "system/grid";
+
+.osg-grid {
+  display: grid;
+  grid-template-columns: repeat(#{grid.$columns}, 1fr);
+
+  &--inline {
+    display: inline-grid;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: grid.$content-width;
+  }
+
+  &--gap {
+    column-gap: grid.$gutter;
+    row-gap: grid.$gutter;
+
+    @include breakpoints.medium {
+      column-gap: grid.$gutter-large;
+      row-gap: grid.$gutter-large;
+    }
+  }
+
+  &--gutter {
+    margin-left: grid.$gutter;
+    margin-right: grid.$gutter;
+
+    @include breakpoints.medium {
+      margin-left: grid.$gutter-large;
+      margin-right: grid.$gutter-large;
+    }
+  }
+
+  @for $i from 1 through grid.$columns {
+    &__column--#{$i} {
+      grid-column: span #{$i} / span #{$i};
+    }
+  }
+
+  @for $i from 1 through grid.$columns + 1 {
+    &__column--start-#{$i} {
+      grid-column-start: #{$i};
+    }
+
+    &__column--end-#{$i} {
+      grid-column-end: #{$i};
+    }
+  }
+
+  @include breakpoints.medium {
+    @for $i from 1 through grid.$columns {
+      &__column--#{$i}-medium {
+        grid-column: span #{$i};
+      }
+    }
+
+    @for $i from 1 through grid.$columns + 1 {
+      &__column--start-#{$i}-medium {
+        grid-column-start: #{$i};
+      }
+
+      &__column--end-#{$i}-medium {
+        grid-column-end: #{$i};
+      }
+    }
+  }
+
+  @include breakpoints.large {
+    @for $i from 1 through grid.$columns {
+      &__column--#{$i}-large {
+        grid-column: span #{$i};
+      }
+    }
+
+    @for $i from 1 through grid.$columns + 1 {
+      &__column--start-#{$i}-large {
+        grid-column-start: #{$i};
+      }
+
+      &__column--end-#{$i}-large {
+        grid-column-end: #{$i};
+      }
+    }
+  }
+}

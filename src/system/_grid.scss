@@ -1,5 +1,10 @@
 @use "system/spacing";
 
+// Number of grid columns
+$columns: 12;
+// Size of gap and gutter on small breakpoint
 $gutter: spacing.$space-15 !default;
+// Size of gap and gutter on medium and up breakpoint
 $gutter-large: spacing.$space-30 !default;
+// Width of content area when using `grid--center` modifier
 $content-width: 1236px;
