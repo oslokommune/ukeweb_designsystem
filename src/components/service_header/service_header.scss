@@ -1,12 +1,45 @@
+@use "system/breakpoints";
+@use "system/grid";
 @use "system/typography";
 @use "system/spacing";
 
 .osg-service-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: grid.$gutter-large;
+  row-gap: grid.$gutter-large;
+
+  &__main {
+    grid-column: span 12;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include breakpoints.medium {
+      grid-column: span 8;
+    }
+  }
+
   &__heading {
     @extend %osg-heading-1, %osg-margin-bottom-15;
   }
 
   &__lead {
     @extend %osg-text-1;
+  }
+
+  &__image {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 1;
+
+    @include breakpoints.medium {
+      grid-column: span 4;
+      grid-row-start: auto;
+    }
+
+    @include breakpoints.large {
+      grid-column: span 3 / -1;
+    }
   }
 }

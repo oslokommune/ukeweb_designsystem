@@ -3,10 +3,18 @@
 @use "system/spacing";
 
 .osg-header {
-  @extend %osg-padding-left-none;
-  @extend %osg-padding-right-20;
-  @extend %osg-padding-left-30-breakpoint-large;
-  @extend %osg-padding-right-50-breakpoint-large;
+  @extend %osg-padding-left-none, %osg-padding-right-20, %osg-padding-left-30-breakpoint-large, %osg-padding-right-50-breakpoint-large;
+
   background-color: colors.$white;
   border-bottom: 1px solid colors.$gray;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+  &__logo {
+    grid-column: span 1;
+  }
+
+  &__content {
+    grid-column: span 1;
+  }
 }
