@@ -173,13 +173,8 @@
 }
 
 .osg-navbar-menu {
-  @extend %osg-padding-vertical-30;
   background-color: colors.$white;
   display: none;
-
-  @include breakpoints.medium {
-    padding-left: 0;
-  }
 
   .osg-icon {
     font-size: 1.5rem;
@@ -192,12 +187,11 @@
     background-color: unset;
     border: none;
     color: colors.$blue-dark;
-    padding-left: 0;
     cursor: pointer;
     @extend %osg-heading-5;
-    @extend %osg-none-breakpoint-medium;
-
     @extend %osg-margin-bottom-15;
+    @extend %osg-padding-horizontal-none;
+    @extend %osg-none-breakpoint-medium;
 
     span {
       pointer-events: none;
@@ -207,8 +201,8 @@
 
   &__heading {
     display: none;
-    @extend %osg-heading-5;
     @extend %osg-block-breakpoint-medium;
+    @extend %osg-heading-5;
   }
 
   &__list-animate {
@@ -269,28 +263,22 @@
   }
 
   &__services {
+    padding: spacing.$space-30 spacing.$space-none spacing.$space-15;
     @include breakpoints.medium {
-      padding-left: spacing.$space-50;
-      padding-right: spacing.$space-50;
-    }
-
-    & .osg-navbar-menu__heading {
-      margin-left: spacing.$space-15 !important;
+      padding: spacing.$space-30 spacing.$space-50 spacing.$space-50 spacing.$space-50;
     }
   }
 
   &__services-list {
     background-color: colors.$gray;
-    margin-left: 0;
-    margin-right: 0;
+    padding: spacing.$space-none spacing.$space-10;
 
     @include breakpoints.medium {
       background-color: unset;
       hyphens: auto;
-      margin-bottom: spacing.$space-15;
-      margin-top: spacing.$space-15;
-      padding-left: 0;
       flex-wrap: wrap;
+      margin-top: spacing.$space-30;
+      padding: spacing.$space-none;
     }
 
     li:last-child {
@@ -303,75 +291,46 @@
   }
 
   &__categories {
-    padding-bottom: spacing.$space-15;
-    padding-top: spacing.$space-5;
+    padding: spacing.$space-5 spacing.$space-none spacing.$space-15;
 
     ul {
       background-color: colors.$gray;
+      li {
+        margin-left: spacing.$space-10;
+      }
     }
 
     @include breakpoints.medium {
       background-color: colors.$gray;
-      margin-left: 0;
-      margin-right: 0;
-      padding-top: spacing.$space-15;
-      padding-left: spacing.$space-50;
-      padding-right: spacing.$space-50;
+      padding: spacing.$space-50;
+
       ul {
-        margin-top: spacing.$space-15;
-        padding-left: 0;
-        padding-bottom: 0;
+        margin-top: spacing.$space-30;
+        margin-bottom: spacing.$space-30;
         li {
-          margin-bottom: spacing.$space-30;
+          margin-left: spacing.$space-none;
         }
       }
     }
   }
 
   &__footer {
-    display: flex;
-    justify-content: start;
+    padding-bottom: spacing.$space-30;
 
     @include breakpoints.medium {
-      justify-content: space-between;
-      margin-left: 0;
-      padding-left: spacing.$space-50;
-      padding-right: spacing.$space-50;
+      padding: spacing.$space-50 spacing.$space-none;
     }
   }
 
   &__footer-list {
-    @extend %osg-padding-top-15;
-    display: block;
+    margin-top: spacing.$space-30;
 
     @include breakpoints.medium {
-      display: flex;
+      margin-top: spacing.$space-none;
     }
 
-    li {
-      margin-bottom: 0;
-      margin-right: 30px;
-
-      .osg-icon {
-        font-size: 1.5rem;
-      }
-    }
-
-    &--miscellaneous {
-      justify-content: flext-start;
-    }
-
-    &--media {
-      display: flex;
-      justify-content: flex-start;
-
-      @include breakpoints.medium {
-        justify-content: flex-end;
-
-        ul:last-child {
-          margin-right: 0;
-        }
-      }
+    .osg-icon {
+      font-size: 1.5rem;
     }
   }
 }
