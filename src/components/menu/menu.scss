@@ -265,7 +265,7 @@
   &__services {
     padding: spacing.$space-30 spacing.$space-none spacing.$space-15;
     @include breakpoints.medium {
-      padding: spacing.$space-30 spacing.$space-50 spacing.$space-50 spacing.$space-50;
+      padding: spacing.$space-30 spacing.$space-50;
     }
   }
 
@@ -302,11 +302,10 @@
 
     @include breakpoints.medium {
       background-color: colors.$gray;
-      padding: spacing.$space-50;
+      padding: spacing.$space-30 spacing.$space-50 spacing.$space-none spacing.$space-50;
 
       ul {
         margin-top: spacing.$space-30;
-        margin-bottom: spacing.$space-30;
         li {
           margin-left: spacing.$space-none;
         }
@@ -315,20 +314,35 @@
   }
 
   &__footer {
-    padding-bottom: spacing.$space-30;
-
     @include breakpoints.medium {
-      padding: spacing.$space-50 spacing.$space-none;
+      padding: spacing.$space-15 spacing.$space-50;
     }
   }
 
   &__footer-list {
     margin-top: spacing.$space-30;
-
+    justify-content: flex-start;
     @include breakpoints.medium {
       margin-top: spacing.$space-none;
     }
 
+    &--media {
+      display: flex;
+      margin-top: spacing.$space-50;
+
+      @include breakpoints.medium {
+        justify-content: flex-end;
+        margin-top: spacing.$space-none;
+      }
+
+      & .osg-navbar-menu__link-content {
+        padding-right: spacing.$space-30;
+        @include breakpoints.medium {
+          padding-left: spacing.$space-50;
+          padding-right: 0;
+        }
+      }
+    }
     .osg-icon {
       font-size: 1.5rem;
     }
