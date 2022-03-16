@@ -79,14 +79,11 @@
 
   & input:checked + &__control {
     background-color: colors.$blue-dark;
-    color: pink;
   }
 
   & input:checked ~ &__label {
     @extend %osg-text-4;
-    font-weight: bold;
-    color: red;
-    //line-height: 1 !important;
+    line-height: 1 !important;
   }
 
   & input:focus ~ .osg-radio__control {
