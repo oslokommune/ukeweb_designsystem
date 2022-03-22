@@ -53,17 +53,17 @@
 
   @include breakpoints.medium {
     @for $i from 1 through grid.$columns {
-      &__column--#{$i}-medium {
+      &__column--#{$i}-breakpoint-medium {
         grid-column: span #{$i};
       }
     }
 
     @for $i from 1 through grid.$columns + 1 {
-      &__column--start-#{$i}-medium {
+      &__column--start-#{$i}-breakpoint-medium {
         grid-column-start: #{$i};
       }
 
-      &__column--end-#{$i}-medium {
+      &__column--end-#{$i}-breakpoint-medium {
         grid-column-end: #{$i};
       }
     }
@@ -71,17 +71,17 @@
 
   @include breakpoints.large {
     @for $i from 1 through grid.$columns {
-      &__column--#{$i}-large {
+      &__column--#{$i}-breakpoint-large {
         grid-column: span #{$i};
       }
     }
 
     @for $i from 1 through grid.$columns + 1 {
-      &__column--start-#{$i}-large {
+      &__column--start-#{$i}-breakpoint-large {
         grid-column-start: #{$i};
       }
 
-      &__column--end-#{$i}-large {
+      &__column--end-#{$i}-breakpoint-large {
         grid-column-end: #{$i};
       }
     }
