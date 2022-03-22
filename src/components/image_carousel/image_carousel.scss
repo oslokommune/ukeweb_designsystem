@@ -40,6 +40,10 @@ $osg-carousel-image-height-large: 725;
         height: #{$osg-carousel-image-height-large}px;
       }
     }
+
+    figure {
+      line-height: 0;
+    }
   }
 
   &__slide {
