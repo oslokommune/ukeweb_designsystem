@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/typography";
 
 // generating font weight classes
@@ -30,5 +31,17 @@
 @each $name in typography.$alignments {
   .osg-text-#{$name} {
     @extend %osg-text-#{$name};
+  }
+
+  @include breakpoints.medium {
+    .osg-text-#{$name}-breakpoint-medium {
+      text-align: #{$name} !important;
+    }
+  }
+
+  @include breakpoints.large {
+    .osg-text-#{$name}-breakpoint-large {
+      text-align: #{$name} !important;
+    }
   }
 }

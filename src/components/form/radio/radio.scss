@@ -112,7 +112,6 @@
   &:focus {
     .osg-radio__label {
       @extend %osg-text-4;
-      line-height: 1 !important;
     }
   }
 
