@@ -1,6 +1,7 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+<!-- Overview mode -->
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
       <h2 class="osg-heading-3">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-status-card">
@@ -15,11 +16,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
       <h2 class="osg-heading-3">Card with actions</h2>
-
       <div class="osg-devtools-code">
         <div class="osg-status-card">
           <div class="osg-status-card__content">
@@ -33,12 +31,10 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Card with status</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status">
           <div class="osg-status-card__content">
@@ -50,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow">
           <div class="osg-status-card__content">
@@ -62,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--green">
           <div class="osg-status-card__content">
@@ -74,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--red">
           <div class="osg-status-card__content">
@@ -91,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--blue">
           <div class="osg-status-card__content">
@@ -108,9 +104,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3">Card with status, no bar</h2>
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow osg-status-card--status--no-bar">
@@ -123,7 +117,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--green osg-status-card--status--no-bar">
           <div class="osg-status-card__content">
@@ -135,9 +129,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3">Card with custom content</h2>
       <div class="osg-devtools-code">
         <div class="osg-status-card">
@@ -156,7 +148,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow">
           <div class="osg-status-card__content">
@@ -172,8 +164,7 @@
               </h3>
               <div id="custom-map-content-1" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
                 <div class="osg-map osg-margin-top-10" id="osg-map">
-                  <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]">
-                  </osg-map>
+                  <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]"> </osg-map>
                 </div>
               </div>
             </div>
@@ -181,7 +172,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-status-card osg-status-card--status osg-status-card--status--red">
           <div class="osg-status-card__content">
@@ -200,8 +191,7 @@
             </h3>
             <div id="custom-map-content-2" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
               <div class="osg-map osg-margin-top-10" id="osg-map2">
-                <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]">
-                </osg-map>
+                <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]"> </osg-map>
               </div>
             </div>
           </div>
@@ -211,12 +201,13 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+<!-- Developer mode -->
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Default</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
       <div class="osg-status-card">
         <a class="osg-status-card__link" href="javascript:void(0)">
           <div class="osg-status-card__content">
@@ -228,12 +219,10 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Card with actions</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--8-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
       <div class="osg-status-card">
         <div class="osg-status-card__content">
           <h3 class="osg-status-card__heading">Heading</h3>
@@ -245,12 +234,10 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Card with status</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext">Default status</p>
@@ -260,7 +247,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext">Warning status</p>
@@ -270,7 +257,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--green">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext">Success status</p>
@@ -280,7 +267,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--red">
         <div class="osg-status-card__content">
           <div class="osg-card__untitled__content__share">
@@ -295,7 +282,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--blue">
         <div class="osg-status-card__content">
           <div class="osg-status-card__content__share">
@@ -310,12 +297,10 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Card with status, no bar</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow osg-status-card--status--no-bar">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext">Warning status</p>
@@ -325,7 +310,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--green osg-status-card--status--no-bar">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext">Success status</p>
@@ -335,12 +320,10 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-  </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Card with custom content</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card">
         <a class="osg-status-card__link" href="javascript:void(0)">
           <div class="osg-status-card__content">
@@ -356,7 +339,7 @@
         <div class="osg-status-card__footer">Footer</div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--yellow">
         <div class="osg-status-card__content">
           <p class="osg-status-card__pretext osg-flex osg-flex-align-items-center">
@@ -371,16 +354,14 @@
             </h3>
             <div id="custom-map-content-dev-1" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
               <div class="osg-map osg-margin-top-10" id="osg-map3">
-                <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]">
-                </osg-map>
+                <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]"> </osg-map>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <div class="osg-status-card osg-status-card--status osg-status-card--status--red">
         <div class="osg-status-card__content">
           <div class="osg-card__untitled__content__share">
@@ -398,8 +379,7 @@
           </h3>
           <div id="custom-map-content-dev-2" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
             <div class="osg-map osg-margin-top-10" id="osg-map4">
-              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]">
-              </osg-map>
+              <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008 }]"> </osg-map>
             </div>
           </div>
         </div>
