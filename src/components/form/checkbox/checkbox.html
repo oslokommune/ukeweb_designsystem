@@ -1,4 +1,4 @@
-<div class="osg-container osg-devtools-nondevmode">
+<div class="osg-devtools-nondevmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
       <p class="osg-text-2">Checkbox is a widget that permits the user to make a binary choice, that is a choice between one of two possible mutually exclusive options.</p>
@@ -114,19 +114,17 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3">Default</h2>
-    </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">Default</h2>
       <label class="osg-checkbox">
         <input type="checkbox" checked="checked" />
         <span class="osg-checkbox__checkmark"></span>
         <span class="osg-checkbox__text"> Checked </span>
       </label>
     </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-checkbox">
         <input type="checkbox" />
         <span class="osg-checkbox__checkmark"></span>
@@ -135,11 +133,9 @@
     </div>
   </div>
 
-  <div class="osg-grid">
-    <div class="osg-grid__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">States</h2>
-    </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+  <div class="osg-grid osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-margin-top-15 osg-margin-top-none-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">States</h2>
       <label class="osg-checkbox osg-checkbox--hover">
         <input type="checkbox" checked="checked" />
         <span class="osg-checkbox__checkmark"></span>
@@ -151,7 +147,7 @@
         <span class="osg-checkbox__text"> Hover </span>
       </label>
     </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end osg-margin-top-15 osg-margin-top-none-breakpoint-medium">
       <label class="osg-checkbox osg-checkbox--focus">
         <input type="checkbox" checked="checked" />
         <span class="osg-checkbox__checkmark"></span>
@@ -163,7 +159,7 @@
         <span class="osg-checkbox__text"> Focus/active </span>
       </label>
     </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end osg-margin-top-15 osg-margin-top-none-breakpoint-medium">
       <label class="osg-checkbox">
         <input type="checkbox" disabled="disabled" checked="checked" />
         <span class="osg-checkbox__checkmark"></span>
@@ -175,7 +171,7 @@
         <span class="osg-checkbox__text"> Disabled </span>
       </label>
     </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-margin-top-15">
       <label class="osg-checkbox osg-checkbox--error">
         <input type="checkbox" aria-describedby="error-2" checked="checked" />
         <span class="osg-checkbox__checkmark"></span>
@@ -189,7 +185,7 @@
       <div class="osg-checkbox osg-checkbox--error-message" id="error-2">Error message</div>
     </div>
 
-    <div class="osg-grid__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-margin-top-15">
       <label class="osg-checkbox">
         <input type="checkbox" aria-describedby="required" checked="" />
         <span class="osg-checkbox__checkmark"></span>
@@ -199,11 +195,9 @@
     </div>
   </div>
 
-  <div class="osg-grid">
-    <div class="osg-grid__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">Vue</h2>
-    </div>
-    <div class="osg-grid__column--4-breakpoint-medium">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">Vue</h2>
       <div id="osg-checkbox-vue-1">
         <osg-checkbox :checked="true" error-id="osg-vue-checkbox-component" label="Name" name="name" value="50" />
       </div>
