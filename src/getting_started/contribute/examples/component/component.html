@@ -6,16 +6,16 @@
 -->
 
 <!-- Overview mode -->
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">The overview pane is used for documenting how to use the component and its variants both visually and in code. This specific area is used for an introduction to the component and its use.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Important</h2>
         Anything important about the component should be communicated in this box.
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <!-- Each variant should have a title and description. Using the special class "osg-devtools-heading" followed by a paragraph with the class "osg-paragraph" creates the correct styling for this setup -->
       <h2 class="osg-devtools-heading">Default</h2>
       <p class="osg-paragraph">Short description of the default state of the component.</p>
@@ -32,8 +32,8 @@
       -->
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box osg-devtools-code__box--green-light">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-example-component">
                   <div class="osg-example-component__header">
@@ -81,13 +81,13 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">VueJS example</h2>
       <p class="osg-paragraph">Short description of the state of the component.</p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box osg-devtools-code__box--blue">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div id="osg-example-component-vue">
                   <osg-example-component></osg-example-component>
@@ -102,9 +102,9 @@
 </div>
 
 <!-- Developer mode -->
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3">Default</h2>
       <div class="osg-example-component">
         <div class="osg-example-component__header">
@@ -128,7 +128,7 @@
             </svg>
           </div>
           <div class="osg-example-component__picture">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt=""/>
+            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
         <div class="osg-example-component__content">
@@ -143,7 +143,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3">Color green</h2>
       <div class="osg-example-component osg-example-component--green-light">
         <div class="osg-example-component__header">
@@ -167,7 +167,7 @@
             </svg>
           </div>
           <div class="osg-example-component__picture">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt=""/>
+            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
         <div class="osg-example-component__content">
@@ -183,8 +183,8 @@
       </div>
     </div>
   </div>
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3 osg-margin-top-15">Color red</h2>
       <div class="osg-example-component osg-example-component--red-light">
         <div class="osg-example-component__header">
@@ -208,7 +208,7 @@
             </svg>
           </div>
           <div class="osg-example-component__picture">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt=""/>
+            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
         <div class="osg-example-component__content">
@@ -223,7 +223,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <h2 class="osg-heading-3 osg-margin-top-15">Color blue</h2>
       <div class="osg-example-component osg-example-component--blue-light">
         <div class="osg-example-component__header">
@@ -247,7 +247,7 @@
             </svg>
           </div>
           <div class="osg-example-component__picture">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt=""/>
+            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
         <div class="osg-example-component__content">
