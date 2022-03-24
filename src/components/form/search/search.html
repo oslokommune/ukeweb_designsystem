@@ -1,11 +1,11 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-search">
                   <form action="" method="GET" class="osg-search__form">
@@ -19,12 +19,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Circle</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-search osg-search--circle">
                   <form action="" method="GET" class="osg-search__form">
@@ -38,12 +38,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Inline</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-search osg-search--inline">
                   <div class="osg-search__form">
@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Dropdown</h2>
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-1">
         <input type="checkbox" id="trigger-1" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-1" checked="checked" />
@@ -66,8 +66,8 @@
       </label>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-search osg-search--inline">
                   <div class="osg-search__form">
@@ -87,7 +87,7 @@
       </div>
       <div class="osg-margin-top-100"></div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Dropdown with label</h2>
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-2">
         <input type="checkbox" id="trigger-2" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-2" checked="checked" />
@@ -97,8 +97,8 @@
       </label>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-search osg-search--inline">
                   <label class="osg-search__label"
@@ -120,13 +120,13 @@
       <div class="osg-margin-top-100"></div>
     </div>
 
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-heading">Vue component</h2>
 
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--8-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div id="osg-search-vue-1">
                   <osg-search id="osg-search-1" :value="value" label="Search" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)"></osg-search>
@@ -141,9 +141,9 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Default</h3>
       <div class="osg-search">
         <form action="" method="GET" class="osg-search__form">
@@ -152,7 +152,7 @@
         </form>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Circle</h3>
       <div class="osg-search osg-search--circle">
         <form action="" method="GET" class="osg-search__form">
@@ -161,7 +161,7 @@
         </form>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Inline</h3>
       <div class="osg-search osg-search--inline">
         <div class="osg-search__form">
@@ -169,7 +169,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Dropdown</h3>
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-3">
         <input type="checkbox" id="trigger-3" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-3" checked="checked" />
@@ -195,7 +195,7 @@
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
       </p>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Dropdown with label</h3>
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-4">
         <input type="checkbox" id="trigger-4" class="osg-switch__input components-form-search-dropdown" aria-controls="id-results-4" checked="checked" />
@@ -222,7 +222,7 @@
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
       </p>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Testcases</h3>
       <div class="osg-flex">
         <div class="osg-search">
@@ -233,7 +233,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <div class="osg-flex">
         <div class="osg-search osg-search--circle">
           <form action="" method="GET" class="osg-search__form">
@@ -243,7 +243,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Vue</h3>
       <div id="osg-search-vue-2">
         <osg-search id="osg-search-2" :value="value" label="Search" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
@@ -254,10 +254,10 @@
         </osg-search>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <div class="osg-margin-top-100">&nbsp;</div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-heading-3">Scroll in dropdown</h3>
       <div class="osg-search osg-search--inline">
         <label class="osg-search__label"
