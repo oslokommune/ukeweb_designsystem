@@ -77,8 +77,6 @@
     &:not([disabled]) {
       color: colors.$blue-contrast;
       outline: initial;
-      outline-style: solid;
-      outline-width: 2px;
     }
   }
 

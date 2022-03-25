@@ -1,10 +1,10 @@
 <!-- Overview mode -->
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">Date (datepicker) is used for setting dates in a form.</p>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h3 class="osg-devtools-heading">Default</h3>
       <p class="osg-paragraph">Simple form element for date input.</p>
       <div class="osg-devtools-code">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h3 class="osg-devtools-heading">Required</h3>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h3 class="osg-devtools-heading">Datepicker</h3>
       <p class="osg-paragraph">Vue version which includes a datepicker.</p>
       <div class="osg-devtools-code">
@@ -47,9 +47,9 @@
 </div>
 
 <!-- Developer mode -->
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <h3 class="osg-heading-3">Default</h3>
       <div class="osg-date">
         <label class="osg-date__label">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-date osg-date--error">
         <label class="osg-date__label">
           Error/invalid
@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-date">
         <label class="osg-date__label">
           Type date
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h3 class="osg-heading-3">Datepicker</h3>
       <div id="osg-date-vue-dev">
         <osg-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></osg-date>

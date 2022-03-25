@@ -1,22 +1,115 @@
-@use "system/colors";
-@use "system/typography";
-@use "system/spacing";
 @use "system/breakpoints";
+@use "system/colors";
+@use "system/grid";
+@use "system/spacing";
+@use "system/typography";
 
 .osg-banner {
   @extend %osg-padding-vertical-15, %osg-padding-vertical-50-breakpoint-medium;
   @extend %osg-text-2;
   background-color: colors.$white;
 
+  padding-left: grid.$gutter;
+  padding-right: grid.$gutter;
+  @include breakpoints.medium {
+    padding-left: grid.$gutter-large;
+    padding-right: grid.$gutter-large;
+  }
+
+  &__content {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(#{grid.$columns}, 1fr);
+    column-gap: grid.$gutter;
+    row-gap: grid.$gutter;
+    @include breakpoints.medium {
+      column-gap: grid.$gutter-large;
+      row-gap: grid.$gutter-large;
+    }
+
+    margin: 0 auto;
+    max-width: grid.$content-width;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(#{grid.$columns}, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: grid.$gutter;
+    @include breakpoints.medium {
+      column-gap: grid.$gutter-large;
+    }
+
+    grid-column: span 12 / span 12;
+  }
+
+  &__media {
+    grid-column-start: 4;
+    grid-column-end: 10;
+
+    @include breakpoints.medium {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    img {
+      max-width: 300px;
+    }
+  }
+
+  &__section {
+    grid-column: span 12 / span 12;
+
+    &--half {
+      @include breakpoints.medium {
+        grid-column: span 6 / span 6;
+      }
+    }
+
+    &--third {
+      @include breakpoints.medium {
+        grid-column: span 4 / span 4;
+      }
+    }
+  }
+
+  &--media {
+    .osg-banner__text {
+      @include breakpoints.medium {
+        grid-column-start: 5;
+        grid-column-end: 13;
+      }
+    }
+  }
+
+  &--media-right {
+    .osg-banner__media {
+      @include breakpoints.medium {
+        grid-column-start: 9;
+        grid-column-end: 13;
+      }
+    }
+
+    .osg-banner__text {
+      @include breakpoints.medium {
+        grid-column-start: 1;
+        grid-column-end: 9;
+      }
+    }
+  }
+
   &--yellow {
     background-color: colors.$yellow;
   }
+
   &--blue-light {
     background-color: colors.$blue-light;
   }
+
   &--gray {
     background-color: colors.$gray;
   }
+
   &--beige {
     background-color: colors.$beige;
   }

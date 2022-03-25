@@ -1,0 +1,29 @@
+@use "system/colors";
+@use "system/typography";
+@use "system/spacing";
+
+.osg-contactbox {
+  @extend %osg-padding-20, %osg-padding-30-breakpoint-large;
+  background-color: colors.$yellow;
+
+  &__heading {
+    @extend %osg-heading-3;
+    @extend %osg-margin-bottom-15;
+  }
+
+  &__group:not(:last-child) {
+    @extend %osg-margin-bottom-15;
+  }
+
+  &__label {
+    @extend %osg-text-4;
+    word-wrap: break-word;
+  }
+
+  &__value {
+    @extend %osg-text-5;
+    .osg-link {
+      word-break: break-all;
+    }
+  }
+}

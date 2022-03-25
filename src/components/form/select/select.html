@@ -1,18 +1,18 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">Select element represents a control that provides a menu of options.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
         <p class="osg-paragraph">The select element should never take the 100% width of the page in medium and up breakpoints.</p>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-select">
                   <div class="osg-select__select">
@@ -28,12 +28,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">With Label</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-select">
                   <label class="osg-select__label">
@@ -53,12 +53,12 @@
       </div>
     </div>
 
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Required</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-select">
                   <label class="osg-select__label">
@@ -81,12 +81,10 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <h2 class="osg-heading-3">Default</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
       <div class="osg-select">
         <div class="osg-select__select">
           <select aria-label="Select an option">
@@ -98,11 +96,9 @@
     </div>
   </div>
 
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-20">Select with Label</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">Select with Label</h2>
       <div class="osg-select">
         <label class="osg-select__label">
           Label select
@@ -117,11 +113,9 @@
     </div>
   </div>
 
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-20">States</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-margin-horizontal-none">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">States</h2>
       <div class="osg-select osg-select--hover">
         <label class="osg-select__label">
           Hover
@@ -134,7 +128,7 @@
         </label>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <div class="osg-select osg-select--focus">
         <label class="osg-select__label">
           Focus/active
@@ -147,7 +141,7 @@
         </label>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <div class="osg-select osg-select--disabled">
         <label class="osg-select__label">
           Disabled
@@ -160,7 +154,7 @@
         </label>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-select osg-select--error">
         <label class="osg-select__label">
           Error/invalid
@@ -175,7 +169,7 @@
       </div>
     </div>
 
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div class="osg-select">
         <label class="osg-select__label">
           Required
