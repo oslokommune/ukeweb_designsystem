@@ -1,0 +1,31 @@
+@use "system/typography";
+@use "system/spacing";
+
+.osg-contactpoint {
+  &__media {
+    @extend %osg-margin-bottom-15;
+    max-width: 50%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__heading {
+    @extend %osg-heading-4;
+  }
+
+  &__group {
+    @extend %osg-margin-bottom-15;
+  }
+
+  &__label {
+    @extend %osg-text-4;
+  }
+
+  &__value {
+    @extend %osg-text-5;
+  }
+}
