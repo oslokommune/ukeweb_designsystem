@@ -1,18 +1,18 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">A radio button is a graphical control element that allows the user to choose only one of a predefined set of mutually exclusive options.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
         <p class="osg-paragraph">The radio button text should never take the 100% width of the page in medium and up breakpoints. Radio button groups should always be grouped using <b> &lt;fieldset&gt; </b> .</p>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h3 class="osg-devtools-heading">Default</h3>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <label class="osg-radio">
                   <span class="osg-radio__input">
@@ -28,8 +28,8 @@
       </div>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <label class="osg-radio">
                   <span class="osg-radio__input">
@@ -45,8 +45,8 @@
       </div>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <label class="osg-radio osg-radio--text-align-top">
                   <span class="osg-radio__input">
@@ -62,8 +62,8 @@
       </div>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <label class="osg-radio osg-radio--text-align-top">
                   <span class="osg-radio__input">
@@ -79,12 +79,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">States</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <label class="osg-radio osg-radio--disabled">
                   <span class="osg-radio__input">
@@ -104,10 +104,10 @@
       </p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
-              <div class="osg-row">
-                <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
+              <div class="osg-grid">
+                <div class="osg-grid__column--6-breakpoint-medium">
                   <div class="osg-devtools-code__box__code">
                     <label class="osg-radio osg-radio--error">
                       <span class="osg-radio__input">
@@ -128,9 +128,9 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <h2 class="osg-heading-3">Default</h2>
       <label class="osg-radio">
         <span class="osg-radio__input">
@@ -139,8 +139,6 @@
         </span>
         <span class="osg-radio__label">Checked</span>
       </label>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio">
         <span class="osg-radio__input">
           <input type="radio" name="radio-1" />
@@ -151,9 +149,9 @@
     </div>
   </div>
 
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <h2 class="osg-heading-3 osg-margin-top-50">States</h2>
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">States</h2>
       <label class="osg-radio osg-radio--hover">
         <span class="osg-radio__input">
           <input type="radio" name="radio-2" checked="checked" />
@@ -169,7 +167,7 @@
         <span class="osg-radio__label">Hover</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--focus">
         <span class="osg-radio__input">
           <input type="radio" name="radio-3" checked="checked" />
@@ -185,7 +183,7 @@
         <span class="osg-radio__label">Focus/active</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--disabled">
         <span class="osg-radio__input">
           <input type="radio" name="radio-4" checked="checked" disabled="disabled" />
@@ -201,7 +199,7 @@
         <span class="osg-radio__label">Disabled</span>
       </label>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio osg-radio--error">
         <span class="osg-radio__input">
           <input type="radio" name="radio-5" checked="checked" aria-describedby="error-2" />
@@ -218,7 +216,7 @@
       </label>
       <div class="osg-radio__error-message" id="error-2">Error message</div>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
       <label class="osg-radio">
         <span class="osg-radio__input">
           <input type="radio" name="radio-6" checked="checked" aria-describedby="required-2" />
@@ -237,9 +235,9 @@
     </div>
   </div>
 
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3 osg-margin-top-30">Vue</h2>
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <h2 class="osg-heading-3 osg-margin-top-15">Vue</h2>
       <div id="osg-radio-vue-1">
         <osg-radiogroup name="radiogrouptest" :fieldset-text="fieldsetText" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></osg-radiogroup>
         <p class="osg-paragraph osg-margin-top-20">Value: {{ selectedValue }}</p>

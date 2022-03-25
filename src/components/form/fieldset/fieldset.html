@@ -1,18 +1,18 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">Fieldset element provides a grouping for a part of an HTML form, with a nested legend element providing a caption for the fieldset.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
         <p class="osg-paragraph">The content of the fieldset element should never take the 100% width of the page in medium and up breakpoints.</p>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <fieldset class="osg-fieldset osg-fieldset--no-border">
                   <legend>Select the options:</legend>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Required</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
@@ -54,12 +54,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-heading-3">Filter style w/collapsible</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <fieldset class="osg-fieldset osg-fieldset--filter">
                   <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-1">Options</a></legend>
@@ -115,34 +115,28 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <h2 class="osg-heading-3">Default</h2>
+      <fieldset class="osg-fieldset osg-fieldset--no-border">
+        <legend>Select the options:</legend>
+        <label class="osg-checkbox">
+          <input type="checkbox" name="checkbox-1" checked="checked" />
+          <span class="osg-checkbox__checkmark"></span>
+          <span class="osg-checkbox__text"> Option 1 </span>
+        </label>
+        <label class="osg-checkbox">
+          <input type="checkbox" name="checkbox-1" />
+          <span class="osg-checkbox__checkmark"></span>
+          <span class="osg-checkbox__text"> Option 2 </span>
+        </label>
+      </fieldset>
     </div>
-    <div class="osg-row__column osg-row__column--12">
-      <div class="osg-row">
-        <div class="osg-row__column osg-row__column--6-breakpoint-medium">
-          <fieldset class="osg-fieldset osg-fieldset--no-border">
-            <legend>Select the options:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 2 </span>
-            </label>
-          </fieldset>
-        </div>
-      </div>
+    <div class="osg-grid__column--12 osg-margin-top-15">
+      <h2 class="osg-heading-3">States</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-50">States</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <fieldset class="osg-fieldset osg-fieldset--no-border" disabled="disabled">
         <legend>Disabled</legend>
         <div>
@@ -160,7 +154,7 @@
       </fieldset>
     </div>
 
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <fieldset class="osg-fieldset osg-fieldset--no-border osg-fieldset--error" aria-describedby="error-1">
         <legend>Error:</legend>
         <div>
@@ -179,7 +173,7 @@
       </fieldset>
     </div>
 
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
       <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-1">
         <legend>Required</legend>
         <div>
@@ -197,60 +191,55 @@
       </fieldset>
       <div class="osg-fieldset__required" id="required-1">* Required</div>
     </div>
-
-    <div class="osg-row__column osg-row__column--12">
-      <h2 class="osg-heading-3">Filter style w/collapsible</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--12">
-      <div class="osg-row">
-        <div class="osg-row__column osg-row__column--6-breakpoint-medium">
-          <fieldset class="osg-fieldset osg-fieldset--filter">
-            <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-4">Options</a></legend>
-            <div id="osg-fieldset--filter-4" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-5">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="osg-fieldset osg-fieldset--filter">
-            <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-5">Options</a></legend>
-            <div id="osg-fieldset--filter-5" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-5">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="osg-fieldset osg-fieldset--filter">
-            <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-6">Options</a></legend>
-            <div id="osg-fieldset--filter-6" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-5">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
-            </div>
-          </fieldset>
+  </div>
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">Filter style w/collapsible</h2>
+      <fieldset class="osg-fieldset osg-fieldset--filter">
+        <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-4">Options</a></legend>
+        <div id="osg-fieldset--filter-4" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
+          <label class="osg-checkbox osg-margin-bottom-5">
+            <input type="checkbox" name="checkbox-1" checked="checked" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 1</span>
+          </label>
+          <label class="osg-checkbox">
+            <input type="checkbox" name="checkbox-1" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 2</span>
+          </label>
         </div>
-      </div>
+      </fieldset>
+      <fieldset class="osg-fieldset osg-fieldset--filter">
+        <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-5">Options</a></legend>
+        <div id="osg-fieldset--filter-5" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
+          <label class="osg-checkbox osg-margin-bottom-5">
+            <input type="checkbox" name="checkbox-1" checked="checked" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 1</span>
+          </label>
+          <label class="osg-checkbox">
+            <input type="checkbox" name="checkbox-1" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 2</span>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="osg-fieldset osg-fieldset--filter">
+        <legend><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-6">Options</a></legend>
+        <div id="osg-fieldset--filter-6" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
+          <label class="osg-checkbox osg-margin-bottom-5">
+            <input type="checkbox" name="checkbox-1" checked="checked" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 1</span>
+          </label>
+          <label class="osg-checkbox">
+            <input type="checkbox" name="checkbox-1" />
+            <span class="osg-checkbox__checkmark"></span>
+            <span class="osg-checkbox__text">Option 2</span>
+          </label>
+        </div>
+      </fieldset>
     </div>
   </div>
 </div>

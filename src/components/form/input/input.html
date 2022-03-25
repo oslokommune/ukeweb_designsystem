@@ -1,18 +1,18 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">Input is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device.</p>
       <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
         <h2 class="osg-infobox__heading">Rules for components</h2>
         <p class="osg-paragraph">The input element should never take the 100% width of the page in medium and up breakpoints.</p>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-input">
                   <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text" />
@@ -23,12 +23,12 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">With label</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-row">
-            <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+          <div class="osg-grid">
+            <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
                 <div class="osg-input">
                   <label class="osg-input__label">
@@ -42,11 +42,11 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Input types</h2>
       <p class="osg-paragraph">Use the correct input type when setting up.</p>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--6-breakpoint-medium">
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-input">
@@ -119,133 +119,153 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3">Default</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text" />
-      </div>
-    </div>
-  </div>
-
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">Input text with label</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          Label text
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
-        </label>
-      </div>
-    </div>
-  </div>
-
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">States</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input osg-input--hover">
-        <label class="osg-input__label">
-          Hover
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
-        </label>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input osg-input--focus">
-        <label class="osg-input__label">
-          Focus/active
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
-        </label>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input osg-input--disabled">
-        <label class="osg-input__label">
-          Disabled
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" disabled="disabled" />
-        </label>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input osg-input--error">
-        <label class="osg-input__label">
-          Error/invalid
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="error-1" />
-          <span class="osg-icon osg-icons--exclamation-mark-circle"></span>
-        </label>
-        <div class="osg-input__error-message" id="error-1">Error message</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">Input types</h2>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          Required text
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-2" />
-        </label>
-        <div class="osg-input__required" id="required-2">* Required</div>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          Optional text
-          <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="optional-2" />
-        </label>
-      </div>
-      <div class="osg-input__required" id="optional-2">(optional)</div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          Phone nr
-          <input class="osg-input__input" type="tel" autocomplete="on" placeholder="+47" />
-        </label>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          E-mail
-          <input class="osg-input__input osg-margin-top-5" type="email" autocomplete="on" placeholder="your@email.com" />
-        </label>
-      </div>
-    </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
-      <div class="osg-input">
-        <label class="osg-input__label">
-          Counter
-          <input class="osg-input__input osg-input__input--number osg-margin-top-5" type="number" min="1" max="9" step="1" value="1" />
-          <div class="osg-input__counter-nav">
-            <button class="osg-input__counter-nav-button osg-input__counter-nav-button-up">
-              <span class="osg-icons--chevron-thin-up" role="img" aria-label="increase"></span>
-            </button>
-            <button class="osg-input__counter-nav-button osg-input__counter-nav-button-down">
-              <span class="osg-icons--chevron-thin-down" role="img" aria-label="decrease"></span>
-            </button>
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-heading-3">Default</h2>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <input class="osg-input__input" type="text" autocomplete="on" aria-label="Label text" placeholder="Input text" />
           </div>
-        </label>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
-      <h2 class="osg-heading-3 osg-margin-top-30">Vue</h2>
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-heading-3 osg-margin-top-15">Input text with label</h2>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              Label text
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="osg-row__column osg-row__column--4-breakpoint-medium">
+  </div>
+
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-heading-3 osg-margin-top-15">States</h2>
+        </div>
+      </div>
+      <div class="osg-grid osg-grid--gap">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input osg-input--hover">
+            <label class="osg-input__label">
+              Hover
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input osg-input--focus">
+            <label class="osg-input__label">
+              Focus/active
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" />
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input osg-input--disabled">
+            <label class="osg-input__label">
+              Disabled
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" disabled="disabled" />
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input osg-input--error">
+            <label class="osg-input__label">
+              Error/invalid
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="error-1" />
+              <span class="osg-icon osg-icons--exclamation-mark-circle"></span>
+            </label>
+            <div class="osg-input__error-message" id="error-1">Error message</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-heading-3 osg-margin-top-15">Input types</h2>
+        </div>
+      </div>
+      <div class="osg-grid osg-grid--gap">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              Required text
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-2" />
+            </label>
+            <div class="osg-input__required" id="required-2">* Required</div>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              Optional text
+              <input class="osg-input__input osg-margin-top-5" type="text" autocomplete="on" placeholder="Input text" aria-describedby="optional-2" />
+            </label>
+          </div>
+          <div class="osg-input__required" id="optional-2">(optional)</div>
+        </div>
+      </div>
+      <div class="osg-grid osg-grid--gap osg-margin-top-15">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              Phone nr
+              <input class="osg-input__input osg-margin-top-5" type="tel" autocomplete="on" placeholder="+47" />
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              E-mail
+              <input class="osg-input__input osg-margin-top-5" type="email" autocomplete="on" placeholder="your@email.com" />
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-input">
+            <label class="osg-input__label">
+              Counter
+              <input class="osg-input__input osg-input__input--number osg-margin-top-5" type="number" min="1" max="9" step="1" value="1" />
+              <div class="osg-input__counter-nav">
+                <button class="osg-input__counter-nav-button osg-input__counter-nav-button-up">
+                  <span class="osg-icons--chevron-thin-up" role="img" aria-label="increase"></span>
+                </button>
+                <button class="osg-input__counter-nav-button osg-input__counter-nav-button-down">
+                  <span class="osg-icons--chevron-thin-down" role="img" aria-label="decrease"></span>
+                </button>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+      <h2 class="osg-heading-3 osg-margin-top-15">Vue</h2>
       <div id="osg-input-vue-1">
         <osg-input error-id="osg-vue-input-component" label="Name" name="name" placeholder="Please type your name" />
       </div>

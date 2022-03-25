@@ -1,12 +1,12 @@
-<div class="osg-container osg-devtools-nondevmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12">
+<div class="osg-devtools-nondevmode">
+  <div class="osg-grid">
+    <div class="osg-grid__column--12">
       <p class="osg-text-2">Colors in the element is picked based on four defined color themes. The idea is to select the theme according to the colors in the pictures. It is used as a big visible search.</p>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Default</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-1">
         <input type="checkbox" class="osg-switch__input components-form-search-seasons-dropdown" checked="checked" />
         <span class="osg-switch__background"></span>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Colors and shapes</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
@@ -83,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-search-seasons osg-search-seasons--blue-dark">
@@ -116,7 +116,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-search-seasons osg-search-seasons--green-dark">
@@ -151,10 +151,10 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-heading">Vue component</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="osg-search-seasons">
@@ -166,12 +166,12 @@
   </div>
 </div>
 
-<div class="osg-container osg-devtools-devmode">
-  <div class="osg-row">
-    <div class="osg-row__column osg-row__column--12 osg-padding-bottom-none">
+<div class="osg-devtools-devmode">
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column osg-grid__column--12 osg-padding-bottom-none">
       <h2 class="osg-heading-3">Default</h2>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-2">
         <input type="checkbox" class="osg-switch__input components-form-search-seasons-dropdown" checked="checked" />
         <span class="osg-switch__background"></span>
@@ -208,7 +208,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <h2 class="osg-heading-3">Colors and shapes</h2>
       <div class="osg-search-seasons osg-search-seasons--red">
         <div class="osg-search-seasons__main">
@@ -240,7 +240,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-search-seasons osg-search-seasons--blue-dark">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
@@ -269,7 +269,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div class="osg-search-seasons osg-search-seasons--green-dark">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
@@ -300,7 +300,7 @@
         </div>
       </div>
     </div>
-    <div class="osg-row__column osg-row__column--12">
+    <div class="osg-grid__column--12">
       <div id="osg-search-seasons">
         <osg-search-seasons
           :value="value"
