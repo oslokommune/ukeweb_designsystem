@@ -23,6 +23,20 @@
       column-gap: grid.$gutter-large;
       row-gap: grid.$gutter-large;
     }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        column-gap: grid.$gutter-large;
+        row-gap: grid.$gutter-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        column-gap: grid.$gutter-large;
+        row-gap: grid.$gutter-large;
+      }
+    }
   }
 
   &--gutter {
@@ -32,6 +46,20 @@
     @include breakpoints.medium {
       margin-left: grid.$gutter-large;
       margin-right: grid.$gutter-large;
+    }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        margin-left: grid.$gutter-large;
+        margin-right: grid.$gutter-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        margin-left: grid.$gutter-large;
+        margin-right: grid.$gutter-large;
+      }
     }
   }
 
