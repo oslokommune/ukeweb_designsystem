@@ -32,6 +32,34 @@
     }
   }
 
+  &--big-block {
+    @extend %osg-padding-horizontal-20;
+    @extend %osg-padding-vertical-30;
+    @extend %osg-heading-3;
+    background-color: colors.$gray-light;
+    border: none;
+    color: inherit;
+    display: block;
+    font-family: inherit;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      background-color: colors.$gray;
+      cursor: pointer;
+    }
+
+    &::after {
+      font-family: "Oslo Icons";
+      font-size: typography.$size-30;
+      content: map-get(icons.$icons, "plus-sign");
+      position: absolute;
+      top: spacing.$space-30;
+      right: spacing.$space-20;
+    }
+  }
+
   &--link {
     @extend %osg-text-4;
     color: inherit;
@@ -53,6 +81,9 @@
   }
 
   &--expanded {
+    &.osg-collapsible-trigger--big-block::after {
+      content: map-get(icons.$icons, "minus-sign");
+    }
     &.osg-collapsible-trigger--block::after,
     &.osg-collapsible-trigger--link::after {
       content: map-get(icons.$icons, "chevron-thin-up");
@@ -120,5 +151,9 @@
 
   &--block {
     @extend %osg-padding-15;
+  }
+  &--big-block {
+    @extend %osg-padding-horizontal-20;
+    @extend %osg-padding-vertical-15;
   }
 }
