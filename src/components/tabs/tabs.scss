@@ -1,0 +1,38 @@
+@use "system/colors";
+@use "system/spacing";
+@use "system/typography";
+
+.osg-tabs {
+  overflow: hidden;
+
+  &__triggers {
+    margin-bottom: 10px;
+  }
+
+  &__trigger {
+    @extend %osg-margin-right-15;
+    @extend %osg-text-6;
+    border: none;
+    background: transparent;
+    text-align: center;
+    border-bottom: 2px solid colors.$gray;
+    padding: 0;
+
+    &:hover {
+      border-bottom: 2px solid colors.$blue-contrast;
+      color: colors.$blue-contrast;
+    }
+
+    &--active {
+      border-bottom: 2px solid colors.$blue-dark;
+    }
+  }
+
+  &__tab {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

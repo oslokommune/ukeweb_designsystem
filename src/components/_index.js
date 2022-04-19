@@ -11,3 +11,4 @@ import "./modal/modal.init.js";
 import "./map/map.js";
 import "./menu/menu.init.js";
 import "./pagination/pagination.init.js";
+import "./tabs/tabs.init.js";
