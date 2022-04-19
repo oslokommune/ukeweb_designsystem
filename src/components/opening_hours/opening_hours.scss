@@ -4,7 +4,7 @@
 @use "system/spacing";
 
 .osg-opening-hours {
-  @extend %osg-padding-30;
+  @extend %osg-padding-20;
   @extend %osg-text-5;
   border: 2px solid colors.$yellow;
 
@@ -38,6 +38,7 @@
 
   &__navigation {
     @extend %osg-margin-bottom-10;
+    @extend %osg-margin-right-15;
     @extend %osg-text-6;
   }
 
@@ -89,4 +90,11 @@
       margin-top: spacing.$space-5;
     }
   }
+}
+
+h2[aria-expanded="true"] .osg-icons--plus-sign {
+  display: none;
+}
+h2[aria-expanded="false"] .osg-icons--minus-sign {
+  display: none;
 }
