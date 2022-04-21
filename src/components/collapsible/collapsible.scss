@@ -63,7 +63,7 @@
   &--link {
     @extend %osg-text-4;
     color: inherit;
-    background-color: white;
+    background-color: unset;
     border: none;
     display: inline-block;
     font-family: inherit;
