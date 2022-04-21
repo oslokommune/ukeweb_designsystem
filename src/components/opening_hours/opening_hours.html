@@ -14,6 +14,7 @@
                   <div class="osg-opening-hours__week" aria-hidden="true">
                     20. September - 26. September
                   </div>
+                  
                   <nav class="osg-opening-hours__navigation" aria-label="Opening hours navigation">
                     <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption">
                       <span class="osg-sr-only">Show </span>Previous week
@@ -498,7 +499,7 @@
       <div class="osg-grid__column--12">
         <h2 class="osg-heading-3">Default</h2>
       </div>              
-            <!-- mobil -->   
+            <!-- NEW OPENING HOURS -->   
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
           <div class="osg-opening-hours osg-padding-20 osg-padding-15-breakpoint-medium osg-padding-30-breakpoint-large">          
            
@@ -508,15 +509,22 @@
               <div class="opening-hours__content">
                 <div class="osg-opening-hours__week osg-margin-top-30 osg-margin-top-20-breakpoint-large" aria-hidden="true">
                   20. September - 26. September
+                </div>                
+                <div class="osg-tabs osg-margin-bottom-30">
+                  <div class="osg-tabs__triggers">
+                    <button class="osg-tabs__trigger osg-tabs__trigger--active" aria-controls="overview-tab1">Previous week</button>
+                    <button class="osg-tabs__trigger" aria-controls="overview-tab2">Next week</button>
+                  </div>
+                  <div class="osg-tabs__tabs">
+                    <div id="overview-tab1" class="osg-tabs__tab osg-tabs__tab--active">
+                      <p class="osg-paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    </div>
+                    <div id="overview-tab2" class="osg-tabs__tab">
+                      <p class="osg-paragraph">Some other page content.</p>
+                    </div>
+                  
+                  </div>
                 </div>
-                <nav class="osg-opening-hours__navigation osg-margin-bottom-30" aria-label="Opening hours navigation">
-                  <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption">
-                    <span class="osg-sr-only">Show </span>Previous week
-                  </a> -
-                  <a class="osg-link" href="javascript:void(0)" aria-controls="week-interval-caption">
-                    <span class="osg-sr-only">Show </span>Next week
-                  </a>
-                </nav>
                 <table class="osg-margin-bottom-30">
                   <caption>
                     <h2 class="osg-sr-only" id="week-interval-caption">Opening hours for the cafeteria from 27th
