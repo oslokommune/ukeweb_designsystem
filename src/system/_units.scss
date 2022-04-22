@@ -1,0 +1,10 @@
+/* OPTIONS */
+$min: 1;
+$max: 40;
+$increment: 0.25;
+
+@function unit-to-rem($index) {
+  @if ($index >= $min && $index <= $max) {
+    @return calc($index * $increment) + rem;
+  }
+}
