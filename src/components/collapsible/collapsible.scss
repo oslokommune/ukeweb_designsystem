@@ -63,8 +63,11 @@
   &--link {
     @extend %osg-text-4;
     color: inherit;
+    background-color: unset;
+    border: none;
     display: inline-block;
     font-family: inherit;
+    padding-left: spacing.$space-none;
 
     &:hover {
       color: colors.$blue-contrast;
@@ -77,6 +80,12 @@
       font-family: "Oslo Icons";
       font-size: typography.$size-24;
       vertical-align: top;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
     }
   }
 
