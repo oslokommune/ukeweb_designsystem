@@ -1,39 +1,25 @@
-<div class="osg-grid osg-grid--gap osg-grid--gutter">
+<div class="osg-grid osg-grid--gap">
   <div class="osg-grid__column--12">
-    <p class="osg-paragraph">Spacing classes are available in both margin and padding, from none(0) to 100 (see sizes below), at all four sides and as horizontal (left|right) and vertical (top|bottom) groups. Additionally each class is available for the breakpoints small (default), medium and large.</p>
+    <p class="osg-paragraph">Spacing classes are available in both margin and padding, from 0 to 25 (see sizes below), at all four sides and as horizontal (left|right) and vertical (top|bottom) groups. Additionally each class is available for the breakpoints small (default), medium and large.</p>
   </div>
   <div class="osg-grid__column--12">
-    <span class="osg-color-bg-yellow osg-padding-none osg-inline-block">none</span>
-    <span class="osg-color-bg-blue-light osg-padding-5 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">5</span>
-    </span>
-    <span class="osg-color-bg-blue-light osg-padding-10 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">10</span>
-    </span>
-    <span class="osg-color-bg-blue-light osg-padding-15 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">15</span>
-    </span>
-    <span class="osg-color-bg-blue osg-padding-20 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">20</span>
-    </span>
-    <span class="osg-color-bg-blue osg-padding-30 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">30</span>
-    </span>
-    <span class="osg-color-bg-blue osg-padding-40 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">40</span>
-    </span>
-    <span class="osg-color-bg-blue osg-padding-50 osg-inline-block">
-      <span class="osg-color-bg-blue-dark osg-color-text-white">50</span>
-    </span>
-    <span class="osg-color-bg-blue-dark osg-color-text-white osg-padding-60 osg-inline-block">
-      <span class="osg-color-bg-white osg-color-text-blue-dark">60</span>
-    </span>
-    <span class="osg-color-bg-blue-dark osg-color-text-white osg-padding-75 osg-inline-block">
-      <span class="osg-color-bg-white osg-color-text-blue-dark">75</span>
-    </span>
-    <span class="osg-color-bg-blue-dark osg-color-text-white osg-padding-100 osg-inline-block">
-      <span class="osg-color-bg-white osg-color-text-blue-dark">100</span>
-    </span>
+    <div id="spacing-blocks" class="osg-flex osg-flex-wrap-wrap osg-flex-align-items-flex-start"></div>
+    <script>
+      for (let i = 0; i <= 25; i++) {
+        let element = document.createElement("span");
+        element.classList.add("osg-color-bg-blue-light");
+        element.classList.add("osg-inline-block");
+        element.classList.add("osg-padding-" + i);
+
+        let value = document.createElement("span");
+        value.classList.add("osg-color-bg-blue-dark");
+        value.classList.add("osg-color-text-white");
+        value.innerText = i;
+        element.appendChild(value);
+
+        document.getElementById("spacing-blocks").appendChild(element);
+      }
+    </script>
   </div>
   <div class="osg-grid__column--12">
     <h2 class="osg-text-2">Sizes</h2>

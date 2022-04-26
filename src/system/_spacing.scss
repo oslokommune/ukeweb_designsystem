@@ -1,180 +1,156 @@
 @use "system/breakpoints";
+@use "system/units";
 
-// --------------- SPACING ---------------*/
-
-$space-none: 0 !default;
-$space-5: 5px !default;
-$space-10: 10px !default;
-$space-15: 15px !default;
-$space-20: 20px !default;
-$space-30: 30px !default;
-$space-40: 40px !default;
-$space-50: 50px !default;
-$space-60: 60px !default;
-$space-75: 75px !default;
-$space-100: 100px !default;
-
-$spacing-sizes: (
-  "none": $space-none,
-  "5": $space-5,
-  "10": $space-10,
-  "15": $space-15,
-  "20": $space-20,
-  "30": $space-30,
-  "40": $space-40,
-  "50": $space-50,
-  "60": $space-60,
-  "75": $space-75,
-  "100": $space-100,
-);
-
-@each $name, $size in $spacing-sizes {
-  %osg-padding-#{$name} {
-    padding: $size $size $size $size !important;
+/* Breakpoint: Small */
+@for $unit from units.$min through units.$max {
+  %osg-padding-#{$unit} {
+    padding: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-#{$name} {
-    margin: $size $size $size $size !important;
+  %osg-margin-#{$unit} {
+    margin: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-bottom-#{$name} {
-    padding-bottom: $size !important;
+  %osg-padding-bottom-#{$unit} {
+    padding-bottom: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-bottom-#{$name} {
-    margin-bottom: $size !important;
+  %osg-margin-bottom-#{$unit} {
+    margin-bottom: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-top-#{$name} {
-    padding-top: $size !important;
+  %osg-padding-top-#{$unit} {
+    padding-top: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-top-#{$name} {
-    margin-top: $size !important;
+  %osg-margin-top-#{$unit} {
+    margin-top: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-left-#{$name} {
-    padding-left: $size !important;
+  %osg-padding-left-#{$unit} {
+    padding-left: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-left-#{$name} {
-    margin-left: $size !important;
+  %osg-margin-left-#{$unit} {
+    margin-left: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-right-#{$name} {
-    padding-right: $size !important;
+  %osg-padding-right-#{$unit} {
+    padding-right: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-right-#{$name} {
-    margin-right: $size !important;
+  %osg-margin-right-#{$unit} {
+    margin-right: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-horizontal-#{$name} {
-    padding-left: $size !important;
-    padding-right: $size !important;
+  %osg-padding-horizontal-#{$unit} {
+    padding-left: units.unit-to-rem($unit) !important;
+    padding-right: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-horizontal-#{$name} {
-    margin-left: $size !important;
-    margin-right: $size !important;
+  %osg-margin-horizontal-#{$unit} {
+    margin-left: units.unit-to-rem($unit) !important;
+    margin-right: units.unit-to-rem($unit) !important;
   }
-  %osg-padding-vertical-#{$name} {
-    padding-top: $size !important;
-    padding-bottom: $size !important;
+  %osg-padding-vertical-#{$unit} {
+    padding-top: units.unit-to-rem($unit) !important;
+    padding-bottom: units.unit-to-rem($unit) !important;
   }
-  %osg-margin-vertical-#{$name} {
-    margin-top: $size !important;
-    margin-bottom: $size !important;
+  %osg-margin-vertical-#{$unit} {
+    margin-top: units.unit-to-rem($unit) !important;
+    margin-bottom: units.unit-to-rem($unit) !important;
   }
 }
 
+/* Breakpoint: Medium */
 @include breakpoints.medium {
-  @each $name, $size in $spacing-sizes {
-    %osg-padding-#{$name}-breakpoint-medium {
-      padding: $size $size $size $size !important;
+  @for $unit from units.$min through units.$max {
+    %osg-padding-#{$unit}-breakpoint-medium {
+      padding: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-#{$name}-breakpoint-medium {
-      margin: $size $size $size $size !important;
+    %osg-margin-#{$unit}-breakpoint-medium {
+      margin: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-bottom-#{$name}-breakpoint-medium {
-      padding-bottom: $size !important;
+    %osg-padding-bottom-#{$unit}-breakpoint-medium {
+      padding-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-bottom-#{$name}-breakpoint-medium {
-      margin-bottom: $size !important;
+    %osg-margin-bottom-#{$unit}-breakpoint-medium {
+      margin-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-top-#{$name}-breakpoint-medium {
-      padding-top: $size !important;
+    %osg-padding-top-#{$unit}-breakpoint-medium {
+      padding-top: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-top-#{$name}-breakpoint-medium {
-      margin-top: $size !important;
+    %osg-margin-top-#{$unit}-breakpoint-medium {
+      margin-top: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-left-#{$name}-breakpoint-medium {
-      padding-left: $size !important;
+    %osg-padding-left-#{$unit}-breakpoint-medium {
+      padding-left: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-left-#{$name}-breakpoint-medium {
-      margin-left: $size !important;
+    %osg-margin-left-#{$unit}-breakpoint-medium {
+      margin-left: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-right-#{$name}-breakpoint-medium {
-      padding-right: $size !important;
+    %osg-padding-right-#{$unit}-breakpoint-medium {
+      padding-right: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-right-#{$name}-breakpoint-medium {
-      margin-right: $size !important;
+    %osg-margin-right-#{$unit}-breakpoint-medium {
+      margin-right: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-horizontal-#{$name}-breakpoint-medium {
-      padding-left: $size !important;
-      padding-right: $size !important;
+    %osg-padding-horizontal-#{$unit}-breakpoint-medium {
+      padding-left: units.unit-to-rem($unit) !important;
+      padding-right: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-horizontal-#{$name}-breakpoint-medium {
-      margin-left: $size !important;
-      margin-right: $size !important;
+    %osg-margin-horizontal-#{$unit}-breakpoint-medium {
+      margin-left: units.unit-to-rem($unit) !important;
+      margin-right: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-vertical-#{$name}-breakpoint-medium {
-      padding-top: $size !important;
-      padding-bottom: $size !important;
+    %osg-padding-vertical-#{$unit}-breakpoint-medium {
+      padding-top: units.unit-to-rem($unit) !important;
+      padding-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-vertical-#{$name}-breakpoint-medium {
-      margin-top: $size !important;
-      margin-bottom: $size !important;
+    %osg-margin-vertical-#{$unit}-breakpoint-medium {
+      margin-top: units.unit-to-rem($unit) !important;
+      margin-bottom: units.unit-to-rem($unit) !important;
     }
   }
 }
 
+/* Breakpoint: Large */
 @include breakpoints.large {
-  @each $name, $size in $spacing-sizes {
-    %osg-padding-#{$name}-breakpoint-large {
-      padding: $size $size $size $size !important;
+  @for $unit from units.$min through units.$max {
+    %osg-padding-#{$unit}-breakpoint-large {
+      padding: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-#{$name}-breakpoint-large {
-      margin: $size $size $size $size !important;
+    %osg-margin-#{$unit}-breakpoint-large {
+      margin: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-bottom-#{$name}-breakpoint-large {
-      padding-bottom: $size !important;
+    %osg-padding-bottom-#{$unit}-breakpoint-large {
+      padding-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-bottom-#{$name}-breakpoint-large {
-      margin-bottom: $size !important;
+    %osg-margin-bottom-#{$unit}-breakpoint-large {
+      margin-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-top-#{$name}-breakpoint-large {
-      padding-top: $size !important;
+    %osg-padding-top-#{$unit}-breakpoint-large {
+      padding-top: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-top-#{$name}-breakpoint-large {
-      margin-top: $size !important;
+    %osg-margin-top-#{$unit}-breakpoint-large {
+      margin-top: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-left-#{$name}-breakpoint-large {
-      padding-left: $size !important;
+    %osg-padding-left-#{$unit}-breakpoint-large {
+      padding-left: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-left-#{$name}-breakpoint-large {
-      margin-left: $size !important;
+    %osg-margin-left-#{$unit}-breakpoint-large {
+      margin-left: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-right-#{$name}-breakpoint-large {
-      padding-right: $size !important;
+    %osg-padding-right-#{$unit}-breakpoint-large {
+      padding-right: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-right-#{$name}-breakpoint-large {
-      margin-right: $size !important;
+    %osg-margin-right-#{$unit}-breakpoint-large {
+      margin-right: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-horizontal-#{$name}-breakpoint-large {
-      padding-left: $size !important;
-      padding-right: $size !important;
+    %osg-padding-horizontal-#{$unit}-breakpoint-large {
+      padding-left: units.unit-to-rem($unit) !important;
+      padding-right: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-horizontal-#{$name}-breakpoint-large {
-      margin-left: $size !important;
-      margin-right: $size !important;
+    %osg-margin-horizontal-#{$unit}-breakpoint-large {
+      margin-left: units.unit-to-rem($unit) !important;
+      margin-right: units.unit-to-rem($unit) !important;
     }
-    %osg-padding-vertical-#{$name}-breakpoint-large {
-      padding-top: $size !important;
-      padding-bottom: $size !important;
+    %osg-padding-vertical-#{$unit}-breakpoint-large {
+      padding-top: units.unit-to-rem($unit) !important;
+      padding-bottom: units.unit-to-rem($unit) !important;
     }
-    %osg-margin-vertical-#{$name}-breakpoint-large {
-      margin-top: $size !important;
-      margin-bottom: $size !important;
+    %osg-margin-vertical-#{$unit}-breakpoint-large {
+      margin-top: units.unit-to-rem($unit) !important;
+      margin-bottom: units.unit-to-rem($unit) !important;
     }
   }
 }
