@@ -8,7 +8,7 @@
   background-color: colors.$white;
 
   a {
-    @extend %osg-padding-15, %osg-padding-30-breakpoint-large;
+    @extend %osg-padding-4, %osg-padding-8-breakpoint-large;
     align-items: flex-start;
     color: inherit;
     display: flex;
@@ -17,7 +17,7 @@
   }
 
   &__illustration {
-    @extend %osg-margin-right-15;
+    @extend %osg-margin-right-4;
     flex: 0 0 auto;
     line-height: 0;
 
@@ -36,17 +36,21 @@
     flex-grow: 4;
 
     h2 {
-      @extend %osg-heading-6, %osg-margin-bottom-5;
+      @extend %osg-text-size-kilo, %osg-margin-bottom-1;
       display: inline-block;
+
+      // @include breakpoints.large {
+      //   @include typography.osg-text-size-juliett;
+      // }
     }
 
     p {
-      @extend %osg-text-7;
+      @extend %osg-text-size-lima, %osg-text-weight-light;
     }
   }
 
   &__status {
-    @extend %osg-margin-left-15;
+    @extend %osg-margin-left-4;
     align-items: flex-start;
     display: flex;
     flex-grow: 1;
