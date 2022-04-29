@@ -5,8 +5,8 @@
 @use "system/states";
 
 .osg-button {
-  @extend %osg-text-4;
-  @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
+  @extend %osg-text-size-kilo, %osg-text-weight-medium;
+  @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
   color: colors.$white;
@@ -25,11 +25,11 @@
     vertical-align: middle;
 
     &--left {
-      @extend %osg-margin-right-10;
+      @extend %osg-margin-right-3;
     }
 
     &--right {
-      @extend %osg-margin-left-10;
+      @extend %osg-margin-left-3;
     }
   }
 
@@ -37,13 +37,12 @@
    * Button sizes
    */
   &.osg-button--small {
-    @extend %osg-padding-horizontal-10, %osg-padding-vertical-5;
-    font-size: typography.$size-16 !important;
+    @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
   }
 
   &.osg-button--large {
-    @extend %osg-text-2;
-    @extend %osg-padding-horizontal-30, %osg-padding-vertical-15;
+    @extend %osg-text-size-india, %osg-text-weight-light;
+    @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
     font-weight: 500 !important;
   }
 
@@ -73,18 +72,18 @@
   }
 
   &.osg-button--icon {
-    @extend %osg-padding-10;
+    @extend %osg-padding-3;
     width: 1.5rem !important;
     line-height: 0 !important;
     box-sizing: content-box;
 
     &.osg-button--small {
-      @extend %osg-padding-5;
+      @extend %osg-padding-1;
       width: 1.5rem !important;
     }
 
     &.osg-button--large {
-      @extend %osg-padding-15;
+      @extend %osg-padding-4;
       width: 2rem !important;
     }
     &.osg-button--large {

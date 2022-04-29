@@ -58,7 +58,7 @@
 
     &--today,
     &--today th {
-      @extend %osg-text-medium;
+      @extend %osg-text-weight-medium;
     }
     &--past {
       color: colors.$grayscale-40;

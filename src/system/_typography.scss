@@ -1,87 +1,50 @@
-@use "breakpoints";
+// Name, size, line-height, letter spacing
+$types: (
+  ("alfa", 3.375rem, 5.125rem, -0.4px),
+  ("bravo", 2.5rem, 3.75rem, -0.2px),
+  ("charlie", 2.25rem, 3.375rem, -0.2px),
+  ("delta", 1.875rem, 2.75rem, -0.2px),
+  ("echo", 1.75rem, 2.625rem, -0.2px),
+  ("foxtrot", 1.625rem, 2.5rem, -0.2px),
+  ("golf", 1.5rem, 2.25rem, -0.2px),
+  ("hotel", 1.375rem, 2.125rem, -0.2px),
+  ("india", 1.25rem, 1.875rem, -0.2px),
+  ("juliett", 1.125rem, 1.75rem, -0.2px),
+  ("kilo", 1rem, 1.5rem, -0.2px),
+  ("lima", 0.75rem, 1.375rem, -0.2px)
+);
+@each $name, $size, $line-height, $letter-spacing in $types {
+  %osg-text-size-#{$name} {
+    font-size: $size !important;
+    font-weight: 400;
+    hyphens: auto;
+    line-height: $line-height !important;
+    letter-spacing: $letter-spacing !important;
+  }
+}
 
-// --------------- FONT ---------------*/
-$size-54: 3.375rem;
-$size-40: 2.5rem;
-$size-36: 2.25rem;
-$size-30: 1.875rem;
-$size-28: 1.75rem;
-$size-26: 1.625rem;
-$size-24: 1.5rem;
-$size-22: 1.375rem;
-$size-20: 1.25rem;
-$size-18: 1.125rem;
-$size-16: 1rem;
-$size-14: 0.875rem;
-
-// id, small size, medium size, large size, weight
-$header-sizes: (("1", $size-28, $size-40, $size-54, 400), ("2", $size-24, $size-30, $size-36, 400), ("3", $size-22, $size-26, $size-30, 400), ("4", $size-20, $size-24, $size-24, 500), ("5", $size-18, $size-20, $size-22, 500), ("6", $size-16, $size-16, $size-18, 500));
-
-$text-sizes: (("1", $size-22, $size-24, $size-30, 300), ("2", $size-20, $size-22, $size-24, 300), ("3", $size-18, $size-18, $size-20, 300), ("4", $size-16, $size-16, $size-18, 500), ("5", $size-16, $size-16, $size-18, 300), ("6", $size-14, $size-14, $size-14, 500), ("7", $size-14, $size-14, $size-14, 300));
-
+// generating font weight classes
 $weights: (
   "light": 300,
   "regular": 400,
   "medium": 500,
   "bold": 700,
 );
-
-$alignments: ("left", "right", "center");
-
-// generating font weight classes
 @each $name, $size in $weights {
-  %osg-text-#{$name} {
+  %osg-text-weight-#{$name} {
     font-weight: $size !important;
   }
 }
 
 // italic font class
-%osg-text-italic {
+%osg-text-style-italic {
   font-style: italic !important;
 }
 
-// generating font classes for headers
-@each $name, $size-small, $size-medium, $size-large, $weight in $header-sizes {
-  %osg-heading-#{$name} {
-    font-size: $size-small !important;
-    font-weight: $weight !important;
-    line-height: 1.5em !important;
-    hyphens: auto;
-
-    @if $name == "1" {
-      letter-spacing: -0.4px !important;
-    } @else {
-      letter-spacing: -0.2px !important;
-    }
-
-    @include breakpoints.medium {
-      font-size: $size-medium !important;
-    }
-    @include breakpoints.large {
-      font-size: $size-large !important;
-    }
-  }
-}
-
-// generating typography classes for other text
-@each $name, $size-small, $size-medium, $size-large, $weight in $text-sizes {
-  %osg-text-#{$name} {
-    font-size: $size-small !important;
-    line-height: 1.5em !important;
-    font-weight: $weight !important;
-
-    @include breakpoints.medium {
-      font-size: $size-medium !important;
-    }
-    @include breakpoints.large {
-      font-size: $size-large !important;
-    }
-  }
-}
-
 // generating text align classes
+$alignments: ("left", "right", "center");
 @each $name in $alignments {
-  %osg-text-#{$name} {
+  %osg-text-align-#{$name} {
     text-align: #{$name} !important;
   }
 }

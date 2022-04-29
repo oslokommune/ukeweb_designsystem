@@ -2,21 +2,17 @@
 
 .osg-icon {
   display: inline-block;
-  font-family: "Oslo Icons";
-  font-size: inherit;
-  font-style: normal;
-  line-height: 1em;
 
   &--space-left {
-    @extend %osg-margin-left-10;
+    @extend %osg-margin-left-3;
   }
 
   &--space-right {
-    @extend %osg-margin-right-10;
+    @extend %osg-margin-right-3;
   }
 
   &--space-both {
-    @extend %osg-margin-horizontal-10;
+    @extend %osg-margin-horizontal-3;
   }
 
   &--paragraph {
