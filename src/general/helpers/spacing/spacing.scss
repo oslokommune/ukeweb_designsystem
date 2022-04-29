@@ -2,7 +2,7 @@
 @use "system/spacing";
 @use "system/units";
 
-@for $unit from units.$min through units.$max {
+@each $unit in spacing.$spacing-units {
   .osg-padding-#{$unit} {
     @extend %osg-padding-#{$unit};
   }
@@ -49,7 +49,7 @@
 
 // generate spacing classes for tablet
 @include breakpoints.medium {
-  @for $unit from units.$min through units.$max {
+  @each $unit in spacing.$spacing-units {
     .osg-padding-#{$unit}-breakpoint-medium {
       @extend %osg-padding-#{$unit}-breakpoint-medium;
     }
@@ -97,7 +97,7 @@
 
 // generate spacing classes for desktop
 @include breakpoints.large {
-  @for $unit from units.$min through units.$max {
+  @each $unit in spacing.$spacing-units {
     .osg-padding-#{$unit}-breakpoint-large {
       @extend %osg-padding-#{$unit}-breakpoint-large;
     }

@@ -1,8 +1,10 @@
 @use "system/breakpoints";
 @use "system/units";
 
+$spacing-units: 0 1 2 3 4 5 8 11 13 19 25;
+
 /* Breakpoint: Small */
-@for $unit from units.$min through units.$max {
+@each $unit in $spacing-units {
   %osg-padding-#{$unit} {
     padding: units.unit-to-rem($unit) !important;
   }
@@ -53,7 +55,7 @@
 
 /* Breakpoint: Medium */
 @include breakpoints.medium {
-  @for $unit from units.$min through units.$max {
+  @each $unit in $spacing-units {
     %osg-padding-#{$unit}-breakpoint-medium {
       padding: units.unit-to-rem($unit) !important;
     }
@@ -105,7 +107,7 @@
 
 /* Breakpoint: Large */
 @include breakpoints.large {
-  @for $unit from units.$min through units.$max {
+  @each $unit in $spacing-units {
     %osg-padding-#{$unit}-breakpoint-large {
       padding: units.unit-to-rem($unit) !important;
     }
