@@ -1,40 +1,74 @@
 @use "system/breakpoints";
 @use "system/typography";
 
-// generating font weight classes
+// Weight
 @each $name, $size in typography.$weights {
   .osg-text-weight-#{$name} {
-    @extend %osg-text-weight-#{$name};
+    @include typography.weight($name);
+  }
+
+  @include breakpoints.medium {
+    .osg-text-weight-#{$name}-breakpoint-medium {
+      @include typography.weight($name);
+    }
+  }
+
+  @include breakpoints.large {
+    .osg-text-weight-#{$name}-breakpoint-large {
+      @include typography.weight($name);
+    }
   }
 }
 
-// italic font class
+// Style
 .osg-text-style-italic {
-  @extend %osg-text-style-italic;
+  @include typography.style("italic");
 }
-
-// generating font classes for headers
-@each $name, $size, $line-height, $letter-spacing in typography.$types {
-  .osg-text-size-#{$name} {
-    @extend %osg-text-size-#{$name};
+@include breakpoints.medium {
+  .osg-text-style-italic-breakpoint-medium {
+    @include typography.style("italic");
+  }
+}
+@include breakpoints.large {
+  .osg-text-style-italic-breakpoint-large {
+    @include typography.style("italic");
   }
 }
 
-// generating text align classes
-@each $name in typography.$alignments {
+// Size
+@each $name, $values in typography.$sizes {
+  .osg-text-size-#{$name} {
+    @include typography.size($name);
+  }
+
+  @include breakpoints.medium {
+    .osg-text-size-#{$name}-breakpoint-medium {
+      @include typography.size($name);
+    }
+  }
+
+  @include breakpoints.large {
+    .osg-text-size-#{$name}-breakpoint-large {
+      @include typography.size($name);
+    }
+  }
+}
+
+// Align
+@each $name, $value in typography.$alignments {
   .osg-text-align-#{$name} {
-    @extend %osg-text-align-#{$name};
+    @include typography.align($name);
   }
 
   @include breakpoints.medium {
     .osg-text-align-#{$name}-breakpoint-medium {
-      text-align: #{$name} !important;
+      @include typography.align($name);
     }
   }
 
   @include breakpoints.large {
     .osg-text-align-#{$name}-breakpoint-large {
-      text-align: #{$name} !important;
+      @include typography.align($name);
     }
   }
 }

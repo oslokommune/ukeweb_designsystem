@@ -79,13 +79,13 @@
   }
 
   &__heading {
-    @extend %osg-text-size-foxtrot;
-    @extend %osg-text-weight-medium;
     @extend %osg-margin-bottom-8;
+    @include typography.size("foxtrot");
+    @include typography.weight("medium");
   }
 
   &__text {
-    @extend %osg-text-size-juliett;
+    @include typography.size("juliett");
   }
 
   &__footer {
@@ -117,7 +117,7 @@
      * scaled in the browser.
      */
     .osg-example-component__text {
-      @extend %osg-text-size-lima;
+      @include typography.size("lima");
       margin-left: calc(#{units.unit-to-rem(8)} + 1.3em);
 
       &::before {

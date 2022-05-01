@@ -5,8 +5,10 @@
 @use "system/states";
 
 .osg-button {
-  @extend %osg-text-size-kilo, %osg-text-weight-medium;
   @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
+  @include typography.size("kilo");
+  @include typography.weight("medium");
+
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
   color: colors.$white;
@@ -41,9 +43,9 @@
   }
 
   &.osg-button--large {
-    @extend %osg-text-size-india, %osg-text-weight-light;
     @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
-    font-weight: 500 !important;
+    @include typography.size("india");
+    @include typography.weight("medium");
   }
 
   &--fullwidth {

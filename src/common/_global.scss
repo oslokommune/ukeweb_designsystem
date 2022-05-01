@@ -11,7 +11,7 @@ body {
 }
 
 strong {
-  @extend %osg-text-weight-medium;
+  @include typography.weight("medium");
 }
 
 a {

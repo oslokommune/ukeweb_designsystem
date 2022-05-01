@@ -36,16 +36,19 @@
     flex-grow: 4;
 
     h2 {
-      @extend %osg-text-size-kilo, %osg-margin-bottom-1;
+      @extend %osg-margin-bottom-1;
+      @include typography.size("kilo");
+
       display: inline-block;
 
-      // @include breakpoints.large {
-      //   @include typography.osg-text-size-juliett;
-      // }
+      @include breakpoints.large {
+        @include typography.size("juliett");
+      }
     }
 
     p {
-      @extend %osg-text-size-lima, %osg-text-weight-light;
+      @include typography.size("lima");
+      @include typography.weight("light");
     }
   }
 
