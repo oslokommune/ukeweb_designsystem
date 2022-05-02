@@ -1,5 +1,6 @@
 @use "system/typography";
 @use "system/spacing";
+@use "system/breakpoints";
 
 .osg-video {
   &--16x9 {
@@ -9,8 +10,17 @@
   }
 
   &__heading {
-    @extend %osg-heading-3;
-    @extend %osg-margin-bottom-15;
+    @include typography.size("hotel");
+    @include typography.weight("regular");
+    @extend %osg-margin-bottom-4;
+
+    @include breakpoints.medium {
+      @include typography.size("foxtrot");
+    }
+
+    @include breakpoints.large {
+      @include typography.size("delta");
+    }
   }
 
   &__video {
@@ -27,7 +37,16 @@
   }
 
   &__transcription-heading {
-    @extend %osg-heading-4;
-    @extend %osg-margin-vertical-10;
+    @include typography.size("india");
+    @include typography.weight("medium");
+    @extend %osg-margin-vertical-3;
+
+    @include breakpoints.medium {
+      @include typography.size("hotel");
+    }
+
+    @include breakpoints.large {
+      @include typography.size("golf");
+    }
   }
 }
