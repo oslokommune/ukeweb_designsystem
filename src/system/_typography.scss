@@ -66,11 +66,11 @@ $sizes: (
 
 @mixin size($name) {
   @if (map.has-key($sizes, $name)) {
-    font-size: map.get($sizes, $name, "size") !important;
+    font-size: map.get($sizes, $name, "size");
     font-weight: 400;
     hyphens: auto;
-    line-height: map.get($sizes, $name, "line-height") !important;
-    letter-spacing: map.get($sizes, $name, "letter-spacing") !important;
+    line-height: map.get($sizes, $name, "line-height");
+    letter-spacing: map.get($sizes, $name, "letter-spacing");
   } @else {
     @error "Size #{$name} is invalid. Size must be one of: #{map.keys($sizes)}.";
   }
