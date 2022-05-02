@@ -16,49 +16,65 @@
   }
 
   &--gap {
-    column-gap: grid.$gap-size;
-    row-gap: grid.$gap-size;
+    @extend .osg-grid--gap-column, .osg-grid--gap-row;
+  }
+
+  &--gap-column {
+    column-gap: grid.$gap-size-hard;
 
     @include breakpoints.medium {
-      column-gap: grid.$gap-size-large;
-      row-gap: grid.$gap-size-large;
+      column-gap: grid.$gap-size-hard-large;
     }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
-        column-gap: grid.$gap-size-large;
-        row-gap: grid.$gap-size-large;
+        column-gap: grid.$gap-size-hard-large;
       }
     }
 
     &-breakpoint-large {
       @include breakpoints.large {
-        column-gap: grid.$gap-size-large;
-        row-gap: grid.$gap-size-large;
+        column-gap: grid.$gap-size-hard-large;
       }
     }
   }
 
-  &--gap-horizontal-large {
-    column-gap: grid.$gap-size;
-    row-gap: grid.$gap-size-horizontal;
+  &--gap-row {
+    row-gap: grid.$gap-size-hard;
 
     @include breakpoints.medium {
-      column-gap: grid.$gap-size-large;
-      row-gap: grid.$gap-size-horizontal-large;
+      row-gap: grid.$gap-size-hard-large;
     }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
-        column-gap: grid.$gap-size-large;
-        row-gap: grid.$gap-size-horizontal-large;
+        row-gap: grid.$gap-size-hard-large;
       }
     }
 
     &-breakpoint-large {
       @include breakpoints.large {
-        column-gap: grid.$gap-size-large;
-        row-gap: grid.$gap-size-horizontal-large;
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-large {
+      row-gap: grid.$gap-size-soft;
+
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-soft-large;
+      }
+
+      &-breakpoint-medium {
+        @include breakpoints.medium {
+          row-gap: grid.$gap-size-soft-large;
+        }
+      }
+
+      &-breakpoint-large {
+        @include breakpoints.large {
+          row-gap: grid.$gap-size-soft-large;
+        }
       }
     }
   }

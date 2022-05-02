@@ -9,14 +9,14 @@ $gutter-size: units.unit-to-rem(4) !default;
 $gutter-size-large: units.unit-to-rem(8) !default;
 
 // Size of gap on small breakpoint
-$gap-size: units.unit-to-rem(4) !default;
+$gap-size-hard: units.unit-to-rem(4) !default;
 // Size of gap on medium and up breakpoint
-$gap-size-large: units.unit-to-rem(8) !default;
+$gap-size-hard-large: units.unit-to-rem(8) !default;
 
-// Size of horizontal gap on small breakpoint when using soft grid sizes
-$gap-size-horizontal: units.unit-to-rem(8) !default;
-// Size of horizontal gap on medium and up breakpoint when using soft grid sizes
-$gap-size-horizontal-large: units.unit-to-rem(13) !default;
+// Size of row gap on small breakpoint when using soft grid sizes
+$gap-size-soft: units.unit-to-rem(8) !default;
+// Size of row gap on medium and up breakpoint when using soft grid sizes
+$gap-size-soft-large: units.unit-to-rem(13) !default;
 
 // Width of content area when using `grid--center` modifier
 $max-grid-size-for-centered-content: 1236px;
