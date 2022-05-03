@@ -6,12 +6,14 @@
   overflow: hidden;
 
   &__triggers {
-    margin-bottom: 10px;
+    @extend %osg-margin-bottom-3;
   }
 
   &__trigger {
-    @extend %osg-margin-right-15;
-    @extend %osg-text-6;
+    @include typography.size("lima");
+    @include typography.weight("medium");
+    @extend %osg-margin-right-4;
+
     border: none;
     background: transparent;
     text-align: center;
