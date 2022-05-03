@@ -3,13 +3,14 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/states";
+@use "system/units";
 
 .osg-button {
   @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
+
   @include typography.size("kilo");
   @include typography.weight("medium");
-
-  @include breakpoints.medium {
+  @include breakpoints.large {
     @include typography.size("juliett");
   }
 
@@ -24,18 +25,23 @@
   white-space: nowrap;
 
   &__icon {
+    @include typography.size("hotel");
+    line-height: 1.5rem;
+
+    @include breakpoints.large {
+      @include typography.size("golf");
+      line-height: 1.75rem;
+    }
+
     display: inline-block;
-    font-size: 1.5rem;
-    font-style: normal;
-    line-height: 1em;
-    vertical-align: middle;
+    vertical-align: top;
 
     &--left {
-      @extend %osg-margin-right-3;
+      @extend %osg-margin-right-1;
     }
 
     &--right {
-      @extend %osg-margin-left-3;
+      @extend %osg-margin-left-1;
     }
   }
 
@@ -44,12 +50,12 @@
    */
   &.osg-button--small {
     @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
+    @include typography.size("kilo");
   }
 
   &.osg-button--large {
     @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
     @include typography.size("india");
-    @include typography.weight("medium");
   }
 
   &--fullwidth {
@@ -78,25 +84,22 @@
   }
 
   &.osg-button--icon {
-    @extend %osg-padding-3;
-    width: 1.5rem !important;
-    line-height: 0 !important;
+    @extend %osg-padding-2;
+    width: 1.5rem;
     box-sizing: content-box;
+
+    @include breakpoints.large {
+      width: 1.75rem;
+    }
 
     &.osg-button--small {
       @extend %osg-padding-1;
-      width: 1.5rem !important;
     }
 
     &.osg-button--large {
       @extend %osg-padding-4;
-      width: 2rem !important;
     }
     &.osg-button--large {
-      .osg-button__icon {
-        line-height: 2rem;
-        font-size: 2rem;
-      }
     }
   }
 
