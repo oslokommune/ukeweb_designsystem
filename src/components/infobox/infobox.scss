@@ -1,13 +1,20 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
 
 .osg-infobox {
-  @extend %osg-padding-30;
+  @extend %osg-padding-8;
   background-color: colors.$blue-light;
 
   &__heading {
-    @extend %osg-heading-6, %osg-margin-bottom-5;
+    @extend %osg-margin-bottom-4;
+    @include typography.size("kilo");
+    @include typography.weight("medium");
+
+    @include breakpoints.large {
+      @include typography.size("juliett");
+    }
   }
 
   &--yellow {
