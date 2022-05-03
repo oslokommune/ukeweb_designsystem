@@ -5,39 +5,43 @@
 @use "system/typography";
 
 .osg-banner {
-  @extend %osg-padding-vertical-15, %osg-padding-vertical-50-breakpoint-medium;
-  @extend %osg-text-2;
+  @extend %osg-padding-vertical-4, %osg-padding-vertical-13-breakpoint-medium;
+  @include typography.size("india");
   background-color: colors.$white;
 
-  padding-left: grid.$gutter;
-  padding-right: grid.$gutter;
+  padding-left: grid.$gutter-size;
+  padding-right: grid.$gutter-size;
   @include breakpoints.medium {
-    padding-left: grid.$gutter-large;
-    padding-right: grid.$gutter-large;
+    padding-left: grid.$gutter-size-large;
+    padding-right: grid.$gutter-size-large;
+    @include typography.size("hotel");
+  }
+  @include breakpoints.large {
+    @include typography.size("golf");
   }
 
   &__content {
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(#{grid.$columns}, 1fr);
-    column-gap: grid.$gutter;
-    row-gap: grid.$gutter;
+    column-gap: grid.$gutter-size;
+    row-gap: grid.$gutter-size;
     @include breakpoints.medium {
-      column-gap: grid.$gutter-large;
-      row-gap: grid.$gutter-large;
+      column-gap: grid.$gutter-size-large;
+      row-gap: grid.$gutter-size-large;
     }
 
     margin: 0 auto;
-    max-width: grid.$content-width;
+    max-width: grid.$max-grid-size-for-centered-content;
   }
 
   &__text {
     display: grid;
     grid-template-columns: repeat(#{grid.$columns}, 1fr);
     grid-template-rows: auto 1fr;
-    column-gap: grid.$gutter;
+    column-gap: grid.$gutter-size;
     @include breakpoints.medium {
-      column-gap: grid.$gutter-large;
+      column-gap: grid.$gutter-size-large;
     }
 
     grid-column: span 12 / span 12;
