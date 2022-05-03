@@ -6,50 +6,50 @@ $spacing-units: 0 1 2 3 4 5 8 11 13 19 25;
 /* Breakpoint: Small */
 @each $unit in $spacing-units {
   %osg-padding-#{$unit} {
-    padding: units.unit-to-rem($unit) !important;
+    padding: units.unit-to-rem($unit);
   }
   %osg-margin-#{$unit} {
-    margin: units.unit-to-rem($unit) !important;
+    margin: units.unit-to-rem($unit);
   }
   %osg-padding-bottom-#{$unit} {
-    padding-bottom: units.unit-to-rem($unit) !important;
+    padding-bottom: units.unit-to-rem($unit);
   }
   %osg-margin-bottom-#{$unit} {
-    margin-bottom: units.unit-to-rem($unit) !important;
+    margin-bottom: units.unit-to-rem($unit);
   }
   %osg-padding-top-#{$unit} {
-    padding-top: units.unit-to-rem($unit) !important;
+    padding-top: units.unit-to-rem($unit);
   }
   %osg-margin-top-#{$unit} {
-    margin-top: units.unit-to-rem($unit) !important;
+    margin-top: units.unit-to-rem($unit);
   }
   %osg-padding-left-#{$unit} {
-    padding-left: units.unit-to-rem($unit) !important;
+    padding-left: units.unit-to-rem($unit);
   }
   %osg-margin-left-#{$unit} {
-    margin-left: units.unit-to-rem($unit) !important;
+    margin-left: units.unit-to-rem($unit);
   }
   %osg-padding-right-#{$unit} {
-    padding-right: units.unit-to-rem($unit) !important;
+    padding-right: units.unit-to-rem($unit);
   }
   %osg-margin-right-#{$unit} {
-    margin-right: units.unit-to-rem($unit) !important;
+    margin-right: units.unit-to-rem($unit);
   }
   %osg-padding-horizontal-#{$unit} {
-    padding-left: units.unit-to-rem($unit) !important;
-    padding-right: units.unit-to-rem($unit) !important;
+    padding-left: units.unit-to-rem($unit);
+    padding-right: units.unit-to-rem($unit);
   }
   %osg-margin-horizontal-#{$unit} {
-    margin-left: units.unit-to-rem($unit) !important;
-    margin-right: units.unit-to-rem($unit) !important;
+    margin-left: units.unit-to-rem($unit);
+    margin-right: units.unit-to-rem($unit);
   }
   %osg-padding-vertical-#{$unit} {
-    padding-top: units.unit-to-rem($unit) !important;
-    padding-bottom: units.unit-to-rem($unit) !important;
+    padding-top: units.unit-to-rem($unit);
+    padding-bottom: units.unit-to-rem($unit);
   }
   %osg-margin-vertical-#{$unit} {
-    margin-top: units.unit-to-rem($unit) !important;
-    margin-bottom: units.unit-to-rem($unit) !important;
+    margin-top: units.unit-to-rem($unit);
+    margin-bottom: units.unit-to-rem($unit);
   }
 }
 
@@ -57,50 +57,50 @@ $spacing-units: 0 1 2 3 4 5 8 11 13 19 25;
 @include breakpoints.medium {
   @each $unit in $spacing-units {
     %osg-padding-#{$unit}-breakpoint-medium {
-      padding: units.unit-to-rem($unit) !important;
+      padding: units.unit-to-rem($unit);
     }
     %osg-margin-#{$unit}-breakpoint-medium {
-      margin: units.unit-to-rem($unit) !important;
+      margin: units.unit-to-rem($unit);
     }
     %osg-padding-bottom-#{$unit}-breakpoint-medium {
-      padding-bottom: units.unit-to-rem($unit) !important;
+      padding-bottom: units.unit-to-rem($unit);
     }
     %osg-margin-bottom-#{$unit}-breakpoint-medium {
-      margin-bottom: units.unit-to-rem($unit) !important;
+      margin-bottom: units.unit-to-rem($unit);
     }
     %osg-padding-top-#{$unit}-breakpoint-medium {
-      padding-top: units.unit-to-rem($unit) !important;
+      padding-top: units.unit-to-rem($unit);
     }
     %osg-margin-top-#{$unit}-breakpoint-medium {
-      margin-top: units.unit-to-rem($unit) !important;
+      margin-top: units.unit-to-rem($unit);
     }
     %osg-padding-left-#{$unit}-breakpoint-medium {
-      padding-left: units.unit-to-rem($unit) !important;
+      padding-left: units.unit-to-rem($unit);
     }
     %osg-margin-left-#{$unit}-breakpoint-medium {
-      margin-left: units.unit-to-rem($unit) !important;
+      margin-left: units.unit-to-rem($unit);
     }
     %osg-padding-right-#{$unit}-breakpoint-medium {
-      padding-right: units.unit-to-rem($unit) !important;
+      padding-right: units.unit-to-rem($unit);
     }
     %osg-margin-right-#{$unit}-breakpoint-medium {
-      margin-right: units.unit-to-rem($unit) !important;
+      margin-right: units.unit-to-rem($unit);
     }
     %osg-padding-horizontal-#{$unit}-breakpoint-medium {
-      padding-left: units.unit-to-rem($unit) !important;
-      padding-right: units.unit-to-rem($unit) !important;
+      padding-left: units.unit-to-rem($unit);
+      padding-right: units.unit-to-rem($unit);
     }
     %osg-margin-horizontal-#{$unit}-breakpoint-medium {
-      margin-left: units.unit-to-rem($unit) !important;
-      margin-right: units.unit-to-rem($unit) !important;
+      margin-left: units.unit-to-rem($unit);
+      margin-right: units.unit-to-rem($unit);
     }
     %osg-padding-vertical-#{$unit}-breakpoint-medium {
-      padding-top: units.unit-to-rem($unit) !important;
-      padding-bottom: units.unit-to-rem($unit) !important;
+      padding-top: units.unit-to-rem($unit);
+      padding-bottom: units.unit-to-rem($unit);
     }
     %osg-margin-vertical-#{$unit}-breakpoint-medium {
-      margin-top: units.unit-to-rem($unit) !important;
-      margin-bottom: units.unit-to-rem($unit) !important;
+      margin-top: units.unit-to-rem($unit);
+      margin-bottom: units.unit-to-rem($unit);
     }
   }
 }
@@ -109,50 +109,50 @@ $spacing-units: 0 1 2 3 4 5 8 11 13 19 25;
 @include breakpoints.large {
   @each $unit in $spacing-units {
     %osg-padding-#{$unit}-breakpoint-large {
-      padding: units.unit-to-rem($unit) !important;
+      padding: units.unit-to-rem($unit);
     }
     %osg-margin-#{$unit}-breakpoint-large {
-      margin: units.unit-to-rem($unit) !important;
+      margin: units.unit-to-rem($unit);
     }
     %osg-padding-bottom-#{$unit}-breakpoint-large {
-      padding-bottom: units.unit-to-rem($unit) !important;
+      padding-bottom: units.unit-to-rem($unit);
     }
     %osg-margin-bottom-#{$unit}-breakpoint-large {
-      margin-bottom: units.unit-to-rem($unit) !important;
+      margin-bottom: units.unit-to-rem($unit);
     }
     %osg-padding-top-#{$unit}-breakpoint-large {
-      padding-top: units.unit-to-rem($unit) !important;
+      padding-top: units.unit-to-rem($unit);
     }
     %osg-margin-top-#{$unit}-breakpoint-large {
-      margin-top: units.unit-to-rem($unit) !important;
+      margin-top: units.unit-to-rem($unit);
     }
     %osg-padding-left-#{$unit}-breakpoint-large {
-      padding-left: units.unit-to-rem($unit) !important;
+      padding-left: units.unit-to-rem($unit);
     }
     %osg-margin-left-#{$unit}-breakpoint-large {
-      margin-left: units.unit-to-rem($unit) !important;
+      margin-left: units.unit-to-rem($unit);
     }
     %osg-padding-right-#{$unit}-breakpoint-large {
-      padding-right: units.unit-to-rem($unit) !important;
+      padding-right: units.unit-to-rem($unit);
     }
     %osg-margin-right-#{$unit}-breakpoint-large {
-      margin-right: units.unit-to-rem($unit) !important;
+      margin-right: units.unit-to-rem($unit);
     }
     %osg-padding-horizontal-#{$unit}-breakpoint-large {
-      padding-left: units.unit-to-rem($unit) !important;
-      padding-right: units.unit-to-rem($unit) !important;
+      padding-left: units.unit-to-rem($unit);
+      padding-right: units.unit-to-rem($unit);
     }
     %osg-margin-horizontal-#{$unit}-breakpoint-large {
-      margin-left: units.unit-to-rem($unit) !important;
-      margin-right: units.unit-to-rem($unit) !important;
+      margin-left: units.unit-to-rem($unit);
+      margin-right: units.unit-to-rem($unit);
     }
     %osg-padding-vertical-#{$unit}-breakpoint-large {
-      padding-top: units.unit-to-rem($unit) !important;
-      padding-bottom: units.unit-to-rem($unit) !important;
+      padding-top: units.unit-to-rem($unit);
+      padding-bottom: units.unit-to-rem($unit);
     }
     %osg-margin-vertical-#{$unit}-breakpoint-large {
-      margin-top: units.unit-to-rem($unit) !important;
-      margin-bottom: units.unit-to-rem($unit) !important;
+      margin-top: units.unit-to-rem($unit);
+      margin-bottom: units.unit-to-rem($unit);
     }
   }
 }
