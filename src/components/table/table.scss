@@ -7,18 +7,31 @@
   display: block;
   overflow-x: auto;
   white-space: nowrap;
-
-  @extend %osg-text-left;
+  text-align: left;
 
   &__caption {
-    @extend %osg-heading-4;
-    @extend %osg-text-left;
+    text-align: left;
+
+    @include typography.size("india");
+    @include typography.weight("medium");
+
+    @include breakpoints.medium {
+      @include typography.size("hotel");
+    }
+    @include breakpoints.large {
+      @include typography.size("golf");
+    }
   }
 
   &__head {
     .osg-table__heading {
       vertical-align: top;
-      @extend %osg-text-4;
+      @include typography.size("kilo");
+      @include typography.weight("medium");
+
+      @include breakpoints.large {
+        @include typography.size("juliett");
+      }
     }
   }
 
@@ -30,23 +43,23 @@
 
   &__heading,
   &__cell {
-    @extend %osg-padding-15;
+    @extend %osg-padding-4;
   }
 
   &__heading:first-child,
   &__cell:first-child {
-    @extend %osg-padding-left-30-breakpoint-medium;
+    @extend %osg-padding-left-8-breakpoint-medium;
   }
 
   &__heading:last-child,
   &__cell:last-child {
-    @extend %osg-padding-right-30-breakpoint-medium;
+    @extend %osg-padding-right-8-breakpoint-medium;
   }
 
   &--left-right {
     .osg-table__heading:last-child,
     .osg-table__cell:last-child {
-      @extend %osg-text-right;
+      text-align: right;
     }
   }
   &--full-width {
