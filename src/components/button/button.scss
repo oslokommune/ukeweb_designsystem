@@ -5,9 +5,13 @@
 @use "system/states";
 
 .osg-button {
-  @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
+  @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
   @include typography.size("kilo");
   @include typography.weight("medium");
+
+  @include breakpoints.medium {
+    @include typography.size("juliett");
+  }
 
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
