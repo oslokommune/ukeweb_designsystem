@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const typeDividerElement = document.createElement("div");
       typeDividerElement.classList.add("osg-grid__column--12");
-      typeDividerElement.innerHTML = `<div class="osg-divider osg-margin-vertical-4"></div>`;
+      typeDividerElement.classList.add("osg-margin-vertical-4");
+      typeDividerElement.innerHTML = `<div class="osg-divider"></div>`;
       typesPlaceholder.appendChild(typeDividerElement);
     });
   }
