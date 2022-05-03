@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/icons";
 @use "system/typography";
@@ -5,12 +6,17 @@
 @use "components/links/link/mixins";
 
 .osg-toc {
-  @extend %osg-text-4;
-  @extend %osg-padding-left-none;
+  @extend %osg-padding-left-0;
+  @include typography.size("kilo");
+  @include typography.weight("medium");
+
+  @include breakpoints.large {
+    @include typography.size("juliett");
+  }
 
   &__item {
-    @extend %osg-padding-vertical-15;
-    @extend %osg-padding-horizontal-10;
+    @extend %osg-padding-vertical-4;
+    @extend %osg-padding-horizontal-3;
     border-top: 2px solid colors.$gray;
   }
 
