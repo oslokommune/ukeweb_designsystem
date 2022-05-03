@@ -1,10 +1,24 @@
-@use "system/typography";
+@use "system/breakpoints";
 @use "system/spacing";
+@use "system/typography";
 
 .osg-paragraph {
-  @extend %osg-text-5;
+  @include typography.size("kilo");
+  @include typography.weight("light");
+
+  @include breakpoints.large {
+    @include typography.size("juliett");
+  }
 
   &.osg-paragraph--lead {
-    @extend %osg-text-1;
+    @include typography.size("hotel");
+    @include typography.weight("light");
+
+    @include breakpoints.medium {
+      @include typography.size("golf");
+    }
+    @include breakpoints.large {
+      @include typography.size("delta");
+    }
   }
 }
