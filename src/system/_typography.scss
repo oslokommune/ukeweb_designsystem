@@ -143,16 +143,184 @@ $alignments: (
 $presets: (
   1: (
     "small": (
-      "size": "india",
-      "weight": "bold",
+      "size": "echo",
+      "weight": "regular",
     ),
     "medium": (
-      "size": "echo",
+      "size": "bravo",
       "weight": "regular",
     ),
     "large": (
       "size": "alfa",
       "weight": "regular",
+    ),
+  ),
+  2: (
+    "small": (
+      "size": "golf",
+      "weight": "regular",
+    ),
+    "medium": (
+      "size": "delta",
+      "weight": "regular",
+    ),
+    "large": (
+      "size": "charlie",
+      "weight": "regular",
+    ),
+  ),
+  3: (
+    "small": (
+      "size": "hotel",
+      "weight": "regular",
+    ),
+    "medium": (
+      "size": "foxtrot",
+      "weight": "regular",
+    ),
+    "large": (
+      "size": "delta",
+      "weight": "regular",
+    ),
+  ),
+  4: (
+    "small": (
+      "size": "india",
+      "weight": "medium",
+    ),
+    "medium": (
+      "size": "hotel",
+      "weight": "medium",
+    ),
+    "large": (
+      "size": "golf",
+      "weight": "medium",
+    ),
+  ),
+  5: (
+    "small": (
+      "size": "juliett",
+      "weight": "medium",
+    ),
+    "medium": (
+      "size": "india",
+      "weight": "medium",
+    ),
+    "large": (
+      "size": "hotel",
+      "weight": "medium",
+    ),
+  ),
+  6: (
+    "small": (
+      "size": "kilo",
+      "weight": "medium",
+    ),
+    "medium": (
+      "size": "kilo",
+      "weight": "medium",
+    ),
+    "large": (
+      "size": "juliett",
+      "weight": "medium",
+    ),
+  ),
+  7: (
+    "small": (
+      "size": "hotel",
+      "weight": "light",
+    ),
+    "medium": (
+      "size": "golf",
+      "weight": "light",
+    ),
+    "large": (
+      "size": "delta",
+      "weight": "light",
+    ),
+  ),
+  8: (
+    "small": (
+      "size": "india",
+      "weight": "light",
+    ),
+    "medium": (
+      "size": "hotel",
+      "weight": "light",
+    ),
+    "large": (
+      "size": "golf",
+      "weight": "light",
+    ),
+  ),
+  9: (
+    "small": (
+      "size": "juliett",
+      "weight": "light",
+    ),
+    "medium": (
+      "size": "juliett",
+      "weight": "light",
+    ),
+    "large": (
+      "size": "india",
+      "weight": "light",
+    ),
+  ),
+  10: (
+    "small": (
+      "size": "kilo",
+      "weight": "medium",
+    ),
+    "medium": (
+      "size": "kilo",
+      "weight": "medium",
+    ),
+    "large": (
+      "size": "juliett",
+      "weight": "medium",
+    ),
+  ),
+  11: (
+    "small": (
+      "size": "kilo",
+      "weight": "light",
+    ),
+    "medium": (
+      "size": "kilo",
+      "weight": "light",
+    ),
+    "large": (
+      "size": "juliett",
+      "weight": "light",
+    ),
+  ),
+  12: (
+    "small": (
+      "size": "lima",
+      "weight": "medium",
+    ),
+    "medium": (
+      "size": "lima",
+      "weight": "medium",
+    ),
+    "large": (
+      "size": "lima",
+      "weight": "medium",
+    ),
+  ),
+  13: (
+    "small": (
+      "size": "lima",
+      "weight": "light",
+    ),
+    "medium": (
+      "size": "lima",
+      "weight": "light",
+    ),
+    "large": (
+      "size": "lima",
+      "weight": "light",
     ),
   ),
 );
