@@ -11,7 +11,6 @@
 
   &__heading {
     @include typography.size("hotel");
-    @include typography.weight("regular");
     @extend %osg-margin-bottom-4;
 
     @include breakpoints.medium {
