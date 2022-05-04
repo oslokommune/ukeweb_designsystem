@@ -9,12 +9,12 @@
     cursor: default;
     transform: translateY(-0.25rem);
     display: inline-block;
-    @extend %osg-padding-horizontal-5;
+    @extend %osg-padding-horizontal-1;
   }
 
   &__item {
-    @extend %osg-padding-5;
-    @extend %osg-text-weight-medium;
+    @extend %osg-padding-1;
+    @include typography.weight("medium");
 
     line-height: 1.5rem;
     box-sizing: content-box;
@@ -29,7 +29,8 @@
     border-radius: 50%;
     cursor: pointer;
 
-    font-size: typography.$size-16 !important;
+    @include typography.size("kilo");
+    @include typography.weight("medium");
 
     &:hover,
     &:focus {
@@ -70,7 +71,7 @@
     &--rectangle {
       border-radius: 0;
       width: auto;
-      @extend %osg-padding-horizontal-10, %osg-padding-vertical-5;
+      @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
     }
   }
 
@@ -79,8 +80,7 @@
     background: none;
     border: none;
     display: inline-block;
-    font-size: typography.$size-24;
-    font-style: normal;
+    @include typography.size("golf");
     line-height: 1em;
     vertical-align: middle;
     position: relative;
