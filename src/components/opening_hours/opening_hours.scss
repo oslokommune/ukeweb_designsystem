@@ -4,17 +4,23 @@
 @use "system/spacing";
 
 .osg-opening-hours {
-  @extend %osg-padding-30;
-  @extend %osg-text-5;
+  @extend %osg-padding-8;
+  @include typography.size("kilo");
+  @include typography.weight("light");
+
+  @include breakpoints.large {
+    @include typography.size("juliett");
+  }
+
   border: 2px solid colors.$yellow;
 
   table {
-    @extend %osg-padding-bottom-5;
-    @extend %osg-text-left;
+    @extend %osg-padding-bottom-1;
+    text-align: left;
     width: 100%;
 
     th {
-      @extend %osg-text-light;
+      @include typography.weight("light");
     }
 
     tr {
@@ -32,33 +38,42 @@
   }
 
   &__heading {
-    @extend %osg-heading-3;
-    @extend %osg-margin-bottom-15;
+    @extend %osg-margin-bottom-4;
+    @include typography.size("hotel");
+
+    @include breakpoints.medium {
+      @include typography.size("foxtrot");
+    }
+    @include breakpoints.large {
+      @include typography.size("delta");
+    }
   }
 
   &__navigation {
-    @extend %osg-margin-bottom-10;
-    @extend %osg-text-6;
+    @extend %osg-margin-bottom-3;
+    @include typography.size("lima");
+    @include typography.weight("medium");
   }
 
   &__week {
-    @extend %osg-text-7;
+    @include typography.size("lima");
+    @include typography.weight("light");
   }
 
   &__extra {
-    @extend %osg-margin-top-10;
+    @extend %osg-margin-top-3;
   }
 
   &__exception-indicator {
-    @extend %osg-margin-left-5;
+    @extend %osg-margin-left-1;
   }
 
   &__day {
-    @extend %osg-margin-top-5;
+    @extend %osg-margin-top-1;
 
     &--today,
     &--today th {
-      @extend %osg-text-weight-medium;
+      @include typography.weight("medium");
     }
     &--past {
       color: colors.$grayscale-40;
@@ -66,14 +81,18 @@
   }
 
   &__time-separator {
-    @extend %osg-margin-horizontal-5;
+    @extend %osg-margin-horizontal-1;
   }
 
   &__not-ordinary {
-    @extend %osg-margin-top-15;
+    @extend %osg-margin-top-4;
 
     h3.osg-collapsable--heading {
-      @extend %osg-heading-6;
+      @include typography.size("kilo");
+
+      @include breakpoints.large {
+        @include typography.size("juliett");
+      }
 
       button {
         all: inherit;
@@ -86,7 +105,7 @@
     }
 
     p {
-      margin-top: spacing.$space-5;
+      @extend %osg-margin-top-1;
     }
   }
 }
