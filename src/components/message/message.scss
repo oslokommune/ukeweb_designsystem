@@ -1,25 +1,34 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
 
 .osg-message {
-  @extend %osg-padding-15, %osg-padding-30-breakpoint-large;
+  @extend %osg-padding-4, %osg-padding-8-breakpoint-large;
   background-color: colors.$beige;
 
   &__heading {
-    @extend %osg-heading-6, %osg-margin-bottom-5;
+    @extend %osg-margin-bottom-1;
+    @include typography.size("kilo");
+    @include typography.weight("medium");
+
+    @include breakpoints.large {
+      @include typography.size("juliett");
+    }
   }
 
   &__text {
-    @extend %osg-text-7;
+    @include typography.size("lima");
+    @include typography.weight("light");
   }
 
   &__list {
-    @extend %osg-text-6;
-    @extend %osg-margin-top-15;
+    @include typography.size("lima");
+    @include typography.weight("medium");
+    @extend %osg-margin-top-4;
 
     > * + * {
-      @extend %osg-margin-top-15;
+      @extend %osg-margin-top-4;
     }
   }
 }
