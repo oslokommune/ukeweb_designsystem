@@ -87,3 +87,10 @@
     }
   }
 }
+
+// Presets
+@each $name, $breakpoints in typography.$presets {
+  .osg-text-preset-#{$name} {
+    @extend %osg-text-preset-#{$name};
+  }
+}

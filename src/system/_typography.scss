@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "system/breakpoints";
 
 // Name, size, line-height, letter spacing
 $sizes: (
@@ -75,6 +76,28 @@ $sizes: (
   }
 }
 
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name} {
+    @include size($name);
+  }
+}
+
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include size($name);
+    }
+  }
+}
+
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include size($name);
+    }
+  }
+}
+
 // generating font weight classes
 $weights: (
   "light": 300,
@@ -113,5 +136,40 @@ $alignments: (
     text-align: #{$name};
   } @else {
     @error "Align #{$name} is invalid. Align must be one of: #{map.keys($alignments)}.";
+  }
+}
+
+// Text preset packages
+$presets: (
+  1: (
+    "small": (
+      "size": "india",
+      "weight": "bold",
+    ),
+    "medium": (
+      "size": "echo",
+      "weight": "regular",
+    ),
+    "large": (
+      "size": "alfa",
+      "weight": "regular",
+    ),
+  ),
+);
+
+@each $name, $breakpoints in $presets {
+  %osg-text-preset-#{$name} {
+    @include size(map.get($breakpoints, "small", "size"));
+    @include weight(map.get($breakpoints, "small", "weight"));
+
+    @include breakpoints.medium {
+      @include size(map.get($breakpoints, "medium", "size"));
+      @include weight(map.get($breakpoints, "medium", "weight"));
+    }
+
+    @include breakpoints.large {
+      @include size(map.get($breakpoints, "large", "size"));
+      @include weight(map.get($breakpoints, "large", "weight"));
+    }
   }
 }
