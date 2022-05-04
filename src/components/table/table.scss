@@ -11,16 +11,7 @@
 
   &__caption {
     text-align: left;
-
-    @include typography.size("india");
-    @include typography.weight("medium");
-
-    @include breakpoints.medium {
-      @include typography.size("hotel");
-    }
-    @include breakpoints.large {
-      @include typography.size("golf");
-    }
+    @extend %osg-text-preset-4;
   }
 
   &__head {

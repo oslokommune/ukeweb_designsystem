@@ -10,16 +10,8 @@
   }
 
   &__heading {
-    @include typography.size("hotel");
     @extend %osg-margin-bottom-4;
-
-    @include breakpoints.medium {
-      @include typography.size("foxtrot");
-    }
-
-    @include breakpoints.large {
-      @include typography.size("delta");
-    }
+    @extend %osg-text-preset-3;
   }
 
   &__video {
@@ -36,16 +28,7 @@
   }
 
   &__transcription-heading {
-    @include typography.size("india");
-    @include typography.weight("medium");
     @extend %osg-margin-vertical-3;
-
-    @include breakpoints.medium {
-      @include typography.size("hotel");
-    }
-
-    @include breakpoints.large {
-      @include typography.size("golf");
-    }
+    @extend %osg-text-preset-4;
   }
 }

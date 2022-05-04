@@ -7,12 +7,7 @@
 
 .osg-toc {
   @extend %osg-padding-left-0;
-  @include typography.size("kilo");
-  @include typography.weight("medium");
-
-  @include breakpoints.large {
-    @include typography.size("juliett");
-  }
+  @extend %osg-text-preset-10;
 
   &__item {
     @extend %osg-padding-vertical-4;

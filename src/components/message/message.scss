@@ -9,12 +9,7 @@
 
   &__heading {
     @extend %osg-margin-bottom-1;
-    @include typography.size("kilo");
-    @include typography.weight("medium");
-
-    @include breakpoints.large {
-      @include typography.size("juliett");
-    }
+    @extend %osg-text-preset-10;
   }
 
   &__text {

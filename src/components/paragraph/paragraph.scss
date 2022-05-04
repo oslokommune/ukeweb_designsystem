@@ -3,22 +3,9 @@
 @use "system/typography";
 
 .osg-paragraph {
-  @include typography.size("kilo");
-  @include typography.weight("light");
-
-  @include breakpoints.large {
-    @include typography.size("juliett");
-  }
+  @extend %osg-text-preset-11;
 
   &.osg-paragraph--lead {
-    @include typography.size("hotel");
-    @include typography.weight("light");
-
-    @include breakpoints.medium {
-      @include typography.size("golf");
-    }
-    @include breakpoints.large {
-      @include typography.size("delta");
-    }
+    @extend %osg-text-preset-7;
   }
 }

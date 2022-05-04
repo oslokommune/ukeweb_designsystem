@@ -5,12 +5,7 @@
 
 .osg-opening-hours {
   @extend %osg-padding-8;
-  @include typography.size("kilo");
-  @include typography.weight("light");
-
-  @include breakpoints.large {
-    @include typography.size("juliett");
-  }
+  @extend %osg-text-preset-11;
 
   border: 2px solid colors.$yellow;
 
@@ -39,14 +34,7 @@
 
   &__heading {
     @extend %osg-margin-bottom-4;
-    @include typography.size("hotel");
-
-    @include breakpoints.medium {
-      @include typography.size("foxtrot");
-    }
-    @include breakpoints.large {
-      @include typography.size("delta");
-    }
+    @extend %osg-text-preset-3;
   }
 
   &__navigation {
@@ -88,11 +76,7 @@
     @extend %osg-margin-top-4;
 
     h3.osg-collapsable--heading {
-      @include typography.size("kilo");
-
-      @include breakpoints.large {
-        @include typography.size("juliett");
-      }
+      @extend %osg-text-preset-10;
 
       button {
         all: inherit;
