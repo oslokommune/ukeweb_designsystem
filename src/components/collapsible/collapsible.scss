@@ -6,8 +6,8 @@
 
 .osg-collapsible-trigger {
   &--block {
-    @extend %osg-padding-15;
-    @extend %osg-text-4;
+    @extend %osg-padding-4;
+    @extend %osg-text-preset-10;
     background-color: colors.$gray-light;
     border: none;
     color: inherit;
@@ -24,18 +24,17 @@
 
     &::after {
       font-family: "Oslo Icons";
-      font-size: typography.$size-24;
+      @include typography.size("golf");
+      line-height: 1.75rem;
       content: map-get(icons.$icons, "chevron-thin-down");
       position: absolute;
-      top: spacing.$space-15;
-      right: spacing.$space-15;
     }
   }
 
   &--big-block {
-    @extend %osg-padding-horizontal-20;
-    @extend %osg-padding-vertical-30;
-    @extend %osg-heading-3;
+    @extend %osg-padding-horizontal-5;
+    @extend %osg-padding-vertical-8;
+    @extend %osg-text-preset-3;
     background-color: colors.$gray-light;
     border: none;
     color: inherit;
@@ -52,22 +51,20 @@
 
     &::after {
       font-family: "Oslo Icons";
-      font-size: typography.$size-30;
+      @include typography.size("delta");
       content: map-get(icons.$icons, "plus-sign");
       position: absolute;
-      top: spacing.$space-30;
-      right: spacing.$space-20;
     }
   }
 
   &--link {
-    @extend %osg-text-4;
+    @extend %osg-text-preset-10;
     color: inherit;
     background-color: unset;
     border: none;
     display: inline-block;
     font-family: inherit;
-    padding-left: spacing.$space-none;
+    @extend %osg-padding-left-0;
 
     &:hover {
       color: colors.$blue-contrast;
@@ -75,10 +72,11 @@
     }
 
     &::after {
-      @extend %osg-margin-left-5;
+      @extend %osg-margin-left-1;
       content: map-get(icons.$icons, "chevron-thin-down");
       font-family: "Oslo Icons";
-      font-size: typography.$size-24;
+      @include typography.size("golf");
+      line-height: 1.75rem;
       vertical-align: top;
     }
 
@@ -159,10 +157,10 @@
   }
 
   &--block {
-    @extend %osg-padding-15;
+    @extend %osg-padding-4;
   }
   &--big-block {
-    @extend %osg-padding-horizontal-20;
-    @extend %osg-padding-vertical-15;
+    @extend %osg-padding-horizontal-5;
+    @extend %osg-padding-vertical-4;
   }
 }
