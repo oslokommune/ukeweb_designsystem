@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
@@ -7,12 +8,19 @@
   counter-reset: orderedlist;
 
   &__item {
-    @extend %osg-margin-bottom-30;
+    @extend %osg-margin-bottom-8;
   }
 
   &__item::before {
-    @extend %osg-heading-6, %osg-text-center;
-    @extend %osg-margin-right-5;
+    text-align: center;
+    @extend %osg-margin-right-1;
+
+    @include typography.size("kilo");
+    @include typography.weight("medium");
+
+    @include breakpoints.large {
+      @include typography.size("juliett");
+    }
 
     counter-increment: orderedlist;
     content: counter(orderedlist);
@@ -26,11 +34,17 @@
   }
 
   &__heading {
-    @extend %osg-heading-6;
     display: inline;
+
+    @include typography.size("kilo");
+    @include typography.weight("medium");
+
+    @include breakpoints.large {
+      @include typography.size("juliett");
+    }
   }
 
   &__text {
-    @extend %osg-margin-top-5;
+    @extend %osg-margin-top-1;
   }
 }
