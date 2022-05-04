@@ -6,8 +6,8 @@
 .osg-service-header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: grid.$gutter-large;
-  row-gap: grid.$gutter-large;
+  column-gap: grid.$gutter-size-large;
+  row-gap: grid.$gutter-size-large;
 
   &__main {
     grid-column: span 12;
@@ -21,11 +21,28 @@
   }
 
   &__heading {
-    @extend %osg-heading-1, %osg-margin-bottom-15;
+    @extend %osg-margin-bottom-4;
+    @include typography.size("echo");
+
+    @include breakpoints.medium {
+      @include typography.size("bravo");
+    }
+    @include breakpoints.large {
+      @include typography.size("alfa");
+    }
   }
 
   &__lead {
-    @extend %osg-text-1;
+    @extend %osg-padding-5;
+    @include typography.size("hotel");
+    @include typography.weight("light");
+
+    @include breakpoints.medium {
+      @include typography.size("golf");
+    }
+    @include breakpoints.large {
+      @include typography.size("delta");
+    }
   }
 
   &__image {
