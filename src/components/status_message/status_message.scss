@@ -1,11 +1,17 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
 
 .osg-status-message {
-  @extend %osg-padding-20;
-  @extend %osg-text-5;
+  @extend %osg-padding-5;
+  @include typography.size("kilo");
+  @include typography.weight("light");
+
+  @include breakpoints.large {
+    @include typography.size("juliett");
+  }
   background-color: colors.$gray;
 
   &--success {
