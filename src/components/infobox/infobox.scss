@@ -8,7 +8,7 @@
   background-color: colors.$blue-light;
 
   &__heading {
-    @extend %osg-margin-bottom-4;
+    @extend %osg-margin-bottom-1;
     @include typography.size("kilo");
     @include typography.weight("medium");
 
