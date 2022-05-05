@@ -2,3 +2,12 @@
 @use "../../getting_started";
 @use "../../general";
 @use "../../components";
+@use "system/typography";
+
+.osg-devtools-text-preset-1 {
+  @extend %osg-text-size-india, %osg-text-size-hotel-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+}
+
+.osg-devtools-text-preset-2 {
+  @extend %osg-text-size-india, %osg-text-size-hotel-breakpoint-medium;
+}

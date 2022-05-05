@@ -4,93 +4,59 @@
 // Weight
 @each $name, $size in typography.$weights {
   .osg-text-weight-#{$name} {
-    @include typography.weight($name);
+    @extend %osg-text-weight-#{$name};
   }
-}
 
-@each $name, $size in typography.$weights {
-  @include breakpoints.medium {
-    .osg-text-weight-#{$name}-breakpoint-medium {
-      @include typography.weight($name);
-    }
+  .osg-text-weight-#{$name}-breakpoint-medium {
+    @extend %osg-text-weight-#{$name}-breakpoint-medium;
   }
-}
 
-@each $name, $size in typography.$weights {
-  @include breakpoints.large {
-    .osg-text-weight-#{$name}-breakpoint-large {
-      @include typography.weight($name);
-    }
+  .osg-text-weight-#{$name}-breakpoint-large {
+    @extend %osg-text-weight-#{$name}-breakpoint-large;
   }
 }
 
 // Style
-.osg-text-style-italic {
-  @include typography.style("italic");
-}
-
-@include breakpoints.medium {
-  .osg-text-style-italic-breakpoint-medium {
-    @include typography.style("italic");
+@each $name, $values in typography.$styles {
+  .osg-text-style-#{$name} {
+    @extend %osg-text-style-#{$name};
   }
-}
 
-@include breakpoints.large {
-  .osg-text-style-italic-breakpoint-large {
-    @include typography.style("italic");
+  .osg-text-style-#{$name}-breakpoint-medium {
+    @extend %osg-text-style-#{$name}-breakpoint-medium;
+  }
+
+  .osg-text-style-#{$name}-breakpoint-large {
+    @extend %osg-text-style-#{$name}-breakpoint-large;
   }
 }
 
 // Size
-// Each breakpoint has to have its own loop to control order of output it seems
 @each $name, $values in typography.$sizes {
   .osg-text-size-#{$name} {
-    @include typography.size($name);
+    @extend %osg-text-size-#{$name};
   }
-}
 
-@each $name, $values in typography.$sizes {
-  @include breakpoints.medium {
-    .osg-text-size-#{$name}-breakpoint-medium {
-      @include typography.size($name);
-    }
+  .osg-text-size-#{$name}-breakpoint-medium {
+    @extend %osg-text-size-#{$name}-breakpoint-medium;
   }
-}
 
-@each $name, $values in typography.$sizes {
-  @include breakpoints.large {
-    .osg-text-size-#{$name}-breakpoint-large {
-      @include typography.size($name);
-    }
+  .osg-text-size-#{$name}-breakpoint-large {
+    @extend %osg-text-size-#{$name}-breakpoint-large;
   }
 }
 
 // Align
 @each $name, $value in typography.$alignments {
   .osg-text-align-#{$name} {
-    @include typography.align($name);
+    @extend %osg-text-align-#{$name};
   }
-}
 
-@each $name, $value in typography.$alignments {
-  @include breakpoints.medium {
-    .osg-text-align-#{$name}-breakpoint-medium {
-      @include typography.align($name);
-    }
+  .osg-text-align-#{$name}-breakpoint-medium {
+    @extend %osg-text-align-#{$name}-breakpoint-medium;
   }
-}
 
-@each $name, $value in typography.$alignments {
-  @include breakpoints.large {
-    .osg-text-align-#{$name}-breakpoint-large {
-      @include typography.align($name);
-    }
-  }
-}
-
-// Presets
-@each $name, $breakpoints in typography.$presets {
-  .osg-text-preset-#{$name} {
-    @extend %osg-text-preset-#{$name};
+  .osg-text-align-#{$name}-breakpoint-large {
+    @extend %osg-text-align-#{$name}-breakpoint-large;
   }
 }

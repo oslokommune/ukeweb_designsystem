@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "system/breakpoints";
 
-// Name, size, line-height, letter spacing
+// Text size
 $sizes: (
   "alfa": (
     "size": 3.375rem,
@@ -75,13 +75,11 @@ $sizes: (
     @error "Size #{$name} is invalid. Size must be one of: #{map.keys($sizes)}.";
   }
 }
-
 @each $name, $values in $sizes {
   %osg-text-size-#{$name} {
     @include size($name);
   }
 }
-
 @each $name, $values in $sizes {
   %osg-text-size-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
@@ -89,7 +87,6 @@ $sizes: (
     }
   }
 }
-
 @each $name, $values in $sizes {
   %osg-text-size-#{$name}-breakpoint-large {
     @include breakpoints.large {
@@ -98,7 +95,7 @@ $sizes: (
   }
 }
 
-// generating font weight classes
+// Text weight
 $weights: (
   "light": 300,
   "regular": 400,
@@ -112,8 +109,27 @@ $weights: (
     @error "Weight #{$name} is invalid. Weight must be one of: #{map.keys($weights)}.";
   }
 }
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name} {
+    @include weight($name);
+  }
+}
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include weight($name);
+    }
+  }
+}
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include weight($name);
+    }
+  }
+}
 
-// font style
+// Text style
 $styles: (
   "italic": 1,
 );
@@ -124,8 +140,27 @@ $styles: (
     @error "Style #{$name} is invalid. Style must be one of: #{map.keys($styles)}.";
   }
 }
+@each $name, $values in $styles {
+  %osg-text-style-#{$name} {
+    @include style($name);
+  }
+}
+@each $name, $values in $styles {
+  %osg-text-style-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include style($name);
+    }
+  }
+}
+@each $name, $values in $styles {
+  %osg-text-style-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include style($name);
+    }
+  }
+}
 
-// generating text align classes
+// Text alignment
 $alignments: (
   "left": 1,
   "right": 1,
@@ -138,206 +173,22 @@ $alignments: (
     @error "Align #{$name} is invalid. Align must be one of: #{map.keys($alignments)}.";
   }
 }
-
-// Text preset packages
-$presets: (
-  1: (
-    "small": (
-      "size": "echo",
-      "weight": "regular",
-    ),
-    "medium": (
-      "size": "bravo",
-      "weight": "regular",
-    ),
-    "large": (
-      "size": "alfa",
-      "weight": "regular",
-    ),
-  ),
-  2: (
-    "small": (
-      "size": "golf",
-      "weight": "regular",
-    ),
-    "medium": (
-      "size": "delta",
-      "weight": "regular",
-    ),
-    "large": (
-      "size": "charlie",
-      "weight": "regular",
-    ),
-  ),
-  3: (
-    "small": (
-      "size": "hotel",
-      "weight": "regular",
-    ),
-    "medium": (
-      "size": "foxtrot",
-      "weight": "regular",
-    ),
-    "large": (
-      "size": "delta",
-      "weight": "regular",
-    ),
-  ),
-  4: (
-    "small": (
-      "size": "india",
-      "weight": "medium",
-    ),
-    "medium": (
-      "size": "hotel",
-      "weight": "medium",
-    ),
-    "large": (
-      "size": "golf",
-      "weight": "medium",
-    ),
-  ),
-  5: (
-    "small": (
-      "size": "juliett",
-      "weight": "medium",
-    ),
-    "medium": (
-      "size": "india",
-      "weight": "medium",
-    ),
-    "large": (
-      "size": "hotel",
-      "weight": "medium",
-    ),
-  ),
-  6: (
-    "small": (
-      "size": "kilo",
-      "weight": "medium",
-    ),
-    "medium": (
-      "size": "kilo",
-      "weight": "medium",
-    ),
-    "large": (
-      "size": "juliett",
-      "weight": "medium",
-    ),
-  ),
-  7: (
-    "small": (
-      "size": "hotel",
-      "weight": "light",
-    ),
-    "medium": (
-      "size": "golf",
-      "weight": "light",
-    ),
-    "large": (
-      "size": "delta",
-      "weight": "light",
-    ),
-  ),
-  8: (
-    "small": (
-      "size": "india",
-      "weight": "light",
-    ),
-    "medium": (
-      "size": "hotel",
-      "weight": "light",
-    ),
-    "large": (
-      "size": "golf",
-      "weight": "light",
-    ),
-  ),
-  9: (
-    "small": (
-      "size": "juliett",
-      "weight": "light",
-    ),
-    "medium": (
-      "size": "juliett",
-      "weight": "light",
-    ),
-    "large": (
-      "size": "india",
-      "weight": "light",
-    ),
-  ),
-  10: (
-    "small": (
-      "size": "kilo",
-      "weight": "medium",
-    ),
-    "medium": (
-      "size": "kilo",
-      "weight": "medium",
-    ),
-    "large": (
-      "size": "juliett",
-      "weight": "medium",
-    ),
-  ),
-  11: (
-    "small": (
-      "size": "kilo",
-      "weight": "light",
-    ),
-    "medium": (
-      "size": "kilo",
-      "weight": "light",
-    ),
-    "large": (
-      "size": "juliett",
-      "weight": "light",
-    ),
-  ),
-  12: (
-    "small": (
-      "size": "lima",
-      "weight": "medium",
-    ),
-    "medium": (
-      "size": "lima",
-      "weight": "medium",
-    ),
-    "large": (
-      "size": "lima",
-      "weight": "medium",
-    ),
-  ),
-  13: (
-    "small": (
-      "size": "lima",
-      "weight": "light",
-    ),
-    "medium": (
-      "size": "lima",
-      "weight": "light",
-    ),
-    "large": (
-      "size": "lima",
-      "weight": "light",
-    ),
-  ),
-);
-
-@each $name, $breakpoints in $presets {
-  %osg-text-preset-#{$name} {
-    @include size(map.get($breakpoints, "small", "size"));
-    @include weight(map.get($breakpoints, "small", "weight"));
-
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name} {
+    @include align($name);
+  }
+}
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
-      @include size(map.get($breakpoints, "medium", "size"));
-      @include weight(map.get($breakpoints, "medium", "weight"));
+      @include align($name);
     }
-
+  }
+}
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name}-breakpoint-large {
     @include breakpoints.large {
-      @include size(map.get($breakpoints, "large", "size"));
-      @include weight(map.get($breakpoints, "large", "weight"));
+      @include align($name);
     }
   }
 }
