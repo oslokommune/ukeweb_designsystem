@@ -19,13 +19,14 @@
   }
 
   &__popup-content {
-    @extend %osg-text-5;
-    @extend %osg-padding-5;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-padding-1;
   }
 
   &__heading {
-    @extend %osg-heading-5;
-    @extend %osg-margin-bottom-10;
+    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-medium, %osg-text-size-hotel-breakpoint-large;
+    @extend %osg-text-weight-medium;
+    @extend %osg-margin-bottom-3;
   }
 
   &__label {
