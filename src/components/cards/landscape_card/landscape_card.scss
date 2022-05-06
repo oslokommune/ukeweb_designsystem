@@ -56,32 +56,34 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &__content {
-    width: 100%;
-
-    @extend %osg-padding-horizontal-10;
-    @extend %osg-padding-vertical-15;
+    @extend %osg-padding-horizontal-3;
+    @extend %osg-padding-vertical-4;
     @extend %osg-color-bg-gray-light;
+
+    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
 
     @include breakpoints.medium {
       flex: 1 0;
-      padding: spacing.$space-30 spacing.$space-15 !important;
     }
 
-    @include breakpoints.large {
-      padding: spacing.$space-30 !important;
-    }
+    width: 100%;
   }
 
   &__heading {
-    @extend %osg-heading-4, %osg-margin-bottom-20;
+    @extend %osg-margin-bottom-5;
+    @extend %osg-text-size-india, %osg-text-size-hotel-breakpoint-medium, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text-weight-medium;
   }
 
   &__text {
-    @extend %osg-text-5;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-light;
   }
 
   &__published {
-    @extend %osg-text-7, %osg-margin-top-15;
+    @extend %osg-margin-top-4;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &--white {
@@ -103,9 +105,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
   &--large {
     & .osg-landscape-card__content {
-      @include breakpoints.medium {
-        padding: spacing.$space-50 spacing.$space-30 !important;
-      }
+      @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-8-breakpoint-medium;
     }
 
     & .osg-landscape-card__media img {
