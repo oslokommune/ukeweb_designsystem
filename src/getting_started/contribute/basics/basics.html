@@ -15,12 +15,12 @@
       <h3>Technical</h3>
       <p>
         <strong>Understanding Oslo style guide repositories</strong><br />
-        Oslo style guide consists of two repositories. The <code class="osg-code">styleguide</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="osg-code">styleguide_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the former.
+        Oslo style guide consists of two repositories. The <code class="osg-code" class="osg-code">styleguide</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="osg-code" class="osg-code">styleguide_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the former.
       </p>
       <p>
         <strong>styleguide</strong>
         <br />
-        The <code class="osg-code">styleguide</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
+        The <code class="osg-code" class="osg-code">styleguide</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
       </p>
       <p>
         The framework has a rather simple structure.<br />
@@ -37,7 +37,8 @@
       <p>
         <strong>styleguide_devtools</strong>
         <br />
-        The <code class="osg-code">styleguide_devtools</code> repository consumes the styleguide repository (just like any project would) and is the very application you now use to browse and contribute to the styleguide repository.<br /><br />Write code in <code class="osg-code">styleguide</code>. View and verify in <code class="osg-code">styleguide_devtools</code>.
+        The <code class="osg-code" class="osg-code">styleguide_devtools</code> repository consumes the styleguide repository (just like any project would) and is the very application you now use to browse and contribute to the styleguide repository.<br /><br />Write code in <code class="osg-code" class="osg-code">styleguide</code>. View and verify in
+        <code class="osg-code" class="osg-code">styleguide_devtools</code>.
       </p>
       <h4>Developing</h4>
       <p>First and foremost, study the examples provided in "Contribute". Both visually and code. They are created to provide a reference for best practice and is what your code will be checked against in code reviews.</p>
@@ -66,7 +67,7 @@
       </p>
       <p>
         <strong>Use of @extend / @use</strong><br />
-        You must @extend or @use from <code>system</code> if values are available there.
+        You must @extend or @use from <code class="osg-code">system</code> if values are available there.
       </p>
       <h5>General rules</h5>
       <p>
@@ -82,11 +83,11 @@
       <p>Make sure to add javascript and scss files to the corresponding _index files in the root folders or they won't be included.</p>
       <p>
         <strong>Things with special meaning</strong><br />
-        <code class="osg-code">styleguide_devtools</code> will interpret the following cases in <code class="osg-code">styleguide</code>:<br />
+        <code class="osg-code" class="osg-code">styleguide_devtools</code> will interpret the following cases in <code class="osg-code" class="osg-code">styleguide</code>:<br />
         <strong>_</strong> in folder names will end up as a space when viewed in devtools<br />
-        <strong>osg-devtools-code</strong> applied as a class to an html element will make the innerHTML of the element visible in a "View code" box. Adding a child element with the class <code class="osg-code">osg-devtools-code__box</code> will instead only show the innerHTML of this element in "View code." Giving more options in terms of layout. This class also supports colors by adding a
-        modifier class <code class="osg-code">osg-devtools-code__box--{palette color}</code>. A child element of the <code class="osg-code">osg-devtools-code__box</code> with the class <code class="osg-code">osg-devtools-code__box__code</code> will only show the innerHTML of this element in the "View code" box, further enhancing the ability to customize the layout of the component and code
-        examples.<br />
+        <strong>osg-devtools-code</strong> applied as a class to an html element will make the innerHTML of the element visible in a "View code" box. Adding a child element with the class <code class="osg-code" class="osg-code">osg-devtools-code__box</code> will instead only show the innerHTML of this element in "View code." Giving more options in terms of layout. This class also supports colors
+        by adding a modifier class <code class="osg-code" class="osg-code">osg-devtools-code__box--{palette color}</code>. A child element of the <code class="osg-code" class="osg-code">osg-devtools-code__box</code> with the class <code class="osg-code" class="osg-code">osg-devtools-code__box__code</code> will only show the innerHTML of this element in the "View code" box, further enhancing the
+        ability to customize the layout of the component and code examples.<br />
         <strong>osg-devtools-devmode</strong> applied as a class to an html element will make the child elements only visible on the "Developer" tab<br />
         <strong>osg-devtools-nondevmode</strong> applied as a class to an html element will make the child elements only visible on the "Overview" tab<br />
         <strong>osg-devtools-text-preset-1</strong> applied as a class to a heading element followed by a paragraph will create the desired spacing for the "Overview" tab.
@@ -99,11 +100,11 @@
         <li>Keyboard navigation with visual focus and correct order.</li>
         <li>Use alternative text in images and an empty one when the image is not relevant.</li>
         <li>Correct use of labels, for example use aria-label when it is not visible.</li>
-        <li>Group form elements when necessary with <code>&lt;leyend&gt;</code></li>
+        <li>Group form elements when necessary with <code class="osg-code">&lt;leyend&gt;</code></li>
         <li>Subtitles in videos.</li>
         <li>Check color contrast.</li>
         <li>Ensure role, value and name to all elements so they are understand by the assistive technology.</li>
-        <li>Define a language, for example <code>&lt;html lang="en"&gt;</code></li>
+        <li>Define a language, for example <code class="osg-code">&lt;html lang="en"&gt;</code></li>
         <li>Use semantic structure and heading.</li>
         <li>Use skip link and landmarks.</li>
       </ul>
@@ -115,12 +116,12 @@
       <h5>Example photos and illustrations</h5>
       <p>
         To make development easy you can use the following illustrations in 70x70 or 300x300 from 1 to 21.<br />
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/{1-21}.png</code>
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/{1-21}.png</code>
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/{1-21}.png</code>
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/{1-21}.png</code>
       </p>
       <p>
         Photos can be found here:<br />
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/</code><br /><br />
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/</code><br /><br />
         There are 32 photos, 1.jpg to 32.jpg with the following exceptions:<br />
         - 220x275 only has 20.jpg and 30.jpg.<br />
         - 2560 is lacking photo 6.jpg, 8.jpg, 11.jpg and 16.jpg.<br /><br />
@@ -133,9 +134,9 @@
         1920/<br />
         2560/<br /><br />
         Examples:<br />
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg</code>
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg</code>
-        <code class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg</code>
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg</code>
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg</code>
+        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg</code>
       </p>
     </div>
   </div>

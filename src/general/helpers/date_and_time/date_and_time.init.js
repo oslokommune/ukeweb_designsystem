@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       testCaseElement.innerHTML += "<div>en-GB: " + OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions) + "</div>";
 
-      testCaseElement.innerHTML += '<code class="osg-code osg-block osg-margin-top-10">' + testCase.toString + "</code>";
+      testCaseElement.innerHTML += '<code class="osg-code" class="osg-code osg-block osg-margin-top-10">' + testCase.toString + "</code>";
       testCasesElement.appendChild(testCaseElement);
     });
   }
