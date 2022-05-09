@@ -2,7 +2,7 @@
   <div class="osg-input" :class="{ 'osg-input--error': errorMessage }">
     <label class="osg-input__label">
       {{ label }}
-      <input class="osg-input__input osg-margin-top-5" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" />
+      <input class="osg-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" />
       <span v-if="errorMessage" class="osg-icon osg-icons--exclamation-mark-circle"></span>
     </label>
     <div v-if="errorMessage" class="osg-input__error-message" :id="errorId">{{ errorMessage }}</div>
@@ -39,12 +39,12 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: ""
+      default: "",
     },
     errorId: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
@@ -57,8 +57,8 @@ export default {
       },
       set(value) {
         this.$emit("input", value);
-      }
-    }
+      },
+    },
   },
-}
+};
 </script>
