@@ -21,10 +21,7 @@
 @use "header/header";
 */
 @use "icon/icon";
-/*
-@use "image/image";
-@use "image_carousel/image_carousel";
-*/
+
 @use "infobox/infobox";
 /*
 @use "form/checkbox/checkbox";
@@ -38,6 +35,9 @@
 @use "form/switch/switch";
 @use "form/textarea/textarea";
 */
+
+@use "image/image";
+@use "image_carousel/image_carousel";
 @use "links/link/link";
 @use "links/service_link/service_link";
 @use "list/list";
