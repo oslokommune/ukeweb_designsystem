@@ -2,7 +2,7 @@
   <div class="osg-textarea" :class="{ 'osg-textarea--error': errorMessage }">
     <label class="osg-textarea__label">
       {{ label }}
-      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" class="osg-textarea__textarea osg-margin-top-5" :rows="rows" :placeholder="placeholder"></textarea>
+      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" class="osg-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
     </label>
     <div v-if="errorMessage" class="osg-input__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
@@ -34,12 +34,12 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: ""
+      default: "",
     },
     errorId: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
@@ -52,8 +52,8 @@ export default {
       },
       set(value) {
         this.$emit("input", value);
-      }
-    }
+      },
+    },
   },
-}
+};
 </script>
