@@ -6,22 +6,22 @@
 
 .osg-footer {
   @extend %osg-color-bg-blue-dark, %osg-color-text-white;
-  @extend %osg-text-3;
-  @extend %osg-padding-vertical-50;
+  @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
+  @extend %osg-padding-vertical-13;
 
   &__gutter {
-    margin-left: grid.$gutter;
-    margin-right: grid.$gutter;
+    margin-left: grid.$gutter-size;
+    margin-right: grid.$gutter-size;
 
     @include breakpoints.medium {
-      margin-left: grid.$gutter-large;
-      margin-right: grid.$gutter-large;
+      margin-left: grid.$gutter-size-large;
+      margin-right: grid.$gutter-size-large;
     }
   }
 
   &__content {
     margin-left: auto;
     margin-right: auto;
-    max-width: grid.$content-width;
+    max-width: grid.$max-grid-size-for-centered-content;
   }
 }
