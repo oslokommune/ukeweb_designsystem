@@ -74,79 +74,85 @@
 <div class="osg-devtools-devmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Default</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea">
-        <textarea class="osg-textarea__textarea" aria-label="Label text" rows="4" placeholder="Write something here..."></textarea>
-        <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+      <div class="osg-grid">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <h2 class="osg-devtools-text-preset-2">Default</h2>
+          <div class="osg-textarea">
+            <textarea class="osg-textarea__textarea" aria-label="Label text" rows="4" placeholder="Write something here..."></textarea>
+            <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Textarea with label</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea">
-        <label class="osg-textarea__label">
-          Label text
-          <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
-          <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
-        </label>
+      <div class="osg-grid">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <h2 class="osg-devtools-text-preset-2">Textarea with label</h2>
+          <div class="osg-textarea">
+            <label class="osg-textarea__label">
+              Label text
+              <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">States</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea osg-textarea--hover">
-        <label class="osg-textarea__label">
-          Hover
-          <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
-          <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
-        </label>
+      <div class="osg-grid">
+        <h2 class="osg-devtools-text-preset-2">States</h2>
+      </div>
+      <div class="osg-grid osg-grid--gap">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-textarea osg-textarea--hover">
+            <label class="osg-textarea__label">
+              Hover
+              <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-textarea osg-textarea--focus">
+            <label class="osg-textarea__label">
+              Active/focus
+              <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-textarea osg-textarea--disabled">
+            <label class="osg-textarea__label">
+              Disabled
+              <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..." disabled="disabled"></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </label>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-textarea osg-textarea--error">
+            <label class="osg-textarea__label">
+              Error/invalid
+              <textarea class="osg-textarea__textarea" aria-describedby="error-1" rows="4" placeholder="Write something here..."></textarea>
+              <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
+            </label>
+            <div class="osg-input__error-message" id="error-1">Error message</div>
+          </div>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <div class="osg-textarea">
+            <label class="osg-textarea__label">
+              Required
+              <textarea class="osg-textarea__textarea" aria-describedby="required-1" rows="4" placeholder="Write something here..."></textarea>
+            </label>
+            <div class="osg-textarea__required" id="required-1">* Required</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea osg-textarea--focus">
-        <label class="osg-textarea__label">
-          Active/focus
-          <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..."></textarea>
-          <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
-        </label>
-      </div>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea osg-textarea--disabled">
-        <label class="osg-textarea__label">
-          Disabled
-          <textarea class="osg-textarea__textarea" rows="4" placeholder="Write something here..." disabled="disabled"></textarea>
-          <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
-        </label>
-      </div>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea osg-textarea--error">
-        <label class="osg-textarea__label">
-          Error/invalid
-          <textarea class="osg-textarea__textarea" aria-describedby="error-1" rows="4" placeholder="Write something here..."></textarea>
-          <span class="osg-textarea__countdown-characters" aria-live="polite">30/500</span>
-        </label>
-        <div class="osg-input__error-message" id="error-1">Error message</div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <div class="osg-textarea">
-        <label class="osg-textarea__label">
-          Required
-          <textarea class="osg-textarea__textarea" aria-describedby="required-1" rows="4" placeholder="Write something here..."></textarea>
-        </label>
-        <div class="osg-textarea__required" id="required-1">* Required</div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-2">Vue</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
       <div id="osg-textarea-vue-1">
         <osg-textarea error-id="osg-vue-checkbox-component" label="Label text" name="text" text="" placeholder="Type text here" />
       </div>
