@@ -7,22 +7,28 @@
 @use "components/table/table";
 
 .osg-content {
-  @extend %osg-text-5;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett;
+  @extend %osg-text-weight-light;
 
   :last-child {
-    @extend %osg-margin-bottom-none;
+    @extend %osg-margin-bottom-0;
   }
 
   h2 {
-    @extend %osg-heading-3, %osg-margin-bottom-5, %osg-margin-bottom-10-breakpoint-medium;
+    @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+    @extend %osg-margin-bottom-1, %osg-margin-bottom-3-breakpoint-medium;
   }
 
   h3 {
-    @extend %osg-heading-5, %osg-margin-bottom-5, %osg-margin-bottom-10-breakpoint-medium;
+    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-medium, %osg-text-size-hotel-breakpoint-large;
+    @extend %osg-text-weight-medium;
+    @extend %osg-margin-bottom-1, %osg-margin-bottom-3-breakpoint-medium;
   }
 
   h4 {
-    @extend %osg-heading-6, %osg-margin-bottom-5;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-medium;
+    @extend %osg-margin-bottom-1;
   }
 
   p {
@@ -30,20 +36,20 @@
   }
 
   p + p {
-    @extend %osg-margin-top-20;
+    @extend %osg-margin-top-5;
   }
 
   p + h2 {
-    @extend %osg-margin-top-30, %osg-margin-top-50-breakpoint-medium;
+    @extend %osg-margin-top-8, %osg-margin-top-13-breakpoint-medium;
   }
 
   p + h3,
   p + h4 {
-    @extend %osg-margin-top-20;
+    @extend %osg-margin-top-5;
   }
 
   h2 + h3 {
-    @extend %osg-margin-top-20;
+    @extend %osg-margin-top-5;
   }
 
   a:not(.osg-button) {
@@ -51,35 +57,35 @@
   }
 
   ul {
-    @extend .osg-unordered-list, %osg-margin-vertical-20;
+    @extend .osg-unordered-list, %osg-margin-vertical-5;
     ul,
     ul ul {
-      @extend %osg-margin-vertical-none;
+      @extend %osg-margin-vertical-0;
       padding-left: 1.25rem;
     }
     li + li {
-      @extend %osg-padding-top-10;
+      @extend %osg-padding-top-3;
     }
   }
 
   ol {
-    @extend .osg-ordered-list, %osg-margin-vertical-20;
+    @extend .osg-ordered-list, %osg-margin-vertical-5;
     ol,
     ol ol {
-      @extend %osg-margin-vertical-none;
+      @extend %osg-margin-vertical-0;
       padding-left: 1.25rem;
     }
     li + li {
-      @extend %osg-padding-top-10;
+      @extend %osg-padding-top-3;
     }
   }
 
   blockquote {
-    @extend .osg-blockquote, %osg-margin-vertical-30;
+    @extend .osg-blockquote, %osg-margin-vertical-8;
   }
 
   table {
-    @extend .osg-table, %osg-margin-vertical-30;
+    @extend .osg-table, %osg-margin-vertical-8;
 
     caption {
       @extend .osg-table__caption;
