@@ -4,7 +4,8 @@
 @use "system/spacing";
 
 .osg-radio {
-  @extend %osg-text-5;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text-weight-light;
   align-items: center;
   color: colors.$blue-dark;
   display: flex;
@@ -17,22 +18,23 @@
   }
 
   &__required {
-    margin-top: spacing.$space-5;
-    padding: 0;
-    @extend %osg-text-7;
+    @extend %osg-margin-top-1;
+    @extend %osg-padding-0;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &--text-align-top {
     align-items: flex-start;
 
     .osg-radio__label {
-      margin-top: -(spacing.$space-5);
+      margin-top: -(5px);
     }
   }
 
   &__label {
     hyphens: auto;
-    margin-left: spacing.$space-10;
+    margin-left: 10px;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }
@@ -82,7 +84,7 @@
   }
 
   & input:checked ~ &__label {
-    @extend %osg-text-4;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
     line-height: 1 !important;
   }
 
@@ -111,7 +113,7 @@
   &--focus,
   &:focus {
     .osg-radio__label {
-      @extend %osg-text-4;
+      @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
     }
   }
 
