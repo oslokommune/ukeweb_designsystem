@@ -10,9 +10,10 @@
   position: relative;
 
   &__required {
-    margin-top: spacing.$space-5;
-    padding: 0;
-    @extend %osg-text-7;
+    @extend %osg-margin-top-1;
+    @extend %osg-padding-0;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__error-message {
@@ -25,7 +26,7 @@
     &::after {
       content: map-get(icons.$icons, "calendar") !important;
       font-family: "Oslo Icons" !important;
-      font-size: typography.$size-30;
+      @extend %osg-text-size-delta;
       line-height: 1em;
       position: absolute;
       right: 10px;
@@ -42,7 +43,7 @@
   }
 
   &__datepicker {
-    $padding: spacing.$space-10;
+    $padding: 10px;
     background-color: colors.$white;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
     display: flex;
@@ -62,13 +63,13 @@
       border-radius: 50%;
       border: none;
       background-color: transparent;
-      font-size: typography.$size-24;
+      @extend %osg-text-size-golf;
       line-height: 30px;
       text-align: center;
 
-      margin: 0 spacing.$space-5;
+      @extend %osg-margin-vertical-0, %osg-margin-horizontal-1;
       position: absolute;
-      top: spacing.$space-10;
+      top: 10px;
 
       &:disabled {
         cursor: not-allowed;
@@ -115,9 +116,8 @@
         font-weight: normal;
       }
       caption {
-        font-size: typography.$size-18;
-        margin-bottom: spacing.$space-10;
-        margin-top: spacing.$space-5;
+        @extend %osg-text-size-juliett;
+        @extend %osg-margin-bottom-3, %osg-margin-top-1;
         text-transform: capitalize;
       }
       thead {
@@ -125,13 +125,15 @@
         border-top: 1px solid colors.$blue-dark;
       }
       th {
-        font-size: typography.$size-14;
-        padding: spacing.$space-5 0;
-        text-align: center;
+        @extend %osg-text-size-lima;
+        @extend %osg-padding-vertical-1, %osg-padding-horizontal-0;
+        @extend %osg-text-align-center;
+        // text-align: center;
         text-transform: capitalize;
       }
       td {
-        text-align: center;
+        // text-align: center;
+        @extend %osg-text-align-center;
         button {
           width: 36px;
           height: 36px;
@@ -146,7 +148,8 @@
           }
           // next/prev month
           &[data-adjacent="true"] {
-            font-size: typography.$size-14;
+            @extend %osg-text-size-lima;
+            // font-size: typography.$size-14;
           }
           &:not(:disabled) {
             cursor: pointer;
