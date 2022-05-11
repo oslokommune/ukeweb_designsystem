@@ -8,7 +8,7 @@
   &--block {
     @extend %osg-padding-4;
     @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @include typography.weight("medium");
+    @extend %osg-text-weight-medium;
     background-color: colors.$gray-light;
     border: none;
     color: inherit;
@@ -25,7 +25,7 @@
 
     &::after {
       font-family: "Oslo Icons";
-      @include typography.size("golf");
+      @extend %osg-text-size-golf;
       line-height: 1.75rem;
       content: map-get(icons.$icons, "chevron-thin-down");
       position: absolute;
@@ -36,7 +36,7 @@
     @extend %osg-padding-horizontal-5;
     @extend %osg-padding-vertical-8;
     @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
-    @include typography.weight("light");
+    @extend %osg-text-weight-light;
     background-color: colors.$gray-light;
     border: none;
     color: inherit;
@@ -53,7 +53,7 @@
 
     &::after {
       font-family: "Oslo Icons";
-      @include typography.size("delta");
+      @extend %osg-text-size-delta;
       content: map-get(icons.$icons, "plus-sign");
       position: absolute;
     }
@@ -61,7 +61,7 @@
 
   &--link {
     @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @include typography.weight("medium");
+    @extend %osg-text-weight-medium;
     color: inherit;
     background-color: unset;
     border: none;
@@ -78,7 +78,7 @@
       @extend %osg-margin-left-1;
       content: map-get(icons.$icons, "chevron-thin-down");
       font-family: "Oslo Icons";
-      @include typography.size("golf");
+      @extend %osg-text-size-golf;
       line-height: 1.75rem;
       vertical-align: top;
     }

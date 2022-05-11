@@ -10,8 +10,8 @@
   }
 
   &__trigger {
-    @include typography.size("lima");
-    @include typography.weight("medium");
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-medium;
     @extend %osg-margin-right-4;
 
     border: none;

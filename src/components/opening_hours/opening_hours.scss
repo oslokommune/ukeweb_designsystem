@@ -36,18 +36,18 @@
   &__heading {
     @extend %osg-margin-bottom-4;
     @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
-    @include typography.weight("light");
+    @extend %osg-text-weight-light;
   }
 
   &__navigation {
     @extend %osg-margin-bottom-3;
-    @include typography.size("lima");
-    @include typography.weight("medium");
+    @extend %osg-text-weight-medium;
+    @extend %osg-text-size-lima;
   }
 
   &__week {
-    @include typography.size("lima");
-    @include typography.weight("light");
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__extra {
@@ -63,7 +63,7 @@
 
     &--today,
     &--today th {
-      @include typography.weight("medium");
+      @extend %osg-text-weight-medium;
     }
     &--past {
       color: colors.$grayscale-40;
@@ -79,7 +79,7 @@
 
     h3.osg-collapsable--heading {
       @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-      @include typography.weight("medium");
+      @extend %osg-text-weight-medium;
 
       button {
         all: inherit;

@@ -5,28 +5,28 @@
       <div class="osg-infobox osg-infobox--yellow">
         <h2 class="osg-infobox__heading">Technical details on the use of maps</h2>
         <h3 class="osg-devtools-text-preset-4">API-keys</h3>
-        <p class="osg-paragraph">
+        <p>
         The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.</p>
-        <p class="osg-paragraph">Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.</p>
-        <p class="osg-paragraph">If you do not change the key, you will get 403 Forbidden.</p>
+        <p>Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.</p>
+        <p>If you do not change the key, you will get 403 Forbidden.</p>
         </p>
         <br />
         <h3 class="osg-devtools-text-preset-4">GeoJSON suported features</h3>
-        <p class="osg-paragraph">
+        <p>
           The map supports the following GeoJSON features:<br />
           FeatureCollection, with the following feature types: Polygon, LineString and Point.</p>
-        <p class="osg-paragraph">It does not support GeometryCollection or the Multi*-variants of the feature types.</p>
+        <p>It does not support GeometryCollection or the Multi*-variants of the feature types.</p>
         <br />
         <h3 class="osg-devtools-text-preset-4">Fit map to bounds of GeoJSON-data</h3>
-        <p class="osg-paragraph">
+        <p>
           The map automatically sets a center point and zooms to fit the maximum bounds of the given GeoJSON-data</p>
-          <p class="osg-paragraph">If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.</p>
-          <p class="osg-paragraph">This behvaiour overrides the center point and zoom level in <code class="osg-code">state</code>.</p>
-          <p class="osg-paragraph">To disable this, set the property <code class="osg-code">autoFitToBounds</code> in the <code class="osg-code">state</code> to <code class="osg-code">false</code>.</p>
+          <p>If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.</p>
+          <p>This behvaiour overrides the center point and zoom level in <code class="osg-code">state</code>.</p>
+          <p>To disable this, set the property <code class="osg-code">autoFitToBounds</code> in the <code class="osg-code">state</code> to <code class="osg-code">false</code>.</p>
         </p>
         <br />
         <h3 class="osg-devtools-text-preset-4">Popups</h3>
-        <p class="osg-paragraph">Popups appear on click on a feature if the following conditions are met:</p>
+        <p>Popups appear on click on a feature if the following conditions are met:</p>
           <ul class="osg-unordered-list">
             <li class="osg-unordered-list__item"><code class="osg-code">showPopups</code> is true, this can be set to false by overriding the property <code class="osg-code">state</code>.</li>
             <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">description</code>. Optionally it can also have <code class="osg-code">heading</code>.</li>
@@ -34,7 +34,7 @@
             <li class="osg-unordered-list__item"> There is actually a string with data.</li>
           </ul>
         <br />
-        <p class="osg-paragraph">Popups appear after load if the following conditions are met:</p>
+        <p>Popups appear after load if the following conditions are met:</p>
         <ul class="osg-unordered-list">
           <li class="osg-unordered-list__item"> All of the conditions for on click are met.</li>
           <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">openPopup</code>, with a value of <code class="osg-code">true</code>.</li>
@@ -43,9 +43,9 @@
           <li class="osg-unordered-list__item"> Note: you should limit the number of opened popups to 1 or 2.</li>
         </ul>
         <br />
-        <p class="osg-paragraph">To display additional data after the heading and description, you can add an array called <code class="osg-code">data</code> to the feature properties.</p>
-        <p class="osg-paragraph">Each item in the array must contain <code class="osg-code">label</code> and <code class="osg-code">value</code>.</p>
-        <p class="osg-paragraph">This only works with the <code class="osg-code">geoJson</code> prop, and not the <code class="osg-code">points</code> prop.</p>
+        <p>To display additional data after the heading and description, you can add an array called <code class="osg-code">data</code> to the feature properties.</p>
+        <p>Each item in the array must contain <code class="osg-code">label</code> and <code class="osg-code">value</code>.</p>
+        <p>This only works with the <code class="osg-code">geoJson</code> prop, and not the <code class="osg-code">points</code> prop.</p>
       </div>
     </div>
     <div class="osg-grid__column--12">
@@ -67,7 +67,7 @@
     <div class="osg-grid__column--12">
       <div class="osg-infobox osg-infobox--yellow">
         <h2 class="osg-infobox__heading">Highlighted polygon</h2>
-        If you need to hightlight a polygon, add <code class="osg-code">"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.
+        <p>If you need to hightlight a polygon, add <code class="osg-code">"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.</p>
       </div>
     </div>
 

@@ -13,13 +13,13 @@
   }
 
   &__text {
-    @include typography.size("lima");
-    @include typography.weight("light");
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__list {
-    @include typography.size("lima");
-    @include typography.weight("medium");
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-medium;
     @extend %osg-margin-top-4;
 
     > * + * {

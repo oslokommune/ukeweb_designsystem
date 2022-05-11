@@ -5,8 +5,8 @@
 @use "system/states";
 
 .osg-breadcrumb {
-  @include typography.size("lima");
-  @include typography.weight("light");
+  @extend %osg-text-size-lima;
+  @extend %osg-text-weight-light;
 
   &__list {
     list-style: none !important;
@@ -56,8 +56,8 @@
   }
 
   &__active {
-    @include typography.size("lima");
-    @include typography.weight("medium");
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-medium;
     margin-left: 6px;
     position: relative;
     padding-left: 0.9em;
