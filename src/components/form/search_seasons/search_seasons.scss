@@ -72,8 +72,9 @@
     }
 
     &:focus {
+      $padding: 15px;
       border: 4px solid colors.$blue-contrast !important;
-      padding: 13px !important;
+      padding: $padding - 1px;
       outline: none;
     }
     @extend %osg-text-size-golf-breakpoint-large;
