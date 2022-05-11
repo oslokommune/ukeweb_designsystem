@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const testCaseElement = document.createElement("div");
-      testCaseElement.classList.add("osg-margin-bottom-30");
+      testCaseElement.classList.add("osg-margin-bottom-8");
       testCaseElement.innerHTML = "<div>no-NO: " + OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions) + "</div>";
 
       testCase.dateFromOptions.locale = "en-GB";
