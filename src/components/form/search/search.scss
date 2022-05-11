@@ -5,7 +5,8 @@
 @use "system/states";
 
 .osg-search {
-  @extend %osg-text-5;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text-weight-light;
   position: relative;
 
   &__form {
@@ -16,11 +17,14 @@
     cursor: pointer;
     display: block;
     width: 100%;
-    @extend %osg-text-4;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-medium;
   }
 
   &__input {
-    @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
+    $padding-vertical: 10px;
+    $padding-horizontal: 15px;
+    padding: $padding-vertical $padding-horizontal;
     @extend %osg-color-text-blue-dark;
     border: 2px solid colors.$blue-dark;
     border-radius: 0;
@@ -36,7 +40,7 @@
 
     &:focus {
       border: 4px solid colors.$blue-contrast !important;
-      padding: spacing.$space-10 - 2px spacing.$space-15 - 2px !important;
+      padding: $padding-vertical - 2px $padding-horizontal - 2px !important;
       outline: none;
     }
 
@@ -58,7 +62,7 @@
   }
 
   &__button {
-    @extend %osg-margin-left-10;
+    @extend %osg-margin-left-3;
     background-color: colors.$blue-dark;
     border: 2px solid colors.$blue-dark;
     color: colors.$white;
@@ -69,7 +73,7 @@
 
     &::after {
       font-family: "Oslo Icons" !important;
-      font-size: typography.$size-30;
+      @extend %osg-text-size-delta;
       line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
@@ -83,7 +87,7 @@
   }
 
   &__dropdown {
-    @extend %osg-padding-vertical-15;
+    @extend %osg-padding-vertical-4;
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;
@@ -100,7 +104,7 @@
     &__item {
       display: flex;
       flex-direction: column;
-      padding: spacing.$space-5 spacing.$space-15;
+      padding: 5px 15px;
       text-decoration: none;
 
       &:hover,
@@ -117,11 +121,11 @@
         &:hover,
         &:focus {
           background-color: colors.$gray-light;
-          border-top: spacing.$space-5 solid colors.$gray-light;
-          border-bottom: spacing.$space-5 solid colors.$gray-light;
+          border-top: 5px solid colors.$gray-light;
+          border-bottom: 5px solid colors.$gray-light;
           color: states.$hover !important;
           margin: -5px -15px;
-          padding: 0 spacing.$space-15;
+          padding: 0 15px;
           text-decoration: underline;
         }
       }
@@ -134,7 +138,7 @@
     }
 
     & .osg-search__button {
-      @extend %osg-margin-left-none;
+      @extend %osg-margin-left-0;
       background-color: colors.$yellow;
       border: 2px solid colors.$yellow;
       border-radius: 50%;
@@ -148,7 +152,7 @@
     &::after {
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       font-family: "Oslo Icons" !important;
-      font-size: typography.$size-30;
+      @extend %osg-text-size-delta;
       line-height: 1em;
       position: absolute;
       right: 10px;
