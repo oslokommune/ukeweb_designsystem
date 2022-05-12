@@ -57,6 +57,10 @@
 
     .osg-icon {
       line-height: 1em !important;
+
+      &--size {
+        @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+      }
     }
   }
 
