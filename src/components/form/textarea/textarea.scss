@@ -23,6 +23,7 @@
 
   &__textarea {
     @include mixins.form-component;
+    margin-top: 0.313rem;
     resize: none;
   }
 

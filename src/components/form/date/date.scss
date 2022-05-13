@@ -36,6 +36,7 @@
 
   &__input {
     @include mixins.form-component;
+    margin-top: 0.625rem;
 
     &::placeholder {
       color: inherit;

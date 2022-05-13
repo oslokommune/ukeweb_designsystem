@@ -23,6 +23,7 @@
 
     & select {
       @include mixins.form-component;
+      margin-top: 0.313rem;
       cursor: pointer;
       padding-right: 50px;
     }
@@ -35,7 +36,7 @@
       pointer-events: none;
       position: absolute;
       right: 0.875rem;
-      top: 1.625rem;
+      top: 2rem;
       transform: translateY(-50%);
     }
   }
