@@ -8,6 +8,10 @@ $osg-carousel-image-height-large: 725;
 .osg-carousel {
   position: relative;
 
+  &__container {
+    overflow: hidden;
+  }
+
   &__content {
     position: relative;
     overflow: hidden;
