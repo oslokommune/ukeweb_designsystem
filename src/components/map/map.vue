@@ -61,6 +61,7 @@ export default {
   data: () => ({
     layerIds: [],
     dataSourceIds: [],
+    lastDisplayedPopup: null,
     mapObject: null,
     mapReady: false,
     showPopups: true,
@@ -207,17 +208,19 @@ export default {
       }
     },
     clearMapAndData() {
-      var _this = this; // Scope this, bobby!
+      if (this.lastDisplayedPopup !== null) {
+        this.lastDisplayedPopup.remove();
+      }
 
-      this.layerIds.forEach((element) => {
-        if (_this.mapObject.getLayer(element)) {
-          _this.mapObject.removeLayer(element);
+      this.layerIds.forEach((layerId) => {
+        if (this.mapObject.getLayer(layerId)) {
+          this.mapObject.removeLayer(layerId);
         }
       });
 
-      this.dataSourceIds.forEach((element) => {
-        if (_this.mapObject.getSource(element)) {
-          _this.mapObject.removeSource(element);
+      this.dataSourceIds.forEach((dataSourceId) => {
+        if (this.mapObject.getSource(dataSourceId)) {
+          this.mapObject.removeSource(dataSourceId);
         }
       });
 
@@ -598,7 +601,8 @@ export default {
         let html = _this.$_getPopupHtml(event.features[0]);
 
         if (typeof html === "string") {
-          new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
+          const popup = new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
+          this.lastDisplayedPopup = popup;
         }
       });
 
