@@ -1,7 +1,7 @@
 <template>
   <div class="osg-carousel">
-    <div class="osg-grid">
-      <div class="osg-grid__column--12 osg-carousel__container">
+    <div class="osg-carousel__wrapper">
+      <div class="osg-carousel__container">
         <div class="osg-carousel__content" ref="content">
           <div class="osg-carousel__navigation" v-if="images.length > 1">
             <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
