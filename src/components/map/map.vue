@@ -208,21 +208,19 @@ export default {
       }
     },
     clearMapAndData() {
-      var _this = this; // Scope this, bobby!
-
       if (this.lastDisplayedPopup !== null) {
         this.lastDisplayedPopup.remove();
       }
 
       this.layerIds.forEach((layerId) => {
-        if (_this.mapObject.getLayer(layerId)) {
-          _this.mapObject.removeLayer(layerId);
+        if (this.mapObject.getLayer(layerId)) {
+          this.mapObject.removeLayer(layerId);
         }
       });
 
       this.dataSourceIds.forEach((dataSourceId) => {
-        if (_this.mapObject.getSource(dataSourceId)) {
-          _this.mapObject.removeSource(dataSourceId);
+        if (this.mapObject.getSource(dataSourceId)) {
+          this.mapObject.removeSource(dataSourceId);
         }
       });
 
