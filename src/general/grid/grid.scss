@@ -19,6 +19,10 @@
     @extend .osg-grid--gap-column, .osg-grid--gap-row;
   }
 
+  &--dense {
+    grid-auto-flow: dense;
+  }
+
   &--gap-column {
     column-gap: grid.$gap-size-hard;
 
