@@ -1,33 +1,31 @@
 <template>
   <div class="osg-carousel">
-    <div class="osg-carousel__wrapper">
-      <div class="osg-carousel__content" ref="content">
-        <div class="osg-carousel__navigation" v-if="images.length > 1">
-          <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
-            <span class="osg-button__icon osg-icons--chevron-left" :aria-label="prev"></span>
-          </button>
-          <button class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
-            <span class="osg-button__icon osg-icons--chevron-right" :aria-label="next"></span>
-          </button>
-        </div>
-        <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
-          <div class="osg-carousel__slides" ref="slides">
-            <figure v-for="(image, index) in images" v-bind:key="index">
-              <picture>
-                <source :srcset="image.large" media="(min-width: 1024px)" />
-                <source :srcset="image.medium" media="(min-width: 769px)" />
-                <source :srcset="image.small" media="(max-width: 768px)" />
-                <img :src="image.small" :alt="image.caption" />
-              </picture>
-            </figure>
-          </div>
+    <div class="osg-carousel__content" ref="content">
+      <div class="osg-carousel__navigation" v-if="images.length > 1">
+        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
+          <span class="osg-button__icon osg-icons--chevron-left" :aria-label="prev"></span>
+        </button>
+        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
+          <span class="osg-button__icon osg-icons--chevron-right" :aria-label="next"></span>
+        </button>
+      </div>
+      <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
+        <div class="osg-carousel__slides" ref="slides">
+          <figure v-for="(image, index) in images" v-bind:key="index">
+            <picture>
+              <source :srcset="image.large" media="(min-width: 1024px)" />
+              <source :srcset="image.medium" media="(min-width: 769px)" />
+              <source :srcset="image.small" media="(max-width: 768px)" />
+              <img :src="image.small" :alt="image.caption" />
+            </picture>
+          </figure>
         </div>
       </div>
-      <div class="osg-carousel__info osg-margin-top-10">
-        <span v-if="currentImage">
-          {{ currentImage.caption }}
-        </span>
-      </div>
+    </div>
+    <div class="osg-carousel__info osg-margin-top-10">
+      <span v-if="currentImage">
+        {{ currentImage.caption }}
+      </span>
     </div>
   </div>
 </template>

@@ -10,13 +10,9 @@ $osg-carousel-image-height-large: 725;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 
-  &__wrapper {
+  &__content {
     grid-column-end: span 12;
     grid-column-start: span 12;
-    overflow: hidden;
-  }
-
-  &__content {
     position: relative;
     overflow: hidden;
   }
