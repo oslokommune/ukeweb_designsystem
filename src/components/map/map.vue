@@ -308,6 +308,7 @@ export default {
 
       this.mapObject.on("load", () => {
         _this.mapReady = true;
+        this.mapObject.resize();
 
         // If there is data available, show it now plz.
         _this.populateMap();
