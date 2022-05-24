@@ -255,6 +255,19 @@
           </div>
         </div>
       </div>
+      <p class="osg-paragraph">Different order of elements based on viewport and auto flow dense.</p>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div class="osg-grid osg-grid--gap osg-grid--dense">
+            <div class="osg-grid__column--12 osg-grid__column--start-9-breakpoint-medium osg-grid__column--end-13-breakpoint-medium">
+              <div class="osg-padding-3 osg-text-align-center osg-color-bg-blue-light">C1</div>
+            </div>
+            <div class="osg-grid__column--12 osg-grid__column--end-9-breakpoint-medium">
+              <div class="osg-padding-3 osg-text-align-center osg-color-bg-blue-light">C2</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -318,6 +331,16 @@
                 </div>
                 <div class="osg-grid__column--12 osg-grid__column--start-7-breakpoint-medium osg-grid__column--end-13-breakpoint-medium">
                   <div class="osg-color-bg-green-light osg-padding-20">Link 7 - start at 7, end at 13 on medium and up</div>
+                </div>
+              </div>
+            </div>
+            <div class="osg-grid__column--12">
+              <div class="osg-grid osg-grid--gap osg-grid--dense osg-margin-vertical-50">
+                <div class="osg-grid__column--12 osg-grid__column--start-6-breakpoint-medium osg-grid__column--end-13-breakpoint-medium">
+                  <div class="osg-color-bg-blue-light osg-padding-20">Link 1, first on small, last on medium</div>
+                </div>
+                <div class="osg-grid__column--12 osg-grid__column--end-6-breakpoint-medium">
+                  <div class="osg-color-bg-green-light osg-padding-20">Link 2, last on small, first on medium</div>
                 </div>
               </div>
             </div>
