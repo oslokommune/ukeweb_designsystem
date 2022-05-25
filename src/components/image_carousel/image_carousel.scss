@@ -6,9 +6,12 @@ $osg-carousel-image-height-small: 290;
 $osg-carousel-image-height-medium: 540;
 $osg-carousel-image-height-large: 725;
 .osg-carousel {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   position: relative;
 
   &__content {
+    grid-column: span 12 / span 12;
     position: relative;
     overflow: hidden;
   }
@@ -73,5 +76,6 @@ $osg-carousel-image-height-large: 725;
 
   &__info {
     @extend %osg-padding-vertical-0, %osg-padding-horizontal-4, %osg-padding-0-breakpoint-large;
+    grid-column: span 12 / span 12;
   }
 }
