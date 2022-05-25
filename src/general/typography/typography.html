@@ -1,122 +1,51 @@
-<div class="osg-grid osg-grid--gap osg-grid--gutter">
-  <div class="osg-grid__column--12">
-    <p class="osg-paragraph">All text classes have specific size and weight for each of the device breakpoints (small, medium and large).</p>
+<div class="osg-grid osg-grid--gap">
+  <div id="type-buttons" class="osg-grid__column--12 osg-text-align-right">
+    <button class="osg-button osg-button--outline osg-button--small" data-type="weight" data-class="osg-text-weight-light">Light</button>
+    <button class="osg-button osg-button--small" data-type="weight" data-class="">Regular</button>
+    <button class="osg-button osg-button--outline osg-button--small" data-type="weight" data-class="osg-text-weight-medium">Medium</button>
+    <button class="osg-button osg-button--outline osg-button--small" data-type="weight" data-class="osg-text-weight-bold">Bold</button>
+    <span class="osg-margin-left-11"></span>
+    <button class="osg-button osg-button--small" data-type="style" data-class="">Normal</button>
+    <button class="osg-button osg-button--outline osg-button--small" data-type="style" data-class="osg-text-style-italic">Italic</button>
   </div>
   <div class="osg-grid__column--12">
-    <div class="osg-heading-1">Aa(H1)</div>
-    <div>Regular 400</div>
-    <div>S 28px, M 40px, L 54px</div>
-    <div>.osg-heading-1</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-heading-2">Aa(H2)</div>
-    <div>Regular 400</div>
-    <div>S 24px, M 30px, L 36px</div>
-    <div>.osg-heading-2</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-heading-3">Aa(H3)</div>
-    <div>Regular 400</div>
-    <div>S 22px, M 26px, L 30px</div>
-    <div>.osg-heading-3</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-heading-4">Aa(H4)</div>
-    <div>Medium 500</div>
-    <div>S 20px, M 24px, L 24px</div>
-    <div>.osg-heading-4</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-heading-5">Aa(H5)</div>
-    <div>Medium 500</div>
-    <div>S 18px, M 20px, L 22px</div>
-    <div>.osg-heading-5</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-heading-6">Aa(H6)</div>
-    <div>Medium 500</div>
-    <div>S 16px, M 16px, L 18px</div>
-    <div>.osg-heading-6</div>
+    <div id="types-placeholder" class="osg-grid"></div>
   </div>
   <div class="osg-grid__column--12">
-    <div class="osg-text-1">Text 1</div>
-    <div>Light 300</div>
-    <div>S 22px, M 24px, L 30px</div>
-    <div>.osg-text-1</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-2">Text 2</div>
-    <div>Light 300</div>
-    <div>S 20px, M 22px, L 24px</div>
-    <div>.osg-text-2</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-3">Text 3</div>
-    <div>Light 300</div>
-    <div>S 18px, M 18px, L 20px</div>
-    <div>.osg-text-3</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-4">Text 4</div>
-    <div>Medium 500</div>
-    <div>S 16px, M 16px, L 18px</div>
-    <div>.osg-text-4</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-5">Text 5</div>
-    <div>Light 300</div>
-    <div>S 16px, M 16px, L 18px</div>
-    <div>.osg-text-5</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-6">Text 6</div>
-    <div>Medium 500</div>
-    <div>S 14px, M 14px, L 14px</div>
-    <div>.osg-text-6</div>
-  </div>
-  <div class="osg-grid__column--2">
-    <div class="osg-text-7">Text 7</div>
-    <div>Light 300</div>
-    <div>S 14px, M 14px, L 14px</div>
-    <div>.osg-text-7</div>
+    <h2 class="osg-devtools-text-preset-1">Weight</h2>
+    <p class="osg-text-weight-light">.osg-text-weight-light (300)</p>
+    <p class="osg-text-weight-regular">.osg-text-weight-regular (400)</p>
+    <p class="osg-text-weight-medium">.osg-text-weight-medium (500)</p>
+    <p class="osg-text-weight-bold">.osg-text-weight-bold (700)</p>
   </div>
   <div class="osg-grid__column--12">
-    <h2 class="osg-heading-2">Weight</h2>
-    <div class="osg-padding-top-10 osg-padding-bottom-75">
-      <p class="osg-text-light">.osg-text-light (300)</p>
-      <p class="osg-text-regular">.osg-text-regular (400)</p>
-      <p class="osg-text-medium">.osg-text-medium (500)</p>
-      <p class="osg-text-bold">.osg-text-bold (700)</p>
-    </div>
+    <h2 class="osg-devtools-text-preset-1">Style</h2>
+    <em>Italic</em>
+    <p>Use <em>em</em> or .osg-text-style-italic class if not possible</p>
+    <strong>Strong</strong>
+    <p>Use <em>strong</em> or .osg-text-weight-medium class if not possible</p>
   </div>
   <div class="osg-grid__column--12">
-    <h2 class="osg-heading-2">Style</h2>
-    <div class="osg-padding-top-10 osg-padding-bottom-75">
-      <em>Italic</em>
-      <p>Use <em>em</em> or .osg-text-italic class if not possible</p>
-      <strong>Strong</strong>
-      <p>Use <em>strong</em> or .osg-text-medium class if not possible</p>
-    </div>
-  </div>
-  <div class="osg-grid__column--12">
-    <h2 class="osg-heading-2">Position</h2>
-  </div>
-  <div class="osg-grid__column--4">
-    <div class="osg-color-bg-blue-light osg-text-left osg-padding-15">
-      <div>Left</div>
-      <div>.osg-text-left</div>
-    </div>
-  </div>
-  <div class="osg-grid__column--4 osg-text-center">
-    <div class="osg-color-bg-blue-light osg-text-center osg-padding-15">
-      <div>Center</div>
-      <div>.osg-text-center</div>
-    </div>
-  </div>
-  <div class="osg-grid__column--4 osg-text-right">
-    <div class="osg-color-bg-blue-light osg-text-right osg-padding-15">
-      <div>Right</div>
-      <div>.osg-text-right</div>
+    <h2 class="osg-devtools-text-preset-1">Position</h2>
+    <div class="osg-grid osg-grid--gap">
+      <div class="osg-grid__column--4">
+        <div class="osg-color-bg-blue-light osg-text-align-left osg-padding-5">
+          <div><strong>Left</strong></div>
+          <div>.osg-text-align-left</div>
+        </div>
+      </div>
+      <div class="osg-grid__column--4 osg-text-center">
+        <div class="osg-color-bg-blue-light osg-text-align-center osg-padding-5">
+          <div><strong>Center</strong></div>
+          <div>.osg-text-align-center</div>
+        </div>
+      </div>
+      <div class="osg-grid__column--4 osg-text-right">
+        <div class="osg-color-bg-blue-light osg-text-align-right osg-padding-5">
+          <div><strong>Right</strong></div>
+          <div>.osg-text-align-right</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

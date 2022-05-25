@@ -53,7 +53,7 @@ $osg-modal-popup-width: 600px !default;
     background: white;
     display: flex;
     justify-content: flex-end;
-    padding: spacing.$space-15;
+    @extend %osg-padding-4;
 
     @include breakpoints.medium {
       background: transparent;
@@ -69,6 +69,8 @@ $osg-modal-popup-width: 600px !default;
   &__content {
     background: white;
     overflow: auto;
-    padding: 0 spacing.$space-50 spacing.$space-50 spacing.$space-50;
+    @extend %osg-padding-top-0;
+    @extend %osg-padding-bottom-13;
+    @extend %osg-padding-horizontal-13;
   }
 }

@@ -1,14 +1,17 @@
+<!-- Overview mode -->
 <div class="osg-devtools-nondevmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
-      <p class="osg-text-2">A switch is a small control for which you use to turn the an element on or off.</p>
-      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
-        <h2 class="osg-infobox__heading">Rules for components</h2>
-        <p class="osg-paragraph">The switch text should never take the 100% width of the page in medium and up breakpoints.</p>
+      <p class="osg-devtools-text-preset-3">A switch is a small control for which you use to turn the an element on or off.</p>
+    </div>
+    <div class="osg-grid__column--12">
+      <div class="osg-infobox osg-infobox--yellow">
+        <h2 class="osg-infobox__heading">Important</h2>
+        <p>The switch text should never take the 100% width of the page in medium and up breakpoints.</p>
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-heading">Default</h2>
+      <h2 class="osg-devtools-text-preset-1">Default</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <label class="osg-switch" aria-describedby="switch-1">
@@ -31,7 +34,7 @@
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-heading">States</h2>
+      <h2 class="osg-devtools-text-preset-1">States</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <label class="osg-switch osg-switch--disabled" aria-describedby="switch-7">
@@ -55,84 +58,98 @@
     </div>
   </div>
 </div>
+
+<!-- Developer mode -->
 <div class="osg-devtools-devmode">
-  <div class="osg-grid osg-grid-gap osg-grid--gutter">
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <h2 class="osg-heading-3">Switch</h2>
-      <label class="osg-switch" aria-describedby="switch-9">
-        <input type="checkbox" class="osg-switch__input" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-9">On</span>
-      </label>
+  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-devtools-text-preset-2">Switch</h2>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch" aria-describedby="switch-9">
+            <input type="checkbox" class="osg-switch__input" checked="checked" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-9">On</span>
+          </label>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch" aria-describedby="switch-10">
+            <input type="checkbox" class="osg-switch__input" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-10">Off</span>
+          </label>
+        </div>
+      </div>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
-      <label class="osg-switch" aria-describedby="switch-10">
-        <input type="checkbox" class="osg-switch__input" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-10">Off</span>
-      </label>
-    </div>
-  </div>
-  <div class="osg-grid osg-grid-gap osg-grid--gutter">
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <h2 class="osg-heading-3 osg-margin-top-15">States</h2>
-      <label class="osg-switch osg-switch--hover" aria-describedby="switch-11">
-        <input type="checkbox" class="osg-switch__input" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-11">Hover on</span>
-      </label>
-      <label class="osg-switch osg-switch--hover" aria-describedby="switch-12">
-        <input type="checkbox" class="osg-switch__input" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-12">Hover off</span>
-      </label>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
-      <label class="osg-switch osg-switch--focus" aria-describedby="switch-13">
-        <input type="checkbox" class="osg-switch__input" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-13">Focus/Active</span>
-      </label>
-      <label class="osg-switch osg-switch--focus" aria-describedby="switch-14">
-        <input type="checkbox" class="osg-switch__input" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-14">Focus/Active</span>
-      </label>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-flex-align-self-flex-end">
-      <label class="osg-switch osg-switch--disabled" aria-describedby="switch-5">
-        <input type="checkbox" class="osg-switch__input" disabled="disabled" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-5">Disabled</span>
-      </label>
-      <label class="osg-switch osg-switch--disabled" aria-describedby="switch-16">
-        <input type="checkbox" class="osg-switch__input" disabled="disabled" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-16">Disabled</span>
-      </label>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-      <label class="osg-switch osg-switch--error" aria-describedby="switch-17">
-        <input type="checkbox" class="osg-switch__input" aria-describedby="error-1" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-17">Error/invalid</span>
-      </label>
-      <label class="osg-switch osg-switch--error" aria-describedby="switch-18">
-        <input type="checkbox" class="osg-switch__input" aria-describedby="error-18" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="switch-18">Error/invalid</span>
-      </label>
-      <div class="osg-switch__error-message" id="error-18">Error message</div>
+    <div class="osg-grid__column--12">
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-devtools-text-preset-2">States</h2>
+        </div>
+      </div>
+      <div class="osg-grid osg-grid--gap">
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch osg-switch--hover" aria-describedby="switch-11">
+            <input type="checkbox" class="osg-switch__input" checked="checked" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-11">Hover on</span>
+          </label>
+          <label class="osg-switch osg-switch--hover" aria-describedby="switch-12">
+            <input type="checkbox" class="osg-switch__input" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-12">Hover off</span>
+          </label>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch osg-switch--focus" aria-describedby="switch-13">
+            <input type="checkbox" class="osg-switch__input" checked="checked" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-13">Focus/Active</span>
+          </label>
+          <label class="osg-switch osg-switch--focus" aria-describedby="switch-14">
+            <input type="checkbox" class="osg-switch__input" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-14">Focus/Active</span>
+          </label>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch osg-switch--disabled" aria-describedby="switch-5">
+            <input type="checkbox" class="osg-switch__input" disabled="disabled" checked="checked" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-5">Disabled</span>
+          </label>
+          <label class="osg-switch osg-switch--disabled" aria-describedby="switch-16">
+            <input type="checkbox" class="osg-switch__input" disabled="disabled" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-16">Disabled</span>
+          </label>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+          <label class="osg-switch osg-switch--error" aria-describedby="switch-17">
+            <input type="checkbox" class="osg-switch__input" aria-describedby="error-1" checked="checked" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-17">Error/invalid</span>
+          </label>
+          <label class="osg-switch osg-switch--error" aria-describedby="switch-18">
+            <input type="checkbox" class="osg-switch__input" aria-describedby="error-18" />
+            <span class="osg-switch__background"></span>
+            <span class="osg-switch__slider"></span>
+            <span class="osg-switch__label-text" id="switch-18">Error/invalid</span>
+          </label>
+          <div class="osg-switch__error-message" id="error-18">Error message</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

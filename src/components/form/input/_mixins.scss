@@ -5,7 +5,10 @@
 
 @mixin error-message() {
   background: colors.$red-light;
-  @extend %osg-margin-top-10, %osg-padding-15, %osg-text-7;
+  @extend %osg-margin-top-3;
+  @extend %osg-padding-4;
+  @extend %osg-text-size-lima;
+  @extend %osg-text-weight-light;
 }
 
 @mixin form-states() {
@@ -31,7 +34,7 @@
   &--focus &__textarea,
   &--focus &__select select {
     border: 4px solid states.$hover;
-    padding: 0.5rem 0.813rem !important;
+    padding: 0.625rem 0.875rem !important;
   }
 
   &--error &__input,
@@ -61,28 +64,29 @@
   border: 2px solid states.$primary;
   border-radius: 0;
   color: states.$primary;
-  font: inherit;
+  font-family: inherit;
   outline-style: none;
-  padding: spacing.$space-10 spacing.$space-15;
+  @extend %osg-padding-vertical-3, %osg-padding-horizontal-4;
   position: relative;
   width: 100%;
-  @extend %osg-text-5;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text-weight-light;
 
   & + span.osg-icon {
     cursor: default !important;
-    bottom: spacing.$space-15;
+    bottom: 15px;
     font-size: inherit;
     position: absolute;
-    right: spacing.$space-15;
+    right: 15px;
   }
 }
 
 @mixin form-label() {
   cursor: pointer;
   display: block;
-  font: inherit;
   position: relative;
-  @extend %osg-text-4;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text-weight-medium;
 
   &--disabled {
     color: states.$disabled-text;

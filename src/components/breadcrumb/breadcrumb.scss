@@ -5,7 +5,8 @@
 @use "system/states";
 
 .osg-breadcrumb {
-  @extend %osg-text-7;
+  @extend %osg-text-size-lima;
+  @extend %osg-text-weight-light;
 
   &__list {
     list-style: none !important;
@@ -15,7 +16,7 @@
     }
 
     .osg-breadcrumb__item + .osg-breadcrumb__item {
-      @extend %osg-margin-left-5;
+      @extend %osg-margin-left-1;
     }
   }
 
@@ -55,7 +56,8 @@
   }
 
   &__active {
-    @extend %osg-text-6;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-medium;
     margin-left: 6px;
     position: relative;
     padding-left: 0.9em;

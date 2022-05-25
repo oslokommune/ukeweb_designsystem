@@ -1,87 +1,194 @@
-@use "breakpoints";
+@use "sass:map";
+@use "system/breakpoints";
 
-// --------------- FONT ---------------*/
-$size-54: 3.375rem;
-$size-40: 2.5rem;
-$size-36: 2.25rem;
-$size-30: 1.875rem;
-$size-28: 1.75rem;
-$size-26: 1.625rem;
-$size-24: 1.5rem;
-$size-22: 1.375rem;
-$size-20: 1.25rem;
-$size-18: 1.125rem;
-$size-16: 1rem;
-$size-14: 0.875rem;
+// Text size
+$sizes: (
+  "alfa": (
+    "size": 3.375rem,
+    "line-height": 5.125rem,
+    "letter-spacing": -0.4px,
+  ),
+  "bravo": (
+    "size": 2.5rem,
+    "line-height": 3.75rem,
+    "letter-spacing": -0.2px,
+  ),
+  "charlie": (
+    "size": 2.25rem,
+    "line-height": 3.375rem,
+    "letter-spacing": -0.2px,
+  ),
+  "delta": (
+    "size": 1.875rem,
+    "line-height": 2.75rem,
+    "letter-spacing": -0.2px,
+  ),
+  "echo": (
+    "size": 1.75rem,
+    "line-height": 2.625rem,
+    "letter-spacing": -0.2px,
+  ),
+  "foxtrot": (
+    "size": 1.625rem,
+    "line-height": 2.5rem,
+    "letter-spacing": -0.2px,
+  ),
+  "golf": (
+    "size": 1.5rem,
+    "line-height": 2.25rem,
+    "letter-spacing": -0.2px,
+  ),
+  "hotel": (
+    "size": 1.375rem,
+    "line-height": 2.125rem,
+    "letter-spacing": -0.2px,
+  ),
+  "india": (
+    "size": 1.25rem,
+    "line-height": 2rem,
+    "letter-spacing": -0.2px,
+  ),
+  "juliett": (
+    "size": 1.125rem,
+    "line-height": 1.75rem,
+    "letter-spacing": -0.2px,
+  ),
+  "kilo": (
+    "size": 1rem,
+    "line-height": 1.5rem,
+    "letter-spacing": -0.2px,
+  ),
+  "lima": (
+    "size": 0.875rem,
+    "line-height": 1.375rem,
+    "letter-spacing": -0.2px,
+  ),
+);
 
-// id, small size, medium size, large size, weight
-$header-sizes: (("1", $size-28, $size-40, $size-54, 400), ("2", $size-24, $size-30, $size-36, 400), ("3", $size-22, $size-26, $size-30, 400), ("4", $size-20, $size-24, $size-24, 500), ("5", $size-18, $size-20, $size-22, 500), ("6", $size-16, $size-16, $size-18, 500));
+@mixin size($name) {
+  @if (map.has-key($sizes, $name)) {
+    font-size: map.get($sizes, $name, "size");
+    hyphens: auto;
+    line-height: map.get($sizes, $name, "line-height");
+    letter-spacing: map.get($sizes, $name, "letter-spacing");
+  } @else {
+    @error "Size #{$name} is invalid. Size must be one of: #{map.keys($sizes)}.";
+  }
+}
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name} {
+    @include size($name);
+  }
+}
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include size($name);
+    }
+  }
+}
+@each $name, $values in $sizes {
+  %osg-text-size-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include size($name);
+    }
+  }
+}
 
-$text-sizes: (("1", $size-22, $size-24, $size-30, 300), ("2", $size-20, $size-22, $size-24, 300), ("3", $size-18, $size-18, $size-20, 300), ("4", $size-16, $size-16, $size-18, 500), ("5", $size-16, $size-16, $size-18, 300), ("6", $size-14, $size-14, $size-14, 500), ("7", $size-14, $size-14, $size-14, 300));
-
+// Text weight
 $weights: (
   "light": 300,
   "regular": 400,
   "medium": 500,
   "bold": 700,
 );
-
-$alignments: ("left", "right", "center");
-
-// generating font weight classes
-@each $name, $size in $weights {
-  %osg-text-#{$name} {
-    font-weight: $size !important;
+@mixin weight($name) {
+  @if (map.has-key($weights, $name)) {
+    font-weight: map.get($weights, $name);
+  } @else {
+    @error "Weight #{$name} is invalid. Weight must be one of: #{map.keys($weights)}.";
   }
 }
-
-// italic font class
-%osg-text-italic {
-  font-style: italic !important;
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name} {
+    @include weight($name);
+  }
 }
-
-// generating font classes for headers
-@each $name, $size-small, $size-medium, $size-large, $weight in $header-sizes {
-  %osg-heading-#{$name} {
-    font-size: $size-small !important;
-    font-weight: $weight !important;
-    line-height: 1.5em !important;
-    hyphens: auto;
-
-    @if $name == "1" {
-      letter-spacing: -0.4px !important;
-    } @else {
-      letter-spacing: -0.2px !important;
-    }
-
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
-      font-size: $size-medium !important;
+      @include weight($name);
     }
+  }
+}
+@each $name, $values in $weights {
+  %osg-text-weight-#{$name}-breakpoint-large {
     @include breakpoints.large {
-      font-size: $size-large !important;
+      @include weight($name);
     }
   }
 }
 
-// generating typography classes for other text
-@each $name, $size-small, $size-medium, $size-large, $weight in $text-sizes {
-  %osg-text-#{$name} {
-    font-size: $size-small !important;
-    line-height: 1.5em !important;
-    font-weight: $weight !important;
-
+// Text style
+$styles: (
+  "italic": 1,
+);
+@mixin style($name) {
+  @if (map.has-key($styles, $name)) {
+    font-style: #{$name};
+  } @else {
+    @error "Style #{$name} is invalid. Style must be one of: #{map.keys($styles)}.";
+  }
+}
+@each $name, $values in $styles {
+  %osg-text-style-#{$name} {
+    @include style($name);
+  }
+}
+@each $name, $values in $styles {
+  %osg-text-style-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
-      font-size: $size-medium !important;
+      @include style($name);
     }
+  }
+}
+@each $name, $values in $styles {
+  %osg-text-style-#{$name}-breakpoint-large {
     @include breakpoints.large {
-      font-size: $size-large !important;
+      @include style($name);
     }
   }
 }
 
-// generating text align classes
-@each $name in $alignments {
-  %osg-text-#{$name} {
-    text-align: #{$name} !important;
+// Text alignment
+$alignments: (
+  "left": 1,
+  "right": 1,
+  "center": 1,
+);
+@mixin align($name) {
+  @if (map.has-key($alignments, $name)) {
+    text-align: #{$name};
+  } @else {
+    @error "Align #{$name} is invalid. Align must be one of: #{map.keys($alignments)}.";
+  }
+}
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name} {
+    @include align($name);
+  }
+}
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include align($name);
+    }
+  }
+}
+@each $name, $values in $alignments {
+  %osg-text-align-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include align($name);
+    }
   }
 }

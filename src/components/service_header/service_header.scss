@@ -6,8 +6,8 @@
 .osg-service-header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: grid.$gutter-large;
-  row-gap: grid.$gutter-large;
+  column-gap: grid.$gutter-size-large;
+  row-gap: grid.$gutter-size-large;
 
   &__main {
     grid-column: span 12;
@@ -21,11 +21,14 @@
   }
 
   &__heading {
-    @extend %osg-heading-1, %osg-margin-bottom-15;
+    @extend %osg-margin-bottom-4;
+    @extend %osg-text-size-echo, %osg-text-size-bravo-breakpoint-medium, %osg-text-size-alfa-breakpoint-large;
   }
 
   &__lead {
-    @extend %osg-text-1;
+    @extend %osg-padding-5;
+    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+    @extend %osg-text-weight-light;
   }
 
   &__image {

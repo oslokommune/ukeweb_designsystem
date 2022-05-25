@@ -1,5 +1,7 @@
 @use "components/form/input/mixins";
+@use "system/typography";
 @use "system/spacing";
+@use "system/visibility";
 
 .osg-textarea {
   @include mixins.form-states;
@@ -9,9 +11,10 @@
   }
 
   &__required {
-    margin-top: spacing.$space-5;
+    @extend %osg-margin-top-1;
     padding: 0;
-    @extend %osg-text-7;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__label {
@@ -20,13 +23,15 @@
 
   &__textarea {
     @include mixins.form-component;
+    margin-top: 0.313rem;
     resize: none;
   }
 
   &__countdown-characters {
-    @extend %osg-text-7;
-    display: block;
-    text-align: right;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
+    @extend %osg-block;
+    @extend %osg-text-align-right;
   }
 
   &__error-message {

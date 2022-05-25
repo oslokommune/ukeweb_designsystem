@@ -12,26 +12,94 @@
   &--center {
     margin-left: auto;
     margin-right: auto;
-    max-width: grid.$content-width;
+    max-width: grid.$max-grid-size-for-centered-content;
   }
 
   &--gap {
-    column-gap: grid.$gutter;
-    row-gap: grid.$gutter;
+    @extend .osg-grid--gap-column, .osg-grid--gap-row;
+  }
+
+  &--gap-column {
+    column-gap: grid.$gap-size-hard;
 
     @include breakpoints.medium {
-      column-gap: grid.$gutter-large;
-      row-gap: grid.$gutter-large;
+      column-gap: grid.$gap-size-hard-large;
+    }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        column-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        column-gap: grid.$gap-size-hard-large;
+      }
+    }
+  }
+
+  &--gap-row {
+    row-gap: grid.$gap-size-hard;
+
+    @include breakpoints.medium {
+      row-gap: grid.$gap-size-hard-large;
+    }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-large {
+      row-gap: grid.$gap-size-soft;
+
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-soft-large;
+      }
+
+      &-breakpoint-medium {
+        @include breakpoints.medium {
+          row-gap: grid.$gap-size-soft-large;
+        }
+      }
+
+      &-breakpoint-large {
+        @include breakpoints.large {
+          row-gap: grid.$gap-size-soft-large;
+        }
+      }
     }
   }
 
   &--gutter {
-    margin-left: grid.$gutter;
-    margin-right: grid.$gutter;
+    margin-left: grid.$gutter-size;
+    margin-right: grid.$gutter-size;
 
     @include breakpoints.medium {
-      margin-left: grid.$gutter-large;
-      margin-right: grid.$gutter-large;
+      margin-left: grid.$gutter-size-large;
+      margin-right: grid.$gutter-size-large;
+    }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        margin-left: grid.$gutter-size-large;
+        margin-right: grid.$gutter-size-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        margin-left: grid.$gutter-size-large;
+        margin-right: grid.$gutter-size-large;
+      }
     }
   }
 

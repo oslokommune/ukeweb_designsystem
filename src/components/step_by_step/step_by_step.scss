@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
@@ -6,13 +7,15 @@
   list-style: none;
   counter-reset: orderedlist;
 
-  &__item {
-    @extend %osg-margin-bottom-30;
+  &__item:not(:last-child) {
+    @extend %osg-margin-bottom-8;
   }
 
   &__item::before {
-    @extend %osg-heading-6, %osg-text-center;
-    @extend %osg-margin-right-5;
+    text-align: center;
+    @extend %osg-margin-right-1;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-medium;
 
     counter-increment: orderedlist;
     content: counter(orderedlist);
@@ -26,11 +29,12 @@
   }
 
   &__heading {
-    @extend %osg-heading-6;
     display: inline;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-medium;
   }
 
   &__text {
-    @extend %osg-margin-top-5;
+    @extend %osg-margin-top-1;
   }
 }

@@ -9,6 +9,7 @@
 @use "system/icons";
 @use "system/typography";
 @use "system/spacing";
+@use "system/units";
 
 /**
  * The default styling for the component must be for the small breakpoint.
@@ -35,7 +36,7 @@
   * Nested elements are written as if they were level 1 elements, direct children of the main class.
   */
   &__logo {
-    @extend %osg-padding-horizontal-30, %osg-padding-vertical-20;
+    @extend %osg-padding-horizontal-8, %osg-padding-vertical-5;
     width: 100%;
     line-height: 0;
 
@@ -44,7 +45,7 @@
      * Extending is not possible inside mixins so use spacing values directly.
      */
     @include breakpoints.large {
-      padding: spacing.$space-30 !important;
+      padding: units.unit-to-rem(8) !important;
     }
 
     svg {
@@ -73,17 +74,18 @@
   }
 
   &__content {
-    @extend %osg-padding-30;
+    @extend %osg-padding-8;
     background-color: colors.$beige;
   }
 
   &__heading {
-    @extend %osg-heading-6;
-    @extend %osg-margin-bottom-30;
+    @extend %osg-margin-bottom-8;
+    @extend %osg-text-size-foxtrot;
+    @extend %osg-text-weight-medium;
   }
 
   &__text {
-    @extend %osg-text-5;
+    @extend %osg-text-size-juliett;
   }
 
   &__footer {
@@ -115,8 +117,8 @@
      * scaled in the browser.
      */
     .osg-example-component__text {
-      @extend %osg-text-7;
-      margin-left: calc(#{spacing.$space-30} + 1.3em);
+      @extend %osg-text-size-lima;
+      margin-left: calc(#{units.unit-to-rem(8)} + 1.3em);
 
       &::before {
         font-family: "Oslo Icons" !important;

@@ -1,25 +1,29 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
 
 .osg-message {
-  @extend %osg-padding-15, %osg-padding-30-breakpoint-large;
+  @extend %osg-padding-4, %osg-padding-8-breakpoint-large;
   background-color: colors.$beige;
 
   &__heading {
-    @extend %osg-heading-6, %osg-margin-bottom-5;
+    @extend %osg-margin-bottom-1;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
   }
 
   &__text {
-    @extend %osg-text-7;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__list {
-    @extend %osg-text-6;
-    @extend %osg-margin-top-15;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-medium;
+    @extend %osg-margin-top-4;
 
     > * + * {
-      @extend %osg-margin-top-15;
+      @extend %osg-margin-top-4;
     }
   }
 }

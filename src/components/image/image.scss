@@ -89,7 +89,8 @@
   }
 
   &__caption {
-    @extend %osg-text-7;
-    @extend %osg-margin-top-15;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
+    @extend %osg-margin-top-4;
   }
 }

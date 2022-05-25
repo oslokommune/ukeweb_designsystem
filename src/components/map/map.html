@@ -2,56 +2,54 @@
 <div class="osg-devtools-nondevmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
-      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+      <div class="osg-infobox osg-infobox--yellow">
         <h2 class="osg-infobox__heading">Technical details on the use of maps</h2>
-        <h3 class="osg-heading-6 osg-margin-top-10">API-keys</h3>
-        <p class="osg-paragraph">
-          The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.<br />
-          Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.<br />
-          If you do not change the key, you will get 403 Forbidden.
+        <h3 class="osg-devtools-text-preset-4">API-keys</h3>
+        <p>
+        The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.</p>
+        <p>Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.</p>
+        <p>If you do not change the key, you will get 403 Forbidden.</p>
         </p>
-        <h3 class="osg-heading-6 osg-margin-top-10">GeoJSON suported features</h3>
-        <p class="osg-paragraph">
+        <br />
+        <h3 class="osg-devtools-text-preset-4">GeoJSON suported features</h3>
+        <p>
           The map supports the following GeoJSON features:<br />
-          FeatureCollection, with the following feature types: Polygon, LineString and Point.<br /><br />
-          It does not support GeometryCollection or the Multi*-variants of the feature types.
-        </p>
-        <h3 class="osg-heading-6 osg-margin-top-10">Fit map to bounds of GeoJSON-data</h3>
-        <p class="osg-paragraph">
-          The map automatically sets a center point and zooms to fit the maximum bounds of the given GeoJSON-data<br />
-          If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.<br />
-          This behvaiour overrides the center point and zoom level in <code>state</code>.<br />
-          To disable this, set the property <code>autoFitToBounds</code> in the <code>state</code> to <code>false</code>.
-        </p>
-        <h3 class="osg-heading-6 osg-margin-top-10">Popups</h3>
-        <p class="osg-paragraph">
-          Popups appear on click on a feature if the following conditions are met<br />
-          - <code>showPopups</code> is true, this can be set to false by overriding the property <code>state</code>.<br />
-          - When using <code>geoJson</code>: the feature has the property <code>description</code>. Optionally it can also have <code>heading</code>.<br />
-          - When using <code>points</code>: <code>description</code> and optionally <code>heading</code> added to the array (per point).<br />
-          - There is actually a string with data.<br />
+          FeatureCollection, with the following feature types: Polygon, LineString and Point.</p>
+        <p>It does not support GeometryCollection or the Multi*-variants of the feature types.</p>
+        <br />
+        <h3 class="osg-devtools-text-preset-4">Fit map to bounds of GeoJSON-data</h3>
+        <p>
+          The map automatically sets a center point and zooms to fit the maximum bounds of the given GeoJSON-data</p>
+          <p>If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.</p>
+          <p>This behvaiour overrides the center point and zoom level in <code class="osg-code">state</code>.</p>
+          <p>To disable this, set the property <code class="osg-code">autoFitToBounds</code> in the <code class="osg-code">state</code> to <code class="osg-code">false</code>.</p>
         </p>
         <br />
-        <p class="osg-paragraph">
-          Popups appear after load if the following conditions are met<br />
-          - All of the conditions for on click are met.<br />
-          - When using <code>geoJson</code>: the feature has the property <code>openPopup</code>, with a value of <code>true</code>.<br />
-          - When using <code>points</code>: <code>openPopup</code> is added to the array (per point), with a value of <code>true</code>.<br />
-          - <code>clusteredPoints</code> is false.<br />
-          - Note: you should limit the number of opened popups to 1 or 2.
-        </p>
+        <h3 class="osg-devtools-text-preset-4">Popups</h3>
+        <p>Popups appear on click on a feature if the following conditions are met:</p>
+          <ul class="osg-unordered-list">
+            <li class="osg-unordered-list__item"><code class="osg-code">showPopups</code> is true, this can be set to false by overriding the property <code class="osg-code">state</code>.</li>
+            <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">description</code>. Optionally it can also have <code class="osg-code">heading</code>.</li>
+            <li class="osg-unordered-list__item"> When using <code class="osg-code">points</code>: <code class="osg-code">description</code> and optionally <code class="osg-code">heading</code> added to the array (per point).</li>
+            <li class="osg-unordered-list__item"> There is actually a string with data.</li>
+          </ul>
         <br />
-        <p class="osg-paragraph">
-          To display additional data after the heading and description, you can add an array called <code>data</code> to the feature properties.<br />
-          Each item in the array must contain <code>label</code> and <code>value</code>.<br />
-          This only works with the <code>geoJson</code> prop, and not the <code>points</code> prop.
-        </p>
+        <p>Popups appear after load if the following conditions are met:</p>
+        <ul class="osg-unordered-list">
+          <li class="osg-unordered-list__item"> All of the conditions for on click are met.</li>
+          <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">openPopup</code>, with a value of <code class="osg-code">true</code>.</li>
+          <li class="osg-unordered-list__item"> When using <code class="osg-code">points</code>: <code class="osg-code">openPopup</code> is added to the array (per point), with a value of <code class="osg-code">true</code>.</li>
+          <li class="osg-unordered-list__item"> <code class="osg-code">clusteredPoints</code> is false.</li>
+          <li class="osg-unordered-list__item"> Note: you should limit the number of opened popups to 1 or 2.</li>
+        </ul>
+        <br />
+        <p>To display additional data after the heading and description, you can add an array called <code class="osg-code">data</code> to the feature properties.</p>
+        <p>Each item in the array must contain <code class="osg-code">label</code> and <code class="osg-code">value</code>.</p>
+        <p>This only works with the <code class="osg-code">geoJson</code> prop, and not the <code class="osg-code">points</code> prop.</p>
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Single marker with automatic popup</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+      <h2 class="osg-devtools-text-preset-1">Single marker with automatic popup</h2>
       <div class="osg-devtools-code">
         <div class="osg-map" id="osg-map" aria-hidden="true">
           <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
@@ -59,9 +57,7 @@
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Markers with clustering</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+      <h2 class="osg-devtools-text-preset-1">Markers with clustering</h2>
       <div class="osg-devtools-code">
         <div class="osg-map" id="osg-map2" aria-hidden="true">
           <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
@@ -69,16 +65,14 @@
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <div class="osg-infobox osg-infobox--yellow osg-margin-vertical-30">
+      <div class="osg-infobox osg-infobox--yellow">
         <h2 class="osg-infobox__heading">Highlighted polygon</h2>
-        If you need to hightlight a polygon, add <code>"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.
+        <p>If you need to hightlight a polygon, add <code class="osg-code">"highlight" : true</code> to the properties attribute for the given polygon in the GeoJSON-data.</p>
       </div>
     </div>
 
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
-    </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+      <h2 class="osg-devtools-text-preset-1">Various features, with highlighted polygon</h2>
       <div class="osg-devtools-code">
         <div class="osg-map" id="osg-map3" aria-hidden="true">
           <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
@@ -92,57 +86,57 @@
 <div class="osg-devtools-devmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Single marker with automatic popup</h2>
+      <h2 class="osg-devtools-text-preset-2">Single marker with automatic popup</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map4" aria-hidden="true">
         <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!', openPopup: true }]" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Markers with clustering</h2>
+      <h2 class="osg-devtools-text-preset-2">Markers with clustering</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map5" aria-hidden="true">
         <osg-map ref="osgMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson" :clustered-points="true" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Various features, with highlighted polygon</h2>
+      <h2 class="osg-devtools-text-preset-2">Various features, with highlighted polygon</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map6" aria-hidden="true">
         <osg-map ref="osgMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Reactivity points</h2>
+      <h2 class="osg-devtools-text-preset-2">Reactivity points</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map7" aria-hidden="true">
         <osg-map ref="osgMap7" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="points" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Reactivity geoJson</h2>
+      <h2 class="osg-devtools-text-preset-2">Reactivity geoJson</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map8" aria-hidden="true">
         <osg-map ref="osgMap8" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJson" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Reactivity state</h2>
+      <h2 class="osg-devtools-text-preset-2">Reactivity state</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map9" aria-hidden="true">
         <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, heading: 'Bob', description: 'the builder!' }]" />
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <h2 class="osg-heading-3">Load map later</h2>
+      <h2 class="osg-devtools-text-preset-2">Load map later</h2>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--12-breakpoint-medium">
+    <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map10" aria-hidden="true">
         <label class="osg-checkbox">
           <input type="checkbox" v-model="loadMap" />

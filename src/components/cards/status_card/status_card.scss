@@ -20,55 +20,39 @@
   }
 
   &__content {
-    @extend %osg-padding-vertical-15, %osg-padding-horizontal-10;
+    @extend %osg-padding-vertical-4, %osg-padding-horizontal-3, %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-8-breakpoint-large;
     background-color: colors.$gray-light;
-
-    @include breakpoints.medium {
-      padding: spacing.$space-30 spacing.$space-15 !important;
-    }
-
-    @include breakpoints.large {
-      padding: spacing.$space-30 !important;
-    }
   }
 
   &__heading {
-    @extend %osg-heading-5, %osg-margin-bottom-15;
+    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-medium, %osg-text-size-hotel-breakpoint-large, %osg-text-weight-medium, %osg-margin-bottom-4;
   }
 
   &__text {
-    @extend %osg-text-5;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large, %osg-text-weight-light;
   }
 
   &__pretext {
-    @extend %osg-text-7, %osg-margin-bottom-15;
+    @extend %osg-text-size-lima, %osg-text-weight-light, %osg-margin-bottom-4;
   }
 
   &__actions {
-    @extend %osg-padding-top-30;
+    @extend %osg-padding-top-8;
   }
 
   &__footer {
-    @extend %osg-padding-10;
-    @extend %osg-text-7;
+    @extend %osg-padding-3, %osg-padding-vertical-3-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-3-breakpoint-large, %osg-padding-horizontal-8-breakpoint-large;
+    @extend %osg-text-size-lima, %osg-text-weight-light;
     background-color: colors.$gray;
     flex-basis: 100%;
-
-    @include breakpoints.medium {
-      padding: spacing.$space-10 spacing.$space-15 !important;
-    }
-
-    @include breakpoints.large {
-      padding: spacing.$space-10 spacing.$space-30 !important;
-    }
   }
 
   &__status {
-    @extend %osg-margin-left-15;
+    @extend %osg-margin-left-4;
 
     .osg-icon {
       line-height: 1em !important;
-      font-size: typography.$size-26;
+      @extend %osg-text-size-foxtrot;
     }
   }
 
@@ -98,7 +82,8 @@
       }
     }
 
-    &--red, &--blue {
+    &--red,
+    &--blue {
       border-color: colors.$red;
 
       & .osg-status-card__content {
@@ -112,9 +97,7 @@
       & .osg-status-card__actions {
         background-color: colors.$gray-light;
         flex-basis: 100%;
-        @extend %osg-padding-horizontal-10;
-        @extend %osg-padding-top-10;
-        @extend %osg-padding-bottom-30;
+        @extend %osg-padding-horizontal-3, %osg-padding-top-3, %osg-padding-bottom-8;
       }
     }
 

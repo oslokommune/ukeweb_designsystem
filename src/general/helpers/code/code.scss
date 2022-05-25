@@ -1,0 +1,19 @@
+@use "system/colors";
+@use "system/spacing";
+
+.osg-code {
+  @extend %osg-padding-1;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  display: inline-block;
+  background-color: colors.$gray-light;
+  border: 1px solid colors.$grayscale-20;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  overflow-x: auto;
+  vertical-align: bottom;
+
+  &--block {
+    @extend %osg-padding-4;
+    width: 100%;
+  }
+}

@@ -3,10 +3,13 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/states";
+@use "system/units";
 
 .osg-button {
-  @extend %osg-text-4;
-  @extend %osg-padding-horizontal-15, %osg-padding-vertical-10;
+  @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
+  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text-weight-medium;
+
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
   color: colors.$white;
@@ -17,91 +20,122 @@
   text-align: center;
   white-space: nowrap;
 
-  &__icon {
+  /**
+    * Icon child element
+    */
+  & .osg-button__icon {
+    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
+    line-height: 1.5rem;
+
+    @include breakpoints.large {
+      line-height: 1.75rem;
+    }
+
     display: inline-block;
-    font-size: 1.5rem;
-    font-style: normal;
-    line-height: 1em;
-    vertical-align: middle;
+    vertical-align: top;
 
     &--left {
-      @extend %osg-margin-right-10;
+      @extend %osg-margin-right-1;
     }
 
     &--right {
-      @extend %osg-margin-left-10;
+      @extend %osg-margin-left-1;
     }
+  }
+
+  /**
+   * Button types
+   */
+  &.osg-button--outline {
+    background-color: transparent;
+    border-color: colors.$blue-dark;
+    color: colors.$blue-dark;
+  }
+
+  &.osg-button--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: colors.$blue-dark;
+  }
+
+  &.osg-button--icon {
+    @extend %osg-padding-2;
+    box-sizing: content-box;
+
+    width: 1.5rem;
+    @include breakpoints.large {
+      width: 1.75rem;
+    }
+
+    &.osg-button--small {
+      @extend %osg-padding-1;
+    }
+
+    &.osg-button--large {
+      @extend %osg-padding-4;
+    }
+  }
+
+  &.osg-button--circle {
+    @extend .osg-button--icon;
+    border-radius: 50%;
   }
 
   /**
    * Button sizes
    */
   &.osg-button--small {
-    @extend %osg-padding-horizontal-10, %osg-padding-vertical-5;
-    font-size: typography.$size-16 !important;
+    @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
+    @extend %osg-text-size-kilo;
+
+    &.osg-button--icon {
+      @include breakpoints.large {
+        width: 1.5rem;
+      }
+    }
+
+    & .osg-button__icon {
+      @extend %osg-text-size-hotel;
+      line-height: 1.5rem;
+      @include breakpoints.large {
+        line-height: 1.5rem;
+      }
+    }
   }
 
   &.osg-button--large {
-    @extend %osg-text-2;
-    @extend %osg-padding-horizontal-30, %osg-padding-vertical-15;
-    font-weight: 500 !important;
-  }
+    @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
+    @extend %osg-text-size-india, %osg-text-size-golf-breakpoint-large;
 
-  &--fullwidth {
-    display: block;
-    width: 100%;
-  }
-
-  /**
-   * Button types
-   */
-  &--outline {
-    background-color: transparent;
-    border-color: colors.$blue-dark;
-    color: colors.$blue-dark;
-  }
-
-  &--text {
-    background-color: transparent;
-    border-color: transparent;
-    color: colors.$blue-dark;
-  }
-
-  &--circle {
-    @extend .osg-button--icon;
-    border-radius: 50%;
-  }
-
-  &.osg-button--icon {
-    @extend %osg-padding-10;
-    width: 1.5rem !important;
-    line-height: 0 !important;
-    box-sizing: content-box;
-
-    &.osg-button--small {
-      @extend %osg-padding-5;
-      width: 1.5rem !important;
-    }
-
-    &.osg-button--large {
-      @extend %osg-padding-15;
-      width: 2rem !important;
-    }
-    &.osg-button--large {
-      .osg-button__icon {
-        line-height: 2rem;
-        font-size: 2rem;
+    &.osg-button--icon {
+      width: 2rem;
+      @include breakpoints.large {
+        width: 2.25rem;
       }
     }
+
+    & .osg-button__icon {
+      @extend %osg-text-size-echo;
+      line-height: 2rem;
+      @include breakpoints.large {
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
+    }
+  }
+
+  &.osg-button--fullwidth {
+    display: block;
+    width: 100%;
   }
 
   /**
    * Button states
    */
   &:hover,
-  &--hover,
+  &.osg-button--hover,
   &:focus,
-  &--focus {
+  &.osg-button--focus {
     background-color: states.$hover !important;
     border: 2px solid states.$hover !important;
     color: states.$hover-text !important;
@@ -121,7 +155,7 @@
   }
 
   &:active,
-  &--active {
+  &.osg-button--active {
     background-color: states.$active !important;
     border: 2px solid states.$active !important;
     text-decoration: none;
@@ -181,7 +215,7 @@
   /**
    * Button colors
    */
-  &--red {
+  &.osg-button--red {
     color: colors.$blue-dark;
     background-color: colors.$red;
     border: 2px solid colors.$red;
@@ -195,7 +229,7 @@
     }
   }
 
-  &--yellow {
+  &.osg-button--yellow {
     color: colors.$blue-dark;
     background-color: colors.$yellow;
     border: 2px solid colors.$yellow;
@@ -209,7 +243,7 @@
     }
   }
 
-  &--green-dark {
+  &.osg-button--green-dark {
     color: colors.$white;
     background-color: colors.$green-dark;
     border: 2px solid colors.$green-dark;
@@ -225,7 +259,7 @@
     }
   }
 
-  &--green-light {
+  &.osg-button--green-light {
     color: colors.$green-dark;
     background-color: colors.$green-light;
     border: 2px solid colors.$green-light;
@@ -241,7 +275,7 @@
     }
   }
 
-  &--blue-light {
+  &.osg-button--blue-light {
     color: colors.$blue-dark;
     background-color: colors.$blue-light;
     border: 2px solid colors.$blue-light;
@@ -255,7 +289,7 @@
     }
   }
 
-  &--gray {
+  &.osg-button--gray {
     color: colors.$blue-dark;
     background-color: colors.$gray-light;
     border: 2px solid colors.$gray-light;
@@ -272,14 +306,14 @@
   /**
    * Dark mode
    */
-  &--dark {
+  &.osg-button--dark {
     &.osg-button--outline {
       color: colors.$white !important;
 
       &:hover,
-      &--hover,
+      &.osg-button--hover,
       &:focus,
-      &--focus {
+      &.osg-button--focus {
         border-color: states.$hover-light !important;
         color: states.$hover-light !important;
       }

@@ -8,9 +8,10 @@
   position: relative;
 
   &__required {
-    margin-top: spacing.$space-5;
+    @extend %osg-margin-top-1;
     padding: 0;
-    @extend %osg-text-7;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__label {
@@ -22,8 +23,9 @@
 
     & select {
       @include mixins.form-component;
+      margin-top: 0.313rem;
       cursor: pointer;
-      padding-right: spacing.$space-50 !important;
+      padding-right: 50px;
     }
 
     &:after {
@@ -34,7 +36,7 @@
       pointer-events: none;
       position: absolute;
       right: 0.875rem;
-      top: 1.625rem;
+      top: 2rem;
       transform: translateY(-50%);
     }
   }

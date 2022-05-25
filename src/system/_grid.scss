@@ -1,10 +1,22 @@
-@use "system/spacing";
+@use "system/units";
 
 // Number of grid columns
 $columns: 12;
-// Size of gap and gutter on small breakpoint
-$gutter: spacing.$space-15 !default;
-// Size of gap and gutter on medium and up breakpoint
-$gutter-large: spacing.$space-30 !default;
+
+// Size of gutter on small breakpoint
+$gutter-size: units.unit-to-rem(4) !default;
+// Size of gutter on medium and up breakpoint
+$gutter-size-large: units.unit-to-rem(8) !default;
+
+// Size of gap on small breakpoint
+$gap-size-hard: units.unit-to-rem(4) !default;
+// Size of gap on medium and up breakpoint
+$gap-size-hard-large: units.unit-to-rem(8) !default;
+
+// Size of row gap on small breakpoint when using soft grid sizes
+$gap-size-soft: units.unit-to-rem(8) !default;
+// Size of row gap on medium and up breakpoint when using soft grid sizes
+$gap-size-soft-large: units.unit-to-rem(13) !default;
+
 // Width of content area when using `grid--center` modifier
-$content-width: 1236px;
+$max-grid-size-for-centered-content: 1236px !default;

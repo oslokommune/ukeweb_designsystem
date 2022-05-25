@@ -29,7 +29,7 @@
   }
 
   &__image {
-    @extend %osg-margin-left-30;
+    @extend %osg-margin-left-4;
     display: none;
     flex: 1 0;
     line-height: 0;
@@ -45,7 +45,7 @@
   }
 
   &__search {
-    @extend %osg-margin-top-30;
+    @extend %osg-margin-top-8;
   }
 
   &__form {
@@ -58,8 +58,8 @@
   }
 
   &__input {
-    @extend %osg-padding-15;
-    @extend %osg-text-3;
+    @extend %osg-padding-4;
+    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
     border: 2px solid colors.$white !important;
     border-radius: 0;
     color: colors.$blue-dark;
@@ -72,14 +72,12 @@
     }
 
     &:focus {
+      $padding: 15px;
       border: 4px solid colors.$blue-contrast !important;
-      padding: spacing.$space-15 - 2px !important;
+      padding: $padding - 1px;
       outline: none;
     }
-
-    @include breakpoints.large {
-      font-size: typography.$size-24 !important;
-    }
+    @extend %osg-text-size-golf-breakpoint-large;
   }
 
   &__button {
@@ -96,8 +94,8 @@
     }
 
     &::after {
+      @extend %osg-text-size-delta;
       font-family: "Oslo Icons" !important;
-      font-size: typography.$size-30;
       line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
@@ -112,8 +110,8 @@
   }
 
   &__dropdown {
-    @extend %osg-padding-vertical-15;
-    @extend %osg-text-5;
+    @extend %osg-padding-vertical-4;
+    @extend %osg-text-size-kilo, %osg-text-weight-light, %osg-text-size-juliett-breakpoint-large;
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;
@@ -122,15 +120,11 @@
     position: absolute;
     z-index: 99999;
 
-    @include breakpoints.large {
-      font-size: typography.$size-20 !important;
-    }
-
     &__item {
+      @extend %osg-padding-vertical-1, %osg-padding-horizontal-4;
       display: flex;
       flex-direction: column;
       color: colors.$blue-dark;
-      padding: spacing.$space-5 spacing.$space-15;
       text-decoration: none;
 
       &:hover,
@@ -147,12 +141,12 @@
 
         &:hover,
         &:focus {
+          @extend %osg-padding-vertical-0, %osg-padding-horizontal-4;
           background-color: colors.$gray-light;
-          border-top: spacing.$space-5 solid colors.$gray-light;
-          border-bottom: spacing.$space-5 solid colors.$gray-light;
+          border-top: 5px solid colors.$gray-light;
+          border-bottom: 5px solid colors.$gray-light;
           color: states.$hover !important;
           margin: -5px -15px;
-          padding: 0 spacing.$space-15;
           text-decoration: underline;
         }
       }

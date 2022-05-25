@@ -62,22 +62,16 @@ $osg-carousel-image-height-large: 725;
     top: 0;
 
     > * {
-      @extend %osg-margin-horizontal-30-breakpoint-medium;
-
-      @include breakpoints.large {
-        padding: 1rem;
-
-        & .osg-icon {
-          font-size: typography.$size-30;
-        }
+      @extend %osg-margin-horizontal-8-breakpoint-medium;
+      @extend %osg-padding-4-breakpoint-large;
+      & .osg-icon {
+        @extend %osg-text-size-delta-breakpoint-large;
+        @extend %osg-text-weight-medium-breakpoint-large;
       }
     }
   }
 
   &__info {
-    padding: 0 spacing.$space-15;
-    @include breakpoints.large {
-      padding: 0;
-    }
+    @extend %osg-padding-vertical-0, %osg-padding-horizontal-4, %osg-padding-0-breakpoint-large;
   }
 }

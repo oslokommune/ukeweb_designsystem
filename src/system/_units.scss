@@ -1,0 +1,12 @@
+/* UNIT OPTIONS */
+$min: 0;
+$max: 25;
+$rem-factor: 0.25;
+
+@function unit-to-rem($unit) {
+  @if ($unit >= $min && $unit <= $max) {
+    @return calc($unit * $rem-factor) + rem;
+  } @else {
+    @error "Value #{$unit} is invalid. Unit must be from #{$min} to #{$max}.";
+  }
+}

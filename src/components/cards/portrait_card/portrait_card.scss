@@ -43,54 +43,36 @@ $osg-portrait-card-image-height-large: 290px;
   }
 
   &__content {
-    @extend %osg-padding-horizontal-10;
-    @extend %osg-padding-vertical-15;
+    @extend %osg-padding-horizontal-3, %osg-padding-vertical-4;
     @extend %osg-color-bg-gray-light;
-
-    @include breakpoints.medium {
-      padding: spacing.$space-30 spacing.$space-15 !important;
-    }
-
-    @include breakpoints.large {
-      padding: spacing.$space-30 !important;
-    }
+    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-8-breakpoint-large;
   }
 
   &__actions {
-    @extend %osg-padding-horizontal-10;
-    @extend %osg-padding-bottom-15;
+    @extend %osg-padding-horizontal-3, %osg-padding-bottom-4, %osg-padding-top-0-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-bottom-8-breakpoint-medium, %osg-padding-top-0-breakpoint-large, %osg-padding-horizontal-8-breakpoint-large, %osg-padding-bottom-8-breakpoint-large;
     @extend %osg-color-bg-gray-light;
-
-    @include breakpoints.medium {
-      padding: 0 spacing.$space-15 spacing.$space-30 spacing.$space-15 !important;
-    }
-
-    @include breakpoints.large {
-      padding: 0 spacing.$space-30 spacing.$space-30 spacing.$space-30 !important;
-    }
   }
 
   &__heading {
-    @extend %osg-heading-4, %osg-margin-bottom-5;
+    @extend %osg-margin-bottom-1;
+    @extend %osg-text-size-india, %osg-text-size-hotel-breakpoint-medium, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text-weight-medium;
   }
 
   &__text {
-    @extend %osg-text-5;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-light;
   }
 
   &__published {
-    @extend %osg-text-7, %osg-margin-top-30;
+    @extend %osg-margin-top-8;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &--actions {
     & .osg-portrait-card__content {
-      @include breakpoints.medium {
-        padding: spacing.$space-30 spacing.$space-15 spacing.$space-15 spacing.$space-15 !important;
-      }
-
-      @include breakpoints.large {
-        padding: spacing.$space-30 spacing.$space-30 spacing.$space-15 spacing.$space-30 !important;
-      }
+      @extend %osg-padding-top-8-breakpoint-medium, %osg-padding-bottom-4-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-top-8-breakpoint-large, %osg-padding-vertical-8-breakpoint-large, %osg-padding-bottom-4-breakpoint-large;
     }
   }
 
@@ -103,25 +85,20 @@ $osg-portrait-card-image-height-large: 290px;
 
   &--xs {
     & .osg-portrait-card__content {
-      @include breakpoints.medium {
-        padding: spacing.$space-15 !important;
-      }
-
-      @include breakpoints.large {
-        padding: spacing.$space-15 !important;
-      }
+      @extend %osg-padding-4-breakpoint-medium, %osg-padding-4-breakpoint-large;
     }
 
     & .osg-portrait-card__heading {
-      @extend %osg-heading-5;
+      @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-medium, %osg-text-size-hotel-breakpoint-large;
     }
 
     & .osg-portrait-card__text {
-      font-size: typography.$size-16 !important;
+      @extend %osg-text-size-kilo;
+      @extend %osg-text-weight-medium;
     }
 
     & .osg-portrait-card__published {
-      @extend %osg-margin-top-15;
+      @extend %osg-margin-top-4;
     }
 
     & .osg-portrait-card__media {
@@ -133,9 +110,7 @@ $osg-portrait-card-image-height-large: 290px;
     }
 
     & .osg-portrait-card__actions {
-      @include breakpoints.large {
-        padding: 0 spacing.$space-15 spacing.$space-15 spacing.$space-15 !important;
-      }
+      @extend %osg-padding-top-0-breakpoint-large, %osg-padding-horizontal-8-breakpoint-large, %osg-padding-bottom-4-breakpoint-large;
     }
   }
 

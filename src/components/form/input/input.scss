@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/spacing";
 @use "system/typography";
 @use "mixins";
@@ -7,6 +8,7 @@
 
   &__input {
     @include mixins.form-component;
+    margin-top: 0.625rem;
 
     &::placeholder {
       color: inherit;
@@ -28,9 +30,10 @@
   }
 
   &__required {
-    margin-top: spacing.$space-5;
+    @extend %osg-margin-top-1;
     padding: 0;
-    @extend %osg-text-7;
+    @extend %osg-text-size-lima;
+    @extend %osg-text-weight-light;
   }
 
   &__error-message {
@@ -41,14 +44,15 @@
     display: flex;
     flex-direction: column;
     float: right;
-    margin-right: -20px;
-    margin-top: 9px;
+    margin-right: -1.5rem;
+    margin-top: 0.75rem;
 
     &-button {
       border: none;
       background: none;
       cursor: pointer;
-      font-size: typography.$size-18;
+      @extend %osg-text-size-juliett;
+      @extend %osg-text-weight-light;
       height: 20px;
       padding: 0;
       text-align: center;

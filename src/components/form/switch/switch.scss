@@ -91,7 +91,7 @@
   display: block;
   font-weight: 500;
   height: 27px;
-  margin-bottom: spacing.$space-10;
+  @extend %osg-margin-bottom-3;
   position: relative;
   width: 41px;
 
@@ -135,7 +135,7 @@
     border-radius: 6px;
     content: "";
     font-family: "Oslo Icons";
-    font-size: typography.$size-40;
+    @extend %osg-text-size-bravo;
     font-style: normal;
     height: 0;
     left: 50%;
