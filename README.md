@@ -4,7 +4,7 @@
 
 ### Test
 
-1. Push to main
+1. Merge pull request to test
 2. To make test version available see devtools
 
 ### Production
