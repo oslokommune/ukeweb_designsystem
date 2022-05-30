@@ -96,3 +96,10 @@
     }
   }
 }
+
+h2[aria-expanded="true"] .osg-icons--plus-sign {
+  display: none;
+}
+h2[aria-expanded="false"] .osg-icons--minus-sign {
+  display: none;
+}
