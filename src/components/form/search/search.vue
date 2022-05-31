@@ -16,10 +16,11 @@
           ref="input"
           autocomplete="off"
           :placeholder="placeholder"
-          :aria-label="ariaLabel"
           aria-haspopup="listbox"
           :aria-owns="id"
           role="combobox"
+          aria-autocomplete="list"
+          :aria-activedescendant="id"
         />
       </label>
     </div>
@@ -37,6 +38,7 @@
         :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }"
         class="osg-search__dropdown__item"
         role="option"
+        :aria-selected="itemIndex === index ? 'true' : 'false'"
       >
         <slot name="listitem" :item="item">
           <span class="osg-text-5">{{ item.text }}</span>
