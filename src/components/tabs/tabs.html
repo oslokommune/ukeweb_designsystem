@@ -5,25 +5,34 @@
       <p class="osg-devtools-text-preset-3">Tabs description</p>
     </div>
     <div class="osg-grid__column--12">
+      <div class="osg-infobox osg-infobox--yellow">
+        <h2 class="osg-infobox__heading">Important</h2>
+        <p>To make it easy for screen reader users to navigate from a tab to the beginning of content in the active tabpanel, it is recommended that all tabpanel elements in a tab set are focusable if there are any panels in the set that contain content where the first element in the panel is not focusable.</p>
+      </div>
+    </div>
+    <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-1">Default</h2>
       <p class="osg-paragraph">Tabs default</p>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div class="osg-tabs">
-            <div class="osg-tabs__triggers">
-              <button class="osg-tabs__trigger osg-tabs__trigger--active" aria-controls="overview-tab1">Tab 1</button>
-              <button class="osg-tabs__trigger" aria-controls="overview-tab2">Tab 2</button>
-              <button class="osg-tabs__trigger" aria-controls="overview-tab3">Tab 3</button>
+            <h4 id="tablist-1" class="osg-tabs__label">Famous authors</h4>
+            <div class="osg-tabs__triggers" role="tablist" aria-labelledby="tablist-1">
+              <button id="tab-1" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-1" aria-selected="true">George Orwell</button>
+              <button id="tab-2" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">Charles Dickens</button>
+              <button id="tab-3" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">J.R.R Tolkien</button>
             </div>
             <div class="osg-tabs__tabs">
-              <div id="overview-tab1" class="osg-tabs__tab osg-tabs__tab--active">
-                <p class="osg-paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+              <div id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1" class="osg-tabs__tab osg-tabs__tab--active">
+                <p class="osg-paragraph"><a href="javascript:void(0)" class="osg-link">Eric Arthur Blair</a> (25 June 1903 – 21 January 1950), known by his pen name George Orwell, was an English novelist, essayist, journalist and critic. His work is characterised by lucid prose, social criticism, opposition to totalitarianism, and support of democratic socialism.</p>
               </div>
-              <div id="overview-tab2" class="osg-tabs__tab">
-                <p class="osg-paragraph">Some other page content.</p>
+              <div id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2" class="osg-tabs__tab">
+                <p class="osg-paragraph" tabindex="0">Dickens's literary success began with the 1836 serial publication of The Pickwick Papers, a publishing phenomenon—thanks largely to the introduction of the character Sam Weller in the fourth episode—that sparked Pickwick merchandise and spin-offs.</p>
               </div>
-              <div id="overview-tab3" class="osg-tabs__tab">
-                <p class="osg-paragraph">Final page.</p>
+              <div id="tabpanel-3" role="tabpanel" aria-labelledby="tab-3" class="osg-tabs__tab">
+                <p class="osg-paragraph" tabindex="0">
+                  Tolkien's immediate paternal ancestors were middle-class craftsmen who made and sold clocks, watches and pianos in London and Birmingham. The Tolkien family originated in the East Prussian town of Kreuzburg near Königsberg, which had been founded during medieval German eastward expansion, where his earliest-known paternal ancestor Michel Tolkien was born around 1620.
+                </p>
               </div>
             </div>
           </div>
@@ -41,35 +50,22 @@
       <div class="osg-grid osg-grid--gap">
         <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium osg-grid__column--4-breakpoint-large">
           <div class="osg-tabs">
-            <div class="osg-tabs__triggers">
-              <button class="osg-tabs__trigger osg-tabs__trigger--active" aria-controls="tab1">Tab 1</button>
-              <button class="osg-tabs__trigger" aria-controls="tab2">Tab 2</button>
-              <button class="osg-tabs__trigger" aria-controls="tab3">Tab 3</button>
+            <h4 id="tablist-2" class="osg-tabs__label">Example tabs</h4>
+            <div class="osg-tabs__triggers" role="tablist" aria-labelledby="tablist-2">
+              <button id="tab-2-1" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-2-1" aria-selected="true">Tab 1</button>
+              <button id="tab-2-2" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-2-2" aria-selected="false" tabindex="-1">Tab 2</button>
+              <button id="tab-3-2" class="osg-tabs__trigger" role="tab" aria-controls="tabpanel-2-3" aria-selected="false" tabindex="-1">Tab 3</button>
             </div>
             <div class="osg-tabs__tabs">
-              <div id="tab1" class="osg-tabs__tab osg-tabs__tab--active">
-                <p class="osg-paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+              <div id="tabpanel-2-1" role="tabpanel" aria-labelledby="tab-2-1" class="osg-tabs__tab osg-tabs__tab--active">
+                <p class="osg-paragraph"><a href="javascript:void(0)" class="osg-link">Contrary</a> to popular belief, <a href="javascript:void(0)" class="osg-link">Lorem Ipsum</a> is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
               </div>
-              <div id="tab2" class="osg-tabs__tab">
-                <p class="osg-paragraph">Some other page content.</p>
+              <div id="tabpanel-2-2" role="tabpanel" aria-labelledby="tab-2-2" class="osg-tabs__tab">
+                <p class="osg-paragraph" tabindex="0">Some other page content.</p>
               </div>
-              <div id="tab3" class="osg-tabs__tab">
-                <p class="osg-paragraph">Final page.</p>
+              <div id="tabpanel-2-3" role="tabpanel" aria-labelledby="tab-2-3" class="osg-tabs__tab">
+                <p class="osg-paragraph" tabindex="0">Final page.</p>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium osg-grid__column--4-breakpoint-large">
-          <div class="osg-tabs">
-            <div class="osg-tabs__triggers">
-              <button class="osg-tabs__trigger osg-tabs__trigger--active" aria-controls="tab4">Tab 1</button>
-              <button class="osg-tabs__trigger" aria-controls="tab5">Tab 2</button>
-              <button class="osg-tabs__trigger" aria-controls="tab6">Tab 3</button>
-            </div>
-            <div class="osg-tabs__tabs">
-              <div id="tab4" class="osg-tabs__tab osg-tabs__tab--active">Content 1</div>
-              <div id="tab5" class="osg-tabs__tab">Content 2</div>
-              <div id="tab6" class="osg-tabs__tab">Content 3</div>
             </div>
           </div>
         </div>
