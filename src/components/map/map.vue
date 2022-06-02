@@ -322,7 +322,7 @@ export default {
 
       this.mapObject.on("load", () => {
         this.mapReady = true;
-        this.mapObject.resize();        
+        this.mapObject.resize();
 
         // If there is data available, show it now plz.
         this.populateMap();
