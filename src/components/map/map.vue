@@ -1,5 +1,8 @@
 <template>
-  <div class="osg-map__container" ref="mapContainer"></div>
+  <div>
+    <div class="osg-map__container" ref="mapContainer"></div>
+    <div v-show="error" class="osg-status-message osg-status-message--warning" aria-live="polite">{{ i18n.mapError }} - {{ technicalErrorText }}</div>
+  </div>
 </template>
 
 <script>
@@ -17,14 +20,17 @@ export default {
       type: String,
       default: "l4ZxSXKkrA16jgVeYWUE",
     },
-    locale: {
+    i18n: {
       type: Object,
       default: () => {
         return {
-          "FullscreenControl.Enter": "Vis i fullskjerm",
-          "FullscreenControl.Exit": "Gå ut av fullskjermsvisning",
-          "NavigationControl.ZoomIn": "Zoom inn",
-          "NavigationControl.ZoomOut": "Zoom ut",
+          mapLibre: {
+            "FullscreenControl.Enter": "Vis i fullskjerm",
+            "FullscreenControl.Exit": "Gå ut av fullskjermsvisning",
+            "NavigationControl.ZoomIn": "Zoom inn",
+            "NavigationControl.ZoomOut": "Zoom ut",
+          },
+          mapError: "En feil oppstod ved lasting av kart.",
         };
       },
     },
@@ -61,10 +67,13 @@ export default {
   data: () => ({
     layerIds: [],
     dataSourceIds: [],
+    lastDisplayedPopup: null,
     mapObject: null,
     mapReady: false,
     showPopups: true,
     mapLoaded: false,
+    error: false,
+    technicalErrorText: "",
   }),
 
   computed: {
@@ -207,17 +216,19 @@ export default {
       }
     },
     clearMapAndData() {
-      var _this = this; // Scope this, bobby!
+      if (this.lastDisplayedPopup !== null) {
+        this.lastDisplayedPopup.remove();
+      }
 
-      this.layerIds.forEach((element) => {
-        if (_this.mapObject.getLayer(element)) {
-          _this.mapObject.removeLayer(element);
+      this.layerIds.forEach((layerId) => {
+        if (this.mapObject.getLayer(layerId)) {
+          this.mapObject.removeLayer(layerId);
         }
       });
 
-      this.dataSourceIds.forEach((element) => {
-        if (_this.mapObject.getSource(element)) {
-          _this.mapObject.removeSource(element);
+      this.dataSourceIds.forEach((dataSourceId) => {
+        if (this.mapObject.getSource(dataSourceId)) {
+          this.mapObject.removeSource(dataSourceId);
         }
       });
 
@@ -254,7 +265,7 @@ export default {
       let mapConfig = {
         container: this.$refs.mapContainer,
         style: this.mapStyle + "?key=" + this.apiKey,
-        locale: this.locale,
+        locale: this.i18n.mapLibre,
         dragRotate: false,
       };
 
@@ -284,6 +295,11 @@ export default {
 
       this.mapObject = new maplibregl.Map(mapConfig);
 
+      this.mapObject.on("error", (event) => {
+        this.error = true;
+        this.technicalErrorText = event.error.message;
+      });
+
       let nav = new maplibregl.NavigationControl({
         showCompass: false,
       });
@@ -299,18 +315,17 @@ export default {
 
       this.showPopups = this.state.showPopups;
 
-      var _this = this; // Scope this, bobby!
-
       this.mapObject.loadImage("https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png", (error, image) => {
         if (error) throw error;
-        _this.mapObject.addImage("location-pin-filled", image);
+        this.mapObject.addImage("location-pin-filled", image);
       });
 
       this.mapObject.on("load", () => {
-        _this.mapReady = true;
+        this.mapReady = true;
+        this.mapObject.resize();
 
         // If there is data available, show it now plz.
-        _this.populateMap();
+        this.populateMap();
       });
     },
     // Private/protected method
@@ -598,7 +613,8 @@ export default {
         let html = _this.$_getPopupHtml(event.features[0]);
 
         if (typeof html === "string") {
-          new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
+          const popup = new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
+          this.lastDisplayedPopup = popup;
         }
       });
 
