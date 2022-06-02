@@ -5,6 +5,11 @@
 .osg-tabs {
   overflow: hidden;
 
+  &__label {
+    @extend %osg-text-size-kilo, %osg-text-size-hotel-breakpoint-medium;
+    @extend %osg-margin-bottom-3;
+  }
+
   &__triggers {
     @extend %osg-margin-bottom-3;
   }
@@ -12,7 +17,7 @@
   &__trigger {
     @extend %osg-text-size-lima;
     @extend %osg-text-weight-medium;
-    @extend %osg-margin-right-4;
+    @extend %osg-margin-right-3;
 
     border: none;
     background: transparent;
@@ -25,7 +30,7 @@
       color: colors.$blue-contrast;
     }
 
-    &--active {
+    &[aria-selected="true"] {
       border-bottom: 2px solid colors.$blue-dark;
     }
   }
