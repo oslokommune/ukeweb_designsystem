@@ -77,7 +77,7 @@ function setActiveTab(tab) {
       tab.classList.remove("osg-tabs__tab--active");
     });
 
-    tab.classList.add("osg-tabs__tab--active", "animate__animated", "animate__slideInRight");
+    tab.classList.add("osg-tabs__tab--active");
   } else {
     console.error("No OsgTabs found");
   }
