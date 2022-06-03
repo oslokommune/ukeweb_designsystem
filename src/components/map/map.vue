@@ -535,6 +535,7 @@ export default {
         layout: {
           "icon-image": "location-pin-filled",
           "icon-allow-overlap": true,
+          "icon-anchor": "bottom",
         },
         filter: ["==", "$type", "Point"],
       });
