@@ -22,8 +22,10 @@
                 :value="value"
                 :name="inputName"
                 :placeholder="inputPlaceholder"
-                :aria-expanded="items.length"
+                :aria-expanded="items.length ? 'true' : 'false'"
                 :aria-owns="id"
+                aria-autocomplete="list"
+                :aria-activedescendant="id"
               />
               <input type="hidden" v-for="field in hiddenFields" :key="field.name" :name="field.name" :value="field.value" />
               <ul v-show="items.length" ref="list" class="osg-search-seasons__dropdown" role="listbox" :class="{ 'osg-search-seasons__dropdown--scroll': itemListScroll }" :id="id" :aria-label="ariaLabelResults">
@@ -40,6 +42,7 @@
                   :class="{ 'osg-search-seasons__dropdown__item--focus': itemIndex === index }"
                   class="osg-search-seasons__dropdown__item"
                   role="option"
+                  :aria-selected="itemIndex === index ? 'true' : 'false'"
                 >
                   <slot name="listitem" :item="item">
                     <span class="osg-text-size-kilo osg-text-size-juliett-breakpoint-large osg-text-weight-light">{{ item.text }}</span>
