@@ -10,6 +10,14 @@ function handleTabFocus(event) {
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute("aria-controls"));
     if (tab) {
+      let toggleEvent = new CustomEvent("OsgTabsActivate", {
+        detail: {
+          trigger: trigger,
+          tab: tab,
+        },
+      });
+      trigger.closest(".osg-tabs").dispatchEvent(toggleEvent);
+
       setActiveTrigger(trigger);
       setActiveTab(tab);
     } else {
