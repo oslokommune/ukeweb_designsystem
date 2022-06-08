@@ -25,6 +25,8 @@ function handleKeyEvent(event) {
   const previousSibling = event.target.previousElementSibling;
   switch (event.keyCode) {
     case 39: // right arrow
+      event.stopPropagation();
+      event.preventDefault();
       if (nextSibling) {
         event.target.nextElementSibling.focus();
       } else {
@@ -32,6 +34,8 @@ function handleKeyEvent(event) {
       }
       break;
     case 37: // left arrow
+      event.stopPropagation();
+      event.preventDefault();
       if (previousSibling) {
         event.target.previousElementSibling.focus();
       } else {
@@ -39,9 +43,13 @@ function handleKeyEvent(event) {
       }
       break;
     case 36: // home
+      event.stopPropagation();
+      event.preventDefault();
       event.target.parentNode.firstElementChild.focus();
       break;
     case 35: // end
+      event.stopPropagation();
+      event.preventDefault();
       event.target.parentNode.lastElementChild.focus();
       break;
     case 13: // enter
