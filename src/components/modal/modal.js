@@ -30,7 +30,7 @@ function closeModal(modal) {
     modal.setAttribute("aria-hidden", "true");
     document.removeEventListener("keyup", trapFocus, false);
 
-    const triggers = document.querySelectorAll(`[aria-controls=${filterPanel.getAttribute("id")}]`);
+    const triggers = document.querySelectorAll(`[aria-controls=${modal.getAttribute("id")}]`);
     triggers.forEach((trigger) => {
       let { parentNode } = trigger;
 
