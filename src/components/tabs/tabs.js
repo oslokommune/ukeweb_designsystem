@@ -23,8 +23,8 @@ function handleTabFocus(event) {
 function handleKeyEvent(event) {
   const nextSibling = event.target.nextElementSibling;
   const previousSibling = event.target.previousElementSibling;
-  switch (event.keyCode) {
-    case 39: // right arrow
+  switch (event.key) {
+    case "ArrowRight":
       event.stopPropagation();
       event.preventDefault();
       if (nextSibling) {
@@ -33,7 +33,7 @@ function handleKeyEvent(event) {
         event.target.parentNode.firstElementChild.focus();
       }
       break;
-    case 37: // left arrow
+    case "ArrowLeft":
       event.stopPropagation();
       event.preventDefault();
       if (previousSibling) {
@@ -42,18 +42,18 @@ function handleKeyEvent(event) {
         event.target.parentNode.lastElementChild.focus();
       }
       break;
-    case 36: // home
+    case "Home":
       event.stopPropagation();
       event.preventDefault();
       event.target.parentNode.firstElementChild.focus();
       break;
-    case 35: // end
+    case "End":
       event.stopPropagation();
       event.preventDefault();
       event.target.parentNode.lastElementChild.focus();
       break;
-    case 13: // enter
-    case 32: // space
+    case "Enter":
+    case "Space":
       handleTabFocus(event);
       break;
     default:
