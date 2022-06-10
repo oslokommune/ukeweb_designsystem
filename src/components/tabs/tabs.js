@@ -10,6 +10,14 @@ function handleTabFocus(event) {
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute("aria-controls"));
     if (tab) {
+      let toggleEvent = new CustomEvent("OsgTabsActivate", {
+        detail: {
+          trigger: trigger,
+          tab: tab,
+        },
+      });
+      trigger.closest(".osg-tabs").dispatchEvent(toggleEvent);
+
       setActiveTrigger(trigger);
       setActiveTab(tab);
     } else {
@@ -20,15 +28,58 @@ function handleTabFocus(event) {
   }
 }
 
+function handleKeyEvent(event) {
+  const nextSibling = event.target.nextElementSibling;
+  const previousSibling = event.target.previousElementSibling;
+  switch (event.key) {
+    case "ArrowRight":
+      event.stopPropagation();
+      event.preventDefault();
+      if (nextSibling) {
+        event.target.nextElementSibling.focus();
+      } else {
+        event.target.parentNode.firstElementChild.focus();
+      }
+      break;
+    case "ArrowLeft":
+      event.stopPropagation();
+      event.preventDefault();
+      if (previousSibling) {
+        event.target.previousElementSibling.focus();
+      } else {
+        event.target.parentNode.lastElementChild.focus();
+      }
+      break;
+    case "Home":
+      event.stopPropagation();
+      event.preventDefault();
+      event.target.parentNode.firstElementChild.focus();
+      break;
+    case "End":
+      event.stopPropagation();
+      event.preventDefault();
+      event.target.parentNode.lastElementChild.focus();
+      break;
+    case "Enter":
+    case "Space":
+      handleTabFocus(event);
+      break;
+    default:
+      return false;
+  }
+}
+
 function setActiveTrigger(trigger) {
   const OsgTabs = trigger.closest(".osg-tabs");
   if (OsgTabs) {
     const triggers = OsgTabs.querySelectorAll(".osg-tabs__trigger");
     triggers.forEach((trigger) => {
-      trigger.classList.remove("osg-tabs__trigger--active");
+      trigger.setAttribute("aria-selected", "false");
+      trigger.setAttribute("tabindex", "-1");
     });
 
-    trigger.classList.add("osg-tabs__trigger--active");
+    trigger.setAttribute("aria-selected", "true");
+    trigger.removeAttribute("tabindex");
   } else {
     console.error("No OsgTabs found");
   }
@@ -42,7 +93,7 @@ function setActiveTab(tab) {
       tab.classList.remove("osg-tabs__tab--active");
     });
 
-    tab.classList.add("osg-tabs__tab--active", "animate__animated", "animate__slideInRight");
+    tab.classList.add("osg-tabs__tab--active");
   } else {
     console.error("No OsgTabs found");
   }
@@ -61,25 +112,25 @@ export const OsgTabs = {
 
   bindElement(element) {
     element.addEventListener("click", handleTabFocus);
-    element.addEventListener("keypress", handleTabFocus);
+    element.addEventListener("keydown", handleKeyEvent);
   },
 
   unbindElement(element) {
     element.removeEventListener("click", handleTabFocus);
-    element.removeEventListener("keypress", handleTabFocus);
+    element.removeEventListener("keydown", handleKeyEvent);
   },
 
   bindAll() {
     triggerIterator((item) => {
       item.addEventListener("click", handleTabFocus);
-      item.addEventListener("keypress", handleTabFocus);
+      item.addEventListener("keydown", handleKeyEvent);
     });
   },
 
   unbindAll() {
     triggerIterator((item) => {
       item.removeEventListener("click", handleTabFocus);
-      item.removeEventListener("keypress", handleTabFocus);
+      item.removeEventListener("keydown", handleKeyEvent);
     });
   },
 };
