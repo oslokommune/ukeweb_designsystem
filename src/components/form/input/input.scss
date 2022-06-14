@@ -8,7 +8,7 @@
 
   &__input {
     @include mixins.form-component;
-    margin-top: 0.625rem;
+    @extend %osg-margin-top-2;
 
     &::placeholder {
       color: inherit;

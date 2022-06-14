@@ -20,10 +20,10 @@
 
   &__select {
     position: relative;
+    @extend %osg-margin-top-2;
 
     & select {
       @include mixins.form-component;
-      margin-top: 0.313rem;
       cursor: pointer;
       padding-right: 50px;
     }
