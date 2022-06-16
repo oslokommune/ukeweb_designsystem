@@ -3,8 +3,12 @@
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
+@use "system/units";
 
 .osg-search {
+  $padding-vertical: units.unit-to-rem(3);
+  $padding-horizontal: units.unit-to-rem(4);
+
   @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
   @extend %osg-text-weight-light;
   position: relative;
@@ -22,10 +26,9 @@
   }
 
   &__input {
-    $padding-vertical: 10px;
-    $padding-horizontal: 15px;
     padding: $padding-vertical $padding-horizontal;
     @extend %osg-color-text-blue-dark;
+    @extend %osg-margin-top-2;
     border: 2px solid colors.$blue-dark;
     border-radius: 0;
     flex-grow: 1;
@@ -40,7 +43,7 @@
 
     &:focus {
       border: 4px solid colors.$blue-contrast !important;
-      padding: $padding-vertical - 2px $padding-horizontal - 2px !important;
+      padding: calc($padding-vertical - 2px) calc($padding-horizontal - 2px) !important;
       outline: none;
     }
 
@@ -155,8 +158,8 @@
       @extend %osg-text-size-delta;
       line-height: 1em;
       position: absolute;
-      right: 10px;
-      bottom: 10px;
+      bottom: $padding-vertical;
+      right: $padding-horizontal;
     }
 
     & .osg-search__input {
