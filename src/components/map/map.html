@@ -29,20 +29,21 @@
         <p>Popups appear on click on a feature if the following conditions are met:</p>
           <ul class="osg-unordered-list">
             <li class="osg-unordered-list__item"><code class="osg-code">showPopups</code> is true, this can be set to false by overriding the property <code class="osg-code">state</code>.</li>
-            <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">description</code>. Optionally it can also have <code class="osg-code">heading</code>.</li>
-            <li class="osg-unordered-list__item"> When using <code class="osg-code">points</code>: <code class="osg-code">description</code> and optionally <code class="osg-code">heading</code> added to the array (per point).</li>
-            <li class="osg-unordered-list__item"> There is actually a string with data.</li>
+            <li class="osg-unordered-list__item">When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">description</code>. Optionally it can also have <code class="osg-code">heading</code>.</li>
+            <li class="osg-unordered-list__item">When using <code class="osg-code">points</code>: <code class="osg-code">description</code> and optionally <code class="osg-code">heading</code> added to the array (per point).</li>
+            <li class="osg-unordered-list__item">There is actually a string with data.</li>
           </ul>
         <br />
         <p>Popups appear after load if the following conditions are met:</p>
         <ul class="osg-unordered-list">
-          <li class="osg-unordered-list__item"> All of the conditions for on click are met.</li>
-          <li class="osg-unordered-list__item"> When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">openPopup</code>, with a value of <code class="osg-code">true</code>.</li>
-          <li class="osg-unordered-list__item"> When using <code class="osg-code">points</code>: <code class="osg-code">openPopup</code> is added to the array (per point), with a value of <code class="osg-code">true</code>.</li>
-          <li class="osg-unordered-list__item"> <code class="osg-code">clusteredPoints</code> is false.</li>
-          <li class="osg-unordered-list__item"> Note: you should limit the number of opened popups to 1 or 2.</li>
+          <li class="osg-unordered-list__item">All of the conditions for on click are met.</li>
+          <li class="osg-unordered-list__item">When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">openPopup</code>, with a value of <code class="osg-code">true</code>.</li>
+          <li class="osg-unordered-list__item">When using <code class="osg-code">points</code>: <code class="osg-code">openPopup</code> is added to the array (per point), with a value of <code class="osg-code">true</code>.</li>
+          <li class="osg-unordered-list__item"><code class="osg-code">clusteredPoints</code> is false.</li>
+          <li class="osg-unordered-list__item">Note: you should limit the number of opened popups to 1 or 2.</li>
         </ul>
         <br />
+        <p>A link will be genereted on the heading if a <code class="osg-code">url</code> is present in the feature properties.</p>
         <p>To display additional data after the heading and description, you can add an array called <code class="osg-code">data</code> to the feature properties.</p>
         <p>Each item in the array must contain <code class="osg-code">label</code> and <code class="osg-code">value</code>.</p>
         <p>This only works with the <code class="osg-code">geoJson</code> prop, and not the <code class="osg-code">points</code> prop.</p>
