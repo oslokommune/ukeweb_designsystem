@@ -643,9 +643,9 @@ export default {
 
       if (heading.length > 0) {
         if (url.length > 0) {
-          heading = "<h3 class='osg-map__heading'><a class='osg-link' href='" + url + "'>" + heading + "</a></h3>";
+          heading = `<h3 class="osg-map__heading"><a class="osg-link" href="${url}">${heading}</a></h3>`;
         } else {
-          heading = "<h3 class='osg-map__heading'>" + heading + "</h3>";
+          heading = `<h3 class="osg-map__heading">${heading}</h3>`;
         }
       }
 
@@ -660,13 +660,13 @@ export default {
           let value = data.value ?? "";
 
           if (label.length > 0 && value.length > 0) {
-            additionalDataHtml = additionalDataHtml + "<span class='osg-map__label'>" + label + "</span>: <span class='osg-map__value'>" + value + "</span><br>";
+            additionalDataHtml = additionalDataHtml + `<span class="osg-map__label">${label}</span>: <span class="osg-map__value">${value}</span><br>`;
           }
         });
       }
 
       if (heading.length > 0 || description.length > 0) {
-        return "<div class='osg-map__popup-content'>" + heading + description + additionalDataHtml + "</div>";
+        return `<div class="osg-map__popup-content">${heading}${description}${additionalDataHtml}</div>`;
       }
 
       return null;
