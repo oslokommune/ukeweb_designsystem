@@ -16,16 +16,14 @@
               <source :srcset="image.large" media="(min-width: 1024px)" />
               <source :srcset="image.medium" media="(min-width: 769px)" />
               <source :srcset="image.small" media="(max-width: 768px)" />
-              <img :src="image.small" :alt="image.caption" />
+              <img :src="image.small" :alt="image.alt" />
             </picture>
           </figure>
         </div>
       </div>
     </div>
-    <div class="osg-carousel__info osg-margin-top-10">
-      <span v-if="currentImage">
-        {{ currentImage.caption }}
-      </span>
+    <div v-if="currentImage && (currentImage.description || currentImage.credits)" class="osg-carousel__info">
+      <span>{{ getDescription(currentImage) }} {{ currentImage.credits }}</span>
     </div>
   </div>
 </template>
@@ -263,6 +261,19 @@ export default {
       } else {
         this.currentSlide = index;
       }
+    },
+
+    getDescription(currentImage) {
+      let description = "";
+
+      if (currentImage.description) {
+        description = currentImage.description;
+        if (description[description.length - 1] !== ".") {
+          description = description + ".";
+        }
+      }
+
+      return description;
     },
   },
 };
