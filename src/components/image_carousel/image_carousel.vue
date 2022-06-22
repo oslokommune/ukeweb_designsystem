@@ -22,8 +22,9 @@
         </div>
       </div>
     </div>
-    <div v-if="currentImage && (currentImage.description || currentImage.credits)" class="osg-carousel__info">
-      <span>{{ currentImage.description }} {{ currentImage.credits }}</span>
+    <div v-if="currentImage" class="osg-carousel__info">
+      <span v-if="currentImage.description.length" class="osg-carousel__info__description">{{ currentImage.description }}</span
+      ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
   </div>
 </template>
