@@ -78,5 +78,10 @@ $osg-carousel-image-height-large: 725;
   &__info {
     @extend %osg-padding-top-1, %osg-padding-top-2-breakpoint-large, %osg-padding-horizontal-4, %osg-padding-horizontal-0-breakpoint-large;
     grid-column: span 12 / span 12;
+    white-space: pre-line;
+
+    &__description {
+      @extend %osg-margin-right-1;
+    }
   }
 }
