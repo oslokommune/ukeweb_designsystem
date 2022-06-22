@@ -23,18 +23,20 @@
     width: 100%;
     @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
     @extend %osg-text-weight-medium;
+
+    & .osg-search__input {
+      @extend %osg-margin-top-2;
+    }
   }
 
   &__input {
     padding: $padding-vertical $padding-horizontal;
     @extend %osg-color-text-blue-dark;
-    @extend %osg-margin-top-2;
     border: 2px solid colors.$blue-dark;
     border-radius: 0;
     flex-grow: 1;
     font-size: inherit;
     font-family: inherit;
-    line-height: inherit;
     width: 100%;
 
     &:hover {
