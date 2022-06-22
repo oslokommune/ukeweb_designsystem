@@ -4,6 +4,7 @@
 @use "system/icons";
 @use "system/spacing";
 @use "system/states";
+@use "system/units";
 
 .osg-search-seasons {
   display: flex;
@@ -21,10 +22,14 @@
   }
 
   &__content {
-    width: calc(100% - 30px);
+    width: calc(100% - units.unit-to-rem(10));
 
     @include breakpoints.medium {
-      width: calc(100% - 60px);
+      width: calc(100% - units.unit-to-rem(16));
+    }
+
+    @include breakpoints.large {
+      width: calc(100% - units.unit-to-rem(25));
     }
   }
 
@@ -58,7 +63,7 @@
   }
 
   &__input {
-    @extend %osg-padding-4;
+    @extend %osg-padding-3;
     @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
     border: 2px solid colors.$white !important;
     border-radius: 0;
@@ -72,31 +77,30 @@
     }
 
     &:focus {
-      $padding: 15px;
       border: 4px solid colors.$blue-contrast !important;
-      padding: $padding - 1px;
+      padding: calc(units.unit-to-rem(3) - 2px);
       outline: none;
     }
-    @extend %osg-text-size-golf-breakpoint-large;
   }
 
   &__button {
     background-color: colors.$red;
     border: 2px solid colors.$red;
     border-radius: 50%;
+    box-sizing: content-box;
     cursor: pointer;
-
     font-size: inherit;
-    padding: 0.35em 0.84325em;
+    padding: 0;
+    min-width: units.unit-to-rem(13);
 
     @include breakpoints.large {
-      padding: 0.35em 1.125em !important;
+      min-width: units.unit-to-rem(14);
     }
 
     &::after {
       @extend %osg-text-size-delta;
+
       font-family: "Oslo Icons" !important;
-      line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
     }
