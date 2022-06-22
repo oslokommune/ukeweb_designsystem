@@ -23,7 +23,7 @@
       </div>
     </div>
     <div v-if="currentImage && (currentImage.description || currentImage.credits)" class="osg-carousel__info">
-      <span>{{ getDescription(currentImage) }} {{ currentImage.credits }}</span>
+      <span>{{ currentImage.description }} {{ currentImage.credits }}</span>
     </div>
   </div>
 </template>
@@ -261,19 +261,6 @@ export default {
       } else {
         this.currentSlide = index;
       }
-    },
-
-    getDescription(currentImage) {
-      let description = "";
-
-      if (currentImage.description) {
-        description = currentImage.description;
-        if (description[description.length - 1] !== ".") {
-          description = description + ".";
-        }
-      }
-
-      return description;
     },
   },
 };
