@@ -32,6 +32,10 @@
     }
   }
 
+  &__circle {
+    border-radius: 50%;
+  }
+
   &__main {
     flex-grow: 4;
 
