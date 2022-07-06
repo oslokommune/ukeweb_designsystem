@@ -35,18 +35,23 @@ $osg-carousel-image-height-large: 725;
     img {
       object-fit: cover;
       width: 100%;
-      height: #{$osg-carousel-image-height-small}px;
-
-      @include breakpoints.medium {
-        height: #{$osg-carousel-image-height-medium}px;
-      }
-      @include breakpoints.large {
-        height: #{$osg-carousel-image-height-large}px;
-      }
     }
 
     figure {
       line-height: 0;
+    }
+
+    &--fixed-height {
+      img {
+        height: #{$osg-carousel-image-height-small}px;
+
+        @include breakpoints.medium {
+          height: #{$osg-carousel-image-height-medium}px;
+        }
+        @include breakpoints.large {
+          height: #{$osg-carousel-image-height-large}px;
+        }
+      }
     }
   }
 

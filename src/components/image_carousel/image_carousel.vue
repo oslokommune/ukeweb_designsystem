@@ -10,7 +10,7 @@
         </button>
       </div>
       <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
-        <div class="osg-carousel__slides" ref="slides">
+        <div class="osg-carousel__slides" :class="fixedHeight ? 'osg-carousel__slides--fixed-height' : ''" ref="slides">
           <figure v-for="(image, index) in images" v-bind:key="index">
             <picture>
               <source :srcset="image.large" media="(min-width: 1024px)" />
@@ -81,6 +81,10 @@ export default {
     prev: {
       type: String,
       default: "Previous image",
+    },
+    fixedHeight: {
+      type: Boolean,
+      default: false,
     },
   },
 
