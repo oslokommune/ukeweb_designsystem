@@ -72,9 +72,9 @@ export default {
       const isFirst = index === 1;
       const isLast = index === this.totalPages;
       const isWithinLimit = index >= this.limitMin && index <= this.limitMax;
-      const isWithinThredhold = this.totalPages <= this.threshold;
+      const threshold = this.totalPages <= this.threshold;
 
-      return isFirst || isLast || isWithinLimit || isWithinThredhold;
+      return isFirst || isLast || isWithinLimit || threshold;
     },
     showSpacer: function (index) {
       return this.totalPages > this.threshold && index >= this.limitMin - 1 && index <= this.limitMax + 1;
