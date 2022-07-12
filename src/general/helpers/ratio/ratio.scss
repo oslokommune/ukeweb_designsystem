@@ -1,0 +1,13 @@
+@use "system/breakpoints";
+
+.osg-ratio {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.osg-demo {
+  background-color: red;
+  position: relative;
+  width: 100%;
+}
