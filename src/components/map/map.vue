@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="osg-map__container" ref="mapContainer"></div>
+    <div class="osg-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
     <div v-show="error" class="osg-status-message osg-status-message--warning" aria-live="polite">{{ i18n.mapError }} - {{ technicalErrorText }}</div>
   </div>
 </template>
@@ -61,6 +61,10 @@ export default {
     loadMap: {
       type: Boolean,
       default: true,
+    },
+    ratio: {
+      type: String,
+      default: "osg-ratio--16-9",
     },
   },
 
