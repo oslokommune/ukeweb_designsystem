@@ -10,22 +10,21 @@
         </button>
       </div>
       <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
-        <div class="osg-carousel__slides" ref="slides">
+        <div class="osg-carousel__slides" :class="fixedHeight ? 'osg-carousel__slides--fixed-height' : ''" ref="slides">
           <figure v-for="(image, index) in images" v-bind:key="index">
             <picture>
               <source :srcset="image.large" media="(min-width: 1024px)" />
               <source :srcset="image.medium" media="(min-width: 769px)" />
               <source :srcset="image.small" media="(max-width: 768px)" />
-              <img :src="image.small" :alt="image.caption" />
+              <img :src="image.small" :alt="image.alt" />
             </picture>
           </figure>
         </div>
       </div>
     </div>
-    <div class="osg-carousel__info osg-margin-top-10">
-      <span v-if="currentImage">
-        {{ currentImage.caption }}
-      </span>
+    <div v-if="currentImage" class="osg-carousel__info">
+      <span v-if="currentImage.description.length" class="osg-carousel__info__description">{{ currentImage.description }}</span
+      ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
   </div>
 </template>
@@ -82,6 +81,10 @@ export default {
     prev: {
       type: String,
       default: "Previous image",
+    },
+    fixedHeight: {
+      type: Boolean,
+      default: false,
     },
   },
 

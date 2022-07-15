@@ -1,58 +1,24 @@
 function trapFocus(event) {
+  const isTabPressed = event.key === "Tab";
+  if (!isTabPressed) {
+    return;
+  }
+
   const currentElement = event.target;
-  var focusableEls = currentElement.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-  var firstFocusableEl = focusableEls[0];
-  var lastFocusableEl = focusableEls[focusableEls.length - 1];
-  var KEYCODE_TAB = 9;
+  const modalContent = document.querySelectorAll(".osg-modal")[0];
 
-  currentElement.addEventListener("keydown", function (e) {
-    var isTabPressed = e.key === "Tab" || e.keyCode === KEYCODE_TAB;
+  if (modalContent) {
+    const focusableEls = modalContent.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    const parentModalContent = currentElement.closest(".osg-modal");
 
-    if (!isTabPressed) {
-      return;
-    }
-
-    if (e.shiftKey) {
-      /* shift + tab */ if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-        e.preventDefault();
-      }
-    } else {
-      /* tab */
-      if (document.activeElement === lastFocusableEl) {
-        firstFocusableEl.focus();
-        e.preventDefault();
-      }
-    }
-  });
-}
-
-function toggleModal(event) {
-  event.preventDefault();
-  const target = event.target;
-  let modal = null;
-  if (target.classList.contains("osg-modal-trigger")) {
-    modal = document.getElementById(target.getAttribute("aria-controls"));
-  } else {
-    modal = target.closest(".osg-modal");
-  }
-
-  if (modal && modal.classList.contains("osg-modal--open")) {
-    closeModal(modal);
-  } else {
-    openModal(modal);
-  }
-}
-
-function openModal(modal) {
-  if (modal) {
-    modal.classList.add("osg-modal--open");
-    modal.addEventListener("click", trapFocus, false);
-    modal.setAttribute("aria-hidden", "false");
-
-    const closeBtn = modal.querySelector(".osg-modal__button button");
-    if (closeBtn) {
-      closeBtn.addEventListener("click", toggleModal, false);
+    if (event.shiftKey && !parentModalContent) {
+      lastFocusableEl.focus();
+      event.preventDefault();
+    } else if (!parentModalContent) {
+      firstFocusableEl.focus();
+      event.preventDefault();
     }
   }
 }
@@ -62,10 +28,41 @@ function closeModal(modal) {
     modal.classList.remove("osg-modal--open");
     modal.removeEventListener("click", trapFocus, false);
     modal.setAttribute("aria-hidden", "true");
+    document.removeEventListener("keyup", trapFocus, false);
 
-    const closeBtn = modal.querySelector(".osg-modal__button button");
-    if (closeBtn) {
-      closeBtn.removeEventListener("click", toggleModal, false);
+    const triggers = document.querySelectorAll(`[aria-controls=${modal.getAttribute("id")}]`);
+    triggers.forEach((trigger) => {
+      let { parentNode } = trigger;
+
+      while (parentNode) {
+        if (parentNode.classList?.contains("osg-modal")) {
+          return false;
+        }
+        parentNode = parentNode.parentNode;
+      }
+
+      trigger.focus();
+      return true;
+    });
+  }
+}
+
+function toggleModal(event) {
+  let trigger = event.target;
+
+  if (!event.target.classList.contains("osg-modal-trigger")) {
+    trigger = event.target.closest(".osg-modal-trigger");
+  }
+  const modalContent = document.getElementById(trigger.getAttribute("aria-controls"));
+
+  if (modalContent) {
+    const open = modalContent.classList.toggle("osg-modal--open");
+
+    if (open) {
+      modalContent.querySelectorAll("input,checkbox")[0].focus();
+      document.addEventListener("keyup", trapFocus, false);
+    } else {
+      closeModal(modalContent);
     }
   }
 }

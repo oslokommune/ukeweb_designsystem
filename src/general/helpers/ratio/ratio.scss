@@ -1,0 +1,59 @@
+@use "system/breakpoints";
+
+.osg-ratio {
+  height: auto;
+
+  // due to problems with same key (ex: 4/3 and 4/5), we have two arrays
+  $ratios: (
+    1: 1,
+    2: 3,
+    3: 2,
+    4: 3,
+    5: 4,
+    16: 9,
+    21: 9,
+  );
+
+  $ratios2: (
+    3: 4,
+    4: 5,
+    16: 10,
+  );
+
+  @each $width, $height in $ratios {
+    &-#{$width}-#{$height} {
+      aspect-ratio: #{$width} / #{$height};
+    }
+  }
+  @each $width, $height in $ratios2 {
+    &-#{$width}-#{$height} {
+      aspect-ratio: #{$width} / #{$height};
+    }
+  }
+
+  @include breakpoints.medium {
+    @each $width, $height in $ratios {
+      &-#{$width}-#{$height}-breakpoint-medium {
+        aspect-ratio: #{$width} / #{$height};
+      }
+    }
+    @each $width, $height in $ratios2 {
+      &-#{$width}-#{$height}-breakpoint-medium {
+        aspect-ratio: #{$width} / #{$height};
+      }
+    }
+  }
+
+  @include breakpoints.large {
+    @each $width, $height in $ratios {
+      &-#{$width}-#{$height}-breakpoint-large {
+        aspect-ratio: #{$width} / #{$height};
+      }
+    }
+    @each $width, $height in $ratios2 {
+      &-#{$width}-#{$height}-breakpoint-large {
+        aspect-ratio: #{$width} / #{$height};
+      }
+    }
+  }
+}

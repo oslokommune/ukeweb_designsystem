@@ -5,6 +5,7 @@
 $osg-carousel-image-height-small: 290;
 $osg-carousel-image-height-medium: 540;
 $osg-carousel-image-height-large: 725;
+
 .osg-carousel {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -34,18 +35,23 @@ $osg-carousel-image-height-large: 725;
     img {
       object-fit: cover;
       width: 100%;
-      height: #{$osg-carousel-image-height-small}px;
-
-      @include breakpoints.medium {
-        height: #{$osg-carousel-image-height-medium}px;
-      }
-      @include breakpoints.large {
-        height: #{$osg-carousel-image-height-large}px;
-      }
     }
 
     figure {
       line-height: 0;
+    }
+
+    &--fixed-height {
+      img {
+        height: #{$osg-carousel-image-height-small}px;
+
+        @include breakpoints.medium {
+          height: #{$osg-carousel-image-height-medium}px;
+        }
+        @include breakpoints.large {
+          height: #{$osg-carousel-image-height-large}px;
+        }
+      }
     }
   }
 
@@ -75,7 +81,12 @@ $osg-carousel-image-height-large: 725;
   }
 
   &__info {
-    @extend %osg-padding-vertical-0, %osg-padding-horizontal-4, %osg-padding-0-breakpoint-large;
+    @extend %osg-padding-top-1, %osg-padding-top-2-breakpoint-large, %osg-padding-horizontal-4, %osg-padding-horizontal-0-breakpoint-large;
     grid-column: span 12 / span 12;
+    white-space: pre-line;
+
+    &__description {
+      @extend %osg-margin-right-1;
+    }
   }
 }
