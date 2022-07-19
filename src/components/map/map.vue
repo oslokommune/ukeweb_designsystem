@@ -64,7 +64,7 @@ export default {
     },
     ratio: {
       type: String,
-      default: "osg-ratio--16-9",
+      default: "osg-ratio-16-9",
     },
   },
 
@@ -85,13 +85,6 @@ export default {
       if (this.points) {
         let features = [];
         this.points.forEach((point) => {
-          let heading = point.heading ?? "";
-          let description = point.description ?? "";
-          if (description.length === 0) {
-            description = point.desc ?? "";
-          }
-          let openPopup = point.openPopup ?? false;
-
           features.push({
             type: "Feature",
             geometry: {
@@ -99,9 +92,8 @@ export default {
               coordinates: [point.longitude, point.latitude],
             },
             properties: {
-              heading: heading,
-              description: description,
-              openPopup: openPopup,
+              popupContent: point.popupContent ?? "",
+              openPopup: point.openPopup ?? false,
             },
           });
         });
@@ -225,6 +217,10 @@ export default {
       }
 
       this.layerIds.forEach((layerId) => {
+        // Remove previously added listeners
+        // Listener for click events that occurs on a feature in the layer.
+        this.mapObject.off("click", layerId, this.$_addClickEventToLayer);
+
         if (this.mapObject.getLayer(layerId)) {
           this.mapObject.removeLayer(layerId);
         }
@@ -438,15 +434,14 @@ export default {
       this.$_addClusterLayer("clusteredGeoJson-points", "clusteredGeoJson");
 
       // Expand/zoom in on the cluster on click
-      var _this = this; // Scope this, bobby!
       this.mapObject.on("click", "clusteredGeoJson-points", (event) => {
-        var features = _this.mapObject.queryRenderedFeatures(event.point, {
+        var features = this.mapObject.queryRenderedFeatures(event.point, {
           layers: ["clusteredGeoJson-points"],
         });
         var clusterId = features[0].properties.cluster_id;
-        _this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, (err, zoom) => {
+        this.mapObject.getSource("clusteredGeoJson").getClusterExpansionZoom(clusterId, (err, zoom) => {
           if (err) return;
-          _this.mapObject.easeTo({
+          this.mapObject.easeTo({
             center: features[0].geometry.coordinates,
             zoom: zoom,
           });
@@ -609,68 +604,89 @@ export default {
       });
     },
     // Private/protected method
-    $_addPopupsFromProperties(layerId) {
-      var _this = this; // Scope this, bobby!
+    $_addEventsToPopup(popup, properties) {
+      if (properties) {
+        const popupEvent = properties.popupEvent ?? null;
+        const popdownEvent = properties.popdownEvent ?? null;
+        let popupEventData = properties.popupEventData ?? null;
 
-      // When a click event occurs on a feature in the layer, open a popup at the
-      // location of the feature, with HTML generated from its properties.
-      this.mapObject.on("click", layerId, (event) => {
-        let html = _this.$_getPopupHtml(event.features[0]);
-
-        if (typeof html === "string") {
-          const popup = new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(event.lngLat).setHTML(html).addTo(_this.mapObject);
-          this.lastDisplayedPopup = popup;
+        if (popupEventData) {
+          // Try to parse event data as JSON if it's a string (probably JSON).
+          if (typeof popupEventData === "string") {
+            try {
+              popupEventData = JSON.parse(popupEventData);
+            } catch (e) {
+              // Probably: Uncaught SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data
+              this.technicalErrorText = e.message;
+              this.error = true;
+            }
+          }
         }
-      });
+
+        if (popupEvent) {
+          popup.on("open", function () {
+            // Emit popup event.
+            const event = new CustomEvent(popupEvent, {
+              detail: {
+                data: popupEventData,
+              },
+            });
+            window.dispatchEvent(event);
+          });
+        }
+
+        if (popdownEvent) {
+          popup.on("close", function () {
+            // Emit popdown event.
+            const event = new CustomEvent(popdownEvent, {
+              detail: {
+                data: popupEventData,
+              },
+            });
+            window.dispatchEvent(event);
+          });
+        }
+      }
+    },
+    // Private/protected method
+    $_addPopupToMap(lngLat, feature) {
+      const html = this.$_getPopupHtml(feature);
+      if (typeof html === "string") {
+        const popup = new maplibregl.Popup({ className: "osg-map__popup" }).setLngLat(lngLat).setHTML(html);
+        const properties = feature.properties ?? null;
+        this.$_addEventsToPopup(popup, properties);
+        popup.addTo(this.mapObject);
+        this.lastDisplayedPopup = popup;
+      }
+    },
+    // Private/protected method
+    $_addClickEventToLayer(event) {
+      this.$_addPopupToMap(event.lngLat, event.features[0]);
+    },
+
+    // Private/protected method
+    $_addPopupsFromProperties(layerId) {
+      // Add listener for click events that occurs on a feature in the layer, open a popup at the
+      // location of the feature, with HTML from its properties.
+
+      this.mapObject.on("click", layerId, this.$_addClickEventToLayer);
 
       // Change the cursor to a pointer when over the feature/layer.
       this.mapObject.on("mouseenter", layerId, () => {
-        _this.mapObject.getCanvas().style.cursor = "pointer";
+        this.mapObject.getCanvas().style.cursor = "pointer";
       });
 
       // Change it back to a pointer when it leaves.
       this.mapObject.on("mouseleave", layerId, () => {
-        _this.mapObject.getCanvas().style.cursor = "";
+        this.mapObject.getCanvas().style.cursor = "";
       });
     },
     // Private/protected method
     $_getPopupHtml(feature) {
-      let heading = feature.properties.heading ?? "";
-      let description = feature.properties.description ?? "";
-      let url = feature.properties.url ?? "";
-      if (description.length === 0) {
-        description = feature.properties.desc ?? "";
-      }
+      let popupContent = feature.properties.popupContent ?? "";
 
-      let additionalData = feature.properties.data ? JSON.parse(feature.properties.data) : [];
-      let additionalDataHtml = "";
-
-      if (heading.length > 0) {
-        if (url.length > 0) {
-          heading = `<h3 class="osg-map__heading"><a class="osg-link" href="${url}">${heading}</a></h3>`;
-        } else {
-          heading = `<h3 class="osg-map__heading">${heading}</h3>`;
-        }
-      }
-
-      // Need a better way to handle this in the future.
-      if (description === "null") {
-        description = "";
-      }
-
-      if (additionalData.length > 0) {
-        additionalData.forEach((data) => {
-          let label = data.label ?? "";
-          let value = data.value ?? "";
-
-          if (label.length > 0 && value.length > 0) {
-            additionalDataHtml = additionalDataHtml + `<span class="osg-map__label">${label}</span>: <span class="osg-map__value">${value}</span><br>`;
-          }
-        });
-      }
-
-      if (heading.length > 0 || description.length > 0) {
-        return `<div class="osg-map__popup-content">${heading}${description}${additionalDataHtml}</div>`;
+      if (popupContent.length > 0) {
+        return `<div class="osg-map__popup-content">${popupContent}</div>`;
       }
 
       return null;
@@ -684,8 +700,8 @@ export default {
             let features = event.source.data.features;
             if (typeof features === "object") {
               features.forEach((feature) => {
-                if (feature.properties.openPopup) {
-                  new maplibregl.Popup().setLngLat(feature.geometry.coordinates).setHTML(this.$_getPopupHtml(feature)).addTo(this.mapObject);
+                if (feature.geometry.type === "Point" && feature.properties.openPopup) {
+                  this.$_addPopupToMap(feature.geometry.coordinates, feature);
                 }
               });
             }
