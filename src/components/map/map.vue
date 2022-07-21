@@ -533,7 +533,7 @@ export default {
         source: dataSourceId,
         layout: {
           "icon-image": "location-pin-filled",
-          "icon-allow-overlap": true,
+          "icon-overlap": "always",
           "icon-anchor": "bottom",
         },
         filter: ["==", "$type", "Point"],
@@ -599,7 +599,7 @@ export default {
         filter: ["!", ["has", "point_count"]],
         layout: {
           "icon-image": "location-pin-filled",
-          "icon-allow-overlap": true,
+          "icon-overlap": "always",
         },
       });
     },
