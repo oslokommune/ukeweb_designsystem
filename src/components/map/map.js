@@ -17,17 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     Vue.component("osg-map", OsgMap);
     var app = new Vue({ el: mapElement });
   }
-
   if (mapElement2) {
     Vue.component("osg-map", OsgMap);
     var app2 = new Vue({ el: mapElement2 });
   }
-
   if (mapElement3) {
     Vue.component("osg-map", OsgMap);
     var app3 = new Vue({ el: mapElement3 });
   }
-
   if (mapElement4) {
     Vue.component("osg-map", OsgMap);
     var app4 = new Vue({ el: mapElement4 });
@@ -48,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var app7 = new Vue({
       el: mapElement7,
       data: () => ({
-        points: [{ longitude: 10.74981, latitude: 59.913008, heading: "Bob", description: "the builder!" }],
+        points: [{ longitude: 10.74981, latitude: 59.913008, popupContent: "<h2>Bob the Builder</h2>" }],
       }),
 
       mounted() {
         setTimeout(() => {
-          this.points.push({ longitude: 10.73981, latitude: 59.910008, heading: "Bar", description: "the builder!" });
-        }, 5000);
+          this.points.push({ longitude: 10.73981, latitude: 59.910008, popupContent: "<h2>Baz the other Builder</h2>" });
+        }, 10000);
       },
     });
   }
@@ -64,12 +61,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var app8 = new Vue({
       el: mapElement8,
       data: () => ({
-        geoJson: "https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten.geojson",
+        geoJson: "https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson",
       }),
 
       mounted() {
         setTimeout(() => {
-          this.geoJson = "https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection.geojson";
+          this.geoJson = "https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson";
         }, 15000);
       },
     });
@@ -80,12 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var app9 = new Vue({
       el: mapElement9,
       data: () => ({
-        state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true },
+        state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
       }),
 
       mounted() {
         setTimeout(() => {
-          this.state = { longitude: 10.64981, latitude: 59.915008, zoom: 15, showPopups: true };
+          this.state = { longitude: 10.64981, latitude: 59.915008, zoom: 15, showPopups: true, autoFitToBounds: false };
         }, 15000);
       },
     });
@@ -97,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       el: mapElement10,
       data: () => ({
         loadMap: false,
-        state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true },
+        state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
       }),
     });
   }

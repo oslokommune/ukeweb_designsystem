@@ -16,4 +16,9 @@
     @extend %osg-padding-4;
     width: 100%;
   }
+
+  &--multi-line {
+    // See https://developer.mozilla.org/en-US/docs/Web/CSS/white-space#values
+    white-space: pre-wrap;
+  }
 }
