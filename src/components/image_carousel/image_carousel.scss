@@ -2,10 +2,6 @@
 @use "system/typography";
 @use "system/spacing";
 
-$osg-carousel-image-height-small: 290;
-$osg-carousel-image-height-medium: 540;
-$osg-carousel-image-height-large: 725;
-
 .osg-carousel {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -39,19 +35,6 @@ $osg-carousel-image-height-large: 725;
 
     figure {
       line-height: 0;
-    }
-
-    &--fixed-height {
-      img {
-        height: #{$osg-carousel-image-height-small}px;
-
-        @include breakpoints.medium {
-          height: #{$osg-carousel-image-height-medium}px;
-        }
-        @include breakpoints.large {
-          height: #{$osg-carousel-image-height-large}px;
-        }
-      }
     }
   }
 
