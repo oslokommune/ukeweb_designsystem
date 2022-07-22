@@ -21,9 +21,10 @@
 
     border: none;
     background: transparent;
-    text-align: center;
     border-bottom: 2px solid colors.$gray;
+    cursor: pointer;
     padding: 0;
+    text-align: center;
 
     &:hover {
       border-bottom: 2px solid colors.$blue-contrast;
