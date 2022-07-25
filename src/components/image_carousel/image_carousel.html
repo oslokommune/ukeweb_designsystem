@@ -9,83 +9,81 @@
             <osg-image-carousel
               :images="[
               {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
+                    media: '(max-width: 768px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
+                    media: '(min-width: 769px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
+                    media: '(min-width: 1024px)'
+                  }
+                ],
                 description: 'Test description One.',
                 alt: 'alt One',
                 credits: 'Credits: Jon snow'
               },
               {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
+                    media: '(max-width: 768px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
+                    media: '(min-width: 769px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
+                    media: '(min-width: 1024px)'
+                  }
+                ],
                 description: 'Test description Two.',
                 alt: 'alt Two',
                 credits: 'Credits: Jon snow'
               },
               {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
+                    media: '(max-width: 768px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
+                    media: '(min-width: 769px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
+                    media: '(min-width: 1024px)'
+                  }
+                ],
                 description: 'Test description Three.',
                 alt: 'alt Three',
                 credits: 'Credits: Jon snow'
               },
               {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+                    media: '(max-width: 768px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
+                    media: '(min-width: 769px)'
+                  },
+                  {
+                    src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
+                    media: '(min-width: 1024px)'
+                  }
+                ],
                 description: '',
                 credits: 'Credits: Jon snow'
               }
             ]"
-            ></osg-image-carousel>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Fixed height</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div id="vue2">
-            <osg-image-carousel
-              :images="[
-              {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
-                description: 'Test description One.',
-                alt: 'alt One',
-                credits: 'Credits: Jon snow'
-              },
-              {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
-                description: 'Test description Two.',
-                alt: 'alt Two',
-                credits: 'Credits: Jon snow'
-              },
-              {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
-                description: 'Test description Three.',
-                alt: 'alt Three',
-                credits: 'Credits: Jon snow'
-              },
-              {
-                large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
-                medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
-                small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
-                description: '',
-                credits: 'Credits: Jon snow'
-              }
-            ]"
-              :fixed-height="true"
             ></osg-image-carousel>
           </div>
         </div>
@@ -99,100 +97,109 @@
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-2">Default</h2>
+      <div id="vue2">
+        <osg-image-carousel
+          :images="[
+          {
+            sources: [
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
+                media: '(max-width: 768px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
+                media: '(min-width: 769px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
+                media: '(min-width: 1024px)'
+              }
+            ],
+            description: 'Test description One.',
+            alt: 'alt One',
+            credits: 'Credits: Jon snow'
+          },
+          {
+            sources: [
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
+                media: '(max-width: 768px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
+                media: '(min-width: 769px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
+                media: '(min-width: 1024px)'
+              }
+            ],
+            description: 'Test description Two.',
+            alt: 'alt Two',
+            credits: 'Credits: Jon snow'
+          },
+          {
+            sources: [
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
+                media: '(max-width: 768px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
+                media: '(min-width: 769px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
+                media: '(min-width: 1024px)'
+              }
+            ],
+            description: 'Test description Three.',
+            alt: 'alt Three',
+            credits: 'Credits: Jon snow'
+          },
+          {
+            sources: [
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+                media: '(max-width: 768px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
+                media: '(min-width: 769px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
+                media: '(min-width: 1024px)'
+              }
+            ],
+            description: '',
+            credits: 'Credits: Jon snow'
+          }
+        ]"
+        ></osg-image-carousel>
+      </div>
+    </div>
+    <div class="osg-grid__column--12">
+      <h2 class="osg-devtools-text-preset-2">1 image</h2>
       <div id="vue3">
         <osg-image-carousel
           :images="[
           {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
-            description: 'Test description One.',
-            alt: 'alt One',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
-            description: 'Test description Two.',
-            alt: 'alt Two',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
-            description: 'Test description Three.',
-            alt: 'alt Three',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
-            description: 'Test description Four.',
-            alt: 'alt Four',
-            credits: 'Credits: Jon snow'
-          }
-        ]"
-        ></osg-image-carousel>
-      </div>
-    </div>
-
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Fixed height</h2>
-      <div id="vue4">
-        <osg-image-carousel
-          :images="[
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/19.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/19.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/19.jpg',
-            description: 'Test description One.',
-            alt: 'alt One',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/15.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/15.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/15.jpg',
-            description: 'Test description Two.',
-            alt: 'alt Two',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/17.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/17.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/17.jpg',
-            description: 'Test description Three.',
-            alt: 'alt Three',
-            credits: 'Credits: Jon snow'
-          },
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
-            description: 'Test description Four.',
-            alt: 'alt Four',
-            credits: 'Credits: Jon snow'
-          }
-        ]"
-          :fixed-height="true"
-        ></osg-image-carousel>
-      </div>
-    </div>
-
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">1 image</h2>
-      <div id="vue5">
-        <osg-image-carousel
-          :images="[
-          {
-            large: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
-            medium: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
-            small: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
-            description: 'Test description One.',
-            alt: 'alt One',
+            sources: [
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/768/22.jpg',
+                media: '(max-width: 768px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/22.jpg',
+                media: '(min-width: 769px)'
+              },
+              {
+                src: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1920/22.jpg',
+                media: '(min-width: 1024px)'
+              }
+            ],
+            description: '',
             credits: 'Credits: Jon snow'
           }
         ]"

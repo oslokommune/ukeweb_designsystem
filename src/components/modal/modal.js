@@ -26,7 +26,7 @@ function trapFocus(event) {
 function closeModal(modal) {
   if (modal) {
     modal.classList.remove("osg-modal--open");
-    modal.removeEventListener("click", trapFocus, false);
+    modal.querySelector(".osg-modal__button button").removeEventListener("click", toggleModal, false);
     modal.setAttribute("aria-hidden", "true");
     document.removeEventListener("keyup", trapFocus, false);
 
@@ -61,6 +61,8 @@ function toggleModal(event) {
     if (open) {
       modalContent.querySelectorAll("input,checkbox")[0].focus();
       document.addEventListener("keyup", trapFocus, false);
+
+      modalContent.querySelector(".osg-modal__button button").addEventListener("click", toggleModal, false);
     } else {
       closeModal(modalContent);
     }
