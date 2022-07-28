@@ -26,7 +26,6 @@
   }
 
   &__lead {
-    @extend %osg-padding-5;
     @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
     @extend %osg-text-weight-light;
   }
