@@ -15,6 +15,8 @@ export function OsgMenu() {
   }
 
   function toggleDisplay(elem) {
+    if (!elem.classList.contains("osg-button-menu")) {
+    }
     if ((elem && elem.style.display === "none") || elem.style.display === "") {
       elem.style.display = "block";
     } else {
@@ -44,20 +46,19 @@ export function OsgMenu() {
 
   hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
     hamburgerButtonTrigger.addEventListener("click", (event) => {
-      const iconButton = event.target.querySelector(".osg-button-menu__icon");
-      const navMenu = document.getElementById(event.target.getAttribute("aria-controls"));
+      const button = event.target.classList.contains("osg-button-menu") ? event.target : event.target.closest(".osg-button-menu");
+      const navMenu = document.getElementById(button.getAttribute("aria-controls"));
 
       toggleAriaExpanded(hamburgerButtonTrigger);
       toggleDisplay(navMenu);
 
-      iconButton.classList.toggle("osg-button-menu__icon--close");
       hamburgerButtonTrigger.classList.toggle("osg-button-menu--close");
 
       document.dispatchEvent(
         new CustomEvent("OsgMenuButtonClick", {
           detail: {
-            button: event.target,
-            state: event.target.getAttribute("aria-expanded") === "true" ? "open" : "close",
+            button: button,
+            state: button.getAttribute("aria-expanded") === "true" ? "open" : "close",
           },
         })
       );
