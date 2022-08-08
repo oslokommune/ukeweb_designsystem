@@ -16,13 +16,13 @@
 
   h2 {
     @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
-    @extend %osg-margin-bottom-1, %osg-margin-bottom-3-breakpoint-medium;
+    @extend %osg-margin-bottom-1, %osg-margin-bottom-2-breakpoint-medium;
   }
 
   h3 {
     @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-medium, %osg-text-size-hotel-breakpoint-large;
     @extend %osg-text-weight-medium;
-    @extend %osg-margin-bottom-1, %osg-margin-bottom-3-breakpoint-medium;
+    @extend %osg-margin-bottom-1, %osg-margin-bottom-2-breakpoint-medium;
   }
 
   h4 {
