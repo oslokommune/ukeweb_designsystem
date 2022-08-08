@@ -8,28 +8,27 @@
 @use "sass:math";
 
 .osg-button-menu {
+  @extend %osg-padding-2, %osg-padding-horizontal-4-breakpoint-medium;
   @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-  @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
+  @extend %osg-text-weight-medium;
 
   background-color: transparent;
   border-radius: 50%;
-  border: none;
+  border: 2px solid transparent;
+  box-sizing: content-box;
   color: colors.$blue-dark;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  height: 3.75rem;
   outline: none;
   position: relative;
   text-align: center;
   text-decoration: none;
-  width: 3.75rem;
+  width: 1.5rem;
 
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
-    height: unset;
-    margin-left: unset;
     width: unset;
   }
 
@@ -38,116 +37,32 @@
     pointer-events: none;
 
     @include breakpoints.medium {
-      display: block;
-      float: left;
+      display: inline-block;
     }
   }
 
   &__icon {
-    float: right;
-    width: 2.5rem;
+    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-margin-left-3-breakpoint-medium;
 
-    > span {
-      background-color: colors.$blue-dark;
-      height: 0.125rem;
-      position: absolute;
-      pointer-events: none;
-      right: 10px;
-      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      width: 2.188rem;
+    line-height: 1.5rem;
 
-      &:nth-child(1) {
-        top: 0.906rem;
-      }
-      &:nth-child(2) {
-        top: 1.656rem;
-      }
-      &:nth-child(3) {
-        top: 2.406rem;
-      }
-
-      @include breakpoints.medium {
-        right: 15px;
-        width: 1.625rem;
-
-        &:nth-child(1) {
-          top: 0.875rem;
-        }
-        &:nth-child(2) {
-          top: 1.375rem;
-        }
-        &:nth-child(3) {
-          top: 1.875rem;
-        }
-      }
-
-      @include breakpoints.large {
-        &:nth-child(1) {
-          top: 1rem;
-        }
-        &:nth-child(2) {
-          top: 1.5rem;
-        }
-        &:nth-child(3) {
-          top: 2rem;
-        }
-      }
+    @include breakpoints.large {
+      line-height: 1.75rem;
     }
 
-    &--close {
-      > span {
-        background: colors.$black !important;
-        margin-top: 0;
-        right: 15px;
-        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        width: 30px;
-        @include breakpoints.medium {
-          background: colors.$white !important;
-        }
-
-        &:nth-child(1) {
-          top: 25px;
-          transform: translateY(5px) translateY(-50%) rotate(-135deg);
-          @include breakpoints.medium {
-            right: 11px;
-            top: 18px;
-          }
-          @include breakpoints.large {
-            top: 19px;
-          }
-        }
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        &:nth-child(3) {
-          top: 37px;
-          transform: translateY(-9px) translateY(50%) rotate(135deg);
-          @include breakpoints.medium {
-            right: 11px;
-            top: 30px;
-          }
-          @include breakpoints.large {
-            top: 31px;
-          }
-        }
-      }
-    }
+    display: inline-block;
+    vertical-align: top;
   }
 
-  &:active,
-  &:focus,
+  &:active &:focus,
   &:hover {
-    border-color: colors.$blue-contrast;
+    border-color: colors.$yellow;
     color: colors.$blue-contrast;
 
     @include breakpoints.medium {
+      border-color: colors.$blue-contrast;
       background-color: transparent;
-    }
-
-    .osg-button-menu__icon {
-      > span {
-        background-color: colors.$blue-contrast;
-      }
     }
   }
 
