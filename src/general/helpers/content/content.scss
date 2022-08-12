@@ -39,7 +39,8 @@
     @extend %osg-margin-top-5;
   }
 
-  p + h2 {
+  p + h2,
+  ul + h2 {
     @extend %osg-margin-top-8, %osg-margin-top-13-breakpoint-medium;
   }
 
