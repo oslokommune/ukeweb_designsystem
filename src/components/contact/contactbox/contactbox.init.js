@@ -1,0 +1,32 @@
+import Vue from "vue";
+import OsgMap from "../../map/map.vue";
+import contactbox from "./contactbox";
+import { OsgBreakpoints } from "../../../general/breakpoints/breakpoints.js";
+
+const contactboxInit = {
+  init() {
+    window.addEventListener("OsgBreakpointChange", this.breakpointChange, false);
+    this.breakpointChange({ detail: { breakpoint: OsgBreakpoints.getBreakpoint() } });
+  },
+
+  breakpointChange(e) {
+    const { breakpoint } = e.detail;
+
+    if (breakpoint === "small") {
+      contactbox.addCollapse();
+    } else {
+      contactbox.removeCollapse();
+    }
+  },
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  let mapElement = document.getElementById("osg-contactbox-custom-content-map");
+
+  if (mapElement) {
+    Vue.component("osg-map", OsgMap);
+    var app = new Vue({ el: mapElement });
+  }
+
+  contactboxInit.init();
+});
