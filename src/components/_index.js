@@ -1,4 +1,5 @@
 import "./collapsible/collapsible.init.js";
+import "./contact/contactbox/contactbox.init.js";
 import "./image_carousel/image_carousel.init.js";
 import "./form/checkbox/checkbox.init.js";
 import "./form/date/date.js";
