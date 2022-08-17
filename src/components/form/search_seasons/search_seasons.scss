@@ -65,12 +65,14 @@
   &__input {
     @extend %osg-padding-3;
     @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
+    background-color: colors.$white;
     border: 2px solid colors.$white !important;
     border-radius: 0;
     color: colors.$blue-dark;
     font-family: inherit;
     outline: none;
     width: 100%;
+    -webkit-appearance: none;
 
     &:hover {
       border: 2px solid colors.$blue-contrast !important;
