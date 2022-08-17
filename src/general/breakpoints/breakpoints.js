@@ -25,7 +25,7 @@ export const OsgBreakpoints = {
   },
 
   getBreakpoint() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
       return "small";
     } else if (window.innerWidth < 1024) {
       return "medium";
