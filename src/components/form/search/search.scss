@@ -13,9 +13,12 @@
   @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
   @extend %osg-text-weight-light;
 
-  background-color: colors.$white;
   position: relative;
-  -webkit-appearance: none;
+
+  input[type="search"] {
+    background-color: colors.$white;
+    -webkit-appearance: none;
+  }
 
   &__form {
     display: flex;
