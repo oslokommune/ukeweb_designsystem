@@ -59,6 +59,7 @@
 
   &__section {
     grid-column: span 12 / span 12;
+    @extend %osg-text-weight-light;
 
     &--half {
       @include breakpoints.medium {
