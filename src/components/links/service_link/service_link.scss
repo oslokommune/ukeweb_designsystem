@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
@@ -14,11 +15,14 @@
     @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
     @extend %osg-margin-right-4;
 
-    line-height: 1.875rem !important;
+    line-height: 2rem !important;
 
-    > * {
-      line-height: 1em !important;
-      margin-top: 1px;
+    @include breakpoints.medium {
+      line-height: 2.125rem !important;
+    }
+
+    @include breakpoints.large {
+      line-height: 2.25rem !important;
     }
   }
 

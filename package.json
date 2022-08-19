@@ -1,6 +1,6 @@
 {
   "name": "styleguide",
-  "version": "0.99.76",
+  "version": "0.99.78",
   "description": "Oslo Styleguide",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@nrk/core-datepicker": "^3.1.0",
-    "maplibre-gl": "^2.1.9",
+    "maplibre-gl": "2.3.0",
     "vue": "^2.6.14"
   },
   "prettier": {
