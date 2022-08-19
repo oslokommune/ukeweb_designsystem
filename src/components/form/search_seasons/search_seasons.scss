@@ -9,6 +9,11 @@
 .osg-search-seasons {
   display: flex;
 
+  input[type="search"] {
+    background-color: colors.$white;
+    -webkit-appearance: none;
+  }
+
   &__main {
     background-color: colors.$yellow;
     color: colors.$blue-dark;
