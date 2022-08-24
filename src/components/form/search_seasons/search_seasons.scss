@@ -97,6 +97,7 @@
     font-size: inherit;
     padding: 0;
     min-width: units.unit-to-rem(13);
+    color: colors.$blue-dark;
 
     @include breakpoints.large {
       min-width: units.unit-to-rem(14);
@@ -169,6 +170,7 @@
 
     & .osg-search-seasons__button {
       background-color: colors.$yellow;
+      color: colors.$blue-dark;
     }
   }
 
@@ -181,6 +183,7 @@
     & .osg-search-seasons__button {
       background-color: colors.$blue-light;
       border-color: colors.$blue-light;
+      color: colors.$blue-dark;
     }
 
     & .osg-search-seasons__input {
@@ -200,6 +203,7 @@
     & .osg-search-seasons__button {
       background-color: colors.$green-light;
       border-color: colors.$green-light;
+      color: colors.$blue-dark;
     }
 
     & .osg-search-seasons__input {
