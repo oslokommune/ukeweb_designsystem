@@ -26,7 +26,7 @@
   text-decoration: none;
   width: 1.5rem;
 
-  @include breakpoints.medium {
+  @include breakpoints.large {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
     width: unset;
@@ -36,14 +36,14 @@
     display: none;
     pointer-events: none;
 
-    @include breakpoints.medium {
+    @include breakpoints.large {
       display: inline-block;
     }
   }
 
   &__icon {
     @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
-    @extend %osg-margin-left-3-breakpoint-medium;
+    @extend %osg-margin-left-0-breakpoint-medium;
 
     line-height: 1.5rem;
 
@@ -60,7 +60,7 @@
     border-color: colors.$yellow;
     color: colors.$blue-contrast;
 
-    @include breakpoints.medium {
+    @include breakpoints.large {
       border-color: colors.$blue-contrast;
       background-color: transparent;
     }
@@ -79,7 +79,7 @@
     &:hover {
       background-color: colors.$yellow;
 
-      @include breakpoints.medium {
+      @include breakpoints.large {
         background-color: colors.$blue-dark;
         color: colors.$white;
       }
