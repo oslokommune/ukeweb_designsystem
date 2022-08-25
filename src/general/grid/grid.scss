@@ -110,6 +110,7 @@
   @for $i from 1 through grid.$columns {
     &__column--#{$i} {
       grid-column: span #{$i} / span #{$i};
+      width: 100%;
     }
   }
 
@@ -127,6 +128,7 @@
     @for $i from 1 through grid.$columns {
       &__column--#{$i}-breakpoint-medium {
         grid-column: span #{$i};
+        width: 100%;
       }
     }
 
@@ -145,6 +147,7 @@
     @for $i from 1 through grid.$columns {
       &__column--#{$i}-breakpoint-large {
         grid-column: span #{$i};
+        width: 100%;
       }
     }
 
