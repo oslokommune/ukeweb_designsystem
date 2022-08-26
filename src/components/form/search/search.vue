@@ -77,7 +77,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: "Search",
+      default: "",
     },
     ariaLabel: {
       type: String,
