@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
@@ -69,9 +70,14 @@
   border-radius: 0;
   color: states.$primary;
   font-family: inherit;
+  line-height: 1.5rem;
   outline-style: none;
   position: relative;
   width: 100%;
+
+  @include breakpoints.large {
+    line-height: 1.75rem;
+  }
 
   & + span.osg-icon {
     cursor: default !important;
