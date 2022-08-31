@@ -2,7 +2,7 @@
 @use "system/spacing";
 
 .osg-header {
-  @extend %osg-padding-left-0, %osg-padding-left-8-breakpoint-large;
+  @extend %osg-padding-left-0, %osg-padding-left-4-breakpoint-large;
   @extend %osg-padding-right-4, %osg-padding-right-8-breakpoint-large;
 
   background-color: colors.$white;
