@@ -39,7 +39,7 @@
   }
 
   &__image {
-    @extend %osg-margin-left-4;
+    @extend %osg-margin-left-4, %osg-margin-left-8-breakpoint-medium;
     display: none;
     flex: 1 0;
     line-height: 0;
