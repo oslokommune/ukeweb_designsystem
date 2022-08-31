@@ -8,7 +8,7 @@
   background-color: colors.$white;
 
   a {
-    @extend %osg-padding-4, %osg-padding-8-breakpoint-large;
+    @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
     align-items: flex-start;
     color: inherit;
     display: flex;
