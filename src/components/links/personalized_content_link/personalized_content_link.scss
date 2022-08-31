@@ -6,7 +6,7 @@
 @use "system/units";
 
 .osg-personalized-content-link {
-  @extend %osg-padding-4, %osg-padding-8-breakpoint-large;
+  @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
 
   border: 4px solid colors.$green-light;
   column-gap: units.unit-to-rem(3);

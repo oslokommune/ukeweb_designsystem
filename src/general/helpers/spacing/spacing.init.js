@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* Generate markup for sizes */
-  const spacingSizes = [0, 1, 2, 3, 4, 5, 8, 11, 13, 19, 25];
+  const spacingSizes = [0, 1, 2, 3, 4, 5, 6, 8, 11, 13, 19, 25];
   const spacingBlockContainer = document.getElementById("spacing-blocks");
   if (spacingBlockContainer) {
     spacingSizes.forEach((size) => {
