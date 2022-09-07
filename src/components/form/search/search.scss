@@ -7,7 +7,7 @@
 @use "system/units";
 
 .osg-search {
-  $padding-vertical: units.unit-to-rem(3);
+  $padding-vertical: units.unit-to-rem(2);
   $padding-horizontal: units.unit-to-rem(4);
 
   @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
@@ -37,14 +37,20 @@
   }
 
   &__input {
-    padding: $padding-vertical $padding-horizontal;
     @extend %osg-color-text-blue-dark;
+
+    padding: $padding-vertical $padding-horizontal;
     border: 2px solid colors.$blue-dark;
     border-radius: 0;
     flex-grow: 1;
     font-size: inherit;
     font-family: inherit;
+    line-height: 1.5rem;
     width: 100%;
+
+    @include breakpoints.large {
+      line-height: 1.75rem;
+    }
 
     &:hover {
       border: 2px solid colors.$blue-contrast !important;
@@ -79,13 +85,8 @@
     background-color: colors.$blue-dark;
     border: 2px solid colors.$blue-dark;
     color: colors.$white;
-
-    font-size: inherit;
-    padding: 0.35rem 0.5375rem;
-    @include breakpoints.large {
-      padding: 0.35rem 0.6rem;
-    }
     cursor: pointer;
+    font-size: inherit;
 
     &::after {
       @extend %osg-text-size-delta;
