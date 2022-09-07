@@ -79,13 +79,9 @@ export default {
       type: String,
       default: "",
     },
-    ariaLabel: {
-      type: String,
-      default: "Search",
-    },
     ariaLabelResults: {
       type: String,
-      default: "Search results",
+      required: true,
     },
     itemListScroll: {
       type: Boolean,
@@ -97,7 +93,7 @@ export default {
     },
     label: {
       type: String,
-      default: "",
+      required: true,
     },
   },
 
