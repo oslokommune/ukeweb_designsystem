@@ -1,4 +1,4 @@
-name: Trigger workflow
+name: Release
 
 on:
   release:
