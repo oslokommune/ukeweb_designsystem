@@ -15,4 +15,4 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_test.yml/dispatches \
-          -d '{ "ref": "test" } }'
+          -d '{ "ref": "test" }'
