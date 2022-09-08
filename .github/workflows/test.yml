@@ -1,0 +1,18 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call workflow
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_test.yml/dispatches \
+          -d '{ "ref": "test" } }'
