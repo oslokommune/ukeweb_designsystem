@@ -4,8 +4,9 @@
 
 ### Test
 
-1. Merge pull request to test
-2. To make test version available see devtools
+1. Merge pull request into test
+2. Push test branch
+3. CI/CD will make the test branch available at test.styleguide.ukeweb.io
 
 ### Production
 
