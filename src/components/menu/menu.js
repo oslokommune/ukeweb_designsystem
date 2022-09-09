@@ -1,76 +1,118 @@
-export function OsgMenu() {
-  let hamburgerButtonTriggers = document.querySelectorAll(".osg-button-menu");
-  let collapsableHeadings = document.querySelectorAll(".osg-navbar-menu__heading-collapsable");
+function triggerIterator(callback) {
+  const menuButtons = document.querySelectorAll(".osg-button-menu");
 
-  if (!hamburgerButtonTriggers) {
-    return;
-  }
-
-  function toggleAriaExpanded(elem) {
-    if (elem.getAttribute("aria-expanded") === "false") {
-      elem.setAttribute("aria-expanded", "true");
-    } else {
-      elem.setAttribute("aria-expanded", "false");
-    }
-  }
-
-  function toggleDisplay(elem) {
-    if (!elem.classList.contains("osg-button-menu")) {
-    }
-    if ((elem && elem.style.display === "none") || elem.style.display === "") {
-      elem.style.display = "block";
-    } else {
-      elem.style.display = "none";
-    }
-  }
-
-  function toggleAnimation(elem) {
-    if (elem.classList.contains("osg-navbar-menu__list-animate--open")) {
-      elem.classList.remove("osg-navbar-menu__list-animate--open");
-      elem.classList.add("osg-navbar-menu__list-animate--close");
-    } else {
-      elem.classList.add("osg-navbar-menu__list-animate--open");
-      elem.classList.remove("osg-navbar-menu__list-animate--close");
-    }
-  }
-
-  function toggleExpandIcon(elem) {
-    if (elem.querySelector(".osg-icon").classList.contains("osg-icons--plus-sign")) {
-      elem.querySelector(".osg-icon").classList.remove("osg-icons--plus-sign");
-      elem.querySelector(".osg-icon").classList.add("osg-icons--minus-sign");
-    } else {
-      elem.querySelector(".osg-icon").classList.remove("osg-icons--minus-sign");
-      elem.querySelector(".osg-icon").classList.add("osg-icons--plus-sign");
-    }
-  }
-
-  hamburgerButtonTriggers.forEach((hamburgerButtonTrigger) => {
-    hamburgerButtonTrigger.addEventListener("click", (event) => {
-      const button = event.target.classList.contains("osg-button-menu") ? event.target : event.target.closest(".osg-button-menu");
-      const navMenu = document.getElementById(button.getAttribute("aria-controls"));
-
-      toggleAriaExpanded(hamburgerButtonTrigger);
-      toggleDisplay(navMenu);
-
-      hamburgerButtonTrigger.classList.toggle("osg-button-menu--close");
-
-      document.dispatchEvent(
-        new CustomEvent("OsgMenuButtonClick", {
-          detail: {
-            button: button,
-            state: button.getAttribute("aria-expanded") === "true" ? "open" : "close",
-          },
-        })
-      );
-    });
-  });
-
-  collapsableHeadings.forEach((collapsableHeading) => {
-    collapsableHeading.addEventListener("click", (event) => {
-      let collapsableContent = event.target.nextElementSibling.closest("ul") || event.target.nextElementSibling;
-      toggleAriaExpanded(event.target);
-      toggleExpandIcon(event.target);
-      toggleAnimation(collapsableContent);
-    });
+  menuButtons.forEach((item) => {
+    callback(item);
   });
 }
+
+function triggerHeadingIterator(callback) {
+  const collapsableHeadings = document.querySelectorAll(".osg-navbar-menu__heading-collapsable");
+
+  collapsableHeadings.forEach((item) => {
+    callback(item);
+  });
+}
+
+function toggleHeading(e) {
+  e.preventDefault();
+  const headingButton = e.target.classList.contains("osg-navbar-menu__heading-collapsable") ? e.target : e.target.closest(".osg-navbar-menu__heading-collapsable");
+  const collapsibleContent = headingButton.nextElementSibling.closest("ul") || headingButton.nextElementSibling;
+
+  if ((e?.code === "Enter" && collapsibleContent) || (!e.code && collapsibleContent)) {
+    let headingButtonIcon = headingButton.querySelector(".osg-icon").classList;
+
+    headingButton.setAttribute("aria-expanded", headingButton.classList.contains("osg-navbar-menu__list-animate--close") ? "true" : "false");
+    collapsibleContent.classList.toggle("osg-navbar-menu__list-animate--open");
+
+    if (headingButtonIcon.contains("osg-icons--plus-sign")) {
+      headingButtonIcon.remove("osg-icons--plus-sign");
+      headingButtonIcon.add("osg-icons--minus-sign");
+    } else {
+      headingButtonIcon.add("osg-icons--plus-sign");
+      headingButtonIcon.remove("osg-icons--minus-sign");
+    }
+  }
+}
+
+function handleToggleHeading(e) {
+  toggleHeading(e);
+
+  let toggleEvent = new CustomEvent("OsgHeadingToggle", {
+    detail: {
+      target: e.target,
+      expanded: e.target.classList.contains("osg-navbar-menu__list-animate--open"),
+    },
+  });
+
+  e.target.dispatchEvent(toggleEvent);
+}
+
+function toggleMenu(e) {
+  e.preventDefault();
+  const menuButton = e.target.classList.contains("osg-button-menu") ? e.target : e.target.closest(".osg-button-menu");
+  const menu = document.getElementById(menuButton.getAttribute("aria-controls"));
+
+  if ((e?.code === "Enter" && menu) || (!e.code && menu)) {
+    menuButton.setAttribute("aria-expanded", menuButton.classList.contains("osg-button-menu--open") ? "false" : "true");
+    menuButton.classList.toggle("osg-button-menu--open");
+    menu.style.display = !menu.style.display || menu.style.display === "none" ? "block" : "none";
+  }
+}
+
+function handleToggleMenu(e) {
+  toggleMenu(e);
+
+  let toggleEvent = new CustomEvent("OsgMenuToggle", {
+    detail: {
+      target: e.target,
+      expanded: e.target.classList.contains("osg-button-menu--open"),
+    },
+  });
+
+  e.target.dispatchEvent(toggleEvent);
+}
+
+export const OsgMenu = {
+  init() {
+    OsgMenu.unbindAll();
+    OsgMenu.bindAll();
+  },
+
+  initElement(element) {
+    OsgMenu.unbindElement(element);
+    OsgMenu.bindElement(element);
+  },
+
+  bindElement(element) {
+    element.addEventListener("click", handleToggleMenu);
+    element.addEventListener("keypress", handleToggleMenu);
+  },
+
+  unbindElement(element) {
+    element.removeEventListener("click", handleToggleMenu);
+    element.removeEventListener("keypress", handleToggleMenu);
+  },
+
+  bindAll() {
+    triggerIterator((item) => {
+      item.addEventListener("click", handleToggleMenu);
+      item.addEventListener("keypress", handleToggleMenu);
+    });
+    triggerHeadingIterator((item) => {
+      item.addEventListener("click", handleToggleHeading);
+      item.addEventListener("keypress", handleToggleHeading);
+    });
+  },
+
+  unbindAll() {
+    triggerIterator((item) => {
+      item.removeEventListener("click", handleToggleMenu);
+      item.removeEventListener("keypress", handleToggleMenu);
+    });
+    triggerHeadingIterator((item) => {
+      item.removeEventListener("click", handleToggleHeading);
+      item.removeEventListener("keypress", handleToggleHeading);
+    });
+  },
+};
