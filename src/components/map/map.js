@@ -27,7 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (mapElement4) {
     Vue.component("osg-map", OsgMap);
-    var app4 = new Vue({ el: mapElement4 });
+    var app4 = new Vue({
+      el: mapElement4,
+
+      mounted() {
+        this.$refs["osgMap4"].resize();
+      },
+
+      methods: {
+        resize() {
+          console.log("Map has been resized");
+        },
+      },
+    });
   }
 
   if (mapElement5) {
