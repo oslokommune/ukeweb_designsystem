@@ -53,6 +53,9 @@
           <p>To control the height of the map, you can provide any class/classes from the ratio helper (see: general -> helpers -> ratio) to the <code class="osg-code">ratio</code> property.</p>
           <p>The default ratio is 16:9</p>
 
+          <h2 class="osg-devtools-text-preset-4 osg-margin-top-3">Resize</h2>
+          <p>By calling <code class="osg-code">resize</code> on the map instance the map will recalculate and take the available space of the container.</p>
+
           <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">Popups</h2>
           <p>Popups appear on click on a feature if the following conditions are met:</p>
             <ul class="osg-unordered-list">
@@ -92,7 +95,6 @@
           <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">Highlight a polygon</h2>
           <p>If you need to highlight a polygon, add the property <code class="osg-code">highlight</code> with a value of <code class="osg-code">true</code> to the polygon.</p>
           <p>It will get another fill and border colour than normal polygons.</p>
-
         </div>
       </div>
     </div>
@@ -131,7 +133,7 @@
     </div>
     <div class="osg-grid__column--12">
       <div class="osg-map" id="osg-map4" aria-hidden="true">
-        <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+        <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" v-on:resize="resize" />
       </div>
     </div>
     <div class="osg-grid__column--12">

@@ -260,6 +260,12 @@ export default {
         });
       }
     },
+
+    resize() {
+      this.mapObject.resize();
+      this.$emit("resize");
+    },
+
     // Private/protected method
     $_createMapObject(geoJson) {
       let mapConfig = {
@@ -322,7 +328,7 @@ export default {
 
       this.mapObject.on("load", () => {
         this.mapReady = true;
-        this.mapObject.resize();
+        this.resize();
 
         // If there is data available, show it now plz.
         this.populateMap();
