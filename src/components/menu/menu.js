@@ -19,18 +19,18 @@ function toggleHeading(e) {
   const headingButton = e.target.classList.contains("osg-navbar-menu__heading-collapsable") ? e.target : e.target.closest(".osg-navbar-menu__heading-collapsable");
   const collapsibleContent = headingButton.nextElementSibling.closest("ul") || headingButton.nextElementSibling;
 
-  if ((e?.code === "Enter" && collapsibleContent) || (!e.code && collapsibleContent)) {
-    let headingButtonIcon = headingButton.querySelector(".osg-icon").classList;
+  if ((e.code === "Enter" && collapsibleContent) || (!e.code && collapsibleContent)) {
+    let headingButtonIconClassList = headingButton.querySelector(".osg-icon").classList;
 
     headingButton.setAttribute("aria-expanded", headingButton.classList.contains("osg-navbar-menu__list-animate--close") ? "true" : "false");
     collapsibleContent.classList.toggle("osg-navbar-menu__list-animate--open");
 
-    if (headingButtonIcon.contains("osg-icons--plus-sign")) {
-      headingButtonIcon.remove("osg-icons--plus-sign");
-      headingButtonIcon.add("osg-icons--minus-sign");
+    if (headingButtonIconClassList.contains("osg-icons--plus-sign")) {
+      headingButtonIconClassList.remove("osg-icons--plus-sign");
+      headingButtonIconClassList.add("osg-icons--minus-sign");
     } else {
-      headingButtonIcon.add("osg-icons--plus-sign");
-      headingButtonIcon.remove("osg-icons--minus-sign");
+      headingButtonIconClassList.add("osg-icons--plus-sign");
+      headingButtonIconClassList.remove("osg-icons--minus-sign");
     }
   }
 }
@@ -53,7 +53,7 @@ function toggleMenu(e) {
   const menuButton = e.target.classList.contains("osg-button-menu") ? e.target : e.target.closest(".osg-button-menu");
   const menu = document.getElementById(menuButton.getAttribute("aria-controls"));
 
-  if ((e?.code === "Enter" && menu) || (!e.code && menu)) {
+  if ((e.code === "Enter" && menu) || (!e.code && menu)) {
     menuButton.setAttribute("aria-expanded", menuButton.classList.contains("osg-button-menu--open") ? "false" : "true");
     menuButton.classList.toggle("osg-button-menu--open");
     menu.style.display = !menu.style.display || menu.style.display === "none" ? "block" : "none";
