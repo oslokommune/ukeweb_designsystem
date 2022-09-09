@@ -87,12 +87,10 @@
     color: colors.$white;
     cursor: pointer;
     font-size: inherit;
-    padding-left: 0.34rem;
-    padding-right: 0.34rem;
+    width: units.unit-to-rem(11);
 
     @include breakpoints.large {
-      padding-left: 0.45rem;
-      padding-right: 0.45rem;
+      width: units.unit-to-rem(13);
     }
 
     &::after {
