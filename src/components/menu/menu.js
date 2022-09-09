@@ -22,7 +22,7 @@ function toggleHeading(e) {
   if ((e.code === "Enter" && collapsibleContent) || (!e.code && collapsibleContent)) {
     let headingButtonIconClassList = headingButton.querySelector(".osg-icon").classList;
 
-    headingButton.setAttribute("aria-expanded", headingButton.classList.contains("osg-navbar-menu__list-animate--close") ? "true" : "false");
+    headingButton.setAttribute("aria-expanded", collapsibleContent.classList.contains("osg-navbar-menu__list-animate--open") ? "false" : "true");
     collapsibleContent.classList.toggle("osg-navbar-menu__list-animate--open");
 
     if (headingButtonIconClassList.contains("osg-icons--plus-sign")) {
