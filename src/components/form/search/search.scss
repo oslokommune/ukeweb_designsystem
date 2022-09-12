@@ -87,6 +87,11 @@
     color: colors.$white;
     cursor: pointer;
     font-size: inherit;
+    width: units.unit-to-rem(11);
+
+    @include breakpoints.large {
+      width: units.unit-to-rem(13);
+    }
 
     &::after {
       @extend %osg-text-size-delta;
