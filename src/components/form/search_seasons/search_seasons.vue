@@ -190,6 +190,7 @@ export default {
 
       switch (this.figureShape) {
         case "none":
+        case "none-image-circle":
           break;
         default:
           classes = "osg-image osg-image--shape";
@@ -216,6 +217,9 @@ export default {
           break;
         case "green-dark":
           classes = classes + " osg-image--shape-green-light";
+          break;
+        case "blue-dark":
+          classes = classes + " osg-image--shape-blue-light";
           break;
         default:
           classes = classes + " osg-image--shape-red";
