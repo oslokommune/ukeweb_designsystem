@@ -1,3 +1,17 @@
+/**
+ * Common functions
+ */
+function dispatchEvent(eventName, eventDetail, element) {
+  let event = new CustomEvent(eventName, {
+    detail: eventDetail,
+  });
+
+  element.dispatchEvent(event);
+}
+
+/**
+ * Menu open / close functions
+ */
 function triggerIterator(callback) {
   const menuButtons = document.querySelectorAll(".osg-button-menu");
 
@@ -6,15 +20,58 @@ function triggerIterator(callback) {
   });
 }
 
-function triggerHeadingIterator(callback) {
-  const collapsableHeadings = document.querySelectorAll(".osg-navbar-menu__heading-collapsable");
+function getMenuFromMenuButton(menuButton) {
+  return document.getElementById(menuButton.getAttribute("aria-controls"));
+}
+
+function isMenuOpen(menuButtonElement) {
+  return menuButtonElement.classList.contains("osg-button-menu--open");
+}
+
+function openMenu(menu) {
+  const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
+  menuButton.setAttribute("aria-expanded", "true");
+  menuButton.classList.add("osg-button-menu--open");
+  menu.style.display = "block";
+
+  dispatchEvent("OsgMenuOpen", { menuButton, menu }, menu);
+}
+
+function closeMenu(menu) {
+  const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.classList.remove("osg-button-menu--open");
+  menu.style.display = "none";
+
+  dispatchEvent("OsgMenuClose", { menuButton, menu }, menu);
+}
+
+function handleToggleMenu(e) {
+  e.preventDefault();
+  const menuButton = e.target.classList.contains("osg-button-menu") ? e.target : e.target.closest(".osg-button-menu");
+  const menu = getMenuFromMenuButton(menuButton);
+
+  if ((e.code === "Enter" && menu) || (!e.code && menu)) {
+    if (isMenuOpen(menuButton)) {
+      closeMenu(menu);
+    } else {
+      openMenu(menu);
+    }
+  }
+}
+
+/**
+ * Menu heading functions
+ */
+function triggerHeadingIterator(element, callback) {
+  const collapsableHeadings = element.querySelectorAll(".osg-navbar-menu__heading-collapsable");
 
   collapsableHeadings.forEach((item) => {
     callback(item);
   });
 }
 
-function toggleHeading(e) {
+function handleToggleHeading(e) {
   e.preventDefault();
   const headingButton = e.target.classList.contains("osg-navbar-menu__heading-collapsable") ? e.target : e.target.closest(".osg-navbar-menu__heading-collapsable");
   const collapsibleContent = headingButton.nextElementSibling.closest("ul") || headingButton.nextElementSibling;
@@ -33,46 +90,13 @@ function toggleHeading(e) {
       headingButtonIconClassList.remove("osg-icons--minus-sign");
     }
   }
+
+  dispatchEvent("OsgHeadingToggle", { target: e.target, expanded: e.target.classList.contains("osg-navbar-menu__list-animate--open") }, e.target);
 }
 
-function handleToggleHeading(e) {
-  toggleHeading(e);
-
-  let toggleEvent = new CustomEvent("OsgHeadingToggle", {
-    detail: {
-      target: e.target,
-      expanded: e.target.classList.contains("osg-navbar-menu__list-animate--open"),
-    },
-  });
-
-  e.target.dispatchEvent(toggleEvent);
-}
-
-function toggleMenu(e) {
-  e.preventDefault();
-  const menuButton = e.target.classList.contains("osg-button-menu") ? e.target : e.target.closest(".osg-button-menu");
-  const menu = document.getElementById(menuButton.getAttribute("aria-controls"));
-
-  if ((e.code === "Enter" && menu) || (!e.code && menu)) {
-    menuButton.setAttribute("aria-expanded", menuButton.classList.contains("osg-button-menu--open") ? "false" : "true");
-    menuButton.classList.toggle("osg-button-menu--open");
-    menu.style.display = !menu.style.display || menu.style.display === "none" ? "block" : "none";
-  }
-}
-
-function handleToggleMenu(e) {
-  toggleMenu(e);
-
-  let toggleEvent = new CustomEvent("OsgMenuToggle", {
-    detail: {
-      target: e.target,
-      expanded: e.target.classList.contains("osg-button-menu--open"),
-    },
-  });
-
-  e.target.dispatchEvent(toggleEvent);
-}
-
+/**
+ * Exported menu functions
+ */
 export const OsgMenu = {
   init() {
     OsgMenu.unbindAll();
@@ -87,32 +111,48 @@ export const OsgMenu = {
   bindElement(element) {
     element.addEventListener("click", handleToggleMenu);
     element.addEventListener("keypress", handleToggleMenu);
+
+    OsgMenu.bindHeadings(element);
   },
 
   unbindElement(element) {
     element.removeEventListener("click", handleToggleMenu);
     element.removeEventListener("keypress", handleToggleMenu);
+
+    OsgMenu.unbindHeadings(element);
   },
 
-  bindAll() {
-    triggerIterator((item) => {
-      item.addEventListener("click", handleToggleMenu);
-      item.addEventListener("keypress", handleToggleMenu);
-    });
-    triggerHeadingIterator((item) => {
+  bindHeadings(element) {
+    triggerHeadingIterator(getMenuFromMenuButton(element), (item) => {
       item.addEventListener("click", handleToggleHeading);
       item.addEventListener("keypress", handleToggleHeading);
     });
   },
 
-  unbindAll() {
-    triggerIterator((item) => {
-      item.removeEventListener("click", handleToggleMenu);
-      item.removeEventListener("keypress", handleToggleMenu);
-    });
-    triggerHeadingIterator((item) => {
+  unbindHeadings(element) {
+    triggerHeadingIterator(getMenuFromMenuButton(element), (item) => {
       item.removeEventListener("click", handleToggleHeading);
       item.removeEventListener("keypress", handleToggleHeading);
     });
+  },
+
+  bindAll() {
+    triggerIterator((item) => {
+      OsgMenu.bindElement(item);
+    });
+  },
+
+  unbindAll() {
+    triggerIterator((item) => {
+      OsgMenu.unbindElement(item);
+    });
+  },
+
+  open(menu) {
+    openMenu(menu);
+  },
+
+  close(menu) {
+    closeMenu(menu);
   },
 };
