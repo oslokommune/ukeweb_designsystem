@@ -96,6 +96,7 @@
     &::after {
       @extend %osg-text-size-delta;
 
+      box-sizing: content-box;
       font-family: "Oslo Icons" !important;
       line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
