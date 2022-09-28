@@ -93,12 +93,6 @@
       width: units.unit-to-rem(13);
     }
 
-    &:hover {
-      background-color: states.$hover !important;
-      border: 2px solid states.$hover !important;
-      color: states.$hover-text !important;
-    }
-
     &::after {
       @extend %osg-text-size-delta;
 
@@ -107,6 +101,12 @@
       line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
+    }
+
+    &:hover {
+      background-color: states.$hover !important;
+      border: 2px solid states.$hover !important;
+      color: states.$hover-text !important;
     }
   }
 
