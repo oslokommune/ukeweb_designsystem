@@ -82,15 +82,26 @@
   &__button {
     @extend %osg-margin-left-3;
 
-    background-color: colors.$blue-dark;
+    @extend %osg-padding-2;
+    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text-weight-medium;
+
+    background: colors.$blue-dark;
     border: 2px solid colors.$blue-dark;
+    box-sizing: content-box;
     color: colors.$white;
     cursor: pointer;
-    font-size: inherit;
-    width: units.unit-to-rem(11);
+    display: inline-block;
+    font-family: inherit;
+    height: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    width: 1.5rem;
+    white-space: normal;
 
     @include breakpoints.large {
-      width: units.unit-to-rem(13);
+      width: 1.75rem;
+      height: 1.75rem;
     }
 
     &:hover {
@@ -101,12 +112,18 @@
   }
 
   &__button-icon {
-    &::after {
-      @extend %osg-text-size-delta;
+    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
+    line-height: 1.5rem;
 
-      box-sizing: content-box;
+    @include breakpoints.large {
+      line-height: 1.75rem;
+    }
+
+    display: inline-block;
+    vertical-align: top;
+
+    &::before {
       font-family: "Oslo Icons" !important;
-      line-height: 1em;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       vertical-align: middle;
     }
