@@ -125,7 +125,6 @@
     &::before {
       font-family: "Oslo Icons" !important;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
-      vertical-align: middle;
     }
   }
 
