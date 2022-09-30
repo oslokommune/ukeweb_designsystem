@@ -72,33 +72,20 @@
   &--filter {
     @extend %osg-margin-bottom-3, %osg-padding-bottom-3;
     border: none;
+    border-bottom: 2px solid colors.$blue-dark;
 
     > div:first-of-type {
       @extend %osg-margin-top-3;
+    }
+    &:first-of-type {
+      & .osg-fieldset__legend {
+        @extend %osg-padding-top-3;
+        border-top: 2px solid colors.$blue-dark;
+      }
     }
 
     &:last-of-type {
       @extend %osg-margin-bottom-0;
     }
-  }
-
-  &--yellow {
-    &:first-of-type {
-      legend {
-        @extend %osg-padding-top-3;
-        border-top: 2px solid colors.$yellow;
-      }
-    }
-    border-bottom: 2px solid colors.$yellow;
-  }
-
-  &--blue-dark {
-    &:first-of-type {
-      legend {
-        @extend %osg-padding-top-3;
-        border-top: 2px solid colors.$blue-dark;
-      }
-    }
-    border-bottom: 2px solid colors.$blue-dark;
   }
 }
