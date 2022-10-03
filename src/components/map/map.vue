@@ -118,6 +118,8 @@ export default {
       handler(newValue) {
         if (newValue) {
           this.mapLoad();
+          this.clearMapAndData();
+          this.populateMap();
         }
       },
     },
