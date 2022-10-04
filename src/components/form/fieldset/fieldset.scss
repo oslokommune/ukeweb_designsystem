@@ -2,6 +2,7 @@
 @use "system/icons";
 @use "system/typography";
 @use "system/spacing";
+@use "system/units";
 
 .osg-fieldset {
   :last-child {
@@ -32,7 +33,7 @@
         content: map-get(icons.$icons, "plus-sign");
         position: absolute;
         top: 0;
-        right: 5px;
+        right: units.unit-to-rem(1);
       }
     }
     > *.osg-collapsible-trigger--expanded::after {
@@ -64,9 +65,6 @@
     & .osg-fieldset__legend {
       color: colors.$red;
     }
-    & .osg-fieldset__legend + div {
-      border-color: colors.$red;
-    }
   }
 
   &--filter {
@@ -74,9 +72,10 @@
     border: none;
     border-bottom: 2px solid colors.$blue-dark;
 
-    > div:first-of-type {
+    > .osg-collapsible-content:first-of-type {
       @extend %osg-margin-top-3;
     }
+
     &:first-of-type {
       & .osg-fieldset__legend {
         @extend %osg-padding-top-3;
