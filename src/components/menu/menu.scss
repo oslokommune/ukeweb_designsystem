@@ -3,6 +3,7 @@
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
+@use "system/units";
 @use "system/visibility";
 @use "components/links/link/mixins";
 @use "sass:math";
@@ -26,9 +27,11 @@
   text-decoration: none;
   width: 1.5rem;
 
-  @include breakpoints.large {
+  @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
+    padding-left: units.unit-to-rem(4);
+    padding-right: units.unit-to-rem(4);
     width: unset;
   }
 
@@ -36,7 +39,7 @@
     display: none;
     pointer-events: none;
 
-    @include breakpoints.large {
+    @include breakpoints.medium {
       display: inline-block;
     }
   }
@@ -46,6 +49,10 @@
     @extend %osg-margin-left-3-breakpoint-large;
 
     line-height: 1.5rem;
+
+    @include breakpoints.medium {
+      margin-left: units.unit-to-rem(1);
+    }
 
     @include breakpoints.large {
       line-height: 1.75rem;
@@ -60,9 +67,13 @@
     border-color: colors.$yellow;
     color: colors.$blue-contrast;
 
-    @include breakpoints.large {
+    @include breakpoints.medium {
       border-color: colors.$blue-contrast;
       background-color: transparent;
+
+      & .osg-button-menu__text {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -79,7 +90,7 @@
     &:hover {
       background-color: colors.$yellow;
 
-      @include breakpoints.large {
+      @include breakpoints.medium {
         background-color: colors.$blue-dark;
         color: colors.$white;
       }
