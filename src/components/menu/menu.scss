@@ -1,5 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "system/icons";
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
@@ -20,6 +21,7 @@
   color: colors.$blue-dark;
   cursor: pointer;
   display: inline-block;
+  height: 1.5rem;
   font-family: inherit;
   outline: none;
   position: relative;
@@ -30,6 +32,7 @@
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
+    height: unset;
     padding-left: units.unit-to-rem(4);
     padding-right: units.unit-to-rem(4);
     width: unset;
@@ -60,6 +63,11 @@
 
     display: inline-block;
     vertical-align: top;
+
+    &::before {
+      font-family: "Oslo Icons" !important;
+      content: map-get(icons.$icons, "menu") !important;
+    }
   }
 
   &:active &:focus,
