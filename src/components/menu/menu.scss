@@ -32,10 +32,13 @@
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
-    height: unset;
     padding-left: units.unit-to-rem(4);
     padding-right: units.unit-to-rem(4);
     width: unset;
+  }
+
+  @include breakpoints.large {
+    height: 1.75rem;
   }
 
   &__text {
