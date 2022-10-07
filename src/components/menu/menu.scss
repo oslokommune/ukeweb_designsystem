@@ -1,8 +1,10 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "system/icons";
 @use "system/spacing";
 @use "system/states";
 @use "system/typography";
+@use "system/units";
 @use "system/visibility";
 @use "components/links/link/mixins";
 @use "sass:math";
@@ -19,6 +21,7 @@
   color: colors.$blue-dark;
   cursor: pointer;
   display: inline-block;
+  height: 1.5rem;
   font-family: inherit;
   outline: none;
   position: relative;
@@ -26,17 +29,23 @@
   text-decoration: none;
   width: 1.5rem;
 
-  @include breakpoints.large {
+  @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
+    padding-left: units.unit-to-rem(4);
+    padding-right: units.unit-to-rem(4);
     width: unset;
+  }
+
+  @include breakpoints.large {
+    height: 1.75rem;
   }
 
   &__text {
     display: none;
     pointer-events: none;
 
-    @include breakpoints.large {
+    @include breakpoints.medium {
       display: inline-block;
     }
   }
@@ -47,12 +56,21 @@
 
     line-height: 1.5rem;
 
+    @include breakpoints.medium {
+      margin-left: units.unit-to-rem(1);
+    }
+
     @include breakpoints.large {
       line-height: 1.75rem;
     }
 
     display: inline-block;
     vertical-align: top;
+
+    &::before {
+      font-family: "Oslo Icons" !important;
+      content: map-get(icons.$icons, "menu") !important;
+    }
   }
 
   &:active &:focus,
@@ -60,9 +78,13 @@
     border-color: colors.$yellow;
     color: colors.$blue-contrast;
 
-    @include breakpoints.large {
+    @include breakpoints.medium {
       border-color: colors.$blue-contrast;
       background-color: transparent;
+
+      & .osg-button-menu__text {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -79,7 +101,7 @@
     &:hover {
       background-color: colors.$yellow;
 
-      @include breakpoints.large {
+      @include breakpoints.medium {
         background-color: colors.$blue-dark;
         color: colors.$white;
       }
