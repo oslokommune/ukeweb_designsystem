@@ -5,7 +5,7 @@
 @use "system/typography";
 @use "system/units";
 
-.osg-personalized-content-link {
+.osg-content-link {
   @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
 
   border: 4px solid colors.$green-light;
@@ -45,19 +45,19 @@
   &--hover,
   &--focus,
   &--active {
-    .osg-personalized-content-link__title,
-    .osg-personalized-content-link__text {
+    .osg-content-link__title,
+    .osg-content-link__text {
       color: states.$hover;
     }
-    .osg-personalized-content-link__title {
+    .osg-content-link__title {
       text-decoration: underline;
     }
   }
 
   &:visited,
   &--visited {
-    .osg-personalized-content-link__title,
-    .osg-personalized-content-link__text {
+    .osg-content-link__title,
+    .osg-content-link__text {
       color: states.$visited;
     }
   }
@@ -78,7 +78,7 @@
     }
 
     &--icon-#{$name} {
-      .osg-personalized-content-link__icon {
+      .osg-content-link__icon {
         color: $color;
       }
     }
