@@ -2,7 +2,6 @@
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
-@use "system/states";
 
 .osg-status-card {
   &__link {
@@ -10,7 +9,7 @@
 
     &:hover {
       .osg-status-card__content {
-        color: states.$hover !important;
+        color: colors.$blue-hover !important;
       }
 
       .osg-status-card__heading {

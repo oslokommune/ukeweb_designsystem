@@ -3,7 +3,6 @@
 @use "system/typography";
 @use "system/icons";
 @use "system/spacing";
-@use "system/states";
 @use "system/units";
 
 .osg-search {
@@ -52,11 +51,11 @@
     }
 
     &:hover {
-      border: 2px solid colors.$blue-contrast !important;
+      border: 2px solid colors.$blue-hover !important;
     }
 
     &:focus {
-      border: 4px solid colors.$blue-contrast !important;
+      border: 4px solid colors.$blue-hover !important;
       padding: calc($padding-vertical - 2px) calc($padding-horizontal - 2px) !important;
       outline: none;
     }
@@ -104,9 +103,9 @@
     }
 
     &:hover {
-      background-color: states.$hover !important;
-      border: 2px solid states.$hover !important;
-      color: states.$hover-text !important;
+      background-color: colors.$blue-hover !important;
+      border: 2px solid colors.$blue-hover !important;
+      color: colors.$white !important;
     }
   }
 
@@ -152,7 +151,7 @@
       &:focus,
       &--focus {
         background-color: colors.$gray-light;
-        color: states.$hover !important;
+        color: colors.$blue-hover !important;
         text-decoration: underline;
       }
 
@@ -164,7 +163,7 @@
           background-color: colors.$gray-light;
           border-top: 5px solid colors.$gray-light;
           border-bottom: 5px solid colors.$gray-light;
-          color: states.$hover !important;
+          color: colors.$blue-hover !important;
           margin: -5px -15px;
           padding: 0 15px;
           text-decoration: underline;

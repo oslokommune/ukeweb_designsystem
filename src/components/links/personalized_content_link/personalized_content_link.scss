@@ -1,7 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
 @use "system/spacing";
-@use "system/states";
 @use "system/typography";
 @use "system/units";
 
@@ -47,7 +46,7 @@
   &--active {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
-      color: states.$hover;
+      color: colors.$blue-hover;
     }
     .osg-personalized-content-link__title {
       text-decoration: underline;
@@ -58,7 +57,7 @@
   &--visited {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
-      color: states.$visited;
+      color: colors.$purple;
     }
   }
 

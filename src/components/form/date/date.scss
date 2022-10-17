@@ -1,7 +1,6 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
-@use "system/states";
 @use "system/typography";
 @use "../input/mixins";
 
@@ -74,10 +73,10 @@
 
       &:disabled {
         cursor: not-allowed;
-        color: states.$disabled-text;
+        color: colors.$white;
         &:hover {
           background-color: transparent;
-          color: states.$disabled-text;
+          color: colors.$white;
         }
       }
       &:not(:disabled) {
@@ -85,7 +84,7 @@
       }
       &:hover {
         background-color: colors.$gray;
-        color: colors.$blue-contrast;
+        color: colors.$blue-hover;
       }
       &--next {
         right: 5px;
@@ -166,13 +165,13 @@
             color: colors.$white;
             &:focus,
             &:hover {
-              background-color: colors.$blue-contrast;
-              border-color: colors.$blue-contrast;
+              background-color: colors.$blue-hover;
+              border-color: colors.$blue-hover;
               color: colors.$white;
             }
           }
           &:disabled {
-            color: states.$disabled-text;
+            color: colors.$white;
             &:hover {
               background-color: transparent;
               cursor: not-allowed;

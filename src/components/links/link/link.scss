@@ -1,13 +1,10 @@
 @use "system/colors";
-@use "system/states";
 @use "mixins";
 
 .osg-link {
   display: inline-block;
   text-decoration: underline;
   word-wrap: break-word;
-
-  @include mixins.states;
 
   &--external {
     @include mixins.icon-right("new-window");
@@ -24,17 +21,17 @@
   &--state-light {
     &:visited,
     &-visited {
-      color: states.$visited-light !important;
+      color: colors.$purple-light !important;
     }
     &:hover,
     &-hover,
     &:focus,
     &-focus {
-      color: states.$hover-light !important;
+      color: colors.$blue-light !important;
     }
     &:active,
     &-active {
-      color: states.$active-light !important;
+      color: colors.$blue-light !important;
     }
   }
 }

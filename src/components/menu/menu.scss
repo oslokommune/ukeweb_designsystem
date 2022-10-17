@@ -2,7 +2,6 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
-@use "system/states";
 @use "system/typography";
 @use "system/units";
 @use "system/visibility";
@@ -84,10 +83,10 @@
   &:focus,
   &:hover {
     border-color: colors.$yellow;
-    color: colors.$blue-contrast;
+    color: colors.$blue-hover;
 
     @include breakpoints.medium {
-      border-color: colors.$blue-contrast;
+      border-color: colors.$blue-hover;
       background-color: transparent;
 
       & .osg-button-menu__text {

@@ -7,7 +7,7 @@
 @mixin switch-states() {
   &:hover,
   &--hover {
-    border-color: colors.$blue-contrast;
+    border-color: colors.$blue-hover;
   }
 
   &:hover &__background,
@@ -16,27 +16,27 @@
   &--hover &__label-text,
   &:hover &__slider,
   &--hover &__slider {
-    border-color: colors.$blue-contrast;
-    color: colors.$blue-contrast;
+    border-color: colors.$blue-hover;
+    color: colors.$blue-hover;
   }
 
   &:focus-within,
   &--focus {
-    border: 0.125rem solid colors.$blue-contrast;
+    border: 0.125rem solid colors.$blue-hover;
     outline: initial;
     outline-style: solid;
     outline-width: 0.063rem;
-    outline-color: colors.$blue-contrast;
+    outline-color: colors.$blue-hover;
   }
 
   &__input:focus ~ &__label-text,
   &--focus &__label-text {
-    color: colors.$blue-contrast;
+    color: colors.$blue-hover;
   }
 
   &__input:focus ~ &__slider,
   &--focus &__slider {
-    border-color: colors.$blue-contrast;
+    border-color: colors.$blue-hover;
   }
 
   &__input:checked ~ &__background {

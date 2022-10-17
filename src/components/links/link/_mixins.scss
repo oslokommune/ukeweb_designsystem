@@ -1,6 +1,6 @@
 @use "system/icons";
-@use "system/states";
 @use "system/spacing";
+@use "system/colors";
 
 @mixin icon-right($icon, $size: 0.6em) {
   &::after,
@@ -38,19 +38,19 @@
 @mixin states {
   &:visited,
   &--visited {
-    color: states.$visited !important;
+    color: colors.$purple !important;
     @content;
   }
   &:hover,
   &--hover,
   &:focus,
   &--focus {
-    color: states.$hover !important;
+    color: colors.$blue-hover !important;
     @content;
   }
   &:active,
   &--active {
-    color: states.$active !important;
+    color: colors.$blue-hover !important;
     @content;
   }
 }
