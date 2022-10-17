@@ -1,7 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
 @use "system/spacing";
-@use "system/states";
 @use "system/typography";
 
 .osg-status-message {
@@ -13,7 +12,7 @@
   word-break: break-word;
 
   &--success {
-    background-color: states.$success;
+    background-color: colors.$green-light;
   }
 
   &--info {
@@ -21,10 +20,10 @@
   }
 
   &--warning {
-    background-color: states.$warning;
+    background-color: colors.$yellow;
   }
 
   &--danger {
-    background-color: states.$danger;
+    background-color: colors.$red-light;
   }
 }

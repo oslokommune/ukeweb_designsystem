@@ -2,7 +2,6 @@
 @use "system/icons";
 @use "system/typography";
 @use "system/spacing";
-@use "system/states";
 
 .osg-breadcrumb {
   @extend %osg-text-size-lima;
@@ -40,18 +39,18 @@
 
     &:visited,
     &--visited {
-      color: states.$visited !important;
+      color: colors.$purple !important;
     }
     &:hover,
     &--hover,
     &:focus,
     &--focus {
-      color: states.$hover !important;
+      color: colors.$blue-hover !important;
       text-decoration: underline;
     }
     &:active,
     &--active {
-      color: states.$active !important;
+      color: colors.$blue-hover !important;
     }
   }
 

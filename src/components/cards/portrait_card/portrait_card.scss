@@ -2,7 +2,6 @@
 @use "system/colors";
 @use "system/icons";
 @use "system/spacing";
-@use "system/states";
 @use "system/typography";
 
 $osg-portrait-card-image-height-small: 200px;
@@ -15,7 +14,7 @@ $osg-portrait-card-image-height-large: 290px;
 
     &:hover {
       .osg-portrait-card__content {
-        color: states.$hover !important;
+        color: colors.$blue-hover !important;
       }
 
       .osg-portrait-card__heading {

@@ -2,7 +2,6 @@
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
-@use "system/states";
 
 @mixin error-message() {
   background: colors.$red-light;
@@ -22,7 +21,7 @@
   &--error &__input:hover,
   &--error &__textarea:hover,
   &--error &__select select:hover {
-    border-color: states.$hover;
+    border-color: colors.$blue-hover;
   }
 
   &__input:focus,
@@ -34,14 +33,14 @@
   &--focus &__input,
   &--focus &__textarea,
   &--focus &__select select {
-    border: 4px solid states.$hover;
+    border: 4px solid colors.$blue-hover;
     padding: 0.375rem 0.875rem !important;
   }
 
   &--error &__input,
   &--error &__textarea,
   &--error &__select select {
-    border: 2px solid states.$danger;
+    border: 2px solid colors.$red-light;
   }
 
   &:disabled,
@@ -49,11 +48,11 @@
   &--disabled &__textarea,
   &--disabled &__label,
   &--disabled &__select select {
-    border-color: states.$disabled-text;
-    color: states.$disabled-text;
+    border-color: colors.$grayscale-40;
+    color: colors.$grayscale-40;
 
     &:after {
-      color: states.$disabled-text !important;
+      color: colors.$grayscale-40 !important;
     }
   }
 }
@@ -66,9 +65,9 @@
   appearance: none;
   -webkit-appearance: none;
   background-color: colors.$white;
-  border: 2px solid states.$primary;
+  border: 2px solid colors.$blue-dark;
   border-radius: 0;
-  color: states.$primary;
+  color: colors.$blue-dark;
   font-family: inherit;
   line-height: 1.5rem;
   outline-style: none;
@@ -96,6 +95,6 @@
   @extend %osg-text-weight-medium;
 
   &--disabled {
-    color: states.$disabled-text;
+    color: colors.$grayscale-40;
   }
 }

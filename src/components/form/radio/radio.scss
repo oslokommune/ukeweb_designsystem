@@ -92,7 +92,7 @@
     outline: initial;
     outline-style: solid;
     outline-width: 1px;
-    outline-color: colors.$blue-contrast;
+    outline-color: colors.$blue-hover;
   }
 
   &--hover,
@@ -100,13 +100,13 @@
   &--focus,
   &:focus {
     & input:checked + .osg-radio__control {
-      background-color: colors.$blue-contrast;
+      background-color: colors.$blue-hover;
     }
     .osg-radio__control {
-      border-color: colors.$blue-contrast;
+      border-color: colors.$blue-hover;
     }
     .osg-radio__label {
-      color: colors.$blue-contrast;
+      color: colors.$blue-hover;
     }
   }
 
