@@ -21,7 +21,7 @@
   &--error &__input:hover,
   &--error &__textarea:hover,
   &--error &__select select:hover {
-    border-color: colors.$blue-hover;
+    border-color: colors.$blue-state;
   }
 
   &__input:focus,
@@ -33,7 +33,7 @@
   &--focus &__input,
   &--focus &__textarea,
   &--focus &__select select {
-    border: 4px solid colors.$blue-hover;
+    border: 4px solid colors.$blue-state;
     padding: 0.375rem 0.875rem !important;
   }
 

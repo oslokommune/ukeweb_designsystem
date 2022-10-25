@@ -45,12 +45,12 @@
     &--hover,
     &:focus,
     &--focus {
-      color: colors.$blue-hover !important;
+      color: colors.$blue-state !important;
       text-decoration: underline;
     }
     &:active,
     &--active {
-      color: colors.$blue-hover !important;
+      color: colors.$blue-state !important;
     }
   }
 

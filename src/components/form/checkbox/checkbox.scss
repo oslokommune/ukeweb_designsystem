@@ -67,8 +67,8 @@
   &:hover span,
   &--hover span {
     & input:not([disabled]) {
-      border-color: colors.$blue-hover;
-      color: colors.$blue-hover;
+      border-color: colors.$blue-state;
+      color: colors.$blue-state;
     }
   }
 
@@ -76,7 +76,7 @@
   & input:focus ~ &__checkmark,
   &--focus &__checkmark {
     &:not([disabled]) {
-      color: colors.$blue-hover;
+      color: colors.$blue-state;
       outline: initial;
     }
   }
@@ -97,8 +97,8 @@
   &--focus span,
   & input:checked:hover ~ span,
   & input:checked:focus ~ span {
-    border-color: colors.$blue-hover;
-    color: colors.$blue-hover;
+    border-color: colors.$blue-state;
+    color: colors.$blue-state;
   }
 
   & input:checked ~ &__checkmark:after {
@@ -106,17 +106,17 @@
   }
 
   & input:checked ~ &__checkmark {
-    background-color: colors.$blue-hover;
+    background-color: colors.$blue-state;
   }
 
   & input:checked ~ &__text {
-    color: colors.$blue-hover;
+    color: colors.$blue-state;
   }
 
   & input:checked ~ span {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
-    border-color: colors.$blue-contrast;
+    border-color: colors.$blue-state;
     color: colors.$blue-dark;
   }
 
@@ -149,8 +149,8 @@
 
     & input:checked:hover ~ .osg-checkbox__checkmark,
     & input:checked:focus ~ .osg-checkbox__checkmark {
-      background-color: colors.$blue-hover;
-      border-color: colors.$blue-hover;
+      background-color: colors.$blue-state;
+      border-color: colors.$blue-state;
     }
   }
 }
