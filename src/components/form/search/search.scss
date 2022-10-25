@@ -52,11 +52,11 @@
     }
 
     &:hover {
-      border: 2px solid colors.$blue-hover !important;
+      border: 2px solid colors.$blue-state !important;
     }
 
     &:focus {
-      border: 4px solid colors.$blue-hover !important;
+      border: 4px solid colors.$blue-state !important;
       padding: calc($padding-vertical - 2px) calc($padding-horizontal - 2px) !important;
       outline: none;
     }
@@ -104,8 +104,8 @@
     }
 
     &:hover {
-      background-color: colors.$blue-hover !important;
-      border: 2px solid colors.$blue-hover !important;
+      background-color: colors.$blue-state !important;
+      border: 2px solid colors.$blue-state !important;
       color: colors.$white !important;
     }
   }
@@ -152,7 +152,7 @@
       &:focus,
       &--focus {
         background-color: colors.$gray-light;
-        color: colors.$blue-hover !important;
+        color: colors.$blue-state !important;
         text-decoration: underline;
       }
 
@@ -164,7 +164,7 @@
           background-color: colors.$gray-light;
           border-top: 5px solid colors.$gray-light;
           border-bottom: 5px solid colors.$gray-light;
-          color: colors.$blue-hover !important;
+          color: colors.$blue-state !important;
           margin: -5px -15px;
           padding: 0 15px;
           text-decoration: underline;

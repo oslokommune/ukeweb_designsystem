@@ -75,10 +75,10 @@
   &:active &:focus,
   &:hover {
     border-color: colors.$yellow;
-    color: colors.$blue-hover;
+    color: colors.$blue-state;
 
     @include breakpoints.medium {
-      border-color: colors.$blue-hover;
+      border-color: colors.$blue-state;
       background-color: transparent;
 
       & .osg-button-menu__text {

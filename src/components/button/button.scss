@@ -135,32 +135,32 @@
   &.osg-button--hover,
   &:focus,
   &.osg-button--focus {
-    background-color: colors.$blue-hover !important;
-    border: 2px solid colors.$blue-hover !important;
+    background-color: colors.$blue-state !important;
+    border: 2px solid colors.$blue-state !important;
     color: colors.$white !important;
     text-decoration: underline;
 
     &.osg-button--outline {
       background-color: transparent !important;
-      border-color: colors.$blue-hover;
-      color: colors.$blue-hover !important;
+      border-color: colors.$blue-state;
+      color: colors.$blue-state !important;
     }
 
     &.osg-button--text {
       background-color: colors.$gray-light !important;
       border-color: colors.$gray-light !important;
-      color: colors.$blue-hover !important;
+      color: colors.$blue-state !important;
     }
   }
 
   &:active,
   &.osg-button--active {
-    background-color: colors.$blue-hover !important;
-    border: 2px solid colors.$blue-hover !important;
+    background-color: colors.$blue-state !important;
+    border: 2px solid colors.$blue-state !important;
     text-decoration: none;
 
     &.osg-button--outline {
-      background-color: colors.$blue-hover !important;
+      background-color: colors.$blue-state !important;
       color: colors.$white !important;
     }
 
@@ -168,7 +168,7 @@
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
-      color: colors.$blue-hover !important;
+      color: colors.$blue-state !important;
     }
   }
 

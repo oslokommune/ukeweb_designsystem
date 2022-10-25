@@ -27,8 +27,8 @@
     text-align: center;
 
     &:hover {
-      border-bottom: 2px solid colors.$blue-hover;
-      color: colors.$blue-hover;
+      border-bottom: 2px solid colors.$blue-state;
+      color: colors.$blue-state;
     }
 
     &[aria-selected="true"] {
