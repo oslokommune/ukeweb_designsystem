@@ -42,11 +42,18 @@
   }
 
   &__text {
-    display: none;
+    @extend %osg-sr-only;
     pointer-events: none;
 
     @include breakpoints.medium {
-      display: inline-block;
+      border: unset !important;
+      clip: unset !important;
+      height: unset !important;
+      overflow: unset !important;
+      padding: unset !important;
+      position: unset !important;
+      white-space: unset !important;
+      width: unset !important;
     }
   }
 
