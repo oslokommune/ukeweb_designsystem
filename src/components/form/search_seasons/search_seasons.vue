@@ -5,7 +5,7 @@
         <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large" v-html="title"></h2>
         <div class="osg-search-seasons__search">
           <form class="osg-search-seasons__form" :action="action" method="GET">
-            <div class="osg-search-seasons__input-wrapper" id="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results">
+            <div class="osg-search-seasons__input-wrapper" id="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox">
               <input
                 v-on:keyup="inputChange($event)"
                 v-on:keyup.enter="submit($event.target.value)"
