@@ -158,7 +158,11 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="osg-search-seasons">
-            <osg-search-seasons :value="value" input-placeholder="Search" :items="items" id="id" aria-label="ariaLabel" label="Search" title="Aliquam erat volutpat. <br>Duis neque orci faucibus?" image-alt="image desciption" image-url="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" input-name="input name" action="action"></osg-search-seasons>
+            <osg-search-seasons :value="value" input-placeholder="Search" :items="items" id="id" aria-label="ariaLabel" label="Search" title="Aliquam erat volutpat. <br>Duis neque orci faucibus?" image-alt="image desciption" image-url="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" input-name="input name" action="action">
+              <template #title=" { title } ">
+                <h1 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large" v-html="title"></h1>
+              </template>
+            </osg-search-seasons>
           </div>
         </div>
       </div>
@@ -301,34 +305,17 @@
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <div id="osg-search-seasons">
-        <osg-search-seasons
-          :value="value"
-          :items="items"
-          :item-list-scroll="true"
-          :title="season.title"
-          :action="season.endpoint"
-          :input-name="season.input.name"
-          :id="season.input.id"
-          :input-placeholder="season.input.placeholder"
-          :image-url="season.heroFigure.defaultUrl"
-          :image-alt="season.heroFigure.alt"
-          :theme="season.theme"
-          :figure-shape="season.imageShape"
-          :figure-shape-position="season.shapePosition"
-          :hidden-fields="season.hiddenFields"
-          :aria-label="season.ariaLabel"
-          v-on:item-focus="event('item-focus', $event)"
-          v-on:input-change="event('input-change', $event)"
-          v-on:input-enter="event('input-enter', $event)"
-          v-on:submit="event('submit', $event)"
-          v-on:itemlist-blur="event('itemlist-blur', $event)"
-        >
-          <template #listitem="{ item }">
-            <span class="osg-text-size-kilo, osg-text-size-juliett-breakpoint-large osg-text-weight-light">{{ item.text }}</span>
-            <span v-if="item.subtext" class="osg-text-7 osg-text-size-lima osg-text-weight-light">{{ item.subtext }}</span>
-          </template>
-        </osg-search-seasons>
+      <h2 class="osg-devtools-text-preset-2">Vue component</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div id="osg-search-seasons2">
+            <osg-search-seasons :value="value" input-placeholder="Search" :items="items" id="id" aria-label="ariaLabel" label="Search" :title="season.title" image-alt="image desciption" image-url="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" input-name="input name" action="action">
+              <template #title=" { title } ">
+                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large" v-html="title"></h2>
+              </template>
+            </osg-search-seasons>
+          </div>
+        </div>
       </div>
     </div>
   </div>
