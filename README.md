@@ -26,4 +26,5 @@ If used directly in stylesheet characters might change so you need to use map `c
 1. Add/remove icon SVG/s in assets directory `/src/assets/icons`
 2. Run icon build script `npm run build:icons`
 3. New fonts, CSS & docs are automatically generated
-4. Commit and carry on
+4. Add new icons to general/icons/icons.html
+5. Commit and carry on
