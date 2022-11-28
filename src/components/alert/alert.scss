@@ -43,6 +43,7 @@
     h2 {
       @extend %osg-margin-bottom-1;
       @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+      @extend %osg-text-weight-medium;
       display: inline-block;
     }
 
