@@ -37,7 +37,7 @@ export const OsgSearchSeasonsInit = () => {
         value: "h",
         items: [],
         season: {
-          title: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
+          heading: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
           endpoint: "http://oslo.kommune.local/sokeresultater/",
           input: {
             id: "search-seasons-1",
@@ -108,7 +108,7 @@ export const OsgSearchSeasonsInit = () => {
         value: "h",
         items: [],
         season: {
-          title: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
+          heading: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
           endpoint: "http://oslo.kommune.local/sokeresultater/",
           input: {
             id: "search-seasons-2",
