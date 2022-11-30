@@ -14,8 +14,8 @@
 
   &__item {
     @extend %osg-padding-1;
-    @extend %osg-text-size-kilo;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-kilo;
+    @extend %osg-text--weight-medium;
 
     line-height: 1.5rem;
     box-sizing: content-box;
@@ -78,7 +78,7 @@
     background: none;
     border: none;
     display: inline-block;
-    @extend %osg-text-size-golf;
+    @extend %osg-text--size-golf;
     line-height: 1em;
     vertical-align: middle;
     position: relative;

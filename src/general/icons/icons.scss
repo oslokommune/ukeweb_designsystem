@@ -1,90 +1,135 @@
 @use "sass:map";
+@use "system/colors";
 @use "system/icons";
 @use "system/units";
 
 $sizes: (
   "alfa": (
     "size": 4rem,
+    "size-small": 2.5rem,
     "line-height": 5.125rem,
     "spacing": 4,
+    "spacing-small": 2,
   ),
   "bravo": (
     "size": 3.125rem,
+    "size-small": 1.875rem,
     "line-height": 3.75rem,
-    "spacing": 3,
+    "spacing": 2,
+    "spacing-small": 2,
   ),
   "charlie": (
     "size": 3rem,
+    "size-small": 1.75rem,
     "line-height": 3.375rem,
     "spacing": 3,
+    "spacing-small": 2,
   ),
   "delta": (
     "size": 2.375rem,
+    "size-small": 1.375rem,
     "line-height": 2.75rem,
     "spacing": 2,
+    "spacing-small": 2,
   ),
   "echo": (
     "size": 2.25rem,
+    "size-small": 1.25rem,
     "line-height": 2.625rem,
     "spacing": 2,
+    "spacing-small": 2,
   ),
   "foxtrot": (
     "size": 2.125rem,
+    "size-small": 1.25rem,
     "line-height": 2.5rem,
     "spacing": 2,
+    "spacing-small": 2,
   ),
   "golf": (
     "size": 2rem,
+    "size-small": 1.125rem,
     "line-height": 2.25rem,
     "spacing": 2,
+    "spacing-small": 2,
   ),
   "hotel": (
     "size": 1.75rem,
+    "size-small": 1rem,
     "line-height": 2.125rem,
     "spacing": 1,
+    "spacing-small": 1,
   ),
   "india": (
     "size": 1.75rem,
+    "size-small": 1rem,
     "line-height": 2rem,
     "spacing": 1,
+    "spacing-small": 1,
   ),
   "juliett": (
     "size": 1.5rem,
+    "size-small": 0.875rem,
     "line-height": 1.75rem,
     "spacing": 1,
+    "spacing-small": 1,
   ),
   "kilo": (
     "size": 1.375rem,
+    "size-small": 0.75rem,
     "line-height": 1.5rem,
     "spacing": 1,
+    "spacing-small": 1,
   ),
   "lima": (
     "size": 1.25rem,
+    "size-small": 0.625rem,
     "line-height": 1.375rem,
     "spacing": 1,
+    "spacing-small": 1,
   ),
 );
 
-.osg-icon-align {
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-}
+.osg-icon {
+  vertical-align: bottom;
 
-@each $name, $content in $sizes {
-  .osg-icon--size-#{$name} {
-    font-size: map.get($sizes, $name, "size");
-    line-height: map.get($sizes, $name, "line-height");
-    margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+  @each $name, $content in $sizes {
+    &.osg-icon--size-#{$name} {
+      font-size: map.get($sizes, $name, "size");
+      line-height: map.get($sizes, $name, "line-height");
+      margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+    }
+
+    &.osg-icon--size-#{$name}.osg-icon--small {
+      font-size: map.get($sizes, $name, "size-small");
+      line-height: map.get($sizes, $name, "line-height");
+      margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
+    }
+
+    &.osg-icon--size-#{$name}.osg-icon--align-right {
+      margin-right: 0;
+      margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+    }
+
+    &.osg-icon--size-#{$name}.osg-icon--align-right.osg-icon--small {
+      margin-right: 0;
+      margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
+    }
   }
-}
 
-@each $name, $content in icons.$icons {
-  .osg-icons--#{$name} {
-    font-family: "Oslo Icons";
+  @each $name, $color in colors.$colors {
+    &.osg-icon--color-#{$name} {
+      color: $color;
+    }
+  }
 
-    &:before {
-      content: "#{$content}";
+  @each $name, $content in icons.$icons {
+    &--#{$name} {
+      font-family: "Oslo Icons";
+
+      &:before {
+        content: "#{$content}";
+      }
     }
   }
 }

@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
     types.forEach((type) => {
       const typeElement = document.createElement("div");
       typeElement.classList.add("osg-grid__column--12");
-      typeElement.innerHTML = `<div class="osg-text-size-${type.name} osg-margin-bottom-3" data-size="true">${type.title}</div>`;
+      typeElement.innerHTML = `<div class="osg-text--size-${type.name} osg-margin-bottom-3" data-size="true">${type.title}</div>`;
       typesPlaceholder.appendChild(typeElement);
 
       const typeMetaElement = document.createElement("div");
       typeMetaElement.classList.add("osg-grid__column--12");
-      typeMetaElement.innerHTML = `<div class="osg-grid osg-text-size-kilo"><div class="osg-grid__column--3"><span class="osg-text-weight-medium">Size</span> ${type.size}</div><div class="osg-grid__column--3"><span class="osg-text-weight-medium">Line-height</span> ${type.lineHeight}</div><div class="osg-grid__column--3"><span class="osg-text-weight-medium">Letter-spacing</span> ${type.letterSpacing}</div><div class="osg-grid__column--3"><span class="osg-text-weight-medium">Class</span> .osg-text-size-${type.name}</div></div>`;
+      typeMetaElement.innerHTML = `<div class="osg-grid osg-text--size-kilo"><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Size</span> ${type.size}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Line-height</span> ${type.lineHeight}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Letter-spacing</span> ${type.letterSpacing}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Class</span> .osg-text--size-${type.name}</div></div>`;
       typesPlaceholder.appendChild(typeMetaElement);
 
       const typeDividerElement = document.createElement("div");
@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener("click", function () {
         if (button.getAttribute("data-type") === "weight") {
           typeElements.forEach((element) => {
-            element.classList.remove("osg-text-weight-light");
-            element.classList.remove("osg-text-weight-medium");
-            element.classList.remove("osg-text-weight-bold");
+            element.classList.remove("osg-text--weight-light");
+            element.classList.remove("osg-text--weight-medium");
+            element.classList.remove("osg-text--weight-bold");
           });
 
           document.querySelectorAll("#type-buttons button[data-type='weight']").forEach((el) => {

@@ -2,7 +2,7 @@
   <div class="osg-search-seasons" :class="searchSeasonsModifiers" ref="search">
     <div class="osg-search-seasons__main">
       <div class="osg-search-seasons__content">
-        <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large" v-html="title"></h2>
+        <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large" v-html="title"></h2>
         <div class="osg-search-seasons__search">
           <form class="osg-search-seasons__form" :action="action" method="GET">
             <div class="osg-search-seasons__input-wrapper" id="osg-search__form" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results">
@@ -45,7 +45,7 @@
                   :aria-selected="itemIndex === index ? 'true' : 'false'"
                 >
                   <slot name="listitem" :item="item">
-                    <span class="osg-text-size-kilo osg-text-size-juliett-breakpoint-large osg-text-weight-light">{{ item.text }}</span>
+                    <span class="osg-text--size-kilo osg-text--size-juliett-breakpoint-large osg-text--weight-light">{{ item.text }}</span>
                   </slot>
                 </li>
               </ul>

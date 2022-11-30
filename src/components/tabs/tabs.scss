@@ -6,7 +6,7 @@
   overflow: hidden;
 
   &__label {
-    @extend %osg-text-size-kilo, %osg-text-size-hotel-breakpoint-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-hotel-breakpoint-medium;
     @extend %osg-margin-bottom-3;
   }
 
@@ -15,8 +15,8 @@
   }
 
   &__trigger {
-    @extend %osg-text-size-lima;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
     @extend %osg-margin-right-3;
 
     border: none;

@@ -89,8 +89,8 @@
   }
 
   &__caption {
-    @extend %osg-text-size-lima, %osg-text-size-kilo-breakpoint-medium;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima, %osg-text--size-kilo-breakpoint-medium;
+    @extend %osg-text--weight-light;
     @extend %osg-margin-top-4;
   }
 }
