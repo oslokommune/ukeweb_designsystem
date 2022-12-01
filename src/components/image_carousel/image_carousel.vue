@@ -2,10 +2,10 @@
   <div class="osg-carousel">
     <div class="osg-carousel__content" ref="content">
       <div class="osg-carousel__navigation" v-if="images.length > 1">
-        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="prev" @click="goToPrev">
+        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.previousBtn" @click="goToPrev">
           <span class="osg-button__icon osg-icons--chevron-left"></span>
         </button>
-        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="next" @click="goToNext">
+        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.nextBtn" @click="goToNext">
           <span class="osg-button__icon osg-icons--chevron-right"></span>
         </button>
       </div>
@@ -69,6 +69,16 @@ export default {
     images: {
       type: Array,
       required: true,
+    },
+
+    i18n: {
+      type: Object,
+      default: () => {
+        return {
+          previousBtn: "Show previous image",
+          nextBtn: "Show next image",
+        };
+      },
     },
 
     next: {
