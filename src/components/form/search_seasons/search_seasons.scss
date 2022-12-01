@@ -69,7 +69,7 @@
 
   &__input {
     @extend %osg-padding-3;
-    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
+    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large, %osg-text--weight-light;
     border: 2px solid colors.$white !important;
     border-radius: 0;
     color: colors.$blue-dark;
@@ -104,7 +104,7 @@
     }
 
     &::after {
-      @extend %osg-text-size-delta;
+      @extend %osg-text--size-delta;
 
       font-family: "Oslo Icons" !important;
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
@@ -121,7 +121,7 @@
 
   &__dropdown {
     @extend %osg-padding-vertical-4;
-    @extend %osg-text-size-kilo, %osg-text-weight-light, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text--size-kilo, %osg-text--weight-light, %osg-text--size-juliett-breakpoint-large;
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;

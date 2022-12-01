@@ -57,15 +57,15 @@
       @extend %osg-margin-horizontal-8-breakpoint-medium;
       @extend %osg-padding-4-breakpoint-large;
       & .osg-icon {
-        @extend %osg-text-size-delta-breakpoint-large;
-        @extend %osg-text-weight-medium-breakpoint-large;
+        @extend %osg-text--size-delta-breakpoint-large;
+        @extend %osg-text--weight-medium-breakpoint-large;
       }
     }
   }
 
   &__info {
-    @extend %osg-text-size-lima, %osg-text-size-kilo-breakpoint-medium;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima, %osg-text--size-kilo-breakpoint-medium;
+    @extend %osg-text--weight-light;
     @extend %osg-padding-top-1, %osg-padding-top-2-breakpoint-large, %osg-padding-horizontal-4, %osg-padding-horizontal-0-breakpoint-large;
 
     grid-column: span 12 / span 12;

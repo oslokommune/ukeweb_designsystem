@@ -4,7 +4,7 @@
 @use "system/spacing";
 
 .osg-blockquote {
-  @extend %osg-text-size-hotel;
+  @extend %osg-text--size-hotel;
   @extend %osg-padding-vertical-13;
   @extend %osg-padding-horizontal-8;
   @extend %osg-padding-vertical-25-breakpoint-medium;
@@ -13,8 +13,8 @@
   background-color: colors.$beige;
 
   &__caption {
-    @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large;
+    @extend %osg-text--weight-light;
     @extend %osg-padding-top-4;
     @extend %osg-padding-top-8-breakpoint-medium;
     display: block;

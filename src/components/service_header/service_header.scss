@@ -22,12 +22,12 @@
 
   &__heading {
     @extend %osg-margin-bottom-4;
-    @extend %osg-text-size-echo, %osg-text-size-bravo-breakpoint-medium, %osg-text-size-alfa-breakpoint-large;
+    @extend %osg-text--size-echo, %osg-text--size-bravo-breakpoint-medium, %osg-text--size-alfa-breakpoint-large;
   }
 
   &__lead {
-    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
+    @extend %osg-text--weight-light;
   }
 
   &__image {

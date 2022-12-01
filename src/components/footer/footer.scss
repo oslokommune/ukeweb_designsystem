@@ -6,7 +6,7 @@
 
 .osg-footer {
   @extend %osg-color-bg-blue-dark, %osg-color-text-white;
-  @extend %osg-text-size-juliett, %osg-text-size-india-breakpoint-large, %osg-text-weight-light;
+  @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large, %osg-text--weight-light;
   @extend %osg-padding-vertical-13;
 
   &__gutter {

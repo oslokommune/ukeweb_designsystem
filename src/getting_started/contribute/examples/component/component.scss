@@ -80,12 +80,12 @@
 
   &__heading {
     @extend %osg-margin-bottom-8;
-    @extend %osg-text-size-foxtrot;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-foxtrot;
+    @extend %osg-text--weight-medium;
   }
 
   &__text {
-    @extend %osg-text-size-juliett;
+    @extend %osg-text--size-juliett;
   }
 
   &__footer {
@@ -117,7 +117,7 @@
      * scaled in the browser.
      */
     .osg-example-component__text {
-      @extend %osg-text-size-lima;
+      @extend %osg-text--size-lima;
       margin-left: calc(#{units.unit-to-rem(8)} + 1.3em);
 
       &::before {

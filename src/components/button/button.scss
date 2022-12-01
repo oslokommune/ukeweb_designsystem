@@ -7,8 +7,8 @@
 
 .osg-button {
   @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
-  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-  @extend %osg-text-weight-medium;
+  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+  @extend %osg-text--weight-medium;
 
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
@@ -24,7 +24,7 @@
     * Icon child element
     */
   & .osg-button__icon {
-    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
     line-height: 1.5rem;
 
     @include breakpoints.large {
@@ -86,7 +86,7 @@
    */
   &.osg-button--small {
     @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
-    @extend %osg-text-size-kilo;
+    @extend %osg-text--size-kilo;
 
     &.osg-button--icon {
       @include breakpoints.large {
@@ -95,7 +95,7 @@
     }
 
     & .osg-button__icon {
-      @extend %osg-text-size-hotel;
+      @extend %osg-text--size-hotel;
       line-height: 1.5rem;
       @include breakpoints.large {
         line-height: 1.5rem;
@@ -105,7 +105,7 @@
 
   &.osg-button--large {
     @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
-    @extend %osg-text-size-india, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text--size-india, %osg-text--size-golf-breakpoint-large;
 
     &.osg-button--icon {
       width: 2rem;
@@ -115,7 +115,7 @@
     }
 
     & .osg-button__icon {
-      @extend %osg-text-size-echo;
+      @extend %osg-text--size-echo;
       line-height: 2rem;
       @include breakpoints.large {
         font-size: 2rem;

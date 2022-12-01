@@ -4,8 +4,8 @@
 @use "system/spacing";
 
 .osg-radio {
-  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-  @extend %osg-text-weight-light;
+  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+  @extend %osg-text--weight-light;
   align-items: center;
   color: colors.$blue-dark;
   display: flex;
@@ -20,8 +20,8 @@
   &__required {
     @extend %osg-margin-top-1;
     @extend %osg-padding-0;
-    @extend %osg-text-size-lima;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-light;
   }
 
   &--text-align-top {
@@ -84,7 +84,7 @@
   }
 
   & input:checked ~ &__label {
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     line-height: 1 !important;
   }
 
@@ -113,7 +113,7 @@
   &--focus,
   &:focus {
     .osg-radio__label {
-      @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+      @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     }
   }
 

@@ -10,8 +10,8 @@
   $padding-vertical: units.unit-to-rem(2);
   $padding-horizontal: units.unit-to-rem(4);
 
-  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-  @extend %osg-text-weight-light;
+  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+  @extend %osg-text--weight-light;
 
   position: relative;
 
@@ -28,8 +28,8 @@
     cursor: pointer;
     display: block;
     width: 100%;
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-medium;
 
     & .osg-search__input {
       @extend %osg-margin-top-2;
@@ -83,8 +83,8 @@
     @extend %osg-margin-left-3;
 
     @extend %osg-padding-2;
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-medium;
 
     background: colors.$blue-dark;
     border: 2px solid colors.$blue-dark;
@@ -112,7 +112,7 @@
   }
 
   &__button-icon {
-    @extend %osg-text-size-hotel, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
     line-height: 1.5rem;
 
     @include breakpoints.large {
@@ -194,7 +194,7 @@
     &::after {
       content: map-get(icons.$icons, "magnifying-glass-small") !important;
       font-family: "Oslo Icons" !important;
-      @extend %osg-text-size-delta;
+      @extend %osg-text--size-delta;
       line-height: 1em;
       position: absolute;
       bottom: $padding-vertical;

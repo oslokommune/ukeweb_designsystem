@@ -11,7 +11,7 @@
 
   &__heading {
     @extend %osg-margin-bottom-4;
-    @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+    @extend %osg-text--size-hotel, %osg-text--size-foxtrot-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
     @include typography.weight("light");
   }
 
@@ -30,7 +30,7 @@
 
   &__transcription-heading {
     @extend %osg-margin-vertical-3;
-    @extend %osg-text-size-india, %osg-text-size-hotel-breakpoint-medium, %osg-text-size-golf-breakpoint-large;
+    @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-golf-breakpoint-large;
     @include typography.weight("medium");
   }
 }

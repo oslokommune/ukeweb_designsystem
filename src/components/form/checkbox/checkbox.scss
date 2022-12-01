@@ -5,7 +5,7 @@
 @use "system/spacing";
 
 .osg-checkbox {
-  @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
+  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   align-items: center;
   color: inherit;
   cursor: pointer;
@@ -14,8 +14,8 @@
   &__required {
     @extend %osg-margin-top-1;
     @extend %osg-padding-0;
-    @extend %osg-text-size-lima;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-light;
   }
 
   & input {
@@ -87,8 +87,8 @@
 
   & input:focus ~ &__text,
   &--focus &__text {
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-medium;
   }
 
   & input:hover ~ span,
@@ -114,8 +114,8 @@
   }
 
   & input:checked ~ span {
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large;
-    @extend %osg-text-weight-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-medium;
     border-color: colors.$blue-contrast;
     color: colors.$blue-dark;
   }
