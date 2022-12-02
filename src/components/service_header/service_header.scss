@@ -11,9 +11,6 @@
 
   &__main {
     grid-column: span 12;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 
     @include breakpoints.medium {
       grid-column: span 8;
@@ -31,17 +28,32 @@
   }
 
   &__image {
-    grid-column-start: 3;
-    grid-column-end: 11;
     grid-row-start: 1;
+    display: grid;
+    align-items: center;
+    grid-column: 3 / 11;
+    justify-items: center;
+
+    img {
+      max-width: 10.125rem;
+    }
 
     @include breakpoints.medium {
-      grid-column: span 4;
-      grid-row-start: auto;
+      grid-column: span 4 / -1;
+      justify-items: end;
+
+      img {
+        max-width: 13.5rem;
+      }
     }
 
     @include breakpoints.large {
-      grid-column: span 3 / -1;
+      grid-column: span 4 / -1;
+      justify-items: end;
+
+      img {
+        max-width: 18.75rem;
+      }
     }
   }
 }
