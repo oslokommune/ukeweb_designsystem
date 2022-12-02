@@ -3,20 +3,20 @@
 $disabled: colors.$gray;
 $disabled-text: colors.$grayscale-40;
 
-$active: #1f42aa;
+$active: colors.$blue-state;
 $active-text: colors.$white;
 
 $active-light: colors.$blue-light;
 $active-light-text: colors.$blue-dark;
 
-$hover: #1f42aa;
+$hover: colors.$blue-state;
 $hover-text: colors.$white;
 
 $hover-light: colors.$blue-light;
 $hover-light-text: colors.$blue-dark;
 
-$visited: #8d50b1;
+$visited: colors.$purple;
 $visited-text: colors.$white;
 
-$visited-light: #e0adff;
+$visited-light: colors.$purple-light;
 $visited-light-text: colors.$blue-dark;
