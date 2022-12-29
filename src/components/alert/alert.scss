@@ -8,7 +8,7 @@
 .osg-alert {
   background-color: colors.$white;
 
-  a {
+  &--link {
     @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
     align-items: flex-start;
     color: inherit;
@@ -18,7 +18,7 @@
   }
 
   &__illustration {
-    @extend %osg-margin-right-4;
+    @extend %osg-margin-right-3;
     flex: 0 0 auto;
     line-height: 0;
 
@@ -73,6 +73,7 @@
   &--illustration {
     a {
       align-items: center;
+      @extend %osg-padding-vertical-3, %osg-padding-horizontal-4, %osg-padding-vertical-3-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-4-breakpoint-large, %osg-padding-horizontal-6-breakpoint-large;
     }
   }
 
