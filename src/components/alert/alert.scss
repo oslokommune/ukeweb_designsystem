@@ -71,7 +71,7 @@
   }
 
   &--illustration {
-    a {
+    & .osg-alert--link {
       align-items: center;
       @extend %osg-padding-vertical-3, %osg-padding-horizontal-4, %osg-padding-vertical-3-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-4-breakpoint-large, %osg-padding-horizontal-6-breakpoint-large;
     }
