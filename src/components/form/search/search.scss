@@ -48,6 +48,10 @@
     line-height: 1.5rem;
     width: 100%;
 
+    @include breakpoints.medium {
+      width: auto;
+    }
+
     @include breakpoints.large {
       line-height: 1.75rem;
     }
