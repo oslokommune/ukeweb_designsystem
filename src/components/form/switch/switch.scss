@@ -22,10 +22,10 @@
 
   &:focus-within,
   &--focus {
-    border: 2px solid colors.$blue-contrast;
+    border: 0.125rem solid colors.$blue-contrast;
     outline: initial;
     outline-style: solid;
-    outline-width: 1px;
+    outline-width: 0.063rem;
     outline-color: colors.$blue-contrast;
   }
 
@@ -85,15 +85,15 @@
 
 .osg-switch {
   background-color: colors.$white;
-  border-radius: 18px;
-  border: 2px solid colors.$blue-dark;
+  border-radius: 1.125rem;
+  border: 0.125rem solid colors.$blue-dark;
   cursor: pointer;
   display: block;
   font-weight: 500;
-  height: 27px;
+  height: 1.688rem;
   @extend %osg-margin-bottom-3;
   position: relative;
-  width: 41px;
+  width: 2.563rem;
 
   &__input {
     left: 0;
@@ -105,14 +105,14 @@
   &__background {
     border-radius: inherit;
     display: block;
-    height: 24px;
+    height: 1.5rem;
     position: relative;
     transition: all 0.15s ease-out 0s;
   }
 
   &__label-text {
     border: none;
-    left: 43px;
+    left: 2.688rem;
     position: absolute;
     top: 0;
     white-space: nowrap;
@@ -120,19 +120,19 @@
 
   &__slider {
     background-color: colors.$white;
-    border: 2px solid colors.$blue-dark;
-    border-radius: 13px;
-    height: 26px;
-    left: -2px;
+    border: 0.125rem solid colors.$blue-dark;
+    border-radius: 0.813rem;
+    height: 1.625rem;
+    left: -0.125rem;
     position: absolute;
-    top: -1px;
+    top: -0.063rem;
     transition: left 0.15s ease-out 0s;
-    width: 27px;
+    width: 1.688rem;
   }
 
   &__slider::before {
     background-color: colors.$white;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     content: "";
     font-family: "Oslo Icons";
     @extend %osg-text--size-bravo;
@@ -140,7 +140,7 @@
     height: 0;
     left: 50%;
     line-height: 1.5em;
-    margin: -30px 0 0 -19px;
+    margin: -1.875rem 0 0 -1.188rem;
     position: absolute;
     top: 50%;
     width: 0;
