@@ -80,7 +80,8 @@
     }
   }
 
-  &:active &:focus,
+  &:active,
+  &:focus,
   &:hover {
     border-color: colors.$yellow;
     color: colors.$blue-contrast;
