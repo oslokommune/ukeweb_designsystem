@@ -2,11 +2,11 @@
   <div class="osg-carousel">
     <div class="osg-carousel__content" ref="content">
       <div class="osg-carousel__navigation" v-if="images.length > 1">
-        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToPrev">
-          <span class="osg-button__icon osg-icons--chevron-left" :aria-label="prev"></span>
+        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
+          <span class="osg-button__icon osg-icons--chevron-left"></span>
         </button>
-        <button class="osg-button osg-button--circle osg-button--yellow" @click="goToNext">
-          <span class="osg-button__icon osg-icons--chevron-right" :aria-label="next"></span>
+        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.nextButton" @click="goToNext">
+          <span class="osg-button__icon osg-icons--chevron-right"></span>
         </button>
       </div>
       <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
@@ -69,6 +69,16 @@ export default {
     images: {
       type: Array,
       required: true,
+    },
+
+    i18n: {
+      type: Object,
+      default: () => {
+        return {
+          previousButton: "Show previous image",
+          nextButton: "Show next image",
+        };
+      },
     },
 
     next: {

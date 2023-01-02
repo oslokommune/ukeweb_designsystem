@@ -18,8 +18,7 @@
           <div class="osg-search-seasons">
             <div class="osg-search-seasons__main">
               <div class="osg-search-seasons__content">
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+                <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
                 <div class="osg-search-seasons__search">
                   <form class="osg-search-seasons__form">
                     <div class="osg-search-seasons__input-wrapper" id="osg-search__form-1" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results-1">
@@ -54,8 +53,7 @@
           <div class="osg-search-seasons osg-search-seasons--red">
             <div class="osg-search-seasons__main">
               <div class="osg-search-seasons__content">
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
                 <div class="osg-search-seasons__search">
                   <form class="osg-search-seasons__form">
                     <div class="osg-search-seasons__input-wrapper">
@@ -89,8 +87,7 @@
           <div class="osg-search-seasons osg-search-seasons--blue-dark">
             <div class="osg-search-seasons__main">
               <div class="osg-search-seasons__content">
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
                 <div class="osg-search-seasons__search">
                   <form class="osg-search-seasons__form">
                     <div class="osg-search-seasons__input-wrapper">
@@ -122,8 +119,7 @@
           <div class="osg-search-seasons osg-search-seasons--green-dark">
             <div class="osg-search-seasons__main">
               <div class="osg-search-seasons__content">
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-                <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
                 <div class="osg-search-seasons__search">
                   <form class="osg-search-seasons__form">
                     <div class="osg-search-seasons__input-wrapper">
@@ -158,7 +154,36 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <div id="osg-search-seasons">
-            <osg-search-seasons :value="value" input-placeholder="Search" :items="items" id="id" aria-label="ariaLabel" label="Search" title="Aliquam erat volutpat. <br>Duis neque orci faucibus?" image-alt="image desciption" image-url="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" input-name="input name" action="action"></osg-search-seasons>
+            <osg-search-seasons
+              :value="value"
+              :items="items"
+              :item-list-scroll="true"
+              :heading="season.heading"
+              :action="season.endpoint"
+              :input-name="season.input.name"
+              :id="season.input.id"
+              :input-placeholder="season.input.placeholder"
+              :image-url="season.heroFigure.defaultUrl"
+              :image-alt="season.heroFigure.alt"
+              :theme="season.theme"
+              :figure-shape="season.imageShape"
+              :figure-shape-position="season.shapePosition"
+              :hidden-fields="season.hiddenFields"
+              :aria-label="season.ariaLabel"
+              v-on:item-focus="event('item-focus', $event)"
+              v-on:input-change="event('input-change', $event)"
+              v-on:input-enter="event('input-enter', $event)"
+              v-on:submit="event('submit', $event)"
+              v-on:itemlist-blur="event('itemlist-blur', $event)"
+            >
+              <template #heading=" { heading } ">
+                <h3 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large" v-html="heading"></h3>
+              </template>
+              <template #listitem="{ item }">
+                <span class="osg-text-size-kilo, osg-text-size-juliett-breakpoint-large osg-text-weight-light">{{ item.text }}</span>
+                <span v-if="item.subtext" class="osg-text-7 osg-text-size-lima osg-text-weight-light">{{ item.subtext }}</span>
+              </template>
+            </osg-search-seasons>
           </div>
         </div>
       </div>
@@ -181,8 +206,7 @@
       <div class="osg-search-seasons">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+            <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
             <div class="osg-search-seasons__search">
               <form class="osg-search-seasons__form">
                 <div class="osg-search-seasons__input-wrapper" id="osg-search__form-2" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results">
@@ -213,8 +237,8 @@
       <div class="osg-search-seasons osg-search-seasons--red">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
+            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
             <div class="osg-search-seasons__search">
               <form class="osg-search-seasons__form">
                 <div class="osg-search-seasons__input-wrapper">
@@ -244,8 +268,7 @@
       <div class="osg-search-seasons osg-search-seasons--blue-dark">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
             <div class="osg-search-seasons__search">
               <form class="osg-search-seasons__form">
                 <div class="osg-search-seasons__input-wrapper">
@@ -273,8 +296,8 @@
       <div class="osg-search-seasons osg-search-seasons--green-dark">
         <div class="osg-search-seasons__main">
           <div class="osg-search-seasons__content">
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text-size-golf osg-text-size-delta-breakpoint-medium osg-text-size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
+            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
+            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
             <div class="osg-search-seasons__search">
               <form class="osg-search-seasons__form">
                 <div class="osg-search-seasons__input-wrapper">
@@ -301,34 +324,42 @@
       </div>
     </div>
     <div class="osg-grid__column--12">
-      <div id="osg-search-seasons">
-        <osg-search-seasons
-          :value="value"
-          :items="items"
-          :item-list-scroll="true"
-          :title="season.title"
-          :action="season.endpoint"
-          :input-name="season.input.name"
-          :id="season.input.id"
-          :input-placeholder="season.input.placeholder"
-          :image-url="season.heroFigure.defaultUrl"
-          :image-alt="season.heroFigure.alt"
-          :theme="season.theme"
-          :figure-shape="season.imageShape"
-          :figure-shape-position="season.shapePosition"
-          :hidden-fields="season.hiddenFields"
-          :aria-label="season.ariaLabel"
-          v-on:item-focus="event('item-focus', $event)"
-          v-on:input-change="event('input-change', $event)"
-          v-on:input-enter="event('input-enter', $event)"
-          v-on:submit="event('submit', $event)"
-          v-on:itemlist-blur="event('itemlist-blur', $event)"
-        >
-          <template #listitem="{ item }">
-            <span class="osg-text-size-kilo, osg-text-size-juliett-breakpoint-large osg-text-weight-light">{{ item.text }}</span>
-            <span v-if="item.subtext" class="osg-text-7 osg-text-size-lima osg-text-weight-light">{{ item.subtext }}</span>
-          </template>
-        </osg-search-seasons>
+      <h2 class="osg-devtools-text-preset-2">Vue component</h2>
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <div id="osg-search-seasons2">
+            <osg-search-seasons
+              :value="value"
+              :items="items"
+              :item-list-scroll="true"
+              :heading="season.heading"
+              :action="season.endpoint"
+              :input-name="season.input.name"
+              :id="season.input.id"
+              :input-placeholder="season.input.placeholder"
+              :image-url="season.heroFigure.defaultUrl"
+              :image-alt="season.heroFigure.alt"
+              :theme="season.theme"
+              :figure-shape="season.imageShape"
+              :figure-shape-position="season.shapePosition"
+              :hidden-fields="season.hiddenFields"
+              :aria-label="season.ariaLabel"
+              v-on:item-focus="event('item-focus', $event)"
+              v-on:input-change="event('input-change', $event)"
+              v-on:input-enter="event('input-enter', $event)"
+              v-on:submit="event('submit', $event)"
+              v-on:itemlist-blur="event('itemlist-blur', $event)"
+            >
+              <template #heading=" { heading } ">
+                <h3 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large" v-html="heading"></h3>
+              </template>
+              <template #listitem="{ item }">
+                <span class="osg-text--size-kilo, osg-text--size-juliett-breakpoint-large osg-text--weight-light">{{ item.text }}</span>
+                <span v-if="item.subtext" class="osg-text-7 osg-text--size-lima osg-text--weight-light">{{ item.subtext }}</span>
+              </template>
+            </osg-search-seasons>
+          </div>
+        </div>
       </div>
     </div>
   </div>

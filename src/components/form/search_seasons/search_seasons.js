@@ -23,11 +23,12 @@ export function OsgSearchSeasonsJs() {
 
 export const OsgSearchSeasonsInit = () => {
   const container = document.getElementById("osg-search-seasons");
+  const container2 = document.getElementById("osg-search-seasons2");
   if (container) {
     new Vue({
       el: container,
       components: {
-        OsgSearchSeasons
+        OsgSearchSeasons,
       },
       mounted() {
         this.event("input-change", this.value);
@@ -36,28 +37,28 @@ export const OsgSearchSeasonsInit = () => {
         value: "h",
         items: [],
         season: {
-          title: "What are you looking for today?",
+          heading: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
           endpoint: "http://oslo.kommune.local/sokeresultater/",
           input: {
             id: "search-seasons-1",
             name: "osg-search-seasons-vue",
-            placeholder: "Type a word"
+            placeholder: "Type a word",
           },
           ariaLabel: "Search",
           heroFigure: {
             defaultUrl: "https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg",
-            alt: "A lighthouse in the sea"
+            alt: "A lighthouse in the sea",
           },
           theme: "green-dark",
           hiddenFields: [
             {
               name: "name-1",
-              value: "value-1"
-            }
+              value: "value-1",
+            },
           ],
           imageShape: "circle",
-          shapePosition: "right"
-        }
+          shapePosition: "right",
+        },
       }),
       methods: {
         event(event, payload) {
@@ -76,7 +77,78 @@ export const OsgSearchSeasonsInit = () => {
                 {
                   text: "Hei",
                   subtext: "Greetings",
-                }
+                },
+              ];
+            } else {
+              this.items = [];
+            }
+            this.value = payload;
+          } else if (event === "item-focus") {
+            this.value = this.items[payload].text;
+          } else if (event === "itemlist-blur") {
+            this.items = [];
+          } else if (event === "submit") {
+            console.log(payload);
+          }
+        },
+      },
+    });
+  }
+
+  if (container2) {
+    new Vue({
+      el: container2,
+      components: {
+        OsgSearchSeasons,
+      },
+      mounted() {
+        this.event("input-change", this.value);
+      },
+      data: () => ({
+        value: "h",
+        items: [],
+        season: {
+          heading: "Aliquam erat volutpat. <br>Duis neque orci faucibus?",
+          endpoint: "http://oslo.kommune.local/sokeresultater/",
+          input: {
+            id: "search-seasons-2",
+            name: "osg-search-seasons-vue",
+            placeholder: "Type a word",
+          },
+          ariaLabel: "Search",
+          heroFigure: {
+            defaultUrl: "https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/2.jpg",
+            alt: "A lighthouse in the sea",
+          },
+          theme: "green-light",
+          hiddenFields: [
+            {
+              name: "name-2",
+              value: "value-2",
+            },
+          ],
+          imageShape: "circle",
+          shapePosition: "right",
+        },
+      }),
+      methods: {
+        event(event, payload) {
+          if (event === "input-change") {
+            if (payload[0] && payload[0].toLowerCase() === "h") {
+              this.items = [
+                {
+                  text: "Hi",
+                },
+                {
+                  text: "Hello",
+                },
+                {
+                  text: "Halo",
+                },
+                {
+                  text: "Hei",
+                  subtext: "Greetings",
+                },
               ];
             } else {
               this.items = [];

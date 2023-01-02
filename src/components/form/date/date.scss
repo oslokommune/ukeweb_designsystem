@@ -11,8 +11,8 @@
   &__required {
     @extend %osg-margin-top-1;
     @extend %osg-padding-0;
-    @extend %osg-text-size-lima;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-light;
   }
 
   &__error-message {
@@ -25,7 +25,7 @@
     &::after {
       content: map-get(icons.$icons, "calendar") !important;
       font-family: "Oslo Icons" !important;
-      @extend %osg-text-size-delta;
+      @extend %osg-text--size-delta;
       line-height: 1em;
       position: absolute;
       right: 10px;
@@ -63,7 +63,7 @@
       border-radius: 50%;
       border: none;
       background-color: transparent;
-      @extend %osg-text-size-golf;
+      @extend %osg-text--size-golf;
       line-height: 30px;
       text-align: center;
 
@@ -116,7 +116,7 @@
         font-weight: normal;
       }
       caption {
-        @extend %osg-text-size-juliett;
+        @extend %osg-text--size-juliett;
         @extend %osg-margin-bottom-3, %osg-margin-top-1;
         text-transform: capitalize;
       }
@@ -125,15 +125,15 @@
         border-top: 1px solid colors.$blue-dark;
       }
       th {
-        @extend %osg-text-size-lima;
+        @extend %osg-text--size-lima;
         @extend %osg-padding-vertical-1, %osg-padding-horizontal-0;
-        @extend %osg-text-align-center;
+        @extend %osg-text--align-center;
         // text-align: center;
         text-transform: capitalize;
       }
       td {
         // text-align: center;
-        @extend %osg-text-align-center;
+        @extend %osg-text--align-center;
         button {
           width: 36px;
           height: 36px;
@@ -148,7 +148,7 @@
           }
           // next/prev month
           &[data-adjacent="true"] {
-            @extend %osg-text-size-lima;
+            @extend %osg-text--size-lima;
             // font-size: typography.$size-14;
           }
           &:not(:disabled) {

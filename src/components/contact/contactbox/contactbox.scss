@@ -9,7 +9,7 @@
   background-color: colors.$yellow;
 
   &__trigger {
-    @extend %osg-text-size-hotel, %osg-text-size-foxtrot-breakpoint-medium, %osg-text-size-delta-breakpoint-large;
+    @extend %osg-text--size-hotel, %osg-text--size-foxtrot-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
     @extend %osg-padding-5, %osg-padding-8-breakpoint-large;
 
     display: block;
@@ -42,12 +42,12 @@
   }
 
   &__label {
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large, %osg-text-weight-medium;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-medium;
     word-wrap: break-word;
   }
 
   &__value {
-    @extend %osg-text-size-kilo, %osg-text-size-juliett-breakpoint-large, %osg-text-weight-light;
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-light;
 
     .osg-link {
       word-break: break-all;

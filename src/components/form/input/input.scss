@@ -32,8 +32,8 @@
   &__required {
     @extend %osg-margin-top-1;
     padding: 0;
-    @extend %osg-text-size-lima;
-    @extend %osg-text-weight-light;
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-light;
   }
 
   &__error-message {
@@ -51,8 +51,8 @@
       border: none;
       background: none;
       cursor: pointer;
-      @extend %osg-text-size-juliett;
-      @extend %osg-text-weight-light;
+      @extend %osg-text--size-juliett;
+      @extend %osg-text--weight-light;
       height: 1.25rem;
       line-height: 0;
       padding: 0;

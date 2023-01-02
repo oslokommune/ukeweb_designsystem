@@ -2,6 +2,7 @@
 @use "mixins";
 
 .osg-link {
+  display: inline-block;
   text-decoration: underline;
   word-wrap: break-word;
 

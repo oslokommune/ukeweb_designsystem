@@ -1,62 +1,66 @@
 @use "system/breakpoints";
 @use "system/typography";
 
+// Placeholder for typography
+.osg-text {
+}
+
 // Weight
 @each $name, $size in typography.$weights {
-  .osg-text-weight-#{$name} {
-    @extend %osg-text-weight-#{$name};
+  .osg-text--weight-#{$name} {
+    @extend %osg-text--weight-#{$name};
   }
 
-  .osg-text-weight-#{$name}-breakpoint-medium {
-    @extend %osg-text-weight-#{$name}-breakpoint-medium;
+  .osg-text--weight-#{$name}-breakpoint-medium {
+    @extend %osg-text--weight-#{$name}-breakpoint-medium;
   }
 
-  .osg-text-weight-#{$name}-breakpoint-large {
-    @extend %osg-text-weight-#{$name}-breakpoint-large;
+  .osg-text--weight-#{$name}-breakpoint-large {
+    @extend %osg-text--weight-#{$name}-breakpoint-large;
   }
 }
 
 // Style
 @each $name, $values in typography.$styles {
-  .osg-text-style-#{$name} {
-    @extend %osg-text-style-#{$name};
+  .osg-text--style-#{$name} {
+    @extend %osg-text--style-#{$name};
   }
 
-  .osg-text-style-#{$name}-breakpoint-medium {
-    @extend %osg-text-style-#{$name}-breakpoint-medium;
+  .osg-text--style-#{$name}-breakpoint-medium {
+    @extend %osg-text--style-#{$name}-breakpoint-medium;
   }
 
-  .osg-text-style-#{$name}-breakpoint-large {
-    @extend %osg-text-style-#{$name}-breakpoint-large;
+  .osg-text--style-#{$name}-breakpoint-large {
+    @extend %osg-text--style-#{$name}-breakpoint-large;
   }
 }
 
 // Size
 @each $name, $values in typography.$sizes {
-  .osg-text-size-#{$name} {
-    @extend %osg-text-size-#{$name};
+  .osg-text--size-#{$name} {
+    @extend %osg-text--size-#{$name};
   }
 
-  .osg-text-size-#{$name}-breakpoint-medium {
-    @extend %osg-text-size-#{$name}-breakpoint-medium;
+  .osg-text--size-#{$name}-breakpoint-medium {
+    @extend %osg-text--size-#{$name}-breakpoint-medium;
   }
 
-  .osg-text-size-#{$name}-breakpoint-large {
-    @extend %osg-text-size-#{$name}-breakpoint-large;
+  .osg-text--size-#{$name}-breakpoint-large {
+    @extend %osg-text--size-#{$name}-breakpoint-large;
   }
 }
 
 // Align
 @each $name, $value in typography.$alignments {
-  .osg-text-align-#{$name} {
-    @extend %osg-text-align-#{$name};
+  .osg-text--align-#{$name} {
+    @extend %osg-text--align-#{$name};
   }
 
-  .osg-text-align-#{$name}-breakpoint-medium {
-    @extend %osg-text-align-#{$name}-breakpoint-medium;
+  .osg-text--align-#{$name}-breakpoint-medium {
+    @extend %osg-text--align-#{$name}-breakpoint-medium;
   }
 
-  .osg-text-align-#{$name}-breakpoint-large {
-    @extend %osg-text-align-#{$name}-breakpoint-large;
+  .osg-text--align-#{$name}-breakpoint-large {
+    @extend %osg-text--align-#{$name}-breakpoint-large;
   }
 }
