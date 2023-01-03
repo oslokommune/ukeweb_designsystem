@@ -7,6 +7,8 @@
   text-decoration: underline;
   word-wrap: break-word;
 
+  @include mixins.states;
+
   &--external {
     @include mixins.icon-right("new-window");
   }
