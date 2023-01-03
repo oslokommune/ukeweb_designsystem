@@ -3,6 +3,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "../input/mixins";
+@use "system/states";
 
 .osg-date {
   @include mixins.form-states;
@@ -73,10 +74,10 @@
 
       &:disabled {
         cursor: not-allowed;
-        color: colors.$white;
+        color: states.$disabled-text;
         &:hover {
           background-color: transparent;
-          color: colors.$white;
+          color: states.$disabled-text;
         }
       }
       &:not(:disabled) {
@@ -171,7 +172,7 @@
             }
           }
           &:disabled {
-            color: colors.$white;
+            color: states.$disabled-text;
             &:hover {
               background-color: transparent;
               cursor: not-allowed;
