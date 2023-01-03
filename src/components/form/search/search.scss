@@ -4,6 +4,7 @@
 @use "system/icons";
 @use "system/spacing";
 @use "system/units";
+@use "system/states";
 
 .osg-search {
   $padding-vertical: units.unit-to-rem(2);
@@ -104,9 +105,9 @@
     }
 
     &:hover {
-      background-color: colors.$blue-state !important;
-      border: 2px solid colors.$blue-state !important;
-      color: colors.$white !important;
+      background-color: states.$hover !important;
+      border: 2px solid states.$hover !important;
+      color: states.$hover-text !important;
     }
   }
 
@@ -152,7 +153,7 @@
       &:focus,
       &--focus {
         background-color: colors.$gray-light;
-        color: colors.$blue-state !important;
+        color: states.$hover !important;
         text-decoration: underline;
       }
 
@@ -164,7 +165,7 @@
           background-color: colors.$gray-light;
           border-top: 5px solid colors.$gray-light;
           border-bottom: 5px solid colors.$gray-light;
-          color: colors.$blue-state !important;
+          color: states.$hover !important;
           margin: -5px -15px;
           padding: 0 15px;
           text-decoration: underline;

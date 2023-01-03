@@ -2,6 +2,7 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/icons";
+@use "system/states";
 
 .osg-pagination {
   &__spacer {
@@ -33,14 +34,14 @@
     &:focus {
       background-color: colors.$gray-light;
       border-color: colors.$gray-light;
-      color: colors.$blue-state !important;
+      color: states.$hover !important;
     }
 
     &:active {
       background-color: transparent;
       border-color: transparent;
       text-decoration: underline;
-      color: colors.$blue-state;
+      color: states.$active;
     }
 
     &--current {
@@ -51,10 +52,10 @@
 
       &:hover,
       &:focus {
-        background: colors.$blue-state !important;
-        border: 2px solid colors.$blue-state !important;
+        background: states.$hover !important;
+        border: 2px solid states.$hover !important;
         text-decoration: underline !important;
-        color: colors.$white !important;
+        color: states.$hover-text !important;
       }
 
       &:disabled {

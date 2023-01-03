@@ -3,6 +3,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "system/units";
+@use "system/states";
 
 .osg-personalized-content-link {
   @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
@@ -46,7 +47,7 @@
   &--active {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
-      color: colors.$blue-state;
+      color: states.$hover;
     }
     .osg-personalized-content-link__title {
       text-decoration: underline;
@@ -57,7 +58,7 @@
   &--visited {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
-      color: colors.$purple;
+      color: states.$visited;
     }
   }
 

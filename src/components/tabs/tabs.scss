@@ -1,6 +1,7 @@
 @use "system/colors";
 @use "system/spacing";
 @use "system/typography";
+@use "system/states";
 
 .osg-tabs {
   overflow: hidden;
@@ -27,8 +28,8 @@
     text-align: center;
 
     &:hover {
-      border-bottom: 2px solid colors.$blue-state;
-      color: colors.$blue-state;
+      border-bottom: 2px solid states.$hover;
+      color: states.$hover;
     }
 
     &[aria-selected="true"] {

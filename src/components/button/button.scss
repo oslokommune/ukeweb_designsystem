@@ -3,6 +3,7 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/units";
+@use "system/states";
 
 .osg-button {
   @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
@@ -135,32 +136,32 @@
   &.osg-button--hover,
   &:focus,
   &.osg-button--focus {
-    background-color: colors.$blue-state !important;
-    border: 2px solid colors.$blue-state !important;
-    color: colors.$white !important;
+    background-color: states.$hover !important;
+    border: 2px solid states.$hover !important;
+    color: states.$hover-text !important;
     text-decoration: underline;
 
     &.osg-button--outline {
       background-color: transparent !important;
-      border-color: colors.$blue-state;
-      color: colors.$blue-state !important;
+      border-color: states.$hover;
+      color: states.$hover !important;
     }
 
     &.osg-button--text {
       background-color: colors.$gray-light !important;
       border-color: colors.$gray-light !important;
-      color: colors.$blue-state !important;
+      color: states.$hover !important;
     }
   }
 
   &:active,
   &.osg-button--active {
-    background-color: colors.$blue-state !important;
-    border: 2px solid colors.$blue-state !important;
+    background-color: states.$active !important;
+    border: 2px solid states.$active !important;
     text-decoration: none;
 
     &.osg-button--outline {
-      background-color: colors.$blue-state !important;
+      background-color: states.$hover !important;
       color: colors.$white !important;
     }
 
@@ -168,14 +169,14 @@
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
-      color: colors.$blue-state !important;
+      color: states.$hover !important;
     }
   }
 
   &:disabled {
-    background-color: colors.$blue-dark !important;
-    border: 2px solid colors.$blue-dark !important;
-    color: colors.$white !important;
+    background-color: states.$disabled !important;
+    border: 2px solid states.$disabled !important;
+    color: states.$disabled-text !important;
     cursor: default;
     text-decoration: none;
 
@@ -192,9 +193,9 @@
 
     &:hover,
     &:active {
-      background-color: colors.$gray-light !important;
-      border: 2px solid colors.$gray-light !important;
-      color: colors.$grayscale-40 !important;
+      background-color: states.$disabled !important;
+      border: 2px solid states.$disabled !important;
+      color: states.$disabled-text !important;
 
       &.osg-button--outline {
         background-color: transparent !important;
@@ -313,8 +314,8 @@
       &.osg-button--hover,
       &:focus,
       &.osg-button--focus {
-        border-color: colors.$blue-light !important;
-        color: colors.$blue-light !important;
+        border-color: states.$hover-light !important;
+        color: states.$hover-light !important;
       }
     }
   }
