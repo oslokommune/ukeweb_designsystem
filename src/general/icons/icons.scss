@@ -90,7 +90,7 @@ $sizes: (
   ),
 );
 
-.osg-icons {
+.osg-icon {
   vertical-align: bottom;
 
   @each $name, $content in $sizes {

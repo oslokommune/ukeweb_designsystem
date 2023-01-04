@@ -3,7 +3,7 @@
     <label class="osg-input__label">
       {{ label }}
       <input class="osg-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" />
-      <span v-if="errorMessage" class="osg-icon osg-icons--exclamation-mark-circle"></span>
+      <span v-if="errorMessage" class="osg-icon osg-icon--exclamation-mark-circle"></span>
     </label>
     <div v-if="errorMessage" class="osg-input__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>

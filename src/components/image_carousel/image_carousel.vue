@@ -3,10 +3,10 @@
     <div class="osg-carousel__content" ref="content">
       <div class="osg-carousel__navigation" v-if="images.length > 1">
         <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
-          <span class="osg-button__icon osg-icons--chevron-left"></span>
+          <span class="osg-button__icon osg-icon--chevron-left"></span>
         </button>
         <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.nextButton" @click="goToNext">
-          <span class="osg-button__icon osg-icons--chevron-right"></span>
+          <span class="osg-button__icon osg-icon--chevron-right"></span>
         </button>
       </div>
       <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
