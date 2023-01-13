@@ -93,6 +93,12 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
+  &--blue {
+    & .osg-landscape-card__content {
+      @extend %osg-color-bg-blue-light;
+    }
+  }
+
   &--wide-image {
     & .osg-landscape-card__media {
       @include breakpoints.medium {
