@@ -6,16 +6,17 @@
 @use "system/states";
 
 $osg-landscape-card-height-breakpoint-medium: 221px;
-$osg-landscape-card-height-breakpoint-large: 230px;
-$osg-landscape-card-height-large-breakpoint-medium: 421px;
-$osg-landscape-card-height-large-breakpoint-large: 421px;
+// $osg-landscape-card-height-breakpoint-large: 230px;
+// $osg-landscape-card-height-large-breakpoint-medium: 421px;
+// $osg-landscape-card-height-large-breakpoint-large: 421px;
 
 .osg-landscape-card {
   &__link {
     text-decoration: none;
 
     @include breakpoints.medium {
-      display: flex;
+      display: grid; // flex;
+      grid-template-columns: repeat(12, 1fr);
     }
 
     &:hover {
@@ -30,27 +31,26 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &__media {
-    width: 100%;
-
     @include breakpoints.medium {
-      flex: 0 0;
-      min-width: 34%;
-      width: 34%;
-      max-width: 34%;
+      grid-column: 1/8;
+      // min-width: 55%;
+      // width: 55%;
+      // max-width: 55%;
     }
 
     img {
+      width: 100%;
       display: block;
       line-height: 0;
       object-fit: cover;
-      width: 100%;
 
       @include breakpoints.medium {
-        height: $osg-landscape-card-height-breakpoint-medium;
+        max-height: 100%;
+        // height: $osg-landscape-card-height-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-landscape-card-height-breakpoint-large;
+        // height: $osg-landscape-card-height-breakpoint-large;
       }
     }
   }
@@ -63,10 +63,11 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
 
     @include breakpoints.medium {
-      flex: 1 0;
+      // flex: 1 0;
+      grid-column: 8/-1;
     }
 
-    width: 100%;
+    // width: 100%;
   }
 
   &__heading {
@@ -93,9 +94,16 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
-  &--blue {
+  &--blue-light {
     & .osg-landscape-card__content {
       @extend %osg-color-bg-blue-light;
+    }
+    & .osg-landscape-card__content img {
+      @include breakpoints.medium {
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+      }
     }
   }
 
@@ -116,11 +124,11 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
     & .osg-landscape-card__media img {
       @include breakpoints.medium {
-        height: $osg-landscape-card-height-large-breakpoint-medium;
+        // height: $osg-landscape-card-height-large-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-landscape-card-height-large-breakpoint-large;
+        // height: $osg-landscape-card-height-large-breakpoint-large;
       }
     }
   }
