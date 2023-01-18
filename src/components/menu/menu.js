@@ -82,12 +82,12 @@ function handleToggleHeading(e) {
     headingButton.setAttribute("aria-expanded", collapsibleContent.classList.contains("osg-navbar-menu__list-animate--open") ? "false" : "true");
     collapsibleContent.classList.toggle("osg-navbar-menu__list-animate--open");
 
-    if (headingButtonIconClassList.contains("osg-icons--plus-sign")) {
-      headingButtonIconClassList.remove("osg-icons--plus-sign");
-      headingButtonIconClassList.add("osg-icons--minus-sign");
+    if (headingButtonIconClassList.contains("osg-icon--plus-sign")) {
+      headingButtonIconClassList.remove("osg-icon--plus-sign");
+      headingButtonIconClassList.add("osg-icon--minus-sign");
     } else {
-      headingButtonIconClassList.add("osg-icons--plus-sign");
-      headingButtonIconClassList.remove("osg-icons--minus-sign");
+      headingButtonIconClassList.add("osg-icon--plus-sign");
+      headingButtonIconClassList.remove("osg-icon--minus-sign");
     }
   }
 
