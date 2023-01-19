@@ -5,17 +5,17 @@
 @use "system/states";
 @use "system/typography";
 
-$osg-landscape-card-height-breakpoint-medium: 221px;
-// $osg-landscape-card-height-breakpoint-large: 230px;
-// $osg-landscape-card-height-large-breakpoint-medium: 421px;
-// $osg-landscape-card-height-large-breakpoint-large: 421px;
+$osg-landscape-card-height-breakpoint-medium: 286px;
+$osg-landscape-card-height-breakpoint-large: 300px;
+$osg-landscape-card-height-large-breakpoint-medium: 421px;
+$osg-landscape-card-height-large-breakpoint-large: 421px;
 
 .osg-landscape-card {
   &__link {
     text-decoration: none;
 
     @include breakpoints.medium {
-      display: grid; // flex;
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
     }
 
@@ -33,46 +33,45 @@ $osg-landscape-card-height-breakpoint-medium: 221px;
   &__media {
     @include breakpoints.medium {
       grid-column: 1/8;
-      // min-width: 55%;
-      // width: 55%;
-      // max-width: 55%;
     }
 
     img {
+      height: 184px;
+      object-fit: cover;
       width: 100%;
       display: block;
       line-height: 0;
-      object-fit: cover;
 
       @include breakpoints.medium {
-        max-height: 100%;
-        // height: $osg-landscape-card-height-breakpoint-medium;
+        height: $osg-landscape-card-height-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        // height: $osg-landscape-card-height-breakpoint-large;
+        height: $osg-landscape-card-height-breakpoint-large;
       }
     }
   }
 
   &__content {
-    @extend %osg-padding-horizontal-3;
-    @extend %osg-padding-vertical-4;
+    @extend %osg-padding-5;
     @extend %osg-color-bg-gray-light;
 
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
+    @extend %osg-padding-6-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
 
     @include breakpoints.medium {
-      // flex: 1 0;
+      width: 100%;
       grid-column: 8/-1;
     }
+  }
 
-    // width: 100%;
+  &__label {
+    @extend %osg-text--size-lima;
+    @extend %osg-margin-bottom-3, %osg-margin-bottom-4-breakpoint-medium;
   }
 
   &__heading {
-    @extend %osg-margin-bottom-5;
-    @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-golf-breakpoint-large;
+    @extend %osg-margin-bottom-1;
+    @extend %osg-text--size-india, %osg-text--size-golf-breakpoint-medium;
     @extend %osg-text--weight-medium;
   }
 
@@ -82,7 +81,7 @@ $osg-landscape-card-height-breakpoint-medium: 221px;
   }
 
   &__published {
-    @extend %osg-margin-top-4;
+    @extend %osg-margin-top-3, %osg-margin-top-4-breakpoint-medium;
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
   }
@@ -107,16 +106,6 @@ $osg-landscape-card-height-breakpoint-medium: 221px;
     }
   }
 
-  &--wide-image {
-    & .osg-landscape-card__media {
-      @include breakpoints.medium {
-        min-width: 58.333%;
-        width: 58.333%;
-        max-width: 58.333%;
-      }
-    }
-  }
-
   &--large {
     & .osg-landscape-card__content {
       @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-8-breakpoint-medium;
@@ -124,11 +113,11 @@ $osg-landscape-card-height-breakpoint-medium: 221px;
 
     & .osg-landscape-card__media img {
       @include breakpoints.medium {
-        // height: $osg-landscape-card-height-large-breakpoint-medium;
+        height: $osg-landscape-card-height-large-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        // height: $osg-landscape-card-height-large-breakpoint-large;
+        height: $osg-landscape-card-height-large-breakpoint-large;
       }
     }
   }
