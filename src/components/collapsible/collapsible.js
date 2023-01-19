@@ -21,29 +21,13 @@ function handleCollapsible(e) {
 function toggleCollapsible(e) {
   e.preventDefault();
 
-  const collapsible = document.getElementById(e.currentTarget.getAttribute("aria-controls"));
-  const elementTarget = document.querySelector(".osg-infobox__icon-trigger") ? e.currentTarget : e.target;
+  const collapsible = document.getElementById(e.target.getAttribute("aria-controls"));
 
   if ((e.code && e.code === "Enter" && collapsible) || (!e.code && collapsible)) {
     collapsible.classList.toggle("osg-collapsible-content--collapsed");
 
-    elementTarget.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
-    elementTarget.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
-
-    if (document.querySelector(".osg-infobox__icon-trigger")) {
-      toggleIcon(elementTarget);
-    }
-  }
-}
-
-function toggleIcon(e) {
-  const child = e.nextElementSibling ? e.nextElementSibling.children[0] : e.children[1].children[0];
-  if (child.classList.contains("osg-icon--close")) {
-    child.classList.add("osg-icon--chevron-thin-down");
-    child.classList.remove("osg-icon--close");
-  } else if (child.classList.contains("osg-icon--chevron-thin-down")) {
-    child.classList.add("osg-icon--close");
-    child.classList.remove("osg-icon--chevron-thin-down");
+    e.target.setAttribute("aria-expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? "false" : "true");
+    e.target.classList.toggle("osg-collapsible-trigger--expanded", collapsible.classList.contains("osg-collapsible-content--collapsed") ? false : true);
   }
 }
 
