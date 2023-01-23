@@ -73,7 +73,7 @@
 
   &__content {
     @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
-    background-color: rgba(179, 245, 255, 0.5);
+    background-color: #d8f9ff;
     margin-right: 3.5rem;
 
     @include breakpoints.large {
