@@ -41,19 +41,21 @@
     &:focus {
       cursor: pointer;
       text-decoration: underline;
+      color: colors.$blue-contrast;
+    }
+    &:active {
+      text-decoration: none;
     }
   }
 
   & .osg-collapsible-trigger--expanded::after {
-    transform: rotate(-180deg);
-    transition: all 0.2s;
+    content: map-get(icons.$icons, "minus-sign") !important;
   }
 
   & .osg-collapsible-trigger::after {
     font-family: "Oslo Icons" !important;
     font-size: 1.5rem;
-    content: map-get(icons.$icons, "chevron-thin-down");
-    transition: all 0.2s;
+    content: map-get(icons.$icons, "plus-sign");
     border-radius: 50%;
     background-color: colors.$blue-light;
     right: -3.5rem;
