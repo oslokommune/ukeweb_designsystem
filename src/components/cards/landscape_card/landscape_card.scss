@@ -53,6 +53,8 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &__content {
+    display: grid;
+    align-content: center;
     @extend %osg-padding-5;
     @extend %osg-color-bg-gray-light;
 
