@@ -20,6 +20,11 @@ $red-light: #ffb4ac;
 $yellow: #f9c66b;
 $white: #fff;
 
+$green-30: #c0f6e3;
+$blue-60: #cdf5fb;
+$yellow-50: #fae1b6;
+$red-30: #f9cfca;
+
 $grayscale-10: #dadada;
 $grayscale-20: #c2c2c2;
 $grayscale-30: #a9a9a9;
@@ -59,6 +64,10 @@ $colors: (
   "grayscale-70": $grayscale-70,
   "grayscale-80": $grayscale-80,
   "grayscale-90": $grayscale-90,
+  "green-30": $green-30,
+  "blue-60": $blue-60,
+  "yellow-50": $yellow-50,
+  "red-30": $red-30,
 );
 
 @each $name, $color in $colors {
