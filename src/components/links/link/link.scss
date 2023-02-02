@@ -37,4 +37,8 @@
       color: states.$active-light !important;
     }
   }
+
+  &--no-decoration {
+    text-decoration: none;
+  }
 }
