@@ -10,23 +10,14 @@
 
   background-color: colors.$gray-light;
   border-left: 0.375rem solid colors.$grayscale-30;
-  display: grid;
-  grid-template-columns: 35px 1fr;
   word-break: break-word;
 
-  &--no-icon {
-    grid-template-columns: 1fr;
-  }
-
-  &__heading,
-  &__content {
+  &__heading {
     @extend %osg-text--size-juliett;
     @extend %osg-text--weight-medium;
-    line-height: 1.5rem;
-
-    @include breakpoints.large {
-      line-height: 1.75rem;
-    }
+    align-items: center;
+    display: flex;
+    flex-direction: row;
   }
 
   &__text {
@@ -34,16 +25,10 @@
     @extend %osg-text--weight-light;
   }
 
-  &__small-text {
+  &__date {
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
     @extend %osg-margin-top-6;
-  }
-
-  &__text,
-  &__small-text {
-    display: grid;
-    grid-column: 1 / span 2;
   }
 
   &--success {
@@ -64,15 +49,5 @@
   &--danger {
     background-color: colors.$red-30;
     border-left: 0.375rem solid colors.$red;
-  }
-
-  &__icon {
-    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
-    @extend %osg-margin-right-3;
-    line-height: 1.5rem;
-
-    @include breakpoints.large {
-      line-height: 1.75rem;
-    }
   }
 }
