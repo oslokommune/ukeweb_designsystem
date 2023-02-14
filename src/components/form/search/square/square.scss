@@ -1,0 +1,109 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/typography";
+@use "system/icons";
+@use "system/spacing";
+@use "system/units";
+@use "system/states";
+
+.osg-search-square {
+  font-size: 0;
+  position: relative;
+  width: 100%;
+
+  &__input {
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-light;
+    @extend %osg-color-text-blue-dark;
+
+    background-color: colors.$white;
+    border: 0.125rem solid colors.$blue-dark;
+    border-radius: 0;
+    display: inline-block;
+    padding: units.unit-to-rem(2) units.unit-to-rem(4);
+    width: calc(100% - 3.25rem);
+    -webkit-appearance: none;
+
+    @include breakpoints.large {
+      width: calc(100% - 3.5rem);
+    }
+
+    &:hover {
+      border: 0.125rem solid colors.$blue-state !important;
+    }
+
+    &:focus {
+      border: 0.25rem solid colors.$blue-state !important;
+      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem) !important;
+      outline: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      background: url(/node_modules/styleguide/src/assets/icons/cross.svg) no-repeat;
+      background-size: contain;
+      height: 2rem;
+      margin-right: -5px;
+      opacity: 0;
+      pointer-events: none;
+      width: 2rem;
+      -webkit-appearance: none;
+    }
+
+    &:focus::-webkit-search-cancel-button {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &::placeholder {
+      @extend %osg-color-text-grayscale-50;
+    }
+  }
+
+  &__button {
+    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-2;
+    @extend %osg-margin-left-2;
+
+    background: colors.$blue-dark;
+    border: 0.125rem solid colors.$blue-dark;
+    box-sizing: content-box;
+    color: colors.$white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    height: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    width: 1.5rem;
+    white-space: normal;
+
+    @include breakpoints.large {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    &:hover {
+      background-color: states.$hover !important;
+      border: 0.125rem solid states.$hover !important;
+      color: states.$hover-text !important;
+    }
+  }
+
+  &__button-icon {
+    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
+    line-height: 1.5rem;
+
+    @include breakpoints.large {
+      line-height: 1.75rem;
+    }
+
+    display: inline-block;
+    vertical-align: top;
+
+    &::before {
+      font-family: "Oslo Icons" !important;
+      content: map-get(icons.$icons, "magnifying-glass-small") !important;
+    }
+  }
+}
