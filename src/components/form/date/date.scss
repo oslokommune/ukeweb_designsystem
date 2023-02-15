@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 @use "system/typography";
 @use "../input/mixins";
@@ -24,7 +24,7 @@
     @include mixins.form-label;
 
     &::after {
-      content: map-get(icons.$icons, "calendar") !important;
+      content: map-get(icon-map.$icons, "calendar") !important;
       font-family: "Oslo Icons" !important;
       @extend %osg-text--size-delta;
       line-height: 1em;
@@ -91,7 +91,7 @@
         right: 5px;
 
         &::after {
-          content: map-get(icons.$icons, "chevron-thin-right") !important;
+          content: map-get(icon-map.$icons, "chevron-thin-right") !important;
           font-family: "Oslo Icons" !important;
         }
       }
@@ -99,7 +99,7 @@
         left: 5px;
 
         &::after {
-          content: map-get(icons.$icons, "chevron-thin-left") !important;
+          content: map-get(icon-map.$icons, "chevron-thin-left") !important;
           font-family: "Oslo Icons" !important;
         }
       }

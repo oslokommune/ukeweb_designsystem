@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
 @use "system/units";
@@ -30,14 +30,14 @@
       &::after {
         font-family: "Oslo Icons";
         @extend %osg-text--size-golf;
-        content: map-get(icons.$icons, "plus-sign");
+        content: map-get(icon-map.$icons, "plus-sign");
         position: absolute;
         top: 0;
         right: units.unit-to-rem(1);
       }
     }
     > *.osg-collapsible-trigger--expanded::after {
-      content: map-get(icons.$icons, "minus-sign");
+      content: map-get(icon-map.$icons, "minus-sign");
     }
   }
 
