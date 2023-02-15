@@ -19,7 +19,7 @@
 
 ## Icons
 
-If used directly in stylesheet characters might change so you need to use map `content: map-get(icons.$icons, "chevron-right")`
+If used directly in stylesheet characters might change so you need to use map `content: map-get(icon-map.$icons, "chevron-right")`
 
 ### Generate Icon Font
 

@@ -1,241 +1,158 @@
-$icons: (
-  
-    "24h": "\ea01",
-  
-    "arrow": "\ea02",
-  
-    "attachment": "\ea03",
-  
-    "automat": "\ea04",
-  
-    "backpack": "\ea05",
-  
-    "bike": "\ea06",
-  
-    "briefcase": "\ea07",
-  
-    "bullseye": "\ea08",
-  
-    "bus": "\ea09",
-  
-    "cafe": "\ea0a",
-  
-    "calendar": "\ea0b",
-  
-    "camera": "\ea0c",
-  
-    "check": "\ea0d",
-  
-    "check-big": "\ea0e",
-  
-    "check-circle": "\ea0f",
-  
-    "chevron-down": "\ea10",
-  
-    "chevron-left": "\ea11",
-  
-    "chevron-right": "\ea12",
-  
-    "chevron-thin-down": "\ea13",
-  
-    "chevron-thin-left": "\ea14",
-  
-    "chevron-thin-right": "\ea15",
-  
-    "chevron-thin-up": "\ea16",
-  
-    "chevron-up": "\ea17",
-  
-    "clock": "\ea18",
-  
-    "close": "\ea19",
-  
-    "coin-stacks": "\ea1a",
-  
-    "corona": "\ea1b",
-  
-    "crane": "\ea1c",
-  
-    "cross": "\ea1d",
-  
-    "cross-circle": "\ea1e",
-  
-    "data": "\ea1f",
-  
-    "directions": "\ea20",
-  
-    "district": "\ea21",
-  
-    "document": "\ea22",
-  
-    "download": "\ea23",
-  
-    "edit": "\ea24",
-  
-    "elcar": "\ea25",
-  
-    "email": "\ea26",
-  
-    "error-hexa": "\ea27",
-  
-    "exclamation-mark-circle": "\ea28",
-  
-    "exclamation-mark-square": "\ea29",
-  
-    "exit": "\ea2a",
-  
-    "expand": "\ea2b",
-  
-    "eye": "\ea2c",
-  
-    "facebook": "\ea2d",
-  
-    "factory-fill": "\ea2e",
-  
-    "feedback": "\ea2f",
-  
-    "filter": "\ea30",
-  
-    "fire-emblem": "\ea31",
-  
-    "graph": "\ea32",
-  
-    "grid": "\ea33",
-  
-    "handicap": "\ea34",
-  
-    "heart": "\ea35",
-  
-    "heart-plus": "\ea36",
-  
-    "home": "\ea37",
-  
-    "house-heart": "\ea38",
-  
-    "information": "\ea39",
-  
-    "instagram": "\ea3a",
-  
-    "invoice": "\ea3b",
-  
-    "language": "\ea3c",
-  
-    "linked-in": "\ea3d",
-  
-    "list": "\ea3e",
-  
-    "location-pin": "\ea3f",
-  
-    "location-pin-filled": "\ea40",
-  
-    "magnifying-glass-big": "\ea41",
-  
-    "magnifying-glass-small": "\ea42",
-  
-    "map": "\ea43",
-  
-    "map-layer": "\ea44",
-  
-    "menu": "\ea45",
-  
-    "message": "\ea46",
-  
-    "minimize": "\ea47",
-  
-    "minus-circle": "\ea48",
-  
-    "minus-circle-fill": "\ea49",
-  
-    "minus-sign": "\ea4a",
-  
-    "mobile": "\ea4b",
-  
-    "museum": "\ea4c",
-  
-    "neutral": "\ea4d",
-  
-    "new-window": "\ea4e",
-  
-    "obstacle": "\ea4f",
-  
-    "organization": "\ea50",
-  
-    "paint-bucket": "\ea51",
-  
-    "paper-plane": "\ea52",
-  
-    "park": "\ea53",
-  
-    "parking": "\ea54",
-  
-    "picture": "\ea55",
-  
-    "plus-circle": "\ea56",
-  
-    "plus-circle-fill": "\ea57",
-  
-    "plus-sign": "\ea58",
-  
-    "print": "\ea59",
-  
-    "question": "\ea5a",
-  
-    "recycling": "\ea5b",
-  
-    "sad": "\ea5c",
-  
-    "save": "\ea5d",
-  
-    "share": "\ea5e",
-  
-    "share-outline": "\ea5f",
-  
-    "signing": "\ea60",
-  
-    "sky": "\ea61",
-  
-    "smile": "\ea62",
-  
-    "sound-off": "\ea63",
-  
-    "sound-on": "\ea64",
-  
-    "success-square": "\ea65",
-  
-    "swingset": "\ea66",
-  
-    "table": "\ea67",
-  
-    "target": "\ea68",
-  
-    "thumbs-down": "\ea69",
-  
-    "thumbs-up": "\ea6a",
-  
-    "tickets": "\ea6b",
-  
-    "tool": "\ea6c",
-  
-    "trail": "\ea6d",
-  
-    "tram": "\ea6e",
-  
-    "trash": "\ea6f",
-  
-    "treatment": "\ea70",
-  
-    "twitter": "\ea71",
-  
-    "user": "\ea72",
-  
-    "warning-triangle": "\ea73",
-  
-    "water-faucet": "\ea74",
-  
-    "wifi": "\ea75",
-  
-    "zoom-minus": "\ea76",
-  
-    "zoom-plus": "\ea77",
-  
+@use "sass:map";
+@use "system/breakpoints";
+@use "system/icon-map";
+@use "system/colors";
+@use "system/units";
+
+$sizes: (
+  "alfa": (
+    "size": 4rem,
+    "size-small": 2.5rem,
+    "line-height": 5.125rem,
+    "spacing": 4,
+    "spacing-small": 2,
+  ),
+  "bravo": (
+    "size": 3.125rem,
+    "size-small": 1.875rem,
+    "line-height": 3.75rem,
+    "spacing": 2,
+    "spacing-small": 2,
+  ),
+  "charlie": (
+    "size": 3rem,
+    "size-small": 1.75rem,
+    "line-height": 3.375rem,
+    "spacing": 3,
+    "spacing-small": 2,
+  ),
+  "delta": (
+    "size": 2.375rem,
+    "size-small": 1.375rem,
+    "line-height": 2.75rem,
+    "spacing": 2,
+    "spacing-small": 2,
+  ),
+  "echo": (
+    "size": 2.25rem,
+    "size-small": 1.25rem,
+    "line-height": 2.625rem,
+    "spacing": 2,
+    "spacing-small": 2,
+  ),
+  "foxtrot": (
+    "size": 2.125rem,
+    "size-small": 1.25rem,
+    "line-height": 2.5rem,
+    "spacing": 2,
+    "spacing-small": 2,
+  ),
+  "golf": (
+    "size": 2rem,
+    "size-small": 1.125rem,
+    "line-height": 2.25rem,
+    "spacing": 2,
+    "spacing-small": 2,
+  ),
+  "hotel": (
+    "size": 1.75rem,
+    "size-small": 1rem,
+    "line-height": 2.125rem,
+    "spacing": 1,
+    "spacing-small": 1,
+  ),
+  "india": (
+    "size": 1.75rem,
+    "size-small": 1rem,
+    "line-height": 2rem,
+    "spacing": 1,
+    "spacing-small": 1,
+  ),
+  "juliett": (
+    "size": 1.5rem,
+    "size-small": 0.875rem,
+    "line-height": 1.75rem,
+    "spacing": 1,
+    "spacing-small": 1,
+  ),
+  "kilo": (
+    "size": 1.375rem,
+    "size-small": 0.75rem,
+    "line-height": 1.5rem,
+    "spacing": 1,
+    "spacing-small": 1,
+  ),
+  "lima": (
+    "size": 1.25rem,
+    "size-small": 0.625rem,
+    "line-height": 1.375rem,
+    "spacing": 1,
+    "spacing-small": 1,
+  ),
 );
+
+@each $name, $content in icon-map.$icons {
+  %osg-icon--#{$name} {
+    font-family: "Oslo Icons";
+
+    &:before {
+      content: "#{$content}";
+    }
+  }
+}
+
+@each $name, $color in colors.$colors {
+  %osg-icon--color-#{$name} {
+    color: $color;
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name} {
+    font-size: map.get($sizes, $name, "size");
+    line-height: map.get($sizes, $name, "line-height");
+    margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      font-size: map.get($sizes, $name, "size");
+      line-height: map.get($sizes, $name, "line-height");
+      margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+    }
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      font-size: map.get($sizes, $name, "size");
+      line-height: map.get($sizes, $name, "line-height");
+      margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+    }
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name}--small {
+    font-size: map.get($sizes, $name, "size-small");
+    line-height: map.get($sizes, $name, "line-height");
+    margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name}--align-right {
+    margin-right: 0;
+    margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing"));
+  }
+}
+
+@each $name, $content in $sizes {
+  %osg-icon--size-#{$name}--align-right--small {
+    margin-right: 0;
+    margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
+  }
+}

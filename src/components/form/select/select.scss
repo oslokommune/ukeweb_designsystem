@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 @use "components/form/input/mixins";
 
@@ -30,7 +30,7 @@
 
     &:after {
       color: inherit;
-      content: map-get(icons.$icons, "chevron-thin-down");
+      content: map-get(icon-map.$icons, "chevron-thin-down");
       font-family: "Oslo Icons";
       font-size: 2rem;
       pointer-events: none;

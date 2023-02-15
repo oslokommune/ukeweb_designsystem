@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
 
@@ -49,13 +49,13 @@
   }
 
   & .osg-collapsible-trigger--expanded::after {
-    content: map-get(icons.$icons, "minus-sign") !important;
+    content: map-get(icon-map.$icons, "minus-sign") !important;
   }
 
   & .osg-collapsible-trigger::after {
     font-family: "Oslo Icons" !important;
     font-size: 1.5rem;
-    content: map-get(icons.$icons, "plus-sign");
+    content: map-get(icon-map.$icons, "plus-sign");
     border-radius: 50%;
     background-color: colors.$blue-light;
     right: -3.5rem;

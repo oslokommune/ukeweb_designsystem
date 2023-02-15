@@ -1,7 +1,7 @@
 @use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 @use "system/units";
 @use "system/states";
@@ -103,7 +103,7 @@
 
     &::before {
       font-family: "Oslo Icons" !important;
-      content: map-get(icons.$icons, "magnifying-glass-small") !important;
+      content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
     }
   }
 
