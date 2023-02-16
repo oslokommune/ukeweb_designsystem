@@ -73,13 +73,7 @@ export default {
 
     i18n: {
       required: true,
-      type: Object,
-      default: () => {
-        return {
-          previousButton: "",
-          nextButton: "",
-        };
-      },
+      type: Object
     },
   },
   data() {
