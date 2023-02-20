@@ -20,6 +20,7 @@
     border: 0.125rem solid colors.$yellow;
     border-radius: 0;
     display: inline-block;
+    font-family: inherit;
     padding: units.unit-to-rem(2) units.unit-to-rem(4);
     width: calc(100% - 2.75rem);
     -webkit-appearance: none;
@@ -29,12 +30,12 @@
     }
 
     &:hover {
-      border: 0.125rem solid colors.$blue-state !important;
+      border: 0.125rem solid colors.$blue-state;
     }
 
     &:focus {
-      border: 0.25rem solid colors.$blue-state !important;
-      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem) !important;
+      border: 0.25rem solid colors.$blue-state;
+      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
       outline: none;
     }
 
