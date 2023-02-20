@@ -18,7 +18,9 @@
 @use "form/fieldset/fieldset";
 @use "form/input/input";
 @use "form/radio/radio";
-@use "form/search/search";
+@use "form/search/circle/circle";
+@use "form/search/inline/inline";
+@use "form/search/square/square";
 @use "form/search_seasons/search_seasons";
 @use "form/select/select";
 @use "form/switch/switch";

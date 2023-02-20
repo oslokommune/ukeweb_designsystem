@@ -5,7 +5,7 @@ import "./form/checkbox/checkbox.init.js";
 import "./form/date/date.js";
 import "./form/input/input.init.js";
 import "./form/radio/radio.init.js";
-import "./form/search/search.init.js";
+import "./form/search/inline/inline.init.js";
 import "./form/search_seasons/search_seasons.init.js";
 import "./form/textarea/textarea.init.js";
 import "./modal/modal.init.js";

@@ -1,36 +1,15 @@
 import Vue from "vue";
-import OsgSearch from "./search.vue";
-
-export function OsgSearchJs(triggerDropdownId, inputId, dropdownId) {
-  let trigger = document.getElementById(triggerDropdownId);
-
-  if (!trigger) {
-    return;
-  }
-
-  trigger.addEventListener("change", function () {
-    let searchInput = document.getElementById(inputId);
-    let dropdown = document.getElementById(dropdownId);
-
-    if (this.checked) {
-      dropdown.style.display = "block";
-      searchInput.setAttribute("aria-expanded", "true");
-    } else {
-      dropdown.style.display = "none";
-      searchInput.setAttribute("aria-expanded", "false");
-    }
-  });
-}
+import OsgSearchInline from "./inline.vue";
 
 export function OsgSearchVue() {
-  const vueElements = ["osg-search-vue-1", "osg-search-vue-2"];
+  const vueElements = ["osg-search-inline-vue-1", "osg-search-inline-vue-2"];
   vueElements.forEach((element) => {
     let osgSearchPlaceholder = document.getElementById(element);
     if (osgSearchPlaceholder) {
       new Vue({
         el: osgSearchPlaceholder,
         components: {
-          OsgSearch,
+          OsgSearchInline,
         },
         data: () => ({
           value: "h",
@@ -49,10 +28,6 @@ export function OsgSearchVue() {
                   },
                   {
                     text: "Hello",
-                  },
-                  {
-                    text: "Halo",
-                    subtext: "Greetings",
                   },
                   {
                     text: "Halo",

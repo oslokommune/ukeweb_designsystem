@@ -1,30 +1,28 @@
 <template>
-  <div ref="search" class="osg-search osg-search--inline">
-    <div class="osg-search__form">
-      <label class="osg-search__label"
-        >{{ label }}
-        <input
-          v-on:input="inputChange($event)"
-          v-on:keyup.enter="submit($event.target.value)"
-          v-on:keyup.down="setFocus($event)"
-          v-on:keyup.up="setFocus($event)"
-          v-on:focus="resetIndex()"
-          :value="value"
-          :aria-expanded="items.length ? 'true' : 'false'"
-          class="osg-search__input"
-          type="search"
-          ref="input"
-          autocomplete="off"
-          :placeholder="placeholder"
-          aria-haspopup="listbox"
-          :aria-owns="id"
-          role="combobox"
-          aria-autocomplete="list"
-          :aria-activedescendant="id"
-        />
-      </label>
-    </div>
-    <ul v-show="items.length" ref="list" class="osg-search__dropdown" :class="{ 'osg-search__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
+  <div ref="search" class="osg-search-inline">
+    <label class="osg-search-inline__label"
+      >{{ label }}
+      <input
+        v-on:input="inputChange($event)"
+        v-on:keyup.enter="submit($event.target.value)"
+        v-on:keyup.down="setFocus($event)"
+        v-on:keyup.up="setFocus($event)"
+        v-on:focus="resetIndex()"
+        :value="value"
+        :aria-expanded="items.length ? 'true' : 'false'"
+        class="osg-search-inline__input"
+        type="search"
+        ref="input"
+        autocomplete="off"
+        :placeholder="placeholder"
+        aria-haspopup="listbox"
+        :aria-owns="id"
+        role="combobox"
+        aria-autocomplete="list"
+        :aria-activedescendant="id"
+      />
+    </label>
+    <ul v-show="items.length" ref="list" class="osg-search-inline__dropdown" :class="{ 'osg-search-inline__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
       <li
         v-for="(item, itemIndex) of items"
         :tabindex="-1"
@@ -35,8 +33,8 @@
         v-on:keyup.down.prevent.stop="setFocus($event)"
         v-on:keyup.up.prevent.stop="setFocus($event)"
         v-on:keyup.esc.prevent="resetAndFocus()"
-        :class="{ 'osg-search__dropdown__item--focus': itemIndex === index }"
-        class="osg-search__dropdown__item"
+        :class="{ 'osg-search-inline__dropdown__item--focus': itemIndex === index }"
+        class="osg-search-inline__dropdown__item"
         role="option"
         :aria-selected="itemIndex === index ? 'true' : 'false'"
       >
@@ -50,7 +48,7 @@
 
 <script>
 export default {
-  name: "OsgSearch",
+  name: "OsgSearchInline",
 
   props: {
     id: {
