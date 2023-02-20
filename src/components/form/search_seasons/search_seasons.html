@@ -1,362 +1,259 @@
+<!-- Overview mode -->
 <div class="osg-devtools-nondevmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
       <p class="osg-devtools-text-preset-3">Colors in the element is picked based on four defined color themes. The idea is to select the theme according to the colors in the pictures. It is used as a big visible search.</p>
     </div>
+    <!-- Default -->
     <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-1">Default</h2>
-    </div>
-    <div class="osg-grid__column--12">
-      <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-1">
-        <input type="checkbox" class="osg-switch__input components-form-search-seasons-dropdown" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="dropdown-text-1">Dropdown</span>
-      </label>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-search-seasons">
-            <div class="osg-search-seasons__main">
-              <div class="osg-search-seasons__content">
-                <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
-                <div class="osg-search-seasons__search">
-                  <form class="osg-search-seasons__form">
-                    <div class="osg-search-seasons__input-wrapper" id="osg-search__form-1" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results-1">
+          <form action="" method="GET">
+            <div class="osg-search-seasons">
+              <div class="osg-search-seasons__main">
+                <div class="osg-search-seasons__content">
+                  <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
+                  <div class="osg-search-seasons__search">
+                    <div class="osg-search-seasons__input-wrapper" id="osg-search__form-1">
                       <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" autocomplete="off" />
-                      <ul class="osg-search-seasons__dropdown" role="listbox" id="id-results-1" aria-label="search results">
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                      </ul>
                     </div>
                     <button type="submit" class="osg-search-seasons__button">
                       <span class="osg-sr-only">Search</span>
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
+              <div class="osg-search-seasons__image">
+                <figure class="osg-image osg-image--shape osg-image--shape-top-right osg-image--shape-red">
+                  <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg" alt="Image description" />
+                </figure>
+              </div>
             </div>
-            <div class="osg-search-seasons__image">
-              <figure class="osg-image osg-image--shape osg-image--shape-top-right osg-image--shape-red">
-                <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg" alt="Image description" />
-              </figure>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <!-- /Default -->
+
+    <!-- Colors and shapes -->
     <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-1">Colors and shapes</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-search-seasons osg-search-seasons--red">
-            <div class="osg-search-seasons__main">
-              <div class="osg-search-seasons__content">
-                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
-                <div class="osg-search-seasons__search">
-                  <form class="osg-search-seasons__form">
+          <form action="" method="GET">
+            <div class="osg-search-seasons osg-search-seasons--red">
+              <div class="osg-search-seasons__main">
+                <div class="osg-search-seasons__content">
+                  <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
+                  <div class="osg-search-seasons__search">
                     <div class="osg-search-seasons__input-wrapper">
-                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                      <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                      </ul>
+                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" aria-describedby="osg-search-seasons-id-no-result" />
+                      <div class="osg-search-seasons__container">
+                        <span class="osg-search-seasons__no-result" id="osg-search-seasons-id-no-result">No result</span>
+                      </div>
                     </div>
                     <button type="submit" class="osg-search-seasons__button">
                       <span class="osg-sr-only">Search</span>
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
+              <div class="osg-search-seasons__image">
+                <figure class="osg-image osg-image--shape">
+                  <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/21.jpg" alt="Image description" />
+                </figure>
+              </div>
             </div>
-            <div class="osg-search-seasons__image">
-              <figure class="osg-image osg-image--shape">
-                <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/21.jpg" alt="Image description" />
-              </figure>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <!-- /Colors and shapes -->
+
+    <!-- Blue dark -->
     <div class="osg-grid__column--12">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-search-seasons osg-search-seasons--blue-dark">
-            <div class="osg-search-seasons__main">
-              <div class="osg-search-seasons__content">
-                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
-                <div class="osg-search-seasons__search">
-                  <form class="osg-search-seasons__form">
+          <form action="" method="GET">
+            <div class="osg-search-seasons osg-search-seasons--blue-dark">
+              <div class="osg-search-seasons__main">
+                <div class="osg-search-seasons__content">
+                  <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
+                  <div class="osg-search-seasons__search">
                     <div class="osg-search-seasons__input-wrapper">
-                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                      <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                        <li class="osg-search-seasons__dropdown__item" href="javascript:void(0)" role="option">Item A</li>
-                        <li class="osg-search-seasons__dropdown__item" href="javascript:void(0)" role="option">Item B</li>
-                        <li class="osg-search-seasons__dropdown__item" href="javascript:void(0)" role="option">Item C</li>
-                        <li class="osg-search-seasons__dropdown__item" href="javascript:void(0)" role="option">Item D</li>
-                      </ul>
+                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" aria-describedby="osg-search-seasons-id-missing-input" />
+                      <div class="osg-search-seasons__container">
+                        <span class="osg-search-seasons__missing-input" id="osg-search-seasons-id-missing-input">Missing input</span>
+                      </div>
                     </div>
                     <button type="submit" class="osg-search-seasons__button">
                       <span class="osg-sr-only">Search</span>
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
+              <div class="osg-search-seasons__image">
+                <img class="osg-image osg-image--circle" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/3.jpg" alt="Image description" />
+              </div>
             </div>
-            <div class="osg-search-seasons__image">
-              <img class="osg-image osg-image--circle" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/3.jpg" alt="Image description" />
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <!-- /Blue dark -->
+
+    <!-- Green dark -->
     <div class="osg-grid__column--12">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-search-seasons osg-search-seasons--green-dark">
-            <div class="osg-search-seasons__main">
-              <div class="osg-search-seasons__content">
-                <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
-                <div class="osg-search-seasons__search">
-                  <form class="osg-search-seasons__form">
+          <form action="" method="GET">
+            <div class="osg-search-seasons osg-search-seasons--green-dark">
+              <div class="osg-search-seasons__main">
+                <div class="osg-search-seasons__content">
+                  <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
+                  <div class="osg-search-seasons__search">
                     <div class="osg-search-seasons__input-wrapper">
-                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                      <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                        <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                      </ul>
+                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-seasons-suggestions" role="combobox" />
+                      <div class="osg-search-seasons__container">
+                        <ul class="osg-search-seasons__dropdown osg-search-seasons__dropdown--compact" role="listbox" id="osg-search-seasons-suggestions">
+                          <li class="osg-search-seasons__item" role="option">
+                            <span class="osg-search-seasons__suggestion">Suggestion A</span>
+                          </li>
+                          <li class="osg-search-seasons__item" role="option">
+                            <span class="osg-search-seasons__suggestion">Suggestion B</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                     <button type="submit" class="osg-search-seasons__button">
                       <span class="osg-sr-only">Search</span>
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
+              <div class="osg-search-seasons__image">
+                <figure class="osg-image osg-image--shape osg-image--shape-bottom-right osg-image--shape-green-light">
+                  <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" alt="Image description" />
+                </figure>
+              </div>
             </div>
-            <div class="osg-search-seasons__image">
-              <figure class="osg-image osg-image--shape osg-image--shape-bottom-right osg-image--shape-green-light">
-                <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" alt="Image description" />
-              </figure>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <!-- /Green dark -->
+
+    <!-- Result -->
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Vue component</h2>
-    </div>
-    <div class="osg-grid__column--12">
+      <h2 class="osg-devtools-text-preset-1">Result</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div id="osg-search-seasons">
-            <osg-search-seasons
-              :value="value"
-              :items="items"
-              :item-list-scroll="true"
-              :heading="season.heading"
-              :action="season.endpoint"
-              :input-name="season.input.name"
-              :id="season.input.id"
-              :input-placeholder="season.input.placeholder"
-              :image-url="season.heroFigure.defaultUrl"
-              :image-alt="season.heroFigure.alt"
-              :theme="season.theme"
-              :figure-shape="season.imageShape"
-              :figure-shape-position="season.shapePosition"
-              :hidden-fields="season.hiddenFields"
-              :aria-label="season.ariaLabel"
-              v-on:item-focus="event('item-focus', $event)"
-              v-on:input-change="event('input-change', $event)"
-              v-on:input-enter="event('input-enter', $event)"
-              v-on:submit="event('submit', $event)"
-              v-on:itemlist-blur="event('itemlist-blur', $event)"
-            >
-              <template #heading=" { heading } ">
-                <h3 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large" v-html="heading"></h3>
-              </template>
-              <template #listitem="{ item }">
-                <span class="osg-text--size-kilo, osg-text--size-juliett-breakpoint-large osg-text--weight-light">{{ item.text }}</span>
-                <span v-if="item.subtext" class="osg-text-7 osg-text--size-lima osg-text--weight-light">{{ item.subtext }}</span>
-              </template>
-            </osg-search-seasons>
-          </div>
+          <form action="" method="GET">
+            <div class="osg-search-seasons">
+              <div class="osg-search-seasons__main">
+                <div class="osg-search-seasons__content">
+                  <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
+                  <div class="osg-search-seasons__search">
+                    <div class="osg-search-seasons__input-wrapper" id="osg-search__form-1">
+                      <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-seasons-result" role="combobox" />
+                      <div class="osg-search-seasons__container">
+                        <ul class="osg-search-seasons__dropdown" role="listbox" id="osg-search-seasons-result">
+                          <li class="osg-search-seasons__item" role="option">
+                            <a href="javascript:void(0)" class="osg-search-seasons__link">
+                              <h3 class="osg-search-seasons__heading">Heading one</h3>
+                              <p class="osg-search-seasons__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </a>
+                          </li>
+                          <li class="osg-search-seasons__item" role="option">
+                            <a href="javascript:void(0)" class="osg-search-seasons__link">
+                              <h3 class="osg-search-seasons__heading">Heading two</h3>
+                              <p class="osg-search-seasons__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </a>
+                          </li>
+                          <li class="osg-search-seasons__item osg-search-seasons__item--divider" role="option"></li>
+                          <li class="osg-search-seasons__item osg-search-seasons__item--footer" role="option">
+                            <p>Footer content</p>
+                            <p><a href="javascript:void(0)" class="osg-link osg-text--weight-medium">Footer link</a></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button type="submit" class="osg-search-seasons__button">
+                      <span class="osg-sr-only">Search</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="osg-search-seasons__image">
+                <figure class="osg-image osg-image--shape osg-image--shape-top-right osg-image--shape-red">
+                  <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg" alt="Image description" />
+                </figure>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
+    <!-- /Result -->
+
+    <div class="osg-grid__column osg-grid__column--12">
+      <div class="osg-margin-vertical-25">&nbsp;</div>
+      <div class="osg-margin-vertical-5">&nbsp;</div>
     </div>
   </div>
 </div>
 
+<!-- Developer mode -->
 <div class="osg-devtools-devmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column osg-grid__column--12 osg-padding-bottom-none">
+    <!-- Default -->
+    <div class="osg-grid__column osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-2">Default</h2>
-    </div>
-    <div class="osg-grid__column--12">
-      <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text-2">
-        <input type="checkbox" class="osg-switch__input components-form-search-seasons-dropdown" checked="checked" />
-        <span class="osg-switch__background"></span>
-        <span class="osg-switch__slider"></span>
-        <span class="osg-switch__label-text" id="dropdown-text-2">Dropdown</span>
-      </label>
-      <div class="osg-search-seasons">
-        <div class="osg-search-seasons__main">
-          <div class="osg-search-seasons__content">
-            <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
-            <div class="osg-search-seasons__search">
-              <form class="osg-search-seasons__form">
-                <div class="osg-search-seasons__input-wrapper" id="osg-search__form-2" aria-expanded="true" role="combobox" aria-haspopup="listbox" aria-owns="id-results">
-                  <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" autocomplete="off" />
-                  <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                  </ul>
+      <form action="" method="GET">
+        <div class="osg-search-seasons">
+          <div class="osg-search-seasons__main">
+            <div class="osg-search-seasons__content">
+              <h1 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h1>
+              <div class="osg-search-seasons__search">
+                <div class="osg-search-seasons__input-wrapper" id="osg-search__form-1">
+                  <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-seasons-result" role="combobox" />
+                  <div class="osg-search-seasons__container">
+                    <ul class="osg-search-seasons__dropdown" role="listbox" id="osg-search-seasons-result">
+                      <li class="osg-search-seasons__item" role="option">
+                        <a href="javascript:void(0)" class="osg-search-seasons__link">
+                          <h3 class="osg-search-seasons__heading">Heading one</h3>
+                          <p class="osg-search-seasons__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </a>
+                      </li>
+                      <li class="osg-search-seasons__item" role="option">
+                        <a href="javascript:void(0)" class="osg-search-seasons__link">
+                          <h3 class="osg-search-seasons__heading">Heading two</h3>
+                          <p class="osg-search-seasons__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </a>
+                      </li>
+                      <li class="osg-search-seasons__item osg-search-seasons__item--divider" role="option"></li>
+                      <li class="osg-search-seasons__item osg-search-seasons__item--footer" role="option">
+                        <p>Footer content</p>
+                        <p><a href="javascript:void(0)" class="osg-link osg-text--weight-medium">Footer link</a></p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <button type="submit" class="osg-search-seasons__button">
                   <span class="osg-sr-only">Search</span>
                 </button>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="osg-search-seasons__image">
-          <figure class="osg-image osg-image--shape osg-image--shape-top-right osg-image--shape-red">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg" alt="Image description" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Colors and shapes</h2>
-      <div class="osg-search-seasons osg-search-seasons--red">
-        <div class="osg-search-seasons__main">
-          <div class="osg-search-seasons__content">
-            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
-            <div class="osg-search-seasons__search">
-              <form class="osg-search-seasons__form">
-                <div class="osg-search-seasons__input-wrapper">
-                  <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                  <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                  </ul>
-                </div>
-                <button type="submit" class="osg-search-seasons__button">
-                  <span class="osg-sr-only">Search</span>
-                </button>
-              </form>
-            </div>
+          <div class="osg-search-seasons__image">
+            <figure class="osg-image osg-image--shape osg-image--shape-top-right osg-image--shape-red">
+              <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/1.jpg" alt="Image description" />
+            </figure>
           </div>
         </div>
-        <div class="osg-search-seasons__image">
-          <figure class="osg-image osg-image--shape">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/21.jpg" alt="Image description" />
-          </figure>
-        </div>
-      </div>
+      </form>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-search-seasons osg-search-seasons--blue-dark">
-        <div class="osg-search-seasons__main">
-          <div class="osg-search-seasons__content">
-            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.<br />Duis neque orci faucibus?</h2>
-            <div class="osg-search-seasons__search">
-              <form class="osg-search-seasons__form">
-                <div class="osg-search-seasons__input-wrapper">
-                  <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                  <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                  </ul>
-                </div>
-                <button type="submit" class="osg-search-seasons__button">
-                  <span class="osg-sr-only">Search</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="osg-search-seasons__image">
-          <img class="osg-image osg-image--circle" src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/3.jpg" alt="Image description" />
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-search-seasons osg-search-seasons--green-dark">
-        <div class="osg-search-seasons__main">
-          <div class="osg-search-seasons__content">
-            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Aliquam erat volutpat.</h2>
-            <h2 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large">Duis neque orci faucibus?</h2>
-            <div class="osg-search-seasons__search">
-              <form class="osg-search-seasons__form">
-                <div class="osg-search-seasons__input-wrapper">
-                  <input type="search" class="osg-search-seasons__input" placeholder="Search" aria-label="Search" />
-                  <ul class="osg-search-seasons__dropdown" role="listbox" aria-label="search results">
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item A</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item B</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item C</li>
-                    <li class="osg-search-seasons__dropdown__item" role="option">Item D</li>
-                  </ul>
-                </div>
-                <button type="submit" class="osg-search-seasons__button">
-                  <span class="osg-sr-only">Search</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="osg-search-seasons__image">
-          <figure class="osg-image osg-image--shape osg-image--shape-bottom-right osg-image--shape-green-light">
-            <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/800x800/31.jpg" alt="Image description" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Vue component</h2>
-      <div id="osg-search-seasons2">
-        <osg-search-seasons
-          :value="value"
-          :items="items"
-          :item-list-scroll="true"
-          :heading="season.heading"
-          :action="season.endpoint"
-          :input-name="season.input.name"
-          :id="season.input.id"
-          :input-placeholder="season.input.placeholder"
-          :image-url="season.heroFigure.defaultUrl"
-          :image-alt="season.heroFigure.alt"
-          :theme="season.theme"
-          :figure-shape="season.imageShape"
-          :figure-shape-position="season.shapePosition"
-          :hidden-fields="season.hiddenFields"
-          :aria-label="season.ariaLabel"
-          v-on:item-focus="event('item-focus', $event)"
-          v-on:input-change="event('input-change', $event)"
-          v-on:input-enter="event('input-enter', $event)"
-          v-on:submit="event('submit', $event)"
-          v-on:itemlist-blur="event('itemlist-blur', $event)"
-        >
-          <template #heading=" { heading } ">
-            <h3 class="osg-text--size-golf osg-text--size-delta-breakpoint-medium osg-text--size-charlie-breakpoint-large" v-html="heading"></h3>
-          </template>
-          <template #listitem="{ item }">
-            <span class="osg-text--size-kilo, osg-text--size-juliett-breakpoint-large osg-text--weight-light">{{ item.text }}</span>
-            <span v-if="item.subtext" class="osg-text-7 osg-text--size-lima osg-text--weight-light">{{ item.subtext }}</span>
-          </template>
-        </osg-search-seasons>
-      </div>
-    </div>
+    <!-- /Default -->
   </div>
 </div>

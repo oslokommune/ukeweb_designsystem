@@ -9,11 +9,6 @@
 .osg-search-seasons {
   display: flex;
 
-  input[type="search"] {
-    background-color: colors.$white;
-    -webkit-appearance: none;
-  }
-
   &__main {
     background-color: colors.$yellow;
     color: colors.$blue-dark;
@@ -40,6 +35,7 @@
 
   &__image {
     @extend %osg-margin-left-4, %osg-margin-left-8-breakpoint-medium;
+
     display: none;
     flex: 1 0;
     line-height: 0;
@@ -56,9 +52,7 @@
 
   &__search {
     @extend %osg-margin-top-8;
-  }
 
-  &__form {
     display: flex;
   }
 
@@ -69,28 +63,36 @@
 
   &__input {
     @extend %osg-padding-3;
-    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large, %osg-text--weight-light;
-    border: 2px solid colors.$white !important;
+    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large;
+    @extend %osg-text--weight-light;
+
+    background-color: colors.$white;
+    border: 0.125rem solid colors.$white;
     border-radius: 0;
     color: colors.$blue-dark;
     font-family: inherit;
     outline: none;
     width: 100%;
+    -webkit-appearance: none;
 
     &:hover {
-      border: 2px solid colors.$blue-state !important;
+      border: 0.125rem solid colors.$blue-state !important;
     }
 
     &:focus {
-      border: 4px solid colors.$blue-state !important;
-      padding: calc(units.unit-to-rem(3) - 2px);
+      border: 0.25rem solid colors.$blue-state !important;
+      padding: calc(units.unit-to-rem(3) - 0.125rem);
       outline: none;
+    }
+
+    &::placeholder {
+      @extend %osg-color-text-grayscale-50;
     }
   }
 
   &__button {
     background-color: colors.$red;
-    border: 2px solid colors.$red;
+    border: 0.125rem solid colors.$red;
     border-radius: 50%;
     box-sizing: content-box;
     cursor: pointer;
@@ -114,53 +116,111 @@
     &:hover,
     &:focus {
       background-color: states.$hover !important;
-      border: 2px solid states.$hover !important;
+      border: 0.125rem solid states.$hover !important;
       color: states.$hover-text !important;
     }
   }
 
-  &__dropdown {
-    @extend %osg-padding-vertical-4;
-    @extend %osg-text--size-kilo, %osg-text--weight-light, %osg-text--size-juliett-breakpoint-large;
+  &__container {
+    @extend %osg-color-text-blue-dark;
+
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;
-    list-style: none;
     right: 0;
+    list-style: none;
     position: absolute;
     z-index: 99999;
+  }
 
-    &__item {
-      @extend %osg-padding-vertical-1, %osg-padding-horizontal-4;
-      display: flex;
-      flex-direction: column;
-      color: colors.$blue-dark;
-      text-decoration: none;
+  &__no-result {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-4;
 
-      &:hover,
-      &:focus,
-      &--focus {
-        background-color: colors.$gray-light;
-        color: states.$hover !important;
-        text-decoration: underline;
-        cursor: pointer;
-      }
+    display: block;
+  }
 
-      a {
-        text-decoration: none;
+  &__missing-input {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-text--align-center;
+    @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
 
-        &:hover,
-        &:focus {
-          @extend %osg-padding-vertical-0, %osg-padding-horizontal-4;
-          background-color: colors.$gray-light;
-          border-top: 5px solid colors.$gray-light;
-          border-bottom: 5px solid colors.$gray-light;
-          color: states.$hover !important;
-          margin: -5px -15px;
-          text-decoration: underline;
-        }
+    display: block;
+  }
+
+  &__dropdown {
+    &--compact {
+      @extend %osg-padding-vertical-4;
+
+      & .osg-search-seasons__suggestion {
+        @extend %osg-padding-vertical-1;
       }
     }
+  }
+
+  &__item {
+    &--divider {
+      background-color: colors.$gray;
+      height: 0.0625rem;
+    }
+
+    &--footer {
+      @extend %osg-text--size-lima;
+      @extend %osg-text--weight-regular;
+      @extend %osg-padding-4;
+    }
+  }
+
+  &__suggestion {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-horizontal-4;
+
+    display: block;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-4;
+
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: none;
+    }
+
+    &:hover .osg-search-seasons__heading,
+    &:focus .osg-search-seasons__heading,
+    &--focus .osg-search-seasons__heading {
+      text-decoration: underline;
+    }
+  }
+
+  &__heading {
+    @extend %osg-text--size-juliett;
+    @extend %osg-text--weight-medium;
+  }
+
+  &__text {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-light;
+    @extend %osg-margin-top-1;
   }
 
   &--red {
@@ -170,6 +230,7 @@
 
     & .osg-search-seasons__button {
       background-color: colors.$yellow;
+      border-color: colors.$yellow;
       color: colors.$blue-dark;
     }
   }
