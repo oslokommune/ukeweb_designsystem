@@ -72,26 +72,10 @@ export default {
     },
 
     i18n: {
-      type: Object,
-      default: () => {
-        return {
-          previousButton: "Show previous image",
-          nextButton: "Show next image",
-        };
-      },
-    },
-
-    next: {
-      type: String,
-      default: "Next image",
-    },
-
-    prev: {
-      type: String,
-      default: "Previous image",
+      required: true,
+      type: Object
     },
   },
-
   data() {
     return {
       slides: [],
