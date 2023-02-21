@@ -16,7 +16,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
     @include breakpoints.medium {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(9, 1fr);
     }
 
     &:hover {
@@ -32,7 +32,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
   &__media {
     @include breakpoints.medium {
-      grid-column: 1/8;
+      grid-column: 1/-5;
     }
 
     img {
@@ -62,9 +62,15 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
 
     @include breakpoints.medium {
       width: 100%;
-      grid-column: 8/-1;
+      grid-column: -5/-1;
     }
   }
+  
+  [data-no-image] &__content {
+    @include breakpoints.medium {
+      grid-column: 10/1;
+    }
+  }  
 
   &__label {
     @extend %osg-text--size-lima;
@@ -167,5 +173,6 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
         }
       }
     }
-  }
+  }  
 }
+
