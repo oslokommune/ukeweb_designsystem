@@ -2,7 +2,7 @@
 @use "system/colors";
 @use "system/spacing";
 @use "system/typography";
-@use "system/icon-map";
+@use "system/icons";
 
 .osg-status-message {
   @extend %osg-padding-horizontal-6, %osg-padding-vertical-4;
@@ -51,8 +51,8 @@
   }
 
   &__icon {
-    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
-    @extend %osg-margin-right-3;
+    @extend %osg-icon--size-kilo, %osg-icon--size-juliett-breakpoint-medium;
+    @extend %osg-padding-right-2;
 
     line-height: 1.5rem;
     display: inline-block;
