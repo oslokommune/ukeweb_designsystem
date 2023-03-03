@@ -14,7 +14,6 @@
   word-break: break-word;
 
   &__heading {
-    @extend %osg-text--size-juliett;
     @extend %osg-text--weight-medium;
     @extend %osg-margin-bottom-4;
     display: inline-block;
@@ -51,7 +50,7 @@
   }
 
   &__icon {
-    @extend %osg-icon--size-kilo, %osg-icon--size-juliett-breakpoint-medium;
+    @extend %osg-icon--size-kilo, %osg-icon--size-juliett-breakpoint-large;
     @extend %osg-padding-right-2;
 
     line-height: 1.5rem;
