@@ -96,21 +96,21 @@
   }
 
   &--open {
-    background-color: colors.$yellow;
-
-    @include breakpoints.medium {
-      background-color: colors.$blue-dark;
-      color: colors.$white;
-    }
+    background-color: colors.$blue-dark;
+    border-color: colors.$blue-dark;
+    color: colors.$white;
 
     &:active,
     &:focus,
     &:hover {
-      background-color: colors.$yellow;
+      background-color: colors.$blue-dark;
+      border-color: colors.$blue-dark;
+      color: colors.$white;
+    }
 
-      @include breakpoints.medium {
-        background-color: colors.$blue-dark;
-        color: colors.$white;
+    & .osg-button-menu__icon {
+      &::before {
+        content: map-get(icon-map.$icons, "close") !important;
       }
     }
   }
