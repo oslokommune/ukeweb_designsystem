@@ -1,7 +1,7 @@
 @use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 @use "system/units";
 @use "system/states";
@@ -15,7 +15,7 @@
     @extend %osg-text--size-delta;
 
     bottom: units.unit-to-rem(2);
-    content: map-get(icons.$icons, "magnifying-glass-small") !important;
+    content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
     font-family: "Oslo Icons" !important;
     line-height: 1em;
     position: absolute;

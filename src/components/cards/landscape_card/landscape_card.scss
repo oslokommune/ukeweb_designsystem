@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 @use "system/typography";
 @use "system/states";
@@ -157,7 +157,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       &:hover::after {
         font-family: "Oslo Icons" !important;
         font-size: 0.6em;
-        content: map-get(icons.$icons, "new-window") !important;
+        content: map-get(icon-map.$icons, "new-window") !important;
         display: inline-block;
         margin-left: 0.4em;
       }

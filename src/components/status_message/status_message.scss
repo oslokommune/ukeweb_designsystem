@@ -2,6 +2,7 @@
 @use "system/colors";
 @use "system/spacing";
 @use "system/typography";
+@use "system/icon-map";
 
 .osg-status-message {
   @extend %osg-padding-horizontal-6, %osg-padding-vertical-4;

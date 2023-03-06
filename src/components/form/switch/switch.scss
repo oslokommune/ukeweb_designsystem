@@ -1,7 +1,7 @@
 @use "components/form/input/mixins";
 @use "system/colors";
 @use "system/typography";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/spacing";
 
 @mixin switch-states() {
@@ -48,7 +48,7 @@
   }
 
   &__input:checked ~ &__slider::before {
-    content: map-get(icons.$icons, "check");
+    content: map-get(icon-map.$icons, "check");
   }
 
   &__input:disabled ~ &__background,

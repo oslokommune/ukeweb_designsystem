@@ -1,7 +1,7 @@
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
-@use "system/icons";
+@use "system/icon-map";
 @use "system/states";
 
 .osg-pagination {
@@ -100,14 +100,14 @@
   &__previous {
     &::before,
     &:hover::before {
-      content: map-get(icons.$icons, "chevron-thin-left") !important;
+      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
     }
   }
 
   &__next {
     &::before,
     &:hover::before {
-      content: map-get(icons.$icons, "chevron-thin-right") !important;
+      content: map-get(icon-map.$icons, "chevron-thin-right") !important;
     }
   }
 }
