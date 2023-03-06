@@ -66,11 +66,13 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
   
-  [data-no-image] &__content {
-    @include breakpoints.medium {
-      grid-column: 10/1;
+ &--no-image {
+    & .osg-landscape-card__content {
+      @include breakpoints.medium {
+        grid-column: 10/1;
+      }      
     }
-  }  
+  }
 
   &__label {
     @extend %osg-text--size-lima;
