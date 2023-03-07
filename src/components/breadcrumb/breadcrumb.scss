@@ -40,7 +40,7 @@
 
     &:visited,
     &--visited {
-      color: colors.$blue-dark !important;
+      color: states.$visited !important;
     }
     &:hover,
     &--hover,

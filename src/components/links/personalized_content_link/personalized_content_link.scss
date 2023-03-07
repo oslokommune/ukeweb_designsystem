@@ -58,7 +58,7 @@
   &--visited {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
-      color: colors.$blue-dark;
+      color: states.$visited;
     }
   }
 
