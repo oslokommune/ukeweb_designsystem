@@ -24,7 +24,7 @@
   &--state-light {
     &:visited,
     &-visited {
-      color: states.$visited-light !important;
+      color: colors.$white !important;
     }
     &:hover,
     &-hover,
