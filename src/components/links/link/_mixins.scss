@@ -39,7 +39,7 @@
 @mixin states {
   &:visited,
   &--visited {
-    color: states.$visited;
+    color: states.$visited!important;
     @content;
   }
   &:hover,
