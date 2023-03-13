@@ -177,15 +177,17 @@
   }
 
   &__item {
-    &--divider {
-      background-color: colors.$gray;
-      height: 0.0625rem;
-    }
-
     &--footer {
       @extend %osg-text--size-lima;
       @extend %osg-text--weight-regular;
-      @extend %osg-padding-4;
+      @extend %osg-padding-horizontal-4;
+
+      &-first {
+        @extend %osg-padding-top-4;
+      }
+      &-last {
+        @extend %osg-padding-bottom-4;
+      }
     }
   }
 
@@ -225,6 +227,10 @@
     &:focus .osg-search-seasons__heading,
     &--focus .osg-search-seasons__heading {
       text-decoration: underline;
+    }
+
+    &--divider {
+      border-bottom: 0.0625rem solid colors.$gray;
     }
   }
 

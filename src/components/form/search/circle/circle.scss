@@ -11,6 +11,15 @@
   position: relative;
   width: 100%;
 
+  &__wrapper {
+    display: inline-block;
+    width: calc(100% - 2.75rem);
+
+    @include breakpoints.large {
+      width: calc(100% - 3rem);
+    }
+  }
+
   &__input {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-light;
@@ -22,12 +31,8 @@
     display: inline-block;
     font-family: inherit;
     padding: units.unit-to-rem(2) units.unit-to-rem(4);
-    width: calc(100% - 2.75rem);
+    width: 100%;
     -webkit-appearance: none;
-
-    @include breakpoints.large {
-      width: calc(100% - 3rem);
-    }
 
     &:hover {
       border: 0.125rem solid colors.$blue-state;
@@ -149,15 +154,17 @@
   }
 
   &__item {
-    &--divider {
-      background-color: colors.$gray;
-      height: 0.0625rem;
-    }
-
     &--footer {
       @extend %osg-text--size-lima;
       @extend %osg-text--weight-regular;
-      @extend %osg-padding-4;
+      @extend %osg-padding-horizontal-4;
+
+      &-first {
+        @extend %osg-padding-top-4;
+      }
+      &-last {
+        @extend %osg-padding-bottom-4;
+      }
     }
   }
 
@@ -197,6 +204,10 @@
     &:focus .osg-search-circle__heading,
     &--focus .osg-search-circle__heading {
       text-decoration: underline;
+    }
+
+    &--divider {
+      border-bottom: 0.0625rem solid colors.$gray;
     }
   }
 

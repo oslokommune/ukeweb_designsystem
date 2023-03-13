@@ -9,9 +9,11 @@
           <div class="osg-grid">
             <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <form action="" method="GET">
+                <form action="" method="GET" role="search">
                   <div class="osg-search-circle">
-                    <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" placeholder="Search keyword" />
+                    <div class="osg-search-circle__wrapper">
+                      <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" placeholder="Search keyword" />
+                    </div>
                     <button class="osg-search-circle__button" type="submit">
                       <span class="osg-search-circle__button-icon"></span>
                       <span class="osg-sr-only">Search</span>
@@ -34,16 +36,18 @@
           <div class="osg-grid">
             <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <form action="" method="GET">
+                <form action="" method="GET" role="search">
                   <div class="osg-search-circle">
-                    <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-describedby="osg-search-circle-id-no-result" placeholder="Search keyword" />
+                    <div class="osg-search-circle__wrapper">
+                      <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-describedby="osg-search-circle__container-id" placeholder="Search keyword" />
+                      <div class="osg-search-circle__container" id="osg-search-circle__container-id">
+                        <span class="osg-search-circle__no-result">No result</span>
+                      </div>
+                    </div>
                     <button class="osg-search-circle__button" type="submit">
                       <span class="osg-search-circle__button-icon"></span>
                       <span class="osg-sr-only">Search</span>
                     </button>
-                    <div class="osg-search-circle__container">
-                      <span class="osg-search-circle__no-result" id="osg-search-circle-id-no-result">No result</span>
-                    </div>
                   </div>
                 </form>
               </div>
@@ -62,16 +66,18 @@
           <div class="osg-grid">
             <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <form action="" method="GET">
+                <form action="" method="GET" role="search">
                   <div class="osg-search-circle">
-                    <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-describedby="osg-search-circle-id-missing-input" placeholder="Search keyword" />
+                    <div class="osg-search-circle__wrapper">
+                      <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-describedby="osg-search-circle__container-id2" placeholder="Search keyword" />
+                      <div class="osg-search-circle__container" id="osg-search-circle__container-id2">
+                        <span class="osg-search-circle__missing-input">Missing input</span>
+                      </div>
+                    </div>
                     <button class="osg-search-circle__button" type="submit">
                       <span class="osg-search-circle__button-icon"></span>
                       <span class="osg-sr-only">Search</span>
                     </button>
-                    <div class="osg-search-circle__container">
-                      <span class="osg-search-circle__missing-input" id="osg-search-circle-id-missing-input">Missing input</span>
-                    </div>
                   </div>
                 </form>
               </div>
@@ -90,23 +96,25 @@
           <div class="osg-grid">
             <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <form action="" method="GET">
+                <form action="" method="GET" role="search">
                   <div class="osg-search-circle">
-                    <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-circle-suggestions" role="combobox" placeholder="Search keyword" />
+                    <div class="osg-search-circle__wrapper">
+                      <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-controls="osg-search-circle-suggestions" aria-describedby="osg-search-circle__container-id3" role="combobox" placeholder="Search keyword" />
+                      <div class="osg-search-circle__container" id="osg-search-circle__container-id3">
+                        <ul class="osg-search-circle__dropdown osg-search-circle__dropdown--compact" role="listbox" id="osg-search-circle-suggestions" aria-label="Suggestions label">
+                          <li class="osg-search-circle__item" role="option">
+                            <span class="osg-search-circle__suggestion">Suggestion A</span>
+                          </li>
+                          <li class="osg-search-circle__item" role="option">
+                            <span class="osg-search-circle__suggestion">Suggestion B</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                     <button class="osg-search-circle__button" type="submit">
                       <span class="osg-search-circle__button-icon"></span>
                       <span class="osg-sr-only">Search</span>
                     </button>
-                    <div class="osg-search-circle__container">
-                      <ul class="osg-search-circle__dropdown osg-search-circle__dropdown--compact" role="listbox" id="osg-search-circle-suggestions">
-                        <li class="osg-search-circle__item" role="option">
-                          <span class="osg-search-circle__suggestion">Suggestion A</span>
-                        </li>
-                        <li class="osg-search-circle__item" role="option">
-                          <span class="osg-search-circle__suggestion">Suggestion B</span>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </form>
               </div>
@@ -125,34 +133,29 @@
           <div class="osg-grid">
             <div class="osg-grid__column osg-grid__column--8-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <form action="" method="GET">
+                <form action="" method="GET" role="search">
                   <div class="osg-search-circle">
-                    <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-circle-suggestions" role="combobox" placeholder="Search keyword" />
+                    <div class="osg-search-circle__wrapper">
+                      <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-controls="osg-search-circle-results" aria-describedby="osg-search-circle__container-id4" role="combobox" placeholder="Search keyword" />
+                      <div class="osg-search-circle__container" id="osg-search-circle__container-id4">
+                        <div class="osg-search-circle__dropdown" role="listbox" id="osg-search-circle-results" aria-label="Footer content">
+                          <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__link" role="option">
+                            <h3 class="osg-search-circle__heading">Heading one</h3>
+                            <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                          </a>
+                          <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__link osg-search-circle__link--divider" role="option">
+                            <h3 class="osg-search-circle__heading">Heading two</h3>
+                            <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                          </a>
+                          <p class="osg-search-circle__item osg-search-circle__item--footer osg-search-circle__item--footer-first" role="option" aria-hidden="true">Footer content</p>
+                          <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__item--footer osg-search-circle__item--footer-last osg-link osg-text--weight-medium" role="option">Footer link</a>
+                        </div>
+                      </div>
+                    </div>
                     <button class="osg-search-circle__button" type="submit">
                       <span class="osg-search-circle__button-icon"></span>
                       <span class="osg-sr-only">Search</span>
                     </button>
-                    <div class="osg-search-circle__container">
-                      <ul class="osg-search-circle__dropdown" role="listbox" id="osg-search-circle-suggestions">
-                        <li class="osg-search-circle__item" role="option">
-                          <a href="javascript:void(0)" class="osg-search-circle__link">
-                            <h3 class="osg-search-circle__heading">Heading one</h3>
-                            <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                          </a>
-                        </li>
-                        <li class="osg-search-circle__item" role="option">
-                          <a href="javascript:void(0)" class="osg-search-circle__link">
-                            <h3 class="osg-search-circle__heading">Heading two</h3>
-                            <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                          </a>
-                        </li>
-                        <li class="osg-search-circle__item osg-search-circle__item--divider" role="option"></li>
-                        <li class="osg-search-circle__item osg-search-circle__item--footer" role="option">
-                          <p>Footer content</p>
-                          <p><a href="javascript:void(0)" class="osg-link osg-text--weight-medium">Footer link</a></p>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </form>
               </div>
@@ -176,34 +179,29 @@
     <!-- Default -->
     <div class="osg-grid__column osg-grid__column--12">
       <h3 class="osg-devtools-text-preset-2">Default</h3>
-      <form action="" method="GET">
+      <form action="" method="GET" role="search">
         <div class="osg-search-circle">
-          <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-owns="osg-search-circle-suggestions-dev" role="combobox" placeholder="Search keyword" />
+          <div class="osg-search-circle__wrapper">
+            <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" aria-expanded="true" aria-haspopup="listbox" aria-controls="osg-search-circle-results2" aria-describedby="osg-search-circle__container-id5" role="combobox" placeholder="Search keyword" />
+            <div class="osg-search-circle__container" id="osg-search-circle__container-id5">
+              <div class="osg-search-circle__dropdown" role="listbox" id="osg-search-circle-results2" aria-label="Footer content">
+                <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__link" role="option">
+                  <h3 class="osg-search-circle__heading">Heading one</h3>
+                  <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                </a>
+                <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__link osg-search-circle__link--divider" role="option">
+                  <h3 class="osg-search-circle__heading">Heading two</h3>
+                  <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                </a>
+                <p class="osg-search-circle__item osg-search-circle__item--footer osg-search-circle__item--footer-first" role="option" aria-hidden="true">Footer content</p>
+                <a href="javascript:void(0)" class="osg-search-circle__item osg-search-circle__item--footer osg-search-circle__item--footer-last osg-link osg-text--weight-medium" role="option">Footer link</a>
+              </div>
+            </div>
+          </div>
           <button class="osg-search-circle__button" type="submit">
             <span class="osg-search-circle__button-icon"></span>
             <span class="osg-sr-only">Search</span>
           </button>
-          <div class="osg-search-circle__container">
-            <ul class="osg-search-circle__dropdown" role="listbox" id="osg-search-circle-suggestions-dev">
-              <li class="osg-search-circle__item" role="option">
-                <a href="javascript:void(0)" class="osg-search-circle__link">
-                  <h3 class="osg-search-circle__heading">Heading one</h3>
-                  <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                </a>
-              </li>
-              <li class="osg-search-circle__item" role="option">
-                <a href="javascript:void(0)" class="osg-search-circle__link">
-                  <h3 class="osg-search-circle__heading">Heading two</h3>
-                  <p class="osg-search-circle__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                </a>
-              </li>
-              <li class="osg-search-circle__item osg-search-circle__item--divider" role="option"></li>
-              <li class="osg-search-circle__item osg-search-circle__item--footer" role="option">
-                <p>Footer content</p>
-                <p><a href="javascript:void(0)" class="osg-link osg-text--weight-medium">Footer link</a></p>
-              </li>
-            </ul>
-          </div>
         </div>
       </form>
     </div>
