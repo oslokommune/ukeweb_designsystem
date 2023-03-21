@@ -96,15 +96,15 @@
   }
 
   &--open {
-    background-color: colors.$blue-dark;
-    border-color: colors.$blue-dark;
+    background-color: colors.$blue-state;
+    border-color: colors.$blue-state;
     color: colors.$white;
 
     &:active,
     &:focus,
     &:hover {
-      background-color: colors.$blue-dark;
-      border-color: colors.$blue-dark;
+      background-color: colors.$blue-state;
+      border-color: colors.$blue-state;
       color: colors.$white;
     }
 
