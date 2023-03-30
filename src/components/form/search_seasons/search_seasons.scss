@@ -267,6 +267,13 @@
       background-color: colors.$blue-light;
       border-color: colors.$blue-light;
       color: colors.$blue-dark;
+
+      &:hover,
+      &:focus {
+        background-color: states.$hover-light !important;
+        border: 0.125rem solid states.$hover-light !important;
+        color: states.$hover-light-text !important;
+      }
     }
 
     & .osg-search-seasons__input {
@@ -287,6 +294,13 @@
       background-color: colors.$green-light;
       border-color: colors.$green-light;
       color: colors.$blue-dark;
+
+      &:hover,
+      &:focus {
+        background-color: states.$hover-light !important;
+        border: 0.125rem solid states.$hover-light !important;
+        color: states.$hover-light-text !important;
+      }
     }
 
     & .osg-search-seasons__input {
