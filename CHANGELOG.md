@@ -9,4 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Hopefully fixes a bug where button became oval on iPhone (physical device only)
+- Hopefully fixed a bug where button became oval on iPhone (physical device only)
