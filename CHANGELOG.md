@@ -10,3 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Implements design version 1.2 of Search Seasons
+
+## [0.99.103] - 11-04-2023
+
+### Fixed
+
+- Update status message markup in the vue map component
