@@ -7,11 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-<<<<<<< HEAD
 ### Fixed
 
 - Hopefully fixed a bug where button became oval on iPhone (physical device only)
-=======
+
 ### Changed
 
 - Implements design version 1.2 of Search Seasons
@@ -21,4 +20,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Update status message markup in the vue map component
->>>>>>> main
