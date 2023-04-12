@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="osg-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
-    <div v-show="error" class="osg-status-message osg-status-message--warning" aria-live="polite">{{ i18n.mapError }} - {{ technicalErrorText }}</div>
+    <div v-show="error" class="osg-status-message osg-status-message--warning" aria-live="polite">
+      <h2 class="osg-status-message__heading"><span class="osg-status-message__icon osg-icon--error-hexa" aria-hidden="true"></span>{{ i18n.mapError }} - {{ technicalErrorText }}</h2>
+    </div>
   </div>
 </template>
 
