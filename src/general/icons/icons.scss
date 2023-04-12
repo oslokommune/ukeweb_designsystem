@@ -12,6 +12,14 @@
       @extend %osg-icon--size-#{$name};
     }
 
+    &.osg-icon--size-#{$name}-breakpoint-medium {
+      @extend %osg-icon--size-#{$name}-breakpoint-medium;
+    }
+
+    &.osg-icon--size-#{$name}-breakpoint-large {
+      @extend %osg-icon--size-#{$name}-breakpoint-large;
+    }
+
     &.osg-icon--size-#{$name}.osg-icon--small {
       @extend %osg-icon--size-#{$name}--small;
     }
