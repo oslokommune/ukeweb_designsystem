@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ...
 ## [Unreleased]
+
 ### Changed
 
 - Updated colours for status message
