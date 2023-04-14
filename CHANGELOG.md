@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add icon breakpoint classes and documentation accordingly
+
 ### Fixed
 
-Update status message markup in the vue map component
+- Update status message markup in the vue map component
