@@ -8,6 +8,7 @@
 
 .osg-search-seasons {
   display: flex;
+  font-size: 0;
 
   &__main {
     background-color: colors.$yellow;
@@ -52,13 +53,16 @@
 
   &__search {
     @extend %osg-margin-top-8;
-
-    display: flex;
   }
 
   &__input-wrapper {
-    width: 100%;
+    display: inline-block;
     position: relative;
+    width: calc(100% - 3.5rem);
+
+    @include breakpoints.large {
+      width: calc(100% - 3.75rem);
+    }
   }
 
   &__input {
@@ -111,21 +115,26 @@
     border: 0.125rem solid colors.$red;
     border-radius: 50%;
     box-sizing: content-box;
-    cursor: pointer;
-    font-size: inherit;
-    padding: 0;
-    min-width: units.unit-to-rem(13);
     color: colors.$blue-dark;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    font-family: inherit;
+    height: units.unit-to-rem(13);
+    min-width: units.unit-to-rem(13);
+    padding: 0;
+    vertical-align: top;
 
     @include breakpoints.large {
+      height: units.unit-to-rem(14);
       min-width: units.unit-to-rem(14);
     }
 
     &::after {
       @extend %osg-text--size-delta;
 
-      font-family: "Oslo Icons" !important;
       content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
+      font-family: "Oslo Icons" !important;
       vertical-align: middle;
     }
 
@@ -143,9 +152,9 @@
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
     left: 0;
-    right: 0;
     list-style: none;
     position: absolute;
+    right: 0;
     z-index: 99999;
   }
 
