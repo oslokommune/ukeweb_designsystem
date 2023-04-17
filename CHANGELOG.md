@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add icon breakpoint classes and documentation accordingly
 
+## Added
+
+- added do not track and sandbox example and information to video component
+
 ### Fixed
 
 - Hopefully fixed a bug where button became oval on iPhone (physical device only)
