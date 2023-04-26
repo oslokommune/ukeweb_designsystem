@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add icon breakpoint classes and documentation accordingly
+- Added examples of state on breadcrumb and link components
 
 ## Added
 
