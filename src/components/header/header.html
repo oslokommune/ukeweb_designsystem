@@ -45,15 +45,17 @@
                 <div class="osg-grid osg-grid--gap osg-full-height">
                   <div class="osg-grid__column--5">
                     <div class="osg-full-height osg-flex osg-flex-justify-content-flex-start osg-flex-align-items-center">
-                      <div class="osg-search osg-search--circle">
-                        <form action="" method="GET" class="osg-search__form">
-                          <input class="osg-search__input" type="search" autocomplete="off" placeholder="Placeholder search" aria-label="Search" />
-                          <button class="osg-search__button" type="submit">
-                            <span class="osg-search__button-icon"></span>
+                      <form action method="GET" role="search">
+                        <div class="osg-search-circle">
+                          <div class="osg-search-circle__wrapper">
+                            <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" placeholder="Search keyword">
+                          </div>
+                          <button class="osg-search-circle__button" type="submit">
+                            <span class="osg-search-circle__button-icon"></span>
                             <span class="osg-sr-only">Search</span>
                           </button>
-                        </form>
-                      </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                   <div class="osg-grid__column--7">
