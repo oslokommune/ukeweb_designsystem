@@ -12,27 +12,46 @@
     </div>
     <div class="osg-grid__column--12">
       <h2 class="osg-devtools-text-preset-1">Default</h2>
+    </div>
+    <div class="osg-grid__column--6-breakpoint-medium">
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <div class="osg-grid">
-            <div class="osg-grid__column--6-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
-                <fieldset class="osg-fieldset osg-fieldset--no-border">
-                  <legend class="osg-fieldset__legend">Select the options:</legend>
-                  <label class="osg-checkbox">
-                    <input type="checkbox" name="checkbox-1" checked="checked" />
-                    <span class="osg-checkbox__checkmark"></span>
-                    <span class="osg-checkbox__text"> Option 1 </span>
-                  </label>
-                  <label class="osg-checkbox">
-                    <input type="checkbox" name="checkbox-1" />
-                    <span class="osg-checkbox__checkmark"></span>
-                    <span class="osg-checkbox__text"> Option 2 </span>
-                  </label>
-                </fieldset>
-              </div>
-            </div>
-          </div>
+          <fieldset class="osg-fieldset osg-fieldset--no-border">
+            <legend class="osg-fieldset__legend">Select the options:</legend>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" checked="checked" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 1 </span>
+            </label>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 2 </span>
+            </label>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="osg-grid__column--6-breakpoint-medium">
+      <div class="osg-devtools-code">
+        <div class="osg-devtools-code__box">
+          <fieldset class="osg-fieldset osg-fieldset--no-border">
+            <legend class="osg-fieldset__legend">Choose an option:</legend>
+            <label class="osg-radio">
+              <span class="osg-radio__input">
+                <input type="radio" name="radio-1" checked="checked" />
+                <span class="osg-radio__control"></span>
+              </span>
+              <span class="osg-radio__label">Option 1</span>
+            </label>
+            <label class="osg-radio">
+              <span class="osg-radio__input">
+                <input type="radio" name="radio-1" />
+                <span class="osg-radio__control"></span>
+              </span>
+              <span class="osg-radio__label">Option 2</span>
+            </label>
+          </fieldset>
         </div>
       </div>
     </div>
@@ -40,7 +59,7 @@
       <h2 class="osg-devtools-text-preset-1">Required</h2>
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
-          <fieldset class="osg-fieldset osg-fieldset--no-border">
+          <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-1">
             <legend class="osg-fieldset__legend">Select the options:</legend>
             <label class="osg-checkbox">
               <input type="checkbox" name="checkbox-1" checked="checked" />
@@ -122,24 +141,54 @@
 <div class="osg-devtools-devmode">
   <div class="osg-grid osg-grid--gap osg-grid--gutter">
     <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Default</h2>
-      <fieldset class="osg-fieldset osg-fieldset--no-border">
-        <legend class="osg-fieldset__legend">Select the options:</legend>
-        <label class="osg-checkbox">
-          <input type="checkbox" name="checkbox-1" checked="checked" />
-          <span class="osg-checkbox__checkmark"></span>
-          <span class="osg-checkbox__text"> Option 1 </span>
-        </label>
-        <label class="osg-checkbox">
-          <input type="checkbox" name="checkbox-1" />
-          <span class="osg-checkbox__checkmark"></span>
-          <span class="osg-checkbox__text"> Option 2 </span>
-        </label>
-      </fieldset>
+      <div class="osg-grid">
+        <div class="osg-grid__column--12">
+          <h2 class="osg-devtools-text-preset-2">Default</h2>
+        </div>
+      </div>
+      <div class="osg-grid osg-grid--gap">
+        <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
+          <fieldset class="osg-fieldset osg-fieldset--no-border">
+            <legend class="osg-fieldset__legend">Select the options:</legend>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" checked="checked" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 1 </span>
+            </label>
+            <label class="osg-checkbox">
+              <input type="checkbox" name="checkbox-1" />
+              <span class="osg-checkbox__checkmark"></span>
+              <span class="osg-checkbox__text"> Option 2 </span>
+            </label>
+          </fieldset>
+        </div>
+        <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
+          <fieldset class="osg-fieldset osg-fieldset--no-border">
+            <legend class="osg-fieldset__legend">Choose an option:</legend>
+            <label class="osg-radio">
+              <span class="osg-radio__input">
+                <input type="radio" name="radio-2" checked="checked" />
+                <span class="osg-radio__control"></span>
+              </span>
+              <span class="osg-radio__label">Option 1</span>
+            </label>
+            <label class="osg-radio">
+              <span class="osg-radio__input">
+                <input type="radio" name="radio-2" />
+                <span class="osg-radio__control"></span>
+              </span>
+              <span class="osg-radio__label">Option 2</span>
+            </label>
+          </fieldset>
+        </div>
+      </div>
     </div>
+
     <div class="osg-grid__column--12">
       <div class="osg-grid">
-        <h2 class="osg-devtools-text-preset-2">States</h2>
+        <div class="osg-grid__column--12">
+          <h2 class="osg-devtools-text-preset-2">States</h2>
+        </div>
       </div>
       <div class="osg-grid osg-grid--gap">
         <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
@@ -155,6 +204,28 @@
                 <input type="checkbox" name="checkbox-1" disabled="disabled" />
                 <span class="osg-checkbox__checkmark"></span>
                 <span class="osg-checkbox__text"> Option 2 </span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
+          <fieldset class="osg-fieldset osg-fieldset--no-border" disabled="disabled">
+            <legend class="osg-fieldset__legend">Disabled</legend>
+            <div>
+              <label class="osg-radio osg-radio--disabled">
+                <span class="osg-radio__input">
+                  <input type="radio" name="radio-3" disabled="disabled" checked="checked" />
+                  <span class="osg-radio__control"></span>
+                </span>
+                <span class="osg-radio__label">Option 1</span>
+              </label>
+              <label class="osg-radio osg-radio--disabled">
+                <span class="osg-radio__input">
+                  <input type="radio" name="radio-3" disabled="disabled" />
+                  <span class="osg-radio__control"></span>
+                </span>
+                <span class="osg-radio__label">Option 2</span>
               </label>
             </div>
           </fieldset>
@@ -180,7 +251,30 @@
         </div>
 
         <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-          <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-1">
+          <fieldset class="osg-fieldset osg-fieldset--no-border osg-fieldset--error" aria-describedby="error-1">
+            <legend class="osg-fieldset__legend">Error:</legend>
+            <div>
+              <label class="osg-radio osg-radio--error">
+                <span class="osg-radio__input">
+                  <input type="radio" name="radio-4" aria-describedby="error-1" />
+                  <span class="osg-radio__control"></span>
+                </span>
+                <span class="osg-radio__label">Option 1</span>
+              </label>
+              <label class="osg-radio osg-radio--error">
+                <span class="osg-radio__input">
+                  <input type="radio" name="radio-4" aria-describedby="error-2" />
+                  <span class="osg-radio__control"></span>
+                </span>
+                <span class="osg-radio__label">Option 2</span>
+              </label>
+              <div class="osg-radio__error-message" id="error-2">Error message</div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
+          <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-2">
             <legend class="osg-fieldset__legend">Required</legend>
             <div>
               <label class="osg-checkbox">
@@ -195,7 +289,7 @@
               </label>
             </div>
           </fieldset>
-          <div class="osg-fieldset__required" id="required-1">* Required</div>
+          <div class="osg-fieldset__required" id="required-2">* Required</div>
         </div>
       </div>
     </div>
