@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "system/breakpoints";
 @use "system/icon-map";
 @use "system/spacing";
 @use "components/form/input/mixins";
@@ -36,8 +37,12 @@
       pointer-events: none;
       position: absolute;
       right: 0.875rem;
-      top: 2rem;
+      top: 1.4rem;
       transform: translateY(-50%);
+
+      @include breakpoints.large {
+        top: 1.5rem;
+      }
     }
   }
 

@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add radiobutton to fieldset component
 
+### Fixed
+
+- Fix position of icon arrow in select component
+
 ## [0.99.104] - 19-04-2023
 
 ### Added
