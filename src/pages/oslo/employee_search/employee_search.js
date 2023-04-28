@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let check = document.getElementById("employee-search-form-search-dropdown");
   if (check) {
     check.addEventListener("change", function () {
-      let dropdown = document.querySelector(".osg-search__dropdown");
-      let searchForm = document.querySelector("#osg-search__form");
+      let dropdown = document.querySelector(".osg-search-inline__dropdown");
+      let searchForm = document.querySelector("#employee-search-form-search-dropdown");
 
       if (this.checked) {
         dropdown.style.display = "block";

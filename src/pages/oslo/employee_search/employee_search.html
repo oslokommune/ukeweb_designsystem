@@ -41,12 +41,17 @@
             <div class="osg-grid osg-grid--gap osg-full-height">
               <div class="osg-grid__column--5">
                 <div class="osg-full-height osg-flex osg-flex-justify-content-flex-start osg-flex-align-items-center">
-                  <div class="osg-search osg-search--circle">
-                    <form action method="GET" class="osg-search__form">
-                      <input class="osg-search__input" type="search" autocomplete="off" placeholder="Placeholder search" aria-label="Search" />
-                      <button type="submit" class="osg-search__button"><span class="osg-sr-only">Search</span></button>
-                    </form>
-                  </div>
+                  <form action method="GET" role="search">
+                    <div class="osg-search-circle">
+                      <div class="osg-search-circle__wrapper">
+                        <input class="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" placeholder="Search keyword">
+                      </div>
+                      <button class="osg-search-circle__button" type="submit">
+                        <span class="osg-search-circle__button-icon"></span>
+                        <span class="osg-sr-only">Search</span>
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div class="osg-grid__column--7">
@@ -69,21 +74,20 @@
                 <div class="osg-grid__column--12"><h1 class="osg-heading-1">Search for an employee</h1></div>
                 <div class="osg-grid__column--12 osg-grid__column--5-breakpoint-medium">
                   <label class="osg-switch osg-margin-bottom-15" aria-labelledby="dropdown-text">
-                    <input type="checkbox" class="osg-switch__input" id="employee-search-form-search-dropdown" />
+                    <input type="checkbox" class="osg-switch__input" id="employee-search-form-search-dropdown" checked="checked" />
                     <span class="osg-switch__background"></span>
                     <span class="osg-switch__slider"></span>
                     <span class="osg-switch__label-text" id="dropdown-text">Show autocomplete</span>
                   </label>
-                  <div class="osg-search osg-search--inline" role="combobox">
-                    <div class="osg-search__form" id="osg-search__form" role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results">
-                      <input class="osg-search__input" type="search" class="osg-search-seasons__input" placeholder="Surname" aria-label="Search" autocomplete="off" />
-                    </div>
-                    <ul class="osg-search__dropdown" style="display: none" role="listbox" id="id-results">
-                      <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Smith (2)</a></li>
-                      <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Hansen (9)</a></li>
-                      <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Nordstrand Lie (1)</a></li>
-                      <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Bertulfsen (3)</a></li>
-                      <li><a href="javascript:void(0)" role="option" class="osg-search__dropdown__item">Haptilus (1)</a></li>
+                  <div class="osg-search-inline" id="osg-search__form">
+                    <label class="osg-search-inline__label">Search
+                      <input class="osg-search-inline__input" id="employee-search-form-input" type="search" autocomplete="off"  placeholder="Surname" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-2" role="combobox">
+                    </label>
+                    <ul class="osg-search-inline__dropdown" role="listbox" id="id-results">
+                      <li class="osg-search-inline__dropdown__item" role="option">Item A</li>
+                      <li class="osg-search-inline__dropdown__item" role="option">Item B</li>
+                      <li class="osg-search-inline__dropdown__item" role="option">Item C</li>
+                      <li class="osg-search-inline__dropdown__item" role="option">Item D</li>
                     </ul>
                   </div>
                 </div>
