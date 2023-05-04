@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix position of icon arrow in select component
 - Fix alignment of cross icon in fieldset collapsible
 - Update search markup in header and employee search
+- Fixed wrong color on focus state in search seasons
 
 ## [0.99.104] - 19-04-2023
 
