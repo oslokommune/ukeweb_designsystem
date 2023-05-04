@@ -288,7 +288,7 @@
     & .osg-search-seasons__input {
       &:hover,
       &:focus {
-        border-color: colors.$blue !important;
+        border-color: states.$hover-light !important;
       }
     }
   }
@@ -315,7 +315,7 @@
     & .osg-search-seasons__input {
       &:hover,
       &:focus {
-        border-color: colors.$blue !important;
+        border-color: states.$hover-light !important;
       }
     }
   }
