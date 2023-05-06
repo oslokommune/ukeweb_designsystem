@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         } else if (button.getAttribute("data-type") === "style") {
           typeElements.forEach((element) => {
-            element.classList.remove("osg-text-style-italic");
+            element.classList.remove("osg-text--style-italic");
           });
 
           document.querySelectorAll("#type-buttons button[data-type='style']").forEach((el) => {
