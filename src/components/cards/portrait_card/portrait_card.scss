@@ -88,7 +88,7 @@ $osg-portrait-card-image-height-large: 290px;
     }
 
     & .osg-portrait-card__heading {
-      @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large;
+      @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large, %osg-text--weight-light;
       @extend %osg-margin-bottom-1;
     }
 
