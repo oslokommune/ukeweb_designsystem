@@ -37,6 +37,10 @@
     margin-left: 10px;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
+    
+    &--bold {
+      @extend %osg-text--weight-medium;
+    }
   }
 
   &__input {

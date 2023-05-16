@@ -1,7 +1,9 @@
 import Vue from "vue";
 import OsgRadiogroup from "./radiogroup.vue";
+import { OsgRadio } from "./radio.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  
   if (document.getElementById("osg-radio-vue-1")) {
     new Vue({
       el: "#osg-radio-vue-1",
@@ -17,4 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     });
   }
+  
+  OsgRadio.init();
 });
