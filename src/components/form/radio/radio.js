@@ -8,11 +8,8 @@ function updateFontWeight() {
 
   const checked = document.querySelector('.osg-radio__input input:checked');
   if (checked) {
-    console.log('yay igjen!');
-    console.log(checked.parentNode.nextElementSibling);
     const checkedLabel = checked.parentNode.nextElementSibling;
     checkedLabel.classList.add('osg-radio__label--bold');
-    console.log(checkedLabel);
   }
 }
 
