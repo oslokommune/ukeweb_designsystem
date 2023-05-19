@@ -4,9 +4,10 @@
       <input type="radio" v-model="selectedModel" :value="value" :name="name" />
       <span class="osg-radio__control"></span>
     </span>
-    <span class="osg-radio__label">{{ label }}</span>
+    <span :class="['osg-radio__label', { 'osg-radio__label--bold': isSelected }]">{{ label }}</span>
   </label>
 </template>
+
 <script>
 export default {
   name: "OsgRadio",
@@ -35,6 +36,9 @@ export default {
   },
 
   computed: {
+    isSelected() {
+      return this.selectedModel === this.value;
+    },
     selectedModel: {
       get() {
         return this.selected;
