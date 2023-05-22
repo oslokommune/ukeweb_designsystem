@@ -1,6 +1,5 @@
 import Vue from "vue";
 import OsgRadiogroup from "./radiogroup.vue";
-import { OsgRadio } from "./radio.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   
