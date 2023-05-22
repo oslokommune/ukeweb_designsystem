@@ -37,13 +37,10 @@
     margin-left: 10px;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
-    
-    &--bold {
-      @extend %osg-text--weight-medium;
-    }
   }
 
   &__input {
+    align-items: inherit;
     display: flex;
 
     & input {
@@ -55,6 +52,11 @@
         box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
       }
     }
+  }
+  
+  input[type="radio"]:checked ~ .osg-radio__label {
+    @extend %osg-text--weight-medium;
+    line-height: 1.5 !important;
   }
 
   & input + &__control::before {
@@ -77,6 +79,7 @@
     justify-content: center;
     transform: translateY(-0.05em);
     width: 1em;
+    flex-shrink: 0;
   }
 
   & input:checked + &__control::before {

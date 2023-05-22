@@ -20,5 +20,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
-  OsgRadio.init();
 });

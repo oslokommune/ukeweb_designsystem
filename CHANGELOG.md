@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add icon breakpoint classes and documentation accordingly
 - Added examples of state on breadcrumb and link components
-- radiobutton gets fontweight medium when checked
+- radiobutton gets fontweight medium when checked - Breaking change!
 
 ## Added
 
