@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sets charset to utf-8 for sass
 
+### Fixed
+
+- Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
+
 ## [0.99.105] - 28-04-2023
 
 ### Added
