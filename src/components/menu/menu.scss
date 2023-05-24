@@ -82,7 +82,7 @@
   &:active,
   &:focus,
   &:hover {
-    border-color: colors.$yellow;
+    background-color: colors.$gray;
     color: colors.$blue-state;
 
     @include breakpoints.medium {
