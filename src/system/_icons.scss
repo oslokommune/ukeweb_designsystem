@@ -156,3 +156,19 @@ $sizes: (
     margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
   }
 }
+
+%osg-icon--standalone {
+  margin: 0;
+}
+
+%osg-icon--standalone-breakpoint-medium {
+  @include breakpoints.medium {
+    margin: 0;
+  }
+}
+
+%osg-icon--standalone-breakpoint-large {
+  @include breakpoints.large {
+    margin: 0;
+  }
+}

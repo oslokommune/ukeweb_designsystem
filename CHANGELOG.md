@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
+- Added standalone modifier to icon for a "no spacing on either side" option
 
 ## [0.99.105] - 28-04-2023
 
