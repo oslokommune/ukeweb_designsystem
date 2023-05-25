@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sets charset to utf-8 for sass
 
+### Changed
+
+- Change collapsible infobox from link to button to improve accessibility
+
 ### Fixed
 
 - Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
