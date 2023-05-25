@@ -20,3 +20,13 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_prod_s3.yml/dispatches \
           -d '{ "ref": "main", "inputs": { "version": "${{ steps.version.outputs.VERSION }}" } }'
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Workplace step
+        id: changelog
+        uses: oslokommune/ukeweb_gh_workplace_action@1.0
+        with:
+          group-id: ${{ secrets.WORKPLACE_GROUP_ID }}
+          auth-token: ${{ secrets.WORKPLACE_AUTH_TOKEN }}
