@@ -34,7 +34,7 @@
 
   &__label {
     hyphens: auto;
-    margin-left: 10px;
+    @extend %osg-margin-left-2;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }
