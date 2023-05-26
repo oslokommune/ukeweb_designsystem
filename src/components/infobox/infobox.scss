@@ -51,7 +51,7 @@
     }
 
     &:focus-visible::after {
-      border: 2px solid colors.$blue-state;
+      border: 0.125rem solid colors.$blue-state;
     }
 
     &:active {

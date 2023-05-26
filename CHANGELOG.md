@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Change collapsible infobox from link to button to improve accessibility
+- **Breaking change:** Changes in the collapsible infobox markup to improve accessibility. The HTML has to be updated to use a `<button>` instead of a `<a>`. And the tabindex must be removed.
 
 ### Fixed
 
