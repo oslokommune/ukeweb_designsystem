@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
 - Added standalone modifier to icon for a "no spacing on either side" option
 - Changes hover color of menu button in small breakpoint from yellow border to gray background
+- Fixed alignment of days in datepicker that looked missaligned on iPhone and iPad
 
 ## [0.99.105] - 28-04-2023
 
