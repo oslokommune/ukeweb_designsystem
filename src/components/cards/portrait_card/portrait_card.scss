@@ -88,17 +88,18 @@ $osg-portrait-card-image-height-large: 290px;
     }
 
     & .osg-portrait-card__heading {
-      @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large;
+      @extend %osg-text--size-india;
       @extend %osg-margin-bottom-1;
     }
 
     & .osg-portrait-card__text {
       @extend %osg-text--size-kilo;
-      @extend %osg-text--weight-medium;
+      @extend %osg-text--weight-light;
     }
 
     & .osg-portrait-card__published {
       @extend %osg-margin-top-3;
+      @extend %osg-text--size-lima;
     }
 
     & .osg-portrait-card__media {
