@@ -3,10 +3,11 @@
     <span class="osg-radio__input">
       <input type="radio" v-model="selectedModel" :value="value" :name="name" />
       <span class="osg-radio__control"></span>
+      <span class="osg-radio__label">{{ label }}</span>
     </span>
-    <span class="osg-radio__label">{{ label }}</span>
   </label>
 </template>
+
 <script>
 export default {
   name: "OsgRadio",
