@@ -20,29 +20,40 @@
 
   &--collapsible {
     background: none;
+    margin-right: 3.5rem;
     padding: 0;
     position: relative;
+
+    @include breakpoints.large {
+      margin-right: 3.75rem;
+    }
   }
 
   &__trigger {
     @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
-    display: block;
     background-color: colors.$blue-light;
-    margin-right: 3.5rem;
+    border: none;
+    color: colors.$blue-dark;
+    display: block;
+    font-family: inherit;
     position: relative;
-
-    @include breakpoints.large {
-      margin-right: 3.75rem;
-    }
+    text-align: left;
+    width: 100%;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       cursor: pointer;
       text-decoration: underline;
       color: colors.$blue-state;
     }
+
+    &:focus-visible::after {
+      border: 0.125rem solid colors.$blue-state;
+    }
+
     &:active {
       text-decoration: none;
     }
@@ -77,10 +88,5 @@
   &__content {
     @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
     background-color: #d8f9ff;
-    margin-right: 3.5rem;
-
-    @include breakpoints.large {
-      margin-right: 3.75rem;
-    }
   }
 }

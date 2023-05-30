@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Sets charset to utf-8 for sass
 
+### Changed
+
+- **Breaking change:** Changes in the collapsible infobox markup to improve accessibility. The HTML has to be updated to use a `<button>` instead of a `<a>`. And the tabindex must be removed.
+
 ### Fixed
 
 - Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
