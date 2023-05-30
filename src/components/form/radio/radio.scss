@@ -41,6 +41,7 @@
   }
 
   &__input {
+    align-items: inherit;
     display: flex;
 
     & input {
@@ -53,7 +54,7 @@
       }
     }
   }
-
+  
   & input + &__control::before {
     content: "";
     width: 0.4em;
@@ -74,6 +75,7 @@
     justify-content: center;
     transform: translateY(-0.05em);
     width: 1em;
+    flex-shrink: 0;
   }
 
   & input:checked + &__control::before {
@@ -86,7 +88,8 @@
 
   & input:checked ~ &__label {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    line-height: 1 !important;
+    @extend %osg-text--weight-medium;
+    line-height: 1.5em !important;
   }
 
   & input:focus ~ .osg-radio__control {
