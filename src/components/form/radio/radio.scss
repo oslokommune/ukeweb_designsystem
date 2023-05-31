@@ -93,10 +93,7 @@
   }
 
   & input:focus ~ .osg-radio__control {
-    outline: initial;
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: colors.$blue-state;
+    outline: 2px solid colors.$purple-light;
   }
 
   &--hover,

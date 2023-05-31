@@ -59,7 +59,7 @@
     hyphens: auto;
     @extend %osg-padding-left-2;
   }
-
+  
   &--error-message {
     @include mixins.error-message;
     background-color: colors.$red-30;
@@ -150,12 +150,6 @@
   }
 
   &--error {
-    // & span,
-    // & input:checked ~ .osg-checkbox__text {
-    //   border-color: colors.$red;
-    //   color: colors.$red;
-    // }
-
     & input:checked ~ .osg-checkbox__checkmark {
       background-color: colors.$red;
       border-color: colors.$red;
