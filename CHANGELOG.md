@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added standalone modifier to icon for a "no spacing on either side" option
 - Changes hover color of menu button in small breakpoint from yellow border to gray background
 - Fixed alignment of days in datepicker that looked missaligned on iPhone and iPad
+- Fixed color contrast on hover the current day in datepicker
 
 ## [0.99.105] - 28-04-2023
 
