@@ -160,6 +160,12 @@
           &[aria-current="date"] {
             background-color: colors.$beige;
           }
+          &[aria-current="date"] {
+            &:focus,
+            &:hover {
+              color: colors.$blue-dark;
+            }
+          }
           // selected
           &[autofocus] {
             background-color: colors.$blue-dark;
