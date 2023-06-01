@@ -5,60 +5,58 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.99.106] - 01-06-2023
 
 ### Added
 
-- Sets charset to utf-8 for sass
+- Sets charset to utf-8 for sass.
+- Added do not track and sandbox example and information to video component.
+- Added examples of state on breadcrumb and link components.
 
 ### Changed
 
 - **Breaking change:** Changes in the collapsible infobox markup to improve accessibility. The HTML has to be updated to use a `<button>` instead of a `<a>`. And the tabindex must be removed.
+- **Breaking change:** Radiobutton gets fontweight medium when checked. The HTML has to be updated accordingly.
 
 ### Fixed
 
-- Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style
-- Added standalone modifier to icon for a "no spacing on either side" option
-- Changes hover color of menu button in small breakpoint from yellow border to gray background
-- Fixed alignment of days in datepicker that looked missaligned on iPhone and iPad
-- Fixed color contrast on hover the current day in datepicker
+- Fixed a bug where wrong class for italic style was used on typography when switching between normal and italic style.
+- Added standalone modifier to icon for a "no spacing on either side" option.
+- Changes hover color of menu button in small breakpoint from yellow border to gray background.
+- Fixed alignment of days in datepicker that looked missaligned on iPhone and iPad.
+- Fixed color contrast on hover the current day in datepicker.
+- Fixed wrong color on focus state in search seasons.
+- Fixed font weight and size on xs card.
 
 ## [0.99.105] - 28-04-2023
 
 ### Added
 
-- Add radiobutton to fieldset component
+- Add radiobutton to fieldset component.
 
 ### Fixed
 
-- Fix position of icon arrow in select component
-- Fix alignment of cross icon in fieldset collapsible
-- Update search markup in header and employee search
-- Fixed wrong color on focus state in search seasons
-- Fixed font weight and size on xs card
+- Fix position of icon arrow in select component.
+- Fix alignment of cross icon in fieldset collapsible.
+- Update search markup in header and employee search.
+
 ## [0.99.104] - 19-04-2023
 
 ### Added
 
-- Add icon breakpoint classes and documentation accordingly
-- Added examples of state on breadcrumb and link components
-- Radiobutton gets fontweight medium when checked - Breaking change!
-
-## Added
-
-- Added do not track and sandbox example and information to video component
+- Add icon breakpoint classes and documentation accordingly.
 
 ### Fixed
 
-- Hopefully fixed a bug where button became oval on iPhone (physical device only)
+- Hopefully fixed a bug where button became oval on iPhone (physical device only).
 
 ### Changed
 
-- Implements design version 1.2 of Search Seasons
-- Updated colours for status message
+- Implements design version 1.2 of Search Seasons.
+- Updated colours for status message.
 
 ## [0.99.103] - 11-04-2023
 
 ### Fixed
 
-- Update status message markup in the vue map component
+- Update status message markup in the vue map component.
