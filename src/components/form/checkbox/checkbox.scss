@@ -7,10 +7,17 @@
 
 .osg-checkbox {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  align-items: center;
   color: inherit;
   cursor: pointer;
-  display: flex;
+  
+  &__label {
+    @include mixins.form-label;
+  }
+  
+  &__wrapper {
+    @extend %osg-margin-top-2;
+    display: inline-flex;
+  }
 
   &__required {
     @extend %osg-margin-top-1;
@@ -27,7 +34,7 @@
 
   &--text-align-top {
     align-items: flex-start;
-
+    
     .osg-checkbox__text {
       margin-top: -5px;
     }
@@ -121,6 +128,7 @@
 
   & input:checked ~ &__checkmark {
     background-color: colors.$blue-state;
+    outline: none;
   }
 
   & input:checked ~ &__text {
