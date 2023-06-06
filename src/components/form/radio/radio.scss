@@ -7,15 +7,19 @@
 .osg-radio {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   @extend %osg-text--weight-light;
-  align-items: center;
+  //align-items: center;
   color: colors.$blue-dark;
-  display: flex;
+  //display: flex;
 
   &:focus-within {
-    &__label {
+    &__text {
       transform: scale(1.05);
       opacity: 1;
     }
+  }
+  
+  &__label {
+    @include mixins.form-label;
   }
 
   &__required {
@@ -26,14 +30,14 @@
   }
 
   &--text-align-top {
-    align-items: flex-start;
+    align-items: flex-start !important;
 
-    .osg-radio__label {
+    .osg-radio__text {
       margin-top: -(5px);
     }
   }
 
-  &__label {
+  &__text {
     hyphens: auto;
     @extend %osg-margin-left-2;
     transition: 180ms all ease-in-out;
@@ -41,8 +45,8 @@
   }
 
   &__input {
-    align-items: inherit;
-    display: flex;
+    align-items: center;
+    display: inline-flex;
 
     & input {
       opacity: 0;
@@ -86,7 +90,7 @@
     background-color: colors.$blue-dark;
   }
 
-  & input:checked ~ &__label {
+  & input:checked ~ &__text {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
     line-height: 1.5em !important;
@@ -106,14 +110,14 @@
     .osg-radio__control {
       border-color: colors.$blue-state;
     }
-    .osg-radio__label {
+    .osg-radio__text {
       color: colors.$blue-state;
     }
   }
 
   &--focus,
   &:focus {
-    .osg-radio__label {
+    .osg-radio__text {
       @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     }
   }
@@ -126,7 +130,7 @@
     .osg-radio__control {
       border-color: colors.$grayscale-40;
     }
-    .osg-radio__label {
+    .osg-radio__text {
       color: colors.$grayscale-40;
     }
   }

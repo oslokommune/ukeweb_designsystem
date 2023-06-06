@@ -17,13 +17,13 @@
           <div class="osg-grid">
             <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <label class="osg-radio">
-                  <span class="osg-radio__input">
+                <div class="osg-radio">                  
+                  <label class="osg-radio__input">
                     <input type="radio" name="radio-11" />
                     <span class="osg-radio__control"></span>
-                    <span class="osg-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="osg-radio__text">Text</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -34,13 +34,14 @@
           <div class="osg-grid">
             <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <label class="osg-radio">
-                  <span class="osg-radio__input">
+                <div class="osg-radio">
+                  <span class="osg-radio__label"> Label </span>
+                  <label class="osg-radio__input">
                     <input type="radio" name="radio-11" checked="checked" />
                     <span class="osg-radio__control"></span>
-                    <span class="osg-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="osg-radio__text">Text</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -51,13 +52,13 @@
           <div class="osg-grid">
             <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <label class="osg-radio osg-radio--text-align-top">
-                  <span class="osg-radio__input">
+                <div class="osg-radio">
+                  <label class="osg-radio__input osg-radio--text-align-top">
                     <input type="radio" name="radio-11" />
                     <span class="osg-radio__control"></span>                  
-                    <span class="osg-radio__label"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
-                  </span>
-                </label>
+                    <span class="osg-radio__text"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -68,13 +69,13 @@
           <div class="osg-grid">
             <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <label class="osg-radio osg-radio--text-align-top">
-                  <span class="osg-radio__input">
+                <div class="osg-radio">
+                  <label class="osg-radio__input">
                     <input type="radio" name="radio-11" />
                     <span class="osg-radio__control"></span>                  
-                    <span class="osg-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="osg-radio__text">Text</span>
+                  </label>
+                </div>
                 <div class="osg-radio__required" id="required-1">* Required</div>
               </div>
             </div>
@@ -89,13 +90,13 @@
           <div class="osg-grid">
             <div class="osg-grid__column--6-breakpoint-medium">
               <div class="osg-devtools-code__box__code">
-                <label class="osg-radio osg-radio--disabled">
-                  <span class="osg-radio__input">
+                <div class="osg-radio osg-radio--disabled">
+                  <label class="osg-radio__input">
                     <input type="radio" name="radio-44" disabled="disabled" />
                     <span class="osg-radio__control"></span>                  
-                    <span class="osg-radio__label">Disabled</span>
-                  </span>
-                </label>
+                    <span class="osg-radio__text">Disabled</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -112,13 +113,13 @@
               <div class="osg-grid">
                 <div class="osg-grid__column--6-breakpoint-medium">
                   <div class="osg-devtools-code__box__code">
-                    <label class="osg-radio osg-radio--error">
-                      <span class="osg-radio__input">
+                    <div class="osg-radio osg-radio--error">
+                      <label class="osg-radio__input">
                         <input type="radio" name="radio-55" aria-describedby="error-1" />
                         <span class="osg-radio__control"></span>                      
-                        <span class="osg-radio__label">Error/invalid</span>
-                      </span>
-                    </label>
+                        <span class="osg-radio__text">Error/invalid</span>
+                      </label>
+                    </div>
                     <div class="osg-radio__error-message" id="error-1"><span class="osg-radio__icon osg-icon--error-hexa" aria-hidden="true"></span>Error message</div>
                   </div>
                 </div>
@@ -142,20 +143,20 @@
       </div>
       <div class="osg-grid">
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio">
-            <span class="osg-radio__input">
+          <div class="osg-radio">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-1" checked="checked" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Checked</span>
-            </span>
-          </label>
-          <label class="osg-radio">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Checked</span>
+            </label>
+          </div>
+          <div class="osg-radio">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-1" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Unchecked</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Unchecked</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -167,85 +168,85 @@
       </div>
       <div class="osg-grid osg-grid--gap">
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio osg-radio--hover">
-            <span class="osg-radio__input">
+          <div class="osg-radio osg-radio--hover">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-2" checked="checked" />
               <span class="osg-radio__control"></span>
-              <span class="osg-radio__label">Hover</span>
-            </span>
-          </label>
-          <label class="osg-radio osg-radio--hover">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Hover</span>
+            </label>
+          </div>
+          <div class="osg-radio osg-radio--hover">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-2" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Hover</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Hover</span>
+            </label>
+          </div>
         </div>
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio osg-radio--focus">
-            <span class="osg-radio__input">
+          <div class="osg-radio osg-radio--focus">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-3" checked="checked" />
               <span class="osg-radio__control"></span>           
-              <span class="osg-radio__label">Focus/active</span>
-            </span>
-          </label>
-          <label class="osg-radio osg-radio--focus">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Focus/active</span>
+            </label>
+          </div>
+          <div class="osg-radio osg-radio--focus">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-3" />
               <span class="osg-radio__control"></span>
-              <span class="osg-radio__label">Focus/active</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Focus/active</span>
+            </label>
+          </div>
         </div>
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio osg-radio--disabled">
-            <span class="osg-radio__input">
+          <div class="osg-radio osg-radio--disabled">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-4" checked="checked" disabled="disabled" />
               <span class="osg-radio__control"></span>
-              <span class="osg-radio__label">Disabled</span>
-            </span>
-          </label>
-          <label class="osg-radio osg-radio--disabled">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Disabled</span>
+            </label>
+          </div>
+          <div class="osg-radio osg-radio--disabled">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-4" disabled="disabled" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Disabled</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Disabled</span>
+            </label>
+          </div>
         </div>
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio osg-radio--error">
-            <span class="osg-radio__input">
+          <div class="osg-radio osg-radio--error">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-5" checked="checked" aria-describedby="error-2" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Error/invalid</span>
-            </span>
-          </label>
-          <label class="osg-radio osg-radio--error">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Error/invalid</span>
+            </label>
+          </div>
+          <div class="osg-radio osg-radio--error">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-5" aria-describedby="error-2" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Error/invalid</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Error/invalid</span>
+            </label>
+          </div>
           <div class="osg-radio__error-message" id="error-2">Error message</div>
         </div>
         <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-          <label class="osg-radio">
-            <span class="osg-radio__input">
+          <div class="osg-radio">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-6" checked="checked" aria-describedby="required-2" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Required</span>
-            </span>
-          </label>
-          <label class="osg-radio">
-            <span class="osg-radio__input">
+              <span class="osg-radio__text">Required</span>
+            </label>
+          </div>
+          <div class="osg-radio">
+            <label class="osg-radio__input">
               <input type="radio" name="radio-5" aria-describedby="required-2" />
               <span class="osg-radio__control"></span>            
-              <span class="osg-radio__label">Required</span>
-            </span>
-          </label>
+              <span class="osg-radio__text">Required</span>
+            </label>
+          </div>
           <div class="osg-radio__required" id="required-1">* Required</div>
         </div>
       </div>
