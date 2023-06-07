@@ -41,11 +41,17 @@
   }
 
   &__checkmark {
+    @extend %osg-margin-top-1-breakpoint-medium;
+    margin-top: 0.12em;
     position: relative;
     border: 2px solid colors.$blue-dark;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
+    
+    @include breakpoints.large {
+      margin-top: 0.16em;
+    }
   }
 
   &__checkmark:after {
