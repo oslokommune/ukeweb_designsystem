@@ -1,4 +1,4 @@
-import { OsgTabs } from './tabs.js';
+import { OsgTabs } from './tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
   OsgTabs.init();

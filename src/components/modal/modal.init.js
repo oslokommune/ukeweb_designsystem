@@ -1,4 +1,4 @@
-import { OsgModal } from './modal.js';
+import { OsgModal } from './modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   OsgModal.init();

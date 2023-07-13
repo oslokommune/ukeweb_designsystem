@@ -1,4 +1,4 @@
-import { OsgBreakpoints } from './breakpoints.js';
+import { OsgBreakpoints } from './breakpoints';
 
 document.addEventListener('DOMContentLoaded', () => {
   /**
