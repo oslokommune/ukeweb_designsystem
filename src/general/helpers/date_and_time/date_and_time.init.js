@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.getElementById('date-time-vue-examples')) {
-    new Vue({
+    Vue({
       el: '#date-time-vue-examples',
       data: () => ({
         testDate: new Date(2021, 11, 31, 23, 59, 59),

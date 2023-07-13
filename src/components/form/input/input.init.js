@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.getElementById('osg-input-vue-1')) {
     Vue.component('osg-input', OsgInputVue);
-    new Vue({ el: '#osg-input-vue-1' });
+    Vue({ el: '#osg-input-vue-1' });
   }
 });

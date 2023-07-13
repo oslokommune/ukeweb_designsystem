@@ -12,7 +12,7 @@ import OsgExampleComponent from './component.vue';
 document.addEventListener('DOMContentLoaded', () => {
   const exampleComponent = document.getElementById('osg-example-component-vue');
   if (exampleComponent) {
-    new Vue({
+    Vue({
       el: exampleComponent,
       components: {
         OsgExampleComponent,

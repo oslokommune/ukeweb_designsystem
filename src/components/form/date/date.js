@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const osgDatePlaceholder = document.getElementById(elementName);
     if (osgDatePlaceholder) {
       Vue.component('osg-date', OsgDate);
-      new Vue({
+      Vue({
         el: osgDatePlaceholder,
 
         data: () => ({

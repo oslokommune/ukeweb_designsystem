@@ -3,7 +3,7 @@ import OsgRadiogroup from './radiogroup.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('osg-radio-vue-1')) {
-    new Vue({
+    Vue({
       el: '#osg-radio-vue-1',
       components: { OsgRadiogroup },
       data: () => ({

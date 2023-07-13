@@ -6,7 +6,7 @@ export function OsgSearchVue() {
   vueElements.forEach((element) => {
     const osgSearchPlaceholder = document.getElementById(element);
     if (osgSearchPlaceholder) {
-      new Vue({
+      Vue({
         el: osgSearchPlaceholder,
         components: {
           OsgSearchInline,
