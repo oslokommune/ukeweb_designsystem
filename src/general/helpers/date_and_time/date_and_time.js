@@ -16,13 +16,14 @@ function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions) {
 
   return dateFromString + dateToString;
 }
-
+// linting: changed != to !==
+// linting: changed == to ===  - Check if code breaks
 function replaceLast(initialString, stringToReplace, replaceString) {
   const a = initialString.split('');
   const { length } = stringToReplace;
-  if (initialString.lastIndexOf(stringToReplace) != -1) {
-    for (let i = initialString.lastIndexOf(stringToReplace); i < initialString.lastIndexOf(stringToReplace) + length; i++) {
-      if (i == initialString.lastIndexOf(stringToReplace)) {
+  if (initialString.lastIndexOf(stringToReplace) !== -1) {
+    for (let i = initialString.lastIndexOf(stringToReplace); i < initialString.lastIndexOf(stringToReplace) + length; i += 1) {
+      if (i === initialString.lastIndexOf(stringToReplace)) {
         a[i] = replaceString;
       } else {
         delete a[i];

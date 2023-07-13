@@ -343,10 +343,10 @@ export default {
       } else if (geoJson.type === 'Feature') {
         coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson.geometry);
       } else if (geoJson.type === 'GeometryCollection') {
-        var _this = this; // Scope this, bobby!
+        let _this = this; // Scope this, bobby!
         coordinates = geoJson.geometries.reduce((part, geometryCollection) => part.concat(_this.$_getCoordinatesForGeoJsonObject(geometryCollection)), []);
       } else if (geoJson.type === 'FeatureCollection') {
-        var _this = this; // Scope this, bobby!
+        let _this = this; // Scope this, bobby!
         coordinates = geoJson.features.reduce((part, featureCollection) => part.concat(_this.$_getCoordinatesForGeoJsonObject(featureCollection)), []);
       }
       return coordinates;
