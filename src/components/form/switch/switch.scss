@@ -24,9 +24,7 @@
   &--focus {
     border: 0.125rem solid colors.$blue-state;
     outline: initial;
-    outline-style: solid;
-    outline-width: 0.063rem;
-    outline-color: colors.$blue-state;
+    outline: colors.$blue-state solid 0.063rem;
   }
 
   &__input:focus ~ &__label-text,
@@ -92,6 +90,7 @@
   font-weight: 500;
   height: 1.688rem;
   @extend %osg-margin-bottom-3;
+
   position: relative;
   width: 2.563rem;
 
@@ -136,6 +135,7 @@
     content: "";
     font-family: "Oslo Icons";
     @extend %osg-text--size-bravo;
+
     font-style: normal;
     height: 0;
     left: 50%;

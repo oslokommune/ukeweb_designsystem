@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "OsgRadio",
+  name: 'OsgRadio',
 
   props: {
     name: {
@@ -32,7 +32,7 @@ export default {
     hasError: {
       type: Boolean,
       default: false,
-    }
+    },
   },
 
   computed: {
@@ -41,9 +41,9 @@ export default {
         return this.selected;
       },
       set(value) {
-        this.$emit("select", value);
-      }
-    }
+        this.$emit('select', value);
+      },
+    },
   },
-}
+};
 </script>

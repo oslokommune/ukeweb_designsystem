@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "OsgPagination",
+  name: 'OsgPagination',
   props: {
     ariaLabel: {
       type: String,
@@ -50,25 +50,23 @@ export default {
     },
     i18n: {
       type: Object,
-      default: () => {
-        return {
-          previousButton: "Show previous page",
-          nextButton: "Show next page",
-          showPage: "Show page",
-        };
-      },
+      default: () => ({
+        previousButton: 'Show previous page',
+        nextButton: 'Show next page',
+        showPage: 'Show page',
+      }),
     },
   },
   computed: {
-    limitMax: function () {
+    limitMax() {
       return this.currentIndex + this.limit;
     },
-    limitMin: function () {
+    limitMin() {
       return this.currentIndex - this.limit;
     },
   },
   methods: {
-    showItem: function (index) {
+    showItem(index) {
       const isFirst = index === 1;
       const isLast = index === this.totalPages;
       const isWithinLimit = index >= this.limitMin && index <= this.limitMax;
@@ -76,11 +74,11 @@ export default {
 
       return isFirst || isLast || isWithinLimit || threshold;
     },
-    showSpacer: function (index) {
+    showSpacer(index) {
       return this.totalPages > this.threshold && index >= this.limitMin - 1 && index <= this.limitMax + 1;
     },
-    paginate: function (value) {
-      this.$emit("paginate", value);
+    paginate(value) {
+      this.$emit('paginate', value);
     },
   },
 };

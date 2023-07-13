@@ -1,5 +1,5 @@
-import { OsgSearchJs, OsgSearchVue } from "./inline.js";
+import { OsgSearchJs, OsgSearchVue } from './inline.js';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
   OsgSearchVue();
 });

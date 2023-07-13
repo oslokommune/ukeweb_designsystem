@@ -107,6 +107,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     & .osg-landscape-card__content {
       @extend %osg-color-bg-blue-light;
     }
+
     & .osg-landscape-card__content img {
       @include breakpoints.medium {
         background-position: center;

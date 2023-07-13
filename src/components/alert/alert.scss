@@ -10,6 +10,7 @@
 
   &__link {
     @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
+
     align-items: flex-start;
     color: inherit;
     display: flex;
@@ -19,6 +20,7 @@
 
   &__illustration {
     @extend %osg-margin-right-3;
+
     flex: 0 0 auto;
     line-height: 0;
 
@@ -44,6 +46,7 @@
       @extend %osg-margin-bottom-1;
       @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
       @extend %osg-text--weight-medium;
+
       display: inline-block;
     }
 
@@ -55,6 +58,7 @@
 
   &__status {
     @extend %osg-margin-left-4;
+
     align-items: flex-start;
     display: flex;
     flex-grow: 1;
@@ -79,9 +83,10 @@
 
   &--critical {
     .osg-alert__status .osg-alert__symbol {
-      &:after {
+      &::after {
         @extend %osg-margin-top-2;
         @extend %osg-margin-right-2;
+
         animation: alert-critical-pulse 2s infinite;
         background-color: colors.$red;
         border-radius: 50%;
@@ -105,9 +110,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
   }
+
   80% {
     box-shadow: 0 0 0 10px rgba(colors.$red, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(colors.$red, 0);
   }

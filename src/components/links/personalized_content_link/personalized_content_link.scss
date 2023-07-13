@@ -13,6 +13,7 @@
   @include breakpoints.large {
     column-gap: units.unit-to-rem(4);
   }
+
   display: grid;
   grid-template-columns: 1fr;
   text-decoration: none;
@@ -49,6 +50,7 @@
     .osg-personalized-content-link__text {
       color: states.$hover;
     }
+
     .osg-personalized-content-link__title {
       text-decoration: underline;
     }

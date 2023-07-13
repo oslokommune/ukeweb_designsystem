@@ -42,6 +42,7 @@
     &--visited {
       color: states.$visited !important;
     }
+
     &:hover,
     &--hover,
     &:focus,
@@ -49,6 +50,7 @@
       color: states.$hover !important;
       text-decoration: underline;
     }
+
     &:active,
     &--active {
       color: states.$active !important;
@@ -58,6 +60,7 @@
   &__active {
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-medium;
+
     margin-left: 6px;
     position: relative;
     padding-left: 0.9em;

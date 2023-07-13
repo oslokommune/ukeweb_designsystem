@@ -46,7 +46,7 @@
     display: inline-block;
     padding: units.unit-to-rem(2) units.unit-to-rem(12) units.unit-to-rem(2) units.unit-to-rem(4);
     width: 100%;
-    -webkit-appearance: none;
+    appearance: none;
 
     &:hover {
       border: 0.125rem solid colors.$blue-state !important;
@@ -59,8 +59,8 @@
     }
 
     &::-webkit-search-cancel-button {
-      -webkit-appearance: none;
-      background: url(/node_modules/styleguide/src/assets/icons/cross.svg) no-repeat;
+      appearance: none;
+      background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
       background-size: contain;
       height: 2rem;
       margin-right: -5px;
@@ -85,7 +85,7 @@
     @extend %osg-padding-vertical-4;
 
     background-color: colors.$white;
-    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
     left: 0;
     list-style: none;
     position: absolute;

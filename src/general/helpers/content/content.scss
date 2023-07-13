@@ -58,11 +58,14 @@
 
   ul {
     @extend .osg-unordered-list, %osg-margin-vertical-5;
+
     ul,
     ul ul {
       @extend %osg-margin-vertical-0;
+
       padding-left: 1.25rem;
     }
+
     li + li {
       @extend %osg-padding-top-3;
     }
@@ -70,11 +73,14 @@
 
   ol {
     @extend .osg-ordered-list, %osg-margin-vertical-5;
+
     ol,
     ol ol {
       @extend %osg-margin-vertical-0;
+
       padding-left: 1.25rem;
     }
+
     li + li {
       @extend %osg-padding-top-3;
     }

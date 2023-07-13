@@ -1,5 +1,5 @@
 function triggerIterator(callback) {
-  const triggers = document.querySelectorAll(".osg-tabs__trigger");
+  const triggers = document.querySelectorAll('.osg-tabs__trigger');
   triggers.forEach((item) => {
     callback(item);
   });
@@ -8,23 +8,23 @@ function triggerIterator(callback) {
 function handleTabFocus(event) {
   const trigger = event.target;
   if (trigger) {
-    const tab = document.getElementById(trigger.getAttribute("aria-controls"));
+    const tab = document.getElementById(trigger.getAttribute('aria-controls'));
     if (tab) {
-      let toggleEvent = new CustomEvent("OsgTabsActivate", {
+      const toggleEvent = new CustomEvent('OsgTabsActivate', {
         detail: {
-          trigger: trigger,
-          tab: tab,
+          trigger,
+          tab,
         },
       });
-      trigger.closest(".osg-tabs").dispatchEvent(toggleEvent);
+      trigger.closest('.osg-tabs').dispatchEvent(toggleEvent);
 
       setActiveTrigger(trigger);
       setActiveTab(tab);
     } else {
-      console.error("Tab not found");
+      console.error('Tab not found');
     }
   } else {
-    console.error("No trigger found");
+    console.error('No trigger found');
   }
 }
 
@@ -32,7 +32,7 @@ function handleKeyEvent(event) {
   const nextSibling = event.target.nextElementSibling;
   const previousSibling = event.target.previousElementSibling;
   switch (event.key) {
-    case "ArrowRight":
+    case 'ArrowRight':
       event.stopPropagation();
       event.preventDefault();
       if (nextSibling) {
@@ -41,7 +41,7 @@ function handleKeyEvent(event) {
         event.target.parentNode.firstElementChild.focus();
       }
       break;
-    case "ArrowLeft":
+    case 'ArrowLeft':
       event.stopPropagation();
       event.preventDefault();
       if (previousSibling) {
@@ -50,18 +50,18 @@ function handleKeyEvent(event) {
         event.target.parentNode.lastElementChild.focus();
       }
       break;
-    case "Home":
+    case 'Home':
       event.stopPropagation();
       event.preventDefault();
       event.target.parentNode.firstElementChild.focus();
       break;
-    case "End":
+    case 'End':
       event.stopPropagation();
       event.preventDefault();
       event.target.parentNode.lastElementChild.focus();
       break;
-    case "Enter":
-    case "Space":
+    case 'Enter':
+    case 'Space':
       handleTabFocus(event);
       break;
     default:
@@ -70,32 +70,32 @@ function handleKeyEvent(event) {
 }
 
 function setActiveTrigger(trigger) {
-  const OsgTabs = trigger.closest(".osg-tabs");
+  const OsgTabs = trigger.closest('.osg-tabs');
   if (OsgTabs) {
-    const triggers = OsgTabs.querySelectorAll(".osg-tabs__trigger");
+    const triggers = OsgTabs.querySelectorAll('.osg-tabs__trigger');
     triggers.forEach((trigger) => {
-      trigger.setAttribute("aria-selected", "false");
-      trigger.setAttribute("tabindex", "-1");
+      trigger.setAttribute('aria-selected', 'false');
+      trigger.setAttribute('tabindex', '-1');
     });
 
-    trigger.setAttribute("aria-selected", "true");
-    trigger.removeAttribute("tabindex");
+    trigger.setAttribute('aria-selected', 'true');
+    trigger.removeAttribute('tabindex');
   } else {
-    console.error("No OsgTabs found");
+    console.error('No OsgTabs found');
   }
 }
 
 function setActiveTab(tab) {
-  const OsgTabs = tab.closest(".osg-tabs");
+  const OsgTabs = tab.closest('.osg-tabs');
   if (OsgTabs) {
-    const tabs = OsgTabs.querySelectorAll(".osg-tabs__tab");
+    const tabs = OsgTabs.querySelectorAll('.osg-tabs__tab');
     tabs.forEach((tab) => {
-      tab.classList.remove("osg-tabs__tab--active");
+      tab.classList.remove('osg-tabs__tab--active');
     });
 
-    tab.classList.add("osg-tabs__tab--active");
+    tab.classList.add('osg-tabs__tab--active');
   } else {
-    console.error("No OsgTabs found");
+    console.error('No OsgTabs found');
   }
 }
 
@@ -111,26 +111,26 @@ export const OsgTabs = {
   },
 
   bindElement(element) {
-    element.addEventListener("click", handleTabFocus);
-    element.addEventListener("keydown", handleKeyEvent);
+    element.addEventListener('click', handleTabFocus);
+    element.addEventListener('keydown', handleKeyEvent);
   },
 
   unbindElement(element) {
-    element.removeEventListener("click", handleTabFocus);
-    element.removeEventListener("keydown", handleKeyEvent);
+    element.removeEventListener('click', handleTabFocus);
+    element.removeEventListener('keydown', handleKeyEvent);
   },
 
   bindAll() {
     triggerIterator((item) => {
-      item.addEventListener("click", handleTabFocus);
-      item.addEventListener("keydown", handleKeyEvent);
+      item.addEventListener('click', handleTabFocus);
+      item.addEventListener('keydown', handleKeyEvent);
     });
   },
 
   unbindAll() {
     triggerIterator((item) => {
-      item.removeEventListener("click", handleTabFocus);
-      item.removeEventListener("keydown", handleKeyEvent);
+      item.removeEventListener('click', handleTabFocus);
+      item.removeEventListener('keydown', handleKeyEvent);
     });
   },
 };

@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "ExampleComponent",
+  name: 'ExampleComponent',
 };
 </script>
 

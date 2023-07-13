@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: "OsgCheckbox",
+  name: 'OsgCheckbox',
 
   props: {
     name: {
@@ -31,26 +31,26 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: ""
+      default: '',
     },
     errorId: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
     conditionalErrorId() {
-      return this.errorMessage ? this.errorId : "";
+      return this.errorMessage ? this.errorId : '';
     },
     checkedModel: {
       get() {
         return this.checked;
       },
       set(value) {
-        this.$emit("check", value);
-      }
-    }
+        this.$emit('check', value);
+      },
+    },
   },
-}
+};
 </script>

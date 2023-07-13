@@ -7,6 +7,7 @@
 
 .osg-date {
   @include mixins.form-states;
+
   position: relative;
 
   &__required {
@@ -27,6 +28,7 @@
       content: map-get(icon-map.$icons, "calendar") !important;
       font-family: "Oslo Icons" !important;
       @extend %osg-text--size-delta;
+
       line-height: 1em;
       position: absolute;
       right: 10px;
@@ -45,8 +47,9 @@
 
   &__datepicker {
     $padding: 10px;
+
     background-color: colors.$white;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 30%);
     display: flex;
     justify-content: center;
     padding: $padding;
@@ -58,6 +61,7 @@
     &__button {
       border: 0 none;
     }
+
     &__button {
       width: 30px;
       height: 30px;
@@ -65,28 +69,34 @@
       border: none;
       background-color: transparent;
       @extend %osg-text--size-golf;
+
       line-height: 30px;
       text-align: center;
 
       @extend %osg-margin-vertical-0, %osg-margin-horizontal-1;
+
       position: absolute;
       top: 10px;
 
       &:disabled {
         cursor: not-allowed;
         color: states.$disabled-text;
+
         &:hover {
           background-color: transparent;
           color: states.$disabled-text;
         }
       }
+
       &:not(:disabled) {
         cursor: pointer;
       }
+
       &:hover {
         background-color: colors.$gray;
         color: colors.$blue-state;
       }
+
       &--next {
         right: 5px;
 
@@ -95,6 +105,7 @@
           font-family: "Oslo Icons" !important;
         }
       }
+
       &--prev {
         left: 5px;
 
@@ -116,25 +127,32 @@
       th {
         font-weight: normal;
       }
+
       caption {
         @extend %osg-text--size-juliett;
         @extend %osg-margin-bottom-3, %osg-margin-top-1;
+
         text-transform: capitalize;
       }
+
       thead {
         border-bottom: 1px solid colors.$blue-dark;
         border-top: 1px solid colors.$blue-dark;
       }
+
       th {
         @extend %osg-text--size-lima;
         @extend %osg-padding-vertical-1, %osg-padding-horizontal-0;
         @extend %osg-text--align-center;
+
         // text-align: center;
         text-transform: capitalize;
       }
+
       td {
         // text-align: center;
         @extend %osg-text--align-center;
+
         button {
           width: 36px;
           height: 36px;
@@ -148,29 +166,36 @@
             background-color: colors.$blue-dark;
             color: colors.$white;
           }
+
           // next/prev month
           &[data-adjacent="true"] {
             @extend %osg-text--size-lima;
+
             // font-size: typography.$size-14;
           }
+
           &:not(:disabled) {
             cursor: pointer;
           }
+
           // today
           &[aria-current="date"] {
             background-color: colors.$beige;
           }
+
           &[aria-current="date"] {
             &:focus,
             &:hover {
               color: colors.$blue-dark;
             }
           }
+
           // selected
           &[autofocus] {
             background-color: colors.$blue-dark;
             border-color: colors.$blue-dark;
             color: colors.$white;
+
             &:focus,
             &:hover {
               background-color: colors.$blue-state;
@@ -178,8 +203,10 @@
               color: colors.$white;
             }
           }
+
           &:disabled {
             color: states.$disabled-text;
+
             &:hover {
               background-color: transparent;
               cursor: not-allowed;

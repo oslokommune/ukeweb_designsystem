@@ -1,17 +1,17 @@
 function trapFocus(event) {
-  const isTabPressed = event.key === "Tab";
+  const isTabPressed = event.key === 'Tab';
   if (!isTabPressed) {
     return;
   }
 
   const currentElement = event.target;
-  const modalContent = document.querySelectorAll(".osg-modal")[0];
+  const modalContent = document.querySelectorAll('.osg-modal')[0];
 
   if (modalContent) {
     const focusableEls = modalContent.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
     const firstFocusableEl = focusableEls[0];
     const lastFocusableEl = focusableEls[focusableEls.length - 1];
-    const parentModalContent = currentElement.closest(".osg-modal");
+    const parentModalContent = currentElement.closest('.osg-modal');
 
     if (event.shiftKey && !parentModalContent) {
       lastFocusableEl.focus();
@@ -25,17 +25,17 @@ function trapFocus(event) {
 
 function closeModal(modal) {
   if (modal) {
-    modal.classList.remove("osg-modal--open");
-    modal.querySelector(".osg-modal__button button").removeEventListener("click", toggleModal, false);
-    modal.setAttribute("aria-hidden", "true");
-    document.removeEventListener("keyup", trapFocus, false);
+    modal.classList.remove('osg-modal--open');
+    modal.querySelector('.osg-modal__button button').removeEventListener('click', toggleModal, false);
+    modal.setAttribute('aria-hidden', 'true');
+    document.removeEventListener('keyup', trapFocus, false);
 
-    const triggers = document.querySelectorAll(`[aria-controls=${modal.getAttribute("id")}]`);
+    const triggers = document.querySelectorAll(`[aria-controls=${modal.getAttribute('id')}]`);
     triggers.forEach((trigger) => {
       let { parentNode } = trigger;
 
       while (parentNode) {
-        if (parentNode.classList?.contains("osg-modal")) {
+        if (parentNode.classList?.contains('osg-modal')) {
           return false;
         }
         parentNode = parentNode.parentNode;
@@ -50,19 +50,19 @@ function closeModal(modal) {
 function toggleModal(event) {
   let trigger = event.target;
 
-  if (!event.target.classList.contains("osg-modal-trigger")) {
-    trigger = event.target.closest(".osg-modal-trigger");
+  if (!event.target.classList.contains('osg-modal-trigger')) {
+    trigger = event.target.closest('.osg-modal-trigger');
   }
-  const modalContent = document.getElementById(trigger.getAttribute("aria-controls"));
+  const modalContent = document.getElementById(trigger.getAttribute('aria-controls'));
 
   if (modalContent) {
-    const open = modalContent.classList.toggle("osg-modal--open");
+    const open = modalContent.classList.toggle('osg-modal--open');
 
     if (open) {
-      modalContent.querySelectorAll("input,checkbox")[0].focus();
-      document.addEventListener("keyup", trapFocus, false);
+      modalContent.querySelectorAll('input,checkbox')[0].focus();
+      document.addEventListener('keyup', trapFocus, false);
 
-      modalContent.querySelector(".osg-modal__button button").addEventListener("click", toggleModal, false);
+      modalContent.querySelector('.osg-modal__button button').addEventListener('click', toggleModal, false);
     } else {
       closeModal(modalContent);
     }
@@ -79,22 +79,22 @@ export const OsgModal = {
     OsgModal.bindSingle(trigger);
   },
   closeSingle(trigger) {
-    closeModal(document.getElementById(trigger.getAttribute("aria-controls")));
+    closeModal(document.getElementById(trigger.getAttribute('aria-controls')));
   },
   bindSingle(trigger) {
-    trigger.addEventListener("click", toggleModal, false);
+    trigger.addEventListener('click', toggleModal, false);
   },
   unbindSingle(trigger) {
-    trigger.removeEventListener("click", toggleModal, false);
+    trigger.removeEventListener('click', toggleModal, false);
   },
   bindAll() {
-    const triggers = document.querySelectorAll(".osg-modal-trigger");
+    const triggers = document.querySelectorAll('.osg-modal-trigger');
     triggers.forEach((trigger) => {
       OsgModal.bindSingle(trigger);
     });
   },
   unbindAll() {
-    const triggers = document.querySelectorAll(".osg-modal-trigger");
+    const triggers = document.querySelectorAll('.osg-modal-trigger');
     triggers.forEach((trigger) => {
       OsgModal.unbindSingle(trigger);
     });

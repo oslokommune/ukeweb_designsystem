@@ -1,16 +1,16 @@
 let previousBreakpoint = null;
 export const OsgBreakpoints = {
   init() {
-    window.addEventListener("resize", OsgBreakpoints.emitWindowSizeIfChanged);
+    window.addEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
     OsgBreakpoints.emitWindowSizeIfChanged();
   },
 
   unbind() {
-    window.removeEventListener("resize", OsgBreakpoints.emitWindowSizeIfChanged);
+    window.removeEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
   },
 
   emitWindowSizeIfChanged() {
-    let data = {
+    const data = {
       detail: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -20,17 +20,17 @@ export const OsgBreakpoints = {
 
     if (data.detail.breakpoint !== previousBreakpoint) {
       previousBreakpoint = data.detail.breakpoint;
-      window.dispatchEvent(new CustomEvent("OsgBreakpointChange", data));
+      window.dispatchEvent(new CustomEvent('OsgBreakpointChange', data));
     }
   },
 
   getBreakpoint() {
     if (window.innerWidth < 769) {
-      return "small";
-    } else if (window.innerWidth < 1024) {
-      return "medium";
-    } else {
-      return "large";
+      return 'small';
     }
+    if (window.innerWidth < 1024) {
+      return 'medium';
+    }
+    return 'large';
   },
 };

@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: "OsgTextarea",
+  name: 'OsgTextarea',
 
   props: {
     name: {
@@ -26,7 +26,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     rows: {
       type: Number,
@@ -34,7 +34,7 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: "",
+      default: '',
     },
     errorId: {
       type: String,
@@ -44,14 +44,14 @@ export default {
 
   computed: {
     conditionalErrorId() {
-      return this.errorMessage ? this.errorId : "";
+      return this.errorMessage ? this.errorId : '';
     },
     textModel: {
       get() {
         return this.text;
       },
       set(value) {
-        this.$emit("input", value);
+        this.$emit('input', value);
       },
     },
   },

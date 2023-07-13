@@ -42,6 +42,7 @@
     color: states.$visited !important;
     @content;
   }
+
   &:hover,
   &--hover,
   &:focus,
@@ -49,6 +50,7 @@
     color: states.$hover !important;
     @content;
   }
+
   &:active,
   &--active {
     color: states.$active !important;

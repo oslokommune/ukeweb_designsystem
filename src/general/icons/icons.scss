@@ -43,7 +43,7 @@
     &--#{$name} {
       font-family: "Oslo Icons";
 
-      &:before {
+      &::before {
         content: "#{$content}";
       }
     }

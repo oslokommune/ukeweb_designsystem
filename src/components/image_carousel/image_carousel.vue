@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "ImageCarousel",
+  name: 'ImageCarousel',
 
   props: {
     /**
@@ -54,7 +54,7 @@ export default {
      */
     timing: {
       type: String,
-      default: "ease-in-out",
+      default: 'ease-in-out',
     },
 
     /**
@@ -73,7 +73,7 @@ export default {
 
     i18n: {
       required: true,
-      type: Object
+      type: Object,
     },
   },
   data() {
@@ -108,7 +108,7 @@ export default {
 
   mounted() {
     // Windows resize listener
-    window.addEventListener("resize", this.calculateWidthSlide);
+    window.addEventListener('resize', this.calculateWidthSlide);
 
     // Init carousel
     this.reload();
@@ -116,11 +116,11 @@ export default {
 
   beforeDestroy() {
     // Remove resize listener
-    window.removeEventListener("resize", this.calculateWidthSlide);
+    window.removeEventListener('resize', this.calculateWidthSlide);
   },
 
   computed: {
-    currentImage: function () {
+    currentImage() {
       if (!this.images) {
         return;
       }
@@ -146,7 +146,7 @@ export default {
       this.widthSlide = this.widthContainer;
 
       for (let i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.width = this.widthSlide + "px";
+        this.slides[i].style.width = `${this.widthSlide}px`;
       }
 
       this.transitionDelay = 0;
@@ -164,7 +164,7 @@ export default {
      * Prepare settings object
      */
     prepareSettings() {
-      this.settings = Object.assign({}, this.initialSettings);
+      this.settings = { ...this.initialSettings };
     },
 
     /**
@@ -173,9 +173,9 @@ export default {
     prepareSlides() {
       const slideLenth = this.$refs.slides.children.length;
       const firstSlideClone = this.$refs.slides.children[0].cloneNode(true);
-      firstSlideClone.id = "carousel-end-clone";
+      firstSlideClone.id = 'carousel-end-clone';
       const lastSlideClone = this.$refs.slides.children[slideLenth - 1].cloneNode(true);
-      lastSlideClone.id = "carousel-start-clone";
+      lastSlideClone.id = 'carousel-start-clone';
 
       this.$refs.slides.insertBefore(lastSlideClone, this.$refs.slides.children[0]);
       this.$refs.slides.appendChild(firstSlideClone);
@@ -190,7 +190,7 @@ export default {
       this.widthSlide = this.widthContainer;
 
       for (let i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.width = this.widthSlide + "px";
+        this.slides[i].style.width = `${this.widthSlide}px`;
       }
 
       if (this.currentSlide === null) {
@@ -202,9 +202,9 @@ export default {
 
     getNextSlide(index) {
       switch (this.slides[index].id) {
-        case "carousel-start-clone":
+        case 'carousel-start-clone':
           return this.slides.length - 2;
-        case "carousel-end-clone":
+        case 'carousel-end-clone':
           return 1;
         default:
           return index;

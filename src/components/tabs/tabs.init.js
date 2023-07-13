@@ -1,6 +1,6 @@
-import { OsgTabs } from "./tabs.js";
+import { OsgTabs } from './tabs.js';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
   OsgTabs.init();
 
   /* Example: Adding animation

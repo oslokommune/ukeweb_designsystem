@@ -6,6 +6,7 @@
 
 .osg-checkbox {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+
   align-items: center;
   color: inherit;
   cursor: pointer;
@@ -40,7 +41,7 @@
     flex-shrink: 0;
   }
 
-  &__checkmark:after {
+  &__checkmark::after {
     border: solid white;
     border-width: 0 2px 2px 0;
     content: "";
@@ -61,6 +62,7 @@
 
   &--error-message {
     @include mixins.error-message;
+
     display: block;
   }
 
@@ -101,7 +103,7 @@
     color: colors.$blue-state;
   }
 
-  & input:checked ~ &__checkmark:after {
+  & input:checked ~ &__checkmark::after {
     display: block;
   }
 
@@ -116,6 +118,7 @@
   & input:checked ~ span {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
+
     border-color: colors.$blue-state;
     color: colors.$blue-dark;
   }

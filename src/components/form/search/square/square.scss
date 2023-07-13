@@ -22,7 +22,7 @@
     display: inline-block;
     padding: units.unit-to-rem(2) units.unit-to-rem(4);
     width: calc(100% - 3.25rem);
-    -webkit-appearance: none;
+    appearance: none;
 
     @include breakpoints.large {
       width: calc(100% - 3.5rem);
@@ -39,14 +39,14 @@
     }
 
     &::-webkit-search-cancel-button {
-      background: url(/node_modules/styleguide/src/assets/icons/cross.svg) no-repeat;
+      background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
       background-size: contain;
       height: 2rem;
       margin-right: -5px;
       opacity: 0;
       pointer-events: none;
       width: 2rem;
-      -webkit-appearance: none;
+      appearance: none;
     }
 
     &:focus::-webkit-search-cancel-button {
@@ -92,6 +92,7 @@
 
   &__button-icon {
     @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
+
     line-height: 1.5rem;
 
     @include breakpoints.large {

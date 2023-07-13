@@ -95,7 +95,7 @@ $sizes: (
   %osg-icon--#{$name} {
     font-family: "Oslo Icons";
 
-    &:before {
+    &::before {
       content: "#{$content}";
     }
   }
