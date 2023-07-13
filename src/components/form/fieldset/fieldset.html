@@ -17,17 +17,21 @@
       <div class="osg-devtools-code">
         <div class="osg-devtools-code__box">
           <fieldset class="osg-fieldset osg-fieldset--no-border">
-            <legend class="osg-fieldset__legend">Select the options:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 2 </span>
-            </label>
+            <legend class="osg-fieldset__legend">Select the options:</legend>            
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 1</span>
+              </label>
+            </div>            
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -37,20 +41,20 @@
         <div class="osg-devtools-code__box">
           <fieldset class="osg-fieldset osg-fieldset--no-border">
             <legend class="osg-fieldset__legend">Choose an option:</legend>
-            <label class="osg-radio">
-              <span class="osg-radio__input">
-                <input type="radio" name="radio-1" checked="checked" />
+            <div class="osg-radio">                  
+              <label class="osg-radio__input">
+                <input type="radio" name="radio-1" checked="checked">
                 <span class="osg-radio__control"></span>
-              </span>
-              <span class="osg-radio__label">Option 1</span>
-            </label>
-            <label class="osg-radio">
-              <span class="osg-radio__input">
-                <input type="radio" name="radio-1" />
+                <span class="osg-radio__text">Option 1</span>
+              </label>
+            </div>
+            <div class="osg-radio">                  
+              <label class="osg-radio__input">
+                <input type="radio" name="radio-1">
                 <span class="osg-radio__control"></span>
-              </span>
-              <span class="osg-radio__label">Option 2</span>
-            </label>
+                <span class="osg-radio__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -61,16 +65,21 @@
         <div class="osg-devtools-code__box">
           <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-1">
             <legend class="osg-fieldset__legend">Select the options:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 2 </span>
-            </label>
+            
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 1</span>
+              </label>
+            </div>
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
           <div class="osg-fieldset__required" id="required-1">* Required</div>
         </div>
@@ -86,46 +95,58 @@
                 <fieldset class="osg-fieldset osg-fieldset--filter">
                   <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-1">Options</a></legend>
                   <div id="osg-fieldset--filter-1" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-                    <label class="osg-checkbox osg-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="osg-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset class="osg-fieldset osg-fieldset--filter">
                   <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-2">Options</a></legend>
                   <div id="osg-fieldset--filter-2" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-                    <label class="osg-checkbox osg-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="osg-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset class="osg-fieldset osg-fieldset--filter">
                   <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-3">Options</a></legend>
                   <div id="osg-fieldset--filter-3" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-                    <label class="osg-checkbox osg-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="osg-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="osg-checkbox__checkmark"></span>
-                      <span class="osg-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="osg-checkbox">
+                      <label class="osg-checkbox__wrapper">
+                        <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                        <span class="osg-checkbox__checkmark"></span>
+                        <span class="osg-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -150,35 +171,39 @@
         <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
           <fieldset class="osg-fieldset osg-fieldset--no-border">
             <legend class="osg-fieldset__legend">Select the options:</legend>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="osg-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="osg-checkbox__checkmark"></span>
-              <span class="osg-checkbox__text"> Option 2 </span>
-            </label>
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 1</span>
+              </label>
+            </div>
+            <div class="osg-checkbox">
+              <label class="osg-checkbox__wrapper">
+                <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                <span class="osg-checkbox__checkmark"></span>
+                <span class="osg-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
         <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
           <fieldset class="osg-fieldset osg-fieldset--no-border">
             <legend class="osg-fieldset__legend">Choose an option:</legend>
-            <label class="osg-radio">
-              <span class="osg-radio__input">
-                <input type="radio" name="radio-2" checked="checked" />
+            <div class="osg-radio">                  
+              <label class="osg-radio__input">
+                <input type="radio" name="radio-2" checked="checked">
                 <span class="osg-radio__control"></span>
-              </span>
-              <span class="osg-radio__label">Option 1</span>
-            </label>
-            <label class="osg-radio">
-              <span class="osg-radio__input">
-                <input type="radio" name="radio-2" />
+                <span class="osg-radio__text">Text</span>
+              </label>
+            </div>
+            <div class="osg-radio">                  
+              <label class="osg-radio__input">
+                <input type="radio" name="radio-2">
                 <span class="osg-radio__control"></span>
-              </span>
-              <span class="osg-radio__label">Option 2</span>
-            </label>
+                <span class="osg-radio__text">Text</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -195,16 +220,20 @@
           <fieldset class="osg-fieldset osg-fieldset--no-border" disabled="disabled">
             <legend class="osg-fieldset__legend">Disabled</legend>
             <div>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" checked="checked" disabled="disabled" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" disabled="disabled" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 2 </span>
-              </label>
+              <div class="osg-checkbox">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" disabled="disabled"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-checkbox">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" disabled="disabled"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -213,20 +242,20 @@
           <fieldset class="osg-fieldset osg-fieldset--no-border" disabled="disabled">
             <legend class="osg-fieldset__legend">Disabled</legend>
             <div>
-              <label class="osg-radio osg-radio--disabled">
-                <span class="osg-radio__input">
-                  <input type="radio" name="radio-3" disabled="disabled" checked="checked" />
+              <div class="osg-radio osg-radio--disabled">                  
+                <label class="osg-radio__input">
+                  <input type="radio" name="radio-3" disabled="disabled" checked="checked">
                   <span class="osg-radio__control"></span>
-                </span>
-                <span class="osg-radio__label">Option 1</span>
-              </label>
-              <label class="osg-radio osg-radio--disabled">
-                <span class="osg-radio__input">
-                  <input type="radio" name="radio-3" disabled="disabled" />
+                  <span class="osg-radio__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-radio osg-radio--disabled">                  
+                <label class="osg-radio__input">
+                  <input type="radio" name="radio-3" disabled="disabled">
                   <span class="osg-radio__control"></span>
-                </span>
-                <span class="osg-radio__label">Option 2</span>
-              </label>
+                  <span class="osg-radio__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -235,16 +264,20 @@
           <fieldset class="osg-fieldset osg-fieldset--no-border osg-fieldset--error" aria-describedby="error-1">
             <legend class="osg-fieldset__legend">Error:</legend>
             <div>
-              <label class="osg-checkbox osg-checkbox--error">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="osg-checkbox osg-checkbox--error">
-                <input type="checkbox" name="checkbox-1" aria-describedby="error-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 2 </span>
-              </label>
+              <div class="osg-checkbox osg-checkbox--error">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" aria-describedby="error-1"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-checkbox osg-checkbox--error">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" aria-describedby="error-1"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 1</span>
+                </label>
+              </div>
               <div class="osg-input__error-message" id="error-1">Error message</div>
             </div>
           </fieldset>
@@ -254,20 +287,20 @@
           <fieldset class="osg-fieldset osg-fieldset--no-border osg-fieldset--error" aria-describedby="error-1">
             <legend class="osg-fieldset__legend">Error:</legend>
             <div>
-              <label class="osg-radio osg-radio--error">
-                <span class="osg-radio__input">
-                  <input type="radio" name="radio-4" aria-describedby="error-1" />
+              <div class="osg-radio osg-radio--error">                  
+                <label class="osg-radio__input">
+                  <input type="radio" name="radio-4" checked="checked" aria-describedby="error-1">
                   <span class="osg-radio__control"></span>
-                </span>
-                <span class="osg-radio__label">Option 1</span>
-              </label>
-              <label class="osg-radio osg-radio--error">
-                <span class="osg-radio__input">
-                  <input type="radio" name="radio-4" aria-describedby="error-2" />
+                  <span class="osg-radio__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-radio osg-radio--error">                  
+                <label class="osg-radio__input">
+                  <input type="radio" name="radio-4" aria-describedby="error-2">
                   <span class="osg-radio__control"></span>
-                </span>
-                <span class="osg-radio__label">Option 2</span>
-              </label>
+                  <span class="osg-radio__text">Option 2</span>
+                </label>
+              </div>
               <div class="osg-radio__error-message" id="error-2">Error message</div>
             </div>
           </fieldset>
@@ -277,16 +310,20 @@
           <fieldset class="osg-fieldset osg-fieldset--no-border" aria-describedby="required-2">
             <legend class="osg-fieldset__legend">Required</legend>
             <div>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text"> Option 2 </span>
-              </label>
+              <div class="osg-checkbox">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-checkbox">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
           <div class="osg-fieldset__required" id="required-2">* Required</div>
@@ -300,46 +337,58 @@
           <fieldset class="osg-fieldset osg-fieldset--filter">
             <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-4">Options</a></legend>
             <div id="osg-fieldset--filter-4" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
+                <div class="osg-checkbox osg-margin-bottom-1">
+                  <label class="osg-checkbox__wrapper">
+                    <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">Option 1</span>
+                  </label>
+                </div>
+                <div class="osg-checkbox">
+                  <label class="osg-checkbox__wrapper">
+                    <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">Option 2</span>
+                  </label>
+                </div>
             </div>
           </fieldset>
           <fieldset class="osg-fieldset osg-fieldset--filter">
-            <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-1">Options</a></legend>
+            <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-5">Options</a></legend>
             <div id="osg-fieldset--filter-5" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
+              <div class="osg-checkbox osg-margin-bottom-1">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="osg-checkbox">
+                <label class="osg-checkbox__wrapper">
+                  <input class="osg-checkbox__input" type="checkbox" name="checkbox-1"/>
+                  <span class="osg-checkbox__checkmark"></span>
+                  <span class="osg-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="osg-fieldset osg-fieldset--filter">
             <legend class="osg-fieldset__legend"><a href="#" class="osg-collapsible-trigger" aria-expanded="false" aria-controls="osg-fieldset--filter-6">Options</a></legend>
             <div id="osg-fieldset--filter-6" class="osg-collapsible-content osg-collapsible-content--collapsed osg-collapsible-content--ease">
-              <label class="osg-checkbox osg-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 1</span>
-              </label>
-              <label class="osg-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="osg-checkbox__checkmark"></span>
-                <span class="osg-checkbox__text">Option 2</span>
-              </label>
+                <div class="osg-checkbox osg-margin-bottom-1">
+                  <label class="osg-checkbox__wrapper">
+                    <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" disabled="disabled"/>
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">Option 1</span>
+                  </label>
+                </div>
+                <div class="osg-checkbox">
+                  <label class="osg-checkbox__wrapper">
+                    <input class="osg-checkbox__input" type="checkbox" name="checkbox-1" disabled="disabled"/>
+                    <span class="osg-checkbox__checkmark"></span>
+                    <span class="osg-checkbox__text">Option 2</span>
+                  </label>
+                </div>
             </div>
           </fieldset>
         </div>

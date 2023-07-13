@@ -9,9 +9,11 @@
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   color: inherit;
   cursor: pointer;
+  border: none;
   
   &__label {
     @include mixins.form-label;
+    border: none;
   }
   
   &__wrapper {
@@ -26,7 +28,7 @@
     @extend %osg-text--weight-light;
   }
 
-  & input {
+  &__input {
     cursor: pointer;
     opacity: 0;
     position: absolute;
@@ -104,10 +106,61 @@
   &--focus &__checkmark {
     &:not([disabled]) {
       color: colors.$blue-state;
-      outline: 2px solid colors.$purple-light;
+      outline: initial;
     }
   }
+  
+  // &__focused &:focus-within &__checkmark,
+  // & input:focus ~ &__checkmark,
+  // &--focus &__checkmark {
+  //   &:not([disabled]) {
+  //     outline: 4px solid colors.$purple-light;
+  //   }
+  // } 
+  
+  // TODO: husk at hvis man har tabbet til en checkbox og så trykket med musetrykk, må den sjekke om classenavnet allerede eksisterer på elementet - hvis ikke fjern klassenavnet!
 
+  &__focused,
+  &__input:focus {
+    outline: 4px solid colors.$purple-light !important;
+  }
+  // &:focus-within &__checkmark {
+  //   &:not([disabled]) {
+  //     outline: 2px solid colors.$purple-light;
+  //   }
+  // }
+
+  
+
+  // &__focused & input:focus-within ~ &__checkmark,
+  // & input:focus-within ~ &__checkmark
+  // {
+  //   &:not([disabled]) {
+  //     outline: 4px solid colors.$purple-light !important;
+  //   }
+  // }
+  
+  // &__notfocused & input:focus-within ~ &__checkmark,
+  // & input:focus ~ &__checkmark
+  // {
+  //   &:not([disabled]) {
+  //     outline: none;
+  //   }
+  // }
+  
+  // &__focused &:focus-within &__checkmark,
+  // & input:focus ~ &__checkmark,
+  // &--focus &__checkmark {
+  //   &:not([disabled]) {
+  //     //outline: 4px solid colors.$purple-light;
+  //     box-shadow: 0 0 8px 4px colors.$purple-light;
+  //   }
+  // }
+    //outline: none;
+    //box-shadow: 0 0 8px 4px colors.$purple-light;
+      //outline: 4px solid colors.$purple-light;
+
+  
   &:focus-visible ~ &__checkmark {
     outline-style: none;
   }
