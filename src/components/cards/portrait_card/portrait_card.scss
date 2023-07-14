@@ -140,9 +140,9 @@ $osg-portrait-card-image-height-large: 290px;
     & .osg-portrait-card__link .osg-portrait-card__heading {
       &::after,
       &:hover::after {
-        font-family: "Oslo Icons" !important;
+        font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
         font-size: 0.6em;
-        content: map-get(icon-map.$icons, "new-window") !important;
+        content: map.get(icon-map.$icons, "new-window") !important;
         display: inline-block;
         margin-left: 0.4em;
       }

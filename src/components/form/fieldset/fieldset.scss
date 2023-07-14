@@ -29,10 +29,10 @@
       text-decoration: none;
 
       &::after {
-        font-family: "Oslo Icons";
+        font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
         @extend %osg-text--size-golf;
 
-        content: map-get(icon-map.$icons, "plus-sign");
+        content: map.get(icon-map.$icons, "plus-sign");
         line-height: inherit;
         position: absolute;
         top: 0;
@@ -41,7 +41,7 @@
     }
 
     > *.osg-collapsible-trigger--expanded::after {
-      content: map-get(icon-map.$icons, "minus-sign");
+      content: map.get(icon-map.$icons, "minus-sign");
     }
   }
 

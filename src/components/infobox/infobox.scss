@@ -62,13 +62,13 @@
   }
 
   & .osg-collapsible-trigger--expanded::after {
-    content: map-get(icon-map.$icons, "minus-sign") !important;
+    content: map.get(icon-map.$icons, "minus-sign") !important;
   }
 
   & .osg-collapsible-trigger::after {
-    font-family: "Oslo Icons" !important;
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     font-size: 1.5rem;
-    content: map-get(icon-map.$icons, "plus-sign");
+    content: map.get(icon-map.$icons, "plus-sign");
     border-radius: 50%;
     background-color: colors.$blue-light;
     right: -3.5rem;

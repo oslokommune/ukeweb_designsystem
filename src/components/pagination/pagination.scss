@@ -88,7 +88,7 @@
 
     &::before,
     &:hover::before {
-      font-family: "Oslo Icons" !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       padding: 0.438rem;
     }
 
@@ -101,14 +101,14 @@
   &__previous {
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
     }
   }
 
   &__next {
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-right") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-right") !important;
     }
   }
 }

@@ -41,7 +41,7 @@
 
   @each $name, $content in icon-map.$icons {
     &--#{$name} {
-      font-family: "Oslo Icons";
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
 
       &::before {
         content: "#{$content}";

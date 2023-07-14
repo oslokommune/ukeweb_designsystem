@@ -29,9 +29,9 @@
 
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
       display: inline-block;
-      font-family: "Oslo Icons" !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       font-size: 1em;
       left: -6px;
       position: absolute;
@@ -69,9 +69,9 @@
 
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
       display: inline-block;
-      font-family: "Oslo Icons" !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       font-size: 1em;
       left: -6px;
       position: absolute;

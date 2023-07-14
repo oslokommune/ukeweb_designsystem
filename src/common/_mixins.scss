@@ -1,6 +1,5 @@
 // Fonts
 // ============================================================================
-//
 //  Includes all font face variants for Oslo Sans.
 //  Medium is used as the bold font, so font-weight: bold will use OsloSans-Medium
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
@@ -14,12 +13,12 @@
     ttf: "truetype",
   );
   @each $ext in $exts {
-    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    $extmod: if(map.has-key($extmods, $ext), $ext + map.get($extmods, $ext), $ext);
+    $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
+    $src: list.append($src, url(quote($path + "." + $extmod)) format(string.quote($format)), comma);
   }
   @font-face {
-    font-family: quote($name);
+    font-family: string.quote($name);
     font-style: $style;
     font-weight: $weight;
     font-display: swap;

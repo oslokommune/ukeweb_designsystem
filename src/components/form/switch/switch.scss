@@ -46,7 +46,7 @@
   }
 
   &__input:checked ~ &__slider::before {
-    content: map-get(icon-map.$icons, "check");
+    content: map.get(icon-map.$icons, "check");
   }
 
   &__input:disabled ~ &__background,
@@ -133,7 +133,7 @@
     background-color: colors.$white;
     border-radius: 0.375rem;
     content: "";
-    font-family: "Oslo Icons";
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
     @extend %osg-text--size-bravo;
 
     font-style: normal;

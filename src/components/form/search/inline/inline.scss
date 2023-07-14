@@ -15,8 +15,8 @@
     @extend %osg-text--size-delta;
 
     bottom: units.unit-to-rem(2);
-    content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
-    font-family: "Oslo Icons" !important;
+    content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     line-height: 1em;
     position: absolute;
     right: units.unit-to-rem(4);

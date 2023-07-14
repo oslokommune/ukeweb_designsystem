@@ -25,11 +25,11 @@
     }
 
     &::after {
-      font-family: "Oslo Icons";
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
       @extend %osg-text--size-golf;
 
       line-height: 1.75rem;
-      content: map-get(icon-map.$icons, "chevron-thin-down");
+      content: map.get(icon-map.$icons, "chevron-thin-down");
       position: absolute;
     }
   }
@@ -55,10 +55,10 @@
     }
 
     &::after {
-      font-family: "Oslo Icons";
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
       @extend %osg-text--size-delta;
 
-      content: map-get(icon-map.$icons, "plus-sign");
+      content: map.get(icon-map.$icons, "plus-sign");
       position: absolute;
     }
   }
@@ -82,8 +82,8 @@
     &::after {
       @extend %osg-margin-left-1;
 
-      content: map-get(icon-map.$icons, "chevron-thin-down");
-      font-family: "Oslo Icons";
+      content: map.get(icon-map.$icons, "chevron-thin-down");
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
       @extend %osg-text--size-golf;
 
       line-height: 1.75rem;
@@ -99,12 +99,12 @@
 
   &--expanded {
     &.osg-collapsible-trigger--big-block::after {
-      content: map-get(icon-map.$icons, "minus-sign");
+      content: map.get(icon-map.$icons, "minus-sign");
     }
 
     &.osg-collapsible-trigger--block::after,
     &.osg-collapsible-trigger--link::after {
-      content: map-get(icon-map.$icons, "chevron-thin-up");
+      content: map.get(icon-map.$icons, "chevron-thin-up");
     }
   }
 

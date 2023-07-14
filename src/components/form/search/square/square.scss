@@ -103,8 +103,8 @@
     vertical-align: top;
 
     &::before {
-      font-family: "Oslo Icons" !important;
-      content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
     }
   }
 }

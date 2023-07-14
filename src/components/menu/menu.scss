@@ -75,8 +75,8 @@
     vertical-align: top;
 
     &::before {
-      font-family: "Oslo Icons" !important;
-      content: map-get(icon-map.$icons, "menu") !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "menu") !important;
     }
   }
 
@@ -111,7 +111,7 @@
 
     & .osg-button-menu__icon {
       &::before {
-        content: map-get(icon-map.$icons, "close") !important;
+        content: map.get(icon-map.$icons, "close") !important;
       }
     }
   }
