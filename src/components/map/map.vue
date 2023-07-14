@@ -236,15 +236,12 @@ export default {
         return;
       }
 
-      if (!geoJson.hasOwnProperty('type')) {
+      if (!geoJson.Object.prototype.hasOwnProperty.call('type')) {
         return;
       }
 
-      let coordinates;
-      let boundingBox;
-
-      coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
-      boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
+      const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
+      const boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
       return coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], boundingBox);
     },
     setBoundingBox(boundingBox) {
@@ -348,7 +345,7 @@ export default {
       } else if (geoJson.type === 'FeatureCollection') {
         let _this = this; // Scope this, bobby!
         coordinates = geoJson.features.reduce((part, featureCollection) => part.concat(_this.$_getCoordinatesForGeoJsonObject(featureCollection)), []);
-      }
+      } // Up to us if we want to allow dangling underscores! has no effect, purely preference
       return coordinates;
     },
     // Private/protected method

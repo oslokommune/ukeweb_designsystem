@@ -15,19 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement) {
     Vue.component('osg-map', OsgMap);
-    const app = new Vue({ el: mapElement });
+    Vue({ el: mapElement });
   }
   if (mapElement2) {
     Vue.component('osg-map', OsgMap);
-    const app2 = new Vue({ el: mapElement2 });
+    Vue({ el: mapElement2 });
   }
   if (mapElement3) {
     Vue.component('osg-map', OsgMap);
-    const app3 = new Vue({ el: mapElement3 });
+    Vue({ el: mapElement3 });
   }
   if (mapElement4) {
     Vue.component('osg-map', OsgMap);
-    const app4 = new Vue({
+    Vue({
       el: mapElement4,
 
       mounted() {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       methods: {
         resize() {
-          console.log('Map has been resized');
+          // console.log('Map has been resized');
         },
       },
     });
@@ -44,17 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement5) {
     Vue.component('osg-map', OsgMap);
-    const app5 = new Vue({ el: mapElement5 });
+    Vue({ el: mapElement5 });
   }
 
   if (mapElement6) {
     Vue.component('osg-map', OsgMap);
-    const app6 = new Vue({ el: mapElement6 });
+    Vue({ el: mapElement6 });
   }
 
   if (mapElement7) {
     Vue.component('osg-map', OsgMap);
-    const app7 = new Vue({
+    Vue({
       el: mapElement7,
       data: () => ({
         points: [{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }],
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement8) {
     Vue.component('osg-map', OsgMap);
-    const app8 = new Vue({
+    Vue({
       el: mapElement8,
       data: () => ({
         geoJson: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement9) {
     Vue.component('osg-map', OsgMap);
-    const app9 = new Vue({
+    Vue({
       el: mapElement9,
       data: () => ({
         state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement10) {
     Vue.component('osg-map', OsgMap);
-    const app10 = new Vue({
+    Vue({
       el: mapElement10,
       data: () => ({
         loadMap: false,
