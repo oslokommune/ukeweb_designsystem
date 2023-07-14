@@ -93,7 +93,7 @@ $sizes: (
 
 @each $name, $content in icon-map.$icons {
   %osg-icon--#{$name} {
-    font-family: "Oslo Icons";
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
 
     &::before {
       content: "#{$content}";
