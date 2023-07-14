@@ -2,7 +2,7 @@
 @use "mixins";
 @use "system/states";
 
-.osg-link {
+.osg-link, %osg-link {
   display: inline-block;
   text-decoration: underline;
   word-wrap: break-word;

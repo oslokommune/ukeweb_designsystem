@@ -40,12 +40,12 @@
     @extend %osg-text--weight-light;
   }
 
-  &:hover,
-  &:focus,
-  &:active,
   &--hover,
   &--focus,
-  &--active {
+  &--active, 
+  &:hover,
+  &:focus,
+  &:active {
     .osg-personalized-content-link__title,
     .osg-personalized-content-link__text {
       color: states.$hover;
