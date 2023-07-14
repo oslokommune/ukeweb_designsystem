@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="osg-checkbox" :class="{ 'osg-checkbox--error': errorMessage }">
-      <span v-if="label" :for="name" class="osg-checkbox__label">{{ label }}</span>
       <label class="osg-checkbox__wrapper">
         <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
         <span class="osg-checkbox__checkmark"></span>
@@ -23,10 +22,6 @@ export default {
     text: {
       type: String,
       required: true,
-    },
-    label: {
-      type: String,
-      required: false,
     },
     value: {
       type: String,
