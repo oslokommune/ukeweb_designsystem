@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import './date_and_time.vue'; // For Vue filters
-import { OsgDateTime } from './date_and_time'; // For JS
+import OsgDateTime from './date_and_time'; // For JS
 
 document.addEventListener('DOMContentLoaded', () => {
   const testCasesElement = document.getElementById('testcases');

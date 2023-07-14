@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import OsgMap from '../../map/map.vue';
 import contactbox from './contactbox';
-import { OsgBreakpoints } from '../../../general/breakpoints/breakpoints';
+import OsgBreakpoints from '../../../general/breakpoints/breakpoints';
 
 const contactboxInit = {
   init() {

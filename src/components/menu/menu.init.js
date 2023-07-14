@@ -1,4 +1,4 @@
-import { OsgMenu } from './menu';
+import OsgMenu from './menu';
 
 document.addEventListener('DOMContentLoaded', () => {
   OsgMenu.init();

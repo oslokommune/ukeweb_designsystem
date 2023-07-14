@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { OsgInput } from './input';
+import OsgInput from './input';
 import OsgInputVue from './input.vue';
 
 document.addEventListener('DOMContentLoaded', () => {

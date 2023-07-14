@@ -1,4 +1,4 @@
-import { OsgCollapsible } from '../../collapsible/collapsible';
+import OsgCollapsible from '../../collapsible/collapsible';
 
 function triggerIterator(callback) {
   const triggers = document.querySelectorAll('.osg-contactbox__trigger');
