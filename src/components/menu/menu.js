@@ -97,7 +97,7 @@ function handleToggleHeading(e) {
 /**
  * Exported menu functions
  */
-export const OsgMenu = {
+const OsgMenu = {
   init() {
     OsgMenu.unbindAll();
     OsgMenu.bindAll();
@@ -156,3 +156,5 @@ export const OsgMenu = {
     closeMenu(menu);
   },
 };
+
+export default OsgMenu;

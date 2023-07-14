@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import OsgSearchInline from './inline.vue';
 
-export function OsgSearchVue() {
+function OsgSearchVue() {
   const vueElements = ['osg-search-inline-vue-1', 'osg-search-inline-vue-2'];
   vueElements.forEach((element) => {
     const osgSearchPlaceholder = document.getElementById(element);
@@ -51,3 +51,5 @@ export function OsgSearchVue() {
     }
   });
 }
+
+export default OsgSearchVue;

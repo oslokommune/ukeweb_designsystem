@@ -1,4 +1,4 @@
-export function OsgInput() {
+function OsgInput() {
   const countInput = document.querySelector('.osg-input__input--number');
 
   if (!countInput) {
@@ -37,3 +37,5 @@ export function OsgInput() {
   btnUp.addEventListener('click', increaseCount, false);
   btnDown.addEventListener('click', decreaseCount, false);
 }
+
+export default OsgInput;

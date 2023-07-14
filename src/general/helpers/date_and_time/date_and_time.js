@@ -34,7 +34,7 @@ function replaceLast(initialString, stringToReplace, replaceString) {
   return a.join('');
 }
 
-export const OsgDateTime = {
+const OsgDateTime = {
   format(dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) {
     const defaults = {
       locale: 'no-NO',
@@ -90,3 +90,5 @@ export const OsgDateTime = {
     return formatDateTime(dateFrom, dateTo, { ...defaults, ...dateFromOptions }, { ...defaults, ...dateToOptions });
   },
 };
+
+export default OsgDateTime;

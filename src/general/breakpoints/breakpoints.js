@@ -1,5 +1,5 @@
 let previousBreakpoint = null;
-export const OsgBreakpoints = {
+const OsgBreakpoints = {
   init() {
     window.addEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
     OsgBreakpoints.emitWindowSizeIfChanged();
@@ -34,3 +34,5 @@ export const OsgBreakpoints = {
     return 'large';
   },
 };
+
+export default OsgBreakpoints;

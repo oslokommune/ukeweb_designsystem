@@ -53,7 +53,7 @@ function handleBreakpointChange(e) {
   }
 }
 
-export const OsgCollapsible = {
+const OsgCollapsible = {
   init() {
     OsgCollapsible.unbindAll();
     OsgCollapsible.bindAll();
@@ -90,3 +90,5 @@ export const OsgCollapsible = {
     });
   },
 };
+
+export default OsgCollapsible;

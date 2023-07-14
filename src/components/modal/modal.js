@@ -69,7 +69,7 @@ function toggleModal(event) {
   }
 }
 
-export const OsgModal = {
+const OsgModal = {
   init() {
     OsgModal.unbindAll();
     OsgModal.bindAll();
@@ -100,3 +100,5 @@ export const OsgModal = {
     });
   },
 };
+
+export default OsgModal;
