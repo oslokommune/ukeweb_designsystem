@@ -109,7 +109,7 @@ export default {
   },
 
   watch: {
-    items(newValue) {
+    items() {
       this.resetIndex();
     },
   },
@@ -131,16 +131,18 @@ export default {
           if (this.index === null || this.index === 0) {
             this.$refs.input.focus();
           } else if (this.index > 0) {
-            this.index--;
+            this.index -= 1;
           }
           break;
         case 'ArrowDown':
           if (this.index === null) {
             this.index = 0;
           } else if (this.index < lastItem) {
-            this.index++;
+            this.index += 1;
           }
           break;
+        default:
+          console.warn('Unexpected event:', event.code);
       }
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {

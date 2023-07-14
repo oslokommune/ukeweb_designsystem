@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement) {
     Vue.component('osg-map', OsgMap);
-    const app = new Vue({ el: mapElement });
+    Vue({ el: mapElement });
   }
 
   contactboxInit.init();

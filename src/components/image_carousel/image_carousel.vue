@@ -145,7 +145,7 @@ export default {
       this.widthContainer = this.$refs.content.clientWidth;
       this.widthSlide = this.widthContainer;
 
-      for (let i = 0; i < this.slides.length; i++) {
+      for (let i = 0; i < this.slides.length; i += 1) {
         this.slides[i].style.width = `${this.widthSlide}px`;
       }
 
@@ -189,7 +189,7 @@ export default {
     prepareCarousel() {
       this.widthSlide = this.widthContainer;
 
-      for (let i = 0; i < this.slides.length; i++) {
+      for (let i = 0; i < this.slides.length; i += 1) {
         this.slides[i].style.width = `${this.widthSlide}px`;
       }
 
