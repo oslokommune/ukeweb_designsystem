@@ -10,20 +10,6 @@ $osg-portrait-card-image-height-medium: 230px;
 $osg-portrait-card-image-height-large: 290px;
 
 .osg-portrait-card {
-  &__link {
-    text-decoration: none;
-
-    &:hover {
-      .osg-portrait-card__content {
-        color: states.$hover !important;
-      }
-
-      .osg-portrait-card__heading {
-        text-decoration: underline;
-      }
-    }
-  }
-
   &__media {
     img {
       display: block;
@@ -74,7 +60,7 @@ $osg-portrait-card-image-height-large: 290px;
       @extend %osg-padding-top-8-breakpoint-medium, %osg-padding-bottom-4-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-top-8-breakpoint-large, %osg-padding-vertical-8-breakpoint-large, %osg-padding-bottom-4-breakpoint-large;
     }
   }
-
+  
   &--white {
     & .osg-portrait-card__content,
     & .osg-portrait-card__actions {
@@ -86,7 +72,7 @@ $osg-portrait-card-image-height-large: 290px;
     & .osg-portrait-card__content {
       @extend %osg-padding-5, %osg-padding-4-breakpoint-medium, %osg-padding-5-breakpoint-large;
     }
-
+    
     & .osg-portrait-card__heading {
       @extend %osg-text--size-india;
       @extend %osg-margin-bottom-1;
@@ -101,7 +87,7 @@ $osg-portrait-card-image-height-large: 290px;
       @extend %osg-margin-top-3;
       @extend %osg-text--size-lima;
     }
-
+    
     & .osg-portrait-card__media {
       img {
         @include breakpoints.large {
@@ -109,9 +95,34 @@ $osg-portrait-card-image-height-large: 290px;
         }
       }
     }
-
+    
     & .osg-portrait-card__actions {
       @extend %osg-padding-top-0-breakpoint-large, %osg-padding-horizontal-8-breakpoint-large, %osg-padding-bottom-4-breakpoint-large;
+    }
+  }
+  
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      .osg-portrait-card__content {
+        color: states.$hover !important;
+      }
+
+      .osg-portrait-card__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &--image-breakpoint-medium {
+    & .osg-portrait-card__media {
+      img {
+        display: none;
+        @include breakpoints.medium {
+          display: block;
+        }
+      }
     }
   }
 
@@ -119,7 +130,7 @@ $osg-portrait-card-image-height-large: 290px;
     & .osg-portrait-card__link {
       & .osg-portrait-card__media {
         overflow: hidden;
-
+        
         img {
           transform: scale(1);
           transition: all 0.5s;
@@ -145,17 +156,6 @@ $osg-portrait-card-image-height-large: 290px;
         content: map.get(icon-map.$icons, "new-window") !important;
         display: inline-block;
         margin-left: 0.4em;
-      }
-    }
-  }
-
-  &--image-breakpoint-medium {
-    & .osg-portrait-card__media {
-      img {
-        display: none;
-        @include breakpoints.medium {
-          display: block;
-        }
       }
     }
   }

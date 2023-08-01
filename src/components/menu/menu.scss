@@ -215,6 +215,25 @@
     @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
   }
 
+  &__categories {
+    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
+    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+
+    ul {
+      background-color: colors.$gray;
+      @extend %osg-margin-top-8-breakpoint-medium;
+
+      li {
+        @extend %osg-margin-left-3;
+        @extend %osg-margin-left-0-breakpoint-medium;
+      }
+    }
+
+    @include breakpoints.medium {
+      background-color: colors.$gray;
+    }
+  }
+  
   &__services-list {
     @extend %osg-padding-vertical-0, %osg-padding-horizontal-3;
     @extend %osg-margin-top-8-breakpoint-medium;
@@ -234,25 +253,6 @@
       @include breakpoints.medium {
         margin-bottom: unset;
       }
-    }
-  }
-
-  &__categories {
-    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
-
-    ul {
-      background-color: colors.$gray;
-      @extend %osg-margin-top-8-breakpoint-medium;
-
-      li {
-        @extend %osg-margin-left-3;
-        @extend %osg-margin-left-0-breakpoint-medium;
-      }
-    }
-
-    @include breakpoints.medium {
-      background-color: colors.$gray;
     }
   }
 

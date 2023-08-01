@@ -78,6 +78,15 @@
       position: absolute;
       top: 10px;
 
+      &:not(:disabled) {
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: colors.$gray;
+        color: colors.$blue-state;
+      }
+      
       &:disabled {
         cursor: not-allowed;
         color: states.$disabled-text;
@@ -88,14 +97,6 @@
         }
       }
 
-      &:not(:disabled) {
-        cursor: pointer;
-      }
-
-      &:hover {
-        background-color: colors.$gray;
-        color: colors.$blue-state;
-      }
 
       &--next {
         right: 5px;

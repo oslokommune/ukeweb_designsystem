@@ -5,20 +5,6 @@
 @use "system/states";
 
 .osg-status-card {
-  &__link {
-    text-decoration: none;
-
-    &:hover {
-      .osg-status-card__content {
-        color: states.$hover !important;
-      }
-
-      .osg-status-card__heading {
-        text-decoration: underline;
-      }
-    }
-  }
-
   &__content {
     @extend %osg-padding-vertical-4, %osg-padding-horizontal-3, %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-8-breakpoint-large;
 
@@ -51,7 +37,7 @@
 
   &__status {
     @extend %osg-margin-left-4;
-
+    
     .osg-icon {
       line-height: 1em !important;
       @extend %osg-text--size-foxtrot;
@@ -103,18 +89,19 @@
       }
     }
 
+    
     &--blue {
       border-color: colors.$blue;
 
       & .osg-status-card__content {
         display: flex;
       }
-
+      
       & .osg-status-card__footer {
         background-color: colors.$blue-light;
       }
     }
-
+    
     &--green {
       border-color: colors.$green;
 
@@ -137,11 +124,25 @@
   }
 }
 
+&__link {
+  text-decoration: none;
+
+  &:hover {
+    .osg-status-card__content {
+      color: states.$hover !important;
+    }
+
+    .osg-status-card__heading {
+      text-decoration: underline;
+    }
+  }
+}
+
 @keyframes status-card-red-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
   }
-
+  
   80% {
     box-shadow: 0 0 0 10px rgba(colors.$red, 0);
   }

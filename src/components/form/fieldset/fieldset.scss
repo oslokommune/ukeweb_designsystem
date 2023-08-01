@@ -56,13 +56,6 @@
     }
   }
 
-  &--disabled,
-  &:disabled {
-    & .osg-fieldset__legend {
-      color: colors.$grayscale-40;
-    }
-  }
-
   &--error {
     border-color: colors.$red;
 
@@ -70,6 +63,14 @@
       color: colors.$red;
     }
   }
+  
+  &--disabled,
+  &:disabled {
+    & .osg-fieldset__legend {
+      color: colors.$grayscale-40;
+    }
+  }
+
 
   &--filter {
     @extend %osg-margin-bottom-3, %osg-padding-bottom-3;
