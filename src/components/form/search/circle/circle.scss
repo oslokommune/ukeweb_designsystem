@@ -144,6 +144,22 @@
     display: block;
   }
 
+  &__suggestion {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-horizontal-4;
+
+    display: block;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: underline;
+    }
+  }
+
   &__dropdown {
     &--compact {
       @extend %osg-padding-vertical-4;
@@ -170,20 +186,10 @@
     }
   }
 
-  &__suggestion {
-    @extend %osg-text--size-lima;
+  
+  &__heading {
+    @extend %osg-text--size-juliett;
     @extend %osg-text--weight-medium;
-    @extend %osg-padding-horizontal-4;
-
-    display: block;
-
-    &:hover,
-    &:focus,
-    &--focus {
-      background-color: colors.$gray-light;
-      color: states.$hover;
-      text-decoration: underline;
-    }
   }
 
   &__link {
@@ -194,6 +200,12 @@
     display: block;
     text-decoration: none;
 
+    &--focus .osg-search-circle__heading,
+    &:focus .osg-search-circle__heading,
+    &:hover .osg-search-circle__heading {
+      text-decoration: underline;
+    }
+
     &:hover,
     &:focus,
     &--focus {
@@ -202,20 +214,9 @@
       text-decoration: none;
     }
 
-    &:hover .osg-search-circle__heading,
-    &:focus .osg-search-circle__heading,
-    &--focus .osg-search-circle__heading {
-      text-decoration: underline;
-    }
-
     &--divider {
       border-bottom: 0.0625rem solid colors.$gray;
     }
-  }
-
-  &__heading {
-    @extend %osg-text--size-juliett;
-    @extend %osg-text--weight-medium;
   }
 
   &__text {
