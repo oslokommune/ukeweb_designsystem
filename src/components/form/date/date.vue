@@ -95,6 +95,7 @@ export default {
         next = new Date(next).setDate(1);
         return (direction > 0 && next > this.max) || next < this.min;
       }
+      return false; // could potentially have to be "true" not false
     },
     toggleDatepicker(bool) {
       this.showDatepicker = bool;

@@ -95,11 +95,10 @@ export default {
   },
 
   created() {
-    // Read settings from options object
     if (this.options) {
-      for (const key in this.options) {
+      Object.keys(this.options).forEach((key) => {
         this.initialSettings[key] = this.options[key];
-      }
+      });
     }
 
     // Load settings
@@ -122,7 +121,7 @@ export default {
   computed: {
     currentImage() {
       if (!this.images) {
-        return;
+        return null;
       }
 
       return this.images[this.currentSlide - 1];
