@@ -142,7 +142,6 @@ export default {
           }
           break;
         default:
-          console.warn('Unexpected event:', event.code);
       }
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {

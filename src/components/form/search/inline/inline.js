@@ -42,8 +42,6 @@ function OsgSearchVue() {
               this.value = this.items[payload].text;
             } else if (event === 'itemlist-blur') {
               this.items = [];
-            } else if (event === 'submit') {
-              console.log(payload);
             }
           },
         },

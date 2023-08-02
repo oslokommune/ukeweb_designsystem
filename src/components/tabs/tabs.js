@@ -20,11 +20,7 @@ function handleTabFocus(event) {
 
       setActiveTrigger(trigger);
       setActiveTab(tab);
-    } else {
-      console.error('Tab not found');
     }
-  } else {
-    console.error('No trigger found');
   }
 }
 
@@ -80,8 +76,6 @@ function setActiveTrigger(trigger) {
 
     trigger.setAttribute('aria-selected', 'true');
     trigger.removeAttribute('tabindex');
-  } else {
-    console.error('No OsgTabs found');
   }
 }
 
@@ -94,8 +88,6 @@ function setActiveTab(tab) {
     });
 
     tab.classList.add('osg-tabs__tab--active');
-  } else {
-    console.error('No OsgTabs found');
   }
 }
 
