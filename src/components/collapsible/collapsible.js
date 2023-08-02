@@ -5,19 +5,6 @@ function triggerIterator(callback) {
   });
 }
 
-function handleCollapsible(e) {
-  toggleCollapsible(e);
-
-  const toggleEvent = new CustomEvent('OsgCollapsibleToggle', {
-    detail: {
-      target: e.target,
-      expanded: e.target.classList.contains('osg-collapsible-trigger--expanded'),
-    },
-  });
-
-  e.target.dispatchEvent(toggleEvent);
-}
-
 function toggleCollapsible(e) {
   e.preventDefault();
 
@@ -29,6 +16,19 @@ function toggleCollapsible(e) {
     e.target.setAttribute('aria-expanded', collapsible.classList.contains('osg-collapsible-content--collapsed') ? 'false' : 'true');
     e.target.classList.toggle('osg-collapsible-trigger--expanded', !collapsible.classList.contains('osg-collapsible-content--collapsed'));
   }
+}
+
+function handleCollapsible(e) {
+  toggleCollapsible(e);
+
+  const toggleEvent = new CustomEvent('OsgCollapsibleToggle', {
+    detail: {
+      target: e.target,
+      expanded: e.target.classList.contains('osg-collapsible-trigger--expanded'),
+    },
+  });
+
+  e.target.dispatchEvent(toggleEvent);
 }
 
 function handleBreakpointChange(e) {
