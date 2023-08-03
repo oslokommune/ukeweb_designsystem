@@ -5,7 +5,33 @@ function triggerIterator(callback) {
   });
 }
 
-function handleTabFocus(event) {
+const setActiveTrigger = (activetrigger) => {
+  const OsgTabs = activetrigger.closest('.osg-tabs');
+  if (OsgTabs) {
+    const triggers = OsgTabs.querySelectorAll('.osg-tabs__trigger');
+    triggers.forEach((trigger) => {
+      trigger.setAttribute('aria-selected', 'false');
+      trigger.setAttribute('tabindex', '-1');
+    });
+
+    activetrigger.setAttribute('aria-selected', 'true');
+    activetrigger.removeAttribute('tabindex');
+  }
+};
+
+const setActiveTab = (activeTab) => {
+  const OsgTabs = activeTab.closest('.osg-tabs');
+  if (OsgTabs) {
+    const tabs = OsgTabs.querySelectorAll('.osg-tabs__tab');
+    tabs.forEach((tab) => {
+      tab.classList.remove('osg-tabs__tab--active');
+    });
+
+    activeTab.classList.add('osg-tabs__tab--active');
+  }
+};
+
+const handleTabFocus = (event) => {
   const trigger = event.target;
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute('aria-controls'));
@@ -22,9 +48,9 @@ function handleTabFocus(event) {
       setActiveTab(tab);
     }
   }
-}
+};
 
-function handleKeyEvent(event) {
+const handleKeyEvent = (event) => {
   const nextSibling = event.target.nextElementSibling;
   const previousSibling = event.target.previousElementSibling;
   switch (event.key) {
@@ -61,37 +87,10 @@ function handleKeyEvent(event) {
       handleTabFocus(event);
       break;
     default:
-      return false;
   }
-}
+};
 
-function setActiveTrigger(trigger) {
-  const OsgTabs = trigger.closest('.osg-tabs');
-  if (OsgTabs) {
-    const triggers = OsgTabs.querySelectorAll('.osg-tabs__trigger');
-    triggers.forEach((trigger) => {
-      trigger.setAttribute('aria-selected', 'false');
-      trigger.setAttribute('tabindex', '-1');
-    });
-
-    trigger.setAttribute('aria-selected', 'true');
-    trigger.removeAttribute('tabindex');
-  }
-}
-
-function setActiveTab(tab) {
-  const OsgTabs = tab.closest('.osg-tabs');
-  if (OsgTabs) {
-    const tabs = OsgTabs.querySelectorAll('.osg-tabs__tab');
-    tabs.forEach((tab) => {
-      tab.classList.remove('osg-tabs__tab--active');
-    });
-
-    tab.classList.add('osg-tabs__tab--active');
-  }
-}
-
-export const OsgTabs = {
+const OsgTabs = {
   init() {
     OsgTabs.unbindAll();
     OsgTabs.bindAll();
@@ -126,3 +125,5 @@ export const OsgTabs = {
     });
   },
 };
+
+export default OsgTabs;
