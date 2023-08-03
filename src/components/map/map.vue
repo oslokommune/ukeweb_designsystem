@@ -242,7 +242,9 @@ export default {
 
       const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
       const boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
-      return coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], boundingBox);
+      const calculatedBoundingBox = coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], boundingBox);
+
+      this.setBoundingBox(calculatedBoundingBox);
     },
     setBoundingBox(boundingBox) {
       if (boundingBox) {
@@ -340,11 +342,11 @@ export default {
       } else if (geoJson.type === 'Feature') {
         coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson.geometry);
       } else if (geoJson.type === 'GeometryCollection') {
-        let _this = this; // Scope this, bobby!
-        coordinates = geoJson.geometries.reduce((part, geometryCollection) => part.concat(_this.$_getCoordinatesForGeoJsonObject(geometryCollection)), []);
+        const outerThis = this; // Scope this, bobby!
+        coordinates = geoJson.geometries.reduce((part, geometryCollection) => part.concat(outerThis.$_getCoordinatesForGeoJsonObject(geometryCollection)), []);
       } else if (geoJson.type === 'FeatureCollection') {
-        let _this = this; // Scope this, bobby!
-        coordinates = geoJson.features.reduce((part, featureCollection) => part.concat(_this.$_getCoordinatesForGeoJsonObject(featureCollection)), []);
+        const outerThis = this; // Scope this, bobby!
+        coordinates = geoJson.features.reduce((part, featureCollection) => part.concat(outerThis.$_getCoordinatesForGeoJsonObject(featureCollection)), []);
       } // Up to us if we want to allow dangling underscores! has no effect, purely preference
       return coordinates;
     },
