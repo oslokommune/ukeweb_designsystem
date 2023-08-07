@@ -53,11 +53,11 @@
   }
 
   a:not(.osg-button) {
-    @extend %osg-link;
+    @extend .osg-link;
   }
 
   ul {
-    @extend %osg-unordered-list, %osg-margin-vertical-5;
+    @extend .osg-unordered-list, %osg-margin-vertical-5;
 
     ul,
     ul ul {
@@ -72,7 +72,7 @@
   }
 
   ol {
-    @extend %osg-ordered-list, %osg-margin-vertical-5;
+    @extend .osg-ordered-list, %osg-margin-vertical-5;
 
     ol,
     ol ol {
@@ -87,31 +87,31 @@
   }
 
   blockquote {
-    @extend %osg-blockquote, %osg-margin-vertical-8;
+    @extend .osg-blockquote, %osg-margin-vertical-8;
   }
 
   table {
-    @extend %osg-table, %osg-margin-vertical-8;
+    @extend .osg-table, %osg-margin-vertical-8;
 
     caption {
-      @extend %osg-table__caption;
+      @extend .osg-table__caption;
     }
 
     thead {
-      @extend %osg-table__head;
+      @extend .osg-table__head;
     }
 
     tbody {
-      @extend %osg-table__body;
+      @extend .osg-table__body;
     }
 
     tr {
-      @extend %osg-table__row;
+      @extend .osg-table__row;
     }
 
     th,
     td {
-      @extend %osg-table__cell;
+      @extend .osg-table__cell;
     }
   }
 }

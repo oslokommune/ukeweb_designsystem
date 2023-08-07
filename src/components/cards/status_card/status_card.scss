@@ -122,18 +122,18 @@
       }
     }
   }
-}
-
-&__link {
-  text-decoration: none;
-
-  &:hover {
-    .osg-status-card__content {
-      color: states.$hover !important;
-    }
-
-    .osg-status-card__heading {
-      text-decoration: underline;
+  
+  &__link {
+    text-decoration: none;
+  
+    &:hover {
+      .osg-status-card__content {
+        color: states.$hover !important;
+      }
+  
+      .osg-status-card__heading {
+        text-decoration: underline;
+      }
     }
   }
 }

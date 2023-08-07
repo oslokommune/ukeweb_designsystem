@@ -4,6 +4,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "system/states";
+@use "sass:map";
 
 $osg-landscape-card-height-breakpoint-medium: 286px;
 $osg-landscape-card-height-breakpoint-large: 300px;

@@ -3,6 +3,7 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/states";
+@use "sass:map";
 
 .osg-breadcrumb {
   @extend %osg-text--size-lima;
