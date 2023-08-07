@@ -59,7 +59,7 @@
     color: colors.$blue-dark;
   }
 
-  &.osg-button--icon, %osg-button--icon {
+  &.osg-button--icon {
     @extend %osg-padding-2;
 
     box-sizing: content-box;
@@ -78,7 +78,7 @@
   }
 
   &.osg-button--circle {
-    @extend %osg-button--icon;
+    @extend .osg-button--icon;
 
     border-radius: 50%;
   }

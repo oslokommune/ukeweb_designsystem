@@ -3,6 +3,7 @@
 @use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
+@use "sass:map";
 
 .osg-infobox {
   @extend %osg-padding-8;

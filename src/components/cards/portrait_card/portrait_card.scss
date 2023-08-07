@@ -4,6 +4,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "system/states";
+@use "sass:map";
 
 $osg-portrait-card-image-height-small: 200px;
 $osg-portrait-card-image-height-medium: 230px;

@@ -3,6 +3,7 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/units";
+@use "sass:map";
 
 .osg-fieldset {
   :last-child {

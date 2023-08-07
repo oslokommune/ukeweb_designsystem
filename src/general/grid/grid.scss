@@ -1,7 +1,7 @@
 @use "system/breakpoints";
 @use "system/grid";
 
-.osg-grid, %osg-grid {
+.osg-grid {
   display: grid;
   grid-template-columns: repeat(#{grid.$columns}, 1fr);
 
@@ -16,7 +16,7 @@
   }
 
   &--gap {
-    @extend %osg-grid--gap-column, %osg-grid--gap-row;
+    @extend .osg-grid--gap-column, .osg-grid--gap-row;
   }
 
   // DOUBLE CHECK IF WORKING
