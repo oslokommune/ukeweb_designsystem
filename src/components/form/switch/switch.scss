@@ -10,30 +10,30 @@
     border-color: colors.$blue-state;
   }
 
-  &:hover &__background,
   &--hover &__background,
-  &:hover &__label-text,
   &--hover &__label-text,
-  &:hover &__slider,
-  &--hover &__slider {
+  &--hover &__slider,
+  &:hover &__background,
+  &:hover &__label-text,
+  &:hover &__slider {
     border-color: colors.$blue-state;
     color: colors.$blue-state;
   }
 
-  &:focus-within,
-  &--focus {
+  &--focus
+  &:focus-within {
     border: 0.125rem solid colors.$blue-state;
     outline: initial;
     outline: colors.$blue-state solid 0.063rem;
   }
 
-  &__input:focus ~ &__label-text,
-  &--focus &__label-text {
+  &--focus &__label-text
+  &__input:focus ~ &__label-text {
     color: colors.$blue-state;
   }
 
-  &__input:focus ~ &__slider,
-  &--focus &__slider {
+  &--focus &__slider,
+  &__input:focus ~ &__slider {
     border-color: colors.$blue-state;
   }
 
@@ -49,16 +49,16 @@
     content: map.get(icon-map.$icons, "check");
   }
 
+  &--disabled,
   &__input:disabled ~ &__background,
   &__input:disabled ~ &__slider,
-  &--disabled,
   &--disabled:hover {
     background: colors.$grayscale-10 none repeat scroll 0 0;
     border-color: colors.$grayscale-40;
   }
 
-  &__input:disabled ~ &__slider::before,
-  &__input:disabled ~ &__label-text {
+  &__input:disabled ~ &__label-text,
+  &__input:disabled ~ &__slider::before {
     color: colors.$grayscale-40;
   }
 
