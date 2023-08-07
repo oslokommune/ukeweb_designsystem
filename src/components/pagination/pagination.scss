@@ -87,29 +87,29 @@
       content: map.get(icon-map.$icons, "chevron-thin-right") !important;
     }
   }
-}
-
-&__next,
-&__previous {
-  background: none;
-  border: none;
-  display: inline-block;
-  @extend %osg-text--size-golf;
-
-  line-height: 1em;
-  vertical-align: middle;
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-
-  &::before,
-  &:hover::before {
-    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-    padding: 0.438rem;
-  }
-
-  &:hover::before {
-    background-color: colors.$gray-light !important;
-    border-radius: 50%;
+  
+  &__previous,
+  &__next {
+    background: none;
+    border: none;
+    display: inline-block;
+    @extend %osg-text--size-golf;
+    
+    line-height: 1em;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    
+    &::before,
+    &:hover::before {
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      padding: 0.438rem;
+    }
+    
+    &:hover::before {
+      background-color: colors.$gray-light !important;
+      border-radius: 50%;
+    }
   }
 }
