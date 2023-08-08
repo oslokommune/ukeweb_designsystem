@@ -231,20 +231,34 @@ export default {
       this.layerIds = [];
       this.dataSourceIds = [];
     },
-    getBoundingBox(geoJson) {
-      if (!this.state.autoFitToBounds) {
-        return;
-      }
+    // getBoundingBox(geoJson) {
+    //   if (!this.state.autoFitToBounds || !geoJson.hasOwnProperty('type')) {
+    //     return;
+    //   }
 
-      if (!geoJson.Object.prototype.hasOwnProperty.call('type')) {
-        return;
+    //   const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
+    //   const boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
+
+    //   return coordinates.reduce((previous, coordinate) => {
+    //     return [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])];
+    //   }, boundingBox);
+    // },
+    getBoundingBox(geoJson) {
+      if (!this.state.autoFitToBounds || !Object.prototype.hasOwnProperty.call(geoJson, 'type')) {
+        return null;
       }
 
       const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
-      const boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
-      const calculatedBoundingBox = coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], boundingBox);
+      const boundingBox = this.calculateBoundingBox(coordinates);
 
-      this.setBoundingBox(calculatedBoundingBox);
+      return boundingBox || null;
+    },
+
+    calculateBoundingBox(coordinates) {
+      const initialBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
+
+      // Fix for arrow-body-style:
+      return coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], initialBox);
     },
     setBoundingBox(boundingBox) {
       if (boundingBox) {
