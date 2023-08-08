@@ -15,47 +15,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement) {
     Vue.component('osg-map', OsgMap);
-    Vue({ el: mapElement });
+    const vm1 = new Vue();
+    vm1.$mount(mapElement);
   }
   if (mapElement2) {
     Vue.component('osg-map', OsgMap);
-    Vue({ el: mapElement2 });
+    const vm2 = new Vue();
+    vm2.$mount(mapElement2);
   }
   if (mapElement3) {
     Vue.component('osg-map', OsgMap);
-    Vue({ el: mapElement3 });
+    const vm3 = new Vue();
+    vm3.$mount(mapElement3);
   }
   if (mapElement4) {
     Vue.component('osg-map', OsgMap);
-    Vue({
-      el: mapElement4,
-
+    const vm4 = new Vue({
       mounted() {
         this.$refs.osgMap4.resize();
       },
 
       methods: {
-        resize() {
-          // console.log('Map has been resized');
-        },
+        resize() {},
       },
     });
+    vm4.$mount(mapElement4);
   }
 
   if (mapElement5) {
     Vue.component('osg-map', OsgMap);
-    Vue({ el: mapElement5 });
+    const vm5 = new Vue();
+    vm5.$mount(mapElement5);
   }
 
   if (mapElement6) {
     Vue.component('osg-map', OsgMap);
-    Vue({ el: mapElement6 });
+    const vm6 = new Vue();
+    vm6.$mount(mapElement6);
   }
 
   if (mapElement7) {
     Vue.component('osg-map', OsgMap);
-    Vue({
-      el: mapElement7,
+    const vm7 = new Vue({
       data: () => ({
         points: [{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }],
       }),
@@ -66,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10000);
       },
     });
+    vm7.$mount(mapElement7);
   }
 
   if (mapElement8) {
     Vue.component('osg-map', OsgMap);
-    Vue({
-      el: mapElement8,
+    const vm8 = new Vue({
       data: () => ({
         geoJson: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
       }),
@@ -82,12 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 15000);
       },
     });
+    vm8.$mount(mapElement8);
   }
 
   if (mapElement9) {
     Vue.component('osg-map', OsgMap);
-    Vue({
-      el: mapElement9,
+    const vm9 = new Vue({
       data: () => ({
         state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
       }),
@@ -98,16 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 15000);
       },
     });
+    vm9.$mount(mapElement9);
   }
 
   if (mapElement10) {
     Vue.component('osg-map', OsgMap);
-    Vue({
-      el: mapElement10,
+    const vm10 = new Vue({
       data: () => ({
         loadMap: false,
         state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
       }),
     });
+    vm10.$mount(mapElement10);
   }
 });

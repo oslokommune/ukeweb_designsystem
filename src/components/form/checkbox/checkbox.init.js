@@ -4,6 +4,7 @@ import OsgCheckbox from './checkbox.vue';
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('osg-checkbox-vue-1')) {
     Vue.component('osg-checkbox', OsgCheckbox);
-    Vue({ el: '#osg-checkbox-vue-1' });
+    const vm = new Vue();
+    vm.$mount('#osg-checkbox-vue-1');
   }
 });

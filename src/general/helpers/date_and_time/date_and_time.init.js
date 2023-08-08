@@ -133,12 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.getElementById('date-time-vue-examples')) {
-    Vue({
-      el: '#date-time-vue-examples',
+    const vm = new Vue({
       data: () => ({
         testDate: new Date(2021, 11, 31, 23, 59, 59),
       }),
       template: '<div><p>Date: {{ testDate | OsgDateTimeFormat() }}, DateTime: {{ testDate | OsgDateTimeFormat(null, { format: "datetime" }) }}, <span v-html="\'DoubleDate: \' + $options.filters.OsgDateTimeFormat(testDate, new Date())"></span></p></div>',
     });
+    vm.$mount('#date-time-vue-examples');
   }
 });

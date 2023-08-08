@@ -6,8 +6,7 @@ function OsgSearchVue() {
   vueElements.forEach((element) => {
     const osgSearchPlaceholder = document.getElementById(element);
     if (osgSearchPlaceholder) {
-      Vue({
-        el: osgSearchPlaceholder,
+      const vm = new Vue({
         components: {
           OsgSearchInline,
         },
@@ -46,6 +45,7 @@ function OsgSearchVue() {
           },
         },
       });
+      vm.$mount(osgSearchPlaceholder);
     }
   });
 }

@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const osgDatePlaceholder = document.getElementById(elementName);
     if (osgDatePlaceholder) {
       Vue.component('osg-date', OsgDate);
-      Vue({
-        el: osgDatePlaceholder,
-
+      const vm = new Vue({
         data: () => ({
           date: null,
           minDate: new Date('2022-10-01'),
@@ -35,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
+      vm.$mount(osgDatePlaceholder);
     }
   });
 });

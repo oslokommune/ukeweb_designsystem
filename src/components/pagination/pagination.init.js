@@ -4,8 +4,7 @@ import pagination from './pagination.vue';
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
     Vue.component('osg-pagination', pagination);
-    Vue({
-      el: '#vue-pagination',
+    const vm = new Vue({
       data: () => ({
         currentIndex: 99,
         limit: 2,
@@ -17,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
+    vm.$mount('#vue-pagination');
   }
 });
