@@ -1,4 +1,6 @@
-function trapFocus(event) {
+let toggleModal;
+
+const trapFocus = (event) => {
   const isTabPressed = event.key === 'Tab';
   if (!isTabPressed) {
     return;
@@ -21,9 +23,9 @@ function trapFocus(event) {
       event.preventDefault();
     }
   }
-}
+};
 
-function closeModal(modal) {
+const closeModal = (modal) => {
   if (modal) {
     modal.classList.remove('osg-modal--open');
     modal.querySelector('.osg-modal__button button').removeEventListener('click', toggleModal, false);
@@ -45,9 +47,9 @@ function closeModal(modal) {
       return true;
     });
   }
-}
+};
 
-function toggleModal(event) {
+toggleModal = (event) => {
   let trigger = event.target;
 
   if (!event.target.classList.contains('osg-modal-trigger')) {
@@ -67,7 +69,7 @@ function toggleModal(event) {
       closeModal(modalContent);
     }
   }
-}
+};
 
 const OsgModal = {
   init() {
