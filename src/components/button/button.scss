@@ -78,9 +78,29 @@
   }
 
   &.osg-button--circle {
-    @extend .osg-button--icon;
+    @extend %osg-padding-2;
 
     border-radius: 50%;
+    box-sizing: content-box;
+    width: 1.5rem;
+    @include breakpoints.large {
+      width: 1.75rem;
+    }
+
+    &.osg-button--small {
+      @extend %osg-padding-1;
+
+      width: 1.5rem;
+    }
+
+    &.osg-button--large {
+      @extend %osg-padding-4;
+
+      width: 2rem;
+      @include breakpoints.large {
+        width: 2.25rem;
+      }
+    }
   }
 
   /**

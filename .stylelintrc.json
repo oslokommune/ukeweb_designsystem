@@ -5,6 +5,7 @@
     "plugin/selector-bem-pattern": {
       "preset": "bem"
     },
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
   }
 }
