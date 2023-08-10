@@ -1,13 +1,4 @@
-/**
- * Common functions
- */
-function dispatchEvent(eventName, eventDetail, element) {
-  const event = new CustomEvent(eventName, {
-    detail: eventDetail,
-  });
-
-  element.dispatchEvent(event);
-}
+import dispatchCustomEvent from '../../general/utils/dispatchCustomEvent';
 
 /**
  * Menu open / close functions
@@ -34,7 +25,7 @@ function openMenu(menu) {
   menuButton.classList.add('ods-button-menu--open');
   menu.style.display = 'block';
 
-  dispatchEvent('OdsMenuOpen', { menuButton, menu }, menu);
+  dispatchCustomEvent('OdsMenuOpen', { menuButton, menu }, menu);
 }
 
 function closeMenu(menu) {
@@ -43,7 +34,7 @@ function closeMenu(menu) {
   menuButton.classList.remove('ods-button-menu--open');
   menu.style.display = 'none';
 
-  dispatchEvent('OdsMenuClose', { menuButton, menu }, menu);
+  dispatchCustomEvent('OdsMenuClose', { menuButton, menu }, menu);
 }
 
 function handleToggleMenu(e) {
@@ -91,7 +82,7 @@ function handleToggleHeading(e) {
     }
   }
 
-  dispatchEvent('OdsHeadingToggle', { target: e.target, expanded: e.target.classList.contains('ods-navbar-menu__list-animate--open') }, e.target);
+  dispatchCustomEvent('OdsHeadingToggle', { target: e.target, expanded: e.target.classList.contains('ods-navbar-menu__list-animate--open') }, e.target);
 }
 
 /**
