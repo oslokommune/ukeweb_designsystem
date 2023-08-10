@@ -1,3 +1,5 @@
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+
 function triggerIterator(callback) {
   const collapsibleTriggers = document.querySelectorAll('.osg-collapsible-trigger');
   collapsibleTriggers.forEach((item) => {
@@ -20,15 +22,7 @@ function toggleCollapsible(e) {
 
 function handleCollapsible(e) {
   toggleCollapsible(e);
-
-  const toggleEvent = new CustomEvent('OsgCollapsibleToggle', {
-    detail: {
-      target: e.target,
-      expanded: e.target.classList.contains('osg-collapsible-trigger--expanded'),
-    },
-  });
-
-  e.target.dispatchEvent(toggleEvent);
+  dispatchCustomEvent('OsgCollapsibleToggle', { target: e.target, expanded: e.target.classList.contains('osg-collapsible-trigger--expanded') }, e.target);
 }
 
 function handleBreakpointChange(e) {
