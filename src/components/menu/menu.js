@@ -1,4 +1,4 @@
-import dispatchCustomEvent from '../../general/utils/dispatchCustomEvent';
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 /**
  * Menu open / close functions
