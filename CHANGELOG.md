@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Changed spacing on list component from 4px to 8px according to Figma.
+
 ### Fixed
 
-- Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
+- Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.  
 
 ## [0.99.106] - 01-06-2023
 
