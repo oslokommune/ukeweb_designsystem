@@ -9,6 +9,7 @@
 
 <script>
 import maplibregl from 'maplibre-gl';
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 export default {
   name: 'OsgMap',
@@ -628,24 +629,14 @@ export default {
         if (popupEvent) {
           popup.on('open', () => {
             // Emit popup event.
-            const event = new CustomEvent(popupEvent, {
-              detail: {
-                data: popupEventData,
-              },
-            });
-            window.dispatchEvent(event);
+            dispatchCustomEvent(popupEvent, { data: popupEventData }, window);
           });
         }
 
         if (popdownEvent) {
           popup.on('close', () => {
             // Emit popdown event.
-            const event = new CustomEvent(popdownEvent, {
-              detail: {
-                data: popupEventData,
-              },
-            });
-            window.dispatchEvent(event);
+            dispatchCustomEvent(popdownEvent, { data: popupEventData }, window);
           });
         }
       }
