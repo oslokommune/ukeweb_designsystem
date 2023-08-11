@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed spacing on list component from 4px to 8px according to Figma.
+
+### Fixed
+
+- Update radiobutton markup in fieldset component.
   
 ## [0.99.106] - 01-06-2023
 
