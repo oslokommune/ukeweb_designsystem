@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
+- Fix the distorted appearance of the search seasons icon in iOS Safari.
 
 ## [0.99.106] - 01-06-2023
 

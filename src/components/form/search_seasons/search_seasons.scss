@@ -132,6 +132,7 @@
 
     &::after {
       @extend %osg-text--size-delta;
+      @extend %osg-text--weight-medium;
 
       content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
