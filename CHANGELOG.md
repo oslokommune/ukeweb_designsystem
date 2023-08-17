@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Adds stylelint and eslint. Refactors all code according to rulesets.
+- Added stylelint and eslint. Refactors all code according to rulesets.
+
+- Changed dispatchEvent and decoupled from code for usability
 
 ## [0.99.106] - 01-06-2023
 
