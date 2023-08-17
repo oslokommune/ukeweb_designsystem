@@ -8,12 +8,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Lint
+        id: lint
+        run: |
+          npm install
+          npm run eslint
+          npm run styleint
+
       - name: Set version
+        if: success()
         id: version
         run: |
           echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
       - name: Call workflow
+        if: success()
         run: |
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
@@ -21,10 +33,8 @@ jobs:
           https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_prod_s3.yml/dispatches \
           -d '{ "ref": "main", "inputs": { "version": "${{ steps.version.outputs.VERSION }}" } }'
 
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: Workplace step
+        if: success()
         id: changelog
         uses: oslokommune/ukeweb_gh_workplace_action@1.0
         with:
