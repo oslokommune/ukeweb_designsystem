@@ -15,7 +15,7 @@ jobs:
         id: qa
         run: |
           npm install
-          npm audit
+          npm audit --audit-level high
           npm run eslint
           npm run styleint
 
