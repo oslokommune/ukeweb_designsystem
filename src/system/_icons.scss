@@ -91,16 +91,6 @@ $sizes: (
   ),
 );
 
-@each $name, $content in icon-map.$icons {
-  %osg-icon--#{$name} {
-    font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-
-    &::before {
-      content: "#{$content}";
-    }
-  }
-}
-
 @each $name, $color in colors.$colors {
   %osg-icon--color-#{$name} {
     color: $color;
@@ -157,17 +147,17 @@ $sizes: (
   }
 }
 
-%osg-icon--standalone {
+%osg-icon-standalone {
   margin: 0;
 }
 
-%osg-icon--standalone-breakpoint-medium {
+%osg-icon-standalone-breakpoint-medium {
   @include breakpoints.medium {
     margin: 0;
   }
 }
 
-%osg-icon--standalone-breakpoint-large {
+%osg-icon-standalone-breakpoint-large {
   @include breakpoints.large {
     margin: 0;
   }
