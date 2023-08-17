@@ -11,10 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Lint
-        id: lint
+      - name: Audit and lint
+        id: qa
         run: |
           npm install
+          npm audit
           npm run eslint
           npm run styleint
 
