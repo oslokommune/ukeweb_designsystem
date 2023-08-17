@@ -17,7 +17,7 @@ jobs:
           npm install
           npm audit --audit-level high
           npm run eslint
-          npm run styleint
+          npm run stylelint
 
       - name: Set version
         if: success()
