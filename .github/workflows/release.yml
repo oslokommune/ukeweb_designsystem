@@ -1,4 +1,4 @@
-name: Release
+name: Styleguide QA and deploy
 
 on:
   release:
@@ -7,9 +7,76 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: production
+    env:
+      URL: 'Styleguide Devtools'
+      ENVIRONMENT: production
+      SLACK_CHANNEL: C044EMZ22JX
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Set Slack status
+        id: slack
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          payload: |
+            {
+              "text": "Continuous deployment",
+              "attachments": [
+                {
+                  "color": "${{ env.MESSAGE_COLOR }}",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "${{ github.workflow }}",
+                        "emoji": true
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository*\n<${{ github.server_url }}/${{ github.repository }}|${{ github.repository }}>"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Branch*\n${{ github.ref_name }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Status*\n${{ env.MESSAGE_STATUS }}"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Environment*\n${{ env.ENVIRONMENT }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Target*\n${{ env.URL }}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          MESSAGE_COLOR: '#f9c66b'
+          MESSAGE_STATUS: 'AUDIT AND LINTING IN PROGRESS'
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       - name: Audit and lint
         id: qa
@@ -18,6 +85,69 @@ jobs:
           npm audit --audit-level high
           npm run eslint
           npm run stylelint
+
+      - name: Update Slack status
+        if: success()
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          update-ts: ${{ steps.slack.outputs.ts }}
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          payload: |
+            {
+              "text": "Continuous deployment",
+              "attachments": [
+                {
+                  "color": "${{ env.MESSAGE_COLOR }}",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "${{ github.workflow }}",
+                        "emoji": true
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository*\n<${{ github.server_url }}/${{ github.repository }}|${{ github.repository }}>"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Branch*\n${{ github.ref_name }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Status*\n${{ env.MESSAGE_STATUS }}"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Environment*\n${{ env.ENVIRONMENT }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Target*\n${{ env.URL }}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          MESSAGE_COLOR: '#f9c66b'
+          MESSAGE_STATUS: 'HANDOVER TO DEVTOOLS IN PROGRESS'
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       - name: Set version
         if: success()
@@ -41,3 +171,129 @@ jobs:
         with:
           group-id: ${{ secrets.WORKPLACE_GROUP_ID }}
           auth-token: ${{ secrets.WORKPLACE_AUTH_TOKEN }}
+
+      - name: Update Slack status
+        if: success()
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          update-ts: ${{ steps.slack.outputs.ts }}
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          payload: |
+            {
+              "text": "Continuous deployment",
+              "attachments": [
+                {
+                  "color": "${{ env.MESSAGE_COLOR }}",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "${{ github.workflow }}",
+                        "emoji": true
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository*\n<${{ github.server_url }}/${{ github.repository }}|${{ github.repository }}>"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Branch*\n${{ github.ref_name }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Status*\n${{ env.MESSAGE_STATUS }}"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Environment*\n${{ env.ENVIRONMENT }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Target*\n${{ env.URL }}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          MESSAGE_COLOR: '#43f8b6'
+          MESSAGE_STATUS: 'SUCCESS'
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+      - name: Update Slack status
+        if: failure()
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          update-ts: ${{ steps.slack.outputs.ts }}
+          channel-id: ${{ env.SLACK_CHANNEL }}
+          payload: |
+            {
+              "text": "Continuous deployment",
+              "attachments": [
+                {
+                  "color": "${{ env.MESSAGE_COLOR }}",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "${{ github.workflow }}",
+                        "emoji": true
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository*\n<${{ github.server_url }}/${{ github.repository }}|${{ github.repository }}>"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Branch*\n${{ github.ref_name }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Status*\n${{ env.MESSAGE_STATUS }}"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Environment*\n${{ env.ENVIRONMENT }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Target*\n${{ env.URL }}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          MESSAGE_COLOR: '#ff8274'
+          MESSAGE_STATUS: 'FAILED'
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

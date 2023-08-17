@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     env:
-      URL: '<https://test.styleguide.ukeweb.io>'
+      URL: 'Styleguide Devtools'
       ENVIRONMENT: test
       SLACK_CHANNEL: C044EMZ22JX
     steps:
