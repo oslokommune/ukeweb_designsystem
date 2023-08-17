@@ -87,7 +87,7 @@
   }
 
   blockquote {
-    @extend .osg-blockquote, %osg-margin-vertical-8;
+    @extend .osg-blockquote, %osg-margin-vertical-8; /* stylelint-disable-line */
   }
 
   table {
