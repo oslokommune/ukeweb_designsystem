@@ -1,5 +1,3 @@
-// linting: changed != to !==
-// linting: changed == to ===  - Check if code breaks
 function replaceLast(initialString, stringToReplace, replaceString) {
   const a = initialString.split('');
   const { length } = stringToReplace;

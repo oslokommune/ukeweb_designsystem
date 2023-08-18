@@ -231,18 +231,7 @@ export default {
       this.layerIds = [];
       this.dataSourceIds = [];
     },
-    // getBoundingBox(geoJson) {
-    //   if (!this.state.autoFitToBounds || !geoJson.hasOwnProperty('type')) {
-    //     return;
-    //   }
 
-    //   const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
-    //   const boundingBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
-
-    //   return coordinates.reduce((previous, coordinate) => {
-    //     return [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])];
-    //   }, boundingBox);
-    // },
     getBoundingBox(geoJson) {
       if (!this.state.autoFitToBounds || !Object.prototype.hasOwnProperty.call(geoJson, 'type')) {
         return null;
@@ -257,7 +246,6 @@ export default {
     calculateBoundingBox(coordinates) {
       const initialBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
 
-      // Fix for arrow-body-style:
       return coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], initialBox);
     },
     setBoundingBox(boundingBox) {
@@ -361,7 +349,7 @@ export default {
       } else if (geoJson.type === 'FeatureCollection') {
         const outerThis = this; // Scope this, bobby!
         coordinates = geoJson.features.reduce((part, featureCollection) => part.concat(outerThis.$_getCoordinatesForGeoJsonObject(featureCollection)), []);
-      } // Up to us if we want to allow dangling underscores! has no effect, purely preference
+      }
       return coordinates;
     },
     // Private/protected method
