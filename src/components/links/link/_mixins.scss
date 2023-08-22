@@ -2,13 +2,14 @@
 @use "system/spacing";
 @use "system/colors";
 @use "system/states";
+@use "sass:map";
 
 @mixin icon-right($icon, $size: 0.6em) {
   &::after,
   &:hover::after {
-    font-family: "Oslo Icons" !important;
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     font-size: $size;
-    content: map-get(icon-map.$icons, $icon) !important;
+    content: map.get(icon-map.$icons, $icon) !important;
     display: inline-block;
     margin-left: 0.4em;
   }
@@ -26,9 +27,9 @@
 
   &::before,
   &:hover::before {
-    font-family: "Oslo Icons" !important;
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     font-size: 1em;
-    content: map-get(icon-map.$icons, $icon) !important;
+    content: map.get(icon-map.$icons, $icon) !important;
     display: inline-block;
     position: absolute;
     left: -6px;
@@ -42,6 +43,7 @@
     color: states.$visited !important;
     @content;
   }
+
   &:hover,
   &--hover,
   &:focus,
@@ -49,6 +51,7 @@
     color: states.$hover !important;
     @content;
   }
+
   &:active,
   &--active {
     color: states.$active !important;

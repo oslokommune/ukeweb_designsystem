@@ -5,6 +5,7 @@
 @use "system/spacing";
 @use "system/units";
 @use "system/states";
+@use "sass:map";
 
 .osg-search-circle {
   font-size: 0;
@@ -32,7 +33,7 @@
     font-family: inherit;
     padding: units.unit-to-rem(2) units.unit-to-rem(4);
     width: 100%;
-    -webkit-appearance: none;
+    appearance: none;
 
     &:hover {
       border: 0.125rem solid colors.$blue-state;
@@ -45,14 +46,14 @@
     }
 
     &::-webkit-search-cancel-button {
-      background: url(/node_modules/styleguide/src/assets/icons/cross.svg) no-repeat;
+      background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
       background-size: contain;
       height: 2rem;
       margin-right: -5px;
       opacity: 0;
       pointer-events: none;
       width: 2rem;
-      -webkit-appearance: none;
+      appearance: none;
     }
 
     &:focus::-webkit-search-cancel-button {
@@ -97,6 +98,7 @@
 
   &__button-icon {
     @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
+
     line-height: 1.5rem;
 
     @include breakpoints.large {
@@ -107,14 +109,14 @@
     vertical-align: top;
 
     &::before {
-      font-family: "Oslo Icons" !important;
-      content: map-get(icon-map.$icons, "magnifying-glass-small") !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
     }
   }
 
   &__container {
     background-color: colors.$white;
-    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
     left: 0;
     list-style: none;
     position: absolute;
@@ -143,6 +145,22 @@
     display: block;
   }
 
+  &__suggestion {
+    @extend %osg-text--size-lima;
+    @extend %osg-text--weight-medium;
+    @extend %osg-padding-horizontal-4;
+
+    display: block;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: underline;
+    }
+  }
+
   &__dropdown {
     &--compact {
       @extend %osg-padding-vertical-4;
@@ -162,26 +180,17 @@
       &-first {
         @extend %osg-padding-top-4;
       }
+
       &-last {
         @extend %osg-padding-bottom-4;
       }
     }
   }
 
-  &__suggestion {
-    @extend %osg-text--size-lima;
+  
+  &__heading {
+    @extend %osg-text--size-juliett;
     @extend %osg-text--weight-medium;
-    @extend %osg-padding-horizontal-4;
-
-    display: block;
-
-    &:hover,
-    &:focus,
-    &--focus {
-      background-color: colors.$gray-light;
-      color: states.$hover;
-      text-decoration: underline;
-    }
   }
 
   &__link {
@@ -192,6 +201,12 @@
     display: block;
     text-decoration: none;
 
+    &--focus .osg-search-circle__heading,
+    &:focus .osg-search-circle__heading,
+    &:hover .osg-search-circle__heading {
+      text-decoration: underline;
+    }
+
     &:hover,
     &:focus,
     &--focus {
@@ -200,20 +215,9 @@
       text-decoration: none;
     }
 
-    &:hover .osg-search-circle__heading,
-    &:focus .osg-search-circle__heading,
-    &--focus .osg-search-circle__heading {
-      text-decoration: underline;
-    }
-
     &--divider {
       border-bottom: 0.0625rem solid colors.$gray;
     }
-  }
-
-  &__heading {
-    @extend %osg-text--size-juliett;
-    @extend %osg-text--weight-medium;
   }
 
   &__text {

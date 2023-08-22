@@ -3,6 +3,7 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/states";
+@use "sass:map";
 
 .osg-breadcrumb {
   @extend %osg-text--size-lima;
@@ -29,9 +30,9 @@
 
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
       display: inline-block;
-      font-family: "Oslo Icons" !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       font-size: 1em;
       left: -6px;
       position: absolute;
@@ -42,6 +43,7 @@
     &--visited {
       color: states.$visited !important;
     }
+
     &:hover,
     &--hover,
     &:focus,
@@ -49,6 +51,7 @@
       color: states.$hover !important;
       text-decoration: underline;
     }
+
     &:active,
     &--active {
       color: states.$active !important;
@@ -58,6 +61,7 @@
   &__active {
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-medium;
+
     margin-left: 6px;
     position: relative;
     padding-left: 0.9em;
@@ -66,9 +70,9 @@
 
     &::before,
     &:hover::before {
-      content: map-get(icon-map.$icons, "chevron-thin-left") !important;
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
       display: inline-block;
-      font-family: "Oslo Icons" !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       font-size: 1em;
       left: -6px;
       position: absolute;

@@ -5,6 +5,7 @@
 
 .osg-message {
   @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
+
   background-color: colors.$beige;
 
   &__heading {

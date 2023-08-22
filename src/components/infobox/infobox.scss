@@ -3,9 +3,11 @@
 @use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
+@use "sass:map";
 
 .osg-infobox {
   @extend %osg-padding-8;
+
   background-color: colors.$blue-light;
 
   &__heading {
@@ -33,6 +35,7 @@
     @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
+
     background-color: colors.$blue-light;
     border: none;
     color: colors.$blue-dark;
@@ -60,21 +63,20 @@
   }
 
   & .osg-collapsible-trigger--expanded::after {
-    content: map-get(icon-map.$icons, "minus-sign") !important;
+    content: map.get(icon-map.$icons, "minus-sign") !important;
   }
 
   & .osg-collapsible-trigger::after {
-    font-family: "Oslo Icons" !important;
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     font-size: 1.5rem;
-    content: map-get(icon-map.$icons, "plus-sign");
+    content: map.get(icon-map.$icons, "plus-sign");
     border-radius: 50%;
     background-color: colors.$blue-light;
     right: -3.5rem;
-    top: 0px;
+    top: 0;
     position: absolute;
     text-align: center;
     padding-top: 1rem;
-
     height: 3.5rem;
     width: 3.5rem;
 
@@ -87,6 +89,7 @@
 
   &__content {
     @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
+
     background-color: #d8f9ff;
   }
 }

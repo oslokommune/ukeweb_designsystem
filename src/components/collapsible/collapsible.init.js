@@ -1,5 +1,5 @@
-import { OsgCollapsible } from "./collapsible.js";
+import OsgCollapsible from './collapsible';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
   OsgCollapsible.init();
 });

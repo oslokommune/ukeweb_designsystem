@@ -3,6 +3,7 @@
 
 .osg-code {
   @extend %osg-padding-1;
+
   font-size: 0.875rem;
   line-height: 1rem;
   display: inline-block;
@@ -14,6 +15,7 @@
 
   &--block {
     @extend %osg-padding-4;
+
     width: 100%;
   }
 

@@ -1,53 +1,53 @@
-import Vue from "vue";
-import OsgSearchInline from "./inline.vue";
+import Vue from 'vue';
+import OsgSearchInline from './inline.vue';
 
-export function OsgSearchVue() {
-  const vueElements = ["osg-search-inline-vue-1", "osg-search-inline-vue-2"];
+function OsgSearchVue() {
+  const vueElements = ['osg-search-inline-vue-1', 'osg-search-inline-vue-2'];
   vueElements.forEach((element) => {
-    let osgSearchPlaceholder = document.getElementById(element);
+    const osgSearchPlaceholder = document.getElementById(element);
     if (osgSearchPlaceholder) {
-      new Vue({
-        el: osgSearchPlaceholder,
+      const vm = new Vue({
         components: {
           OsgSearchInline,
         },
         data: () => ({
-          value: "h",
+          value: 'h',
           items: [],
         }),
         mounted() {
-          this.event("input-change", this.value);
+          this.event('input-change', this.value);
         },
         methods: {
           event(event, payload) {
-            if (event === "input-change") {
-              if (payload[0] && payload[0].toLowerCase() === "h") {
+            if (event === 'input-change') {
+              if (payload[0] && payload[0].toLowerCase() === 'h') {
                 this.items = [
                   {
-                    text: "Hi",
+                    text: 'Hi',
                   },
                   {
-                    text: "Hello",
+                    text: 'Hello',
                   },
                   {
-                    text: "Halo",
-                    subtext: "Greetings",
+                    text: 'Halo',
+                    subtext: 'Greetings',
                   },
                 ];
               } else {
                 this.items = [];
               }
               this.value = payload;
-            } else if (event === "item-focus") {
+            } else if (event === 'item-focus') {
               this.value = this.items[payload].text;
-            } else if (event === "itemlist-blur") {
+            } else if (event === 'itemlist-blur') {
               this.items = [];
-            } else if (event === "submit") {
-              console.log(payload);
             }
           },
         },
       });
+      vm.$mount(osgSearchPlaceholder);
     }
   });
 }
+
+export default OsgSearchVue;

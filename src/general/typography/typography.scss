@@ -1,10 +1,6 @@
 @use "system/breakpoints";
 @use "system/typography";
 
-// Placeholder for typography
-.osg-text {
-}
-
 // Weight
 @each $name, $size in typography.$weights {
   .osg-text--weight-#{$name} {

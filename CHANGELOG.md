@@ -5,11 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## unreleased
+## [Unreleased]
+
+### Added
+
+- Adds stylelint and eslint. Refactors all code according to rulesets.
 
 ### Changed
 
+- Changed spacing on list component from 4px to 8px according to Figma.
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
+
+### Fixed
+
+- Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
 
 ## [0.99.106] - 01-06-2023
 

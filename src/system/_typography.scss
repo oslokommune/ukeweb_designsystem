@@ -66,7 +66,7 @@ $sizes: (
 );
 
 @mixin size($name) {
-  @if (map.has-key($sizes, $name)) {
+  @if map.has-key($sizes, $name) {
     font-size: map.get($sizes, $name, "size");
     hyphens: auto;
     line-height: map.get($sizes, $name, "line-height");
@@ -103,7 +103,7 @@ $weights: (
   "bold": 700,
 );
 @mixin weight($name) {
-  @if (map.has-key($weights, $name)) {
+  @if map.has-key($weights, $name) {
     font-weight: map.get($weights, $name);
   } @else {
     @error "Weight #{$name} is invalid. Weight must be one of: #{map.keys($weights)}.";
@@ -134,7 +134,7 @@ $styles: (
   "italic": 1,
 );
 @mixin style($name) {
-  @if (map.has-key($styles, $name)) {
+  @if map.has-key($styles, $name) {
     font-style: #{$name};
   } @else {
     @error "Style #{$name} is invalid. Style must be one of: #{map.keys($styles)}.";
@@ -167,7 +167,7 @@ $alignments: (
   "center": 1,
 );
 @mixin align($name) {
-  @if (map.has-key($alignments, $name)) {
+  @if map.has-key($alignments, $name) {
     text-align: #{$name};
   } @else {
     @error "Align #{$name} is invalid. Align must be one of: #{map.keys($alignments)}.";

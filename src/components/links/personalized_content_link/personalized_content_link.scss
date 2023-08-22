@@ -13,6 +13,7 @@
   @include breakpoints.large {
     column-gap: units.unit-to-rem(4);
   }
+
   display: grid;
   grid-template-columns: 1fr;
   text-decoration: none;
@@ -38,22 +39,24 @@
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
   }
-
-  &:hover,
-  &:focus,
-  &:active,
+  
+  
   &--hover,
   &--focus,
-  &--active {
-    .osg-personalized-content-link__title,
+  &--active, 
+  &:hover,
+  &:focus,
+  &:active {
     .osg-personalized-content-link__text {
       color: states.$hover;
     }
+    
     .osg-personalized-content-link__title {
       text-decoration: underline;
+      color: states.$hover;
     }
   }
-
+  
   &:visited,
   &--visited {
     .osg-personalized-content-link__title,

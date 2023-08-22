@@ -32,7 +32,7 @@
   }
 
   p {
-    @extend .osg-paragraph;
+    @extend %osg-paragraph;
   }
 
   p + p {
@@ -53,59 +53,65 @@
   }
 
   a:not(.osg-button) {
-    @extend .osg-link;
+    @extend .osg-link; /* stylelint-disable-line */
   }
 
   ul {
-    @extend .osg-unordered-list, %osg-margin-vertical-5;
+    @extend .osg-unordered-list, %osg-margin-vertical-5; /* stylelint-disable-line */
+
     ul,
     ul ul {
       @extend %osg-margin-vertical-0;
+
       padding-left: 1.25rem;
     }
+
     li + li {
       @extend %osg-padding-top-3;
     }
   }
 
   ol {
-    @extend .osg-ordered-list, %osg-margin-vertical-5;
+    @extend .osg-ordered-list, %osg-margin-vertical-5; /* stylelint-disable-line */
+
     ol,
     ol ol {
       @extend %osg-margin-vertical-0;
+
       padding-left: 1.25rem;
     }
+
     li + li {
       @extend %osg-padding-top-3;
     }
   }
 
   blockquote {
-    @extend .osg-blockquote, %osg-margin-vertical-8;
+    @extend .osg-blockquote, %osg-margin-vertical-8; /* stylelint-disable-line */
   }
 
   table {
-    @extend .osg-table, %osg-margin-vertical-8;
+    @extend .osg-table, %osg-margin-vertical-8; /* stylelint-disable-line */
 
     caption {
-      @extend .osg-table__caption;
+      @extend .osg-table__caption; /* stylelint-disable-line */
     }
 
     thead {
-      @extend .osg-table__head;
+      @extend .osg-table__head; /* stylelint-disable-line */
     }
 
     tbody {
-      @extend .osg-table__body;
+      @extend .osg-table__body; /* stylelint-disable-line */
     }
 
     tr {
-      @extend .osg-table__row;
+      @extend .osg-table__row; /* stylelint-disable-line */
     }
 
     th,
     td {
-      @extend .osg-table__cell;
+      @extend .osg-table__cell; /* stylelint-disable-line */
     }
   }
 }

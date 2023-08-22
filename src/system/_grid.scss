@@ -5,16 +5,19 @@ $columns: 12;
 
 // Size of gutter on small breakpoint
 $gutter-size: units.unit-to-rem(4) !default;
+
 // Size of gutter on medium and up breakpoint
 $gutter-size-large: units.unit-to-rem(8) !default;
 
 // Size of gap on small breakpoint
 $gap-size-hard: units.unit-to-rem(4) !default;
+
 // Size of gap on medium and up breakpoint
 $gap-size-hard-large: units.unit-to-rem(8) !default;
 
 // Size of row gap on small breakpoint when using soft grid sizes
 $gap-size-soft: units.unit-to-rem(8) !default;
+
 // Size of row gap on medium and up breakpoint when using soft grid sizes
 $gap-size-soft-large: units.unit-to-rem(13) !default;
 

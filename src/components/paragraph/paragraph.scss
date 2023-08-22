@@ -2,7 +2,7 @@
 @use "system/spacing";
 @use "system/typography";
 
-.osg-paragraph {
+.osg-paragraph, %osg-paragraph {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   @include typography.weight("light");
 

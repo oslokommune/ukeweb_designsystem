@@ -7,6 +7,7 @@
 @use "system/visibility";
 @use "components/links/link/mixins";
 @use "sass:math";
+@use "sass:map";
 
 .osg-button-menu {
   @extend %osg-padding-2, %osg-padding-horizontal-4-breakpoint-large;
@@ -42,6 +43,7 @@
 
   &__text {
     @extend %osg-sr-only;
+
     pointer-events: none;
 
     @include breakpoints.medium {
@@ -74,8 +76,8 @@
     vertical-align: top;
 
     &::before {
-      font-family: "Oslo Icons" !important;
-      content: map-get(icon-map.$icons, "menu") !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "menu") !important;
     }
   }
 
@@ -110,7 +112,7 @@
 
     & .osg-button-menu__icon {
       &::before {
-        content: map-get(icon-map.$icons, "close") !important;
+        content: map.get(icon-map.$icons, "close") !important;
       }
     }
   }
@@ -164,7 +166,7 @@
     }
 
     &--close {
-      max-height: 0px;
+      max-height: 0;
       transition: all 0.7s ease;
 
       @include breakpoints.medium {
@@ -205,6 +207,7 @@
 
   &__link-text {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+
     display: inline-block;
   }
 
@@ -213,10 +216,30 @@
     @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
   }
 
+  &__categories {
+    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
+    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+
+    ul {
+      background-color: colors.$gray;
+      @extend %osg-margin-top-8-breakpoint-medium;
+
+      li {
+        @extend %osg-margin-left-3;
+        @extend %osg-margin-left-0-breakpoint-medium;
+      }
+    }
+
+    @include breakpoints.medium {
+      background-color: colors.$gray;
+    }
+  }
+  
   &__services-list {
     @extend %osg-padding-vertical-0, %osg-padding-horizontal-3;
     @extend %osg-margin-top-8-breakpoint-medium;
     @extend %osg-padding-0-breakpoint-medium;
+
     background-color: colors.$gray;
 
     @include breakpoints.medium {
@@ -234,30 +257,13 @@
     }
   }
 
-  &__categories {
-    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
-
-    ul {
-      background-color: colors.$gray;
-      @extend %osg-margin-top-8-breakpoint-medium;
-      li {
-        @extend %osg-margin-left-3;
-        @extend %osg-margin-left-0-breakpoint-medium;
-      }
-    }
-
-    @include breakpoints.medium {
-      background-color: colors.$gray;
-    }
-  }
-
   &__footer {
     @extend %osg-padding-vertical-4-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
   }
 
   &__footer-list {
     @extend %osg-margin-top-8, %osg-margin-top-0-breakpoint-medium;
+
     justify-content: flex-start;
 
     &--media {
@@ -273,6 +279,7 @@
         @extend %osg-padding-right-8, %osg-padding-right-0-breakpoint-medium, %osg-padding-left-13-breakpoint-medium;
       }
     }
+
     .osg-icon {
       font-size: 1.5rem;
     }

@@ -2,7 +2,7 @@
  * Common functions
  */
 function dispatchEvent(eventName, eventDetail, element) {
-  let event = new CustomEvent(eventName, {
+  const event = new CustomEvent(eventName, {
     detail: eventDetail,
   });
 
@@ -13,7 +13,7 @@ function dispatchEvent(eventName, eventDetail, element) {
  * Menu open / close functions
  */
 function triggerIterator(callback) {
-  const menuButtons = document.querySelectorAll(".osg-button-menu");
+  const menuButtons = document.querySelectorAll('.osg-button-menu');
 
   menuButtons.forEach((item) => {
     callback(item);
@@ -21,37 +21,37 @@ function triggerIterator(callback) {
 }
 
 function getMenuFromMenuButton(menuButton) {
-  return document.getElementById(menuButton.getAttribute("aria-controls"));
+  return document.getElementById(menuButton.getAttribute('aria-controls'));
 }
 
 function isMenuOpen(menuButtonElement) {
-  return menuButtonElement.classList.contains("osg-button-menu--open");
+  return menuButtonElement.classList.contains('osg-button-menu--open');
 }
 
 function openMenu(menu) {
   const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
-  menuButton.setAttribute("aria-expanded", "true");
-  menuButton.classList.add("osg-button-menu--open");
-  menu.style.display = "block";
+  menuButton.setAttribute('aria-expanded', 'true');
+  menuButton.classList.add('osg-button-menu--open');
+  menu.style.display = 'block';
 
-  dispatchEvent("OsgMenuOpen", { menuButton, menu }, menu);
+  dispatchEvent('OsgMenuOpen', { menuButton, menu }, menu);
 }
 
 function closeMenu(menu) {
   const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
-  menuButton.setAttribute("aria-expanded", "false");
-  menuButton.classList.remove("osg-button-menu--open");
-  menu.style.display = "none";
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.classList.remove('osg-button-menu--open');
+  menu.style.display = 'none';
 
-  dispatchEvent("OsgMenuClose", { menuButton, menu }, menu);
+  dispatchEvent('OsgMenuClose', { menuButton, menu }, menu);
 }
 
 function handleToggleMenu(e) {
   e.preventDefault();
-  const menuButton = e.target.classList.contains("osg-button-menu") ? e.target : e.target.closest(".osg-button-menu");
+  const menuButton = e.target.classList.contains('osg-button-menu') ? e.target : e.target.closest('.osg-button-menu');
   const menu = getMenuFromMenuButton(menuButton);
 
-  if ((e.code === "Enter" && menu) || (!e.code && menu)) {
+  if ((e.code === 'Enter' && menu) || (!e.code && menu)) {
     if (isMenuOpen(menuButton)) {
       closeMenu(menu);
     } else {
@@ -64,7 +64,7 @@ function handleToggleMenu(e) {
  * Menu heading functions
  */
 function triggerHeadingIterator(element, callback) {
-  const collapsableHeadings = element.querySelectorAll(".osg-navbar-menu__heading-collapsable");
+  const collapsableHeadings = element.querySelectorAll('.osg-navbar-menu__heading-collapsable');
 
   collapsableHeadings.forEach((item) => {
     callback(item);
@@ -73,31 +73,31 @@ function triggerHeadingIterator(element, callback) {
 
 function handleToggleHeading(e) {
   e.preventDefault();
-  const headingButton = e.target.classList.contains("osg-navbar-menu__heading-collapsable") ? e.target : e.target.closest(".osg-navbar-menu__heading-collapsable");
-  const collapsibleContent = headingButton.nextElementSibling.closest("ul") || headingButton.nextElementSibling;
+  const headingButton = e.target.classList.contains('osg-navbar-menu__heading-collapsable') ? e.target : e.target.closest('.osg-navbar-menu__heading-collapsable');
+  const collapsibleContent = headingButton.nextElementSibling.closest('ul') || headingButton.nextElementSibling;
 
-  if ((e.code === "Enter" && collapsibleContent) || (!e.code && collapsibleContent)) {
-    let headingButtonIconClassList = headingButton.querySelector(".osg-icon").classList;
+  if ((e.code === 'Enter' && collapsibleContent) || (!e.code && collapsibleContent)) {
+    const headingButtonIconClassList = headingButton.querySelector('.osg-icon').classList;
 
-    headingButton.setAttribute("aria-expanded", collapsibleContent.classList.contains("osg-navbar-menu__list-animate--open") ? "false" : "true");
-    collapsibleContent.classList.toggle("osg-navbar-menu__list-animate--open");
+    headingButton.setAttribute('aria-expanded', collapsibleContent.classList.contains('osg-navbar-menu__list-animate--open') ? 'false' : 'true');
+    collapsibleContent.classList.toggle('osg-navbar-menu__list-animate--open');
 
-    if (headingButtonIconClassList.contains("osg-icon--plus-sign")) {
-      headingButtonIconClassList.remove("osg-icon--plus-sign");
-      headingButtonIconClassList.add("osg-icon--minus-sign");
+    if (headingButtonIconClassList.contains('osg-icon--plus-sign')) {
+      headingButtonIconClassList.remove('osg-icon--plus-sign');
+      headingButtonIconClassList.add('osg-icon--minus-sign');
     } else {
-      headingButtonIconClassList.add("osg-icon--plus-sign");
-      headingButtonIconClassList.remove("osg-icon--minus-sign");
+      headingButtonIconClassList.add('osg-icon--plus-sign');
+      headingButtonIconClassList.remove('osg-icon--minus-sign');
     }
   }
 
-  dispatchEvent("OsgHeadingToggle", { target: e.target, expanded: e.target.classList.contains("osg-navbar-menu__list-animate--open") }, e.target);
+  dispatchEvent('OsgHeadingToggle', { target: e.target, expanded: e.target.classList.contains('osg-navbar-menu__list-animate--open') }, e.target);
 }
 
 /**
  * Exported menu functions
  */
-export const OsgMenu = {
+const OsgMenu = {
   init() {
     OsgMenu.unbindAll();
     OsgMenu.bindAll();
@@ -109,30 +109,30 @@ export const OsgMenu = {
   },
 
   bindElement(element) {
-    element.addEventListener("click", handleToggleMenu);
-    element.addEventListener("keypress", handleToggleMenu);
+    element.addEventListener('click', handleToggleMenu);
+    element.addEventListener('keypress', handleToggleMenu);
 
     OsgMenu.bindHeadings(element);
   },
 
   unbindElement(element) {
-    element.removeEventListener("click", handleToggleMenu);
-    element.removeEventListener("keypress", handleToggleMenu);
+    element.removeEventListener('click', handleToggleMenu);
+    element.removeEventListener('keypress', handleToggleMenu);
 
     OsgMenu.unbindHeadings(element);
   },
 
   bindHeadings(element) {
     triggerHeadingIterator(getMenuFromMenuButton(element), (item) => {
-      item.addEventListener("click", handleToggleHeading);
-      item.addEventListener("keypress", handleToggleHeading);
+      item.addEventListener('click', handleToggleHeading);
+      item.addEventListener('keypress', handleToggleHeading);
     });
   },
 
   unbindHeadings(element) {
     triggerHeadingIterator(getMenuFromMenuButton(element), (item) => {
-      item.removeEventListener("click", handleToggleHeading);
-      item.removeEventListener("keypress", handleToggleHeading);
+      item.removeEventListener('click', handleToggleHeading);
+      item.removeEventListener('keypress', handleToggleHeading);
     });
   },
 
@@ -156,3 +156,5 @@ export const OsgMenu = {
     closeMenu(menu);
   },
 };
+
+export default OsgMenu;

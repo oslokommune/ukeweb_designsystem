@@ -7,8 +7,8 @@
 .osg-banner {
   @extend %osg-padding-vertical-4, %osg-padding-vertical-13-breakpoint-medium;
   @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-golf-breakpoint-large;
-  background-color: colors.$white;
 
+  background-color: colors.$white;
   padding-left: grid.$gutter-size;
   padding-right: grid.$gutter-size;
   @include breakpoints.medium {
@@ -44,12 +44,10 @@
   }
 
   &__media {
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column: 4 / 10;
 
     @include breakpoints.medium {
-      grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column: 1 / 5;
     }
 
     img {
@@ -59,6 +57,7 @@
 
   &__section {
     @extend %osg-text--weight-light;
+
     grid-column: span 12 / span 12;
 
     &--half {
@@ -77,8 +76,7 @@
   &--media {
     .osg-banner__text {
       @include breakpoints.medium {
-        grid-column-start: 5;
-        grid-column-end: 13;
+        grid-column: 5 / 13;
       }
     }
   }
@@ -86,15 +84,13 @@
   &--media-right {
     .osg-banner__media {
       @include breakpoints.medium {
-        grid-column-start: 9;
-        grid-column-end: 13;
+        grid-column: 9 / 13;
       }
     }
 
     .osg-banner__text {
       @include breakpoints.medium {
-        grid-column-start: 1;
-        grid-column-end: 9;
+        grid-column: 1 / 9;
       }
     }
   }

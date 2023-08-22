@@ -2,8 +2,6 @@
 @use "system/typography";
 
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -13,7 +11,6 @@ body {
   font-weight: 400;
   line-height: 1.5em;
   color: colors.$blue-dark;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

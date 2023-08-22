@@ -19,7 +19,6 @@
 
     counter-increment: orderedlist;
     content: counter(orderedlist);
-
     border: 2px solid colors.$blue-dark;
     border-radius: 100%;
     display: inline-block;

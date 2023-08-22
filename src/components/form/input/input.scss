@@ -16,12 +16,12 @@
 
     &[type="number"]::-webkit-inner-spin-button,
     &[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
+      appearance: none;
       margin: 0;
     }
 
     &[type="number"] {
-      -moz-appearance: textfield;
+      appearance: textfield;
     }
   }
 
@@ -31,6 +31,7 @@
 
   &__required {
     @extend %osg-margin-top-1;
+
     padding: 0;
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
@@ -53,6 +54,7 @@
       cursor: pointer;
       @extend %osg-text--size-juliett;
       @extend %osg-text--weight-light;
+
       height: 1.25rem;
       line-height: 0;
       padding: 0;

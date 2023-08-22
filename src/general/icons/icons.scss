@@ -41,23 +41,23 @@
 
   @each $name, $content in icon-map.$icons {
     &--#{$name} {
-      font-family: "Oslo Icons";
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
 
-      &:before {
+      &::before {
         content: "#{$content}";
       }
     }
   }
 
   &.osg-icon--standalone {
-    @extend %osg-icon--standalone;
+    @extend %osg-icon-standalone;
   }
 
   &.osg-icon--standalone-breakpoint-medium {
-    @extend %osg-icon--standalone-breakpoint-medium;
+    @extend %osg-icon-standalone-breakpoint-medium;
   }
 
   &.osg-icon--standalone-breakpoint-large {
-    @extend %osg-icon--standalone-breakpoint-large;
+    @extend %osg-icon-standalone-breakpoint-large;
   }
 }

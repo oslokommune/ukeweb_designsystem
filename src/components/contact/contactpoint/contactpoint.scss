@@ -4,6 +4,7 @@
 .osg-contactpoint {
   &__media {
     @extend %osg-margin-bottom-2;
+
     max-width: 50%;
 
     img {

@@ -52,7 +52,7 @@
     border-color: states.$disabled-text;
     color: states.$disabled-text;
 
-    &:after {
+    &::after {
       color: states.$disabled-text !important;
     }
   }
@@ -64,7 +64,6 @@
   @extend %osg-text--weight-light;
 
   appearance: none;
-  -webkit-appearance: none;
   background-color: colors.$white;
   border: 2px solid colors.$blue-dark;
   border-radius: 0;

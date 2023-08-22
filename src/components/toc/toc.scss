@@ -13,6 +13,7 @@
   &__item {
     @extend %osg-padding-vertical-4;
     @extend %osg-padding-horizontal-3;
+
     border-top: 2px solid colors.$gray;
   }
 
@@ -22,11 +23,13 @@
 
   &__link {
     @include mixins.states;
+
     text-decoration: none;
   }
 
   &__icon {
     @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
+
     line-height: 1.5rem;
     margin-right: 0.25rem;
     display: inline-block;

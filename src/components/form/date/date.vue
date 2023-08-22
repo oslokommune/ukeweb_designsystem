@@ -15,15 +15,16 @@
 </template>
 
 <script>
-import CoreDatepicker from "@nrk/core-datepicker";
-window.customElements.define("nrk-core-datepicker", CoreDatepicker);
+import CoreDatepicker from '@nrk/core-datepicker';
+
+window.customElements.define('nrk-core-datepicker', CoreDatepicker);
 
 export default {
-  name: "OsgDate",
+  name: 'OsgDate',
   props: {
     label: {
       type: String,
-      default: "Pick a date",
+      default: 'Pick a date',
     },
     date: {
       type: Date,
@@ -31,35 +32,31 @@ export default {
     },
     displayDate: {
       type: String,
-      default: "",
+      default: '',
     },
     min: {
       type: Date,
-      default: () => {
-        return new Date("1900-01-01");
-      },
+      default: () => new Date('1900-01-01'),
     },
     max: {
       type: Date,
-      default: () => {
-        return new Date("2100-01-01");
-      },
+      default: () => new Date('2100-01-01'),
     },
     days: {
       type: String,
-      default: "mon,tue,wed,thu,fri,sat,sun",
+      default: 'mon,tue,wed,thu,fri,sat,sun',
     },
     months: {
       type: String,
-      default: "January,February,March,April,May,June,July,August,September,October,November,December",
+      default: 'January,February,March,April,May,June,July,August,September,October,November,December',
     },
     btnPrevMonthLabel: {
       type: String,
-      default: "Last month",
+      default: 'Last month',
     },
     btnNextMonthLabel: {
       type: String,
-      default: "Next month",
+      default: 'Next month',
     },
   },
 
@@ -72,21 +69,19 @@ export default {
   mounted() {
     this.datepicker = this.$refs.datepicker;
     this.datepicker.date = this.date ? this.date : new Date();
-    this.datepicker.disabled = (date) => {
-      return (this.max && date > this.max.setHours(23, 59, 59, 999)) || (this.min && date < this.min);
-    };
+    this.datepicker.disabled = (date) => (this.max && date > this.max.setHours(23, 59, 59, 999)) || (this.min && date < this.min);
 
-    this.datepicker.addEventListener("datepicker.change", this.onDatepickerChange);
-    this.datepicker.addEventListener("datepicker.click.day", this.onDatepickerClickDay);
-    window.addEventListener("click", this.onDatepickerOutside);
-    window.addEventListener("keyup", this.onDatepickerOutside);
+    this.datepicker.addEventListener('datepicker.change', this.onDatepickerChange);
+    this.datepicker.addEventListener('datepicker.click.day', this.onDatepickerClickDay);
+    window.addEventListener('click', this.onDatepickerOutside);
+    window.addEventListener('keyup', this.onDatepickerOutside);
   },
 
   destroyed() {
-    this.datepicker.removeEventListener("datepicker.change", this.onDatepickerChange);
-    this.datepicker.removeEventListener("datepicker.click.day", this.onDatepickerClickDay);
-    window.removeEventListener("click", this.onDatepickerOutside);
-    window.removeEventListener("keyup", this.onDatepickerOutside);
+    this.datepicker.removeEventListener('datepicker.change', this.onDatepickerChange);
+    this.datepicker.removeEventListener('datepicker.click.day', this.onDatepickerClickDay);
+    window.removeEventListener('click', this.onDatepickerOutside);
+    window.removeEventListener('keyup', this.onDatepickerOutside);
   },
 
   methods: {
@@ -100,6 +95,7 @@ export default {
         next = new Date(next).setDate(1);
         return (direction > 0 && next > this.max) || next < this.min;
       }
+      return false;
     },
     toggleDatepicker(bool) {
       this.showDatepicker = bool;
@@ -110,7 +106,7 @@ export default {
       }
     },
     onDatepickerClickDay() {
-      this.$emit("set", this.datepicker.date);
+      this.$emit('set', this.datepicker.date);
       this.toggleDatepicker(false);
     },
     onDatepickerChange(event) {

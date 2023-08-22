@@ -3,13 +3,16 @@
 @use "system/icon-map";
 @use "system/spacing";
 @use "components/form/input/mixins";
+@use "sass:map";
 
 .osg-select {
   @include mixins.form-states;
+
   position: relative;
 
   &__required {
     @extend %osg-margin-top-1;
+
     padding: 0;
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
@@ -25,14 +28,15 @@
 
     & select {
       @include mixins.form-component;
+
       cursor: pointer;
       padding-right: 50px;
     }
 
-    &:after {
+    &::after {
       color: inherit;
-      content: map-get(icon-map.$icons, "chevron-thin-down");
-      font-family: "Oslo Icons";
+      content: map.get(icon-map.$icons, "chevron-thin-down");
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
       font-size: 2rem;
       pointer-events: none;
       position: absolute;

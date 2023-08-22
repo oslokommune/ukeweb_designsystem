@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: "OsgInput",
+  name: 'OsgInput',
 
   props: {
     name: {
@@ -19,15 +19,15 @@ export default {
     },
     type: {
       type: String,
-      default: "text",
+      default: 'text',
     },
     autocomplete: {
       type: String,
-      default: "on",
+      default: 'on',
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     label: {
       type: String,
@@ -35,11 +35,11 @@ export default {
     },
     value: {
       type: String,
-      default: "",
+      default: '',
     },
     errorMessage: {
       type: String,
-      default: "",
+      default: '',
     },
     errorId: {
       type: String,
@@ -49,14 +49,14 @@ export default {
 
   computed: {
     conditionalErrorId() {
-      return this.errorMessage ? this.errorId : "";
+      return this.errorMessage ? this.errorId : '';
     },
     valueModel: {
       get() {
         return this.value;
       },
       set(value) {
-        this.$emit("input", value);
+        this.$emit('input', value);
       },
     },
   },

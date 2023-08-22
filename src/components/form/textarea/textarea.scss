@@ -12,6 +12,7 @@
 
   &__required {
     @extend %osg-margin-top-1;
+
     padding: 0;
     @extend %osg-text--size-lima;
     @extend %osg-text--weight-light;
@@ -24,6 +25,7 @@
   &__textarea {
     @include mixins.form-component;
     @extend %osg-margin-top-2;
+
     resize: none;
   }
 

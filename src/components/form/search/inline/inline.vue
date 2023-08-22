@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: "OsgSearchInline",
+  name: 'OsgSearchInline',
 
   props: {
     id: {
@@ -57,13 +57,11 @@ export default {
     },
     value: {
       type: String,
-      default: "",
+      default: '',
     },
     items: {
       type: Array,
-      default: () => {
-        return [];
-      },
+      default: () => [],
     },
     keepInputFocusOnItemNav: {
       type: Boolean,
@@ -75,7 +73,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     ariaLabelResults: {
       type: String,
@@ -101,24 +99,24 @@ export default {
   }),
 
   mounted() {
-    window.addEventListener("keydown", this.eventKeyDown);
-    this.$refs.search.addEventListener("focusout", this.eventFocusOut);
+    window.addEventListener('keydown', this.eventKeyDown);
+    this.$refs.search.addEventListener('focusout', this.eventFocusOut);
   },
 
   beforeDestroy() {
-    window.removeEventListener("keydown", this.eventKeyDown);
-    window.removeEventListener("focusout", this.eventFocusOut);
+    window.removeEventListener('keydown', this.eventKeyDown);
+    window.removeEventListener('focusout', this.eventFocusOut);
   },
 
   watch: {
-    items(newValue) {
+    items() {
       this.resetIndex();
     },
   },
 
   methods: {
     itemSelect(index) {
-      this.$emit("item-select", index);
+      this.$emit('item-select', index);
       this.selectedIndex = index;
       if (this.inputFocusAfterItemSelect) {
         this.resetIndex();
@@ -129,20 +127,21 @@ export default {
       const lastItem = this.items.length - 1;
 
       switch (event.code) {
-        case "ArrowUp":
+        case 'ArrowUp':
           if (this.index === null || this.index === 0) {
             this.$refs.input.focus();
           } else if (this.index > 0) {
-            this.index--;
+            this.index -= 1;
           }
           break;
-        case "ArrowDown":
+        case 'ArrowDown':
           if (this.index === null) {
             this.index = 0;
           } else if (this.index < lastItem) {
-            this.index++;
+            this.index += 1;
           }
           break;
+        default:
       }
 
       if (this.$refs.list && this.$refs.list.childNodes[this.index]) {
@@ -156,7 +155,7 @@ export default {
           this.$refs.list.scrollTop = this.$refs.list.childNodes[this.index].offsetTop - this.itemListScrollOffset;
         }
 
-        this.$emit("item-focus", this.index);
+        this.$emit('item-focus', this.index);
       }
     },
     resetIndex() {
@@ -170,27 +169,27 @@ export default {
     resetAndFocus() {
       this.resetIndex();
       this.inputFocus();
-      this.$emit("itemlist-blur");
+      this.$emit('itemlist-blur');
     },
     inputFocus() {
       this.$refs.input.focus();
-      this.$emit("input-focus");
+      this.$emit('input-focus');
     },
     submit(value) {
-      this.$emit("submit", {
-        value: value,
+      this.$emit('submit', {
+        value,
         index: this.selectedIndex,
       });
     },
     inputChange(event) {
       if (this.value !== event.target.value) {
         switch (event.code) {
-          case "ArrowUp":
-          case "ArrowDown":
-          case "Enter":
+          case 'ArrowUp':
+          case 'ArrowDown':
+          case 'Enter':
             break;
           default:
-            this.$emit("input-change", event.target.value);
+            this.$emit('input-change', event.target.value);
             this.resetIndex();
         }
       }
@@ -198,11 +197,11 @@ export default {
     eventFocusOut(event) {
       if (!this.$refs.search.contains(event.relatedTarget)) {
         this.resetIndex();
-        this.$emit("itemlist-blur");
+        this.$emit('itemlist-blur');
       }
     },
     eventKeyDown(event) {
-      if (this.index !== null && (event.code === "ArrowDown" || event.code === "ArrowUp")) {
+      if (this.index !== null && (event.code === 'ArrowDown' || event.code === 'ArrowUp')) {
         event.preventDefault();
       }
     },
