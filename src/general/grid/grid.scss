@@ -16,73 +16,19 @@
   }
 
   &--gap {
-    @extend .osg-grid--gap-column, .osg-grid--gap-row;
+    @extend %osg-grid-gap-column, %osg-grid-gap-row;
   }
-
-  // DOUBLE CHECK IF WORKING
 
   &--dense {
     grid-auto-flow: dense;
   }
 
   &--gap-column {
-    column-gap: grid.$gap-size-hard;
-
-    @include breakpoints.medium {
-      column-gap: grid.$gap-size-hard-large;
-    }
-
-    &-breakpoint-medium {
-      @include breakpoints.medium {
-        column-gap: grid.$gap-size-hard-large;
-      }
-    }
-
-    &-breakpoint-large {
-      @include breakpoints.large {
-        column-gap: grid.$gap-size-hard-large;
-      }
-    }
+    @extend %osg-grid-gap-column;
   }
 
   &--gap-row {
-    row-gap: grid.$gap-size-hard;
-
-    @include breakpoints.medium {
-      row-gap: grid.$gap-size-hard-large;
-    }
-
-    &-breakpoint-medium {
-      @include breakpoints.medium {
-        row-gap: grid.$gap-size-hard-large;
-      }
-    }
-
-    &-breakpoint-large {
-      @include breakpoints.large {
-        row-gap: grid.$gap-size-hard-large;
-      }
-    }
-
-    &-large {
-      row-gap: grid.$gap-size-soft;
-
-      @include breakpoints.medium {
-        row-gap: grid.$gap-size-soft-large;
-      }
-
-      &-breakpoint-medium {
-        @include breakpoints.medium {
-          row-gap: grid.$gap-size-soft-large;
-        }
-      }
-
-      &-breakpoint-large {
-        @include breakpoints.large {
-          row-gap: grid.$gap-size-soft-large;
-        }
-      }
-    }
+    @extend %osg-grid-gap-row;
   }
 
   &--gutter {
@@ -160,6 +106,66 @@
 
       &__column--end-#{$i}-breakpoint-large {
         grid-column-end: #{$i};
+      }
+    }
+  }
+}
+
+%osg-grid-gap-column {
+  column-gap: grid.$gap-size-hard;
+
+  @include breakpoints.medium {
+    column-gap: grid.$gap-size-hard-large;
+  }
+
+  &-breakpoint-medium {
+    @include breakpoints.medium {
+      column-gap: grid.$gap-size-hard-large;
+    }
+  }
+
+  &-breakpoint-large {
+    @include breakpoints.large {
+      column-gap: grid.$gap-size-hard-large;
+    }
+  }
+}
+
+%osg-grid-gap-row {
+  row-gap: grid.$gap-size-hard;
+
+  @include breakpoints.medium {
+    row-gap: grid.$gap-size-hard-large;
+  }
+
+  &-breakpoint-medium {
+    @include breakpoints.medium {
+      row-gap: grid.$gap-size-hard-large;
+    }
+  }
+
+  &-breakpoint-large {
+    @include breakpoints.large {
+      row-gap: grid.$gap-size-hard-large;
+    }
+  }
+
+  &-large {
+    row-gap: grid.$gap-size-soft;
+
+    @include breakpoints.medium {
+      row-gap: grid.$gap-size-soft-large;
+    }
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-soft-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        row-gap: grid.$gap-size-soft-large;
       }
     }
   }

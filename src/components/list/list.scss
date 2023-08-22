@@ -5,17 +5,18 @@
   list-style: disc;
 
   & & {
-    @extend %osg-padding-top-1;
+    @extend %osg-padding-top-2;
 
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-1;
+    @extend %osg-padding-top-2;
   }
 
   &--clean {
-    padding-left: 0;
+    @extend %osg-padding-left-0;
+
     list-style: none;
   }
 }
@@ -26,13 +27,13 @@
   list-style-position: inside;
 
   & & {
-    @extend %osg-padding-top-1;
+    @extend %osg-padding-top-2;
 
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-1;
+    @extend %osg-padding-top-2;
   }
 
   &--lower-roman {

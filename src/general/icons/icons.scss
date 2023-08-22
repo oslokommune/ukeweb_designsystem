@@ -50,14 +50,14 @@
   }
 
   &.osg-icon--standalone {
-    @extend %osg-icon--standalone;
+    @extend %osg-icon-standalone;
   }
 
   &.osg-icon--standalone-breakpoint-medium {
-    @extend %osg-icon--standalone-breakpoint-medium;
+    @extend %osg-icon-standalone-breakpoint-medium;
   }
 
   &.osg-icon--standalone-breakpoint-large {
-    @extend %osg-icon--standalone-breakpoint-large;
+    @extend %osg-icon-standalone-breakpoint-large;
   }
 }

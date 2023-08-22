@@ -5,13 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [Unreleased]
 
 ### Added
 
 - Added stylelint and eslint. Refactors all code according to rulesets.
 
 - Changed dispatchEvent and decoupled from code for usability
+
+### Changed
+
+- Changed spacing on list component from 4px to 8px according to Figma.
+
+### Fixed
+
+- Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
 
 ## [0.99.106] - 01-06-2023
 
