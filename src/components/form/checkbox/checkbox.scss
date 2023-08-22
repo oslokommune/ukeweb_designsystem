@@ -120,6 +120,7 @@
   & input:checked:focus ~ span {
     border-color: colors.$blue-state;
     color: colors.$blue-state;
+    text-decoration: underline;
   }
   
   &--hover span,

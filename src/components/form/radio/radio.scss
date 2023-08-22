@@ -49,36 +49,6 @@
       margin-top: -(5px);
     }
   }
-
-  &__control {
-    align-items: center;
-    background-color: colors.$white;
-    border: 0.15em solid currentcolor;
-    border-radius: 50%;
-    display: flex;
-    height: 1em;
-    justify-content: center;
-    transform: translateY(-0.05em);
-    width: 1em;
-    flex-shrink: 0;
-  }
-  
-  &--hover,
-  &--focus,
-  &:hover,
-  &:focus {
-    .osg-radio__control {
-      border-color: colors.$blue-state;
-    }
-    
-    .osg-radio__label {
-      color: colors.$blue-state;
-    }
-    
-    & input:checked + .osg-radio__control {
-      background-color: colors.$blue-state;
-    }
-  }
   
   &__input {
     align-items: center;
@@ -105,11 +75,27 @@
     transition: 180ms transform ease-in-out;
     transform: scale(0);
   }
+  
+  &__control {
+    align-items: center;
+    background-color: colors.$white;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    transform: translateY(-0.05em);
+    width: 1em;
+    flex-shrink: 0;
+  }
 
   & input:checked + &__control::before {
     transform: scale(1);
   }
-
+  
+  & input:checked + &__control {
+    background-color: colors.$blue-dark;
+  }
 
   & input:checked ~ &__text {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
@@ -117,7 +103,7 @@
 
     line-height: 1.5em !important;
   }
-
+  
   &--hover,
   &:hover,
   &--focus,
@@ -130,6 +116,7 @@
     }
     .osg-radio__text {
       color: colors.$blue-state;
+      text-decoration: underline;
     }
   }
 
