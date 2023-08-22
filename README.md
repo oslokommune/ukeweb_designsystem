@@ -1,4 +1,4 @@
-# Oslo style guide
+# Oslo Designsystem
 
 ## Releasing new versions
 
