@@ -11,11 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added stylelint and eslint. Refactors all code according to rulesets.
 
-- Changed dispatchEvent and decoupled from code for usability
-
 ### Changed
 
 - Changed spacing on list component from 4px to 8px according to Figma.
+- Changed dispatchEvent to dispatchCustomEvent and decoupled from code for re-usability
 
 ### Fixed
 
