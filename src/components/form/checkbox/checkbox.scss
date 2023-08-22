@@ -4,157 +4,157 @@
 @use "system/icon-map";
 @use "system/spacing";
 
-.osg-checkbox {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+.ods-checkbox {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
 
-  align-items: center;
-  color: inherit;
-  cursor: pointer;
-  display: flex;
-
-  &__required {
-    @extend %osg-margin-top-1;
-    @extend %osg-padding-0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-  }
-
-  & input {
+    align-items: center;
+    color: inherit;
     cursor: pointer;
-    opacity: 0;
-    position: absolute;
-  }
+    display: flex;
 
-  &--text-align-top {
-    align-items: flex-start;
-
-    .osg-checkbox__text {
-      margin-top: -5px;
-    }
-  }
-
-  &__checkmark {
-    position: relative;
-    border: 2px solid colors.$blue-dark;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
-
-  &__checkmark::after {
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    content: "";
-    display: none;
-    height: 10px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(45deg);
-    top: 50%;
-    width: 5px;
-  }
-
-  &__text {
-    border-style: hidden;
-    hyphens: auto;
-    @extend %osg-padding-left-3;
-  }
-
-  &--error-message {
-    @include mixins.error-message;
-
-    display: block;
-  }
-
-  
-  &--focus &__checkmark, 
-  &:focus-within &__checkmark,
-  & input:focus ~ &__checkmark {
-    &:not([disabled]) {
-      color: colors.$blue-state;
-      outline: initial;
-    }
-  }
-
-  &:focus-visible ~ &__checkmark {
-    outline-style: none;
-  }
-
-  &--focus &__text, 
-  & input:focus ~ &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
-  }
-  
-  &--hover span,
-  &--focus span,
-  & input:hover ~ span,
-  & input:focus ~ span,
-  & input:checked:hover ~ span,
-  & input:checked:focus ~ span {
-    border-color: colors.$blue-state;
-    color: colors.$blue-state;
-  }
-  
-  &--hover span,
-  &:hover span {
-    & input:not([disabled]) {
-      border-color: colors.$blue-state;
-      color: colors.$blue-state;
-    }
-  }
-  
-  & input:checked ~ &__checkmark::after {
-    display: block;
-  }
-
-  & input:checked ~ &__checkmark {
-    background-color: colors.$blue-state;
-  }
-
-  & input:checked ~ &__text {
-    color: colors.$blue-state;
-  }
-
-  & input:checked ~ span {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
-
-    border-color: colors.$blue-state;
-    color: colors.$blue-dark;
-  }
-
-  & input:disabled:checked ~ &__checkmark {
-    background-color: colors.$grayscale-40;
-  }
-
-  & input:disabled ~ span,
-  & input:disabled:checked ~ span {
-    border-color: colors.$grayscale-40;
-    color: colors.$grayscale-40;
-  }
-
-  & input:disabled:hover ~ span {
-    color: colors.$grayscale-40;
-    border-color: colors.$grayscale-40;
-  }
-
-  &--error {
-    & span,
-    & input:checked ~ .osg-checkbox__text {
-      border-color: colors.$red;
-      color: colors.$red;
+    &__required {
+        @extend %ods-margin-top-1;
+        @extend %ods-padding-0;
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-light;
     }
 
-    & input:checked ~ .osg-checkbox__checkmark {
-      background-color: colors.$red;
-      border-color: colors.$red;
+    & input {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
     }
 
-    & input:checked:hover ~ .osg-checkbox__checkmark,
-    & input:checked:focus ~ .osg-checkbox__checkmark {
-      background-color: colors.$blue-state;
-      border-color: colors.$blue-state;
+    &--text-align-top {
+        align-items: flex-start;
+
+        .ods-checkbox__text {
+            margin-top: -5px;
+        }
     }
-  }
+
+    &__checkmark {
+        position: relative;
+        border: 2px solid colors.$blue-dark;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    &__checkmark::after {
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        content: "";
+        display: none;
+        height: 10px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        width: 5px;
+    }
+
+    &__text {
+        border-style: hidden;
+        hyphens: auto;
+        @extend %ods-padding-left-3;
+    }
+
+    &--error-message {
+        @include mixins.error-message;
+
+        display: block;
+    }
+
+
+    &--focus &__checkmark,
+    &:focus-within &__checkmark,
+    & input:focus ~ &__checkmark {
+        &:not([disabled]) {
+            color: colors.$blue-state;
+            outline: initial;
+        }
+    }
+
+    &:focus-visible ~ &__checkmark {
+        outline-style: none;
+    }
+
+    &--focus &__text,
+    & input:focus ~ &__text {
+        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+        @extend %ods-text--weight-medium;
+    }
+
+    &--hover span,
+    &--focus span,
+    & input:hover ~ span,
+    & input:focus ~ span,
+    & input:checked:hover ~ span,
+    & input:checked:focus ~ span {
+        border-color: colors.$blue-state;
+        color: colors.$blue-state;
+    }
+
+    &--hover span,
+    &:hover span {
+        & input:not([disabled]) {
+            border-color: colors.$blue-state;
+            color: colors.$blue-state;
+        }
+    }
+
+    & input:checked ~ &__checkmark::after {
+        display: block;
+    }
+
+    & input:checked ~ &__checkmark {
+        background-color: colors.$blue-state;
+    }
+
+    & input:checked ~ &__text {
+        color: colors.$blue-state;
+    }
+
+    & input:checked ~ span {
+        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+        @extend %ods-text--weight-medium;
+
+        border-color: colors.$blue-state;
+        color: colors.$blue-dark;
+    }
+
+    & input:disabled:checked ~ &__checkmark {
+        background-color: colors.$grayscale-40;
+    }
+
+    & input:disabled ~ span,
+    & input:disabled:checked ~ span {
+        border-color: colors.$grayscale-40;
+        color: colors.$grayscale-40;
+    }
+
+    & input:disabled:hover ~ span {
+        color: colors.$grayscale-40;
+        border-color: colors.$grayscale-40;
+    }
+
+    &--error {
+        & span,
+        & input:checked ~ .ods-checkbox__text {
+            border-color: colors.$red;
+            color: colors.$red;
+        }
+
+        & input:checked ~ .ods-checkbox__checkmark {
+            background-color: colors.$red;
+            border-color: colors.$red;
+        }
+
+        & input:checked:hover ~ .ods-checkbox__checkmark,
+        & input:checked:focus ~ .ods-checkbox__checkmark {
+            background-color: colors.$blue-state;
+            border-color: colors.$blue-state;
+        }
+    }
 }

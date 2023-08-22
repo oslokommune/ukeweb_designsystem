@@ -1,14 +1,14 @@
 function triggerIterator(callback) {
-  const triggers = document.querySelectorAll('.osg-tabs__trigger');
+  const triggers = document.querySelectorAll('.ods-tabs__trigger');
   triggers.forEach((item) => {
     callback(item);
   });
 }
 
 const setActiveTrigger = (activetrigger) => {
-  const OsgTabs = activetrigger.closest('.osg-tabs');
+  const OsgTabs = activetrigger.closest('.ods-tabs');
   if (OsgTabs) {
-    const triggers = OsgTabs.querySelectorAll('.osg-tabs__trigger');
+    const triggers = OsgTabs.querySelectorAll('.ods-tabs__trigger');
     triggers.forEach((trigger) => {
       trigger.setAttribute('aria-selected', 'false');
       trigger.setAttribute('tabindex', '-1');
@@ -20,14 +20,14 @@ const setActiveTrigger = (activetrigger) => {
 };
 
 const setActiveTab = (activeTab) => {
-  const OsgTabs = activeTab.closest('.osg-tabs');
+  const OsgTabs = activeTab.closest('.ods-tabs');
   if (OsgTabs) {
-    const tabs = OsgTabs.querySelectorAll('.osg-tabs__tab');
+    const tabs = OsgTabs.querySelectorAll('.ods-tabs__tab');
     tabs.forEach((tab) => {
-      tab.classList.remove('osg-tabs__tab--active');
+      tab.classList.remove('ods-tabs__tab--active');
     });
 
-    activeTab.classList.add('osg-tabs__tab--active');
+    activeTab.classList.add('ods-tabs__tab--active');
   }
 };
 
@@ -42,7 +42,7 @@ const handleTabFocus = (event) => {
           tab,
         },
       });
-      trigger.closest('.osg-tabs').dispatchEvent(toggleEvent);
+      trigger.closest('.ods-tabs').dispatchEvent(toggleEvent);
 
       setActiveTrigger(trigger);
       setActiveTab(tab);

@@ -2,7 +2,7 @@
 @use "system/typography";
 @use "system/spacing";
 
-.osg-image {
+.ods-image {
   display: block;
   line-height: 0;
   object-fit: cover;
@@ -86,8 +86,8 @@
   }
 
   &__caption {
-    @extend %osg-text--size-lima, %osg-text--size-kilo-breakpoint-medium;
-    @extend %osg-text--weight-light;
-    @extend %osg-margin-top-4;
+    @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
+    @extend %ods-text--weight-light;
+    @extend %ods-margin-top-4;
   }
 }

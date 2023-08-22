@@ -1,5 +1,5 @@
 function triggerIterator(callback) {
-  const collapsibleTriggers = document.querySelectorAll('.osg-collapsible-trigger');
+  const collapsibleTriggers = document.querySelectorAll('.ods-collapsible-trigger');
   collapsibleTriggers.forEach((item) => {
     callback(item);
   });
@@ -11,10 +11,10 @@ function toggleCollapsible(e) {
   const collapsible = document.getElementById(e.target.getAttribute('aria-controls'));
 
   if ((e.code && e.code === 'Enter' && collapsible) || (!e.code && collapsible)) {
-    collapsible.classList.toggle('osg-collapsible-content--collapsed');
+    collapsible.classList.toggle('ods-collapsible-content--collapsed');
 
-    e.target.setAttribute('aria-expanded', collapsible.classList.contains('osg-collapsible-content--collapsed') ? 'false' : 'true');
-    e.target.classList.toggle('osg-collapsible-trigger--expanded', !collapsible.classList.contains('osg-collapsible-content--collapsed'));
+    e.target.setAttribute('aria-expanded', collapsible.classList.contains('ods-collapsible-content--collapsed') ? 'false' : 'true');
+    e.target.classList.toggle('ods-collapsible-trigger--expanded', !collapsible.classList.contains('ods-collapsible-content--collapsed'));
   }
 }
 
@@ -24,7 +24,7 @@ function handleCollapsible(e) {
   const toggleEvent = new CustomEvent('OsgCollapsibleToggle', {
     detail: {
       target: e.target,
-      expanded: e.target.classList.contains('osg-collapsible-trigger--expanded'),
+      expanded: e.target.classList.contains('ods-collapsible-trigger--expanded'),
     },
   });
 
@@ -37,7 +37,7 @@ function handleBreakpointChange(e) {
   if (breakpoint === 'medium' || breakpoint === 'large') {
     triggerIterator((item) => {
       const collapsible = document.getElementById(item.getAttribute('aria-controls'));
-      if (collapsible && (collapsible.classList.contains('osg-collapsible-content--expanded-breakpoint-medium') || collapsible.classList.contains('osg-collapsible-content--expanded-breakpoint-large'))) {
+      if (collapsible && (collapsible.classList.contains('ods-collapsible-content--expanded-breakpoint-medium') || collapsible.classList.contains('ods-collapsible-content--expanded-breakpoint-large'))) {
         item.setAttribute('aria-expanded', 'true');
         item.setAttribute('aria-hidden', 'true');
       }
@@ -45,8 +45,8 @@ function handleBreakpointChange(e) {
   } else {
     triggerIterator((item) => {
       const collapsible = document.getElementById(item.getAttribute('aria-controls'));
-      if (collapsible && (collapsible.classList.contains('osg-collapsible-content--expanded-breakpoint-medium') || collapsible.classList.contains('osg-collapsible-content--expanded-breakpoint-large'))) {
-        item.setAttribute('aria-expanded', collapsible.classList.contains('osg-collapsible-content--collapsed') ? 'false' : 'true');
+      if (collapsible && (collapsible.classList.contains('ods-collapsible-content--expanded-breakpoint-medium') || collapsible.classList.contains('ods-collapsible-content--expanded-breakpoint-large'))) {
+        item.setAttribute('aria-expanded', collapsible.classList.contains('ods-collapsible-content--collapsed') ? 'false' : 'true');
         item.removeAttribute('aria-hidden');
       }
     });

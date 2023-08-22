@@ -1,10 +1,10 @@
 <template>
-  <div class="osg-textarea" :class="{ 'osg-textarea--error': errorMessage }">
-    <label class="osg-textarea__label">
+  <div class="ods-textarea" :class="{ 'ods-textarea--error': errorMessage }">
+    <label class="ods-textarea__label">
       {{ label }}
-      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" class="osg-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
+      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" class="ods-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
     </label>
-    <div v-if="errorMessage" class="osg-input__error-message" :id="errorId">{{ errorMessage }}</div>
+    <div v-if="errorMessage" class="ods-input__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
 </template>
 <script>

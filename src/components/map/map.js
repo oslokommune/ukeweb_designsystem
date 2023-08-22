@@ -2,37 +2,37 @@ import Vue from 'vue';
 import OsgMap from './map.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const mapElement = document.getElementById('osg-map');
-  const mapElement2 = document.getElementById('osg-map2');
-  const mapElement3 = document.getElementById('osg-map3');
-  const mapElement4 = document.getElementById('osg-map4');
-  const mapElement5 = document.getElementById('osg-map5');
-  const mapElement6 = document.getElementById('osg-map6');
-  const mapElement7 = document.getElementById('osg-map7');
-  const mapElement8 = document.getElementById('osg-map8');
-  const mapElement9 = document.getElementById('osg-map9');
-  const mapElement10 = document.getElementById('osg-map10');
+  const mapElement = document.getElementById('ods-map');
+  const mapElement2 = document.getElementById('ods-map2');
+  const mapElement3 = document.getElementById('ods-map3');
+  const mapElement4 = document.getElementById('ods-map4');
+  const mapElement5 = document.getElementById('ods-map5');
+  const mapElement6 = document.getElementById('ods-map6');
+  const mapElement7 = document.getElementById('ods-map7');
+  const mapElement8 = document.getElementById('ods-map8');
+  const mapElement9 = document.getElementById('ods-map9');
+  const mapElement10 = document.getElementById('ods-map10');
 
   if (mapElement) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm1 = new Vue();
     vm1.$mount(mapElement);
   }
   if (mapElement2) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm2 = new Vue();
     vm2.$mount(mapElement2);
   }
   if (mapElement3) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm3 = new Vue();
     vm3.$mount(mapElement3);
   }
   if (mapElement4) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm4 = new Vue({
       mounted() {
-        this.$refs.osgMap4.resize();
+        this.$refs.odsMap4.resize();
       },
 
       methods: {
@@ -43,19 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement5) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm5 = new Vue();
     vm5.$mount(mapElement5);
   }
 
   if (mapElement6) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm6 = new Vue();
     vm6.$mount(mapElement6);
   }
 
   if (mapElement7) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm7 = new Vue({
       data: () => ({
         points: [{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }],
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement8) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm8 = new Vue({
       data: () => ({
         geoJson: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement9) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm9 = new Vue({
       data: () => ({
         state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement10) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm10 = new Vue({
       data: () => ({
         loadMap: false,

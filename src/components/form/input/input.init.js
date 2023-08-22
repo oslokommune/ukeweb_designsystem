@@ -5,9 +5,9 @@ import OsgInputVue from './input.vue';
 document.addEventListener('DOMContentLoaded', () => {
   OsgInput();
 
-  if (document.getElementById('osg-input-vue-1')) {
-    Vue.component('osg-input', OsgInputVue);
+  if (document.getElementById('ods-input-vue-1')) {
+    Vue.component('ods-input', OsgInputVue);
     const vm = new Vue();
-    vm.$mount('#osg-input-vue-1');
+    vm.$mount('#ods-input-vue-1');
   }
 });

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import OsgRadiogroup from './radiogroup.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('osg-radio-vue-1')) {
+  if (document.getElementById('ods-radio-vue-1')) {
     const vm = new Vue({
       components: { OsgRadiogroup },
       data: () => ({
@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fieldsetText: 'Select an option: ',
       }),
     });
-    vm.$mount('#osg-radio-vue-1');
+    vm.$mount('#ods-radio-vue-1');
   }
 });

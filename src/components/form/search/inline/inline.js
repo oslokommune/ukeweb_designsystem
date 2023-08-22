@@ -2,10 +2,10 @@ import Vue from 'vue';
 import OsgSearchInline from './inline.vue';
 
 function OsgSearchVue() {
-  const vueElements = ['osg-search-inline-vue-1', 'osg-search-inline-vue-2'];
+  const vueElements = ['ods-search-inline-vue-1', 'ods-search-inline-vue-2'];
   vueElements.forEach((element) => {
-    const osgSearchPlaceholder = document.getElementById(element);
-    if (osgSearchPlaceholder) {
+    const odsSearchPlaceholder = document.getElementById(element);
+    if (odsSearchPlaceholder) {
       const vm = new Vue({
         components: {
           OsgSearchInline,
@@ -45,7 +45,7 @@ function OsgSearchVue() {
           },
         },
       });
-      vm.$mount(osgSearchPlaceholder);
+      vm.$mount(odsSearchPlaceholder);
     }
   });
 }

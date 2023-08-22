@@ -7,222 +7,222 @@
 @use "system/states";
 @use "sass:map";
 
-.osg-search-circle {
-  font-size: 0;
-  position: relative;
-  width: 100%;
-
-  &__wrapper {
-    display: inline-block;
-    width: calc(100% - 2.75rem);
-
-    @include breakpoints.large {
-      width: calc(100% - 3rem);
-    }
-  }
-
-  &__input {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-light;
-    @extend %osg-color-text-blue-dark;
-
-    background-color: colors.$white;
-    border: 0.125rem solid colors.$yellow;
-    border-radius: 0;
-    display: inline-block;
-    font-family: inherit;
-    padding: units.unit-to-rem(2) units.unit-to-rem(4);
+.ods-search-circle {
+    font-size: 0;
+    position: relative;
     width: 100%;
-    appearance: none;
 
-    &:hover {
-      border: 0.125rem solid colors.$blue-state;
+    &__wrapper {
+        display: inline-block;
+        width: calc(100% - 2.75rem);
+
+        @include breakpoints.large {
+            width: calc(100% - 3rem);
+        }
     }
 
-    &:focus {
-      border: 0.25rem solid colors.$blue-state;
-      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
-      outline: none;
+    &__input {
+        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+        @extend %ods-text--weight-light;
+        @extend %ods-color-text-blue-dark;
+
+        background-color: colors.$white;
+        border: 0.125rem solid colors.$yellow;
+        border-radius: 0;
+        display: inline-block;
+        font-family: inherit;
+        padding: units.unit-to-rem(2) units.unit-to-rem(4);
+        width: 100%;
+        appearance: none;
+
+        &:hover {
+            border: 0.125rem solid colors.$blue-state;
+        }
+
+        &:focus {
+            border: 0.25rem solid colors.$blue-state;
+            padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
+            outline: none;
+        }
+
+        &::-webkit-search-cancel-button {
+            background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
+            background-size: contain;
+            height: 2rem;
+            margin-right: -5px;
+            opacity: 0;
+            pointer-events: none;
+            width: 2rem;
+            appearance: none;
+        }
+
+        &:focus::-webkit-search-cancel-button {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        &::placeholder {
+            @extend %ods-color-text-grayscale-50;
+        }
     }
 
-    &::-webkit-search-cancel-button {
-      background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
-      background-size: contain;
-      height: 2rem;
-      margin-right: -5px;
-      opacity: 0;
-      pointer-events: none;
-      width: 2rem;
-      appearance: none;
+    &__button {
+        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+        @extend %ods-text--weight-medium;
+        @extend %ods-padding-2;
+
+        background-color: colors.$yellow;
+        border: 0.125rem solid colors.$yellow;
+        border-radius: 50%;
+        box-sizing: content-box;
+        color: colors.$blue-dark;
+        cursor: pointer;
+        display: inline-block;
+        height: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        white-space: normal;
+        width: 1.5rem;
+
+        @include breakpoints.large {
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+
+        &:hover {
+            background-color: states.$hover !important;
+            border: 0.125rem solid states.$hover !important;
+            color: states.$hover-text !important;
+        }
     }
 
-    &:focus::-webkit-search-cancel-button {
-      opacity: 1;
-      pointer-events: all;
+    &__button-icon {
+        @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-large;
+
+        line-height: 1.5rem;
+
+        @include breakpoints.large {
+            line-height: 1.75rem;
+        }
+
+        display: inline-block;
+        vertical-align: top;
+
+        &::before {
+            font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+            content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
+        }
     }
 
-    &::placeholder {
-      @extend %osg-color-text-grayscale-50;
-    }
-  }
+    &__container {
+        background-color: colors.$white;
+        box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
+        left: 0;
+        list-style: none;
+        position: absolute;
+        right: 2.75rem;
+        z-index: 99999;
 
-  &__button {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-2;
-
-    background-color: colors.$yellow;
-    border: 0.125rem solid colors.$yellow;
-    border-radius: 50%;
-    box-sizing: content-box;
-    color: colors.$blue-dark;
-    cursor: pointer;
-    display: inline-block;
-    height: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    white-space: normal;
-    width: 1.5rem;
-
-    @include breakpoints.large {
-      height: 1.75rem;
-      width: 1.75rem;
+        @include breakpoints.large {
+            right: 3rem;
+        }
     }
 
-    &:hover {
-      background-color: states.$hover !important;
-      border: 0.125rem solid states.$hover !important;
-      color: states.$hover-text !important;
-    }
-  }
+    &__no-result {
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-medium;
+        @extend %ods-padding-4;
 
-  &__button-icon {
-    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
-
-    line-height: 1.5rem;
-
-    @include breakpoints.large {
-      line-height: 1.75rem;
+        display: block;
     }
 
-    display: inline-block;
-    vertical-align: top;
+    &__missing-input {
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-medium;
+        @extend %ods-text--align-center;
+        @extend %ods-padding-horizontal-4, %ods-padding-vertical-3;
 
-    &::before {
-      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
-    }
-  }
-
-  &__container {
-    background-color: colors.$white;
-    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
-    left: 0;
-    list-style: none;
-    position: absolute;
-    right: 2.75rem;
-    z-index: 99999;
-
-    @include breakpoints.large {
-      right: 3rem;
-    }
-  }
-
-  &__no-result {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-4;
-
-    display: block;
-  }
-
-  &__missing-input {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-text--align-center;
-    @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
-
-    display: block;
-  }
-
-  &__suggestion {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-horizontal-4;
-
-    display: block;
-
-    &:hover,
-    &:focus,
-    &--focus {
-      background-color: colors.$gray-light;
-      color: states.$hover;
-      text-decoration: underline;
-    }
-  }
-
-  &__dropdown {
-    &--compact {
-      @extend %osg-padding-vertical-4;
-
-      & .osg-search-circle__suggestion {
-        @extend %osg-padding-vertical-1;
-      }
-    }
-  }
-
-  &__item {
-    &--footer {
-      @extend %osg-text--size-lima;
-      @extend %osg-text--weight-regular;
-      @extend %osg-padding-horizontal-4;
-
-      &-first {
-        @extend %osg-padding-top-4;
-      }
-
-      &-last {
-        @extend %osg-padding-bottom-4;
-      }
-    }
-  }
-
-  
-  &__heading {
-    @extend %osg-text--size-juliett;
-    @extend %osg-text--weight-medium;
-  }
-
-  &__link {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-4;
-
-    display: block;
-    text-decoration: none;
-
-    &--focus .osg-search-circle__heading,
-    &:focus .osg-search-circle__heading,
-    &:hover .osg-search-circle__heading {
-      text-decoration: underline;
+        display: block;
     }
 
-    &:hover,
-    &:focus,
-    &--focus {
-      background-color: colors.$gray-light;
-      color: states.$hover;
-      text-decoration: none;
+    &__suggestion {
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-medium;
+        @extend %ods-padding-horizontal-4;
+
+        display: block;
+
+        &:hover,
+        &:focus,
+        &--focus {
+            background-color: colors.$gray-light;
+            color: states.$hover;
+            text-decoration: underline;
+        }
     }
 
-    &--divider {
-      border-bottom: 0.0625rem solid colors.$gray;
-    }
-  }
+    &__dropdown {
+        &--compact {
+            @extend %ods-padding-vertical-4;
 
-  &__text {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-    @extend %osg-margin-top-1;
-  }
+            & .ods-search-circle__suggestion {
+                @extend %ods-padding-vertical-1;
+            }
+        }
+    }
+
+    &__item {
+        &--footer {
+            @extend %ods-text--size-lima;
+            @extend %ods-text--weight-regular;
+            @extend %ods-padding-horizontal-4;
+
+            &-first {
+                @extend %ods-padding-top-4;
+            }
+
+            &-last {
+                @extend %ods-padding-bottom-4;
+            }
+        }
+    }
+
+
+    &__heading {
+        @extend %ods-text--size-juliett;
+        @extend %ods-text--weight-medium;
+    }
+
+    &__link {
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-medium;
+        @extend %ods-padding-4;
+
+        display: block;
+        text-decoration: none;
+
+        &--focus .ods-search-circle__heading,
+        &:focus .ods-search-circle__heading,
+        &:hover .ods-search-circle__heading {
+            text-decoration: underline;
+        }
+
+        &:hover,
+        &:focus,
+        &--focus {
+            background-color: colors.$gray-light;
+            color: states.$hover;
+            text-decoration: none;
+        }
+
+        &--divider {
+            border-bottom: 0.0625rem solid colors.$gray;
+        }
+    }
+
+    &__text {
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-light;
+        @extend %ods-margin-top-1;
+    }
 }

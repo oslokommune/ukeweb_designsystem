@@ -91,19 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typesPlaceholder) {
     types.forEach((type) => {
       const typeElement = document.createElement('div');
-      typeElement.classList.add('osg-grid__column--12');
-      typeElement.innerHTML = `<div class="osg-text--size-${type.name} osg-margin-bottom-3" data-size="true">${type.title}</div>`;
+      typeElement.classList.add('ods-grid__column--12');
+      typeElement.innerHTML = `<div class="ods-text--size-${type.name} ods-margin-bottom-3" data-size="true">${type.title}</div>`;
       typesPlaceholder.appendChild(typeElement);
 
       const typeMetaElement = document.createElement('div');
-      typeMetaElement.classList.add('osg-grid__column--12');
-      typeMetaElement.innerHTML = `<div class="osg-grid osg-text--size-kilo"><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Size</span> ${type.size}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Line-height</span> ${type.lineHeight}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Letter-spacing</span> ${type.letterSpacing}</div><div class="osg-grid__column--3"><span class="osg-text--weight-medium">Class</span> .osg-text--size-${type.name}</div></div>`;
+      typeMetaElement.classList.add('ods-grid__column--12');
+      typeMetaElement.innerHTML = `<div class="ods-grid ods-text--size-kilo"><div class="ods-grid__column--3"><span class="ods-text--weight-medium">Size</span> ${type.size}</div><div class="ods-grid__column--3"><span class="ods-text--weight-medium">Line-height</span> ${type.lineHeight}</div><div class="ods-grid__column--3"><span class="ods-text--weight-medium">Letter-spacing</span> ${type.letterSpacing}</div><div class="ods-grid__column--3"><span class="ods-text--weight-medium">Class</span> .ods-text--size-${type.name}</div></div>`;
       typesPlaceholder.appendChild(typeMetaElement);
 
       const typeDividerElement = document.createElement('div');
-      typeDividerElement.classList.add('osg-grid__column--12');
-      typeDividerElement.classList.add('osg-margin-vertical-4');
-      typeDividerElement.innerHTML = `<div class="osg-divider"></div>`;
+      typeDividerElement.classList.add('ods-grid__column--12');
+      typeDividerElement.classList.add('ods-margin-vertical-4');
+      typeDividerElement.innerHTML = `<div class="ods-divider"></div>`;
       typesPlaceholder.appendChild(typeDividerElement);
     });
   }
@@ -116,21 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', () => {
         if (button.getAttribute('data-type') === 'weight') {
           typeElements.forEach((element) => {
-            element.classList.remove('osg-text--weight-light');
-            element.classList.remove('osg-text--weight-medium');
-            element.classList.remove('osg-text--weight-bold');
+            element.classList.remove('ods-text--weight-light');
+            element.classList.remove('ods-text--weight-medium');
+            element.classList.remove('ods-text--weight-bold');
           });
 
           document.querySelectorAll("#type-buttons button[data-type='weight']").forEach((el) => {
-            el.classList.add('osg-button--outline');
+            el.classList.add('ods-button--outline');
           });
         } else if (button.getAttribute('data-type') === 'style') {
           typeElements.forEach((element) => {
-            element.classList.remove('osg-text--style-italic');
+            element.classList.remove('ods-text--style-italic');
           });
 
           document.querySelectorAll("#type-buttons button[data-type='style']").forEach((el) => {
-            el.classList.add('osg-button--outline');
+            el.classList.add('ods-button--outline');
           });
         }
         if (button.getAttribute('data-class')) {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
 
-        button.classList.remove('osg-button--outline');
+        button.classList.remove('ods-button--outline');
       });
     });
   }

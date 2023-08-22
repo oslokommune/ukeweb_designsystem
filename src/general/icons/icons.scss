@@ -4,37 +4,37 @@
 @use "system/icons";
 @use "system/units";
 
-.osg-icon {
+.ods-icon {
   vertical-align: bottom;
 
   @each $name, $content in icons.$sizes {
-    &.osg-icon--size-#{$name} {
-      @extend %osg-icon--size-#{$name};
+    &.ods-icon--size-#{$name} {
+      @extend %ods-icon--size-#{$name};
     }
 
-    &.osg-icon--size-#{$name}-breakpoint-medium {
-      @extend %osg-icon--size-#{$name}-breakpoint-medium;
+    &.ods-icon--size-#{$name}-breakpoint-medium {
+      @extend %ods-icon--size-#{$name}-breakpoint-medium;
     }
 
-    &.osg-icon--size-#{$name}-breakpoint-large {
-      @extend %osg-icon--size-#{$name}-breakpoint-large;
+    &.ods-icon--size-#{$name}-breakpoint-large {
+      @extend %ods-icon--size-#{$name}-breakpoint-large;
     }
 
-    &.osg-icon--size-#{$name}.osg-icon--small {
-      @extend %osg-icon--size-#{$name}--small;
+    &.ods-icon--size-#{$name}.ods-icon--small {
+      @extend %ods-icon--size-#{$name}--small;
     }
 
-    &.osg-icon--size-#{$name}.osg-icon--align-right {
-      @extend %osg-icon--size-#{$name}--align-right;
+    &.ods-icon--size-#{$name}.ods-icon--align-right {
+      @extend %ods-icon--size-#{$name}--align-right;
     }
 
-    &.osg-icon--size-#{$name}.osg-icon--align-right.osg-icon--small {
-      @extend %osg-icon--size-#{$name}--align-right--small;
+    &.ods-icon--size-#{$name}.ods-icon--align-right.ods-icon--small {
+      @extend %ods-icon--size-#{$name}--align-right--small;
     }
   }
 
   @each $name, $color in colors.$colors {
-    &.osg-icon--color-#{$name} {
+    &.ods-icon--color-#{$name} {
       color: $color;
     }
   }
@@ -49,15 +49,15 @@
     }
   }
 
-  &.osg-icon--standalone {
-    @extend %osg-icon-standalone;
+  &.ods-icon--standalone {
+    @extend %ods-icon-standalone;
   }
 
-  &.osg-icon--standalone-breakpoint-medium {
-    @extend %osg-icon-standalone-breakpoint-medium;
+  &.ods-icon--standalone-breakpoint-medium {
+    @extend %ods-icon-standalone-breakpoint-medium;
   }
 
-  &.osg-icon--standalone-breakpoint-large {
-    @extend %osg-icon-standalone-breakpoint-large;
+  &.ods-icon--standalone-breakpoint-large {
+    @extend %ods-icon-standalone-breakpoint-large;
   }
 }

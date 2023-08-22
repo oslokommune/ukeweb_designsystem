@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   OsgTabs.init();
 
   /* Example: Adding animation
-  document.querySelectorAll(".osg-tabs").forEach((tabs) => {
+  document.querySelectorAll(".ods-tabs").forEach((tabs) => {
     tabs.addEventListener(
       "OsgTabsActivate",
       function (payload) {

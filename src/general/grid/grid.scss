@@ -1,7 +1,7 @@
 @use "system/breakpoints";
 @use "system/grid";
 
-.osg-grid {
+.ods-grid {
   display: grid;
   grid-template-columns: repeat(#{grid.$columns}, 1fr);
 
@@ -16,7 +16,7 @@
   }
 
   &--gap {
-    @extend %osg-grid-gap-column, %osg-grid-gap-row;
+    @extend %ods-grid-gap-column, %ods-grid-gap-row;
   }
 
   &--dense {
@@ -24,11 +24,11 @@
   }
 
   &--gap-column {
-    @extend %osg-grid-gap-column;
+    @extend %ods-grid-gap-column;
   }
 
   &--gap-row {
-    @extend %osg-grid-gap-row;
+    @extend %ods-grid-gap-row;
   }
 
   &--gutter {
@@ -111,7 +111,7 @@
   }
 }
 
-%osg-grid-gap-column {
+%ods-grid-gap-column {
   column-gap: grid.$gap-size-hard;
 
   @include breakpoints.medium {
@@ -131,7 +131,7 @@
   }
 }
 
-%osg-grid-gap-row {
+%ods-grid-gap-row {
   row-gap: grid.$gap-size-hard;
 
   @include breakpoints.medium {

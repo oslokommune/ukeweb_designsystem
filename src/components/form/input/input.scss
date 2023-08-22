@@ -3,12 +3,12 @@
 @use "system/typography";
 @use "mixins";
 
-.osg-input {
+.ods-input {
   @include mixins.form-states;
 
   &__input {
     @include mixins.form-component;
-    @extend %osg-margin-top-2;
+    @extend %ods-margin-top-2;
 
     &::placeholder {
       color: inherit;
@@ -30,11 +30,11 @@
   }
 
   &__required {
-    @extend %osg-margin-top-1;
+    @extend %ods-margin-top-1;
 
     padding: 0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
 
   &__error-message {
@@ -52,8 +52,8 @@
       border: none;
       background: none;
       cursor: pointer;
-      @extend %osg-text--size-juliett;
-      @extend %osg-text--weight-light;
+      @extend %ods-text--size-juliett;
+      @extend %ods-text--weight-light;
 
       height: 1.25rem;
       line-height: 0;

@@ -3,7 +3,7 @@ import pagination from './pagination.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
-    Vue.component('osg-pagination', pagination);
+    Vue.component('ods-pagination', pagination);
     const vm = new Vue({
       data: () => ({
         currentIndex: 99,

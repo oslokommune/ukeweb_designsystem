@@ -5,19 +5,19 @@
 @use "system/states";
 @use "sass:map";
 
-.osg-breadcrumb {
-  @extend %osg-text--size-lima;
-  @extend %osg-text--weight-light;
+.ods-breadcrumb {
+  @extend %ods-text--size-lima;
+  @extend %ods-text--weight-light;
 
   &__list {
     list-style: none !important;
 
-    .osg-breadcrumb__item {
+    .ods-breadcrumb__item {
       display: inline;
     }
 
-    .osg-breadcrumb__item + .osg-breadcrumb__item {
-      @extend %osg-margin-left-1;
+    .ods-breadcrumb__item + .ods-breadcrumb__item {
+      @extend %ods-margin-left-1;
     }
   }
 
@@ -59,8 +59,8 @@
   }
 
   &__active {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
 
     margin-left: 6px;
     position: relative;

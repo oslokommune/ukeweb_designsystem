@@ -21,10 +21,10 @@ const contactboxInit = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const mapElement = document.getElementById('osg-contactbox-custom-content-map');
+  const mapElement = document.getElementById('ods-contactbox-custom-content-map');
 
   if (mapElement) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OsgMap);
     const vm = new Vue();
     vm.$mount(mapElement);
   }

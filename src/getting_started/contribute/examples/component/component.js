@@ -10,7 +10,7 @@ import Vue from 'vue';
 import OsgExampleComponent from './component.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const exampleComponent = document.getElementById('osg-example-component-vue');
+  const exampleComponent = document.getElementById('ods-example-component-vue');
   if (exampleComponent) {
     const vm = new Vue({
       components: {

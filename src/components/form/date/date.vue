@@ -1,15 +1,15 @@
 <template>
-  <div class="osg-date">
-    <label class="osg-date__label">
+  <div class="ods-date">
+    <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="osg-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" />
+      <input type="text" class="ods-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" />
     </label>
-    <nrk-core-datepicker class="osg-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
-      <fieldset class="osg-date__datepicker__nav">
-        <button class="osg-date__datepicker__button osg-date__datepicker__button--prev" :value="browseMonth(-1)" :disabled="browseMonthDisabled(-1)" :aria-label="btnPrevMonthLabel"></button>
-        <button class="osg-date__datepicker__button osg-date__datepicker__button--next" :value="browseMonth(+1)" :disabled="browseMonthDisabled(+1)" :aria-label="btnNextMonthLabel"></button>
+    <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
+      <fieldset class="ods-date__datepicker__nav">
+        <button class="ods-date__datepicker__button ods-date__datepicker__button--prev" :value="browseMonth(-1)" :disabled="browseMonthDisabled(-1)" :aria-label="btnPrevMonthLabel"></button>
+        <button class="ods-date__datepicker__button ods-date__datepicker__button--next" :value="browseMonth(+1)" :disabled="browseMonthDisabled(+1)" :aria-label="btnNextMonthLabel"></button>
       </fieldset>
-      <table class="osg-date__datepicker__calendar"></table>
+      <table class="ods-date__datepicker__calendar"></table>
     </nrk-core-datepicker>
   </div>
 </template>
