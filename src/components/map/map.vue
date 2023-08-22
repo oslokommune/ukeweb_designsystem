@@ -11,7 +11,7 @@
 import maplibregl from 'maplibre-gl';
 
 export default {
-  name: 'OsgMap',
+  name: 'OdsMap',
 
   props: {
     mapStyle: {

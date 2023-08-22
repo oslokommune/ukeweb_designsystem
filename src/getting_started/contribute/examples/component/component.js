@@ -7,14 +7,14 @@
  * before the script runs.
  */
 import Vue from 'vue';
-import OsgExampleComponent from './component.vue';
+import OdsExampleComponent from './component.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   const exampleComponent = document.getElementById('ods-example-component-vue');
   if (exampleComponent) {
     const vm = new Vue({
       components: {
-        OsgExampleComponent,
+        OdsExampleComponent,
       },
     });
     vm.$mount(exampleComponent);

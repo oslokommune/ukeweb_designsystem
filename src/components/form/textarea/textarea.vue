@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'OsgTextarea',
+  name: 'OdsTextarea',
 
   props: {
     name: {

@@ -6,9 +6,9 @@ function triggerIterator(callback) {
 }
 
 const setActiveTrigger = (activetrigger) => {
-  const OsgTabs = activetrigger.closest('.ods-tabs');
-  if (OsgTabs) {
-    const triggers = OsgTabs.querySelectorAll('.ods-tabs__trigger');
+  const OdsTabs = activetrigger.closest('.ods-tabs');
+  if (OdsTabs) {
+    const triggers = OdsTabs.querySelectorAll('.ods-tabs__trigger');
     triggers.forEach((trigger) => {
       trigger.setAttribute('aria-selected', 'false');
       trigger.setAttribute('tabindex', '-1');
@@ -20,9 +20,9 @@ const setActiveTrigger = (activetrigger) => {
 };
 
 const setActiveTab = (activeTab) => {
-  const OsgTabs = activeTab.closest('.ods-tabs');
-  if (OsgTabs) {
-    const tabs = OsgTabs.querySelectorAll('.ods-tabs__tab');
+  const OdsTabs = activeTab.closest('.ods-tabs');
+  if (OdsTabs) {
+    const tabs = OdsTabs.querySelectorAll('.ods-tabs__tab');
     tabs.forEach((tab) => {
       tab.classList.remove('ods-tabs__tab--active');
     });
@@ -36,7 +36,7 @@ const handleTabFocus = (event) => {
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute('aria-controls'));
     if (tab) {
-      const toggleEvent = new CustomEvent('OsgTabsActivate', {
+      const toggleEvent = new CustomEvent('OdsTabsActivate', {
         detail: {
           trigger,
           tab,
@@ -90,15 +90,15 @@ const handleKeyEvent = (event) => {
   }
 };
 
-const OsgTabs = {
+const OdsTabs = {
   init() {
-    OsgTabs.unbindAll();
-    OsgTabs.bindAll();
+    OdsTabs.unbindAll();
+    OdsTabs.bindAll();
   },
 
   initElement(element) {
-    OsgTabs.unbindElement(element);
-    OsgTabs.bindElement(element);
+    OdsTabs.unbindElement(element);
+    OdsTabs.bindElement(element);
   },
 
   bindElement(element) {
@@ -126,4 +126,4 @@ const OsgTabs = {
   },
 };
 
-export default OsgTabs;
+export default OdsTabs;

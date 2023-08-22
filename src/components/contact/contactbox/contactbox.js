@@ -1,4 +1,4 @@
-import OsgCollapsible from '../../collapsible/collapsible';
+import OdsCollapsible from '../../collapsible/collapsible';
 
 function triggerIterator(callback) {
   const triggers = document.querySelectorAll('.ods-contactbox__trigger');
@@ -20,7 +20,7 @@ export default {
       item.setAttribute('aria-expanded', 'false');
       item.setAttribute('aria-controls', `${parent.id}-content`);
 
-      OsgCollapsible.initElement(item);
+      OdsCollapsible.initElement(item);
     });
   },
 
@@ -36,7 +36,7 @@ export default {
       item.removeAttribute('aria-expanded');
       item.removeAttribute('aria-controls');
 
-      OsgCollapsible.unbindElement(item);
+      OdsCollapsible.unbindElement(item);
     });
   },
 };

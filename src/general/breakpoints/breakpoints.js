@@ -1,12 +1,12 @@
 let previousBreakpoint = null;
-const OsgBreakpoints = {
+const OdsBreakpoints = {
   init() {
-    window.addEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
-    OsgBreakpoints.emitWindowSizeIfChanged();
+    window.addEventListener('resize', OdsBreakpoints.emitWindowSizeIfChanged);
+    OdsBreakpoints.emitWindowSizeIfChanged();
   },
 
   unbind() {
-    window.removeEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
+    window.removeEventListener('resize', OdsBreakpoints.emitWindowSizeIfChanged);
   },
 
   emitWindowSizeIfChanged() {
@@ -14,13 +14,13 @@ const OsgBreakpoints = {
       detail: {
         width: window.innerWidth,
         height: window.innerHeight,
-        breakpoint: OsgBreakpoints.getBreakpoint(),
+        breakpoint: OdsBreakpoints.getBreakpoint(),
       },
     };
 
     if (data.detail.breakpoint !== previousBreakpoint) {
       previousBreakpoint = data.detail.breakpoint;
-      window.dispatchEvent(new CustomEvent('OsgBreakpointChange', data));
+      window.dispatchEvent(new CustomEvent('OdsBreakpointChange', data));
     }
   },
 
@@ -35,4 +35,4 @@ const OsgBreakpoints = {
   },
 };
 
-export default OsgBreakpoints;
+export default OdsBreakpoints;

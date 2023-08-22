@@ -20,7 +20,7 @@ import CoreDatepicker from '@nrk/core-datepicker';
 window.customElements.define('nrk-core-datepicker', CoreDatepicker);
 
 export default {
-  name: 'OsgDate',
+  name: 'OdsDate',
   props: {
     label: {
       type: String,

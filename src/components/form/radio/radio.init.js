@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import OsgRadiogroup from './radiogroup.vue';
+import OdsRadiogroup from './radiogroup.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('ods-radio-vue-1')) {
     const vm = new Vue({
-      components: { OsgRadiogroup },
+      components: { OdsRadiogroup },
       data: () => ({
         selectedValue: '40',
         items: {

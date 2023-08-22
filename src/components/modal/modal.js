@@ -71,14 +71,14 @@ toggleModal = (event) => {
   }
 };
 
-const OsgModal = {
+const OdsModal = {
   init() {
-    OsgModal.unbindAll();
-    OsgModal.bindAll();
+    OdsModal.unbindAll();
+    OdsModal.bindAll();
   },
   initSingle(trigger) {
-    OsgModal.unbindSingle(trigger);
-    OsgModal.bindSingle(trigger);
+    OdsModal.unbindSingle(trigger);
+    OdsModal.bindSingle(trigger);
   },
   closeSingle(trigger) {
     closeModal(document.getElementById(trigger.getAttribute('aria-controls')));
@@ -92,15 +92,15 @@ const OsgModal = {
   bindAll() {
     const triggers = document.querySelectorAll('.ods-modal-trigger');
     triggers.forEach((trigger) => {
-      OsgModal.bindSingle(trigger);
+      OdsModal.bindSingle(trigger);
     });
   },
   unbindAll() {
     const triggers = document.querySelectorAll('.ods-modal-trigger');
     triggers.forEach((trigger) => {
-      OsgModal.unbindSingle(trigger);
+      OdsModal.unbindSingle(trigger);
     });
   },
 };
 
-export default OsgModal;
+export default OdsModal;

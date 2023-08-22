@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: 'OsgSearchInline',
+  name: 'OdsSearchInline',
 
   props: {
     id: {

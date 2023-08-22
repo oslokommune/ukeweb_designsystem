@@ -21,12 +21,12 @@
   </div>
 </template>
 <script>
-import OsgRadio from './radio.vue';
+import OdsRadio from './radio.vue';
 
 export default {
-  name: 'OsgRadioGroup',
+  name: 'OdsRadioGroup',
 
-  components: { OsgRadio },
+  components: { OdsRadio },
 
   props: {
     name: {

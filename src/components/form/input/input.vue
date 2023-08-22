@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'OsgInput',
+  name: 'OdsInput',
 
   props: {
     name: {

@@ -34,7 +34,7 @@ function openMenu(menu) {
   menuButton.classList.add('ods-button-menu--open');
   menu.style.display = 'block';
 
-  dispatchEvent('OsgMenuOpen', { menuButton, menu }, menu);
+  dispatchEvent('OdsMenuOpen', { menuButton, menu }, menu);
 }
 
 function closeMenu(menu) {
@@ -43,7 +43,7 @@ function closeMenu(menu) {
   menuButton.classList.remove('ods-button-menu--open');
   menu.style.display = 'none';
 
-  dispatchEvent('OsgMenuClose', { menuButton, menu }, menu);
+  dispatchEvent('OdsMenuClose', { menuButton, menu }, menu);
 }
 
 function handleToggleMenu(e) {
@@ -91,35 +91,35 @@ function handleToggleHeading(e) {
     }
   }
 
-  dispatchEvent('OsgHeadingToggle', { target: e.target, expanded: e.target.classList.contains('ods-navbar-menu__list-animate--open') }, e.target);
+  dispatchEvent('OdsHeadingToggle', { target: e.target, expanded: e.target.classList.contains('ods-navbar-menu__list-animate--open') }, e.target);
 }
 
 /**
  * Exported menu functions
  */
-const OsgMenu = {
+const OdsMenu = {
   init() {
-    OsgMenu.unbindAll();
-    OsgMenu.bindAll();
+    OdsMenu.unbindAll();
+    OdsMenu.bindAll();
   },
 
   initElement(element) {
-    OsgMenu.unbindElement(element);
-    OsgMenu.bindElement(element);
+    OdsMenu.unbindElement(element);
+    OdsMenu.bindElement(element);
   },
 
   bindElement(element) {
     element.addEventListener('click', handleToggleMenu);
     element.addEventListener('keypress', handleToggleMenu);
 
-    OsgMenu.bindHeadings(element);
+    OdsMenu.bindHeadings(element);
   },
 
   unbindElement(element) {
     element.removeEventListener('click', handleToggleMenu);
     element.removeEventListener('keypress', handleToggleMenu);
 
-    OsgMenu.unbindHeadings(element);
+    OdsMenu.unbindHeadings(element);
   },
 
   bindHeadings(element) {
@@ -138,13 +138,13 @@ const OsgMenu = {
 
   bindAll() {
     triggerIterator((item) => {
-      OsgMenu.bindElement(item);
+      OdsMenu.bindElement(item);
     });
   },
 
   unbindAll() {
     triggerIterator((item) => {
-      OsgMenu.unbindElement(item);
+      OdsMenu.unbindElement(item);
     });
   },
 
@@ -157,4 +157,4 @@ const OsgMenu = {
   },
 };
 
-export default OsgMenu;
+export default OdsMenu;

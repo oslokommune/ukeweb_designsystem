@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import OsgDate from './date.vue';
+import OdsDate from './date.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   const odsDatePlaceholderElements = ['ods-date-vue', 'ods-date-vue-dev'];
   odsDatePlaceholderElements.forEach((elementName) => {
     const odsDatePlaceholder = document.getElementById(elementName);
     if (odsDatePlaceholder) {
-      Vue.component('ods-date', OsgDate);
+      Vue.component('ods-date', OdsDate);
       const vm = new Vue({
         data: () => ({
           date: null,

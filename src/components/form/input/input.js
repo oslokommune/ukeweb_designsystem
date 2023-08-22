@@ -1,4 +1,4 @@
-function OsgInput() {
+function OdsInput() {
   const countInput = document.querySelector('.ods-input__input--number');
 
   if (!countInput) {
@@ -38,4 +38,4 @@ function OsgInput() {
   btnDown.addEventListener('click', decreaseCount, false);
 }
 
-export default OsgInput;
+export default OdsInput;

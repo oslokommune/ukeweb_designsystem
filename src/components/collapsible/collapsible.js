@@ -21,7 +21,7 @@ function toggleCollapsible(e) {
 function handleCollapsible(e) {
   toggleCollapsible(e);
 
-  const toggleEvent = new CustomEvent('OsgCollapsibleToggle', {
+  const toggleEvent = new CustomEvent('OdsCollapsibleToggle', {
     detail: {
       target: e.target,
       expanded: e.target.classList.contains('ods-collapsible-trigger--expanded'),
@@ -53,15 +53,15 @@ function handleBreakpointChange(e) {
   }
 }
 
-const OsgCollapsible = {
+const OdsCollapsible = {
   init() {
-    OsgCollapsible.unbindAll();
-    OsgCollapsible.bindAll();
+    OdsCollapsible.unbindAll();
+    OdsCollapsible.bindAll();
   },
 
   initElement(element) {
-    OsgCollapsible.unbindElement(element);
-    OsgCollapsible.bindElement(element);
+    OdsCollapsible.unbindElement(element);
+    OdsCollapsible.bindElement(element);
   },
 
   bindElement(element) {
@@ -75,7 +75,7 @@ const OsgCollapsible = {
   },
 
   bindAll() {
-    window.addEventListener('OsgBreakpointChange', handleBreakpointChange);
+    window.addEventListener('OdsBreakpointChange', handleBreakpointChange);
     triggerIterator((item) => {
       item.addEventListener('click', handleCollapsible);
       item.addEventListener('keypress', handleCollapsible);
@@ -83,7 +83,7 @@ const OsgCollapsible = {
   },
 
   unbindAll() {
-    window.removeEventListener('OsgBreakpointChange', handleBreakpointChange);
+    window.removeEventListener('OdsBreakpointChange', handleBreakpointChange);
     triggerIterator((item) => {
       item.removeEventListener('click', handleCollapsible);
       item.removeEventListener('keypress', handleCollapsible);
@@ -91,4 +91,4 @@ const OsgCollapsible = {
   },
 };
 
-export default OsgCollapsible;
+export default OdsCollapsible;

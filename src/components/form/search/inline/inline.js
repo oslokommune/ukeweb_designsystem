@@ -1,14 +1,14 @@
 import Vue from 'vue';
-import OsgSearchInline from './inline.vue';
+import OdsSearchInline from './inline.vue';
 
-function OsgSearchVue() {
+function OdsSearchVue() {
   const vueElements = ['ods-search-inline-vue-1', 'ods-search-inline-vue-2'];
   vueElements.forEach((element) => {
     const odsSearchPlaceholder = document.getElementById(element);
     if (odsSearchPlaceholder) {
       const vm = new Vue({
         components: {
-          OsgSearchInline,
+          OdsSearchInline,
         },
         data: () => ({
           value: 'h',
@@ -50,4 +50,4 @@ function OsgSearchVue() {
   });
 }
 
-export default OsgSearchVue;
+export default OdsSearchVue;

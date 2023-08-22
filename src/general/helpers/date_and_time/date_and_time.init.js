@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import './date_and_time.vue'; // For Vue filters
-import OsgDateTime from './date_and_time'; // For JS
+import OdsDateTime from './date_and_time'; // For JS
 
 document.addEventListener('DOMContentLoaded', () => {
   const testCasesElement = document.getElementById('testcases');
@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         dateTo: null,
         dateFromOptions: {},
         dateToOptions: {},
-        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32))',
+        toString: 'OdsDateTime.format(new Date(2021, 11, 30, 8, 5, 32))',
       },
       {
         dateFrom: new Date(2021, 11, 30, 8, 5, 32),
         dateTo: new Date(2022, 0, 5, 8, 5, 32),
         dateFromOptions: {},
         dateToOptions: {},
-        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2022, 0, 5, 8, 5, 32))',
+        toString: 'OdsDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2022, 0, 5, 8, 5, 32))',
       },
       {
         dateFrom: new Date(2021, 11, 30, 8, 5, 32),
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dateToOptions: {
           format: 'time',
         },
-        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2021, 11, 30, 16, 32, 50), {format: "time"}, {format: "time"})',
+        toString: 'OdsDateTime.format(new Date(2021, 11, 30, 8, 5, 32), new Date(2021, 11, 30, 16, 32, 50), {format: "time"}, {format: "time"})',
       },
       {
         dateFrom: new Date(2021, 11, 30, 8, 0, 0),
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dateToOptions: {
           format: 'time',
         },
-        toString: 'OsgDateTime.format(new Date(2021, 11, 30, 8, 0, 0), new Date(2021, 11, 30, 16, 0, 0), {format: "time", prefix: "kl. "}, {format: "time"})',
+        toString: 'OdsDateTime.format(new Date(2021, 11, 30, 8, 0, 0), new Date(2021, 11, 30, 16, 0, 0), {format: "time", prefix: "kl. "}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dateToOptions: {
           format: 'time',
         },
-        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}}, {format: "time"})',
+        toString: 'OdsDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dateToOptions: {
           format: 'time',
         },
-        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}, localeOptions: {weekday: "long"}}, {format: "time"})',
+        toString: 'OdsDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 15, 16, 0, 0), {format: "datetime", time: {prefix: " kl. "}, localeOptions: {weekday: "long"}}, {format: "time"})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weekday: 'long',
           },
         },
-        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 20, 16, 0, 0), {prefix: "Fra ", localeOptions: {weekday: "long"}}, {prefix: " til ", localeOptions: {weekday: "long"}})',
+        toString: 'OdsDateTime.format(new Date(2022, 4, 15, 8, 0, 0), new Date(2022, 4, 20, 16, 0, 0), {prefix: "Fra ", localeOptions: {weekday: "long"}}, {prefix: " til ", localeOptions: {weekday: "long"}})',
       },
       {
         dateFrom: new Date(2022, 4, 15, 8, 0, 0),
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prefix: ', kl. ',
           },
         },
-        toString: 'OsgDateTime.format(new Date(2022, 4, 15, 8, 0, 0), null, {format: "daytime", time: {prefix: ", kl. "}}, {})',
+        toString: 'OdsDateTime.format(new Date(2022, 4, 15, 8, 0, 0), null, {format: "daytime", time: {prefix: ", kl. "}}, {})',
       },
     ];
     testCases.forEach((testCase) => {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const testCaseElement = document.createElement('div');
       testCaseElement.classList.add('ods-margin-bottom-8');
-      testCaseElement.innerHTML = `<div>no-NO: ${OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions)}</div>`;
+      testCaseElement.innerHTML = `<div>no-NO: ${OdsDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions)}</div>`;
 
       testCase.dateFromOptions.locale = 'en-GB';
       testCase.dateToOptions.locale = 'en-GB';
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         testCase.dateToOptions.prefix = testCase.dateToOptions.prefix.replace(/til/, 'to');
       }
 
-      testCaseElement.innerHTML += `<div>en-GB: ${OsgDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions)}</div>`;
+      testCaseElement.innerHTML += `<div>en-GB: ${OdsDateTime.format(testCase.dateFrom, testCase.dateTo, testCase.dateFromOptions, testCase.dateToOptions)}</div>`;
 
       testCaseElement.innerHTML += `<code class="ods-code" class="ods-code ods-block ods-margin-top-10">${testCase.toString}</code>`;
       testCasesElement.appendChild(testCaseElement);
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data: () => ({
         testDate: new Date(2021, 11, 31, 23, 59, 59),
       }),
-      template: '<div><p>Date: {{ testDate | OsgDateTimeFormat() }}, DateTime: {{ testDate | OsgDateTimeFormat(null, { format: "datetime" }) }}, <span v-html="\'DoubleDate: \' + $options.filters.OsgDateTimeFormat(testDate, new Date())"></span></p></div>',
+      template: '<div><p>Date: {{ testDate | OdsDateTimeFormat() }}, DateTime: {{ testDate | OdsDateTimeFormat(null, { format: "datetime" }) }}, <span v-html="\'DoubleDate: \' + $options.filters.OdsDateTimeFormat(testDate, new Date())"></span></p></div>',
     });
     vm.$mount('#date-time-vue-examples');
   }

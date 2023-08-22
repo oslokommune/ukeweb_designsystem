@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'OsgCheckbox',
+  name: 'OdsCheckbox',
 
   props: {
     name: {

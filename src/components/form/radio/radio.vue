@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'OsgRadio',
+  name: 'OdsRadio',
 
   props: {
     name: {

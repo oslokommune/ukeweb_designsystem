@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'OsgPagination',
+  name: 'OdsPagination',
   props: {
     ariaLabel: {
       type: String,

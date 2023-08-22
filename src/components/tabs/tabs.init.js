@@ -1,12 +1,12 @@
-import OsgTabs from './tabs';
+import OdsTabs from './tabs';
 
 document.addEventListener('DOMContentLoaded', () => {
-  OsgTabs.init();
+  OdsTabs.init();
 
   /* Example: Adding animation
   document.querySelectorAll(".ods-tabs").forEach((tabs) => {
     tabs.addEventListener(
-      "OsgTabsActivate",
+      "OdsTabsActivate",
       function (payload) {
         payload.detail.tab.classList.add("animate__animated", "animate__bounce");
       },
