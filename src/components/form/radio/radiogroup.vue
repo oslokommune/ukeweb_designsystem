@@ -2,7 +2,20 @@
   <div>
     <fieldset class="osg-fieldset osg-fieldset--no-border" :aria-describedby="conditionalErrorId">
       <legend>{{ fieldsetText }}</legend>
-      <osg-radio v-for="(label, value, index) in items" :key="index" :name="name" :text="label" :value="value" :selected="selectedModel" :has-error="errorMessage.length > 0 ? true : false" v-on:select="(value) => {selectedModel = value}"></osg-radio>
+      <osg-radio
+        v-for="(label, value, index) in items"
+        :key="index"
+        :name="name"
+        :text="label"
+        :value="value"
+        :selected="selectedModel"
+        :has-error="errorMessage.length > 0 ? true : false"
+        v-on:select="
+          (value) => {
+            selectedModel = value;
+          }
+        "
+      ></osg-radio>
     </fieldset>
     <div v-if="errorMessage" class="osg-radio__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
