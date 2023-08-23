@@ -7,7 +7,6 @@
 @use "system/visibility";
 @use "components/links/link/mixins";
 @use "sass:math";
-@use "sass:map";
 
 .osg-button-menu {
   @extend %osg-padding-2, %osg-padding-horizontal-4-breakpoint-large;
@@ -43,7 +42,6 @@
 
   &__text {
     @extend %osg-sr-only;
-
     pointer-events: none;
 
     @include breakpoints.medium {
@@ -76,8 +74,8 @@
     vertical-align: top;
 
     &::before {
-      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      content: map.get(icon-map.$icons, "menu") !important;
+      font-family: "Oslo Icons" !important;
+      content: map-get(icon-map.$icons, "menu") !important;
     }
   }
 
@@ -112,13 +110,14 @@
 
     & .osg-button-menu__icon {
       &::before {
-        content: map.get(icon-map.$icons, "close") !important;
+        content: map-get(icon-map.$icons, "close") !important;
       }
     }
   }
 }
 
 .osg-navbar-menu {
+  @extend %osg-padding-bottom-8;
   background-color: colors.$white;
   display: none;
 
@@ -134,10 +133,10 @@
     border: none;
     color: colors.$blue-dark;
     cursor: pointer;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @include typography.weight("light");
-    @extend %osg-margin-bottom-4;
+    @extend %osg-text--size-juliett;
+    @include typography.weight("medium");
     @extend %osg-padding-horizontal-0;
+    @extend %osg-padding-bottom-0;
     @extend %osg-none-breakpoint-medium;
 
     span {
@@ -166,7 +165,7 @@
     }
 
     &--close {
-      max-height: 0;
+      max-height: 0px;
       transition: all 0.7s ease;
 
       @include breakpoints.medium {
@@ -207,39 +206,18 @@
 
   &__link-text {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-
     display: inline-block;
   }
 
   &__services {
     @extend %osg-padding-top-8, %osg-padding-bottom-4, %osg-padding-horizontal-0;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
-  }
-
-  &__categories {
-    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
-
-    ul {
-      background-color: colors.$gray;
-      @extend %osg-margin-top-8-breakpoint-medium;
-
-      li {
-        @extend %osg-margin-left-3;
-        @extend %osg-margin-left-0-breakpoint-medium;
-      }
-    }
-
-    @include breakpoints.medium {
-      background-color: colors.$gray;
-    }
+    @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
   }
   
   &__services-list {
-    @extend %osg-padding-vertical-0, %osg-padding-horizontal-3;
+    @extend %osg-padding-vertical-0;
     @extend %osg-margin-top-8-breakpoint-medium;
     @extend %osg-padding-0-breakpoint-medium;
-
     background-color: colors.$gray;
 
     @include breakpoints.medium {
@@ -257,13 +235,30 @@
     }
   }
 
+  &__categories {
+    @extend %osg-padding-horizontal-0;
+    @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+
+    ul {
+      background-color: colors.$gray;
+      @extend %osg-margin-top-8-breakpoint-medium;
+      li {
+        @extend %osg-margin-left-3;
+        @extend %osg-margin-left-0-breakpoint-medium;
+      }
+    }
+
+    @include breakpoints.medium {
+      background-color: colors.$gray;
+    }
+  }
+
   &__footer {
-    @extend %osg-padding-vertical-4-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
   }
 
   &__footer-list {
     @extend %osg-margin-top-8, %osg-margin-top-0-breakpoint-medium;
-
     justify-content: flex-start;
 
     &--media {
@@ -276,10 +271,9 @@
       }
 
       & .osg-navbar-menu__link-content {
-        @extend %osg-padding-right-8, %osg-padding-right-0-breakpoint-medium, %osg-padding-left-13-breakpoint-medium;
+        @extend %osg-padding-right-4, %osg-padding-right-0-breakpoint-medium, %osg-padding-left-6-breakpoint-medium;
       }
     }
-
     .osg-icon {
       font-size: 1.5rem;
     }
