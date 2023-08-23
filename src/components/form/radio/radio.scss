@@ -15,7 +15,7 @@
       opacity: 1;
     }
   }
-  
+
   &__label {
     @include mixins.form-label;
   }
@@ -36,20 +36,20 @@
   }
 
   &__text {
-    hyphens: auto;
     @extend %osg-margin-left-2;
+    hyphens: auto;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }
-  
+
   &--text-align-top {
     align-items: flex-start;
-    
+
     .osg-radio__label {
       margin-top: -(5px);
     }
   }
-  
+
   &__input {
     align-items: center;
     display: inline-flex;
@@ -58,14 +58,14 @@
       opacity: 0;
       width: 0;
       height: 0;
-      
+
       &:focus + &.osg-radio__control {
         box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
       }
     }
-        
+
   }
-  
+
   & input + &__control::before {
     content: "";
     width: 0.4em;
@@ -75,7 +75,7 @@
     transition: 180ms transform ease-in-out;
     transform: scale(0);
   }
-  
+
   &__control {
     align-items: center;
     background-color: colors.$white;
@@ -92,7 +92,7 @@
   & input:checked + &__control::before {
     transform: scale(1);
   }
-  
+
   & input:checked + &__control {
     background-color: colors.$blue-dark;
   }
@@ -103,7 +103,7 @@
 
     line-height: 1.5em !important;
   }
-  
+
   &--hover,
   &:hover,
   &--focus,
@@ -118,7 +118,7 @@
       color: colors.$blue-state;
     }
   }
-  
+
   &--hover,
   &:hover {
     .osg-radio__text {
@@ -146,20 +146,20 @@
       text-decoration: none;
     }
   }
-  
+
   &__error-message {
     @include mixins.error-message;
-    
+
     background-color: colors.$red-30;
     border-left: 0.375rem solid colors.$red;
     display: flex;
     align-items: center;
   }
-  
+
   &__icon {
     @extend %osg-text--size-juliett, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-padding-right-2;
-    
+
     line-height: 1.5rem;
 
     @include breakpoints.large {
