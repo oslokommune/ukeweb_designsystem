@@ -116,6 +116,12 @@
     }
     .osg-radio__text {
       color: colors.$blue-state;
+    }
+  }
+  
+  &--hover,
+  &:hover {
+    .osg-radio__text {
       text-decoration: underline;
     }
   }
@@ -132,12 +138,12 @@
     & input:disabled:checked + .osg-radio__control {
       background-color: colors.$grayscale-40;
     }
-
     .osg-radio__control {
       border-color: colors.$grayscale-40;
     }
     .osg-radio__text {
       color: colors.$grayscale-40;
+      text-decoration: none;
     }
   }
   

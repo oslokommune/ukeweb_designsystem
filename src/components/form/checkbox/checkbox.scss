@@ -120,6 +120,10 @@
   & input:checked:focus ~ span {
     border-color: colors.$blue-state;
     color: colors.$blue-state;
+  }
+  
+  &--hover span,
+  & input:hover ~ span {
     text-decoration: underline;
   }
   
@@ -165,18 +169,5 @@
   & input:disabled:hover ~ span {
     color: colors.$grayscale-40;
     border-color: colors.$grayscale-40;
-  }
-
-  &--error {
-    & input:checked ~ .osg-checkbox__checkmark {
-      background-color: colors.$red;
-      border-color: colors.$red;
-    }
-
-    & input:checked:hover ~ .osg-checkbox__checkmark,
-    & input:checked:focus ~ .osg-checkbox__checkmark {
-      background-color: colors.$blue-state;
-      border-color: colors.$blue-state;
-    }
   }
 }

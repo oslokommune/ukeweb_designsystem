@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="osg-checkbox" :class="{ 'osg-checkbox--error': errorMessage }">
+    <div class="osg-checkbox">
       <label class="osg-checkbox__wrapper">
         <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
         <span class="osg-checkbox__checkmark"></span>
