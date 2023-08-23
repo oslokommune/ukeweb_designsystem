@@ -9,11 +9,11 @@
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   color: inherit;
   cursor: pointer;
-  
+
   &__label {
     @include mixins.form-label;
   }
-  
+
   &__wrapper {
     @extend %osg-margin-top-1;
     display: inline-flex;
@@ -34,7 +34,7 @@
 
   &--text-align-top {
     align-items: flex-start;
-    
+
     .osg-checkbox__text {
       margin-top: -5px;
     }
@@ -48,7 +48,7 @@
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    
+
     @include breakpoints.large {
       margin-top: 0.16em;
     }
@@ -72,14 +72,14 @@
     hyphens: auto;
     @extend %osg-padding-left-2;
   }
-  
+
   &--error-message {
     @include mixins.error-message;
     background-color: colors.$red-30;
     border-left: 0.375rem solid colors.$red;
     display: flex;
   }
-  
+
   &__icon {
     @extend %osg-text--size-juliett, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-padding-right-2;
@@ -92,8 +92,8 @@
     }
   }
 
-  
-  &--focus &__checkmark, 
+
+  &--focus &__checkmark,
   &:focus-within &__checkmark,
   & input:focus ~ &__checkmark {
     &:not([disabled]) {
@@ -101,17 +101,17 @@
       outline: initial;
     }
   }
-  
+
   &:focus-visible ~ &__checkmark {
     outline-style: none;
   }
 
-  &--focus &__text, 
+  &--focus &__text,
   & input:focus ~ &__text {
     @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
     @extend %osg-text--weight-medium;
   }
-  
+
   &--hover span,
   &--focus span,
   & input:hover ~ span,
@@ -121,12 +121,12 @@
     border-color: colors.$blue-state;
     color: colors.$blue-state;
   }
-  
+
   &--hover span,
   & input:hover ~ span {
     text-decoration: underline;
   }
-  
+
   &--hover span,
   &:hover span {
     & input:not([disabled]) {
@@ -134,7 +134,7 @@
       color: colors.$blue-state;
     }
   }
-  
+
   & input:checked ~ &__checkmark::after {
     display: block;
   }
