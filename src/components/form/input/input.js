@@ -5,8 +5,8 @@ function OsgInput() {
     return;
   }
 
-  const btnUp = document.querySelector('.osg-input__counter-nav-button--up');
-  const btnDown = document.querySelector('.osg-input__counter-nav-button--down');
+  const btnUp = document.querySelector('.osg-input__counter-button--up');
+  const btnDown = document.querySelector('.osg-input__counter-button--down');
   const countMin = countInput.min;
   const countMax = countInput.max;
 
