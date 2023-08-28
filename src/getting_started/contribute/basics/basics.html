@@ -15,12 +15,12 @@
       <h3>Technical</h3>
       <p>
         <strong>Understanding Oslo Designsystem repositories</strong><br />
-        Oslo Designsystem consists of two repositories. The <code class="ods-code" class="ods-code">styleguide</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="ods-code" class="ods-code">styleguide_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the former.
+        Oslo Designsystem consists of two repositories. The <code class="ods-code" class="ods-code">ukeweb_designsystem</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the former.
       </p>
       <p>
-        <strong>styleguide</strong>
+        <strong>ukeweb_designsystem</strong>
         <br />
-        The <code class="ods-code" class="ods-code">styleguide</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
+        The <code class="ods-code" class="ods-code">ukeweb_designsystem</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
       </p>
       <p>
         The framework has a rather simple structure.<br />
@@ -35,10 +35,10 @@
         <strong>utils</strong> hold helper scripts for mundane tasks<br />
       </p>
       <p>
-        <strong>styleguide_devtools</strong>
+        <strong>ukeweb_designsystem_devtools</strong>
         <br />
-        The <code class="ods-code" class="ods-code">styleguide_devtools</code> repository consumes the styleguide repository (just like any project would) and is the very application you now use to browse and contribute to the styleguide repository.<br /><br />Write code in <code class="ods-code" class="ods-code">styleguide</code>. View and verify in
-        <code class="ods-code" class="ods-code">styleguide_devtools</code>.
+        The <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> repository consumes the ukeweb_designsystem repository (just like any project would) and is the very application you now use to browse and contribute to the ukeweb_designsystem repository.<br /><br />Write code in <code class="ods-code" class="ods-code">ukeweb_designsystem</code>. View and verify in
+        <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code>.
       </p>
       <h4>Developing</h4>
       <p>First and foremost, study the examples provided in "Contribute". Both visually and code. They are created to provide a reference for best practice and is what your code will be checked against in code reviews.</p>
@@ -83,7 +83,7 @@
       <p>Make sure to add javascript and scss files to the corresponding _index files in the root folders or they won't be included.</p>
       <p>
         <strong>Things with special meaning</strong><br />
-        <code class="ods-code" class="ods-code">styleguide_devtools</code> will interpret the following cases in <code class="ods-code" class="ods-code">styleguide</code>:<br />
+        <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> will interpret the following cases in <code class="ods-code" class="ods-code">ukeweb_designsystem</code>:<br />
         <strong>_</strong> in folder names will end up as a space when viewed in devtools<br />
         <strong>ods-devtools-code</strong> applied as a class to an html element will make the innerHTML of the element visible in a "View code" box. Adding a child element with the class <code class="ods-code" class="ods-code">ods-devtools-code__box</code> will instead only show the innerHTML of this element in "View code." Giving more options in terms of layout. This class also supports colors
         by adding a modifier class <code class="ods-code" class="ods-code">ods-devtools-code__box--{palette color}</code>. A child element of the <code class="ods-code" class="ods-code">ods-devtools-code__box</code> with the class <code class="ods-code" class="ods-code">ods-devtools-code__box__code</code> will only show the innerHTML of this element in the "View code" box, further enhancing the
