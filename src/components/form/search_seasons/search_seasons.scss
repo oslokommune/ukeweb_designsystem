@@ -8,317 +8,317 @@
 @use "sass:map";
 
 .ods-search-seasons {
+  display: flex;
+  font-size: 0;
+
+  &__main {
+    background-color: colors.$yellow;
+    color: colors.$blue-dark;
+    flex: 1 0;
+    min-height: 345px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: calc(100% - units.unit-to-rem(10));
+
+    @include breakpoints.medium {
+      width: calc(100% - units.unit-to-rem(16));
+    }
+
+    @include breakpoints.large {
+      width: calc(100% - units.unit-to-rem(25));
+    }
+  }
+
+  &__image {
+    @extend %ods-margin-left-4, %ods-margin-left-8-breakpoint-medium;
+
+    display: none;
+    flex: 1 0;
+    line-height: 0;
+
+    @include breakpoints.large {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__search {
+    @extend %ods-margin-top-8;
+  }
+
+  &__input-wrapper {
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 3.5rem);
+
+    @include breakpoints.large {
+      width: calc(100% - 3.75rem);
+    }
+  }
+
+  &__input {
+    @extend %ods-padding-3;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-large;
+    @extend %ods-text--weight-light;
+
+    background-color: colors.$white;
+    border: 0.125rem solid colors.$white;
+    border-radius: 0;
+    color: colors.$blue-dark;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    appearance: none;
+
+    &:hover {
+      border: 0.125rem solid colors.$blue-state !important;
+    }
+
+    &:focus {
+      border: 0.25rem solid colors.$blue-state !important;
+      padding: calc(units.unit-to-rem(3) - 0.125rem);
+      outline: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      background: url("/node_modules/@oslokommune/oslo-designsystem/src/assets/icons/cross.svg") no-repeat;
+      background-size: contain;
+      height: 2rem;
+      margin-right: -5px;
+      opacity: 0;
+      pointer-events: none;
+      width: 2rem;
+      appearance: none;
+    }
+
+    &:focus::-webkit-search-cancel-button {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &::placeholder {
+      @extend %ods-color-text-grayscale-50;
+    }
+  }
+
+  &__button {
+    background-color: colors.$red;
+    border: 0.125rem solid colors.$red;
+    border-radius: 50%;
+    box-sizing: content-box;
+    color: colors.$blue-dark;
+    cursor: pointer;
+    display: inline-block;
     font-size: 0;
+    font-family: inherit;
+    height: units.unit-to-rem(13);
+    min-width: units.unit-to-rem(13);
+    padding: 0;
+    vertical-align: top;
 
-    &__main {
-        background-color: colors.$yellow;
+    @include breakpoints.large {
+      height: units.unit-to-rem(14);
+      min-width: units.unit-to-rem(14);
+    }
+
+    &::after {
+      @extend %ods-text--size-delta;
+
+      content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: states.$hover !important;
+      border: 0.125rem solid states.$hover !important;
+      color: states.$hover-text !important;
+    }
+  }
+
+  &__container {
+    @extend %ods-color-text-blue-dark;
+
+    background-color: colors.$white;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
+    left: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    z-index: 99999;
+  }
+
+  &__no-result {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-4;
+
+    display: block;
+  }
+
+  &__missing-input {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-text--align-center;
+    @extend %ods-padding-horizontal-4, %ods-padding-vertical-3;
+
+    display: block;
+  }
+
+  &__suggestion {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-horizontal-4;
+
+    display: block;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: underline;
+    }
+  }
+
+  &__dropdown {
+    &--compact {
+      @extend %ods-padding-vertical-4;
+
+      & .ods-search-seasons__suggestion {
+        @extend %ods-padding-vertical-1;
+      }
+    }
+  }
+
+  &__item {
+    &--footer {
+      @extend %ods-text--size-lima;
+      @extend %ods-text--weight-regular;
+      @extend %ods-padding-horizontal-4;
+
+      &-first {
+        @extend %ods-padding-top-4;
+      }
+
+      &-last {
+        @extend %ods-padding-bottom-4;
+      }
+    }
+  }
+
+  &__heading {
+    @extend %ods-text--size-juliett;
+    @extend %ods-text--weight-medium;
+  }
+
+  &__link {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-4;
+
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &--focus {
+      background-color: colors.$gray-light;
+      color: states.$hover;
+      text-decoration: none;
+    }
+
+    &--focus .ods-search-seasons__heading,
+    &:hover .ods-search-seasons__heading,
+    &:focus .ods-search-seasons__heading {
+      text-decoration: underline;
+    }
+
+    &--divider {
+      border-bottom: 0.0625rem solid colors.$gray;
+    }
+  }
+
+
+  &__text {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
+    @extend %ods-margin-top-1;
+  }
+
+  &--red {
+    & .ods-search-seasons__main {
+      background-color: colors.$red;
+    }
+
+    & .ods-search-seasons__button {
+      background-color: colors.$yellow;
+      border-color: colors.$yellow;
+      color: colors.$blue-dark;
+    }
+  }
+
+  & .ods-search-seasons__input {
+    &:hover,
+    &:focus {
+      border-color: states.$hover-light !important;
+    }
+
+    &--blue-dark {
+      & .ods-search-seasons__main {
+        background-color: colors.$blue-dark;
+        color: colors.$white;
+      }
+
+      & .ods-search-seasons__button {
+        background-color: colors.$blue-light;
+        border-color: colors.$blue-light;
         color: colors.$blue-dark;
-        flex: 1 0;
-        min-height: 345px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
-    &__content {
-        width: calc(100% - units.unit-to-rem(10));
-
-        @include breakpoints.medium {
-            width: calc(100% - units.unit-to-rem(16));
-        }
-
-        @include breakpoints.large {
-            width: calc(100% - units.unit-to-rem(25));
-        }
-    }
-
-    &__image {
-        @extend %ods-margin-left-4, %ods-margin-left-8-breakpoint-medium;
-
-        display: none;
-        flex: 1 0;
-        line-height: 0;
-
-        @include breakpoints.large {
-            display: block;
-        }
-
-        img {
-            object-fit: cover;
-            width: 100%;
-        }
-    }
-
-    &__search {
-        @extend %ods-margin-top-8;
-    }
-
-    &__input-wrapper {
-        display: inline-block;
-        position: relative;
-        width: calc(100% - 3.5rem);
-
-        @include breakpoints.large {
-            width: calc(100% - 3.75rem);
-        }
-    }
-
-    &__input {
-        @extend %ods-padding-3;
-        @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-large;
-        @extend %ods-text--weight-light;
-
-        background-color: colors.$white;
-        border: 0.125rem solid colors.$white;
-        border-radius: 0;
-        color: colors.$blue-dark;
-        font-family: inherit;
-        outline: none;
-        width: 100%;
-        appearance: none;
-
-        &:hover {
-            border: 0.125rem solid colors.$blue-state !important;
-        }
-
-        &:focus {
-            border: 0.25rem solid colors.$blue-state !important;
-            padding: calc(units.unit-to-rem(3) - 0.125rem);
-            outline: none;
-        }
-
-        &::-webkit-search-cancel-button {
-            background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
-            background-size: contain;
-            height: 2rem;
-            margin-right: -5px;
-            opacity: 0;
-            pointer-events: none;
-            width: 2rem;
-            appearance: none;
-        }
-
-        &:focus::-webkit-search-cancel-button {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        &::placeholder {
-            @extend %ods-color-text-grayscale-50;
-        }
-    }
-
-    &__button {
-        background-color: colors.$red;
-        border: 0.125rem solid colors.$red;
-        border-radius: 50%;
-        box-sizing: content-box;
-        color: colors.$blue-dark;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 0;
-        font-family: inherit;
-        height: units.unit-to-rem(13);
-        min-width: units.unit-to-rem(13);
-        padding: 0;
-        vertical-align: top;
-
-        @include breakpoints.large {
-            height: units.unit-to-rem(14);
-            min-width: units.unit-to-rem(14);
-        }
-
-        &::after {
-            @extend %ods-text--size-delta;
-
-            content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
-            font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-            vertical-align: middle;
-        }
-
-        &:hover,
-        &:focus {
-            background-color: states.$hover !important;
-            border: 0.125rem solid states.$hover !important;
-            color: states.$hover-text !important;
-        }
-    }
-
-    &__container {
-        @extend %ods-color-text-blue-dark;
-
-        background-color: colors.$white;
-        box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
-        left: 0;
-        list-style: none;
-        position: absolute;
-        right: 0;
-        z-index: 99999;
-    }
-
-    &__no-result {
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-medium;
-        @extend %ods-padding-4;
-
-        display: block;
-    }
-
-    &__missing-input {
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-medium;
-        @extend %ods-text--align-center;
-        @extend %ods-padding-horizontal-4, %ods-padding-vertical-3;
-
-        display: block;
-    }
-
-    &__suggestion {
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-medium;
-        @extend %ods-padding-horizontal-4;
-
-        display: block;
-
-        &:hover,
-        &:focus,
-        &--focus {
-            background-color: colors.$gray-light;
-            color: states.$hover;
-            text-decoration: underline;
-        }
-    }
-
-    &__dropdown {
-        &--compact {
-            @extend %ods-padding-vertical-4;
-
-            & .ods-search-seasons__suggestion {
-                @extend %ods-padding-vertical-1;
-            }
-        }
-    }
-
-    &__item {
-        &--footer {
-            @extend %ods-text--size-lima;
-            @extend %ods-text--weight-regular;
-            @extend %ods-padding-horizontal-4;
-
-            &-first {
-                @extend %ods-padding-top-4;
-            }
-
-            &-last {
-                @extend %ods-padding-bottom-4;
-            }
-        }
-    }
-
-    &__heading {
-        @extend %ods-text--size-juliett;
-        @extend %ods-text--weight-medium;
-    }
-
-    &__link {
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-medium;
-        @extend %ods-padding-4;
-
-        display: block;
-        text-decoration: none;
-
-        &:hover,
-        &:focus,
-        &--focus {
-            background-color: colors.$gray-light;
-            color: states.$hover;
-            text-decoration: none;
-        }
-
-        &--focus .ods-search-seasons__heading,
-        &:hover .ods-search-seasons__heading,
-        &:focus .ods-search-seasons__heading {
-            text-decoration: underline;
-        }
-
-        &--divider {
-            border-bottom: 0.0625rem solid colors.$gray;
-        }
-    }
-
-
-    &__text {
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-light;
-        @extend %ods-margin-top-1;
-    }
-
-    &--red {
-        & .ods-search-seasons__main {
-            background-color: colors.$red;
-        }
-
-        & .ods-search-seasons__button {
-            background-color: colors.$yellow;
-            border-color: colors.$yellow;
-            color: colors.$blue-dark;
-        }
-    }
-
-    & .ods-search-seasons__input {
         &:hover,
         &:focus {
-            border-color: states.$hover-light !important;
+          background-color: states.$hover-light !important;
+          border: 0.125rem solid states.$hover-light !important;
+          color: states.$hover-light-text !important;
         }
+      }
 
-        &--blue-dark {
-            & .ods-search-seasons__main {
-                background-color: colors.$blue-dark;
-                color: colors.$white;
-            }
-
-            & .ods-search-seasons__button {
-                background-color: colors.$blue-light;
-                border-color: colors.$blue-light;
-                color: colors.$blue-dark;
-
-                &:hover,
-                &:focus {
-                    background-color: states.$hover-light !important;
-                    border: 0.125rem solid states.$hover-light !important;
-                    color: states.$hover-light-text !important;
-                }
-            }
-
-            & .ods-search-seasons__input {
-                &:hover,
-                &:focus {
-                    border-color: states.$hover-light !important;
-                }
-            }
+      & .ods-search-seasons__input {
+        &:hover,
+        &:focus {
+          border-color: states.$hover-light !important;
         }
-
-        &--green-dark {
-            & .ods-search-seasons__main {
-                background-color: colors.$green-dark;
-                color: colors.$white;
-            }
-
-            & .ods-search-seasons__button {
-                background-color: colors.$green-light;
-                border-color: colors.$green-light;
-                color: colors.$blue-dark;
-
-                &:hover,
-                &:focus {
-                    background-color: states.$hover-light !important;
-                    border: 0.125rem solid states.$hover-light !important;
-                    color: states.$hover-light-text !important;
-                }
-            }
-        }
+      }
     }
+
+    &--green-dark {
+      & .ods-search-seasons__main {
+        background-color: colors.$green-dark;
+        color: colors.$white;
+      }
+
+      & .ods-search-seasons__button {
+        background-color: colors.$green-light;
+        border-color: colors.$green-light;
+        color: colors.$blue-dark;
+
+        &:hover,
+        &:focus {
+          background-color: states.$hover-light !important;
+          border: 0.125rem solid states.$hover-light !important;
+          color: states.$hover-light-text !important;
+        }
+      }
+    }
+  }
 }

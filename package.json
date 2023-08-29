@@ -1,7 +1,7 @@
 {
-  "name": "styleguide",
+  "name": "oslo-designsystem",
   "version": "0.99.106",
-  "description": "Oslo Styleguide",
+  "description": "Oslo Designsystem",
   "main": "index.js",
   "scripts": {
     "build:icons": "npm run build:icons:minimize && run-p build:icons:svg build:icons:font",
@@ -17,11 +17,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:oslokommune/styleguide.git"
+    "url": "git+ssh://git@github.com:oslokommune/ukeweb_designsystem.git"
   },
   "author": "Utviklings- og kompetanseetaten - Oslo kommune <devnull@uke.oslo.kommune.no>",
   "license": "MIT",
-  "homepage": "https://github.com/oslokommune/styleguide#readme",
+  "homepage": "https://github.com/oslokommune/ukeweb_designsystem#readme",
   "devDependencies": {
     "eslint": "^8.44.0",
     "eslint-config-airbnb-base": "^15.0.0",
