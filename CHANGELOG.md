@@ -1,4 +1,4 @@
-# Designsystem changelog
+# Oslo Designsystem changelog
 
 All notable changes to this project will be documented in this file.
 
