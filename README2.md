@@ -10,17 +10,16 @@
 
 Welcome to `Oslo Designsystem`, a complete library for styles and components used in Oslo Kommune.
 
-<h2>📚 Content</h2>
+## 📚 Content
 
-<div style="display: flex; flex-wrap: wrap;">
-  <a href="#description" style="margin: 5px; padding: 10px; border: 2px solid #6FE9FF; border-radius: 4px; display: inline-block;">🎯 Description</a>
-  <a href="#installation" style="margin: 5px; padding: 10px; border: 2px solid #F9C66B; border-radius: 4px; display: inline-block;">🚀 Installation</a>
-  <a href="#documentation" style="margin: 5px; padding: 10px; border: 2px solid #D0BFAE; border-radius: 4px; display: inline-block;">📑 Documentation</a>
-  <a href="#usage" style="margin: 5px; padding: 10px; border: 2px solid #43F8B6; border-radius: 4px; display: inline-block;">⚡ Usage</a>
-  <a href="#contribution-guidelines" style="margin: 5px; padding: 10px; border: 2px solid #FF8274; border-radius: 4px; display: inline-block;">🤝 Contribution Guidelines</a>
-  <a href="#license" style="margin: 5px; padding: 10px; border: 2px solid #C7F6C9; border-radius: 4px; display: inline-block;">📜 License</a>
-  <a href="#contact" style="margin: 5px; padding: 10px; border: 2px solid #F8F0DD; border-radius: 4px; display: inline-block;">📬 Contact</a>
-</div>
+- **🎯 [Description](#description)**
+
+- **🚀 [Installation](#installation)**
+- **📑 [Documentation](#documentation)**
+- **⚡ [Usage](#usage)**
+- **🤝 [Contribution Guidelines](#contribution-guidelines)**
+- **📜 [License](#license)**
+- **📬 [Contact](#contact)**
 
 ## 🎯 Description
 
