@@ -7,6 +7,7 @@
 .osg-radio {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
   @extend %osg-text--weight-light;
+
   color: colors.$blue-dark;
 
   &:focus-within {
@@ -27,16 +28,9 @@
     @extend %osg-text--weight-light;
   }
 
-  &--text-align-top {
-    align-items: flex-start !important;
-
-    .osg-radio__text {
-      margin-top: -(5px);
-    }
-  }
-
   &__text {
     @extend %osg-margin-left-2;
+
     hyphens: auto;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
@@ -79,7 +73,7 @@
   &__control {
     align-items: center;
     background-color: colors.$white;
-    border: 0.15em solid currentColor;
+    border: 0.15em solid currentcolor;
     border-radius: 50%;
     display: flex;
     height: 1em;
@@ -111,9 +105,11 @@
     & input:checked + .osg-radio__control {
       background-color: colors.$blue-state;
     }
+
     .osg-radio__control {
       border-color: colors.$blue-state;
     }
+
     .osg-radio__text {
       color: colors.$blue-state;
     }
@@ -138,9 +134,11 @@
     & input:disabled:checked + .osg-radio__control {
       background-color: colors.$grayscale-40;
     }
+
     .osg-radio__control {
       border-color: colors.$grayscale-40;
     }
+
     .osg-radio__text {
       color: colors.$grayscale-40;
       text-decoration: none;

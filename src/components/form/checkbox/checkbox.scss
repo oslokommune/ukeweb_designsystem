@@ -7,6 +7,7 @@
 
 .osg-checkbox {
   @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+
   color: inherit;
   cursor: pointer;
 
@@ -16,6 +17,7 @@
 
   &__wrapper {
     @extend %osg-margin-top-1;
+
     display: inline-flex;
   }
 
@@ -42,6 +44,7 @@
 
   &__checkmark {
     @extend %osg-margin-top-1-breakpoint-medium;
+
     margin-top: 0.12em;
     position: relative;
     border: 2px solid colors.$blue-dark;
@@ -68,13 +71,15 @@
   }
 
   &__text {
+    @extend %osg-padding-left-2;
+
     border-style: hidden;
     hyphens: auto;
-    @extend %osg-padding-left-2;
   }
 
   &--error-message {
     @include mixins.error-message;
+
     background-color: colors.$red-30;
     border-left: 0.375rem solid colors.$red;
     display: flex;
