@@ -1,4 +1,4 @@
-![Oslo Designsystem Banner](./src/assets/images/oslo_logo.svg)
+![Oslo Designsystem Banner](./src/assets/images/Facebook1.jpg)
 
 # Oslo Designsystem 🎨 🧑‍🎨
 
