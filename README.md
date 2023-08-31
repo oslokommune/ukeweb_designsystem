@@ -1,12 +1,16 @@
 ![Oslo Designsystem Banner](./src/assets/images/Facebook1.jpg)
 
-# Oslo Designsystem 🎨 🧑‍🎨
+<h1 align="center">Oslo Designsystem 🎨 🧑‍🎨</h1>
+
+<div align="center">
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=rocket&label=Version)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&label=License)](https://opensource.org/licenses/MIT)
 [![JavaScript](https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=ffffff&label=JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Vue](https://img.shields.io/badge/Vue-2.x-green?style=for-the-badge&logo=vue.js&label=Vue)](https://v2.vuejs.org/)
 [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=ffffff&label=Sassy)](https://sass-lang.com/)
+
+</div>
 
 Welcome to `Oslo Designsystem`, a complete library for styles and components used in Oslo Kommune.
 
@@ -34,7 +38,7 @@ npm install @oslokommune/oslo-designsystem
 
 ## 📑 Documentation
 
-Please take a look at the [documentation](https://styleguide.oslo.kommune.no/#/getting_started-basics) if you want a complete understanding on how to use `Oslo Designsystem`
+Please take a look at the [documentation](https://designsystem.oslo.kommune.no/#/getting_started-basics) if you want a complete understanding on how to use `Oslo Designsystem`
 
 ## ⚡ Usage
 
@@ -89,7 +93,7 @@ Using other libraries could result in conflicting global styles.
 
 ## 🤝 Contribution
 
-If you would like to contribute to this project, please take a look at our [contribute](https://styleguide.oslo.kommune.no/#/getting_started-contribute-basics) page for more information
+If you would like to contribute to this project, please take a look at our [contribute](https://designsystem.oslo.kommune.no/#/getting_started-contribute-basics) page for more information
 
 ## 🆕 Releasing new versions
 
