@@ -12,9 +12,9 @@
 
 </div>
 
-Welcome to `Oslo Designsystem`, a complete library for styles and components used in Oslo Kommune.
+Welcome to `Oslo Designsystem` a complete library for styles and components used in Oslo Kommune.
 
-## 📚 Content
+## 📚 Table of Content
 
 - **🎯 [Description](#description)**
 
