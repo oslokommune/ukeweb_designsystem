@@ -13,8 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Changed spacing on list component from 4px to 8px according to Figma.
 - Changed dispatchEvent to dispatchCustomEvent and decoupled from code for re-usability
+- Changed spacing on list component from 4px to 8px according to Figma.
 
 ### Fixed
 
