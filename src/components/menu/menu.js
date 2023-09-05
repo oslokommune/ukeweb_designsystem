@@ -1,13 +1,4 @@
-/**
- * Common functions
- */
-function dispatchEvent(eventName, eventDetail, element) {
-  const event = new CustomEvent(eventName, {
-    detail: eventDetail,
-  });
-
-  element.dispatchEvent(event);
-}
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 /**
  * Menu open / close functions
@@ -34,7 +25,7 @@ function openMenu(menu) {
   menuButton.classList.add('osg-button-menu--open');
   menu.style.display = 'block';
 
-  dispatchEvent('OsgMenuOpen', { menuButton, menu }, menu);
+  dispatchCustomEvent('OsgMenuOpen', { menuButton, menu }, menu);
 }
 
 function closeMenu(menu) {
@@ -43,7 +34,7 @@ function closeMenu(menu) {
   menuButton.classList.remove('osg-button-menu--open');
   menu.style.display = 'none';
 
-  dispatchEvent('OsgMenuClose', { menuButton, menu }, menu);
+  dispatchCustomEvent('OsgMenuClose', { menuButton, menu }, menu);
 }
 
 function handleToggleMenu(e) {
@@ -91,7 +82,7 @@ function handleToggleHeading(e) {
     }
   }
 
-  dispatchEvent('OsgHeadingToggle', { target: e.target, expanded: e.target.classList.contains('osg-navbar-menu__list-animate--open') }, e.target);
+  dispatchCustomEvent('OsgHeadingToggle', { target: e.target, expanded: e.target.classList.contains('osg-navbar-menu__list-animate--open') }, e.target);
 }
 
 /**

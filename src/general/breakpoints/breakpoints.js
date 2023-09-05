@@ -1,3 +1,5 @@
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+
 let previousBreakpoint = null;
 const OsgBreakpoints = {
   init() {
@@ -10,17 +12,16 @@ const OsgBreakpoints = {
   },
 
   emitWindowSizeIfChanged() {
-    const data = {
-      detail: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-        breakpoint: OsgBreakpoints.getBreakpoint(),
-      },
+    const currentBreakpoint = OsgBreakpoints.getBreakpoint();
+    const eventData = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      breakpoint: currentBreakpoint,
     };
 
-    if (data.detail.breakpoint !== previousBreakpoint) {
-      previousBreakpoint = data.detail.breakpoint;
-      window.dispatchEvent(new CustomEvent('OsgBreakpointChange', data));
+    if (currentBreakpoint !== previousBreakpoint) {
+      previousBreakpoint = currentBreakpoint;
+      dispatchCustomEvent('OsgBreakPointChange', eventData, window);
     }
   },
 
