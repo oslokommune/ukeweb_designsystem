@@ -79,10 +79,10 @@ Browse the Designsystem for components and add the code to your project.
 
 ### 5. Run the Build
 
-You can now
+You can now run
 
 ```bash
-run npx webpack
+npx webpack
 ```
 
 or add a script in your `package.json` to run Webpack.
@@ -135,6 +135,8 @@ Oslo Designsystem is distributed under a MIT-license for open source code
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&label=Open%20Source)](https://opensource.org/licenses/MIT)
 
 ## 📬 Contact
+
+Slack: beepbeepboopboop
 
 devnull@uke.oslo.kommune.no
 
