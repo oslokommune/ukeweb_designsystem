@@ -1,5 +1,5 @@
 {
-  "name": "oslo-designsystem",
+  "name": "@oslokommune/oslo-designsystem",
   "version": "0.99.106",
   "description": "Oslo Designsystem",
   "main": "index.js",
