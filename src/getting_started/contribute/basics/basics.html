@@ -42,8 +42,10 @@
       </p>
       <h4>Developing</h4>
       <p>First and foremost, study the examples provided in "Contribute". Both visually and code. They are created to provide a reference for best practice and is what your code will be checked against in code reviews.</p>
+      <p>As of the 1.0 release of the Designsystem we are using Javascript ES6 (ECMAScript2015) and Vue 2.</p>
+      <p>Please follow the <a href="https://v2.vuejs.org/v2/style-guide/">Vue styleguide</a> to avoid errors, bikeshedding and anti-patterns. The vue devtools are currently not working properly because of iframe.</p>
 
-      <h5>Styling</h5>
+      <h4>Styling</h4>
       <p>The stylguide adheres to CSS 3, and uses SCSS for structure. Do not use SASS.</p>
       <p>
         <strong>Spacing</strong><br />
@@ -94,8 +96,9 @@
       </p>
       <h4>Accessibility</h4>
       <p>All components are WCAG 2.1 AA compliant and follow the guidelines from <a href="https://www.uutilsynet.no/fremtidig-regelverk/wcag-21-standarden/140">Digdir</a>.</p>
+      <p>Custom components without native HTML equivalents are not inherently accessible and often require ARIA attributes to convey the necessary semantic information. Consult the <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA guidelines</a> to determine if your component needs ARIA enhancements.</p>
       <p>All compontents are tested as individal patterns, but when you use one component you must test the whole page to ensure the component is accessible when interacting with other elements of the page.</p>
-      <h5>Checklist for development</h5>
+      <h4>Checklist for development</h4>
       <ul>
         <li>Keyboard navigation with visual focus and correct order.</li>
         <li>Use alternative text in images and an empty one when the image is not relevant.</li>
@@ -106,6 +109,7 @@
         <li>Ensure role, value and name to all elements so they are understand by the assistive technology.</li>
         <li>Define a language, for example <code class="osg-code">&lt;html lang="en"&gt;</code></li>
         <li>Use semantic structure and heading.</li>
+        <li>Follow the formatting rules provided by the linter for both Javascript and SCSS</li>
         <li>Use skip link and landmarks.</li>
       </ul>
       <h4>Testing</h4>
