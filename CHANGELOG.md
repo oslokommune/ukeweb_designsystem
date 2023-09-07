@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added stylelint and eslint. Refactors all code according to rulesets.
+- Added a new variant of the yellow color, yellow-60.
 
 ### Changed
 
