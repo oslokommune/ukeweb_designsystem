@@ -8,7 +8,7 @@
     "build:icons:minimize": "svgo src/assets/icons/*.svg",
     "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
     "build:icons:font": "npm run build:icons:webfont",
-    "build:icons:webfont": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/utils/_icons.scss.njk\" --dest-template \"src/system/\"",
+    "build:icons:webfont": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/utils/_icon-map.scss.njk\" --dest-template \"src/system/\"",
     "lint": "./node_modules/.bin/eslint --ext .js,.vue ./src && ./node_modules/.bin/stylelint './src/**/*.scss'",
     "eslint": "./node_modules/.bin/eslint --ext .js,.vue ./src",
     "stylelint": "./node_modules/.bin/stylelint './src/**/*.scss'",
