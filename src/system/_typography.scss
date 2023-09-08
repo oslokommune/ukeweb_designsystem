@@ -76,19 +76,19 @@ $sizes: (
   }
 }
 @each $name, $values in $sizes {
-  %osg-text--size-#{$name} {
+  %ods-text--size-#{$name} {
     @include size($name);
   }
 }
 @each $name, $values in $sizes {
-  %osg-text--size-#{$name}-breakpoint-medium {
+  %ods-text--size-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       @include size($name);
     }
   }
 }
 @each $name, $values in $sizes {
-  %osg-text--size-#{$name}-breakpoint-large {
+  %ods-text--size-#{$name}-breakpoint-large {
     @include breakpoints.large {
       @include size($name);
     }
@@ -110,19 +110,19 @@ $weights: (
   }
 }
 @each $name, $values in $weights {
-  %osg-text--weight-#{$name} {
+  %ods-text--weight-#{$name} {
     @include weight($name);
   }
 }
 @each $name, $values in $weights {
-  %osg-text--weight-#{$name}-breakpoint-medium {
+  %ods-text--weight-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       @include weight($name);
     }
   }
 }
 @each $name, $values in $weights {
-  %osg-text--weight-#{$name}-breakpoint-large {
+  %ods-text--weight-#{$name}-breakpoint-large {
     @include breakpoints.large {
       @include weight($name);
     }
@@ -141,19 +141,19 @@ $styles: (
   }
 }
 @each $name, $values in $styles {
-  %osg-text--style-#{$name} {
+  %ods-text--style-#{$name} {
     @include style($name);
   }
 }
 @each $name, $values in $styles {
-  %osg-text--style-#{$name}-breakpoint-medium {
+  %ods-text--style-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       @include style($name);
     }
   }
 }
 @each $name, $values in $styles {
-  %osg-text--style-#{$name}-breakpoint-large {
+  %ods-text--style-#{$name}-breakpoint-large {
     @include breakpoints.large {
       @include style($name);
     }
@@ -174,19 +174,19 @@ $alignments: (
   }
 }
 @each $name, $values in $alignments {
-  %osg-text--align-#{$name} {
+  %ods-text--align-#{$name} {
     @include align($name);
   }
 }
 @each $name, $values in $alignments {
-  %osg-text--align-#{$name}-breakpoint-medium {
+  %ods-text--align-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       @include align($name);
     }
   }
 }
 @each $name, $values in $alignments {
-  %osg-text--align-#{$name}-breakpoint-large {
+  %ods-text--align-#{$name}-breakpoint-large {
     @include breakpoints.large {
       @include align($name);
     }

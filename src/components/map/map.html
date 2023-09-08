@@ -1,124 +1,124 @@
 <!-- Overview mode -->
-<div class="osg-devtools-nondevmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <h3><button class="osg-collapsible-trigger osg-collapsible-trigger--block" aria-expanded="false" aria-controls="map-technical-info">Show technical map info</button></h3>
-      <div id="map-technical-info" class="osg-collapsible-content osg-collapsible-content--block osg-collapsible-content--collapsed osg-collapsible-content--ease">
-        <div class="osg-infobox osg-infobox--yellow">
-          <h1 class="osg-infobox__heading">Technical details on the use of maps</h1>
-          <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">API-keys</h2>
-          <p>The API-key that is used on this page is just for use in the styleguide, and is limited to the relevant domains.</p>
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-collapsible-trigger ods-collapsible-trigger--block" aria-expanded="false" aria-controls="map-technical-info">Show technical map info</button></h3>
+      <div id="map-technical-info" class="ods-collapsible-content ods-collapsible-content--block ods-collapsible-content--collapsed ods-collapsible-content--ease">
+        <div class="ods-infobox ods-infobox--yellow">
+          <h1 class="ods-infobox__heading">Technical details on the use of maps</h1>
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">API-keys</h2>
+          <p>The API-key that is used on this page is just for use in the Designsystem, and is limited to the relevant domains.</p>
           <p>Your project you need to provide your own API-key from Maptiler when using the Vue component or using the static map API.</p>
           <p>If you do not change the key, you will get 403 Forbidden.</p>
           </p>
-          <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">GeoJSON suported features</h2>
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">GeoJSON suported features</h2>
           <p>
             The map supports the following GeoJSON features:<br />
             FeatureCollection, with the following feature types: Polygon, LineString and Point.</p>
           <p>It does not support GeometryCollection or the Multi*-variants of the feature types.</p>
 
-          <h2 class="osg-devtools-text-preset-3 osg-margin-top-3" >Map data, properties, state and reactivity</h2>
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Providing data</h3>
-          <p>For simple maps, with one or a few point features, you can provide an array of javascript objects to the <code class="osg-code">points</code> property.</p>
-          <p>Each object must contain a <code class="osg-code">longitude</code> (float) and <code class="osg-code">latitude</code> (float), optionally <code class="osg-code">openPopup</code> (bool) and <code class="osg-code">popupContent</code> (string / HTML).</p>
-          <p>For more complex maps, or maps that also needs to show features of the type polygons and/or line, you can provide data with the <code class="osg-code">geoJson</code> property.</p>
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3" >Map data, properties, state and reactivity</h2>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Providing data</h3>
+          <p>For simple maps, with one or a few point features, you can provide an array of javascript objects to the <code class="ods-code">points</code> property.</p>
+          <p>Each object must contain a <code class="ods-code">longitude</code> (float) and <code class="ods-code">latitude</code> (float), optionally <code class="ods-code">openPopup</code> (bool) and <code class="ods-code">popupContent</code> (string / HTML).</p>
+          <p>For more complex maps, or maps that also needs to show features of the type polygons and/or line, you can provide data with the <code class="ods-code">geoJson</code> property.</p>
           <p>The GeoJSON can be provided as an URL or a Javascript object.</p>
 
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">State</h3>
-          <p>The map <code class="osg-code">state</code> property has the following options:</p>
-          <ul class="osg-unordered-list">
-            <li class="osg-unordered-list__item">longitude and latitude (center of map, roughly in the center of Oslo)</li>
-            <li class="osg-unordered-list__item">zoom (zoom level, 11)</li>
-            <li class="osg-unordered-list__item">showPopups (bool, true)</li>
-            <li class="osg-unordered-list__item">autoFitToBounds (bool, true), see details below.</li>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">State</h3>
+          <p>The map <code class="ods-code">state</code> property has the following options:</p>
+          <ul class="ods-unordered-list">
+            <li class="ods-unordered-list__item">longitude and latitude (center of map, roughly in the center of Oslo)</li>
+            <li class="ods-unordered-list__item">zoom (zoom level, 11)</li>
+            <li class="ods-unordered-list__item">showPopups (bool, true)</li>
+            <li class="ods-unordered-list__item">autoFitToBounds (bool, true), see details below.</li>
           </ul>
           <p>If you want to override any of these, you should provide a complete state (all options)</p>
 
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Fit map to bounds of GeoJSON-data</h3>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Fit map to bounds of GeoJSON-data</h3>
           <p>The map automatically sets a center point and zooms to fit the maximum bounds of the given GeoJSON-data</p>
           <p>If a new GeoJSON dataset is provided after load, the map will automatically pan and zoom to the bounds of the new data.</p>
-          <p>This behaviour overrides the center point and zoom level in <code class="osg-code">state</code>.</p>
-          <p>To disable, set the property <code class="osg-code">autoFitToBounds</code> in the <code class="osg-code">state</code> to <code class="osg-code">false</code>.</p>
-          <p>This behaviour only works then using <code class="osg-code">geoJson</code> as a data source.</p>
+          <p>This behaviour overrides the center point and zoom level in <code class="ods-code">state</code>.</p>
+          <p>To disable, set the property <code class="ods-code">autoFitToBounds</code> in the <code class="ods-code">state</code> to <code class="ods-code">false</code>.</p>
+          <p>This behaviour only works then using <code class="ods-code">geoJson</code> as a data source.</p>
 
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Clustering</h3>
-          <p>To have features of the type "Point" group together, you can set the <code class="osg-code">clusteredPoints</code>property to true.</p>
-          <p>This only works then using <code class="osg-code">geoJson</code> as a data source.</p>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Clustering</h3>
+          <p>To have features of the type "Point" group together, you can set the <code class="ods-code">clusteredPoints</code>property to true.</p>
+          <p>This only works then using <code class="ods-code">geoJson</code> as a data source.</p>
 
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Reactivity and load later</h3>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Reactivity and load later</h3>
           <p>You can change the data or state at any time, or load the map on demand. Please check the javascript and developer tabs for examples.</p>
 
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Ratio (width / height)</h3>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Ratio (width / height)</h3>
           <p>The map will take 100% width.</p>
-          <p>To control the height of the map, you can provide any class/classes from the ratio helper (see: general -> helpers -> ratio) to the <code class="osg-code">ratio</code> property.</p>
+          <p>To control the height of the map, you can provide any class/classes from the ratio helper (see: general -> helpers -> ratio) to the <code class="ods-code">ratio</code> property.</p>
           <p>The default ratio is 16:9</p>
 
-          <h2 class="osg-devtools-text-preset-4 osg-margin-top-3">Resize</h2>
-          <p>By calling <code class="osg-code">resize</code> on the map instance the map will recalculate and take the available space of the container.</p>
+          <h2 class="ods-devtools-text-preset-4 ods-margin-top-3">Resize</h2>
+          <p>By calling <code class="ods-code">resize</code> on the map instance the map will recalculate and take the available space of the container.</p>
 
-          <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">Popups</h2>
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">Popups</h2>
           <p>Popups appear on click on a feature if the following conditions are met:</p>
-            <ul class="osg-unordered-list">
-              <li class="osg-unordered-list__item"><code class="osg-code">showPopups</code> is true, this is the default but can be set to false by overriding the property <code class="osg-code">state</code>.</li>
-              <li class="osg-unordered-list__item">When using <code class="osg-code">geoJson</code>: the feature has the property <code class="osg-code">popupContent</code>.</li>
-              <li class="osg-unordered-list__item">When using <code class="osg-code">points</code>: a key with the name <code class="osg-code">popupContent</code> added to the array (per point).</li>
-              <li class="osg-unordered-list__item">There is actually a string with data/HTML in the key / property.</li>
+            <ul class="ods-unordered-list">
+              <li class="ods-unordered-list__item"><code class="ods-code">showPopups</code> is true, this is the default but can be set to false by overriding the property <code class="ods-code">state</code>.</li>
+              <li class="ods-unordered-list__item">When using <code class="ods-code">geoJson</code>: the feature has the property <code class="ods-code">popupContent</code>.</li>
+              <li class="ods-unordered-list__item">When using <code class="ods-code">points</code>: a key with the name <code class="ods-code">popupContent</code> added to the array (per point).</li>
+              <li class="ods-unordered-list__item">There is actually a string with data/HTML in the key / property.</li>
             </ul>
           <br />
           <p>Popups appear after load if the following conditions are met:</p>
-          <ul class="osg-unordered-list">
-            <li class="osg-unordered-list__item">All of the conditions for on click above are met.</li>
-            <li class="osg-unordered-list__item">When using <code class="osg-code">geoJson</code>: the feature is a "Point" and has the property <code class="osg-code">openPopup</code>, with a value of <code class="osg-code">true</code>.</li>
-            <li class="osg-unordered-list__item">When using <code class="osg-code">points</code>: <code class="osg-code">openPopup</code> is added as a key to the array (per point), with a value of <code class="osg-code">true</code>.</li>
-            <li class="osg-unordered-list__item"><code class="osg-code">clusteredPoints</code> is false.</li>
-            <li class="osg-unordered-list__item">Note: you should limit the number of automatically opened popups to 1 or 2.</li>
+          <ul class="ods-unordered-list">
+            <li class="ods-unordered-list__item">All of the conditions for on click above are met.</li>
+            <li class="ods-unordered-list__item">When using <code class="ods-code">geoJson</code>: the feature is a "Point" and has the property <code class="ods-code">openPopup</code>, with a value of <code class="ods-code">true</code>.</li>
+            <li class="ods-unordered-list__item">When using <code class="ods-code">points</code>: <code class="ods-code">openPopup</code> is added as a key to the array (per point), with a value of <code class="ods-code">true</code>.</li>
+            <li class="ods-unordered-list__item"><code class="ods-code">clusteredPoints</code> is false.</li>
+            <li class="ods-unordered-list__item">Note: you should limit the number of automatically opened popups to 1 or 2.</li>
           </ul>
           <br />
-          <h3 class="osg-devtools-text-preset-4 osg-margin-top-3">Popup event system</h3>
+          <h3 class="ods-devtools-text-preset-4 ods-margin-top-3">Popup event system</h3>
           <p>The map will fire events on the window object when opening and/or closing a popup if the following conditions are met:</p>
-          <ul class="osg-unordered-list">
-            <li class="osg-unordered-list__item">You are using <code class="osg-code">geoJson</code> as the data source.</li>
-            <li class="osg-unordered-list__item">On popup opened - the feature has the property: <code class="osg-code">popupEvent</code> with a string value (name).</li>
-            <li class="osg-unordered-list__item">On popup closed - the feature has the property: <code class="osg-code">popdownEvent</code> with a string value (name).</li>
+          <ul class="ods-unordered-list">
+            <li class="ods-unordered-list__item">You are using <code class="ods-code">geoJson</code> as the data source.</li>
+            <li class="ods-unordered-list__item">On popup opened - the feature has the property: <code class="ods-code">popupEvent</code> with a string value (name).</li>
+            <li class="ods-unordered-list__item">On popup closed - the feature has the property: <code class="ods-code">popdownEvent</code> with a string value (name).</li>
           </ul>
           <br />
-          <p>You can add a custom payload to the fired events by adding the property <code class="osg-code">popupEventData</code> to the feature.</p>
-          <p>The payload can be a Javascript object or a valid JSON-string that will be parsed. Default value is <code class="osg-code">null</code></p>
+          <p>You can add a custom payload to the fired events by adding the property <code class="ods-code">popupEventData</code> to the feature.</p>
+          <p>The payload can be a Javascript object or a valid JSON-string that will be parsed. Default value is <code class="ods-code">null</code></p>
           <br />
           <p>In your project you can listen for the fired events like this:</p>
-          <code class="osg-code osg-code--block osg-code--multi-line">
+          <code class="ods-code ods-code--block ods-code--multi-line">
               window.addEventListener('eventNameFromPopupEvent', (event) => {
                 const payload = event.detail.data;
                 doMagic(payload);
               });
           </code>
-          <h2 class="osg-devtools-text-preset-3 osg-margin-top-3">Highlight a polygon</h2>
-          <p>If you need to highlight a polygon, add the property <code class="osg-code">highlight</code> with a value of <code class="osg-code">true</code> to the polygon.</p>
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">Highlight a polygon</h2>
+          <p>If you need to highlight a polygon, add the property <code class="ods-code">highlight</code> with a value of <code class="ods-code">true</code> to the polygon.</p>
           <p>It will get another fill and border colour than normal polygons.</p>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Single marker with automatic popup and ratio for different breakpoints</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-map" id="osg-map">
-          <osg-map ref="osgMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Single marker with automatic popup and ratio for different breakpoints</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-map" id="ods-map">
+          <ods-map ref="odsMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Markers with clustering</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-map" id="osg-map2">
-          <osg-map ref="osgMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, autoFitToBounds: true, showPopups: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson" :clustered-points="true" />
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Markers with clustering</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-map" id="ods-map2">
+          <ods-map ref="odsMap2" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, autoFitToBounds: true, showPopups: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson" :clustered-points="true" />
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Various features, with highlighted polygon</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-map" id="osg-map3">
-          <osg-map ref="osgMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson" />
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Various features, with highlighted polygon</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-map" id="ods-map3">
+          <ods-map ref="odsMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson" />
         </div>
       </div>
     </div>
@@ -126,67 +126,67 @@
 </div>
 
 <!-- Developer mode -->
-<div class="osg-devtools-devmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Single marker with automatic popup</h2>
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Single marker with automatic popup</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map4">
-        <osg-map ref="osgMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" v-on:resize="resize" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map4">
+        <ods-map ref="odsMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" v-on:resize="resize" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Markers with clustering</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Markers with clustering</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map5">
-        <osg-map ref="osgMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson" :clustered-points="true" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map5">
+        <ods-map ref="odsMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson" :clustered-points="true" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Various features, with highlighted polygon</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Various features, with highlighted polygon</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map6">
-        <osg-map ref="osgMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map6">
+        <ods-map ref="odsMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Reactivity points</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Reactivity points</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map7">
-        <osg-map ref="osgMap7" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="points" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map7">
+        <ods-map ref="odsMap7" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="points" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Reactivity geoJson</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Reactivity geoJson</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map8">
-        <osg-map ref="osgMap8" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJson" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map8">
+        <ods-map ref="odsMap8" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJson" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Reactivity state</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Reactivity state</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map9">
-        <osg-map ref="osgMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map9">
+        <ods-map ref="odsMap9" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Load map later</h2>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Load map later</h2>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-map" id="osg-map10">
-        <label class="osg-checkbox">
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map10">
+        <label class="ods-checkbox">
           <input type="checkbox" v-model="loadMap" />
-          <span class="osg-checkbox__checkmark"></span>
-          <span class="osg-checkbox__text">Load map</span>
+          <span class="ods-checkbox__checkmark"></span>
+          <span class="ods-checkbox__text">Load map</span>
         </label>
-        <osg-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="osgMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="osg-ratio-1-1 osg-ratio-21-9-breakpoint-medium" />
+        <ods-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
   </div>

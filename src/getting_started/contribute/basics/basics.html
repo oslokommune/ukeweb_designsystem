@@ -1,26 +1,27 @@
-<div class="osg-grid">
-  <div class="osg-grid__column--8">
-    <div class="osg-content">
-      <p>Contributions to Oslo style guide should be fun and painless. However, an understanding of how it's built and what rules to follow is needed to maintain a high quality product.</p>
+<div class="ods-grid">
+  <div class="ods-grid__column--8">
+    <div class="ods-content">
+      <p>Contributions to Oslo Designsystem should be fun and painless. However, an understanding of how it's built and what rules to follow is needed to maintain a high quality product.</p>
       <h3>Concepts</h3>
-      <p>Oslo style guide is built and maintained to provide a set of styles and components commonly used in oslo.kommune.no and related projects. It is not meant to solve all digital use-cases in Oslo kommune.</p>
+      <p>Oslo Designsystem is built and maintained to provide a set of styles and components commonly used in oslo.kommune.no and related projects. It is not meant to solve all digital use-cases in Oslo kommune.</p>
       <p>
-        <strong>Should "this" be in Oslo style guide?</strong><br />
-        If "this" qualifies as a component, is approved by a maintaining designer of Oslo style guide and is common enough for use in multiple projects the answer is yes.
+        <strong>Should "this" be in Oslo Designsystem?</strong><br />
+        If "this" qualifies as a component, is approved by a maintaining designer of Oslo Designsystem and is common enough for use in multiple projects the answer is yes.
       </p>
       <p>
         <strong>How do we define a component?</strong><br />
-        A component is a selection of other components, html elements and/or styles put together following a specific set of rules as a group. Each component is <strong>independent</strong> and must not inherit from other components. However, they may use common styles provided by Oslo style guide.
+        A component is a selection of other components, html elements and/or styles put together following a specific set of rules as a group. Each component is <strong>independent</strong> and must not inherit from other components. However, they may use common styles provided by Oslo Designsystem.
       </p>
       <h3>Technical</h3>
       <p>
-        <strong>Understanding Oslo style guide repositories</strong><br />
-        Oslo style guide consists of two repositories. The <code class="osg-code" class="osg-code">styleguide</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="osg-code" class="osg-code">styleguide_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the former.
+        <strong>Understanding Oslo Designsystem repositories</strong><br />
+        Oslo Designsystem consists of two repositories. The <code class="ods-code" class="ods-code">ukeweb_designsystem</code> repository, which follows <a href="https://semver.org" target="_blank">semver.org</a>, and the <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> repository. Each major version of the latter will work against the corresponding major version of the
+        former.
       </p>
       <p>
-        <strong>styleguide</strong>
+        <strong>ukeweb_designsystem</strong>
         <br />
-        The <code class="osg-code" class="osg-code">styleguide</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
+        The <code class="ods-code" class="ods-code">ukeweb_designsystem</code> repository consists of raw files. Fonts, icons, css, js, vue, html and json. This is what is "consumed" by projects.
       </p>
       <p>
         The framework has a rather simple structure.<br />
@@ -29,16 +30,16 @@
         <strong>components</strong> has all of the components<br />
         <strong>general</strong> generates css classes and its documentation which can be used directly in html<br />
         <strong>getting_started</strong> documents how to consume and how to contribute<br />
-        <strong>packages</strong> contains combinations of style guide which lets you consume it in different ways<br />
+        <strong>packages</strong> contains combinations of Designsystem which lets you consume it in different ways<br />
         <strong>pages</strong> hold examples of how a selection of components can make a page<br />
         <strong>system</strong> hold the core of the scss framework. It does not generate css by itself but is rather consumed by components which in turn generate css<br />
         <strong>utils</strong> hold helper scripts for mundane tasks<br />
       </p>
       <p>
-        <strong>styleguide_devtools</strong>
+        <strong>ukeweb_designsystem_devtools</strong>
         <br />
-        The <code class="osg-code" class="osg-code">styleguide_devtools</code> repository consumes the styleguide repository (just like any project would) and is the very application you now use to browse and contribute to the styleguide repository.<br /><br />Write code in <code class="osg-code" class="osg-code">styleguide</code>. View and verify in
-        <code class="osg-code" class="osg-code">styleguide_devtools</code>.
+        The <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> repository consumes the ukeweb_designsystem repository (just like any project would) and is the very application you now use to browse and contribute to the ukeweb_designsystem repository.<br /><br />Write code in <code class="ods-code" class="ods-code">ukeweb_designsystem</code>. View and verify in
+        <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code>.
       </p>
       <h4>Developing</h4>
       <p>First and foremost, study the examples provided in "Contribute". Both visually and code. They are created to provide a reference for best practice and is what your code will be checked against in code reviews.</p>
@@ -69,7 +70,7 @@
       </p>
       <p>
         <strong>Use of @extend / @use</strong><br />
-        You must @extend or @use from <code class="osg-code">system</code> if values are available there.
+        You must @extend or @use from <code class="ods-code">system</code> if values are available there.
       </p>
       <h5>General rules</h5>
       <p>
@@ -85,14 +86,14 @@
       <p>Make sure to add javascript and scss files to the corresponding _index files in the root folders or they won't be included.</p>
       <p>
         <strong>Things with special meaning</strong><br />
-        <code class="osg-code" class="osg-code">styleguide_devtools</code> will interpret the following cases in <code class="osg-code" class="osg-code">styleguide</code>:<br />
+        <code class="ods-code" class="ods-code">ukeweb_designsystem_devtools</code> will interpret the following cases in <code class="ods-code" class="ods-code">ukeweb_designsystem</code>:<br />
         <strong>_</strong> in folder names will end up as a space when viewed in devtools<br />
-        <strong>osg-devtools-code</strong> applied as a class to an html element will make the innerHTML of the element visible in a "View code" box. Adding a child element with the class <code class="osg-code" class="osg-code">osg-devtools-code__box</code> will instead only show the innerHTML of this element in "View code." Giving more options in terms of layout. This class also supports colors
-        by adding a modifier class <code class="osg-code" class="osg-code">osg-devtools-code__box--{palette color}</code>. A child element of the <code class="osg-code" class="osg-code">osg-devtools-code__box</code> with the class <code class="osg-code" class="osg-code">osg-devtools-code__box__code</code> will only show the innerHTML of this element in the "View code" box, further enhancing the
+        <strong>ods-devtools-code</strong> applied as a class to an html element will make the innerHTML of the element visible in a "View code" box. Adding a child element with the class <code class="ods-code" class="ods-code">ods-devtools-code__box</code> will instead only show the innerHTML of this element in "View code." Giving more options in terms of layout. This class also supports colors
+        by adding a modifier class <code class="ods-code" class="ods-code">ods-devtools-code__box--{palette color}</code>. A child element of the <code class="ods-code" class="ods-code">ods-devtools-code__box</code> with the class <code class="ods-code" class="ods-code">ods-devtools-code__box__code</code> will only show the innerHTML of this element in the "View code" box, further enhancing the
         ability to customize the layout of the component and code examples.<br />
-        <strong>osg-devtools-devmode</strong> applied as a class to an html element will make the child elements only visible on the "Developer" tab<br />
-        <strong>osg-devtools-nondevmode</strong> applied as a class to an html element will make the child elements only visible on the "Overview" tab<br />
-        <strong>osg-devtools-text-preset-1</strong> applied as a class to a heading element followed by a paragraph will create the desired spacing for the "Overview" tab.
+        <strong>ods-devtools-devmode</strong> applied as a class to an html element will make the child elements only visible on the "Developer" tab<br />
+        <strong>ods-devtools-nondevmode</strong> applied as a class to an html element will make the child elements only visible on the "Overview" tab<br />
+        <strong>ods-devtools-text-preset-1</strong> applied as a class to a heading element followed by a paragraph will create the desired spacing for the "Overview" tab.
       </p>
       <h4>Accessibility</h4>
       <p>All components are WCAG 2.1 AA compliant and follow the guidelines from <a href="https://www.uutilsynet.no/fremtidig-regelverk/wcag-21-standarden/140">Digdir</a>.</p>
@@ -103,11 +104,11 @@
         <li>Keyboard navigation with visual focus and correct order.</li>
         <li>Use alternative text in images and an empty one when the image is not relevant.</li>
         <li>Correct use of labels, for example use aria-label when it is not visible.</li>
-        <li>Group form elements when necessary with <code class="osg-code">&lt;leyend&gt;</code></li>
+        <li>Group form elements when necessary with <code class="ods-code">&lt;leyend&gt;</code></li>
         <li>Subtitles in videos.</li>
         <li>Check color contrast.</li>
         <li>Ensure role, value and name to all elements so they are understand by the assistive technology.</li>
-        <li>Define a language, for example <code class="osg-code">&lt;html lang="en"&gt;</code></li>
+        <li>Define a language, for example <code class="ods-code">&lt;html lang="en"&gt;</code></li>
         <li>Use semantic structure and heading.</li>
         <li>Follow the formatting rules provided by the linter for both Javascript and SCSS</li>
         <li>Use skip link and landmarks.</li>
@@ -120,12 +121,12 @@
       <h5>Example photos and illustrations</h5>
       <p>
         To make development easy you can use the following illustrations in 70x70 or 300x300 from 1 to 21.<br />
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/{1-21}.png</code>
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/{1-21}.png</code>
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/70x70/{1-21}.png</code>
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/{1-21}.png</code>
       </p>
       <p>
         Photos can be found here:<br />
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/</code><br /><br />
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/</code><br /><br />
         There are 32 photos, 1.jpg to 32.jpg with the following exceptions:<br />
         - 220x275 only has 20.jpg and 30.jpg.<br />
         - 2560 is lacking photo 6.jpg, 8.jpg, 11.jpg and 16.jpg.<br /><br />
@@ -138,9 +139,9 @@
         1920/<br />
         2560/<br /><br />
         Examples:<br />
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg</code>
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg</code>
-        <code class="osg-code" class="osg-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg</code>
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/300x300/1.jpg</code>
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/1024/2.jpg</code>
+        <code class="ods-code" class="ods-code">https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/2560/18.jpg</code>
       </p>
     </div>
   </div>

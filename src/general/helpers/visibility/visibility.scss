@@ -4,43 +4,43 @@
 $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
 @each $display in $displays {
-  .osg-#{$display} {
+  .ods-#{$display} {
     display: #{$display} !important;
   }
 
   @include breakpoints.medium {
-    .osg-#{$display}-breakpoint-medium {
+    .ods-#{$display}-breakpoint-medium {
       display: #{$display} !important;
     }
   }
 
   @include breakpoints.large {
-    .osg-#{$display}-breakpoint-large {
+    .ods-#{$display}-breakpoint-large {
       display: #{$display} !important;
     }
   }
 }
 
-.osg-full-height {
+.ods-full-height {
   height: 100%;
 }
 
-.osg-invisible {
-  @extend %osg-invisible;
+.ods-invisible {
+  @extend %ods-invisible;
 }
 
 @include breakpoints.medium {
-  .osg-invisible-breakpoint-medium {
+  .ods-invisible-breakpoint-medium {
     visibility: hidden !important;
   }
 }
 
 @include breakpoints.large {
-  .osg-invisible-breakpoint-large {
+  .ods-invisible-breakpoint-large {
     visibility: hidden !important;
   }
 }
 
-.osg-sr-only {
-  @extend %osg-sr-only;
+.ods-sr-only {
+  @extend %ods-sr-only;
 }

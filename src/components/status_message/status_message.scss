@@ -4,9 +4,9 @@
 @use "system/typography";
 @use "system/icons";
 
-.osg-status-message {
-  @extend %osg-padding-horizontal-4, %osg-padding-vertical-4;
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-medium;
+.ods-status-message {
+  @extend %ods-padding-horizontal-4, %ods-padding-vertical-4;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-medium;
 
   filter: drop-shadow(0 2px 4px rgb(0 0 0 / 25%));
   background-color: colors.$gray-light;
@@ -14,20 +14,20 @@
   word-break: break-word;
 
   &__heading {
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--weight-medium;
 
     display: flex;
   }
 
   &__content {
-    @extend %osg-text--weight-light;
-    @extend %osg-margin-top-4;
+    @extend %ods-text--weight-light;
+    @extend %ods-margin-top-4;
   }
 
   &__date {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-    @extend %osg-margin-top-6;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
+    @extend %ods-margin-top-6;
   }
 
   &--success {
@@ -51,8 +51,8 @@
   }
 
   &__icon {
-    @extend %osg-icon--size-kilo, %osg-icon--size-juliett-breakpoint-large;
-    @extend %osg-padding-right-2;
+    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-large;
+    @extend %ods-padding-right-2;
 
     line-height: 1.5rem;
     align-self: baseline;

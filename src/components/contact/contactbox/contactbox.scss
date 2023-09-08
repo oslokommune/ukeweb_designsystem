@@ -5,18 +5,18 @@
 @use "system/units";
 @use "sass:map";
 
-.osg-contactbox {
+.ods-contactbox {
   background-color: colors.$yellow;
 
   &__trigger {
-    @extend %osg-text--size-hotel, %osg-text--size-foxtrot-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
-    @extend %osg-padding-5, %osg-padding-8-breakpoint-large;
+    @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
+    @extend %ods-padding-5, %ods-padding-8-breakpoint-large;
 
     display: block;
     position: relative;
     text-decoration: none;
 
-    &.osg-collapsible-trigger {
+    &.ods-collapsible-trigger {
       &::after {
         font-family: "Oslo Icons", sans-serif;
         content: map.get(icon-map.$icons, "plus-sign");
@@ -25,7 +25,7 @@
       }
     }
 
-    &.osg-collapsible-trigger--expanded {
+    &.ods-collapsible-trigger--expanded {
       &::after {
         content: map.get(icon-map.$icons, "minus-sign");
       }
@@ -33,24 +33,24 @@
   }
 
   &__group {
-    @extend %osg-padding-horizontal-5, %osg-padding-horizontal-8-breakpoint-large;
-    @extend %osg-padding-bottom-4;
+    @extend %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-large;
+    @extend %ods-padding-bottom-4;
   }
 
   &__group:last-of-type {
-    @extend %osg-padding-bottom-5, %osg-padding-bottom-8-breakpoint-large;
+    @extend %ods-padding-bottom-5, %ods-padding-bottom-8-breakpoint-large;
   }
 
   &__label {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-medium;
 
     word-wrap: break-word;
   }
 
   &__value {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-light;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
 
-    .osg-link {
+    .ods-link {
       word-break: break-all;
     }
   }

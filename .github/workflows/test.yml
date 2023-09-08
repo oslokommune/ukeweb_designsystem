@@ -1,4 +1,4 @@
-name: Styleguide QA and deploy
+name: Oslo Designsystem QA and deploy
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: test
     env:
-      URL: 'Styleguide Devtools'
+      URL: 'Designsystem Devtools'
       ENVIRONMENT: test
       SLACK_CHANNEL: C044EMZ22JX
     steps:
@@ -156,7 +156,7 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_test.yml/dispatches \
+          https://api.github.com/repos/oslokommune/ukeweb_designsystem_devtools/actions/workflows/aws_test.yml/dispatches \
           -d '{ "ref": "test" }'
 
       - name: Update Slack status

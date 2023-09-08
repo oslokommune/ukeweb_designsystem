@@ -6,179 +6,179 @@
 @use "system/states";
 @use "sass:map";
 
-$osg-landscape-card-height-breakpoint-medium: 286px;
-$osg-landscape-card-height-breakpoint-large: 300px;
-$osg-landscape-card-height-large-breakpoint-medium: 421px;
-$osg-landscape-card-height-large-breakpoint-large: 421px;
+$ods-landscape-card-height-breakpoint-medium: 286px;
+$ods-landscape-card-height-breakpoint-large: 300px;
+$ods-landscape-card-height-large-breakpoint-medium: 421px;
+$ods-landscape-card-height-large-breakpoint-large: 421px;
 
-.osg-landscape-card {
-  &__media {
-    @include breakpoints.medium {
-      grid-column: 1/-5;
-    }
-
-    img {
-      height: 184px;
-      object-fit: cover;
-      width: 100%;
-      display: block;
-      line-height: 0;
-
-      @include breakpoints.medium {
-        height: $osg-landscape-card-height-breakpoint-medium;
-      }
-
-      @include breakpoints.large {
-        height: $osg-landscape-card-height-breakpoint-large;
-      }
-    }
-  }
-
-  &__content {
-    @extend %osg-padding-5;
-    @extend %osg-color-bg-gray-light;
-    @extend %osg-padding-6-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
-
-    display: grid;
-    align-content: center;
-    
-    @include breakpoints.medium {
-      width: 100%;
-      grid-column: -5/-1;
-    }
-  }
-  
-  &--no-image {
-    & .osg-landscape-card__content {
-      @include breakpoints.medium {
-        grid-column: 10/1;
-      }      
-    }
-  }
-
-  &__label {
-    @extend %osg-text--size-lima;
-    @extend %osg-margin-bottom-3, %osg-margin-bottom-4-breakpoint-medium;
-  }
-
-  &__heading {
-    @extend %osg-margin-bottom-1;
-    @extend %osg-text--size-india, %osg-text--size-golf-breakpoint-medium;
-    @extend %osg-text--weight-medium;
-  }
-
-  &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-light;
-  }
-  
-  &__published {
-    @extend %osg-margin-top-3, %osg-margin-top-4-breakpoint-medium;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-  }
-  
-  &--white {
-    & .osg-landscape-card__content,
-    & .osg-landscape-card__actions {
-      @extend %osg-color-bg-white;
-    }
-  }
-
-  &--blue-light {
-    & .osg-landscape-card__content {
-      @extend %osg-color-bg-blue-light;
-    }
-
-    & .osg-landscape-card__content img {
-      @include breakpoints.medium {
-        background-position: center;
-        background-size: cover;
-        object-fit: cover;
-      }
-    }
-  }
-  
-  
-  &--large {
-    & .osg-landscape-card__content {
-      @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-8-breakpoint-medium;
-    }
-
-    & .osg-landscape-card__media img {
-      @include breakpoints.medium {
-        height: $osg-landscape-card-height-large-breakpoint-medium;
-      }
-
-      @include breakpoints.large {
-        height: $osg-landscape-card-height-large-breakpoint-large;
-      }
-    }
-  }
-  
-  &__link {
-    text-decoration: none;
-
-    @include breakpoints.medium {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-    }
-
-    &:hover {
-      .osg-landscape-card__content {
-        color: states.$hover !important;
-      }
-
-      .osg-landscape-card__heading {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &--image-breakpoint-medium {
-    & .osg-landscape-card__media {
-      img {
-        display: none;
+.ods-landscape-card {
+    &__media {
         @include breakpoints.medium {
-          display: block;
+            grid-column: 1/-5;
         }
-      }
-    }
-  }
-
-  &--zoom {
-    & .osg-landscape-card__link {
-      & .osg-landscape-card__media {
-        overflow: hidden;
 
         img {
-          transform: scale(1);
-          transition: all 0.5s;
-        }
-      }
+            height: 184px;
+            object-fit: cover;
+            width: 100%;
+            display: block;
+            line-height: 0;
 
-      &:hover {
-        & .osg-landscape-card__media {
-          img {
-            transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
+            @include breakpoints.medium {
+                height: $ods-landscape-card-height-breakpoint-medium;
+            }
 
-  &--external {
-    & .osg-landscape-card__link .osg-landscape-card__heading {
-      &::after,
-      &:hover::after {
-        font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-        font-size: 0.6em;
-        content: map.get(icon-map.$icons, "new-window") !important;
-        display: inline-block;
-        margin-left: 0.4em;
-      }
+            @include breakpoints.large {
+                height: $ods-landscape-card-height-breakpoint-large;
+            }
+        }
     }
-  }
+
+    &__content {
+        @extend %ods-padding-5;
+        @extend %ods-color-bg-gray-light;
+        @extend %ods-padding-6-breakpoint-medium, %ods-padding-vertical-8-breakpoint-large;
+
+        display: grid;
+        align-content: center;
+
+        @include breakpoints.medium {
+            width: 100%;
+            grid-column: -5/-1;
+        }
+    }
+
+    &--no-image {
+        & .ods-landscape-card__content {
+            @include breakpoints.medium {
+                grid-column: 10/1;
+            }
+        }
+    }
+
+    &__label {
+        @extend %ods-text--size-lima;
+        @extend %ods-margin-bottom-3, %ods-margin-bottom-4-breakpoint-medium;
+    }
+
+    &__heading {
+        @extend %ods-margin-bottom-1;
+        @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-medium;
+        @extend %ods-text--weight-medium;
+    }
+
+    &__text {
+        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+        @extend %ods-text--weight-light;
+    }
+
+    &__published {
+        @extend %ods-margin-top-3, %ods-margin-top-4-breakpoint-medium;
+        @extend %ods-text--size-lima;
+        @extend %ods-text--weight-light;
+    }
+
+    &--white {
+        & .ods-landscape-card__content,
+        & .ods-landscape-card__actions {
+            @extend %ods-color-bg-white;
+        }
+    }
+
+    &--blue-light {
+        & .ods-landscape-card__content {
+            @extend %ods-color-bg-blue-light;
+        }
+
+        & .ods-landscape-card__content img {
+            @include breakpoints.medium {
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    &--large {
+        & .ods-landscape-card__content {
+            @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
+        }
+
+        & .ods-landscape-card__media img {
+            @include breakpoints.medium {
+                height: $ods-landscape-card-height-large-breakpoint-medium;
+            }
+
+            @include breakpoints.large {
+                height: $ods-landscape-card-height-large-breakpoint-large;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        @include breakpoints.medium {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+        }
+
+        &:hover {
+            .ods-landscape-card__content {
+                color: states.$hover !important;
+            }
+
+            .ods-landscape-card__heading {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &--image-breakpoint-medium {
+        & .ods-landscape-card__media {
+            img {
+                display: none;
+                @include breakpoints.medium {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &--zoom {
+        & .ods-landscape-card__link {
+            & .ods-landscape-card__media {
+                overflow: hidden;
+
+                img {
+                    transform: scale(1);
+                    transition: all 0.5s;
+                }
+            }
+
+            &:hover {
+                & .ods-landscape-card__media {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    &--external {
+        & .ods-landscape-card__link .ods-landscape-card__heading {
+            &::after,
+            &:hover::after {
+                font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+                font-size: 0.6em;
+                content: map.get(icon-map.$icons, "new-window") !important;
+                display: inline-block;
+                margin-left: 0.4em;
+            }
+        }
+    }
 
 }
 

@@ -6,16 +6,16 @@
 @use "system/states";
 @use "sass:map";
 
-.osg-date {
+.ods-date {
   @include mixins.form-states;
 
   position: relative;
 
   &__required {
-    @extend %osg-margin-top-1;
-    @extend %osg-padding-0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-margin-top-1;
+    @extend %ods-padding-0;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
 
   &__error-message {
@@ -28,7 +28,7 @@
     &::after {
       content: map.get(icon-map.$icons, "calendar") !important;
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      @extend %osg-text--size-delta;
+      @extend %ods-text--size-delta;
 
       line-height: 1em;
       position: absolute;
@@ -39,7 +39,7 @@
 
   &__input {
     @include mixins.form-component;
-    @extend %osg-margin-top-2;
+    @extend %ods-margin-top-2;
 
     &::placeholder {
       color: inherit;
@@ -69,12 +69,12 @@
       border-radius: 50%;
       border: none;
       background-color: transparent;
-      @extend %osg-text--size-golf;
+      @extend %ods-text--size-golf;
 
       line-height: 30px;
       text-align: center;
 
-      @extend %osg-margin-vertical-0, %osg-margin-horizontal-1;
+      @extend %ods-margin-vertical-0, %ods-margin-horizontal-1;
 
       position: absolute;
       top: 10px;
@@ -87,7 +87,7 @@
         background-color: colors.$gray;
         color: colors.$blue-state;
       }
-      
+
       &:disabled {
         cursor: not-allowed;
         color: states.$disabled-text;
@@ -131,8 +131,8 @@
       }
 
       caption {
-        @extend %osg-text--size-juliett;
-        @extend %osg-margin-bottom-3, %osg-margin-top-1;
+        @extend %ods-text--size-juliett;
+        @extend %ods-margin-bottom-3, %ods-margin-top-1;
 
         text-transform: capitalize;
       }
@@ -143,9 +143,9 @@
       }
 
       th {
-        @extend %osg-text--size-lima;
-        @extend %osg-padding-vertical-1, %osg-padding-horizontal-0;
-        @extend %osg-text--align-center;
+        @extend %ods-text--size-lima;
+        @extend %ods-padding-vertical-1, %ods-padding-horizontal-0;
+        @extend %ods-text--align-center;
 
         // text-align: center;
         text-transform: capitalize;
@@ -153,7 +153,7 @@
 
       td {
         // text-align: center;
-        @extend %osg-text--align-center;
+        @extend %ods-text--align-center;
 
         button {
           width: 36px;
@@ -171,7 +171,7 @@
 
           // next/prev month
           &[data-adjacent="true"] {
-            @extend %osg-text--size-lima;
+            @extend %ods-text--size-lima;
 
             // font-size: typography.$size-14;
           }
