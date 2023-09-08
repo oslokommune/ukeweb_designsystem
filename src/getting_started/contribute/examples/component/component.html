@@ -1,45 +1,45 @@
 <!--
-  The purpose of this file is to show best practice for HTML in OSG.
+  The purpose of this file is to show best practice for HTML in ODS.
   Comments are plentiful because of this, but rarely necessary in actual components.
 
-  Using the classes "osg-devtools-nondevmode" and "osg-devtools-devmode" determines what content is visible in "Overview" vs "Developer".
+  Using the classes "ods-devtools-nondevmode" and "ods-devtools-devmode" determines what content is visible in "Overview" vs "Developer".
 -->
 
 <!-- Overview mode -->
-<div class="osg-devtools-nondevmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <p class="osg-devtools-text-preset-3">The overview pane is used for documenting how to use the component and its variants both visually and in code. This specific area is used for an introduction to the component and its use.</p>
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-devtools-text-preset-3">The overview pane is used for documenting how to use the component and its variants both visually and in code. This specific area is used for an introduction to the component and its use.</p>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-infobox osg-infobox--yellow">
-        <h2 class="osg-infobox__heading">Important</h2>
+    <div class="ods-grid__column--12">
+      <div class="ods-infobox ods-infobox--yellow">
+        <h2 class="ods-infobox__heading">Important</h2>
         <p>Anything important about the component should be communicated in this box.</p>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <!-- Each variant should have a title and description. Using the special class "osg-devtools-text-preset-1" followed by a paragraph with the class "osg-paragraph" creates the correct styling for this setup -->
-      <h2 class="osg-devtools-text-preset-1">Default</h2>
-      <p class="osg-paragraph">Short description of the default state of the component.</p>
+    <div class="ods-grid__column--12">
+      <!-- Each variant should have a title and description. Using the special class "ods-devtools-text-preset-1" followed by a paragraph with the class "ods-paragraph" creates the correct styling for this setup -->
+      <h2 class="ods-devtools-text-preset-1">Default</h2>
+      <p class="ods-paragraph">Short description of the default state of the component.</p>
       <!--
-        Creating code examples is done easily by applying the class "osg-devtools-code" to a div element.
+        Creating code examples is done easily by applying the class "ods-devtools-code" to a div element.
         The element's innerHTML of which the class is applied to is visible in the "View code" box.
-        By adding a child element to "osg-devtools-code" with the class "osg-devtools-code__box"
-        adds the default styling used in "Overview" mode. If using "osg-devtools-code__box" the
-        code example will reflect the innerHTML of this element instead of the parent element "osg-devtools-code".
-        "osg-devtools-code__box" has a modifier for each color in the palette which will style the background
-        and border of the element in the color specified. Example: osg-devtools-code__box--blue-dark
-        If you for example need to use a grid inside the "osg-devtools-code__box", you can further extend it by adding a
-        "osg-devtools-code__box__code" class to a wrapper around the actual code so the code example does not show the grid code.
+        By adding a child element to "ods-devtools-code" with the class "ods-devtools-code__box"
+        adds the default styling used in "Overview" mode. If using "ods-devtools-code__box" the
+        code example will reflect the innerHTML of this element instead of the parent element "ods-devtools-code".
+        "ods-devtools-code__box" has a modifier for each color in the palette which will style the background
+        and border of the element in the color specified. Example: ods-devtools-code__box--blue-dark
+        If you for example need to use a grid inside the "ods-devtools-code__box", you can further extend it by adding a
+        "ods-devtools-code__box__code" class to a wrapper around the actual code so the code example does not show the grid code.
       -->
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--green-light">
-          <div class="osg-grid">
-            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
-                <div class="osg-example-component">
-                  <div class="osg-example-component__header">
-                    <div class="osg-example-component__logo">
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--green-light">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-example-component">
+                  <div class="ods-example-component__header">
+                    <div class="ods-example-component__logo">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
                         <title>Oslo logo</title>
                         <path
@@ -58,23 +58,23 @@
                         <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
                       </svg>
                     </div>
-                    <div class="osg-example-component__picture">
+                    <div class="ods-example-component__picture">
                       <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
                     </div>
                   </div>
-                  <div class="osg-example-component__content">
-                    <h3 class="osg-example-component__heading">
+                  <div class="ods-example-component__content">
+                    <h3 class="ods-example-component__heading">
                       <!-- Adding an icon as custom content -->
-                      <span class="osg-icon osg-icon-space-right osg-icon--user"></span>
+                      <span class="ods-icon ods-icon-space-right ods-icon--user"></span>
                       Jon Snow
                     </h3>
-                    <p class="osg-example-component__text">
+                    <p class="ods-example-component__text">
                       Developer<br />
                       Utviklings- og kompetanseetaten
                     </p>
                   </div>
-                  <div class="osg-example-component__footer">
-                    <p class="osg-example-component__text">Level 7 access</p>
+                  <div class="ods-example-component__footer">
+                    <p class="ods-example-component__text">Level 7 access</p>
                   </div>
                 </div>
               </div>
@@ -83,16 +83,16 @@
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">VueJS example</h2>
-      <p class="osg-paragraph">Short description of the state of the component.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--blue">
-          <div class="osg-grid">
-            <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
-                <div id="osg-example-component-vue">
-                  <osg-example-component></osg-example-component>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">VueJS example</h2>
+      <p class="ods-paragraph">Short description of the state of the component.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--blue">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div id="ods-example-component-vue">
+                  <ods-example-component></ods-example-component>
                 </div>
               </div>
             </div>
@@ -104,13 +104,13 @@
 </div>
 
 <!-- Developer mode -->
-<div class="osg-devtools-devmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-      <h2 class="osg-devtools-text-preset-2">Default</h2>
-      <div class="osg-example-component">
-        <div class="osg-example-component__header">
-          <div class="osg-example-component__logo">
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+      <h2 class="ods-devtools-text-preset-2">Default</h2>
+      <div class="ods-example-component">
+        <div class="ods-example-component__header">
+          <div class="ods-example-component__logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
               <title>Oslo logo</title>
               <path
@@ -129,27 +129,27 @@
               <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
             </svg>
           </div>
-          <div class="osg-example-component__picture">
+          <div class="ods-example-component__picture">
             <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
-        <div class="osg-example-component__content">
-          <h3 class="osg-example-component__heading">Jon Snow</h3>
-          <p class="osg-example-component__text">
+        <div class="ods-example-component__content">
+          <h3 class="ods-example-component__heading">Jon Snow</h3>
+          <p class="ods-example-component__text">
             Developer<br />
             Utviklings- og kompetanseetaten
           </p>
         </div>
-        <div class="osg-example-component__footer">
-          <p class="osg-example-component__text">Level 7 access</p>
+        <div class="ods-example-component__footer">
+          <p class="ods-example-component__text">Level 7 access</p>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-      <h2 class="osg-devtools-text-preset-2">Color green</h2>
-      <div class="osg-example-component osg-example-component--green-light">
-        <div class="osg-example-component__header">
-          <div class="osg-example-component__logo">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+      <h2 class="ods-devtools-text-preset-2">Color green</h2>
+      <div class="ods-example-component ods-example-component--green-light">
+        <div class="ods-example-component__header">
+          <div class="ods-example-component__logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
               <title>Oslo logo</title>
               <path
@@ -168,27 +168,27 @@
               <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
             </svg>
           </div>
-          <div class="osg-example-component__picture">
+          <div class="ods-example-component__picture">
             <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
-        <div class="osg-example-component__content">
-          <h3 class="osg-example-component__heading">Jon Snow</h3>
-          <p class="osg-example-component__text">
+        <div class="ods-example-component__content">
+          <h3 class="ods-example-component__heading">Jon Snow</h3>
+          <p class="ods-example-component__text">
             Developer<br />
             Utviklings- og kompetanseetaten
           </p>
         </div>
-        <div class="osg-example-component__footer">
-          <p class="osg-example-component__text">Level 7 access</p>
+        <div class="ods-example-component__footer">
+          <p class="ods-example-component__text">Level 7 access</p>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-      <h2 class="osg-devtools-text-preset-2">Color red</h2>
-      <div class="osg-example-component osg-example-component--red-light">
-        <div class="osg-example-component__header">
-          <div class="osg-example-component__logo">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+      <h2 class="ods-devtools-text-preset-2">Color red</h2>
+      <div class="ods-example-component ods-example-component--red-light">
+        <div class="ods-example-component__header">
+          <div class="ods-example-component__logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
               <title>Oslo logo</title>
               <path
@@ -207,27 +207,27 @@
               <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
             </svg>
           </div>
-          <div class="osg-example-component__picture">
+          <div class="ods-example-component__picture">
             <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
-        <div class="osg-example-component__content">
-          <h3 class="osg-example-component__heading">Jon Snow</h3>
-          <p class="osg-example-component__text">
+        <div class="ods-example-component__content">
+          <h3 class="ods-example-component__heading">Jon Snow</h3>
+          <p class="ods-example-component__text">
             Developer<br />
             Utviklings- og kompetanseetaten
           </p>
         </div>
-        <div class="osg-example-component__footer">
-          <p class="osg-example-component__text">Level 7 access</p>
+        <div class="ods-example-component__footer">
+          <p class="ods-example-component__text">Level 7 access</p>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-medium">
-      <h2 class="osg-devtools-text-preset-2">Color blue</h2>
-      <div class="osg-example-component osg-example-component--blue-light">
-        <div class="osg-example-component__header">
-          <div class="osg-example-component__logo">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+      <h2 class="ods-devtools-text-preset-2">Color blue</h2>
+      <div class="ods-example-component ods-example-component--blue-light">
+        <div class="ods-example-component__header">
+          <div class="ods-example-component__logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
               <title>Oslo logo</title>
               <path
@@ -246,19 +246,19 @@
               <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
             </svg>
           </div>
-          <div class="osg-example-component__picture">
+          <div class="ods-example-component__picture">
             <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
           </div>
         </div>
-        <div class="osg-example-component__content">
-          <h3 class="osg-example-component__heading">Jon Snow</h3>
-          <p class="osg-example-component__text">
+        <div class="ods-example-component__content">
+          <h3 class="ods-example-component__heading">Jon Snow</h3>
+          <p class="ods-example-component__text">
             Developer<br />
             Utviklings- og kompetanseetaten
           </p>
         </div>
-        <div class="osg-example-component__footer">
-          <p class="osg-example-component__text">Level 7 access</p>
+        <div class="ods-example-component__footer">
+          <p class="ods-example-component__text">Level 7 access</p>
         </div>
       </div>
     </div>

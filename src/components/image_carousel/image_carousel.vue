@@ -1,16 +1,16 @@
 <template>
-  <div class="osg-carousel">
-    <div class="osg-carousel__content" ref="content">
-      <div class="osg-carousel__navigation" v-if="images.length > 1">
-        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
-          <span class="osg-button__icon osg-icon--chevron-left"></span>
+  <div class="ods-carousel">
+    <div class="ods-carousel__content" ref="content">
+      <div class="ods-carousel__navigation" v-if="images.length > 1">
+        <button class="ods-button ods-button--circle ods-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
+          <span class="ods-button__icon ods-icon--chevron-left"></span>
         </button>
-        <button class="osg-button osg-button--circle osg-button--yellow" :aria-label="i18n.nextButton" @click="goToNext">
-          <span class="osg-button__icon osg-icon--chevron-right"></span>
+        <button class="ods-button ods-button--circle ods-button--yellow" :aria-label="i18n.nextButton" @click="goToNext">
+          <span class="ods-button__icon ods-icon--chevron-right"></span>
         </button>
       </div>
-      <div ref="track" class="osg-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
-        <div class="osg-carousel__slides" ref="slides">
+      <div ref="track" class="ods-carousel__track" :style="{ transform: `translate(${translateX}px)`, transition: `transform ${settings.timing} ${transitionDelay}ms` }">
+        <div class="ods-carousel__slides" ref="slides">
           <figure v-for="(image, index) in images" v-bind:key="index">
             <picture v-if="image.sources.length">
               <source v-for="(source, sourceIndex) in image.sources" :key="sourceIndex" :srcset="source.src" :media="source.media" />
@@ -20,8 +20,8 @@
         </div>
       </div>
     </div>
-    <div v-if="currentImage" class="osg-carousel__info">
-      <span v-if="currentImage.description.length" class="osg-carousel__info__description">{{ currentImage.description }}</span
+    <div v-if="currentImage" class="ods-carousel__info">
+      <span v-if="currentImage.description.length" class="ods-carousel__info__description">{{ currentImage.description }}</span
       ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
   </div>

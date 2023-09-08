@@ -4,14 +4,14 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
 // Displays
 @each $display in $displays {
-  %osg-#{$display} {
+  %ods-#{$display} {
     display: #{$display};
   }
 }
 
 @each $display in $displays {
   @include breakpoints.medium {
-    %osg-#{$display}-breakpoint-medium {
+    %ods-#{$display}-breakpoint-medium {
       display: #{$display};
     }
   }
@@ -19,31 +19,31 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
 
 @each $display in $displays {
   @include breakpoints.large {
-    %osg-#{$display}-breakpoint-large {
+    %ods-#{$display}-breakpoint-large {
       display: #{$display};
     }
   }
 }
 
 // Visibility
-%osg-invisible {
+%ods-invisible {
   visibility: hidden;
 }
 
 @include breakpoints.medium {
-  %osg-invisible-breakpoint-medium {
+  %ods-invisible-breakpoint-medium {
     visibility: hidden;
   }
 }
 
 @include breakpoints.large {
-  %osg-invisible-breakpoint-large {
+  %ods-invisible-breakpoint-large {
     visibility: hidden;
   }
 }
 
 // Sr-only
-%osg-sr-only {
+%ods-sr-only {
   border: none !important;
   clip: rect(0, 0, 0, 0) !important;
   height: 0.01em !important;

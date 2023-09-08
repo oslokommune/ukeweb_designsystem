@@ -4,20 +4,20 @@
 @use "../../components";
 @use "system/typography";
 
-.osg-devtools-text-preset-1 {
-  @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
+.ods-devtools-text-preset-1 {
+  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
 }
 
-.osg-devtools-text-preset-2 {
-  @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium;
+.ods-devtools-text-preset-2 {
+  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium;
 }
 
-.osg-devtools-text-preset-3 {
-  @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-golf-breakpoint-large;
-  @extend %osg-text--weight-light;
+.ods-devtools-text-preset-3 {
+  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
+  @extend %ods-text--weight-light;
 }
 
-.osg-devtools-text-preset-4 {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  @extend %osg-text--weight-medium;
+.ods-devtools-text-preset-4 {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-medium;
 }

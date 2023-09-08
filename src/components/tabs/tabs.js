@@ -1,16 +1,16 @@
 import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 function triggerIterator(callback) {
-  const triggers = document.querySelectorAll('.osg-tabs__trigger');
+  const triggers = document.querySelectorAll('.ods-tabs__trigger');
   triggers.forEach((item) => {
     callback(item);
   });
 }
 
 const setActiveTrigger = (activetrigger) => {
-  const OsgTabs = activetrigger.closest('.osg-tabs');
-  if (OsgTabs) {
-    const triggers = OsgTabs.querySelectorAll('.osg-tabs__trigger');
+  const OdsTabs = activetrigger.closest('.ods-tabs');
+  if (OdsTabs) {
+    const triggers = OdsTabs.querySelectorAll('.ods-tabs__trigger');
     triggers.forEach((trigger) => {
       trigger.setAttribute('aria-selected', 'false');
       trigger.setAttribute('tabindex', '-1');
@@ -22,14 +22,14 @@ const setActiveTrigger = (activetrigger) => {
 };
 
 const setActiveTab = (activeTab) => {
-  const OsgTabs = activeTab.closest('.osg-tabs');
-  if (OsgTabs) {
-    const tabs = OsgTabs.querySelectorAll('.osg-tabs__tab');
+  const OdsTabs = activeTab.closest('.ods-tabs');
+  if (OdsTabs) {
+    const tabs = OdsTabs.querySelectorAll('.ods-tabs__tab');
     tabs.forEach((tab) => {
-      tab.classList.remove('osg-tabs__tab--active');
+      tab.classList.remove('ods-tabs__tab--active');
     });
 
-    activeTab.classList.add('osg-tabs__tab--active');
+    activeTab.classList.add('ods-tabs__tab--active');
   }
 };
 
@@ -38,9 +38,9 @@ const handleTabFocus = (event) => {
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute('aria-controls'));
     if (tab) {
-      const tabContainer = trigger.closest('.osg-tabs');
+      const tabContainer = trigger.closest('.ods-tabs');
 
-      dispatchCustomEvent('OsgTabsActivate', { trigger, tab }, tabContainer);
+      dispatchCustomEvent('OdsTabsActivate', { trigger, tab }, tabContainer);
 
       setActiveTrigger(trigger);
       setActiveTab(tab);
@@ -88,15 +88,15 @@ const handleKeyEvent = (event) => {
   }
 };
 
-const OsgTabs = {
+const OdsTabs = {
   init() {
-    OsgTabs.unbindAll();
-    OsgTabs.bindAll();
+    OdsTabs.unbindAll();
+    OdsTabs.bindAll();
   },
 
   initElement(element) {
-    OsgTabs.unbindElement(element);
-    OsgTabs.bindElement(element);
+    OdsTabs.unbindElement(element);
+    OdsTabs.bindElement(element);
   },
 
   bindElement(element) {
@@ -124,4 +124,4 @@ const OsgTabs = {
   },
 };
 
-export default OsgTabs;
+export default OdsTabs;

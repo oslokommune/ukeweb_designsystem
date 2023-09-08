@@ -4,4 +4,4 @@ node_modules
 *.DS_Store
 .vscode
 .devbox/*
-!.devbox/project.*
+.devbox/project.*

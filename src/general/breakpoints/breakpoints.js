@@ -1,18 +1,18 @@
 import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 let previousBreakpoint = null;
-const OsgBreakpoints = {
+const OdsBreakpoints = {
   init() {
-    window.addEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
-    OsgBreakpoints.emitWindowSizeIfChanged();
+    window.addEventListener('resize', OdsBreakpoints.emitWindowSizeIfChanged);
+    OdsBreakpoints.emitWindowSizeIfChanged();
   },
 
   unbind() {
-    window.removeEventListener('resize', OsgBreakpoints.emitWindowSizeIfChanged);
+    window.removeEventListener('resize', OdsBreakpoints.emitWindowSizeIfChanged);
   },
 
   emitWindowSizeIfChanged() {
-    const currentBreakpoint = OsgBreakpoints.getBreakpoint();
+    const currentBreakpoint = OdsBreakpoints.getBreakpoint();
     const eventData = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -21,7 +21,7 @@ const OsgBreakpoints = {
 
     if (currentBreakpoint !== previousBreakpoint) {
       previousBreakpoint = currentBreakpoint;
-      dispatchCustomEvent('OsgBreakPointChange', eventData, window);
+      dispatchCustomEvent('OdsBreakPointChange', eventData, window);
     }
   },
 
@@ -36,4 +36,4 @@ const OsgBreakpoints = {
   },
 };
 
-export default OsgBreakpoints;
+export default OdsBreakpoints;
