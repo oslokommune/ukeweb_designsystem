@@ -1,3 +1,5 @@
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+
 function triggerIterator(callback) {
   const triggers = document.querySelectorAll('.osg-tabs__trigger');
   triggers.forEach((item) => {
@@ -36,13 +38,9 @@ const handleTabFocus = (event) => {
   if (trigger) {
     const tab = document.getElementById(trigger.getAttribute('aria-controls'));
     if (tab) {
-      const toggleEvent = new CustomEvent('OsgTabsActivate', {
-        detail: {
-          trigger,
-          tab,
-        },
-      });
-      trigger.closest('.osg-tabs').dispatchEvent(toggleEvent);
+      const tabContainer = trigger.closest('.osg-tabs');
+
+      dispatchCustomEvent('OsgTabsActivate', { trigger, tab }, tabContainer);
 
       setActiveTrigger(trigger);
       setActiveTab(tab);
