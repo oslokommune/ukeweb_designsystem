@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const check = document.getElementById('employee-search-form-search-dropdown');
   function handleDropdownChange() {
-    const dropdown = document.querySelector('.osg-search-inline__dropdown');
+    const dropdown = document.querySelector('.ods-search-inline__dropdown');
     const searchForm = document.querySelector('#employee-search-form-search-dropdown');
 
     if (this.checked) {

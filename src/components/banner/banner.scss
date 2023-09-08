@@ -4,9 +4,9 @@
 @use "system/spacing";
 @use "system/typography";
 
-.osg-banner {
-  @extend %osg-padding-vertical-4, %osg-padding-vertical-13-breakpoint-medium;
-  @extend %osg-text--size-india, %osg-text--size-hotel-breakpoint-medium, %osg-text--size-golf-breakpoint-large;
+.ods-banner {
+  @extend %ods-padding-vertical-4, %ods-padding-vertical-13-breakpoint-medium;
+  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
 
   background-color: colors.$white;
   padding-left: grid.$gutter-size;
@@ -56,7 +56,7 @@
   }
 
   &__section {
-    @extend %osg-text--weight-light;
+    @extend %ods-text--weight-light;
 
     grid-column: span 12 / span 12;
 
@@ -74,7 +74,7 @@
   }
 
   &--media {
-    .osg-banner__text {
+    .ods-banner__text {
       @include breakpoints.medium {
         grid-column: 5 / 13;
       }
@@ -82,13 +82,13 @@
   }
 
   &--media-right {
-    .osg-banner__media {
+    .ods-banner__media {
       @include breakpoints.medium {
         grid-column: 9 / 13;
       }
     }
 
-    .osg-banner__text {
+    .ods-banner__text {
       @include breakpoints.medium {
         grid-column: 1 / 9;
       }

@@ -3,7 +3,7 @@
 @use "system/spacing";
 @use "system/visibility";
 
-.osg-textarea {
+.ods-textarea {
   @include mixins.form-states;
 
   &::placeholder {
@@ -11,11 +11,11 @@
   }
 
   &__required {
-    @extend %osg-margin-top-1;
+    @extend %ods-margin-top-1;
 
     padding: 0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
 
   &__label {
@@ -24,16 +24,16 @@
 
   &__textarea {
     @include mixins.form-component;
-    @extend %osg-margin-top-2;
+    @extend %ods-margin-top-2;
 
     resize: none;
   }
 
   &__countdown-characters {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-    @extend %osg-block;
-    @extend %osg-text--align-right;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
+    @extend %ods-block;
+    @extend %ods-text--align-right;
   }
 
   &__error-message {
