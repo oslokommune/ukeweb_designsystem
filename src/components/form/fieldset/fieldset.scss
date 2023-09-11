@@ -6,93 +6,93 @@
 @use "sass:map";
 
 .ods-fieldset {
-    :last-child {
-        @extend %ods-margin-bottom-0;
+  :last-child {
+    @extend %ods-margin-bottom-0;
+  }
+
+  &__required {
+    @extend %ods-margin-top-1;
+    @extend %ods-padding-0;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
+  }
+
+  &__legend {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
+
+    width: 100%;
+
+    > * {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+
+      &::after {
+        font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
+        @extend %ods-text--size-golf;
+
+        content: map.get(icon-map.$icons, "plus-sign");
+        line-height: inherit;
+        position: absolute;
+        top: 0;
+        right: units.unit-to-rem(1);
+      }
     }
 
-    &__required {
-        @extend %ods-margin-top-1;
-        @extend %ods-padding-0;
-        @extend %ods-text--size-lima;
-        @extend %ods-text--weight-light;
+    > *.ods-collapsible-trigger--expanded::after {
+      content: map.get(icon-map.$icons, "minus-sign");
+    }
+  }
+
+  &--no-border {
+    border: none;
+    @extend %ods-padding-0;
+
+    & .ods-fieldset__legend {
+      @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+      @extend %ods-text--weight-medium;
+      @extend %ods-margin-bottom-3, %ods-padding-bottom-1;
+    }
+  }
+
+  &--error {
+    border-color: colors.$red;
+
+    & .ods-fieldset__legend {
+      color: colors.$red;
+    }
+  }
+
+  &--disabled,
+  &:disabled {
+    & .ods-fieldset__legend {
+      color: colors.$grayscale-40;
+    }
+  }
+
+
+  &--filter {
+    @extend %ods-margin-bottom-3, %ods-padding-bottom-3;
+
+    border: none;
+    border-bottom: 2px solid colors.$blue-dark;
+
+    > .ods-collapsible-content:first-of-type {
+      @extend %ods-margin-top-3;
     }
 
-    &__legend {
-        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-        @extend %ods-text--weight-medium;
+    &:first-of-type {
+      & .ods-fieldset__legend {
+        @extend %ods-padding-top-3;
 
-        width: 100%;
-
-        > * {
-            display: block;
-            cursor: pointer;
-            position: relative;
-            text-decoration: none;
-
-            &::after {
-                font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-                @extend %ods-text--size-golf;
-
-                content: map.get(icon-map.$icons, "plus-sign");
-                line-height: inherit;
-                position: absolute;
-                top: 0;
-                right: units.unit-to-rem(1);
-            }
-        }
-
-        > *.ods-collapsible-trigger--expanded::after {
-            content: map.get(icon-map.$icons, "minus-sign");
-        }
+        border-top: 2px solid colors.$blue-dark;
+      }
     }
 
-    &--no-border {
-        border: none;
-        @extend %ods-padding-0;
-
-        & .ods-fieldset__legend {
-            @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-            @extend %ods-text--weight-medium;
-            @extend %ods-margin-bottom-3, %ods-padding-bottom-1;
-        }
+    &:last-of-type {
+      @extend %ods-margin-bottom-0;
     }
-
-    &--error {
-        border-color: colors.$red;
-
-        & .ods-fieldset__legend {
-            color: colors.$red;
-        }
-    }
-
-    &--disabled,
-    &:disabled {
-        & .ods-fieldset__legend {
-            color: colors.$grayscale-40;
-        }
-    }
-
-
-    &--filter {
-        @extend %ods-margin-bottom-3, %ods-padding-bottom-3;
-
-        border: none;
-        border-bottom: 2px solid colors.$blue-dark;
-
-        > .ods-collapsible-content:first-of-type {
-            @extend %ods-margin-top-3;
-        }
-
-        &:first-of-type {
-            & .ods-fieldset__legend {
-                @extend %ods-padding-top-3;
-
-                border-top: 2px solid colors.$blue-dark;
-            }
-        }
-
-        &:last-of-type {
-            @extend %ods-margin-bottom-0;
-        }
-    }
+  }
 }
