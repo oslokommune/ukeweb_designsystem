@@ -1,4 +1,4 @@
-![Oslo Designsystem Banner](./src/assets/images/oslo-header-placeholder.jpg)
+![Oslo Designsystem Banner](./src/assets/images/oslo-header.jpg)
 
 <h1 align="center">Oslo Designsystem</h1>
 
@@ -26,7 +26,7 @@ Welcome to `Oslo Designsystem` a complete library for styles and components used
 
 ## 🎯 Description
 
-`Oslo Designsystem` is a collection of reusable components, guided by clear standards. Designed with functionality, accessibility and aesthetic in mind, it serves as a unifying building block for all projects in Oslo kommune
+`Oslo Designsystem` is a collection of reusable components, guided by clear standards. Designed with functionality, accessibility and aesthetic in mind, it serves as a unifying building block for all projects in Oslo kommune.
 
 ## 🚀 Installation
 
@@ -36,7 +36,7 @@ npm install @oslokommune/oslo-designsystem
 
 ## 📑 Documentation
 
-Please take a look at the [documentation](https://designsystem.oslo.kommune.no/#/getting_started-basics) if you want a complete understanding on how to use `Oslo Designsystem`
+Please take a look at the [documentation](https://designsystem.oslo.kommune.no/#/getting_started-basics) if you want a complete understanding on how to use `Oslo Designsystem`.
 
 ## ⚡ Usage
 
@@ -58,7 +58,7 @@ npm install --save-dev webpack webpack-cli
 
 ### 3. Entry point
 
-It is recommended to use `src/ods.scss` as the entry point as shown underneath
+It is recommended to use `src/ods.scss` as the entry point as shown underneath.
 
 ```js
 // webpack.config.js
@@ -91,11 +91,11 @@ Using other libraries could result in conflicting global styles.
 
 ## 🤝 Contribution
 
-If you would like to contribute to this project, please take a look at our [contribute](https://designsystem.oslo.kommune.no/#/getting_started-contribute-basics) page for more information
+If you would like to contribute to this project, please take a look at our [contribute](https://designsystem.oslo.kommune.no/#/getting_started-contribute-basics) page for more information.
 
 ## 📜 License
 
-Oslo Designsystem is distributed under a MIT-license for open source code
+Oslo Designsystem is distributed under a MIT-license for open source code.
 
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&label=Open%20Source)](https://opensource.org/licenses/MIT)
 
