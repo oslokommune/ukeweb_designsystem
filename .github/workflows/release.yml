@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      URL: 'Designsystem Devtools'
+      URL: 'Oslo Designsystem Devtools'
       ENVIRONMENT: production
       SLACK_CHANNEL: C044EMZ22JX
     steps:

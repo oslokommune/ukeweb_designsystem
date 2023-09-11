@@ -1,6 +1,6 @@
-![Oslo Designsystem Banner](./src/assets/images/Facebook1.jpg)
+![Oslo Designsystem Banner](./src/assets/images/oslo-header-placeholder.jpg)
 
-<h1 align="center">Oslo Designsystem 🎨 🧑‍🎨</h1>
+<h1 align="center">Oslo Designsystem</h1>
 
 <div align="center">
 
@@ -28,7 +28,7 @@ Welcome to `Oslo Designsystem` a complete library for styles and components used
 
 `Oslo Designsystem` is a collection of reusable components, guided by clear standards. Designed with functionality, accessibility and aesthetic in mind, it serves as a unifying building block for all projects in Oslo kommune
 
-## Installation 🚀
+## 🚀 Installation
 
 ```bash
 npm install @oslokommune/oslo-designsystem
@@ -73,7 +73,7 @@ module.exports = {
 
 ### 4. Implement components
 
-Browse the Designsystem for components and add the code to your project.
+Browse Oslo Designsystem for components and add the code to your project.
 
 ### 5. Run the Build
 
