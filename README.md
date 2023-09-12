@@ -14,7 +14,7 @@
 
 Welcome to `Oslo Designsystem` a complete library for styles and components used in Oslo kommune.
 
-## 📚 Table of Content
+## 📚 Table of Contents
 
 - **🎯 [Description](#description)**
 - **🚀 [Installation](#installation)**
