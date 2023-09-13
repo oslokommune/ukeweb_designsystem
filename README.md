@@ -19,7 +19,6 @@ Welcome to `Oslo Designsystem` a complete library for styles and components used
 - **🎯 [Description](#description)**
 - **🚀 [Installation](#installation)**
 - **📑 [Documentation](#documentation)**
-- **⚡ [Usage](#usage)**
 - **🤝 [Contribution Guidelines](#contribution-guidelines)**
 - **📜 [License](#license)**
 - **📬 [Contact](#contact)**
@@ -37,57 +36,6 @@ npm install @oslokommune/oslo-designsystem
 ## 📑 Documentation
 
 Please take a look at the [documentation](https://designsystem.oslo.kommune.no/#/getting_started-basics) if you want a complete understanding on how to use `Oslo Designsystem`.
-
-## ⚡ Usage
-
-### Usage with webpack
-
-### 1. Install the package
-
-```bash
-npm install @oslokommune/oslo-designsystem
-```
-
-### 2. Build tool
-
-Install Webpack and its CLI.
-
-```bash
-npm install --save-dev webpack webpack-cli
-```
-
-### 3. Entry point
-
-It is recommended to use `src/ods.scss` as the entry point as shown underneath.
-
-```js
-// webpack.config.js
-module.exports = {
-  entry: './src/ods.scss',
-  output: {
-    filename: 'bundle.js',
-    path: __dirname + '/dist',
-  },
-};
-```
-
-### 4. Implement components
-
-Browse Oslo Designsystem for components and add the code to your project.
-
-### 5. Run the Build
-
-You can now run
-
-```bash
-npx webpack
-```
-
-or add a script in your `package.json` to run Webpack.
-
-### 6. Conflicts
-
-Using other libraries could result in conflicting global styles.
 
 ## 🤝 Contribution
 
