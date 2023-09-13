@@ -101,7 +101,7 @@ Oslo Designsystem is distributed under a MIT-license for open source code.
 
 ## 📬 Contact
 
-Slack: beepbeepboopboop
+Slack: oslo-designsystem
 
 devnull@uke.oslo.kommune.no
 
