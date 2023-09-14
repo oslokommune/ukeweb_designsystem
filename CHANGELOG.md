@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed spacing on list component from 4px to 8px according to Figma.
 - Changed contribute "clean" page to better help contributors
 - Changed contribute "page" page to better help contributors
+- Changed documentation on contribution/basic page
 
 ### Fixed
 
