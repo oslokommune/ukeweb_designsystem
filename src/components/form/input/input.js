@@ -1,12 +1,12 @@
-function OsgInput() {
-  const countInput = document.querySelector('.osg-input__input--number');
+function OdsInput() {
+  const countInput = document.querySelector('.ods-input__input--number');
 
   if (!countInput) {
     return;
   }
 
-  const btnUp = document.querySelector('.osg-input__counter-nav-button--up');
-  const btnDown = document.querySelector('.osg-input__counter-nav-button--down');
+  const btnUp = document.querySelector('.ods-input__counter-nav-button--up');
+  const btnDown = document.querySelector('.ods-input__counter-nav-button--down');
   const countMin = countInput.min;
   const countMax = countInput.max;
 
@@ -38,4 +38,4 @@ function OsgInput() {
   btnDown.addEventListener('click', decreaseCount, false);
 }
 
-export default OsgInput;
+export default OdsInput;

@@ -3,19 +3,19 @@
 @use "system/typography";
 @use "system/spacing";
 
-.osg-step-by-step {
+.ods-step-by-step {
   list-style: none;
   counter-reset: orderedlist;
 
   &__item:not(:last-child) {
-    @extend %osg-margin-bottom-8;
+    @extend %ods-margin-bottom-8;
   }
 
   &__item::before {
     text-align: center;
-    @extend %osg-margin-right-1;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-margin-right-1;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     counter-increment: orderedlist;
     content: counter(orderedlist);
@@ -29,11 +29,11 @@
 
   &__heading {
     display: inline;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
   }
 
   &__text {
-    @extend %osg-margin-top-1;
+    @extend %ods-margin-top-1;
   }
 }

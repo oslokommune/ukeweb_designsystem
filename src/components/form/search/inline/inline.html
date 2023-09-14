@@ -1,17 +1,17 @@
 <!-- Overview mode -->
-<div class="osg-devtools-nondevmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
     <!-- Default -->
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Default</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-grid">
-            <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Default</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
                 <form action="" method="GET">
-                  <div class="osg-search-inline">
-                    <input class="osg-search-inline__input" type="search" autocomplete="off" aria-label="Label text" />
+                  <div class="ods-search-inline">
+                    <input class="ods-search-inline__input" type="search" autocomplete="off" aria-label="Label text" />
                   </div>
                 </form>
               </div>
@@ -23,23 +23,23 @@
     <!-- /Default -->
 
     <!-- Dropdown -->
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Dropdown</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-grid">
-            <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
-                <div class="osg-search-inline">
-                  <label class="osg-search-inline__label"
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Dropdown</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-search-inline">
+                  <label class="ods-search-inline__label"
                     >Search
-                    <input class="osg-search-inline__input" id="input-2" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-2" role="combobox" />
+                    <input class="ods-search-inline__input" id="input-2" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-2" role="combobox" />
                   </label>
-                  <ul class="osg-search-inline__dropdown" role="listbox" id="id-results-2">
-                    <li class="osg-search-inline__dropdown__item" role="option">Item A</li>
-                    <li class="osg-search-inline__dropdown__item" role="option">Item B</li>
-                    <li class="osg-search-inline__dropdown__item" role="option">Item C</li>
-                    <li class="osg-search-inline__dropdown__item" role="option">Item D</li>
+                  <ul class="ods-search-inline__dropdown" role="listbox" id="id-results-2">
+                    <li class="ods-search-inline__dropdown__item" role="option">Item A</li>
+                    <li class="ods-search-inline__dropdown__item" role="option">Item B</li>
+                    <li class="ods-search-inline__dropdown__item" role="option">Item C</li>
+                    <li class="ods-search-inline__dropdown__item" role="option">Item D</li>
                   </ul>
                 </div>
               </div>
@@ -47,21 +47,21 @@
           </div>
         </div>
       </div>
-      <div class="osg-margin-top-25"></div>
+      <div class="ods-margin-top-25"></div>
     </div>
     <!-- /Dropdown -->
 
     <!-- Vue -->
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Vue component</h2>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-grid">
-            <div class="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">
-              <div class="osg-devtools-code__box__code">
-                <div id="osg-search-inline-vue-1">
-                  <osg-search-inline
-                    id="osg-search-inline-1"
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Vue component</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div id="ods-search-inline-vue-1">
+                  <ods-search-inline
+                    id="ods-search-inline-1"
                     :value="value"
                     label="Search"
                     aria-label-results="Search results"
@@ -72,89 +72,89 @@
                     v-on:input-enter="event('input-enter', $event)"
                     v-on:submit="event('submit', $event)"
                     v-on:itemlist-blur="event('itemlist-blur', $event)"
-                  ></osg-search-inline>
+                  ></ods-search-inline>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="osg-margin-top-25"></div>
+      <div class="ods-margin-top-25"></div>
     </div>
     <!-- /Vue -->
   </div>
 </div>
 
 <!-- Developer mode -->
-<div class="osg-devtools-devmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <h3 class="osg-devtools-text-preset-2">Default</h3>
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <h3 class="ods-devtools-text-preset-2">Default</h3>
       <!-- Inline -->
       <form action="" method="GET">
-        <div class="osg-search-inline">
-          <input class="osg-search-inline__input" type="search" autocomplete="off" aria-label="Label text" />
+        <div class="ods-search-inline">
+          <input class="ods-search-inline__input" type="search" autocomplete="off" aria-label="Label text" />
         </div>
       </form>
       <!-- Inline end -->
     </div>
-    <div class="osg-grid__column--12">
-      <h3 class="osg-devtools-text-preset-2">Dropdown</h3>
+    <div class="ods-grid__column--12">
+      <h3 class="ods-devtools-text-preset-2">Dropdown</h3>
       <!-- Dropdown -->
-      <div class="osg-search-inline">
-        <label class="osg-search-inline__label"
+      <div class="ods-search-inline">
+        <label class="ods-search-inline__label"
           >Search
-          <input class="osg-search-inline__input" id="input-4" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
+          <input class="ods-search-inline__input" id="input-4" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
         </label>
-        <ul class="osg-search-inline__dropdown" role="listbox" id="id-results-4">
-          <li class="osg-search-inline__dropdown__item" role="option">Item A</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item B</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item C</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item D</li>
+        <ul class="ods-search-inline__dropdown" role="listbox" id="id-results-4">
+          <li class="ods-search-inline__dropdown__item" role="option">Item A</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item B</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item C</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item D</li>
         </ul>
       </div>
       <!-- Dropdown end -->
-      <p class="osg-text-5 osg-margin-top-25">
+      <p class="ods-text-5 ods-margin-top-25">
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
       </p>
-      <p class="osg-text-5 osg-margin-top-15">
+      <p class="ods-text-5 ods-margin-top-15">
         Maecenas scelerisque interdum placerat. Nullam nec mauris nibh. Mauris hendrerit rhoncus ante, vel dignissim lacus aliquam a. Ut dapibus augue id velit vehicula dictum. Ut ut aliquam neque. Suspendisse potenti. In tincidunt pretium elit, ac ultricies orci rhoncus nec. Aliquam luctus, dui quis ultrices euismod, elit dolor feugiat nunc, ut viverra nisl sapien non massa.
       </p>
     </div>
-    <div class="osg-grid__column--12">
-      <h3 class="osg-devtools-text-preset-2">Vue</h3>
-      <div id="osg-search-inline-vue-2">
+    <div class="ods-grid__column--12">
+      <h3 class="ods-devtools-text-preset-2">Vue</h3>
+      <div id="ods-search-inline-vue-2">
         <!-- Vue -->
-        <osg-search-inline id="osg-search-2" :value="value" label="Search" aria-label-results="Search results" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
+        <ods-search-inline id="ods-search-2" :value="value" label="Search" aria-label-results="Search results" :items="items" :item-list-scroll="true" v-on:item-focus="event('item-focus', $event)" v-on:input-change="event('input-change', $event)" v-on:input-enter="event('input-enter', $event)" v-on:submit="event('submit', $event)" v-on:itemlist-blur="event('itemlist-blur', $event)">
           <template #listitem="{ item }">
-            <span class="osg-text--size-juliett">{{ item.text }}</span>
-            <span v-if="item.subtext" class="osg-text--size-kilo">{{ item.subtext }}</span>
+            <span class="ods-text--size-juliett">{{ item.text }}</span>
+            <span v-if="item.subtext" class="ods-text--size-kilo">{{ item.subtext }}</span>
           </template>
-        </osg-search-inline>
+        </ods-search-inline>
         <!-- Vue end -->
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-margin-top-10">&nbsp;</div>
-      <div class="osg-margin-top-25">&nbsp;</div>
+    <div class="ods-grid__column--12">
+      <div class="ods-margin-top-10">&nbsp;</div>
+      <div class="ods-margin-top-25">&nbsp;</div>
     </div>
-    <div class="osg-grid__column--12">
-      <h3 class="osg-devtools-text-preset-2">Scroll in dropdown</h3>
+    <div class="ods-grid__column--12">
+      <h3 class="ods-devtools-text-preset-2">Scroll in dropdown</h3>
       <!-- Scroll -->
-      <div class="osg-search-inline">
-        <label class="osg-search-inline__label"
+      <div class="ods-search-inline">
+        <label class="ods-search-inline__label"
           >Search
-          <input class="osg-search-inline__input" id="input-4" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
+          <input class="ods-search-inline__input" id="input-4" type="search" autocomplete="off" aria-expanded="true" aria-haspopup="listbox" aria-owns="id-results-4" role="combobox" />
         </label>
-        <ul class="osg-search-inline__dropdown osg-search-inline__dropdown--scroll" role="listbox" id="id-results-4">
-          <li class="osg-search-inline__dropdown__item" role="option">Item A</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item B</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item C</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item D</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item E</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item F</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item G</li>
-          <li class="osg-search-inline__dropdown__item" role="option">Item H</li>
+        <ul class="ods-search-inline__dropdown ods-search-inline__dropdown--scroll" role="listbox" id="id-results-4">
+          <li class="ods-search-inline__dropdown__item" role="option">Item A</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item B</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item C</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item D</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item E</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item F</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item G</li>
+          <li class="ods-search-inline__dropdown__item" role="option">Item H</li>
         </ul>
       </div>
       <!-- Scroll end -->

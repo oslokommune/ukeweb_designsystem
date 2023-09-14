@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import OsgTextarea from './textarea.vue';
+import OdsTextarea from './textarea.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('osg-textarea-vue-1')) {
-    Vue.component('osg-textarea', OsgTextarea);
+  if (document.getElementById('ods-textarea-vue-1')) {
+    Vue.component('ods-textarea', OdsTextarea);
     const vm = new Vue();
-    vm.$mount('#osg-textarea-vue-1');
+    vm.$mount('#ods-textarea-vue-1');
   }
 });

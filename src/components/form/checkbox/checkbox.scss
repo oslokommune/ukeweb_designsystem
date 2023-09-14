@@ -4,8 +4,8 @@
 @use "system/icon-map";
 @use "system/spacing";
 
-.osg-checkbox {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+.ods-checkbox {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
 
   align-items: center;
   color: inherit;
@@ -13,10 +13,10 @@
   display: flex;
 
   &__required {
-    @extend %osg-margin-top-1;
-    @extend %osg-padding-0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-margin-top-1;
+    @extend %ods-padding-0;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
 
   & input {
@@ -28,7 +28,7 @@
   &--text-align-top {
     align-items: flex-start;
 
-    .osg-checkbox__text {
+    .ods-checkbox__text {
       margin-top: -5px;
     }
   }
@@ -57,7 +57,7 @@
   &__text {
     border-style: hidden;
     hyphens: auto;
-    @extend %osg-padding-left-3;
+    @extend %ods-padding-left-3;
   }
 
   &--error-message {
@@ -66,8 +66,8 @@
     display: block;
   }
 
-  
-  &--focus &__checkmark, 
+
+  &--focus &__checkmark,
   &:focus-within &__checkmark,
   & input:focus ~ &__checkmark {
     &:not([disabled]) {
@@ -80,12 +80,12 @@
     outline-style: none;
   }
 
-  &--focus &__text, 
+  &--focus &__text,
   & input:focus ~ &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
   }
-  
+
   &--hover span,
   &--focus span,
   & input:hover ~ span,
@@ -95,7 +95,7 @@
     border-color: colors.$blue-state;
     color: colors.$blue-state;
   }
-  
+
   &--hover span,
   &:hover span {
     & input:not([disabled]) {
@@ -103,7 +103,7 @@
       color: colors.$blue-state;
     }
   }
-  
+
   & input:checked ~ &__checkmark::after {
     display: block;
   }
@@ -117,8 +117,8 @@
   }
 
   & input:checked ~ span {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     border-color: colors.$blue-state;
     color: colors.$blue-dark;
@@ -141,18 +141,18 @@
 
   &--error {
     & span,
-    & input:checked ~ .osg-checkbox__text {
+    & input:checked ~ .ods-checkbox__text {
       border-color: colors.$red;
       color: colors.$red;
     }
 
-    & input:checked ~ .osg-checkbox__checkmark {
+    & input:checked ~ .ods-checkbox__checkmark {
       background-color: colors.$red;
       border-color: colors.$red;
     }
 
-    & input:checked:hover ~ .osg-checkbox__checkmark,
-    & input:checked:focus ~ .osg-checkbox__checkmark {
+    & input:checked:hover ~ .ods-checkbox__checkmark,
+    & input:checked:focus ~ .ods-checkbox__checkmark {
       background-color: colors.$blue-state;
       border-color: colors.$blue-state;
     }

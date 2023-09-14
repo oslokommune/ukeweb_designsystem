@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (spacingBlockContainer) {
     spacingSizes.forEach((size) => {
       const element = document.createElement('span');
-      element.classList.add('osg-color-bg-blue');
-      element.classList.add('osg-inline-block');
-      element.classList.add(`osg-padding-${size}`);
-      element.classList.add('osg-margin-right-1');
+      element.classList.add('ods-color-bg-blue');
+      element.classList.add('ods-inline-block');
+      element.classList.add(`ods-padding-${size}`);
+      element.classList.add('ods-margin-right-1');
 
       const value = document.createElement('span');
-      value.classList.add('osg-color-bg-blue-dark');
-      value.classList.add('osg-color-text-white');
+      value.classList.add('ods-color-bg-blue-dark');
+      value.classList.add('ods-color-text-white');
       value.innerText = size;
       element.appendChild(value);
 

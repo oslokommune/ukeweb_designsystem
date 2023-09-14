@@ -1,4 +1,4 @@
 import Vue from 'vue';
-import OsgDateTime from './date_and_time';
+import OdsDateTime from './date_and_time';
 
-Vue.filter('OsgDateTimeFormat', (dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) => OsgDateTime.format(dateFrom, dateTo, dateFromOptions, dateToOptions));
+Vue.filter('OdsDateTimeFormat', (dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) => OdsDateTime.format(dateFrom, dateTo, dateFromOptions, dateToOptions));

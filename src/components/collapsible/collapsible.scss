@@ -5,11 +5,11 @@
 @use "system/spacing";
 @use "sass:map";
 
-.osg-collapsible-trigger {
+.ods-collapsible-trigger {
   &--block {
-    @extend %osg-padding-4;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-padding-4;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     background-color: colors.$gray-light;
     border: none;
@@ -27,7 +27,7 @@
 
     &::after {
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-      @extend %osg-text--size-golf;
+      @extend %ods-text--size-golf;
 
       line-height: 1.75rem;
       content: map.get(icon-map.$icons, "chevron-thin-down");
@@ -36,10 +36,10 @@
   }
 
   &--big-block {
-    @extend %osg-padding-horizontal-5;
-    @extend %osg-padding-vertical-8;
-    @extend %osg-text--size-hotel, %osg-text--size-foxtrot-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
-    @extend %osg-text--weight-light;
+    @extend %ods-padding-horizontal-5;
+    @extend %ods-padding-vertical-8;
+    @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
+    @extend %ods-text--weight-light;
 
     background-color: colors.$gray-light;
     border: none;
@@ -57,7 +57,7 @@
 
     &::after {
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-      @extend %osg-text--size-delta;
+      @extend %ods-text--size-delta;
 
       content: map.get(icon-map.$icons, "plus-sign");
       position: absolute;
@@ -65,15 +65,15 @@
   }
 
   &--link {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     color: inherit;
     background-color: unset;
     border: none;
     display: inline-block;
     font-family: inherit;
-    @extend %osg-padding-left-0;
+    @extend %ods-padding-left-0;
 
     &:hover {
       color: colors.$blue-state;
@@ -81,11 +81,11 @@
     }
 
     &::after {
-      @extend %osg-margin-left-1;
+      @extend %ods-margin-left-1;
 
       content: map.get(icon-map.$icons, "chevron-thin-down");
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-      @extend %osg-text--size-golf;
+      @extend %ods-text--size-golf;
 
       line-height: 1.75rem;
       vertical-align: top;
@@ -99,12 +99,12 @@
   }
 
   &--expanded {
-    &.osg-collapsible-trigger--big-block::after {
+    &.ods-collapsible-trigger--big-block::after {
       content: map.get(icon-map.$icons, "minus-sign");
     }
 
-    &.osg-collapsible-trigger--block::after,
-    &.osg-collapsible-trigger--link::after {
+    &.ods-collapsible-trigger--block::after,
+    &.ods-collapsible-trigger--link::after {
       content: map.get(icon-map.$icons, "chevron-thin-up");
     }
   }
@@ -122,7 +122,7 @@
   }
 }
 
-.osg-collapsible-content {
+.ods-collapsible-content {
   visibility: visible;
 
   &--collapsed {
@@ -163,17 +163,17 @@
     transform: translateZ(0);
     opacity: 1;
 
-    &.osg-collapsible-content--collapsed {
+    &.ods-collapsible-content--collapsed {
       opacity: 0;
     }
   }
 
   &--block {
-    @extend %osg-padding-4;
+    @extend %ods-padding-4;
   }
 
   &--big-block {
-    @extend %osg-padding-horizontal-5;
-    @extend %osg-padding-vertical-4;
+    @extend %ods-padding-horizontal-5;
+    @extend %ods-padding-vertical-4;
   }
 }

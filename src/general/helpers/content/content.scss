@@ -6,112 +6,112 @@
 @use "components/paragraph/paragraph";
 @use "components/table/table";
 
-.osg-content {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  @extend %osg-text--weight-light;
+.ods-content {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-light;
 
   :last-child {
-    @extend %osg-margin-bottom-0;
+    @extend %ods-margin-bottom-0;
   }
 
   h2 {
-    @extend %osg-text--size-hotel, %osg-text--size-foxtrot-breakpoint-medium, %osg-text--size-delta-breakpoint-large;
-    @extend %osg-margin-bottom-1, %osg-margin-bottom-2-breakpoint-medium;
+    @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
+    @extend %ods-margin-bottom-1, %ods-margin-bottom-2-breakpoint-medium;
   }
 
   h3 {
-    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large;
-    @extend %osg-text--weight-medium;
-    @extend %osg-margin-bottom-1, %osg-margin-bottom-2-breakpoint-medium;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
+    @extend %ods-text--weight-medium;
+    @extend %ods-margin-bottom-1, %ods-margin-bottom-2-breakpoint-medium;
   }
 
   h4 {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
-    @extend %osg-margin-bottom-1;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
+    @extend %ods-margin-bottom-1;
   }
 
   p {
-    @extend %osg-paragraph;
+    @extend %ods-paragraph;
   }
 
   p + p {
-    @extend %osg-margin-top-5;
+    @extend %ods-margin-top-5;
   }
 
   p + h2 {
-    @extend %osg-margin-top-8, %osg-margin-top-13-breakpoint-medium;
+    @extend %ods-margin-top-8, %ods-margin-top-13-breakpoint-medium;
   }
 
   p + h3,
   p + h4 {
-    @extend %osg-margin-top-5;
+    @extend %ods-margin-top-5;
   }
 
   h2 + h3 {
-    @extend %osg-margin-top-5;
+    @extend %ods-margin-top-5;
   }
 
-  a:not(.osg-button) {
-    @extend .osg-link; /* stylelint-disable-line */
+  a:not(.ods-button) {
+    @extend .ods-link; /* stylelint-disable-line */
   }
 
   ul {
-    @extend .osg-unordered-list, %osg-margin-vertical-5; /* stylelint-disable-line */
+    @extend .ods-unordered-list, %ods-margin-vertical-5; /* stylelint-disable-line */
 
     ul,
     ul ul {
-      @extend %osg-margin-vertical-0;
+      @extend %ods-margin-vertical-0;
 
       padding-left: 1.25rem;
     }
 
     li + li {
-      @extend %osg-padding-top-3;
+      @extend %ods-padding-top-3;
     }
   }
 
   ol {
-    @extend .osg-ordered-list, %osg-margin-vertical-5; /* stylelint-disable-line */
+    @extend .ods-ordered-list, %ods-margin-vertical-5; /* stylelint-disable-line */
 
     ol,
     ol ol {
-      @extend %osg-margin-vertical-0;
+      @extend %ods-margin-vertical-0;
 
       padding-left: 1.25rem;
     }
 
     li + li {
-      @extend %osg-padding-top-3;
+      @extend %ods-padding-top-3;
     }
   }
 
   blockquote {
-    @extend .osg-blockquote, %osg-margin-vertical-8; /* stylelint-disable-line */
+    @extend .ods-blockquote, %ods-margin-vertical-8; /* stylelint-disable-line */
   }
 
   table {
-    @extend .osg-table, %osg-margin-vertical-8; /* stylelint-disable-line */
+    @extend .ods-table, %ods-margin-vertical-8; /* stylelint-disable-line */
 
     caption {
-      @extend .osg-table__caption; /* stylelint-disable-line */
+      @extend .ods-table__caption; /* stylelint-disable-line */
     }
 
     thead {
-      @extend .osg-table__head; /* stylelint-disable-line */
+      @extend .ods-table__head; /* stylelint-disable-line */
     }
 
     tbody {
-      @extend .osg-table__body; /* stylelint-disable-line */
+      @extend .ods-table__body; /* stylelint-disable-line */
     }
 
     tr {
-      @extend .osg-table__row; /* stylelint-disable-line */
+      @extend .ods-table__row; /* stylelint-disable-line */
     }
 
     th,
     td {
-      @extend .osg-table__cell; /* stylelint-disable-line */
+      @extend .ods-table__cell; /* stylelint-disable-line */
     }
   }
 }

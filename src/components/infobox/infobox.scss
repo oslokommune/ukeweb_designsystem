@@ -5,15 +5,15 @@
 @use "system/spacing";
 @use "sass:map";
 
-.osg-infobox {
-  @extend %osg-padding-8;
+.ods-infobox {
+  @extend %ods-padding-8;
 
   background-color: colors.$blue-light;
 
   &__heading {
-    @extend %osg-margin-bottom-1;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-margin-bottom-1;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
   }
 
   &--yellow {
@@ -32,9 +32,9 @@
   }
 
   &__trigger {
-    @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-padding-horizontal-5, %ods-padding-vertical-4, %ods-padding-horizontal-6-breakpoint-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     background-color: colors.$blue-light;
     border: none;
@@ -62,11 +62,11 @@
     }
   }
 
-  & .osg-collapsible-trigger--expanded::after {
+  & .ods-collapsible-trigger--expanded::after {
     content: map.get(icon-map.$icons, "minus-sign") !important;
   }
 
-  & .osg-collapsible-trigger::after {
+  & .ods-collapsible-trigger::after {
     font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     font-size: 1.5rem;
     content: map.get(icon-map.$icons, "plus-sign");
@@ -88,7 +88,7 @@
   }
 
   &__content {
-    @extend %osg-padding-horizontal-5, %osg-padding-vertical-4, %osg-padding-horizontal-6-breakpoint-medium;
+    @extend %ods-padding-horizontal-5, %ods-padding-vertical-4, %ods-padding-horizontal-6-breakpoint-medium;
 
     background-color: #d8f9ff;
   }

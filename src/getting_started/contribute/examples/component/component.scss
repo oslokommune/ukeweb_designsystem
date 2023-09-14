@@ -1,5 +1,5 @@
 /**
- * The purpose of this file is to show best practice for SCSS and BEM in OSG.
+ * The purpose of this file is to show best practice for SCSS and BEM in ODS.
  * Comments are plentiful because of this, but rarely necessary in actual components.
  *
  * Make sure to only @use from system and the component itself if SCSS is split into multiple files
@@ -19,7 +19,7 @@
  * 2. Child element styles
  * 3. Modifiers
  */
-.osg-example-component {
+.ods-example-component {
   /**
    * 1. Main class styles
    */
@@ -37,7 +37,7 @@
   * Nested elements are written as if they were level 1 elements, direct children of the main class.
   */
   &__logo {
-    @extend %osg-padding-horizontal-8, %osg-padding-vertical-5;
+    @extend %ods-padding-horizontal-8, %ods-padding-vertical-5;
 
     width: 100%;
     line-height: 0;
@@ -76,19 +76,19 @@
   }
 
   &__content {
-    @extend %osg-padding-8;
+    @extend %ods-padding-8;
 
     background-color: colors.$beige;
   }
 
   &__heading {
-    @extend %osg-margin-bottom-8;
-    @extend %osg-text--size-foxtrot;
-    @extend %osg-text--weight-medium;
+    @extend %ods-margin-bottom-8;
+    @extend %ods-text--size-foxtrot;
+    @extend %ods-text--weight-medium;
   }
 
   &__text {
-    @extend %osg-text--size-juliett;
+    @extend %ods-text--size-juliett;
   }
 
   &__footer {
@@ -113,14 +113,14 @@
     /**
      * If by chance a naming conflict occurs in a component where mulitple areas share the same name and
      * it cannot be resolved by renaming, use specificity to resolve the situation.
-     * Class resolves to: .osg-example-component__footer .osg-example-component__text
+     * Class resolves to: .ods-example-component__footer .ods-example-component__text
      *
      * ::before showcase the use of icon in sass. Notice the margin-left calculation in the parent
      * component whose purpose is to create enough space for the icon even when the font-size is
      * scaled in the browser.
      */
-    .osg-example-component__text {
-      @extend %osg-text--size-lima;
+    .ods-example-component__text {
+      @extend %ods-text--size-lima;
 
       margin-left: calc(#{units.unit-to-rem(8)} + 1.3em);
 
@@ -140,19 +140,19 @@
    * Adding some modifiers to make the component in different colors
    */
   &--green-light {
-    .osg-example-component__content {
+    .ods-example-component__content {
       background-color: colors.$green-light;
     }
   }
 
   &--red-light {
-    .osg-example-component__content {
+    .ods-example-component__content {
       background-color: colors.$red-light;
     }
   }
 
   &--blue-light {
-    .osg-example-component__content {
+    .ods-example-component__content {
       background-color: colors.$blue-light;
     }
   }
