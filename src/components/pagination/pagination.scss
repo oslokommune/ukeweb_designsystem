@@ -6,110 +6,110 @@
 @use "sass:map";
 
 .ods-pagination {
-    &__spacer {
-        cursor: default;
-        transform: translateY(-0.25rem);
-        display: inline-block;
-        @extend %ods-padding-horizontal-1;
+  &__spacer {
+    cursor: default;
+    transform: translateY(-0.25rem);
+    display: inline-block;
+    @extend %ods-padding-horizontal-1;
+  }
+
+  &__item {
+    @extend %ods-padding-1;
+    @extend %ods-text--size-kilo;
+    @extend %ods-text--weight-medium;
+
+    line-height: 1.5rem;
+    box-sizing: content-box;
+    width: 1.5em;
+    background: transparent;
+    border: 2px solid transparent;
+    color: colors.$blue-dark;
+    display: inline-block;
+    font-family: inherit;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: colors.$gray-light;
+      border-color: colors.$gray-light;
+      color: states.$hover !important;
     }
 
-    &__item {
-        @extend %ods-padding-1;
-        @extend %ods-text--size-kilo;
-        @extend %ods-text--weight-medium;
-
-        line-height: 1.5rem;
-        box-sizing: content-box;
-        width: 1.5em;
-        background: transparent;
-        border: 2px solid transparent;
-        color: colors.$blue-dark;
-        display: inline-block;
-        font-family: inherit;
-        text-decoration: underline;
-        text-align: center;
-        border-radius: 50%;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-            background-color: colors.$gray-light;
-            border-color: colors.$gray-light;
-            color: states.$hover !important;
-        }
-
-        &:active {
-            background-color: transparent;
-            border-color: transparent;
-            text-decoration: underline;
-            color: states.$active;
-        }
-
-        &--current {
-            color: colors.$white;
-            background: colors.$blue-dark;
-            border: 2px solid colors.$blue-dark;
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-                background: states.$hover !important;
-                border: 2px solid states.$hover !important;
-                text-decoration: underline !important;
-                color: states.$hover-text !important;
-            }
-
-            &:disabled {
-                color: colors.$white !important;
-                background: colors.$blue-dark !important;
-                border: 2px solid colors.$blue-dark !important;
-                text-decoration: none !important;
-            }
-        }
-
-        &--rectangle {
-            border-radius: 0;
-            width: auto;
-            @extend %ods-padding-horizontal-3, %ods-padding-vertical-1;
-        }
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      text-decoration: underline;
+      color: states.$active;
     }
 
-    &__previous {
-        &::before,
-        &:hover::before {
-            content: map.get(icon-map.$icons, "chevron-thin-left") !important;
-        }
+    &--current {
+      color: colors.$white;
+      background: colors.$blue-dark;
+      border: 2px solid colors.$blue-dark;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background: states.$hover !important;
+        border: 2px solid states.$hover !important;
+        text-decoration: underline !important;
+        color: states.$hover-text !important;
+      }
+
+      &:disabled {
+        color: colors.$white !important;
+        background: colors.$blue-dark !important;
+        border: 2px solid colors.$blue-dark !important;
+        text-decoration: none !important;
+      }
     }
 
-    &__next {
-        &::before,
-        &:hover::before {
-            content: map.get(icon-map.$icons, "chevron-thin-right") !important;
-        }
+    &--rectangle {
+      border-radius: 0;
+      width: auto;
+      @extend %ods-padding-horizontal-3, %ods-padding-vertical-1;
+    }
+  }
+
+  &__previous {
+    &::before,
+    &:hover::before {
+      content: map.get(icon-map.$icons, "chevron-thin-left") !important;
+    }
+  }
+
+  &__next {
+    &::before,
+    &:hover::before {
+      content: map.get(icon-map.$icons, "chevron-thin-right") !important;
+    }
+  }
+
+  &__previous,
+  &__next {
+    background: none;
+    border: none;
+    display: inline-block;
+    @extend %ods-text--size-golf;
+
+    line-height: 1em;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::before,
+    &:hover::before {
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      padding: 0.438rem;
     }
 
-    &__previous,
-    &__next {
-        background: none;
-        border: none;
-        display: inline-block;
-        @extend %ods-text--size-golf;
-
-        line-height: 1em;
-        vertical-align: middle;
-        position: relative;
-        text-decoration: none;
-        cursor: pointer;
-
-        &::before,
-        &:hover::before {
-            font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-            padding: 0.438rem;
-        }
-
-        &:hover::before {
-            background-color: colors.$gray-light !important;
-            border-radius: 50%;
-        }
+    &:hover::before {
+      background-color: colors.$gray-light !important;
+      border-radius: 50%;
     }
+  }
 }
