@@ -5,149 +5,149 @@
 @use "system/states";
 
 .ods-status-card {
-    &__content {
-        @extend %ods-padding-vertical-4, %ods-padding-horizontal-3, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-8-breakpoint-large;
+  &__content {
+    @extend %ods-padding-vertical-4, %ods-padding-horizontal-3, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-8-breakpoint-large;
 
+    background-color: colors.$gray-light;
+  }
+
+  &__heading {
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large, %ods-text--weight-medium, %ods-margin-bottom-4;
+  }
+
+  &__text {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
+  }
+
+  &__pretext {
+    @extend %ods-text--size-lima, %ods-text--weight-light, %ods-margin-bottom-4;
+  }
+
+  &__actions {
+    @extend %ods-padding-top-8;
+  }
+
+  &__footer {
+    @extend %ods-padding-3, %ods-padding-vertical-3-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-vertical-3-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
+    @extend %ods-text--size-lima, %ods-text--weight-light;
+
+    background-color: colors.$gray;
+    flex-basis: 100%;
+  }
+
+  &__status {
+    @extend %ods-margin-left-4;
+
+    .ods-icon {
+      line-height: 1em !important;
+      @extend %ods-text--size-foxtrot;
+    }
+  }
+
+  &__symbol {
+    &::after {
+      animation: status-card-red-pulse 2s infinite;
+      background-color: colors.$red;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
+      content: "";
+      display: inline-block;
+      height: 12px;
+      margin-right: 9px;
+      margin-top: 9px;
+      width: 12px;
+    }
+  }
+
+  &--status {
+    border-left: 10px solid colors.$gray;
+
+    &--yellow {
+      border-color: colors.$yellow;
+
+      & .ods-status-card__footer {
+        background-color: colors.$beige;
+      }
+    }
+
+    &--red,
+    &--blue {
+      border-color: colors.$red;
+
+      & .ods-status-card__content {
+        display: flex;
+      }
+
+      & .ods-status-card__footer {
+        background-color: colors.$red-light;
+      }
+
+      & .ods-status-card__actions {
         background-color: colors.$gray-light;
-    }
-
-    &__heading {
-        @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large, %ods-text--weight-medium, %ods-margin-bottom-4;
-    }
-
-    &__text {
-        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
-    }
-
-    &__pretext {
-        @extend %ods-text--size-lima, %ods-text--weight-light, %ods-margin-bottom-4;
-    }
-
-    &__actions {
-        @extend %ods-padding-top-8;
-    }
-
-    &__footer {
-        @extend %ods-padding-3, %ods-padding-vertical-3-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-vertical-3-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
-        @extend %ods-text--size-lima, %ods-text--weight-light;
-
-        background-color: colors.$gray;
         flex-basis: 100%;
+        @extend %ods-padding-horizontal-3, %ods-padding-top-3, %ods-padding-bottom-8;
+      }
     }
 
-    &__status {
-        @extend %ods-margin-left-4;
 
-        .ods-icon {
-            line-height: 1em !important;
-            @extend %ods-text--size-foxtrot;
-        }
+    &--blue {
+      border-color: colors.$blue;
+
+      & .ods-status-card__content {
+        display: flex;
+      }
+
+      & .ods-status-card__footer {
+        background-color: colors.$blue-light;
+      }
     }
 
-    &__symbol {
-        &::after {
-            animation: status-card-red-pulse 2s infinite;
-            background-color: colors.$red;
-            border-radius: 50%;
-            box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
-            content: "";
-            display: inline-block;
-            height: 12px;
-            margin-right: 9px;
-            margin-top: 9px;
-            width: 12px;
-        }
+    &--green {
+      border-color: colors.$green;
+
+      & .ods-status-card__footer {
+        background-color: colors.$green-light;
+      }
     }
 
-    &--status {
-        border-left: 10px solid colors.$gray;
-
-        &--yellow {
-            border-color: colors.$yellow;
-
-            & .ods-status-card__footer {
-                background-color: colors.$beige;
-            }
-        }
-
-        &--red,
-        &--blue {
-            border-color: colors.$red;
-
-            & .ods-status-card__content {
-                display: flex;
-            }
-
-            & .ods-status-card__footer {
-                background-color: colors.$red-light;
-            }
-
-            & .ods-status-card__actions {
-                background-color: colors.$gray-light;
-                flex-basis: 100%;
-                @extend %ods-padding-horizontal-3, %ods-padding-top-3, %ods-padding-bottom-8;
-            }
-        }
-
-
-        &--blue {
-            border-color: colors.$blue;
-
-            & .ods-status-card__content {
-                display: flex;
-            }
-
-            & .ods-status-card__footer {
-                background-color: colors.$blue-light;
-            }
-        }
-
-        &--green {
-            border-color: colors.$green;
-
-            & .ods-status-card__footer {
-                background-color: colors.$green-light;
-            }
-        }
-
-        &--no-bar {
-            border-left: none;
-        }
-
-        & .ods-status-card__collapsible {
-            &:active,
-            &:hover,
-            &:focus {
-                text-decoration: none !important;
-            }
-        }
+    &--no-bar {
+      border-left: none;
     }
 
-    &__link {
-        text-decoration: none;
-
-        &:hover {
-            .ods-status-card__content {
-                color: states.$hover !important;
-            }
-
-            .ods-status-card__heading {
-                text-decoration: underline;
-            }
-        }
+    & .ods-status-card__collapsible {
+      &:active,
+      &:hover,
+      &:focus {
+        text-decoration: none !important;
+      }
     }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      .ods-status-card__content {
+        color: states.$hover !important;
+      }
+
+      .ods-status-card__heading {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @keyframes status-card-red-pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
-    }
+  0% {
+    box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
+  }
 
-    80% {
-        box-shadow: 0 0 0 10px rgba(colors.$red, 0);
-    }
+  80% {
+    box-shadow: 0 0 0 10px rgba(colors.$red, 0);
+  }
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(colors.$red, 0);
-    }
+  100% {
+    box-shadow: 0 0 0 0 rgba(colors.$red, 0);
+  }
 }

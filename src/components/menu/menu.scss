@@ -10,278 +10,278 @@
 @use "sass:map";
 
 .ods-button-menu {
-    @extend %ods-padding-2, %ods-padding-horizontal-4-breakpoint-large;
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-text--weight-medium;
+  @extend %ods-padding-2, %ods-padding-horizontal-4-breakpoint-large;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-medium;
 
-    background-color: transparent;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    box-sizing: content-box;
-    color: colors.$blue-dark;
-    cursor: pointer;
-    display: inline-block;
-    height: 1.5rem;
-    font-family: inherit;
-    outline: none;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    width: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-sizing: content-box;
+  color: colors.$blue-dark;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.5rem;
+  font-family: inherit;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 1.5rem;
+
+  @include breakpoints.medium {
+    border-radius: 0;
+    border: 2px solid colors.$blue-dark;
+    padding-left: units.unit-to-rem(4);
+    padding-right: units.unit-to-rem(4);
+    width: unset;
+  }
+
+  @include breakpoints.large {
+    height: 1.75rem;
+  }
+
+  &__text {
+    @extend %ods-sr-only;
+
+    pointer-events: none;
 
     @include breakpoints.medium {
-        border-radius: 0;
-        border: 2px solid colors.$blue-dark;
-        padding-left: units.unit-to-rem(4);
-        padding-right: units.unit-to-rem(4);
-        width: unset;
+      border: unset !important;
+      clip: unset !important;
+      height: unset !important;
+      overflow: unset !important;
+      padding: unset !important;
+      position: unset !important;
+      white-space: unset !important;
+      width: unset !important;
+    }
+  }
+
+  &__icon {
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-large;
+    @extend %ods-margin-left-3-breakpoint-large;
+
+    line-height: 1.5rem;
+
+    @include breakpoints.medium {
+      margin-left: units.unit-to-rem(1);
     }
 
     @include breakpoints.large {
-        height: 1.75rem;
+      line-height: 1.75rem;
     }
 
-    &__text {
-        @extend %ods-sr-only;
+    display: inline-block;
+    vertical-align: top;
 
-        pointer-events: none;
-
-        @include breakpoints.medium {
-            border: unset !important;
-            clip: unset !important;
-            height: unset !important;
-            overflow: unset !important;
-            padding: unset !important;
-            position: unset !important;
-            white-space: unset !important;
-            width: unset !important;
-        }
+    &::before {
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "menu") !important;
     }
+  }
 
-    &__icon {
-        @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-large;
-        @extend %ods-margin-left-3-breakpoint-large;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: colors.$gray;
+    color: colors.$blue-state;
 
-        line-height: 1.5rem;
+    @include breakpoints.medium {
+      border-color: colors.$blue-state;
+      background-color: transparent;
 
-        @include breakpoints.medium {
-            margin-left: units.unit-to-rem(1);
-        }
-
-        @include breakpoints.large {
-            line-height: 1.75rem;
-        }
-
-        display: inline-block;
-        vertical-align: top;
-
-        &::before {
-            font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-            content: map.get(icon-map.$icons, "menu") !important;
-        }
+      & .ods-button-menu__text {
+        text-decoration: underline;
+      }
     }
+  }
+
+  &--open {
+    background-color: colors.$blue-state;
+    border-color: colors.$blue-state;
+    color: colors.$white;
 
     &:active,
     &:focus,
     &:hover {
-        background-color: colors.$gray;
-        color: colors.$blue-state;
-
-        @include breakpoints.medium {
-            border-color: colors.$blue-state;
-            background-color: transparent;
-
-            & .ods-button-menu__text {
-                text-decoration: underline;
-            }
-        }
+      background-color: colors.$blue-state;
+      border-color: colors.$blue-state;
+      color: colors.$white;
     }
 
-    &--open {
-        background-color: colors.$blue-state;
-        border-color: colors.$blue-state;
-        color: colors.$white;
-
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: colors.$blue-state;
-            border-color: colors.$blue-state;
-            color: colors.$white;
-        }
-
-        & .ods-button-menu__icon {
-            &::before {
-                content: map.get(icon-map.$icons, "close") !important;
-            }
-        }
+    & .ods-button-menu__icon {
+      &::before {
+        content: map.get(icon-map.$icons, "close") !important;
+      }
     }
+  }
 }
 
 .ods-navbar-menu {
-    background-color: colors.$white;
-    display: none;
+  background-color: colors.$white;
+  display: none;
+
+  .ods-icon {
+    font-size: 1.5rem;
+    @include breakpoints.medium {
+      font-size: 2rem;
+    }
+  }
+
+  &__heading-collapsable {
+    background-color: unset;
+    border: none;
+    color: colors.$blue-dark;
+    cursor: pointer;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @include typography.weight("light");
+    @extend %ods-margin-bottom-4;
+    @extend %ods-padding-horizontal-0;
+    @extend %ods-none-breakpoint-medium;
+
+    span {
+      pointer-events: none;
+      vertical-align: middle;
+    }
+  }
+
+  &__heading {
+    @extend %ods-none, %ods-block-breakpoint-medium;
+    @extend %ods-text--size-juliett, %ods-text--size-hotel-breakpoint-medium;
+    @include typography.weight("medium");
+  }
+
+  &__list-animate {
+    max-height: 0;
+    overflow: hidden;
+
+    @include breakpoints.medium {
+      max-height: unset;
+    }
+
+    &--open {
+      max-height: 695px;
+      transition: all 0.7s ease;
+    }
+
+    &--close {
+      max-height: 0;
+      transition: all 0.7s ease;
+
+      @include breakpoints.medium {
+        max-height: unset;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+    display: flex;
+    font-size: inherit;
+    flex-direction: row;
+    text-decoration: none;
+
+    @include mixins.states {
+      .ods-navbar-menu__link-content .ods-navbar-menu__link-text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__link-icon {
+    @extend %ods-margin-right-4;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+
+    > * {
+      line-height: 1.5em !important;
+    }
+  }
+
+  &__link-content {
+    line-height: 2.375em;
+    @include breakpoints.medium {
+      line-height: 3.125em;
+    }
+  }
+
+  &__link-text {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+
+    display: inline-block;
+  }
+
+  &__services {
+    @extend %ods-padding-top-8, %ods-padding-bottom-4, %ods-padding-horizontal-0;
+    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+  }
+
+  &__categories {
+    @extend %ods-padding-top-1, %ods-padding-horizontal-0, %ods-padding-bottom-4;
+    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+
+    ul {
+      background-color: colors.$gray;
+      @extend %ods-margin-top-8-breakpoint-medium;
+
+      li {
+        @extend %ods-margin-left-3;
+        @extend %ods-margin-left-0-breakpoint-medium;
+      }
+    }
+
+    @include breakpoints.medium {
+      background-color: colors.$gray;
+    }
+  }
+
+  &__services-list {
+    @extend %ods-padding-vertical-0, %ods-padding-horizontal-3;
+    @extend %ods-margin-top-8-breakpoint-medium;
+    @extend %ods-padding-0-breakpoint-medium;
+
+    background-color: colors.$gray;
+
+    @include breakpoints.medium {
+      background-color: unset;
+      hyphens: auto;
+      flex-wrap: wrap;
+    }
+
+    li:last-child {
+      @extend %ods-margin-bottom-3;
+
+      @include breakpoints.medium {
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  &__footer {
+    @extend %ods-padding-vertical-4-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+  }
+
+  &__footer-list {
+    @extend %ods-margin-top-8, %ods-margin-top-0-breakpoint-medium;
+
+    justify-content: flex-start;
+
+    &--media {
+      display: flex;
+      @extend %ods-margin-top-13;
+      @extend %ods-margin-top-0-breakpoint-medium;
+
+      @include breakpoints.medium {
+        justify-content: flex-end;
+      }
+
+      & .ods-navbar-menu__link-content {
+        @extend %ods-padding-right-8, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-13-breakpoint-medium;
+      }
+    }
 
     .ods-icon {
-        font-size: 1.5rem;
-        @include breakpoints.medium {
-            font-size: 2rem;
-        }
+      font-size: 1.5rem;
     }
-
-    &__heading-collapsable {
-        background-color: unset;
-        border: none;
-        color: colors.$blue-dark;
-        cursor: pointer;
-        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-        @include typography.weight("light");
-        @extend %ods-margin-bottom-4;
-        @extend %ods-padding-horizontal-0;
-        @extend %ods-none-breakpoint-medium;
-
-        span {
-            pointer-events: none;
-            vertical-align: middle;
-        }
-    }
-
-    &__heading {
-        @extend %ods-none, %ods-block-breakpoint-medium;
-        @extend %ods-text--size-juliett, %ods-text--size-hotel-breakpoint-medium;
-        @include typography.weight("medium");
-    }
-
-    &__list-animate {
-        max-height: 0;
-        overflow: hidden;
-
-        @include breakpoints.medium {
-            max-height: unset;
-        }
-
-        &--open {
-            max-height: 695px;
-            transition: all 0.7s ease;
-        }
-
-        &--close {
-            max-height: 0;
-            transition: all 0.7s ease;
-
-            @include breakpoints.medium {
-                max-height: unset;
-            }
-        }
-    }
-
-    &__link {
-        color: inherit;
-        display: flex;
-        font-size: inherit;
-        flex-direction: row;
-        text-decoration: none;
-
-        @include mixins.states {
-            .ods-navbar-menu__link-content .ods-navbar-menu__link-text {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__link-icon {
-        @extend %ods-margin-right-4;
-        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-
-        > * {
-            line-height: 1.5em !important;
-        }
-    }
-
-    &__link-content {
-        line-height: 2.375em;
-        @include breakpoints.medium {
-            line-height: 3.125em;
-        }
-    }
-
-    &__link-text {
-        @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-
-        display: inline-block;
-    }
-
-    &__services {
-        @extend %ods-padding-top-8, %ods-padding-bottom-4, %ods-padding-horizontal-0;
-        @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
-    }
-
-    &__categories {
-        @extend %ods-padding-top-1, %ods-padding-horizontal-0, %ods-padding-bottom-4;
-        @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
-
-        ul {
-            background-color: colors.$gray;
-            @extend %ods-margin-top-8-breakpoint-medium;
-
-            li {
-                @extend %ods-margin-left-3;
-                @extend %ods-margin-left-0-breakpoint-medium;
-            }
-        }
-
-        @include breakpoints.medium {
-            background-color: colors.$gray;
-        }
-    }
-
-    &__services-list {
-        @extend %ods-padding-vertical-0, %ods-padding-horizontal-3;
-        @extend %ods-margin-top-8-breakpoint-medium;
-        @extend %ods-padding-0-breakpoint-medium;
-
-        background-color: colors.$gray;
-
-        @include breakpoints.medium {
-            background-color: unset;
-            hyphens: auto;
-            flex-wrap: wrap;
-        }
-
-        li:last-child {
-            @extend %ods-margin-bottom-3;
-
-            @include breakpoints.medium {
-                margin-bottom: unset;
-            }
-        }
-    }
-
-    &__footer {
-        @extend %ods-padding-vertical-4-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
-    }
-
-    &__footer-list {
-        @extend %ods-margin-top-8, %ods-margin-top-0-breakpoint-medium;
-
-        justify-content: flex-start;
-
-        &--media {
-            display: flex;
-            @extend %ods-margin-top-13;
-            @extend %ods-margin-top-0-breakpoint-medium;
-
-            @include breakpoints.medium {
-                justify-content: flex-end;
-            }
-
-            & .ods-navbar-menu__link-content {
-                @extend %ods-padding-right-8, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-13-breakpoint-medium;
-            }
-        }
-
-        .ods-icon {
-            font-size: 1.5rem;
-        }
-    }
+  }
 }
