@@ -18,11 +18,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed contribute "clean" page to better help contributors
 - Changed contribute "page" page to better help contributors
 - Changed documentation on contribution/basic page
+- Changed README to reflect 1.0 release
+- Changed folder and navigation structure for pages and templates
+- Changed folder and navigation structure for colors
 
 ### Fixed
 
 - Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
+- Fix broken link on collapisble page
+
+### Removed
+
+- "Oslo" folder and files
+- "Palette" folder
 
 ## [0.99.106] - 01-06-2023
 
