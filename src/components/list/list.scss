@@ -1,39 +1,39 @@
 @use "system/spacing";
 
-.osg-unordered-list {
+.ods-unordered-list {
   padding-left: 1.25rem;
   list-style: disc;
 
   & & {
-    @extend %osg-padding-top-2;
+    @extend %ods-padding-top-2;
 
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-2;
+    @extend %ods-padding-top-2;
   }
 
   &--clean {
-    @extend %osg-padding-left-0;
+    @extend %ods-padding-left-0;
 
     list-style: none;
   }
 }
 
-.osg-ordered-list {
+.ods-ordered-list {
   padding-left: 1.25rem;
   list-style: decimal;
   list-style-position: inside;
 
   & & {
-    @extend %osg-padding-top-2;
+    @extend %ods-padding-top-2;
 
     padding-left: 1.25rem;
   }
 
   &__item + &__item {
-    @extend %osg-padding-top-2;
+    @extend %ods-padding-top-2;
   }
 
   &--lower-roman {

@@ -7,7 +7,7 @@
 @use "system/states";
 @use "sass:map";
 
-.osg-search-seasons {
+.ods-search-seasons {
   display: flex;
   font-size: 0;
 
@@ -35,7 +35,7 @@
   }
 
   &__image {
-    @extend %osg-margin-left-4, %osg-margin-left-8-breakpoint-medium;
+    @extend %ods-margin-left-4, %ods-margin-left-8-breakpoint-medium;
 
     display: none;
     flex: 1 0;
@@ -52,7 +52,7 @@
   }
 
   &__search {
-    @extend %osg-margin-top-8;
+    @extend %ods-margin-top-8;
   }
 
   &__input-wrapper {
@@ -66,9 +66,9 @@
   }
 
   &__input {
-    @extend %osg-padding-3;
-    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-large;
-    @extend %osg-text--weight-light;
+    @extend %ods-padding-3;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-large;
+    @extend %ods-text--weight-light;
 
     background-color: colors.$white;
     border: 0.125rem solid colors.$white;
@@ -90,7 +90,7 @@
     }
 
     &::-webkit-search-cancel-button {
-      background: url("/node_modules/styleguide/src/assets/icons/cross.svg") no-repeat;
+      background: url("/node_modules/@oslokommune/oslo-designsystem/src/assets/icons/cross.svg") no-repeat;
       background-size: contain;
       height: 2rem;
       margin-right: -5px;
@@ -106,7 +106,7 @@
     }
 
     &::placeholder {
-      @extend %osg-color-text-grayscale-50;
+      @extend %ods-color-text-grayscale-50;
     }
   }
 
@@ -131,8 +131,8 @@
     }
 
     &::after {
-      @extend %osg-text--size-delta;
-      @extend %osg-text--weight-medium;
+      @extend %ods-text--size-delta;
+      @extend %ods-text--weight-medium;
 
       content: map.get(icon-map.$icons, "magnifying-glass-small") !important;
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
@@ -148,7 +148,7 @@
   }
 
   &__container {
-    @extend %osg-color-text-blue-dark;
+    @extend %ods-color-text-blue-dark;
 
     background-color: colors.$white;
     box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
@@ -160,26 +160,26 @@
   }
 
   &__no-result {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-4;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-4;
 
     display: block;
   }
 
   &__missing-input {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-text--align-center;
-    @extend %osg-padding-horizontal-4, %osg-padding-vertical-3;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-text--align-center;
+    @extend %ods-padding-horizontal-4, %ods-padding-vertical-3;
 
     display: block;
   }
 
   &__suggestion {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-horizontal-4;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-horizontal-4;
 
     display: block;
 
@@ -194,39 +194,39 @@
 
   &__dropdown {
     &--compact {
-      @extend %osg-padding-vertical-4;
+      @extend %ods-padding-vertical-4;
 
-      & .osg-search-seasons__suggestion {
-        @extend %osg-padding-vertical-1;
+      & .ods-search-seasons__suggestion {
+        @extend %ods-padding-vertical-1;
       }
     }
   }
 
   &__item {
     &--footer {
-      @extend %osg-text--size-lima;
-      @extend %osg-text--weight-regular;
-      @extend %osg-padding-horizontal-4;
+      @extend %ods-text--size-lima;
+      @extend %ods-text--weight-regular;
+      @extend %ods-padding-horizontal-4;
 
       &-first {
-        @extend %osg-padding-top-4;
+        @extend %ods-padding-top-4;
       }
 
       &-last {
-        @extend %osg-padding-bottom-4;
+        @extend %ods-padding-bottom-4;
       }
     }
   }
 
   &__heading {
-    @extend %osg-text--size-juliett;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-juliett;
+    @extend %ods-text--weight-medium;
   }
 
   &__link {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-padding-4;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-4;
 
     display: block;
     text-decoration: none;
@@ -239,9 +239,9 @@
       text-decoration: none;
     }
 
-    &--focus .osg-search-seasons__heading,
-    &:hover .osg-search-seasons__heading,
-    &:focus .osg-search-seasons__heading {
+    &--focus .ods-search-seasons__heading,
+    &:hover .ods-search-seasons__heading,
+    &:focus .ods-search-seasons__heading {
       text-decoration: underline;
     }
 
@@ -252,36 +252,36 @@
 
 
   &__text {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
-    @extend %osg-margin-top-1;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
+    @extend %ods-margin-top-1;
   }
 
   &--red {
-    & .osg-search-seasons__main {
+    & .ods-search-seasons__main {
       background-color: colors.$red;
     }
 
-    & .osg-search-seasons__button {
+    & .ods-search-seasons__button {
       background-color: colors.$yellow;
       border-color: colors.$yellow;
       color: colors.$blue-dark;
     }
   }
 
-  & .osg-search-seasons__input {
+  & .ods-search-seasons__input {
     &:hover,
     &:focus {
       border-color: states.$hover-light !important;
     }
-    
+
     &--blue-dark {
-      & .osg-search-seasons__main {
+      & .ods-search-seasons__main {
         background-color: colors.$blue-dark;
         color: colors.$white;
       }
 
-      & .osg-search-seasons__button {
+      & .ods-search-seasons__button {
         background-color: colors.$blue-light;
         border-color: colors.$blue-light;
         color: colors.$blue-dark;
@@ -294,7 +294,7 @@
         }
       }
 
-      & .osg-search-seasons__input {
+      & .ods-search-seasons__input {
         &:hover,
         &:focus {
           border-color: states.$hover-light !important;
@@ -303,12 +303,12 @@
     }
 
     &--green-dark {
-      & .osg-search-seasons__main {
+      & .ods-search-seasons__main {
         background-color: colors.$green-dark;
         color: colors.$white;
       }
 
-      & .osg-search-seasons__button {
+      & .ods-search-seasons__button {
         background-color: colors.$green-light;
         border-color: colors.$green-light;
         color: colors.$blue-dark;

@@ -5,8 +5,8 @@
 @use "system/units";
 @use "system/states";
 
-.osg-personalized-content-link {
-  @extend %osg-padding-4, %osg-padding-6-breakpoint-large;
+.ods-personalized-content-link {
+  @extend %ods-padding-4, %ods-padding-6-breakpoint-large;
 
   border: 4px solid colors.$green-light;
   column-gap: units.unit-to-rem(3);
@@ -30,37 +30,37 @@
   }
 
   &__title {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
-    @extend %osg-margin-bottom-1;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
+    @extend %ods-margin-bottom-1;
   }
 
   &__text {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
-  
-  
+
+
   &--hover,
   &--focus,
-  &--active, 
+  &--active,
   &:hover,
   &:focus,
   &:active {
-    .osg-personalized-content-link__text {
+    .ods-personalized-content-link__text {
       color: states.$hover;
     }
-    
-    .osg-personalized-content-link__title {
+
+    .ods-personalized-content-link__title {
       text-decoration: underline;
       color: states.$hover;
     }
   }
-  
+
   &:visited,
   &--visited {
-    .osg-personalized-content-link__title,
-    .osg-personalized-content-link__text {
+    .ods-personalized-content-link__title,
+    .ods-personalized-content-link__text {
       color: states.$visited;
     }
   }
@@ -81,7 +81,7 @@
     }
 
     &--icon-#{$name} {
-      .osg-personalized-content-link__icon {
+      .ods-personalized-content-link__icon {
         color: $color;
       }
     }

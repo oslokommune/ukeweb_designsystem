@@ -1,0 +1,10 @@
+@use "system/colors" as *;
+
+@each $name, $color in $colors {
+  .ods-color-text-#{$name} {
+    @extend %ods-color-text-#{$name};
+  }
+  .ods-color-bg-#{$name} {
+    @extend %ods-color-bg-#{$name};
+  }
+}

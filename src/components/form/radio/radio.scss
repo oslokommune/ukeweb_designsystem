@@ -3,39 +3,39 @@
 @use "system/typography";
 @use "system/spacing";
 
-.osg-radio {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  @extend %osg-text--weight-light;
-  
+.ods-radio {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-light;
+
   align-items: center;
   color: colors.$blue-dark;
   display: flex;
-  
+
   &:focus-within {
     &__label {
       transform: scale(1.05);
       opacity: 1;
     }
   }
-  
+
   &__required {
-    @extend %osg-margin-top-1;
-    @extend %osg-padding-0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-margin-top-1;
+    @extend %ods-padding-0;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
-  
+
   &__label {
     hyphens: auto;
     margin-left: 10px;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }
-  
+
   &--text-align-top {
     align-items: flex-start;
-    
-    .osg-radio__label {
+
+    .ods-radio__label {
       margin-top: -(5px);
     }
   }
@@ -52,28 +52,28 @@
     width: 1em;
     flex-shrink: 0;
   }
-  
+
   &--hover,
   &--focus,
   &:hover,
   &:focus {
-    .osg-radio__control {
+    .ods-radio__control {
       border-color: colors.$blue-state;
     }
-    
-    .osg-radio__label {
+
+    .ods-radio__label {
       color: colors.$blue-state;
     }
-    
-    & input:checked + .osg-radio__control {
+
+    & input:checked + .ods-radio__control {
       background-color: colors.$blue-state;
     }
   }
-  
+
   &__input {
     align-items: inherit;
     display: flex;
-    
+
     & input:checked + &__control {
       background-color: colors.$blue-dark;
     }
@@ -82,14 +82,14 @@
       opacity: 0;
       width: 0;
       height: 0;
-      
-      &:focus + &.osg-radio__control {
+
+      &:focus + &.ods-radio__control {
         box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
       }
     }
-        
+
   }
-  
+
   & input + &__control::before {
     content: "";
     width: 0.4em;
@@ -106,13 +106,13 @@
 
 
   & input:checked ~ &__label {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     line-height: 1.5em !important;
   }
 
-  & input:focus ~ .osg-radio__control {
+  & input:focus ~ .ods-radio__control {
     outline: initial;
     outline: colors.$blue-state solid 1px;
   }
@@ -120,36 +120,36 @@
 
   &--focus,
   &:focus {
-    .osg-radio__label {
-      @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    .ods-radio__label {
+      @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     }
   }
 
   &--disabled,
   &--disabled:hover {
-    & input:disabled:checked + .osg-radio__control {
+    & input:disabled:checked + .ods-radio__control {
       background-color: colors.$grayscale-40;
     }
 
-    .osg-radio__control {
+    .ods-radio__control {
       border-color: colors.$grayscale-40;
     }
 
-    .osg-radio__label {
+    .ods-radio__label {
       color: colors.$grayscale-40;
     }
   }
 
   &--error {
-    & input:checked + .osg-radio__control {
+    & input:checked + .ods-radio__control {
       background-color: colors.$red;
     }
 
-    .osg-radio__control {
+    .ods-radio__control {
       border-color: colors.$red;
     }
 
-    .osg-radio__label {
+    .ods-radio__label {
       color: colors.$red;
     }
   }

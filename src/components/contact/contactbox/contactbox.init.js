@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import OsgMap from '../../map/map.vue';
+import OdsMap from '../../map/map.vue';
 import contactbox from './contactbox';
-import OsgBreakpoints from '../../../general/breakpoints/breakpoints';
+import OdsBreakpoints from '../../../general/breakpoints/breakpoints';
 
 const contactboxInit = {
   init() {
-    window.addEventListener('OsgBreakpointChange', this.breakpointChange, false);
-    this.breakpointChange({ detail: { breakpoint: OsgBreakpoints.getBreakpoint() } });
+    window.addEventListener('OdsBreakpointChange', this.breakpointChange, false);
+    this.breakpointChange({ detail: { breakpoint: OdsBreakpoints.getBreakpoint() } });
   },
 
   breakpointChange(e) {
@@ -21,10 +21,10 @@ const contactboxInit = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const mapElement = document.getElementById('osg-contactbox-custom-content-map');
+  const mapElement = document.getElementById('ods-contactbox-custom-content-map');
 
   if (mapElement) {
-    Vue.component('osg-map', OsgMap);
+    Vue.component('ods-map', OdsMap);
     const vm = new Vue();
     vm.$mount(mapElement);
   }

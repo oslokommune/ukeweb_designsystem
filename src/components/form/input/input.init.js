@@ -1,13 +1,13 @@
 import Vue from 'vue';
-import OsgInput from './input';
-import OsgInputVue from './input.vue';
+import OdsInput from './input';
+import OdsInputVue from './input.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  OsgInput();
+  OdsInput();
 
-  if (document.getElementById('osg-input-vue-1')) {
-    Vue.component('osg-input', OsgInputVue);
+  if (document.getElementById('ods-input-vue-1')) {
+    Vue.component('ods-input', OdsInputVue);
     const vm = new Vue();
-    vm.$mount('#osg-input-vue-1');
+    vm.$mount('#ods-input-vue-1');
   }
 });

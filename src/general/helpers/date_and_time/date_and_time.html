@@ -1,67 +1,67 @@
-<div class="osg-devtools-nondevmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <p class="osg-paragraph">Date and time formatter for javascript and vue. Based on ruleset established in the service www.oslo.kommune.no.</p>
-      <p class="osg-paragraph">Use numbers for date and time in lists and if unsure. Text (name of day and/or month) is used when in combination with other text (paragraphs).</p>
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-paragraph">Date and time formatter for javascript and vue. Based on ruleset established in the service www.oslo.kommune.no.</p>
+      <p class="ods-paragraph">Use numbers for date and time in lists and if unsure. Text (name of day and/or month) is used when in combination with other text (paragraphs).</p>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-infobox osg-infobox--yellow">
-        <h2 class="osg-infobox__heading">Important</h2>
+    <div class="ods-grid__column--12">
+      <div class="ods-infobox ods-infobox--yellow">
+        <h2 class="ods-infobox__heading">Important</h2>
         <p>Remember that in JS months are zero based, so January is 0 and December is 11.</p>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <div class="osg-content">
-        <code class="osg-code" class="osg-code osg-block osg-margin-vertical-8">OsgDateFormat.format(dateFrom, dateTo, dateFromOptions, dateToOptions);</code>
+    <div class="ods-grid__column--12">
+      <div class="ods-content">
+        <code class="ods-code" class="ods-code ods-block ods-margin-vertical-8">OdsDateFormat.format(dateFrom, dateTo, dateFromOptions, dateToOptions);</code>
         <p>The arguments are:</p>
         <ul>
           <li>
-            <code class="osg-code">dateFrom</code>
+            <code class="ods-code">dateFrom</code>
             <p>Date object. Required.</p>
           </li>
           <li>
-            <code class="osg-code">dateTo</code>
-            <p>Date object. Optional. Default <code class="osg-code">null</code>.</p>
+            <code class="ods-code">dateTo</code>
+            <p>Date object. Optional. Default <code class="ods-code">null</code>.</p>
           </li>
           <li>
-            <code class="osg-code">dateFromOptions</code>
-            <p>Object. Optional. Default <code class="osg-code">{}</code>.</p>
+            <code class="ods-code">dateFromOptions</code>
+            <p>Object. Optional. Default <code class="ods-code">{}</code>.</p>
           </li>
           <li>
-            <code class="osg-code">dateToOptions</code>
-            <p>Object. Optional. Default <code class="osg-code">{}</code>.</p>
+            <code class="ods-code">dateToOptions</code>
+            <p>Object. Optional. Default <code class="ods-code">{}</code>.</p>
           </li>
         </ul>
         <p>The options are:</p>
         <ul>
           <li>
-            <code class="osg-code">format</code>
-            <p>The format of the string. Default is <code class="osg-code">date</code>, supported options are <code class="osg-code">date, time, datetime, daytime, custom</code>.</p>
+            <code class="ods-code">format</code>
+            <p>The format of the string. Default is <code class="ods-code">date</code>, supported options are <code class="ods-code">date, time, datetime, daytime, custom</code>.</p>
           </li>
           <li>
-            <code class="osg-code">locale</code>
-            <p>The locale of the string. Default is <code class="osg-code">no-NO</code>, tested options are <code class="osg-code">no-NO, en-GB</code>.</p>
+            <code class="ods-code">locale</code>
+            <p>The locale of the string. Default is <code class="ods-code">no-NO</code>, tested options are <code class="ods-code">no-NO, en-GB</code>.</p>
           </li>
           <li>
-            <code class="osg-code">prefix</code>
-            <p>The prefix of the string. Default is <code class="osg-code">""</code>.</p>
+            <code class="ods-code">prefix</code>
+            <p>The prefix of the string. Default is <code class="ods-code">""</code>.</p>
           </li>
           <li>
-            <code class="osg-code">suffix</code>
-            <p>The suffix of the string. Default is <code class="osg-code">""</code>.</p>
+            <code class="ods-code">suffix</code>
+            <p>The suffix of the string. Default is <code class="ods-code">""</code>.</p>
           </li>
           <li>
-            <code class="osg-code">time.prefix</code>
-            <p>The prefix of the time when used in combination with date. Default is <code class="osg-code">""</code>.</p>
+            <code class="ods-code">time.prefix</code>
+            <p>The prefix of the time when used in combination with date. Default is <code class="ods-code">""</code>.</p>
           </li>
           <li>
-            <code class="osg-code">localeOptions</code>
-            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#using_options" target="_blank">Available options</a>. Defaults are <code class="osg-code">hourCycle: "h24", calendar: "gregory", timeZone: "Europe/Oslo"</code></code></p>
+            <code class="ods-code">localeOptions</code>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#using_options" target="_blank">Available options</a>. Defaults are <code class="ods-code">hourCycle: "h24", calendar: "gregory", timeZone: "Europe/Oslo"</code></code></p>
           </li>
         </ul>
-        <h4 class="osg-margin-top-8">Examples</h4>
+        <h4 class="ods-margin-top-8">Examples</h4>
         <div id="testcases"></div>
-        <h4 class="osg-margin-top-8">Vue filter example</h4>
+        <h4 class="ods-margin-top-8">Vue filter example</h4>
         <div id="date-time-vue-examples"></div>
         <p><em>NB! Default separator for date- and timespan is &amp;mdash; which requires output in v-html to render properly.</em></p>
       </div>

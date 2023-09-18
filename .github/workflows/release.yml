@@ -1,4 +1,4 @@
-name: Styleguide QA and deploy
+name: Oslo Designsystem QA and deploy
 
 on:
   release:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      URL: 'Styleguide Devtools'
+      URL: 'Oslo Designsystem Devtools'
       ENVIRONMENT: production
       SLACK_CHANNEL: C044EMZ22JX
     steps:
@@ -161,7 +161,7 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/oslokommune/styleguide_devtools/actions/workflows/aws_prod_s3.yml/dispatches \
+          https://api.github.com/repos/oslokommune/ukeweb_designsystem_devtools/actions/workflows/aws_prod_s3.yml/dispatches \
           -d '{ "ref": "main", "inputs": { "version": "${{ steps.version.outputs.VERSION }}" } }'
 
       - name: Workplace step
