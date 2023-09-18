@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed README to reflect 1.0 release
 - Changed folder and navigation structure for pages and templates
 - Changed folder and navigation structure for colors
+- Changed contactpoints-box in split section
 
 ### Fixed
 
