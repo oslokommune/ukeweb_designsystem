@@ -1,41 +1,42 @@
-function OdsInput() {
-  const countInput = document.querySelector('.ods-input__input--number');
+function changeCounter(e) {
+  const { target } = e;
+  const input = e.currentTarget.previousElementSibling;
+  let value;
 
-  if (!countInput) {
-    return;
+  if (target.classList.contains('ods-input__counter-button--up') || target.classList.contains('ods-icon--chevron-thin-up')) {
+    value = parseInt(input.value, 10);
+    value += 1;
+  } else {
+    value = parseInt(input.value, 10);
+    value -= 1;
   }
-
-  const btnUp = document.querySelector('.ods-input__counter-nav-button--up');
-  const btnDown = document.querySelector('.ods-input__counter-nav-button--down');
-  const countMin = countInput.min;
-  const countMax = countInput.max;
-
-  function increaseCount() {
-    const oldValue = parseFloat(countInput.value);
-    let newVal;
-
-    if (oldValue >= countMax) {
-      newVal = oldValue;
-    } else {
-      newVal = oldValue + 1;
-    }
-    countInput.value = newVal;
-  }
-
-  function decreaseCount() {
-    const oldValue = parseFloat(countInput.value);
-    let newVal;
-
-    if (oldValue <= countMin) {
-      newVal = oldValue;
-    } else {
-      newVal = oldValue - 1;
-    }
-    countInput.value = newVal;
-  }
-
-  btnUp.addEventListener('click', increaseCount, false);
-  btnDown.addEventListener('click', decreaseCount, false);
+  input.value = value;
 }
+
+function triggerChangeNumber(callback) {
+  const counterTriggers = document.querySelectorAll('.ods-input__counter-nav');
+  counterTriggers.forEach((item) => {
+    callback(item);
+  });
+}
+
+const OdsInput = {
+  init() {
+    OdsInput.unbindAll();
+    OdsInput.bindAll();
+  },
+
+  bindAll() {
+    triggerChangeNumber((item) => {
+      item.addEventListener('click', changeCounter, false);
+    });
+  },
+
+  unbindAll() {
+    triggerChangeNumber((item) => {
+      item.removeEventListener('click', changeCounter, false);
+    });
+  },
+};
 
 export default OdsInput;

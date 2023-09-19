@@ -48,19 +48,20 @@
     bottom: 0.125rem;
     right: 1rem;
 
-    &-button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      @extend %ods-text--size-juliett;
-      @extend %ods-text--weight-light;
+  }
 
-      height: 1.25rem;
-      line-height: 0;
-      padding: 0;
-      text-align: center;
-      user-select: none;
-      width: 1.25rem;
-    }
+  &__counter-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    @extend %ods-text--size-juliett;
+    @extend %ods-text--weight-light;
+
+    height: 1.25rem;
+    line-height: 0;
+    padding: 0;
+    text-align: center;
+    user-select: none;
+    width: 1.25rem;
   }
 }
