@@ -1,0 +1,102 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/icon-map";
+@use "system/typography";
+@use "system/spacing";
+@use "sass:map";
+
+.ods-accordion {
+
+  &__heading {
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
+    @extend %ods-text--weight-medium;
+  }
+
+  &__trigger {
+    @extend %ods-padding-5, %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
+
+    border: none;
+    background-color: white;
+    color: colors.$blue-dark;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &--hover {
+      text-decoration: underline;
+      color: colors.$blue-state;
+    }
+
+    &:focus,
+    &:active,
+    &--focus,
+    &--active {
+      background-color: colors.$blue-state;
+      color: white;
+      text-decoration: none;
+    }
+
+    &--active:hover,
+    &--focus:hover  {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &__trigger:first-child {
+    @extend %ods-margin-top-0;
+  }
+
+  & .ods-collapsible-trigger {
+    @extend %ods-margin-bottom-0, %ods-margin-top-3;
+  }
+
+  & .ods-collapsible-trigger--expanded {
+    @extend %ods-margin-bottom-0;
+
+    background-color: colors.$blue-state;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & .ods-collapsible-trigger::after {
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
+
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+    content: map.get(icon-map.$icons, "chevron-thin-down");
+    right: 1.25rem;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease;
+
+    @include breakpoints.medium {
+      right: 2rem;
+    }
+  }
+
+  & .ods-rotate::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &__content {
+    @extend %ods-padding-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-vertical-6-breakpoint-medium;
+    @extend %ods-margin-bottom-3;
+
+    background-color: white;
+  }
+}
