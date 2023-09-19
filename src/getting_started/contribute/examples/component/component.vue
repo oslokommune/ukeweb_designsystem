@@ -1,7 +1,7 @@
 <template>
-  <div class="osg-example-component osg-example-component--green-light">
-    <div class="osg-example-component__header">
-      <div class="osg-example-component__logo">
+  <div class="ods-example-component ods-example-component--green-light">
+    <div class="ods-example-component__header">
+      <div class="ods-example-component__logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 154">
           <title>Oslo logo</title>
           <path
@@ -20,16 +20,16 @@
           <path d="m267.5 94.8c0-11.1 7.2-18.3 16.3-18.3 9.1 0 16.2 7.2 16.2 18.3 0 11.2-7.3 18.5-16.2 18.5-8.9 0-16.3-7.3-16.3-18.5zm26.5 0c0-9-4.7-13.3-10.2-13.3-5.5 0-10.3 4.2-10.3 13.3 0 9.1 4.6 13.5 10.3 13.5 5.7 0 10.2-4.5 10.2-13.5z"></path>
         </svg>
       </div>
-      <div class="osg-example-component__picture">
+      <div class="ods-example-component__picture">
         <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
       </div>
     </div>
-    <div class="osg-example-component__content">
-      <h2 class="osg-example-component__heading">Vue example</h2>
-      <p class="osg-example-component__text">This component is brought to you through VueJS.</p>
+    <div class="ods-example-component__content">
+      <h2 class="ods-example-component__heading">Vue example</h2>
+      <p class="ods-example-component__text">This component is brought to you through VueJS.</p>
     </div>
-    <div class="osg-example-component__footer">
-      <p class="osg-example-component__text">Level 7 access</p>
+    <div class="ods-example-component__footer">
+      <p class="ods-example-component__text">Level 7 access</p>
     </div>
   </div>
 </template>

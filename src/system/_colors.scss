@@ -68,10 +68,10 @@ $colors: (
 );
 
 @each $name, $color in $colors {
-  %osg-color-text-#{$name} {
+  %ods-color-text-#{$name} {
     color: $color;
   }
-  %osg-color-bg-#{$name} {
+  %ods-color-bg-#{$name} {
     background-color: $color;
   }
 }

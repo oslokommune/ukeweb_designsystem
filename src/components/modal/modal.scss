@@ -1,10 +1,10 @@
 @use "system/breakpoints";
 @use "system/spacing";
 
-$osg-modal-popup-height: 607px !default;
-$osg-modal-popup-width: 600px !default;
+$ods-modal-popup-height: 607px !default;
+$ods-modal-popup-width: 600px !default;
 
-.osg-modal {
+.ods-modal {
   align-items: center;
   background-color: rgb(0 0 0 / 60%);
   display: none;
@@ -27,8 +27,8 @@ $osg-modal-popup-width: 600px !default;
 
     @include breakpoints.medium {
       background: transparent;
-      height: $osg-modal-popup-height;
-      width: $osg-modal-popup-width;
+      height: $ods-modal-popup-height;
+      width: $ods-modal-popup-width;
       margin: 0 auto;
       position: static;
     }
@@ -50,7 +50,7 @@ $osg-modal-popup-width: 600px !default;
     background: white;
     display: flex;
     justify-content: flex-end;
-    @extend %osg-padding-4;
+    @extend %ods-padding-4;
 
     @include breakpoints.medium {
       background: transparent;
@@ -66,8 +66,8 @@ $osg-modal-popup-width: 600px !default;
   &__content {
     background: white;
     overflow: auto;
-    @extend %osg-padding-top-0;
-    @extend %osg-padding-bottom-13;
-    @extend %osg-padding-horizontal-13;
+    @extend %ods-padding-top-0;
+    @extend %ods-padding-bottom-13;
+    @extend %ods-padding-horizontal-13;
   }
 }

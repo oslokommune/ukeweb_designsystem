@@ -1,16 +1,16 @@
 <template>
-  <label class="osg-radio" :class="{ 'osg-radio--error': hasError }">
-    <span class="osg-radio__input">
+  <label class="ods-radio" :class="{ 'ods-radio--error': hasError }">
+    <span class="ods-radio__input">
       <input type="radio" v-model="selectedModel" :value="value" :name="name" />
-      <span class="osg-radio__control"></span>
-      <span class="osg-radio__label">{{ label }}</span>
+      <span class="ods-radio__control"></span>
+      <span class="ods-radio__label">{{ label }}</span>
     </span>
   </label>
 </template>
 
 <script>
 export default {
-  name: 'OsgRadio',
+  name: 'OdsRadio',
 
   props: {
     name: {

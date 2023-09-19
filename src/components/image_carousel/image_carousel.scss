@@ -2,7 +2,7 @@
 @use "system/typography";
 @use "system/spacing";
 
-.osg-carousel {
+.ods-carousel {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
@@ -52,26 +52,26 @@
     top: 0;
 
     > * {
-      @extend %osg-margin-horizontal-8-breakpoint-medium;
-      @extend %osg-padding-4-breakpoint-large;
+      @extend %ods-margin-horizontal-8-breakpoint-medium;
+      @extend %ods-padding-4-breakpoint-large;
 
-      & .osg-icon {
-        @extend %osg-text--size-delta-breakpoint-large;
-        @extend %osg-text--weight-medium-breakpoint-large;
+      & .ods-icon {
+        @extend %ods-text--size-delta-breakpoint-large;
+        @extend %ods-text--weight-medium-breakpoint-large;
       }
     }
   }
 
   &__info {
-    @extend %osg-text--size-lima, %osg-text--size-kilo-breakpoint-medium;
-    @extend %osg-text--weight-light;
-    @extend %osg-padding-top-1, %osg-padding-top-2-breakpoint-large, %osg-padding-horizontal-4, %osg-padding-horizontal-0-breakpoint-large;
+    @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
+    @extend %ods-text--weight-light;
+    @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large, %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-large;
 
     grid-column: span 12 / span 12;
     white-space: pre-line;
 
     &__description {
-      @extend %osg-margin-right-1;
+      @extend %ods-margin-right-1;
     }
   }
 }

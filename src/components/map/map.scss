@@ -3,7 +3,7 @@
 @use "system/spacing";
 @use "./maplibre";
 
-.osg-map {
+.ods-map {
   &--static {
     height: 380px;
 
@@ -18,17 +18,17 @@
   }
 
   &__popup-content {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-padding-1;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-padding-1;
   }
 
   &__heading {
-    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large;
-    @extend %osg-text--weight-medium;
-    @extend %osg-margin-bottom-3;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
+    @extend %ods-text--weight-medium;
+    @extend %ods-margin-bottom-3;
   }
 
   &__label {
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--weight-medium;
   }
 }

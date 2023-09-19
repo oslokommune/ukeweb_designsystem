@@ -16,7 +16,7 @@ $ratios2: (
   16: 10,
 );
 
-.osg-ratio {
+.ods-ratio {
   height: auto;
 
   @each $width, $height in $ratios {
