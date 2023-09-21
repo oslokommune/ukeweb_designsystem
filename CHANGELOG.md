@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added stylelint and eslint. Refactors all code according to rulesets.
 - Added ambulance icon.
+- Added a new variant of the yellow color, yellow-60.
 
 ### Changed
 
