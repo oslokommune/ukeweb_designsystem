@@ -1,4 +1,4 @@
-# Style guide changelog
+# Oslo Designsystem changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -9,16 +9,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Adds stylelint and eslint. Refactors all code according to rulesets.
+- Added stylelint and eslint. Refactors all code according to rulesets.
 
 ### Changed
 
+- Changed dispatchEvent to dispatchCustomEvent and decoupled from code for re-usability
 - Changed spacing on list component from 4px to 8px according to Figma.
+- Changed contribute "clean" page to better help contributors
+- Changed contribute "page" page to better help contributors
+- Changed documentation on contribution/basic page
+- Changed README to reflect 1.0 release
+- Changed folder and navigation structure for pages and templates
+- Changed folder and navigation structure for colors
+- Changed contactpoints-box in split section
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
 
 ### Fixed
 
 - Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
+- Fix the distorted appearance of the search seasons icon in iOS Safari.
+- Fix broken link on collapisble page
+
+### Removed
+
+- "Oslo" folder and files
+- "Palette" folder
 
 ## [0.99.106] - 01-06-2023
 

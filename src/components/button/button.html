@@ -1,401 +1,401 @@
 <!-- Overview mode -->
-<div class="osg-devtools-nondevmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12">
-      <p class="osg-devtools-text-preset-3">Buttons start an action. The button label will explain what happens when clicked.</p>
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-devtools-text-preset-3">Buttons start an action. The button label will explain what happens when clicked.</p>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Types</h2>
-      <p class="osg-paragraph">
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Types</h2>
+      <p class="ods-paragraph">
         The three button types make a hierarchy. Filled button (default/primary), outline button (secondary) and text button (tertiary). This hierarchy defines how the buttons are used in a user interface. There should only be one primary button on a page or within a course of action. If the button types are combined in a course of action it is important to follow this hierarchy resulting in
         putting the main action on the primary button and so on.
       </p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button">Button text</button>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline">Button text</button>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--text">Button text</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Default</h2>
-      <p class="osg-paragraph">Filled button is used for the main action. A page may sometimes have more than one main action, but not many.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <button class="osg-button">Button text</button>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Outline</h2>
-      <p class="osg-paragraph">Outline button is used for less important actions. Avoid using it for a main action.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <button class="osg-button osg-button--outline">Button text</button>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Text</h2>
-      <p class="osg-paragraph">Text button is used for the least important actions.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <button class="osg-button osg-button--text">Button text</button>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Sizes</h2>
-      <p class="osg-paragraph">Buttons can be used in three sizes; small, medium (default) and large. <strong>Medium is the size used in most situations</strong>. Small button is used when there is a need to save space. Large button is used for extra attention, but sparingly.</p>
-      <p class="osg-paragraph osg-margin-top-15">Fullwidth is used when the button should cover the entire width of a user interface. Often seen in the small breakpoint or vertical filter panels.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--large">Large</button>
-            </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button">Medium</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--small">Small</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <button class="osg-button osg-button--fullwidth">Fullwidth</button>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Text and icon</h2>
-      <p class="osg-paragraph">Buttons can have both text and icon. The icon can be positioned either left or right of the text. Choose what fit best in the user interface. All button types support icon.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap osg-flex-align-items-center">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline"><span class="osg-button__icon osg-button__icon--left osg-icon--user"></span>Icon left</button>
-            </div>
-            <div class="osg-devtools-code__box__code osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline">Icon right<span class="osg-button__icon osg-button__icon--right osg-icon--user"></span></button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--text">Button text</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Text and icon different sizes</h2>
-      <p class="osg-paragraph">All sizes support the different variantions of a button type.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap osg-flex-align-items-center">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline osg-button--large"><span class="osg-button__icon osg-button__icon--left osg-icon--user"></span>Large</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Default</h2>
+      <p class="ods-paragraph">Filled button is used for the main action. A page may sometimes have more than one main action, but not many.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <button class="ods-button">Button text</button>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Outline</h2>
+      <p class="ods-paragraph">Outline button is used for less important actions. Avoid using it for a main action.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <button class="ods-button ods-button--outline">Button text</button>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Text</h2>
+      <p class="ods-paragraph">Text button is used for the least important actions.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <button class="ods-button ods-button--text">Button text</button>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Sizes</h2>
+      <p class="ods-paragraph">Buttons can be used in three sizes; small, medium (default) and large. <strong>Medium is the size used in most situations</strong>. Small button is used when there is a need to save space. Large button is used for extra attention, but sparingly.</p>
+      <p class="ods-paragraph ods-margin-top-15">Fullwidth is used when the button should cover the entire width of a user interface. Often seen in the small breakpoint or vertical filter panels.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--large">Large</button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline"><span class="osg-button__icon osg-button__icon--left osg-icon--user"></span>Medium</button>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button">Medium</button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline osg-button--small"><span class="osg-button__icon osg-button__icon--left osg-icon--user"></span>Small</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--small">Small</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <button class="ods-button ods-button--fullwidth">Fullwidth</button>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Text and icon</h2>
+      <p class="ods-paragraph">Buttons can have both text and icon. The icon can be positioned either left or right of the text. Choose what fit best in the user interface. All button types support icon.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap ods-flex-align-items-center">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline"><span class="ods-button__icon ods-button__icon--left ods-icon--user"></span>Icon left</button>
+            </div>
+            <div class="ods-devtools-code__box__code ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline">Icon right<span class="ods-button__icon ods-button__icon--right ods-icon--user"></span></button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Icon</h2>
-      <p class="osg-paragraph">Buttons can be used with only icons in a user interface to save space. Medium sized button is the most commonly used for these cases, however, small button can be used if the need to save even more space arises. This could be the case in small breakpoints of certain applications.</p>
-      <p class="osg-paragraph osg-margin-top-15">Availability requires text to accompany the icon. If the icon is used alone, it is recommended to wrap the text in a span with the class <code>osg-sr-only</code> to make the text available for screen readers.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap osg-flex-align-items-center">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--icon osg-button--large">
-                <span class="osg-button__icon osg-icon--user"></span>
-                <span class="osg-sr-only">Text</span>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Text and icon different sizes</h2>
+      <p class="ods-paragraph">All sizes support the different variantions of a button type.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap ods-flex-align-items-center">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline ods-button--large"><span class="ods-button__icon ods-button__icon--left ods-icon--user"></span>Large</button>
+            </div>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline"><span class="ods-button__icon ods-button__icon--left ods-icon--user"></span>Medium</button>
+            </div>
+            <div class="ods-devtools-code__box__code ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline ods-button--small"><span class="ods-button__icon ods-button__icon--left ods-icon--user"></span>Small</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Icon</h2>
+      <p class="ods-paragraph">Buttons can be used with only icons in a user interface to save space. Medium sized button is the most commonly used for these cases, however, small button can be used if the need to save even more space arises. This could be the case in small breakpoints of certain applications.</p>
+      <p class="ods-paragraph ods-margin-top-15">Availability requires text to accompany the icon. If the icon is used alone, it is recommended to wrap the text in a span with the class <code>ods-sr-only</code> to make the text available for screen readers.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap ods-flex-align-items-center">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--icon ods-button--large">
+                <span class="ods-button__icon ods-icon--user"></span>
+                <span class="ods-sr-only">Text</span>
               </button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--icon">
-                <span class="osg-button__icon osg-icon--user"></span>
-                <span class="osg-sr-only">Text</span>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--icon">
+                <span class="ods-button__icon ods-icon--user"></span>
+                <span class="ods-sr-only">Text</span>
               </button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--icon osg-button--small">
-                <span class="osg-button__icon osg-icon--user"></span>
-                <span class="osg-sr-only">Text</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Round</h2>
-      <p class="osg-paragraph">Round buttons are icon only and rarely used. Should only be used in Large and Medium (default) size. See "Search" under "Form" for example use.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap osg-flex-align-items-center">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--circle osg-button--large osg-button--yellow">
-                <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
-                <span class="osg-sr-only">Search</span>
-              </button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--circle osg-button--yellow">
-                <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
-                <span class="osg-sr-only">Search</span>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--icon ods-button--small">
+                <span class="ods-button__icon ods-icon--user"></span>
+                <span class="ods-sr-only">Text</span>
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Colors</h2>
-      <p class="osg-paragraph">
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Round</h2>
+      <p class="ods-paragraph">Round buttons are icon only and rarely used. Should only be used in Large and Medium (default) size. See "Search" under "Form" for example use.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap ods-flex-align-items-center">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--circle ods-button--large ods-button--yellow">
+                <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
+                <span class="ods-sr-only">Search</span>
+              </button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--circle ods-button--yellow">
+                <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
+                <span class="ods-sr-only">Search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Colors</h2>
+      <p class="ods-paragraph">
         Buttons can be used with different colors. <strong>Dark blue is the primary color used on buttons for the service www.oslo.kommune.no.</strong> In some situations other colors are used to differentiate between content in the service. Yellow is for example used to highlight the button for "Contact" on www.oslo.kommune.no.
         <a href="https://www.oslo.kommune.no" title="Oslo kommune website" target="_blank">See example here.</a>
       </p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--fullwidth">Button text</button>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-light osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-dark ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-light osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--yellow osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--yellow ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--red osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-light osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--green-dark osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--green-light osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--yellow osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--red osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--red ods-button--fullwidth">Button text</button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Dark backgrounds</h2>
-      <p class="osg-paragraph">A set of buttons for use on dark backgrounds. The service www.oslo.kommune.no use dark blue as its dark background. Read more about contrast colors under the chapter "Colors".</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--blue-dark">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--gray osg-button--fullwidth">Button text</button>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-light osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-light osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--green-dark ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--yellow osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--green-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--red osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--yellow ods-button--fullwidth">Button text</button>
             </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--dark osg-button--gray osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--dark osg-button--blue-light osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--dark osg-button--green-light osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--dark osg-button--yellow osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--dark osg-button--red osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--red ods-button--fullwidth">Button text</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Colored backgrounds</h2>
-      <p class="osg-paragraph">Buttons can be used on different colored backgrounds. There are however some limitations depending on the color of the background. The buttons in the examples below have good contrast on the selected background colors. Read more about contrast colors under the chapter "Colors".</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--gray">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-dark osg-button--fullwidth">Button text</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Dark backgrounds</h2>
+      <p class="ods-paragraph">A set of buttons for use on dark backgrounds. The service www.oslo.kommune.no use dark blue as its dark background. Read more about contrast colors under the chapter "Colors".</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--blue-dark">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--gray ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--red osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--yellow osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--yellow ods-button--fullwidth">Button text</button>
             </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--red osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--yellow osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--green-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--red ods-button--fullwidth">Button text</button>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--beige">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-dark osg-button--fullwidth">Button text</button>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--dark ods-button--gray ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--red osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--dark ods-button--blue-light ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--dark ods-button--green-light ods-button--fullwidth">Button text</button>
             </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--dark ods-button--yellow ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--red osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--green-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--green-light">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--green-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--green-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--yellow">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--blue-light">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--blue-dark osg-button--fullwidth">Button text</button>
-            </div>
-          </div>
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--outline osg-button--blue-dark osg-button--fullwidth">Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--dark ods-button--red ods-button--fullwidth">Button text</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-1">Disabled</h2>
-      <p class="osg-paragraph">Buttons can have a disabled state.</p>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--fullwidth" disabled>Button text</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Colored backgrounds</h2>
+      <p class="ods-paragraph">Buttons can be used on different colored backgrounds. There are however some limitations depending on the color of the background. The buttons in the examples below have good contrast on the selected background colors. Read more about contrast colors under the chapter "Colors".</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--gray">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-dark ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline osg-button--fullwidth" disabled>Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--red ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--text osg-button--fullwidth" disabled>Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--yellow ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--red ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--yellow ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--green-dark ods-button--fullwidth">Button text</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="osg-devtools-code">
-        <div class="osg-devtools-code__box osg-devtools-code__box--blue-dark">
-          <div class="osg-flex osg-flex-wrap-wrap">
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--fullwidth" disabled>Button text</button>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--beige">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-dark ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code osg-margin-right-5 osg-margin-bottom-5 osg-margin-bottom-0-breakpoint-medium">
-              <button class="osg-button osg-button--outline osg-button--fullwidth" disabled>Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--red ods-button--fullwidth">Button text</button>
             </div>
-            <div class="osg-devtools-code__box__code">
-              <button class="osg-button osg-button--text osg-button--fullwidth" disabled>Button text</button>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--red ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--green-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--green-light">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--green-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--green-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--yellow">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--blue-light">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--outline ods-button--blue-dark ods-button--fullwidth">Button text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Disabled</h2>
+      <p class="ods-paragraph">Buttons can have a disabled state.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--fullwidth" disabled>Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline ods-button--fullwidth" disabled>Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--text ods-button--fullwidth" disabled>Button text</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--blue-dark">
+          <div class="ods-flex ods-flex-wrap-wrap">
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--fullwidth" disabled>Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code ods-margin-right-5 ods-margin-bottom-5 ods-margin-bottom-0-breakpoint-medium">
+              <button class="ods-button ods-button--outline ods-button--fullwidth" disabled>Button text</button>
+            </div>
+            <div class="ods-devtools-code__box__code">
+              <button class="ods-button ods-button--text ods-button--fullwidth" disabled>Button text</button>
             </div>
           </div>
         </div>
@@ -405,123 +405,123 @@
 </div>
 
 <!-- Developer mode -->
-<div class="osg-devtools-devmode">
-  <div class="osg-grid osg-grid--gap osg-grid--gutter">
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-large">
-      <h2 class="osg-devtools-text-preset-2">Default</h2>
-      <button class="osg-button osg-margin-right-15">Button text</button>
-      <button class="osg-button osg-margin-right-15" disabled="disabled">Disabled</button>
-      <button class="osg-button osg-button--hover osg-margin-right-15">Hover</button>
-      <button class="osg-button osg-button--active osg-margin-right-15">Active</button>
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-large">
+      <h2 class="ods-devtools-text-preset-2">Default</h2>
+      <button class="ods-button ods-margin-right-15">Button text</button>
+      <button class="ods-button ods-margin-right-15" disabled="disabled">Disabled</button>
+      <button class="ods-button ods-button--hover ods-margin-right-15">Hover</button>
+      <button class="ods-button ods-button--active ods-margin-right-15">Active</button>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-large">
-      <h2 class="osg-devtools-text-preset-2">Outline</h2>
-      <button class="osg-button osg-button--outline osg-margin-right-15">Button text</button>
-      <button class="osg-button osg-button--outline osg-margin-right-15" disabled="disabled">Disabled</button>
-      <button class="osg-button osg-button--outline osg-button--hover osg-margin-right-15">Hover</button>
-      <button class="osg-button osg-button--outline osg-button--active osg-margin-right-15">Active</button>
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-large">
+      <h2 class="ods-devtools-text-preset-2">Outline</h2>
+      <button class="ods-button ods-button--outline ods-margin-right-15">Button text</button>
+      <button class="ods-button ods-button--outline ods-margin-right-15" disabled="disabled">Disabled</button>
+      <button class="ods-button ods-button--outline ods-button--hover ods-margin-right-15">Hover</button>
+      <button class="ods-button ods-button--outline ods-button--active ods-margin-right-15">Active</button>
     </div>
-    <div class="osg-grid__column--12 osg-grid__column--6-breakpoint-large">
-      <h2 class="osg-devtools-text-preset-2">Text</h2>
-      <button class="osg-button osg-button--text osg-margin-right-15">Button text</button>
-      <button class="osg-button osg-button--text osg-margin-right-15" disabled="disabled">Disabled</button>
-      <button class="osg-button osg-button--text osg-button--hover osg-margin-right-15">Hover</button>
-      <button class="osg-button osg-button--text osg-button--active osg-margin-right-15">Active</button>
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-large">
+      <h2 class="ods-devtools-text-preset-2">Text</h2>
+      <button class="ods-button ods-button--text ods-margin-right-15">Button text</button>
+      <button class="ods-button ods-button--text ods-margin-right-15" disabled="disabled">Disabled</button>
+      <button class="ods-button ods-button--text ods-button--hover ods-margin-right-15">Hover</button>
+      <button class="ods-button ods-button--text ods-button--active ods-margin-right-15">Active</button>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Colors</h2>
-      <button class="osg-button osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--blue-light osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--green-dark osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--green-light osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--yellow osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--red osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--gray osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--blue-light osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--green-dark osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--green-light osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--yellow osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--red osg-margin-right-15">Button</button>
-      <button class="osg-button osg-button--outline osg-button--gray osg-margin-right-15">Button</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Colors</h2>
+      <button class="ods-button ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--blue-light ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--green-dark ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--green-light ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--yellow ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--red ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--gray ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--blue-light ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--green-dark ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--green-light ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--yellow ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--red ods-margin-right-15">Button</button>
+      <button class="ods-button ods-button--outline ods-button--gray ods-margin-right-15">Button</button>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Circle</h2>
-      <button class="osg-button osg-button--circle osg-margin-right-15" aria-label="Previous">
-        <span class="osg-button__icon osg-icon--chevron-left"></span>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Circle</h2>
+      <button class="ods-button ods-button--circle ods-margin-right-15" aria-label="Previous">
+        <span class="ods-button__icon ods-icon--chevron-left"></span>
       </button>
-      <button class="osg-button osg-button--circle osg-margin-right-15" aria-label="Next">
-        <span class="osg-button__icon osg-icon--chevron-right"></span>
+      <button class="ods-button ods-button--circle ods-margin-right-15" aria-label="Next">
+        <span class="ods-button__icon ods-icon--chevron-right"></span>
       </button>
-      <button class="osg-button osg-button--circle osg-margin-right-15" disabled="disabled" aria-label="Map">
-        <span class="osg-button__icon osg-icon--map"></span>
+      <button class="ods-button ods-button--circle ods-margin-right-15" disabled="disabled" aria-label="Map">
+        <span class="ods-button__icon ods-icon--map"></span>
       </button>
-      <button class="osg-button osg-button--circle osg-button--hover osg-margin-right-15" aria-label="Map">
-        <span class="osg-button__icon osg-icon--map"></span>
+      <button class="ods-button ods-button--circle ods-button--hover ods-margin-right-15" aria-label="Map">
+        <span class="ods-button__icon ods-icon--map"></span>
       </button>
-      <button class="osg-button osg-button--circle osg-button--active osg-margin-right-15" aria-label="Map">
-        <span class="osg-button__icon osg-icon--map"></span>
+      <button class="ods-button ods-button--circle ods-button--active ods-margin-right-15" aria-label="Map">
+        <span class="ods-button__icon ods-icon--map"></span>
       </button>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Icons</h2>
-      <button class="osg-button osg-margin-right-15"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Icon left</button>
-      <button class="osg-button osg-margin-right-15">Icon right<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
-      <button class="osg-button osg-button--outline osg-margin-right-15"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Button</button>
-      <button class="osg-button osg-button--outline osg-margin-right-15">Button<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
-      <button class="osg-button osg-button--text osg-margin-right-15"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Button</button>
-      <button class="osg-button osg-button--text osg-margin-right-15">Button<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
-      <button class="osg-button osg-margin-right-15" disabled="disabled"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Icon left</button>
-      <button class="osg-button osg-margin-right-15" disabled="disabled">Icon right<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
-      <button class="osg-button osg-button--outline osg-margin-right-15" disabled="disabled"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Button</button>
-      <button class="osg-button osg-button--outline osg-margin-right-15" disabled="disabled">Button<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
-      <button class="osg-button osg-button--text osg-margin-right-15" disabled="disabled"><span class="osg-button__icon osg-button__icon--left osg-icon--map"></span>Button</button>
-      <button class="osg-button osg-button--text osg-margin-right-15" disabled="disabled">Button<span class="osg-button__icon osg-button__icon--right osg-icon--map"></span></button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Icons</h2>
+      <button class="ods-button ods-margin-right-15"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Icon left</button>
+      <button class="ods-button ods-margin-right-15">Icon right<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
+      <button class="ods-button ods-button--outline ods-margin-right-15"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Button</button>
+      <button class="ods-button ods-button--outline ods-margin-right-15">Button<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
+      <button class="ods-button ods-button--text ods-margin-right-15"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Button</button>
+      <button class="ods-button ods-button--text ods-margin-right-15">Button<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
+      <button class="ods-button ods-margin-right-15" disabled="disabled"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Icon left</button>
+      <button class="ods-button ods-margin-right-15" disabled="disabled">Icon right<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
+      <button class="ods-button ods-button--outline ods-margin-right-15" disabled="disabled"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Button</button>
+      <button class="ods-button ods-button--outline ods-margin-right-15" disabled="disabled">Button<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
+      <button class="ods-button ods-button--text ods-margin-right-15" disabled="disabled"><span class="ods-button__icon ods-button__icon--left ods-icon--map"></span>Button</button>
+      <button class="ods-button ods-button--text ods-margin-right-15" disabled="disabled">Button<span class="ods-button__icon ods-button__icon--right ods-icon--map"></span></button>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Sizes</h2>
-      <div class="osg-grid osg-grid--gap">
-        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-large">
-          <button class="osg-button osg-button--small">Small</button>
-          <button class="osg-button">Normal</button>
-          <button class="osg-button osg-button--large">Large</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Sizes</h2>
+      <div class="ods-grid ods-grid--gap">
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-large">
+          <button class="ods-button ods-button--small">Small</button>
+          <button class="ods-button">Normal</button>
+          <button class="ods-button ods-button--large">Large</button>
         </div>
-        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-large">
-          <button class="osg-button osg-button--circle osg-button--small" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-large">
+          <button class="ods-button ods-button--circle ods-button--small" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-button--circle" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
+          <button class="ods-button ods-button--circle" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
           </button>
-          <button class="osg-button osg-button--circle osg-button--large" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
-          </button>
-        </div>
-        <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-large">
-          <button class="osg-button osg-button--icon osg-button--small" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
-          </button>
-          <button class="osg-button osg-button--icon" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
-          </button>
-          <button class="osg-button osg-button--icon osg-button--large" aria-label="Search">
-            <span class="osg-button__icon osg-icon--magnifying-glass-small"></span>
+          <button class="ods-button ods-button--circle ods-button--large" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
           </button>
         </div>
-        <div class="osg-grid__column--12">
-          <button class="osg-button osg-button--fullwidth">Fullwidth</button>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-large">
+          <button class="ods-button ods-button--icon ods-button--small" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
+          </button>
+          <button class="ods-button ods-button--icon" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
+          </button>
+          <button class="ods-button ods-button--icon ods-button--large" aria-label="Search">
+            <span class="ods-button__icon ods-icon--magnifying-glass-small"></span>
+          </button>
+        </div>
+        <div class="ods-grid__column--12">
+          <button class="ods-button ods-button--fullwidth">Fullwidth</button>
         </div>
       </div>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Anchor links</h2>
-      <a href="javascript:void(0)" class="osg-button osg-button--blue-dark">Anchor Button</a>
-      <a href="javascript:void(0)" class="osg-button osg-button--blue-light">Anchor Button</a>
-      <a href="javascript:void(0)" class="osg-button osg-button--green-dark">Anchor Button</a>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Anchor links</h2>
+      <a href="javascript:void(0)" class="ods-button ods-button--blue-dark">Anchor Button</a>
+      <a href="javascript:void(0)" class="ods-button ods-button--blue-light">Anchor Button</a>
+      <a href="javascript:void(0)" class="ods-button ods-button--green-dark">Anchor Button</a>
     </div>
-    <div class="osg-grid__column--12">
-      <h2 class="osg-devtools-text-preset-2">Testcases</h2>
-      <button class="osg-button">Button with very long text should break on new line</button>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Testcases</h2>
+      <button class="ods-button">Button with very long text should break on new line</button>
     </div>
   </div>
 </div>

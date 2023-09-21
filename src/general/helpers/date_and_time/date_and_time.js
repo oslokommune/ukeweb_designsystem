@@ -33,7 +33,7 @@ function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions) {
   return dateFromString + dateToString;
 }
 
-const OsgDateTime = {
+const OdsDateTime = {
   format(dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) {
     const defaults = {
       locale: 'no-NO',
@@ -90,4 +90,4 @@ const OsgDateTime = {
   },
 };
 
-export default OsgDateTime;
+export default OdsDateTime;

@@ -1,19 +1,10 @@
-/**
- * Common functions
- */
-function dispatchEvent(eventName, eventDetail, element) {
-  const event = new CustomEvent(eventName, {
-    detail: eventDetail,
-  });
-
-  element.dispatchEvent(event);
-}
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 /**
  * Menu open / close functions
  */
 function triggerIterator(callback) {
-  const menuButtons = document.querySelectorAll('.osg-button-menu');
+  const menuButtons = document.querySelectorAll('.ods-button-menu');
 
   menuButtons.forEach((item) => {
     callback(item);
@@ -25,30 +16,30 @@ function getMenuFromMenuButton(menuButton) {
 }
 
 function isMenuOpen(menuButtonElement) {
-  return menuButtonElement.classList.contains('osg-button-menu--open');
+  return menuButtonElement.classList.contains('ods-button-menu--open');
 }
 
 function openMenu(menu) {
   const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
   menuButton.setAttribute('aria-expanded', 'true');
-  menuButton.classList.add('osg-button-menu--open');
+  menuButton.classList.add('ods-button-menu--open');
   menu.style.display = 'block';
 
-  dispatchEvent('OsgMenuOpen', { menuButton, menu }, menu);
+  dispatchCustomEvent('OdsMenuOpen', { menuButton, menu }, menu);
 }
 
 function closeMenu(menu) {
   const menuButton = document.querySelector(`[aria-controls="${menu.id}"]`);
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.classList.remove('osg-button-menu--open');
+  menuButton.classList.remove('ods-button-menu--open');
   menu.style.display = 'none';
 
-  dispatchEvent('OsgMenuClose', { menuButton, menu }, menu);
+  dispatchCustomEvent('OdsMenuClose', { menuButton, menu }, menu);
 }
 
 function handleToggleMenu(e) {
   e.preventDefault();
-  const menuButton = e.target.classList.contains('osg-button-menu') ? e.target : e.target.closest('.osg-button-menu');
+  const menuButton = e.target.classList.contains('ods-button-menu') ? e.target : e.target.closest('.ods-button-menu');
   const menu = getMenuFromMenuButton(menuButton);
 
   if ((e.code === 'Enter' && menu) || (!e.code && menu)) {
@@ -64,7 +55,7 @@ function handleToggleMenu(e) {
  * Menu heading functions
  */
 function triggerHeadingIterator(element, callback) {
-  const collapsableHeadings = element.querySelectorAll('.osg-navbar-menu__heading-collapsable');
+  const collapsableHeadings = element.querySelectorAll('.ods-navbar-menu__heading-collapsable');
 
   collapsableHeadings.forEach((item) => {
     callback(item);
@@ -73,53 +64,53 @@ function triggerHeadingIterator(element, callback) {
 
 function handleToggleHeading(e) {
   e.preventDefault();
-  const headingButton = e.target.classList.contains('osg-navbar-menu__heading-collapsable') ? e.target : e.target.closest('.osg-navbar-menu__heading-collapsable');
+  const headingButton = e.target.classList.contains('ods-navbar-menu__heading-collapsable') ? e.target : e.target.closest('.ods-navbar-menu__heading-collapsable');
   const collapsibleContent = headingButton.nextElementSibling.closest('ul') || headingButton.nextElementSibling;
 
   if ((e.code === 'Enter' && collapsibleContent) || (!e.code && collapsibleContent)) {
-    const headingButtonIconClassList = headingButton.querySelector('.osg-icon').classList;
+    const headingButtonIconClassList = headingButton.querySelector('.ods-icon').classList;
 
-    headingButton.setAttribute('aria-expanded', collapsibleContent.classList.contains('osg-navbar-menu__list-animate--open') ? 'false' : 'true');
-    collapsibleContent.classList.toggle('osg-navbar-menu__list-animate--open');
+    headingButton.setAttribute('aria-expanded', collapsibleContent.classList.contains('ods-navbar-menu__list-animate--open') ? 'false' : 'true');
+    collapsibleContent.classList.toggle('ods-navbar-menu__list-animate--open');
 
-    if (headingButtonIconClassList.contains('osg-icon--plus-sign')) {
-      headingButtonIconClassList.remove('osg-icon--plus-sign');
-      headingButtonIconClassList.add('osg-icon--minus-sign');
+    if (headingButtonIconClassList.contains('ods-icon--plus-sign')) {
+      headingButtonIconClassList.remove('ods-icon--plus-sign');
+      headingButtonIconClassList.add('ods-icon--minus-sign');
     } else {
-      headingButtonIconClassList.add('osg-icon--plus-sign');
-      headingButtonIconClassList.remove('osg-icon--minus-sign');
+      headingButtonIconClassList.add('ods-icon--plus-sign');
+      headingButtonIconClassList.remove('ods-icon--minus-sign');
     }
   }
 
-  dispatchEvent('OsgHeadingToggle', { target: e.target, expanded: e.target.classList.contains('osg-navbar-menu__list-animate--open') }, e.target);
+  dispatchCustomEvent('OdsHeadingToggle', { target: e.target, expanded: e.target.classList.contains('ods-navbar-menu__list-animate--open') }, e.target);
 }
 
 /**
  * Exported menu functions
  */
-const OsgMenu = {
+const OdsMenu = {
   init() {
-    OsgMenu.unbindAll();
-    OsgMenu.bindAll();
+    OdsMenu.unbindAll();
+    OdsMenu.bindAll();
   },
 
   initElement(element) {
-    OsgMenu.unbindElement(element);
-    OsgMenu.bindElement(element);
+    OdsMenu.unbindElement(element);
+    OdsMenu.bindElement(element);
   },
 
   bindElement(element) {
     element.addEventListener('click', handleToggleMenu);
     element.addEventListener('keypress', handleToggleMenu);
 
-    OsgMenu.bindHeadings(element);
+    OdsMenu.bindHeadings(element);
   },
 
   unbindElement(element) {
     element.removeEventListener('click', handleToggleMenu);
     element.removeEventListener('keypress', handleToggleMenu);
 
-    OsgMenu.unbindHeadings(element);
+    OdsMenu.unbindHeadings(element);
   },
 
   bindHeadings(element) {
@@ -138,13 +129,13 @@ const OsgMenu = {
 
   bindAll() {
     triggerIterator((item) => {
-      OsgMenu.bindElement(item);
+      OdsMenu.bindElement(item);
     });
   },
 
   unbindAll() {
     triggerIterator((item) => {
-      OsgMenu.unbindElement(item);
+      OdsMenu.unbindElement(item);
     });
   },
 
@@ -157,4 +148,4 @@ const OsgMenu = {
   },
 };
 
-export default OsgMenu;
+export default OdsMenu;

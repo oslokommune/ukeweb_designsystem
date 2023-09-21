@@ -1,17 +1,18 @@
 <template>
   <div>
-    <div class="osg-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
-    <div v-show="error" class="osg-status-message osg-status-message--warning" aria-live="polite">
-      <h2 class="osg-status-message__heading"><span class="osg-status-message__icon osg-icon--error-hexa" aria-hidden="true"></span>{{ i18n.mapError }} - {{ technicalErrorText }}</h2>
+    <div class="ods-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
+    <div v-show="error" class="ods-status-message ods-status-message--warning" aria-live="polite">
+      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ i18n.mapError }} - {{ technicalErrorText }}</h2>
     </div>
   </div>
 </template>
 
 <script>
 import maplibregl from 'maplibre-gl';
+import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
 export default {
-  name: 'OsgMap',
+  name: 'OdsMap',
 
   props: {
     mapStyle: {
@@ -62,7 +63,7 @@ export default {
     },
     ratio: {
       type: String,
-      default: 'osg-ratio-16-9',
+      default: 'ods-ratio-16-9',
     },
   },
 
@@ -616,24 +617,14 @@ export default {
         if (popupEvent) {
           popup.on('open', () => {
             // Emit popup event.
-            const event = new CustomEvent(popupEvent, {
-              detail: {
-                data: popupEventData,
-              },
-            });
-            window.dispatchEvent(event);
+            dispatchCustomEvent(popupEvent, { data: popupEventData }, window);
           });
         }
 
         if (popdownEvent) {
           popup.on('close', () => {
             // Emit popdown event.
-            const event = new CustomEvent(popdownEvent, {
-              detail: {
-                data: popupEventData,
-              },
-            });
-            window.dispatchEvent(event);
+            dispatchCustomEvent(popdownEvent, { data: popupEventData }, window);
           });
         }
       }
@@ -642,7 +633,7 @@ export default {
     $_addPopupToMap(lngLat, feature) {
       const html = this.$_getPopupHtml(feature);
       if (typeof html === 'string') {
-        const popup = new maplibregl.Popup({ className: 'osg-map__popup' }).setLngLat(lngLat).setHTML(html);
+        const popup = new maplibregl.Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
         const properties = feature.properties ?? null;
         this.$_addEventsToPopup(popup, properties);
         popup.addTo(this.mapObject);
@@ -676,7 +667,7 @@ export default {
       const popupContent = feature.properties.popupContent ?? '';
 
       if (popupContent.length > 0) {
-        return `<div class="osg-map__popup-content">${popupContent}</div>`;
+        return `<div class="ods-map__popup-content">${popupContent}</div>`;
       }
 
       return null;

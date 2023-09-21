@@ -5,18 +5,18 @@
 @use "system/states";
 @use "sass:map";
 
-.osg-pagination {
+.ods-pagination {
   &__spacer {
     cursor: default;
     transform: translateY(-0.25rem);
     display: inline-block;
-    @extend %osg-padding-horizontal-1;
+    @extend %ods-padding-horizontal-1;
   }
 
   &__item {
-    @extend %osg-padding-1;
-    @extend %osg-text--size-kilo;
-    @extend %osg-text--weight-medium;
+    @extend %ods-padding-1;
+    @extend %ods-text--size-kilo;
+    @extend %ods-text--weight-medium;
 
     line-height: 1.5rem;
     box-sizing: content-box;
@@ -70,10 +70,10 @@
     &--rectangle {
       border-radius: 0;
       width: auto;
-      @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
+      @extend %ods-padding-horizontal-3, %ods-padding-vertical-1;
     }
   }
-  
+
   &__previous {
     &::before,
     &:hover::before {
@@ -87,26 +87,26 @@
       content: map.get(icon-map.$icons, "chevron-thin-right") !important;
     }
   }
-  
+
   &__previous,
   &__next {
     background: none;
     border: none;
     display: inline-block;
-    @extend %osg-text--size-golf;
-    
+    @extend %ods-text--size-golf;
+
     line-height: 1em;
     vertical-align: middle;
     position: relative;
     text-decoration: none;
     cursor: pointer;
-    
+
     &::before,
     &:hover::before {
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       padding: 0.438rem;
     }
-    
+
     &:hover::before {
       background-color: colors.$gray-light !important;
       border-radius: 50%;

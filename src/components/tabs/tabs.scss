@@ -3,22 +3,22 @@
 @use "system/typography";
 @use "system/states";
 
-.osg-tabs {
+.ods-tabs {
   overflow: hidden;
 
   &__label {
-    @extend %osg-text--size-kilo, %osg-text--size-hotel-breakpoint-medium;
-    @extend %osg-margin-bottom-3;
+    @extend %ods-text--size-kilo, %ods-text--size-hotel-breakpoint-medium;
+    @extend %ods-margin-bottom-3;
   }
 
   &__triggers {
-    @extend %osg-margin-bottom-3;
+    @extend %ods-margin-bottom-3;
   }
 
   &__trigger {
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-medium;
-    @extend %osg-margin-right-3;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+    @extend %ods-margin-right-3;
 
     border: none;
     background: transparent;

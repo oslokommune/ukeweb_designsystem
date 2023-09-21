@@ -1,6 +1,6 @@
 @use "system/colors";
 
-.osg-divider {
+.ods-divider {
   background-color: colors.$grayscale-10;
   border: none;
   display: block;
@@ -9,8 +9,8 @@
   padding: 0;
 
   @each $name, $color in colors.$colors {
-    &.osg-divider--#{$name} {
-      @extend %osg-color-bg-#{$name};
+    &.ods-divider--#{$name} {
+      @extend %ods-color-bg-#{$name};
     }
   }
 }

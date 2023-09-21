@@ -1,17 +1,17 @@
 <template>
-  <div class="osg-radio" :class="{ 'osg-radio--error': hasError }">
-    <span v-if="label" class="osg-radio__label">{{ label }}</span>
-    <label class="osg-radio__input">
+  <div class="ods-radio" :class="{ 'ods-radio--error': hasError }">
+    <span v-if="label" class="ods-radio__label">{{ label }}</span>
+    <label class="ods-radio__input">
       <input type="radio" v-model="selectedModel" :value="value" :name="name" />
-      <span class="osg-radio__control"></span>
-      <span class="osg-radio__text">{{ text }}</span>
+      <span class="ods-radio__control"></span>
+      <span class="ods-radio__text">{{ text }}</span>
     </label>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'OsgRadio',
+  name: 'OdsRadio',
 
   props: {
     name: {

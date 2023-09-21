@@ -5,8 +5,8 @@
 @use "system/spacing";
 @use "system/breakpoints";
 
-.osg-checkbox {
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+.ods-checkbox {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
 
   color: inherit;
   cursor: pointer;
@@ -16,16 +16,16 @@
   }
 
   &__wrapper {
-    @extend %osg-margin-top-1;
+    @extend %ods-margin-top-1;
 
     display: inline-flex;
   }
 
   &__required {
-    @extend %osg-margin-top-1;
-    @extend %osg-padding-0;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-margin-top-1;
+    @extend %ods-padding-0;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
 
   & input {
@@ -37,13 +37,13 @@
   &--text-align-top {
     align-items: flex-start;
 
-    .osg-checkbox__text {
+    .ods-checkbox__text {
       margin-top: -5px;
     }
   }
 
   &__checkmark {
-    @extend %osg-margin-top-1-breakpoint-medium;
+    @extend %ods-margin-top-1-breakpoint-medium;
 
     margin-top: 0.12em;
     position: relative;
@@ -71,7 +71,7 @@
   }
 
   &__text {
-    @extend %osg-padding-left-2;
+    @extend %ods-padding-left-2;
 
     border-style: hidden;
     hyphens: auto;
@@ -86,8 +86,8 @@
   }
 
   &__icon {
-    @extend %osg-text--size-juliett, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-padding-right-2;
+    @extend %ods-text--size-juliett, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-padding-right-2;
 
     line-height: 1.5rem;
     align-self: baseline;
@@ -113,8 +113,8 @@
 
   &--focus &__text,
   & input:focus ~ &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
   }
 
   &--hover span,
@@ -154,8 +154,8 @@
   }
 
   & input:checked ~ span {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-medium;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     border-color: colors.$blue-state;
     color: colors.$blue-dark;

@@ -92,13 +92,13 @@ $sizes: (
 );
 
 @each $name, $color in colors.$colors {
-  %osg-icon--color-#{$name} {
+  %ods-icon--color-#{$name} {
     color: $color;
   }
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name} {
+  %ods-icon--size-#{$name} {
     font-size: map.get($sizes, $name, "size");
     line-height: map.get($sizes, $name, "line-height");
     margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing"));
@@ -106,7 +106,7 @@ $sizes: (
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name}-breakpoint-medium {
+  %ods-icon--size-#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       font-size: map.get($sizes, $name, "size");
       line-height: map.get($sizes, $name, "line-height");
@@ -116,7 +116,7 @@ $sizes: (
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name}-breakpoint-large {
+  %ods-icon--size-#{$name}-breakpoint-large {
     @include breakpoints.large {
       font-size: map.get($sizes, $name, "size");
       line-height: map.get($sizes, $name, "line-height");
@@ -126,7 +126,7 @@ $sizes: (
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name}--small {
+  %ods-icon--size-#{$name}--small {
     font-size: map.get($sizes, $name, "size-small");
     line-height: map.get($sizes, $name, "line-height");
     margin-right: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
@@ -134,30 +134,30 @@ $sizes: (
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name}--align-right {
+  %ods-icon--size-#{$name}--align-right {
     margin-right: 0;
     margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing"));
   }
 }
 
 @each $name, $content in $sizes {
-  %osg-icon--size-#{$name}--align-right--small {
+  %ods-icon--size-#{$name}--align-right--small {
     margin-right: 0;
     margin-left: units.unit-to-rem(map.get($sizes, $name, "spacing-small"));
   }
 }
 
-%osg-icon-standalone {
+%ods-icon-standalone {
   margin: 0;
 }
 
-%osg-icon-standalone-breakpoint-medium {
+%ods-icon-standalone-breakpoint-medium {
   @include breakpoints.medium {
     margin: 0;
   }
 }
 
-%osg-icon-standalone-breakpoint-large {
+%ods-icon-standalone-breakpoint-large {
   @include breakpoints.large {
     margin: 0;
   }

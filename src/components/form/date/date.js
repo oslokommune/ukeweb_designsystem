@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import OsgDate from './date.vue';
+import OdsDate from './date.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const osgDatePlaceholderElements = ['osg-date-vue', 'osg-date-vue-dev'];
-  osgDatePlaceholderElements.forEach((elementName) => {
-    const osgDatePlaceholder = document.getElementById(elementName);
-    if (osgDatePlaceholder) {
-      Vue.component('osg-date', OsgDate);
+  const odsDatePlaceholderElements = ['ods-date-vue', 'ods-date-vue-dev'];
+  odsDatePlaceholderElements.forEach((elementName) => {
+    const odsDatePlaceholder = document.getElementById(elementName);
+    if (odsDatePlaceholder) {
+      Vue.component('ods-date', OdsDate);
       const vm = new Vue({
         data: () => ({
           date: null,
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
-      vm.$mount(osgDatePlaceholder);
+      vm.$mount(odsDatePlaceholder);
     }
   });
 });
