@@ -6,12 +6,12 @@
 @use "system/states";
 @use "sass:map";
 
-$osg-landscape-card-height-breakpoint-medium: 286px;
-$osg-landscape-card-height-breakpoint-large: 300px;
-$osg-landscape-card-height-large-breakpoint-medium: 421px;
-$osg-landscape-card-height-large-breakpoint-large: 421px;
+$ods-landscape-card-height-breakpoint-medium: 286px;
+$ods-landscape-card-height-breakpoint-large: 300px;
+$ods-landscape-card-height-large-breakpoint-medium: 421px;
+$ods-landscape-card-height-large-breakpoint-large: 421px;
 
-.osg-landscape-card {
+.ods-landscape-card {
   &__media {
     @include breakpoints.medium {
       grid-column: 1/-5;
@@ -25,72 +25,72 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       line-height: 0;
 
       @include breakpoints.medium {
-        height: $osg-landscape-card-height-breakpoint-medium;
+        height: $ods-landscape-card-height-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-landscape-card-height-breakpoint-large;
+        height: $ods-landscape-card-height-breakpoint-large;
       }
     }
   }
 
   &__content {
-    @extend %osg-padding-5;
-    @extend %osg-color-bg-gray-light;
-    @extend %osg-padding-6-breakpoint-medium, %osg-padding-vertical-8-breakpoint-large;
+    @extend %ods-padding-5;
+    @extend %ods-color-bg-gray-light;
+    @extend %ods-padding-6-breakpoint-medium, %ods-padding-vertical-8-breakpoint-large;
 
     display: grid;
     align-content: center;
-    
+
     @include breakpoints.medium {
       width: 100%;
       grid-column: -5/-1;
     }
   }
-  
+
   &--no-image {
-    & .osg-landscape-card__content {
+    & .ods-landscape-card__content {
       @include breakpoints.medium {
         grid-column: 10/1;
-      }      
+      }
     }
   }
 
   &__label {
-    @extend %osg-text--size-lima;
-    @extend %osg-margin-bottom-3, %osg-margin-bottom-4-breakpoint-medium;
+    @extend %ods-text--size-lima;
+    @extend %ods-margin-bottom-3, %ods-margin-bottom-4-breakpoint-medium;
   }
 
   &__heading {
-    @extend %osg-margin-bottom-1;
-    @extend %osg-text--size-india, %osg-text--size-golf-breakpoint-medium;
-    @extend %osg-text--weight-medium;
+    @extend %ods-margin-bottom-1;
+    @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-medium;
+    @extend %ods-text--weight-medium;
   }
 
   &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-    @extend %osg-text--weight-light;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-light;
   }
-  
+
   &__published {
-    @extend %osg-margin-top-3, %osg-margin-top-4-breakpoint-medium;
-    @extend %osg-text--size-lima;
-    @extend %osg-text--weight-light;
+    @extend %ods-margin-top-3, %ods-margin-top-4-breakpoint-medium;
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-light;
   }
-  
+
   &--white {
-    & .osg-landscape-card__content,
-    & .osg-landscape-card__actions {
-      @extend %osg-color-bg-white;
+    & .ods-landscape-card__content,
+    & .ods-landscape-card__actions {
+      @extend %ods-color-bg-white;
     }
   }
 
   &--blue-light {
-    & .osg-landscape-card__content {
-      @extend %osg-color-bg-blue-light;
+    & .ods-landscape-card__content {
+      @extend %ods-color-bg-blue-light;
     }
 
-    & .osg-landscape-card__content img {
+    & .ods-landscape-card__content img {
       @include breakpoints.medium {
         background-position: center;
         background-size: cover;
@@ -98,24 +98,24 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       }
     }
   }
-  
-  
+
+
   &--large {
-    & .osg-landscape-card__content {
-      @extend %osg-padding-vertical-13-breakpoint-medium, %osg-padding-horizontal-8-breakpoint-medium;
+    & .ods-landscape-card__content {
+      @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
     }
 
-    & .osg-landscape-card__media img {
+    & .ods-landscape-card__media img {
       @include breakpoints.medium {
-        height: $osg-landscape-card-height-large-breakpoint-medium;
+        height: $ods-landscape-card-height-large-breakpoint-medium;
       }
 
       @include breakpoints.large {
-        height: $osg-landscape-card-height-large-breakpoint-large;
+        height: $ods-landscape-card-height-large-breakpoint-large;
       }
     }
   }
-  
+
   &__link {
     text-decoration: none;
 
@@ -125,18 +125,18 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
     }
 
     &:hover {
-      .osg-landscape-card__content {
+      .ods-landscape-card__content {
         color: states.$hover !important;
       }
 
-      .osg-landscape-card__heading {
+      .ods-landscape-card__heading {
         text-decoration: underline;
       }
     }
   }
 
   &--image-breakpoint-medium {
-    & .osg-landscape-card__media {
+    & .ods-landscape-card__media {
       img {
         display: none;
         @include breakpoints.medium {
@@ -147,8 +147,8 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &--zoom {
-    & .osg-landscape-card__link {
-      & .osg-landscape-card__media {
+    & .ods-landscape-card__link {
+      & .ods-landscape-card__media {
         overflow: hidden;
 
         img {
@@ -158,7 +158,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
       }
 
       &:hover {
-        & .osg-landscape-card__media {
+        & .ods-landscape-card__media {
           img {
             transform: scale(1.1);
           }
@@ -168,7 +168,7 @@ $osg-landscape-card-height-large-breakpoint-large: 421px;
   }
 
   &--external {
-    & .osg-landscape-card__link .osg-landscape-card__heading {
+    & .ods-landscape-card__link .ods-landscape-card__heading {
       &::after,
       &:hover::after {
         font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;

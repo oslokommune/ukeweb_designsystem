@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import OsgCheckbox from './checkbox.vue';
+import OdsCheckbox from './checkbox.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('osg-checkbox-vue-1')) {
-    Vue.component('osg-checkbox', OsgCheckbox);
+  if (document.getElementById('ods-checkbox-vue-1')) {
+    Vue.component('ods-checkbox', OdsCheckbox);
     const vm = new Vue();
-    vm.$mount('#osg-checkbox-vue-1');
+    vm.$mount('#ods-checkbox-vue-1');
   }
 });

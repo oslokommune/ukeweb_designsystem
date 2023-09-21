@@ -4,43 +4,43 @@
 @use "system/spacing";
 @use "system/states";
 
-.osg-status-card {
+.ods-status-card {
   &__content {
-    @extend %osg-padding-vertical-4, %osg-padding-horizontal-3, %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-8-breakpoint-large;
+    @extend %ods-padding-vertical-4, %ods-padding-horizontal-3, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-8-breakpoint-large;
 
     background-color: colors.$gray-light;
   }
 
   &__heading {
-    @extend %osg-text--size-juliett, %osg-text--size-india-breakpoint-medium, %osg-text--size-hotel-breakpoint-large, %osg-text--weight-medium, %osg-margin-bottom-4;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large, %ods-text--weight-medium, %ods-margin-bottom-4;
   }
 
   &__text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large, %osg-text--weight-light;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
   }
 
   &__pretext {
-    @extend %osg-text--size-lima, %osg-text--weight-light, %osg-margin-bottom-4;
+    @extend %ods-text--size-lima, %ods-text--weight-light, %ods-margin-bottom-4;
   }
 
   &__actions {
-    @extend %osg-padding-top-8;
+    @extend %ods-padding-top-8;
   }
 
   &__footer {
-    @extend %osg-padding-3, %osg-padding-vertical-3-breakpoint-medium, %osg-padding-horizontal-4-breakpoint-medium, %osg-padding-vertical-3-breakpoint-large, %osg-padding-horizontal-8-breakpoint-large;
-    @extend %osg-text--size-lima, %osg-text--weight-light;
+    @extend %ods-padding-3, %ods-padding-vertical-3-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-vertical-3-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
+    @extend %ods-text--size-lima, %ods-text--weight-light;
 
     background-color: colors.$gray;
     flex-basis: 100%;
   }
 
   &__status {
-    @extend %osg-margin-left-4;
-    
-    .osg-icon {
+    @extend %ods-margin-left-4;
+
+    .ods-icon {
       line-height: 1em !important;
-      @extend %osg-text--size-foxtrot;
+      @extend %ods-text--size-foxtrot;
     }
   }
 
@@ -65,7 +65,7 @@
     &--yellow {
       border-color: colors.$yellow;
 
-      & .osg-status-card__footer {
+      & .ods-status-card__footer {
         background-color: colors.$beige;
       }
     }
@@ -74,38 +74,38 @@
     &--blue {
       border-color: colors.$red;
 
-      & .osg-status-card__content {
+      & .ods-status-card__content {
         display: flex;
       }
 
-      & .osg-status-card__footer {
+      & .ods-status-card__footer {
         background-color: colors.$red-light;
       }
 
-      & .osg-status-card__actions {
+      & .ods-status-card__actions {
         background-color: colors.$gray-light;
         flex-basis: 100%;
-        @extend %osg-padding-horizontal-3, %osg-padding-top-3, %osg-padding-bottom-8;
+        @extend %ods-padding-horizontal-3, %ods-padding-top-3, %ods-padding-bottom-8;
       }
     }
 
-    
+
     &--blue {
       border-color: colors.$blue;
 
-      & .osg-status-card__content {
+      & .ods-status-card__content {
         display: flex;
       }
-      
-      & .osg-status-card__footer {
+
+      & .ods-status-card__footer {
         background-color: colors.$blue-light;
       }
     }
-    
+
     &--green {
       border-color: colors.$green;
 
-      & .osg-status-card__footer {
+      & .ods-status-card__footer {
         background-color: colors.$green-light;
       }
     }
@@ -114,7 +114,7 @@
       border-left: none;
     }
 
-    & .osg-status-card__collapsible {
+    & .ods-status-card__collapsible {
       &:active,
       &:hover,
       &:focus {
@@ -122,16 +122,16 @@
       }
     }
   }
-  
+
   &__link {
     text-decoration: none;
-  
+
     &:hover {
-      .osg-status-card__content {
+      .ods-status-card__content {
         color: states.$hover !important;
       }
-  
-      .osg-status-card__heading {
+
+      .ods-status-card__heading {
         text-decoration: underline;
       }
     }
@@ -142,7 +142,7 @@
   0% {
     box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
   }
-  
+
   80% {
     box-shadow: 0 0 0 10px rgba(colors.$red, 0);
   }

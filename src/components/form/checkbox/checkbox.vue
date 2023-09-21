@@ -1,16 +1,16 @@
 <template>
   <div>
-    <label class="osg-checkbox" :class="{ 'osg-checkbox--error': errorMessage }">
+    <label class="ods-checkbox" :class="{ 'ods-checkbox--error': errorMessage }">
       <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" />
-      <span class="osg-checkbox__checkmark"></span>
-      <span class="osg-checkbox__text">{{ label }}</span>
+      <span class="ods-checkbox__checkmark"></span>
+      <span class="ods-checkbox__text">{{ label }}</span>
     </label>
-    <div v-if="errorMessage" class="osg-checkbox osg-checkbox--error-message" :id="errorId">{{ errorMessage }}</div>
+    <div v-if="errorMessage" class="ods-checkbox ods-checkbox--error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
 </template>
 <script>
 export default {
-  name: 'OsgCheckbox',
+  name: 'OdsCheckbox',
 
   props: {
     name: {

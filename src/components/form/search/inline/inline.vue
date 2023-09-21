@@ -1,6 +1,6 @@
 <template>
-  <div ref="search" class="osg-search-inline">
-    <label class="osg-search-inline__label"
+  <div ref="search" class="ods-search-inline">
+    <label class="ods-search-inline__label"
       >{{ label }}
       <input
         v-on:input="inputChange($event)"
@@ -10,7 +10,7 @@
         v-on:focus="resetIndex()"
         :value="value"
         :aria-expanded="items.length ? 'true' : 'false'"
-        class="osg-search-inline__input"
+        class="ods-search-inline__input"
         type="search"
         ref="input"
         autocomplete="off"
@@ -22,7 +22,7 @@
         :aria-activedescendant="id"
       />
     </label>
-    <ul v-show="items.length" ref="list" class="osg-search-inline__dropdown" :class="{ 'osg-search-inline__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
+    <ul v-show="items.length" ref="list" class="ods-search-inline__dropdown" :class="{ 'ods-search-inline__dropdown--scroll': itemListScroll }" :id="id" role="listbox" :aria-label="ariaLabelResults">
       <li
         v-for="(item, itemIndex) of items"
         :tabindex="-1"
@@ -33,13 +33,13 @@
         v-on:keyup.down.prevent.stop="setFocus($event)"
         v-on:keyup.up.prevent.stop="setFocus($event)"
         v-on:keyup.esc.prevent="resetAndFocus()"
-        :class="{ 'osg-search-inline__dropdown__item--focus': itemIndex === index }"
-        class="osg-search-inline__dropdown__item"
+        :class="{ 'ods-search-inline__dropdown__item--focus': itemIndex === index }"
+        class="ods-search-inline__dropdown__item"
         role="option"
         :aria-selected="itemIndex === index ? 'true' : 'false'"
       >
         <slot name="listitem" :item="item">
-          <span class="osg-text-5">{{ item.text }}</span>
+          <span class="ods-text-5">{{ item.text }}</span>
         </slot>
       </li>
     </ul>
@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: 'OsgSearchInline',
+  name: 'OdsSearchInline',
 
   props: {
     id: {

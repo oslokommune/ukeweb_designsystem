@@ -1,9 +1,9 @@
 @use "system/colors";
 @use "system/spacing";
 
-.osg-header {
-  @extend %osg-padding-left-0, %osg-padding-left-4-breakpoint-large;
-  @extend %osg-padding-right-4, %osg-padding-right-8-breakpoint-large;
+.ods-header {
+  @extend %ods-padding-left-0, %ods-padding-left-4-breakpoint-large;
+  @extend %ods-padding-right-4, %ods-padding-right-8-breakpoint-large;
 
   background-color: colors.$white;
   border-bottom: 1px solid colors.$gray;

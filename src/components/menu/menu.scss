@@ -9,10 +9,10 @@
 @use "sass:math";
 @use "sass:map";
 
-.osg-button-menu {
-  @extend %osg-padding-2, %osg-padding-horizontal-4-breakpoint-large;
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  @extend %osg-text--weight-medium;
+.ods-button-menu {
+  @extend %ods-padding-2, %ods-padding-horizontal-4-breakpoint-large;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-medium;
 
   background-color: transparent;
   border-radius: 50%;
@@ -42,7 +42,7 @@
   }
 
   &__text {
-    @extend %osg-sr-only;
+    @extend %ods-sr-only;
 
     pointer-events: none;
 
@@ -59,8 +59,8 @@
   }
 
   &__icon {
-    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
-    @extend %osg-margin-left-3-breakpoint-large;
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-large;
+    @extend %ods-margin-left-3-breakpoint-large;
 
     line-height: 1.5rem;
 
@@ -91,7 +91,7 @@
       border-color: colors.$blue-state;
       background-color: transparent;
 
-      & .osg-button-menu__text {
+      & .ods-button-menu__text {
         text-decoration: underline;
       }
     }
@@ -110,7 +110,7 @@
       color: colors.$white;
     }
 
-    & .osg-button-menu__icon {
+    & .ods-button-menu__icon {
       &::before {
         content: map.get(icon-map.$icons, "close") !important;
       }
@@ -118,11 +118,11 @@
   }
 }
 
-.osg-navbar-menu {
+.ods-navbar-menu {
   background-color: colors.$white;
   display: none;
 
-  .osg-icon {
+  .ods-icon {
     font-size: 1.5rem;
     @include breakpoints.medium {
       font-size: 2rem;
@@ -134,11 +134,11 @@
     border: none;
     color: colors.$blue-dark;
     cursor: pointer;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @include typography.weight("light");
-    @extend %osg-margin-bottom-4;
-    @extend %osg-padding-horizontal-0;
-    @extend %osg-none-breakpoint-medium;
+    @extend %ods-margin-bottom-4;
+    @extend %ods-padding-horizontal-0;
+    @extend %ods-none-breakpoint-medium;
 
     span {
       pointer-events: none;
@@ -147,8 +147,8 @@
   }
 
   &__heading {
-    @extend %osg-none, %osg-block-breakpoint-medium;
-    @extend %osg-text--size-juliett, %osg-text--size-hotel-breakpoint-medium;
+    @extend %ods-none, %ods-block-breakpoint-medium;
+    @extend %ods-text--size-juliett, %ods-text--size-hotel-breakpoint-medium;
     @include typography.weight("medium");
   }
 
@@ -183,15 +183,15 @@
     text-decoration: none;
 
     @include mixins.states {
-      .osg-navbar-menu__link-content .osg-navbar-menu__link-text {
+      .ods-navbar-menu__link-content .ods-navbar-menu__link-text {
         text-decoration: underline;
       }
     }
   }
 
   &__link-icon {
-    @extend %osg-margin-right-4;
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %ods-margin-right-4;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
 
     > * {
       line-height: 1.5em !important;
@@ -206,27 +206,27 @@
   }
 
   &__link-text {
-    @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
 
     display: inline-block;
   }
 
   &__services {
-    @extend %osg-padding-top-8, %osg-padding-bottom-4, %osg-padding-horizontal-0;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+    @extend %ods-padding-top-8, %ods-padding-bottom-4, %ods-padding-horizontal-0;
+    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
   }
 
   &__categories {
-    @extend %osg-padding-top-1, %osg-padding-horizontal-0, %osg-padding-bottom-4;
-    @extend %osg-padding-vertical-8-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+    @extend %ods-padding-top-1, %ods-padding-horizontal-0, %ods-padding-bottom-4;
+    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
 
     ul {
       background-color: colors.$gray;
-      @extend %osg-margin-top-8-breakpoint-medium;
+      @extend %ods-margin-top-8-breakpoint-medium;
 
       li {
-        @extend %osg-margin-left-3;
-        @extend %osg-margin-left-0-breakpoint-medium;
+        @extend %ods-margin-left-3;
+        @extend %ods-margin-left-0-breakpoint-medium;
       }
     }
 
@@ -234,11 +234,11 @@
       background-color: colors.$gray;
     }
   }
-  
+
   &__services-list {
-    @extend %osg-padding-vertical-0, %osg-padding-horizontal-3;
-    @extend %osg-margin-top-8-breakpoint-medium;
-    @extend %osg-padding-0-breakpoint-medium;
+    @extend %ods-padding-vertical-0, %ods-padding-horizontal-3;
+    @extend %ods-margin-top-8-breakpoint-medium;
+    @extend %ods-padding-0-breakpoint-medium;
 
     background-color: colors.$gray;
 
@@ -249,7 +249,7 @@
     }
 
     li:last-child {
-      @extend %osg-margin-bottom-3;
+      @extend %ods-margin-bottom-3;
 
       @include breakpoints.medium {
         margin-bottom: unset;
@@ -258,29 +258,29 @@
   }
 
   &__footer {
-    @extend %osg-padding-vertical-4-breakpoint-medium, %osg-padding-horizontal-13-breakpoint-medium;
+    @extend %ods-padding-vertical-4-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
   }
 
   &__footer-list {
-    @extend %osg-margin-top-8, %osg-margin-top-0-breakpoint-medium;
+    @extend %ods-margin-top-8, %ods-margin-top-0-breakpoint-medium;
 
     justify-content: flex-start;
 
     &--media {
       display: flex;
-      @extend %osg-margin-top-13;
-      @extend %osg-margin-top-0-breakpoint-medium;
+      @extend %ods-margin-top-13;
+      @extend %ods-margin-top-0-breakpoint-medium;
 
       @include breakpoints.medium {
         justify-content: flex-end;
       }
 
-      & .osg-navbar-menu__link-content {
-        @extend %osg-padding-right-8, %osg-padding-right-0-breakpoint-medium, %osg-padding-left-13-breakpoint-medium;
+      & .ods-navbar-menu__link-content {
+        @extend %ods-padding-right-8, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-13-breakpoint-medium;
       }
     }
 
-    .osg-icon {
+    .ods-icon {
       font-size: 1.5rem;
     }
   }

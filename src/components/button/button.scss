@@ -5,10 +5,10 @@
 @use "system/units";
 @use "system/states";
 
-.osg-button {
-  @extend %osg-padding-horizontal-4, %osg-padding-vertical-2;
-  @extend %osg-text--size-kilo, %osg-text--size-juliett-breakpoint-large;
-  @extend %osg-text--weight-medium;
+.ods-button {
+  @extend %ods-padding-horizontal-4, %ods-padding-vertical-2;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-medium;
 
   background: colors.$blue-dark;
   border: 2px solid colors.$blue-dark;
@@ -23,8 +23,8 @@
   /**
     * Icon child element
     */
-  & .osg-button__icon {
-    @extend %osg-text--size-hotel, %osg-text--size-golf-breakpoint-large;
+  & .ods-button__icon {
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-large;
 
     line-height: 1.5rem;
 
@@ -36,31 +36,31 @@
     vertical-align: top;
 
     &--left {
-      @extend %osg-margin-right-1;
+      @extend %ods-margin-right-1;
     }
 
     &--right {
-      @extend %osg-margin-left-1;
+      @extend %ods-margin-left-1;
     }
   }
 
   /**
    * Button types
    */
-  &.osg-button--outline {
+  &.ods-button--outline {
     background-color: transparent;
     border-color: colors.$blue-dark;
     color: colors.$blue-dark;
   }
 
-  &.osg-button--text {
+  &.ods-button--text {
     background-color: transparent;
     border-color: transparent;
     color: colors.$blue-dark;
   }
 
-  &.osg-button--icon {
-    @extend %osg-padding-2;
+  &.ods-button--icon {
+    @extend %ods-padding-2;
 
     box-sizing: content-box;
     width: 1.5rem;
@@ -68,17 +68,17 @@
       width: 1.75rem;
     }
 
-    &.osg-button--small {
-      @extend %osg-padding-1;
+    &.ods-button--small {
+      @extend %ods-padding-1;
     }
 
-    &.osg-button--large {
-      @extend %osg-padding-4;
+    &.ods-button--large {
+      @extend %ods-padding-4;
     }
   }
 
-  &.osg-button--circle {
-    @extend %osg-padding-2;
+  &.ods-button--circle {
+    @extend %ods-padding-2;
 
     border-radius: 50%;
     box-sizing: content-box;
@@ -87,14 +87,14 @@
       width: 1.75rem;
     }
 
-    &.osg-button--small {
-      @extend %osg-padding-1;
+    &.ods-button--small {
+      @extend %ods-padding-1;
 
       width: 1.5rem;
     }
 
-    &.osg-button--large {
-      @extend %osg-padding-4;
+    &.ods-button--large {
+      @extend %ods-padding-4;
 
       width: 2rem;
       @include breakpoints.large {
@@ -106,18 +106,18 @@
   /**
    * Button sizes
    */
-  &.osg-button--small {
-    @extend %osg-padding-horizontal-3, %osg-padding-vertical-1;
-    @extend %osg-text--size-kilo;
+  &.ods-button--small {
+    @extend %ods-padding-horizontal-3, %ods-padding-vertical-1;
+    @extend %ods-text--size-kilo;
 
-    &.osg-button--icon {
+    &.ods-button--icon {
       @include breakpoints.large {
         width: 1.5rem;
       }
     }
 
-    & .osg-button__icon {
-      @extend %osg-text--size-hotel;
+    & .ods-button__icon {
+      @extend %ods-text--size-hotel;
 
       line-height: 1.5rem;
       @include breakpoints.large {
@@ -126,19 +126,19 @@
     }
   }
 
-  &.osg-button--large {
-    @extend %osg-padding-horizontal-8, %osg-padding-vertical-4;
-    @extend %osg-text--size-india, %osg-text--size-golf-breakpoint-large;
+  &.ods-button--large {
+    @extend %ods-padding-horizontal-8, %ods-padding-vertical-4;
+    @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-large;
 
-    &.osg-button--icon {
+    &.ods-button--icon {
       width: 2rem;
       @include breakpoints.large {
         width: 2.25rem;
       }
     }
 
-    & .osg-button__icon {
-      @extend %osg-text--size-echo;
+    & .ods-button__icon {
+      @extend %ods-text--size-echo;
 
       line-height: 2rem;
       @include breakpoints.large {
@@ -148,7 +148,7 @@
     }
   }
 
-  &.osg-button--fullwidth {
+  &.ods-button--fullwidth {
     display: block;
     width: 100%;
   }
@@ -157,21 +157,21 @@
    * Button states
    */
   &:hover,
-  &.osg-button--hover,
+  &.ods-button--hover,
   &:focus,
-  &.osg-button--focus {
+  &.ods-button--focus {
     background-color: states.$hover !important;
     border: 2px solid states.$hover !important;
     color: states.$hover-text !important;
     text-decoration: underline;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent !important;
       border-color: states.$hover;
       color: states.$hover !important;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: colors.$gray-light !important;
       border-color: colors.$gray-light !important;
       color: states.$hover !important;
@@ -179,17 +179,17 @@
   }
 
   &:active,
-  &.osg-button--active {
+  &.ods-button--active {
     background-color: states.$active !important;
     border: 2px solid states.$active !important;
     text-decoration: none;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: states.$hover !important;
       color: colors.$white !important;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
@@ -204,12 +204,12 @@
     cursor: default;
     text-decoration: none;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent !important;
       border-color: colors.$grayscale-40 !important;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent !important;
       border-color: transparent !important;
       text-decoration: underline;
@@ -221,13 +221,13 @@
       border: 2px solid states.$disabled !important;
       color: states.$disabled-text !important;
 
-      &.osg-button--outline {
+      &.ods-button--outline {
         background-color: transparent !important;
         border-color: colors.$grayscale-40 !important;
         color: colors.$grayscale-40 !important;
       }
 
-      &.osg-button--text {
+      &.ods-button--text {
         background-color: transparent !important;
         border-color: transparent !important;
         color: colors.$grayscale-40 !important;
@@ -239,95 +239,95 @@
   /**
    * Button colors
    */
-  &.osg-button--red {
+  &.ods-button--red {
     color: colors.$blue-dark;
     background-color: colors.$red;
     border: 2px solid colors.$red;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
     }
   }
 
-  &.osg-button--yellow {
+  &.ods-button--yellow {
     color: colors.$blue-dark;
     background-color: colors.$yellow;
     border: 2px solid colors.$yellow;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
     }
   }
 
-  &.osg-button--green-dark {
+  &.ods-button--green-dark {
     color: colors.$white;
     background-color: colors.$green-dark;
     border: 2px solid colors.$green-dark;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
       color: colors.$green-dark;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
       color: colors.$green-dark;
     }
   }
 
-  &.osg-button--green-light {
+  &.ods-button--green-light {
     color: colors.$green-dark;
     background-color: colors.$green-light;
     border: 2px solid colors.$green-light;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
       color: colors.$green-dark;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
       color: colors.$green-dark;
     }
   }
 
-  &.osg-button--blue-light {
+  &.ods-button--blue-light {
     color: colors.$blue-dark;
     background-color: colors.$blue-light;
     border: 2px solid colors.$blue-light;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
     }
   }
 
-  &.osg-button--gray {
+  &.ods-button--gray {
     color: colors.$blue-dark;
     background-color: colors.$gray-light;
     border: 2px solid colors.$gray-light;
 
-    &.osg-button--outline {
+    &.ods-button--outline {
       background-color: transparent;
     }
 
-    &.osg-button--text {
+    &.ods-button--text {
       background-color: transparent;
       border: 2px solid transparent;
     }
@@ -336,14 +336,14 @@
   /**
    * Dark mode
    */
-  &.osg-button--dark {
-    &.osg-button--outline {
+  &.ods-button--dark {
+    &.ods-button--outline {
       color: colors.$white !important;
 
       &:hover,
-      &.osg-button--hover,
+      &.ods-button--hover,
       &:focus,
-      &.osg-button--focus {
+      &.ods-button--focus {
         border-color: states.$hover-light !important;
         color: states.$hover-light !important;
       }

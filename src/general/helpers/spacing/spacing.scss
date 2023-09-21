@@ -3,94 +3,94 @@
 @use "system/units";
 
 @each $unit in spacing.$spacing-units {
-  .osg-padding-#{$unit} {
-    @extend %osg-padding-#{$unit};
+  .ods-padding-#{$unit} {
+    @extend %ods-padding-#{$unit};
   }
-  .osg-margin-#{$unit} {
-    @extend %osg-margin-#{$unit};
+  .ods-margin-#{$unit} {
+    @extend %ods-margin-#{$unit};
   }
-  .osg-padding-bottom-#{$unit} {
-    @extend %osg-padding-bottom-#{$unit};
+  .ods-padding-bottom-#{$unit} {
+    @extend %ods-padding-bottom-#{$unit};
   }
-  .osg-margin-bottom-#{$unit} {
-    @extend %osg-margin-bottom-#{$unit};
+  .ods-margin-bottom-#{$unit} {
+    @extend %ods-margin-bottom-#{$unit};
   }
-  .osg-padding-top-#{$unit} {
-    @extend %osg-padding-top-#{$unit};
+  .ods-padding-top-#{$unit} {
+    @extend %ods-padding-top-#{$unit};
   }
-  .osg-margin-top-#{$unit} {
-    @extend %osg-margin-top-#{$unit};
+  .ods-margin-top-#{$unit} {
+    @extend %ods-margin-top-#{$unit};
   }
-  .osg-padding-left-#{$unit} {
-    @extend %osg-padding-left-#{$unit};
+  .ods-padding-left-#{$unit} {
+    @extend %ods-padding-left-#{$unit};
   }
-  .osg-margin-left-#{$unit} {
-    @extend %osg-margin-left-#{$unit};
+  .ods-margin-left-#{$unit} {
+    @extend %ods-margin-left-#{$unit};
   }
-  .osg-padding-right-#{$unit} {
-    @extend %osg-padding-right-#{$unit};
+  .ods-padding-right-#{$unit} {
+    @extend %ods-padding-right-#{$unit};
   }
-  .osg-margin-right-#{$unit} {
-    @extend %osg-margin-right-#{$unit};
+  .ods-margin-right-#{$unit} {
+    @extend %ods-margin-right-#{$unit};
   }
-  .osg-padding-horizontal-#{$unit} {
-    @extend %osg-padding-horizontal-#{$unit};
+  .ods-padding-horizontal-#{$unit} {
+    @extend %ods-padding-horizontal-#{$unit};
   }
-  .osg-margin-horizontal-#{$unit} {
-    @extend %osg-margin-horizontal-#{$unit};
+  .ods-margin-horizontal-#{$unit} {
+    @extend %ods-margin-horizontal-#{$unit};
   }
-  .osg-padding-vertical-#{$unit} {
-    @extend %osg-padding-vertical-#{$unit};
+  .ods-padding-vertical-#{$unit} {
+    @extend %ods-padding-vertical-#{$unit};
   }
-  .osg-margin-vertical-#{$unit} {
-    @extend %osg-margin-vertical-#{$unit};
+  .ods-margin-vertical-#{$unit} {
+    @extend %ods-margin-vertical-#{$unit};
   }
 }
 
 // generate spacing classes for tablet
 @include breakpoints.medium {
   @each $unit in spacing.$spacing-units {
-    .osg-padding-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-#{$unit}-breakpoint-medium;
+    .ods-padding-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-#{$unit}-breakpoint-medium;
+    .ods-margin-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-bottom-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-bottom-#{$unit}-breakpoint-medium;
+    .ods-padding-bottom-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-bottom-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-bottom-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-bottom-#{$unit}-breakpoint-medium;
+    .ods-margin-bottom-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-bottom-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-top-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-top-#{$unit}-breakpoint-medium;
+    .ods-padding-top-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-top-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-top-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-top-#{$unit}-breakpoint-medium;
+    .ods-margin-top-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-top-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-left-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-left-#{$unit}-breakpoint-medium;
+    .ods-padding-left-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-left-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-left-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-left-#{$unit}-breakpoint-medium;
+    .ods-margin-left-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-left-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-right-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-right-#{$unit}-breakpoint-medium;
+    .ods-padding-right-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-right-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-right-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-right-#{$unit}-breakpoint-medium;
+    .ods-margin-right-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-right-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-horizontal-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-horizontal-#{$unit}-breakpoint-medium;
+    .ods-padding-horizontal-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-horizontal-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-horizontal-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-horizontal-#{$unit}-breakpoint-medium;
+    .ods-margin-horizontal-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-horizontal-#{$unit}-breakpoint-medium;
     }
-    .osg-padding-vertical-#{$unit}-breakpoint-medium {
-      @extend %osg-padding-vertical-#{$unit}-breakpoint-medium;
+    .ods-padding-vertical-#{$unit}-breakpoint-medium {
+      @extend %ods-padding-vertical-#{$unit}-breakpoint-medium;
     }
-    .osg-margin-vertical-#{$unit}-breakpoint-medium {
-      @extend %osg-margin-vertical-#{$unit}-breakpoint-medium;
+    .ods-margin-vertical-#{$unit}-breakpoint-medium {
+      @extend %ods-margin-vertical-#{$unit}-breakpoint-medium;
     }
   }
 }
@@ -98,47 +98,47 @@
 // generate spacing classes for desktop
 @include breakpoints.large {
   @each $unit in spacing.$spacing-units {
-    .osg-padding-#{$unit}-breakpoint-large {
-      @extend %osg-padding-#{$unit}-breakpoint-large;
+    .ods-padding-#{$unit}-breakpoint-large {
+      @extend %ods-padding-#{$unit}-breakpoint-large;
     }
-    .osg-margin-#{$unit}-breakpoint-large {
-      @extend %osg-margin-#{$unit}-breakpoint-large;
+    .ods-margin-#{$unit}-breakpoint-large {
+      @extend %ods-margin-#{$unit}-breakpoint-large;
     }
-    .osg-padding-bottom-#{$unit}-breakpoint-large {
-      @extend %osg-padding-bottom-#{$unit}-breakpoint-large;
+    .ods-padding-bottom-#{$unit}-breakpoint-large {
+      @extend %ods-padding-bottom-#{$unit}-breakpoint-large;
     }
-    .osg-margin-bottom-#{$unit}-breakpoint-large {
-      @extend %osg-margin-bottom-#{$unit}-breakpoint-large;
+    .ods-margin-bottom-#{$unit}-breakpoint-large {
+      @extend %ods-margin-bottom-#{$unit}-breakpoint-large;
     }
-    .osg-padding-top-#{$unit}-breakpoint-large {
-      @extend %osg-padding-top-#{$unit}-breakpoint-large;
+    .ods-padding-top-#{$unit}-breakpoint-large {
+      @extend %ods-padding-top-#{$unit}-breakpoint-large;
     }
-    .osg-margin-top-#{$unit}-breakpoint-large {
-      @extend %osg-margin-top-#{$unit}-breakpoint-large;
+    .ods-margin-top-#{$unit}-breakpoint-large {
+      @extend %ods-margin-top-#{$unit}-breakpoint-large;
     }
-    .osg-padding-left-#{$unit}-breakpoint-large {
-      @extend %osg-padding-left-#{$unit}-breakpoint-large;
+    .ods-padding-left-#{$unit}-breakpoint-large {
+      @extend %ods-padding-left-#{$unit}-breakpoint-large;
     }
-    .osg-margin-left-#{$unit}-breakpoint-large {
-      @extend %osg-margin-left-#{$unit}-breakpoint-large;
+    .ods-margin-left-#{$unit}-breakpoint-large {
+      @extend %ods-margin-left-#{$unit}-breakpoint-large;
     }
-    .osg-padding-right-#{$unit}-breakpoint-large {
-      @extend %osg-padding-right-#{$unit}-breakpoint-large;
+    .ods-padding-right-#{$unit}-breakpoint-large {
+      @extend %ods-padding-right-#{$unit}-breakpoint-large;
     }
-    .osg-margin-right-#{$unit}-breakpoint-large {
-      @extend %osg-margin-right-#{$unit}-breakpoint-large;
+    .ods-margin-right-#{$unit}-breakpoint-large {
+      @extend %ods-margin-right-#{$unit}-breakpoint-large;
     }
-    .osg-padding-horizontal-#{$unit}-breakpoint-large {
-      @extend %osg-padding-horizontal-#{$unit}-breakpoint-large;
+    .ods-padding-horizontal-#{$unit}-breakpoint-large {
+      @extend %ods-padding-horizontal-#{$unit}-breakpoint-large;
     }
-    .osg-margin-horizontal-#{$unit}-breakpoint-large {
-      @extend %osg-margin-horizontal-#{$unit}-breakpoint-large;
+    .ods-margin-horizontal-#{$unit}-breakpoint-large {
+      @extend %ods-margin-horizontal-#{$unit}-breakpoint-large;
     }
-    .osg-padding-vertical-#{$unit}-breakpoint-large {
-      @extend %osg-padding-vertical-#{$unit}-breakpoint-large;
+    .ods-padding-vertical-#{$unit}-breakpoint-large {
+      @extend %ods-padding-vertical-#{$unit}-breakpoint-large;
     }
-    .osg-margin-vertical-#{$unit}-breakpoint-large {
-      @extend %osg-margin-vertical-#{$unit}-breakpoint-large;
+    .ods-margin-vertical-#{$unit}-breakpoint-large {
+      @extend %ods-margin-vertical-#{$unit}-breakpoint-large;
     }
   }
 }
