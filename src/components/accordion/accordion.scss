@@ -1,11 +1,18 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "system/icons";
 @use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
 @use "sass:map";
 
 .ods-accordion {
+
+  &__main-heading {
+    @extend %ods-text--size-golf, %ods-text--size-delta-breakpoint-large;
+    @extend %ods-text--weight-regular;
+    @extend %ods-margin-bottom-6, %ods-margin-bottom-5-breakpoint-large;
+  }
 
   &__heading {
     @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
@@ -21,6 +28,7 @@
     display: block;
     font-family: inherit;
     font-size: inherit;
+    font-weight: inherit;
     position: relative;
     text-align: left;
     width: 100%;
@@ -73,11 +81,11 @@
   }
 
   & .ods-collapsible-trigger::after {
-    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
+    @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
 
     font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
     content: map.get(icon-map.$icons, "chevron-thin-down");
-    right: 1.25rem;
+    right: 0;
     top: 50%;
     position: absolute;
     text-align: center;
@@ -85,7 +93,7 @@
     transition: transform 0.3s ease;
 
     @include breakpoints.medium {
-      right: 2rem;
+      margin-right: 0.75rem;
     }
   }
 
@@ -94,7 +102,8 @@
   }
 
   &__content {
-    @extend %ods-padding-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-vertical-6-breakpoint-medium;
+    @extend %ods-padding-5, %ods-padding-bottom-8;
+    @extend %ods-padding-top-6-breakpoint-large,  %ods-padding-bottom-8-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
     @extend %ods-margin-bottom-3;
 
     background-color: white;
