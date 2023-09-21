@@ -1,5 +1,8 @@
-![Oslo Designsystem Banner](./src/assets/images/oslo-header.jpg)
+<div align="center">
 
+![Oslo Designsystem Banner](./src/assets/images/oslo-header.svg)
+
+</div>
 <h1 align="center">Oslo Designsystem</h1>
 
 <div align="center">
@@ -49,7 +52,9 @@ Oslo Designsystem is distributed under a MIT-license for open source code.
 
 ## 📬 Contact
 
-Slack: oslo-designsystem
+Slack: [Oslo kommune](https://oslokommune.slack.com)
+
+Join the #oslodesignsystem channel
 
 devnull@uke.oslo.kommune.no
 
