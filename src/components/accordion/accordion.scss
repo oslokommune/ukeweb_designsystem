@@ -7,7 +7,6 @@
 @use "sass:map";
 
 .ods-accordion {
-
   &__main-heading {
     @extend %ods-text--size-golf, %ods-text--size-delta-breakpoint-large;
     @extend %ods-text--weight-regular;
