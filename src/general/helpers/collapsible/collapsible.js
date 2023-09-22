@@ -77,7 +77,7 @@ const OdsCollapsible = {
   },
 
   bindAll() {
-    window.addEventListener('OsgBreakpointChange', handleBreakpointChange);
+    window.addEventListener('OdsBreakpointChange', handleBreakpointChange);
     triggerIterator((item) => {
       item.addEventListener('click', handleCollapsible);
       item.addEventListener('keypress', handleCollapsible);
@@ -85,7 +85,7 @@ const OdsCollapsible = {
   },
 
   unbindAll() {
-    window.removeEventListener('OsgBreakpointChange', handleBreakpointChange);
+    window.removeEventListener('OdsBreakpointChange', handleBreakpointChange);
     triggerIterator((item) => {
       item.removeEventListener('click', handleCollapsible);
       item.removeEventListener('keypress', handleCollapsible);
