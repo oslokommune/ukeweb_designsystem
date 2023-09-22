@@ -53,10 +53,10 @@
   &__counter-button {
     @extend %ods-text--size-juliett;
     @extend %ods-text--weight-light;
+
     border: none;
     background: none;
     cursor: pointer;
-
     height: 1.25rem;
     line-height: 0;
     padding: 0;
