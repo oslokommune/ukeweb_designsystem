@@ -26,6 +26,19 @@ const OdsInput = {
     OdsInput.bindAll();
   },
 
+  initElement(element) {
+    OdsInput.unbindElement(element);
+    OdsInput.bindElement(element);
+  },
+
+  bindElement(element) {
+    element.addEventListener('click', changeCounter, false);
+  },
+
+  unbindElement(element) {
+    element.removeEventListener('click', changeCounter, false);
+  },
+
   bindAll() {
     triggerChangeNumber((item) => {
       item.addEventListener('click', changeCounter, false);
