@@ -21,13 +21,14 @@
   &__trigger {
     @extend %ods-padding-5, %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
 
-    border: none;
+    border: 0.4rem solid transparent;
     background-color: colors.$white;
-    color: colors.$blue-dark;
+    color: colors.$blue-state;
     display: block;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
+    outline: none;
     position: relative;
     text-align: left;
     width: 100%;
@@ -57,6 +58,18 @@
     &--focus:hover  {
       color: colors.$white;
       text-decoration: none;
+    }
+
+    &:focus-visible {
+      background-color: colors.$white;
+      border: 0.2rem solid colors.$blue-state;
+      color: colors.$blue-state;
+      outline: none;
+      padding: 1.43rem;
+
+      @include breakpoints.medium {
+        padding: 1.69rem 2.19rem;
+      }
     }
   }
 
@@ -96,7 +109,11 @@
     }
   }
 
-  & .ods-rotate::after {
+  & .ods-collapsible-trigger:focus-visible::after {
+    right: 0.2rem;
+  }
+
+  & .ods-collapsible--rotate::after {
     transform: translate(-50%, -50%) rotate(180deg);
   }
 
