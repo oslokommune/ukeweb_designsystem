@@ -1,4 +1,4 @@
-import OdsCollapsible from '../../collapsible/collapsible';
+import OdsCollapsible from '../../../general/helpers/collapsible/collapsible';
 
 function triggerIterator(callback) {
   const triggers = document.querySelectorAll('.ods-contactbox__trigger');

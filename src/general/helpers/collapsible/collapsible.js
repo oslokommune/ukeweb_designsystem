@@ -1,10 +1,16 @@
-import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+import dispatchCustomEvent from '../../../utils/js/events/dispatchCustomEvent';
 
 function triggerIterator(callback) {
   const collapsibleTriggers = document.querySelectorAll('.ods-collapsible-trigger');
   collapsibleTriggers.forEach((item) => {
     callback(item);
   });
+}
+
+function handleAnimation(e) {
+  if (e.target.classList.contains('ods-accordion--animate')) {
+    e.target.classList.toggle('ods-accordion__trigger--rotate');
+  }
 }
 
 function toggleCollapsible(e) {
@@ -14,6 +20,8 @@ function toggleCollapsible(e) {
 
   if ((e.code && e.code === 'Enter' && collapsible) || (!e.code && collapsible)) {
     collapsible.classList.toggle('ods-collapsible-content--collapsed');
+
+    handleAnimation(e);
 
     e.target.setAttribute('aria-expanded', collapsible.classList.contains('ods-collapsible-content--collapsed') ? 'false' : 'true');
     e.target.classList.toggle('ods-collapsible-trigger--expanded', !collapsible.classList.contains('ods-collapsible-content--collapsed'));

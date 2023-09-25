@@ -1,0 +1,127 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/icons";
+@use "system/icon-map";
+@use "system/typography";
+@use "system/spacing";
+@use "sass:map";
+
+.ods-accordion {
+  &__main-heading {
+    @extend %ods-text--size-golf, %ods-text--size-delta-breakpoint-large;
+    @extend %ods-text--weight-regular;
+    @extend %ods-margin-bottom-6, %ods-margin-bottom-5-breakpoint-large;
+  }
+
+  &__heading {
+    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
+    @extend %ods-text--weight-medium;
+  }
+
+  &__trigger {
+    @extend %ods-padding-5, %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
+
+    border: 0.4rem solid transparent;
+    background-color: colors.$white;
+    color: colors.$blue-dark;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &--hover {
+      text-decoration: underline;
+      color: colors.$blue-state;
+    }
+
+    &:focus,
+    &:active,
+    &--focus,
+    &--active {
+      background-color: colors.$blue-state;
+      color: colors.$white;
+      text-decoration: none;
+    }
+
+    &--active:hover,
+    &--focus:hover  {
+      color: colors.$white;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      background-color: colors.$white;
+      border: 0.2rem solid colors.$blue-state;
+      color: colors.$blue-state;
+      outline: none;
+      padding: 1.44rem;
+
+      @include breakpoints.medium {
+        padding: 1.69rem 2.19rem;
+      }
+    }
+  }
+
+  &__trigger:first-child {
+    @extend %ods-margin-top-0;
+  }
+
+  & .ods-collapsible-trigger {
+    @extend %ods-margin-bottom-0, %ods-margin-top-3;
+  }
+
+  & .ods-collapsible-trigger--expanded {
+    @extend %ods-margin-bottom-0;
+
+    background-color: colors.$blue-state;
+    color: colors.$white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & .ods-collapsible-trigger::after {
+    @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
+
+    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+    content: map.get(icon-map.$icons, "chevron-thin-down");
+    right: 0;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease;
+
+    @include breakpoints.medium {
+      margin-right: 0.75rem;
+    }
+  }
+
+  & .ods-collapsible-trigger:focus-visible::after {
+    right: 0.2rem;
+  }
+
+  & .ods-accordion__trigger--rotate::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &__content {
+    @extend %ods-padding-5, %ods-padding-bottom-8;
+    @extend %ods-padding-top-6-breakpoint-large, %ods-padding-bottom-8-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
+    @extend %ods-margin-bottom-3;
+
+    background-color: colors.$white;
+  }
+}

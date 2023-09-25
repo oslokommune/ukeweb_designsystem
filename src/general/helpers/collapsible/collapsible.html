@@ -1,0 +1,76 @@
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p>The collapsible helper is used to expand/collapse a container.</p>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">How to use</h2>
+      <p>Add the class <code class="ods-code">.ods-collapsible-trigger</code> to the collapsible trigger. The collapsible javascript helper will handle the expansion and collapse of the content for you.
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Accessibility</h2>
+      <p>The best approach is to use a button element and wrap it with a heading. That will assist screen reader users in better understanding the hierarchy of the content.</p>
+      <p>If the initial state is 'expanded', make sure that the trigger element also has the class <code class="ods-code">.ods-collapsible-trigger--expanded</code> and the attribute <code class="ods-code">aria-expanded="true"</code> in addition.</p>
+</p>
+      <p>If the initial state is 'collapsed', make sure that the content has the class <code class="ods-code">.ods-collapsible-content--collapsed</code>, so the initial content is hidden.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Developer mode -->
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Default</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-button ods-collapsible-trigger" aria-expanded="true" aria-controls="ods-collapsible-70">Trigger</button></h3>
+      <p id="ods-collapsible-70" class="ods-collapsible-content ods-text-5 ods-margin-top-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Collapsed</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-button ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-collapsible-80">Trigger</button></h3>
+      <p id="ods-collapsible-80" class="ods-collapsible-content ods-collapsible-content--collapsed ods-text-5 ods-margin-top-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Animated</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-button ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-collapsible-90">Trigger</button></h3>
+      <p id="ods-collapsible-90" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease ods-text-5 ods-margin-top-15">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Collapsed, expanded on medium and up</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-button ods-button--blue-light ods-collapsible-trigger ods-collapsible-trigger--hidden-breakpoint-medium" aria-expanded="false" aria-controls="ods-collapsible-100">Trigger</button></h3>
+      <p id="ods-collapsible-100" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--expanded-breakpoint-medium ods-text-5 ods-margin-top-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Styled</h3>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-collapsible-trigger ods-collapsible-trigger--block" aria-expanded="false" aria-controls="ods-collapsible-110">Trigger</button></h3>
+      <p id="ods-collapsible-110" class="ods-collapsible-content ods-collapsible-content--block ods-collapsible-content--collapsed ods-collapsible-content--ease ods-color-bg-gray-light ods-text-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+    <div class="ods-grid__column--12">
+      <button class="ods-collapsible-trigger ods-collapsible-trigger--big-block" aria-expanded="false" aria-controls="ods-collapsible-120">Trigger</button>
+      <p id="ods-collapsible-120" class="ods-collapsible-content ods-collapsible-content--big-block ods-collapsible-content--collapsed ods-collapsible-content--ease ods-color-bg-gray-light ods-text-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-collapsible-trigger ods-collapsible-trigger--link" aria-expanded="false" aria-controls="ods-collapsible-130">Trigger</button></h3>
+      <p id="ods-collapsible-130" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease ods-text-5 ods-margin-top-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+  </div>
+</div>
