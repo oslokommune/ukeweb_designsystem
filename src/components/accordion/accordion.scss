@@ -113,7 +113,7 @@
     right: 0.2rem;
   }
 
-  & .ods-collapsible--rotate::after {
+  & .ods-accordion__trigger--rotate::after {
     transform: translate(-50%, -50%) rotate(180deg);
   }
 
