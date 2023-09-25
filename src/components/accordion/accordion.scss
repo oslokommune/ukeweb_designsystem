@@ -119,7 +119,7 @@
 
   &__content {
     @extend %ods-padding-5, %ods-padding-bottom-8;
-    @extend %ods-padding-top-6-breakpoint-large,  %ods-padding-bottom-8-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
+    @extend %ods-padding-top-6-breakpoint-large, %ods-padding-bottom-8-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
     @extend %ods-margin-bottom-3;
 
     background-color: colors.$white;
