@@ -13,7 +13,7 @@ function changeCounter(e) {
   input.value = value;
 }
 
-function triggerChangeNumber(callback) {
+function triggerIterator(callback) {
   const counterTriggers = document.querySelectorAll('.ods-input__counter-nav');
   counterTriggers.forEach((item) => {
     callback(item);
@@ -40,13 +40,13 @@ const OdsInput = {
   },
 
   bindAll() {
-    triggerChangeNumber((item) => {
+    triggerIterator((item) => {
       item.addEventListener('click', changeCounter, false);
     });
   },
 
   unbindAll() {
-    triggerChangeNumber((item) => {
+    triggerIterator((item) => {
       item.removeEventListener('click', changeCounter, false);
     });
   },
