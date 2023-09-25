@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed contactpoints-box in split section
 - Changed list text size or weight according to Figma rules
 - Changed display of landscape card to reflect actual use
+- Changed consume -> packages to show use of dualstack to support both IPv4 and IPv6.
 
 ### Fixed
 
