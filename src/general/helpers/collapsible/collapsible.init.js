@@ -1,5 +1,5 @@
-import OsdCollapsible from './collapsible';
+import OdsCollapsible from './collapsible';
 
 document.addEventListener('DOMContentLoaded', () => {
-  OsdCollapsible.init();
+  OdsCollapsible.init();
 });
