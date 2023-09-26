@@ -1,4 +1,4 @@
-import './collapsible/collapsible.init';
+import '../general/helpers/collapsible/collapsible.init';
 import './contact/contactbox/contactbox.init';
 import './image_carousel/image_carousel.init';
 import './form/checkbox/checkbox.init';

@@ -28,8 +28,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
+- Fix BEM format and issue in the developer tab of input counter component.
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
-- Fix broken link on collapisble page
+- Fix broken link on collapsible page.
 
 ### Removed
 
