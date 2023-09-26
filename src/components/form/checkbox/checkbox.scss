@@ -81,7 +81,7 @@
     @include mixins.error-message;
 
     background-color: colors.$red-30;
-    border-left: 0.375rem solid colors.$red;
+    border-left: 0.25rem solid colors.$red;
     display: flex;
   }
 
