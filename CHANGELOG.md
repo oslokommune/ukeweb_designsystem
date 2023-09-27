@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 27.09.2023
 
 ### Added
 
@@ -20,7 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed contribute "clean" page to better help contributors
 - Changed contribute "page" page to better help contributors
 - Changed documentation on contribution/basic page
-- Changed README to reflect 1.0 release
 - Changed folder and navigation structure for pages and templates
 - Changed folder and navigation structure for colors
 - Changed contactpoints-box in split section
@@ -29,18 +28,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
-- Fix BEM format and issue in the developer tab of input counter component.
-- Fix the distorted appearance of the search seasons icon in iOS Safari.
-- Fix broken link on collapsible page.
+- Fixed the grid on the Overview tab of these components for small breakpoint: fieldset, input, search, checkbox, radiobutton and button.
+- Fixed BEM format and issue in the developer tab of input counter component.
+- Fixed the distorted appearance of the search seasons icon in iOS Safari.
+- Fixed broken link on collapsible page.
 - Fixed misspelled breakpoint on landscape card
-- Fix broken hamburgermenu on small breakpoint
-- Fix missing font weight on landscape card label
+- Fixed broken hamburgermenu on small breakpoint
+- Fixed missing font weight on landscape card label
 
 ### Removed
 
-- "Oslo" folder and files
-- "Palette" folder
+- Removed "Oslo" folder and files
+- Removed "Palette" folder
 - Removed link chevron left variant
 - Removed landscape card large variant
 
