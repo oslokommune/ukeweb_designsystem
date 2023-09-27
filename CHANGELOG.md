@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed folder and navigation structure for colors
 - Changed contactpoints-box in split section
 - Changed list text size or weight according to Figma rules
+- Changed display of landscape card to reflect actual use
 
 ### Fixed
 
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix broken link on collapsible page.
 - Fixed misspelled breakpoint on landscape card
 - Fix broken hamburgermenu on small breakpoint
+- Fix missing font weight on landscape card label
 
 ### Removed
 
