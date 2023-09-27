@@ -99,23 +99,6 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
-
-  &--large {
-    & .ods-landscape-card__content {
-      @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
-    }
-
-    & .ods-landscape-card__media img {
-      @include breakpoints.medium {
-        height: $ods-landscape-card-height-large-breakpoint-medium;
-      }
-
-      @include breakpoints.large {
-        height: $ods-landscape-card-height-large-breakpoint-large;
-      }
-    }
-  }
-
   &__link {
     text-decoration: none;
 
@@ -179,6 +162,4 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
       }
     }
   }
-
 }
-
