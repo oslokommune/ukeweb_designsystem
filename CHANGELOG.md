@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed folder and navigation structure for pages and templates
 - Changed folder and navigation structure for colors
 - Changed contactpoints-box in split section
+- Changed list text size or weight according to Figma rules
 
 ### Fixed
 

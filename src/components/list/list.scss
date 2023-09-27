@@ -1,6 +1,10 @@
 @use "system/spacing";
+@use "system/typography";
 
 .ods-unordered-list {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-light;
+
   padding-left: 1.25rem;
   list-style: disc;
 
@@ -22,6 +26,9 @@
 }
 
 .ods-ordered-list {
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+  @extend %ods-text--weight-light;
+
   padding-left: 1.25rem;
   list-style: decimal;
   list-style-position: inside;
