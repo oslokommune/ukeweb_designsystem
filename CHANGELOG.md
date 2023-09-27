@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed folder and navigation structure for pages and templates
 - Changed folder and navigation structure for colors
 - Changed contactpoints-box in split section
+- Changed list text size or weight according to Figma rules
 
 ### Fixed
 
@@ -31,12 +32,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix BEM format and issue in the developer tab of input counter component.
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
 - Fix broken link on collapsible page.
+- Fixed misspelled breakpoint on landscape card
 - Fix broken hamburgermenu on small breakpoint
 
 ### Removed
 
 - "Oslo" folder and files
 - "Palette" folder
+- Removed link chevron left variant
+- Removed landscape card large variant
 
 ## [0.99.106] - 01-06-2023
 
