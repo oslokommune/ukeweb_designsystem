@@ -21,7 +21,7 @@ const OdsBreakpoints = {
 
     if (currentBreakpoint !== previousBreakpoint) {
       previousBreakpoint = currentBreakpoint;
-      dispatchCustomEvent('OdsBreakPointChange', eventData, window);
+      dispatchCustomEvent('OdsBreakpointChange', eventData, window);
     }
   },
 

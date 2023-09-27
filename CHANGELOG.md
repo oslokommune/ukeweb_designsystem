@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
 - Fix broken link on collapsible page.
 - Fixed misspelled breakpoint on landscape card
+- Fix broken hamburgermenu on small breakpoint
 
 ### Removed
 
