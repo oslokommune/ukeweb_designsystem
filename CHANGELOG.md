@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix BEM format and issue in the developer tab of input counter component.
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
 - Fix broken link on collapsible page.
+- Fix broken hamburgermenu on small breakpoint
 
 ### Removed
 
