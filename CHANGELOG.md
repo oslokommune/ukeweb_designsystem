@@ -31,11 +31,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix BEM format and issue in the developer tab of input counter component.
 - Fix the distorted appearance of the search seasons icon in iOS Safari.
 - Fix broken link on collapsible page.
+- Fixed misspelled breakpoint on landscape card
 
 ### Removed
 
 - "Oslo" folder and files
 - "Palette" folder
+- Removed link chevron left variant
+- Removed landscape card large variant
 
 ## [0.99.106] - 01-06-2023
 
