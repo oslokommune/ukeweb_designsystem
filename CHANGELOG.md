@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added missing ods.js / ods.scss in src folder
+
 ### Changed
 
 - Changed consume -> packages to show use of dualstack to support both IPv4 and IPv6.
