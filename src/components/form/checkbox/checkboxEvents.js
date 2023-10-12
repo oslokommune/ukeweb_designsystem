@@ -1,4 +1,5 @@
 let previousTarget = null;
+let spacePressed = false;
 
 function triggerIterator(callback) {
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
@@ -16,9 +17,30 @@ function addFocusCheckbox(e) {
 }
 
 function removeFocusCheckbox(e) {
-  console.log('removeFocusCheckbox', e.previousTarget);
-  if (e.key === "Tab" && e.target.nextElementSibling || e.type === 'click' && e.target.nextElementSibling) {
-    previousTarget.nextElementSibling.classList.remove('ods-checkbox--focused');
+  if (e.type === "keydown" && e.key === " ") {
+    spacePressed = true;
+    return; 
+  }
+
+  if (e.type === "click" && spacePressed) {
+    spacePressed = false;
+    return; 
+  }
+
+  if ((e.key === "Tab" || e.type === 'click') && e.target.nextElementSibling) {
+    console.log('removeFocusCheckbox');
+    if (previousTarget && previousTarget.nextElementSibling) {
+      previousTarget.nextElementSibling.classList.remove('ods-checkbox--focused');
+    }
+  }
+}
+
+function handleGlobalClick(e) {
+  // Check if clicked outside a checkbox
+  if (e.target.type !== 'checkbox') {
+    if (previousTarget && previousTarget.nextElementSibling) {
+      previousTarget.nextElementSibling.classList.remove('ods-checkbox--focused');
+    }
   }
 }
 
@@ -26,6 +48,7 @@ export const OdsCheckboxEvents = {
   init() {
     OdsCheckboxEvents.unbindAll();
     OdsCheckboxEvents.bindAll();
+    document.addEventListener("click", handleGlobalClick);
   },
 
   initElement(element) {
@@ -59,5 +82,6 @@ export const OdsCheckboxEvents = {
       item.removeEventListener("keydown", removeFocusCheckbox);
       item.removeEventListener("keyup", addFocusCheckbox);
     });
+    document.removeEventListener("click", handleGlobalClick);
   },
 };
