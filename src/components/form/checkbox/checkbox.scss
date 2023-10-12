@@ -33,6 +33,10 @@
     }
   }
 
+  &--focused {
+    outline: 2px solid colors.$purple-light !important;
+  }
+
   &__checkmark {
     position: relative;
     border: 2px solid colors.$blue-dark;
