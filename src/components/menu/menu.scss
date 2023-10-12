@@ -119,7 +119,7 @@
 }
 
 .ods-navbar-menu {
-  @extend %ods-padding-bottom-8;
+  @extend %ods-padding-bottom-8, %ods-padding-bottom-0-breakpoint-medium;
 
   background-color: colors.$white;
   display: none;
@@ -138,6 +138,7 @@
     cursor: pointer;
     @extend %ods-text--size-juliett;
     @include typography.weight("medium");
+    @extend %ods-text--weight-medium;
     @extend %ods-padding-horizontal-0;
     @extend %ods-padding-left-4;
     @extend %ods-padding-bottom-4, %ods-padding-bottom-0-breakpoint-medium;
@@ -207,8 +208,7 @@
   }
 
   &__link-text {
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-margin-top-4;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
 
     display: inline-block;
   }
@@ -250,13 +250,14 @@
     @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
 
     ul {
-      @extend %ods-margin-top-8-breakpoint-medium;
+      @extend %ods-margin-top-4-breakpoint-medium;
 
       background-color: colors.$gray;
 
       li {
         @extend %ods-margin-left-3;
         @extend %ods-margin-left-0-breakpoint-medium;
+        @extend %ods-padding-top-4;
       }
     }
 
@@ -271,16 +272,20 @@
 
   &__footer {
     @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+
+    li {
+      @extend %ods-padding-top-4;
+    }
   }
 
   &__footer-list {
-    @extend %ods-margin-top-8, %ods-margin-top-0-breakpoint-medium, %ods-padding-left-4, %ods-padding-left-0-breakpoint-medium;
+    @extend %ods-margin-top-0-breakpoint-medium, %ods-padding-left-4, %ods-padding-left-0-breakpoint-medium;
 
     justify-content: flex-start;
 
     &--media {
       display: flex;
-      @extend %ods-margin-top-13;
+      @extend %ods-margin-top-4;
       @extend %ods-margin-top-0-breakpoint-medium;
 
       @include breakpoints.medium {
