@@ -3,6 +3,7 @@
 @use "system/icon-map";
 @use "system/spacing";
 @use "system/typography";
+@use "system/icons";
 @use "system/units";
 @use "system/visibility";
 @use "components/links/link/mixins";
@@ -125,10 +126,7 @@
   display: none;
 
   .ods-icon {
-    font-size: 1.5rem;
-    @include breakpoints.medium {
-      font-size: 2rem;
-    }
+    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-medium;
   }
 
   &__heading-collapsable {
