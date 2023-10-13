@@ -25,10 +25,54 @@
 
   &--gap-column {
     @extend %ods-grid-gap-column;
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        column-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        column-gap: grid.$gap-size-hard-large;
+      }
+    }
   }
 
   &--gap-row {
     @extend %ods-grid-gap-row;
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-large {
+      row-gap: grid.$gap-size-soft;
+
+      @include breakpoints.medium {
+        row-gap: grid.$gap-size-soft-large;
+      }
+
+      &-breakpoint-medium {
+        @include breakpoints.medium {
+          row-gap: grid.$gap-size-soft-large;
+        }
+      }
+
+      &-breakpoint-large {
+        @include breakpoints.large {
+          row-gap: grid.$gap-size-soft-large;
+        }
+      }
+    }
   }
 
   &--gutter {
@@ -117,18 +161,6 @@
   @include breakpoints.medium {
     column-gap: grid.$gap-size-hard-large;
   }
-
-  &-breakpoint-medium {
-    @include breakpoints.medium {
-      column-gap: grid.$gap-size-hard-large;
-    }
-  }
-
-  &-breakpoint-large {
-    @include breakpoints.large {
-      column-gap: grid.$gap-size-hard-large;
-    }
-  }
 }
 
 %ods-grid-gap-row {
@@ -136,37 +168,5 @@
 
   @include breakpoints.medium {
     row-gap: grid.$gap-size-hard-large;
-  }
-
-  &-breakpoint-medium {
-    @include breakpoints.medium {
-      row-gap: grid.$gap-size-hard-large;
-    }
-  }
-
-  &-breakpoint-large {
-    @include breakpoints.large {
-      row-gap: grid.$gap-size-hard-large;
-    }
-  }
-
-  &-large {
-    row-gap: grid.$gap-size-soft;
-
-    @include breakpoints.medium {
-      row-gap: grid.$gap-size-soft-large;
-    }
-
-    &-breakpoint-medium {
-      @include breakpoints.medium {
-        row-gap: grid.$gap-size-soft-large;
-      }
-    }
-
-    &-breakpoint-large {
-      @include breakpoints.large {
-        row-gap: grid.$gap-size-soft-large;
-      }
-    }
   }
 }
