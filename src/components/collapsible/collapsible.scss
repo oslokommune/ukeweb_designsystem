@@ -33,6 +33,12 @@
       content: map.get(icon-map.$icons, "chevron-thin-down");
       position: absolute;
     }
+
+    &:focus-visible {
+      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
+    }
   }
 
   &--big-block {
@@ -53,6 +59,12 @@
     &:hover {
       background-color: colors.$gray;
       cursor: pointer;
+    }
+
+    &:focus-visible {
+      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
     }
 
     &::after {
@@ -78,6 +90,12 @@
     &:hover {
       color: colors.$blue-state;
       cursor: pointer;
+    }
+
+    &:focus-visible {
+      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
     }
 
     &::after {
