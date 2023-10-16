@@ -53,8 +53,12 @@
       color: colors.$blue-state;
     }
 
+    &:focus-visible {
+      outline: 4px solid colors.$purple-light !important;
+    }
+
     &:focus-visible::after {
-      border: 0.125rem solid colors.$blue-state;
+      outline: 4px solid colors.$purple-light;
     }
 
     &:active {
@@ -91,5 +95,9 @@
     @extend %ods-padding-horizontal-5, %ods-padding-vertical-4, %ods-padding-horizontal-6-breakpoint-medium;
 
     background-color: #d8f9ff;
+    
+    &:focus-visible {
+      outline: 4px solid colors.$purple-light !important;
+    }
   }
 }
