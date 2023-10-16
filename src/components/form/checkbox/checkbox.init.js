@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import OdsCheckbox from './checkbox.vue';
-import { OdsCheckboxEvents } from "./checkboxEvents.js";
+import OdsCheckboxEvents from './checkboxEvents';
 
 document.addEventListener('DOMContentLoaded', () => {
   OdsCheckboxEvents.init();

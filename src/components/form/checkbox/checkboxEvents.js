@@ -9,26 +9,24 @@ function triggerIterator(callback) {
 }
 
 function addFocusCheckbox(e) {
-  if (e.key === "Tab" && e.target.nextElementSibling || e.type === 'click' && e.target.nextElementSibling) {
-    console.log('addFocusCheckbox');
+  if ((e.key === 'Tab' && e.target.nextElementSibling) || (e.type === 'click' && e.target.nextElementSibling)) {
     e.target.nextElementSibling.classList.add('ods-checkbox--focused');
     previousTarget = e.target;
   }
 }
 
 function removeFocusCheckbox(e) {
-  if (e.type === "keydown" && e.key === " ") {
+  if (e.type === 'keydown' && e.key === ' ') {
     spacePressed = true;
-    return; 
+    return;
   }
 
-  if (e.type === "click" && spacePressed) {
+  if (e.type === 'click' && spacePressed) {
     spacePressed = false;
-    return; 
+    return;
   }
 
-  if ((e.key === "Tab" || e.type === 'click') && e.target.nextElementSibling) {
-    console.log('removeFocusCheckbox');
+  if ((e.key === 'Tab' || e.type === 'click') && e.target.nextElementSibling) {
     if (previousTarget && previousTarget.nextElementSibling) {
       previousTarget.nextElementSibling.classList.remove('ods-checkbox--focused');
     }
@@ -44,11 +42,11 @@ function handleGlobalClick(e) {
   }
 }
 
-export const OdsCheckboxEvents = {
+const OdsCheckboxEvents = {
   init() {
     OdsCheckboxEvents.unbindAll();
     OdsCheckboxEvents.bindAll();
-    document.addEventListener("click", handleGlobalClick);
+    document.addEventListener('click', handleGlobalClick);
   },
 
   initElement(element) {
@@ -57,31 +55,33 @@ export const OdsCheckboxEvents = {
   },
 
   bindElement(element) {
-    element.addEventListener("click", removeFocusCheckbox);
-    element.addEventListener("keydown", removeFocusCheckbox);
-    element.addEventListener("keyup", addFocusCheckbox);
+    element.addEventListener('click', removeFocusCheckbox);
+    element.addEventListener('keydown', removeFocusCheckbox);
+    element.addEventListener('keyup', addFocusCheckbox);
   },
 
   unbindElement(element) {
-    element.removeEventListener("click", removeFocusCheckbox);
-    element.removeEventListener("keydown", removeFocusCheckbox);
-    element.removeEventListener("keyup", addFocusCheckbox);
+    element.removeEventListener('click', removeFocusCheckbox);
+    element.removeEventListener('keydown', removeFocusCheckbox);
+    element.removeEventListener('keyup', addFocusCheckbox);
   },
 
   bindAll() {
     triggerIterator((item) => {
-      item.addEventListener("click", removeFocusCheckbox);
-      item.addEventListener("keydown", removeFocusCheckbox);
-      item.addEventListener("keyup", addFocusCheckbox);
+      item.addEventListener('click', removeFocusCheckbox);
+      item.addEventListener('keydown', removeFocusCheckbox);
+      item.addEventListener('keyup', addFocusCheckbox);
     });
   },
 
   unbindAll() {
     triggerIterator((item) => {
-      item.removeEventListener("click", removeFocusCheckbox);
-      item.removeEventListener("keydown", removeFocusCheckbox);
-      item.removeEventListener("keyup", addFocusCheckbox);
+      item.removeEventListener('click', removeFocusCheckbox);
+      item.removeEventListener('keydown', removeFocusCheckbox);
+      item.removeEventListener('keyup', addFocusCheckbox);
     });
-    document.removeEventListener("click", handleGlobalClick);
+    document.removeEventListener('click', handleGlobalClick);
   },
 };
+
+export default OdsCheckboxEvents;
