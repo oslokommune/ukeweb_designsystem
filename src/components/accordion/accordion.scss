@@ -21,6 +21,7 @@
   &__trigger {
     @extend %ods-padding-5, %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
 
+    border: none;
     background-color: colors.$white;
     color: colors.$blue-dark;
     display: block;
@@ -61,9 +62,9 @@
 
     &:focus-visible {
       background-color: colors.$white;
-      box-shadow: 0 0 0 6px solid colors.$purple-light;
-      outline: 2px solid colors.$blue-state;
       color: colors.$blue-state;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
     }
   }
 
@@ -101,10 +102,6 @@
     @include breakpoints.medium {
       margin-right: 0.75rem;
     }
-  }
-
-  & .ods-collapsible-trigger:focus-visible::after {
-    right: 0.2rem;
   }
 
   & .ods-accordion__trigger--rotate::after {
