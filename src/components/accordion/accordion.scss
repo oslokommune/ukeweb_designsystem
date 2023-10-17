@@ -21,7 +21,6 @@
   &__trigger {
     @extend %ods-padding-5, %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
 
-    border: 0.4rem solid transparent;
     background-color: colors.$white;
     color: colors.$blue-dark;
     display: block;
@@ -62,14 +61,9 @@
 
     &:focus-visible {
       background-color: colors.$white;
-      border: 0.2rem solid colors.$blue-state;
+      box-shadow: 0 0 0 6px solid colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
       color: colors.$blue-state;
-      outline: none;
-      padding: 1.44rem;
-
-      @include breakpoints.medium {
-        padding: 1.69rem 2.19rem;
-      }
     }
   }
 
