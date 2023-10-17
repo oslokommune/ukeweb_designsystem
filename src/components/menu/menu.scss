@@ -126,14 +126,10 @@
   display: none;
 
   .ods-icon {
-    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-medium;
+    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-large;
   }
 
   &__heading-collapsable {
-    background-color: unset;
-    border: none;
-    color: colors.$blue-dark;
-    cursor: pointer;
     @extend %ods-text--size-juliett;
     @include typography.weight("medium");
     @extend %ods-text--weight-medium;
@@ -141,6 +137,11 @@
     @extend %ods-padding-left-4;
     @extend %ods-padding-bottom-4, %ods-padding-bottom-0-breakpoint-medium;
     @extend %ods-none-breakpoint-medium;
+
+    background-color: unset;
+    border: none;
+    color: colors.$blue-dark;
+    cursor: pointer;
 
     span {
       pointer-events: none;
@@ -187,7 +188,6 @@
     font-size: inherit;
     flex-direction: row;
     text-decoration: none;
-    place-items: center;
 
     @include mixins.states {
       .ods-navbar-menu__link-content .ods-navbar-menu__link-text {
@@ -199,10 +199,6 @@
   &__link-icon {
     @extend %ods-margin-right-4;
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-
-    > * {
-      line-height: 1.5em !important;
-    }
   }
 
   &__link-text {
