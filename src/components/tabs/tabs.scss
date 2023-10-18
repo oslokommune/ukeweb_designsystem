@@ -40,12 +40,6 @@
     &[aria-selected="true"] {
       border-bottom: 2px solid colors.$blue-dark;
     }
-
-    // Additional CSS for the adjacent content when the button is focused
-    &:focus-visible + .ods-infobox__content {
-      outline: 4px solid colors.$purple-light;
-      outline-offset: -2px; // Adjust based on your design requirements
-    }
   }
 
   &__tab {
