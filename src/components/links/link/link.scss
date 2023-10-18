@@ -7,6 +7,7 @@
   text-decoration: underline;
   word-wrap: break-word;
 
+
   @include mixins.states;
 
   &--external {
@@ -17,6 +18,12 @@
     @include mixins.icon-left("chevron-right");
   }
 
+  &:focus-visible {
+    outline-offset: 12px;
+    box-shadow: 0 0 0 14px white, 0 0 0 18px colors.$purple-light;
+    outline: 2px solid colors.$blue-state;
+  }
+  
   &--state-light {
     &:visited,
     &-visited {
@@ -29,6 +36,7 @@
     &-focus {
       color: states.$hover-light !important;
     }
+
 
     &:active,
     &-active {
