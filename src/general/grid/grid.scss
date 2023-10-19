@@ -16,7 +16,13 @@
   }
 
   &--gap {
-    @extend %ods-grid-gap-column, %ods-grid-gap-row;
+    column-gap: grid.$gap-size-hard;
+    row-gap: grid.$gap-size-hard;
+
+    @include breakpoints.medium {
+      column-gap: grid.$gap-size-hard-large;
+      row-gap: grid.$gap-size-hard-large;
+    }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
@@ -38,7 +44,11 @@
   }
 
   &--gap-column {
-    @extend %ods-grid-gap-column;
+    column-gap: grid.$gap-size-hard;
+
+    @include breakpoints.medium {
+      column-gap: grid.$gap-size-hard-large;
+    }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
@@ -54,7 +64,11 @@
   }
 
   &--gap-row {
-    @extend %ods-grid-gap-row;
+    row-gap: grid.$gap-size-hard;
+
+    @include breakpoints.medium {
+      row-gap: grid.$gap-size-hard-large;
+    }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
@@ -166,21 +180,5 @@
         grid-column-end: #{$i};
       }
     }
-  }
-}
-
-%ods-grid-gap-column {
-  column-gap: grid.$gap-size-hard;
-
-  @include breakpoints.medium {
-    column-gap: grid.$gap-size-hard-large;
-  }
-}
-
-%ods-grid-gap-row {
-  row-gap: grid.$gap-size-hard;
-
-  @include breakpoints.medium {
-    row-gap: grid.$gap-size-hard-large;
   }
 }
