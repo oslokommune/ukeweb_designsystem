@@ -17,6 +17,20 @@
 
   &--gap {
     @extend %ods-grid-gap-column, %ods-grid-gap-row;
+
+    &-breakpoint-medium {
+      @include breakpoints.medium {
+        column-gap: grid.$gap-size-hard-large;
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
+
+    &-breakpoint-large {
+      @include breakpoints.large {
+        column-gap: grid.$gap-size-hard-large;
+        row-gap: grid.$gap-size-hard-large;
+      }
+    }
   }
 
   &--dense {
