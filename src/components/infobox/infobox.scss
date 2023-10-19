@@ -54,11 +54,14 @@
     }
 
     &:focus-visible {
-      outline: 4px solid colors.$purple-light !important;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state !important;
+      z-index: 200;
     }
 
     &:focus-visible::after {
-      outline: 4px solid colors.$purple-light;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state !important;
     }
 
     &:active {

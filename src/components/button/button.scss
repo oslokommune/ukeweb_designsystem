@@ -57,6 +57,11 @@
     background-color: transparent;
     border-color: transparent;
     color: colors.$blue-dark;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state !important;
+    }
   }
 
   &.ods-button--icon {
@@ -175,9 +180,11 @@
       background-color: colors.$gray-light !important;
       border-color: colors.$gray-light !important;
       color: states.$hover !important;
+
     }
+    
   }
-  
+
   &:focus-visible {
     outline: 4px solid colors.$purple-light !important;
   }

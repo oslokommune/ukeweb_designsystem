@@ -29,6 +29,11 @@
   text-decoration: none;
   width: 1.5rem;
 
+  &:focus-visible {
+    box-shadow: 0 0 0 4px colors.$purple-light;
+    outline: none;
+  }
+
   @include breakpoints.medium {
     border-radius: 0;
     border: 2px solid colors.$blue-dark;
@@ -181,6 +186,11 @@
     font-size: inherit;
     flex-direction: row;
     text-decoration: none;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state !important;
+    }
 
     @include mixins.states {
       .ods-navbar-menu__link-content .ods-navbar-menu__link-text {

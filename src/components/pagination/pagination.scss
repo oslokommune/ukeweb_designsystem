@@ -31,6 +31,12 @@
     border-radius: 50%;
     cursor: pointer;
 
+    &:focus-visible {
+      outline-offset: 0;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
+    }
+
     &:hover,
     &:focus {
       background-color: colors.$gray-light;
@@ -59,6 +65,11 @@
         color: states.$hover-text !important;
       }
 
+      &:focus-visible {
+        box-shadow: 0 0 0 6px colors.$purple-light;
+        outline: none;
+      }
+
       &:disabled {
         color: colors.$white !important;
         background: colors.$blue-dark !important;
@@ -79,12 +90,24 @@
     &:hover::before {
       content: map.get(icon-map.$icons, "chevron-thin-left") !important;
     }
+
+    &:focus-visible {
+      outline-offset: 0;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
+    }
   }
 
   &__next {
     &::before,
     &:hover::before {
       content: map.get(icon-map.$icons, "chevron-thin-right") !important;
+    }
+
+    &:focus-visible {
+      outline-offset: 0;
+      box-shadow: 0 0 0 6px colors.$purple-light;
+      outline: 2px solid colors.$blue-state;
     }
   }
 
