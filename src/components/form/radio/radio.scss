@@ -8,7 +8,7 @@
   @extend %ods-text--weight-light;
 
   align-items: center;
-  color: colors.$blue-dark;
+  color: colors.$blue-state;
   display: flex;
 
   &:focus-within {
@@ -71,7 +71,7 @@
     display: flex;
 
     & input:checked + &__control {
-      background-color: colors.$blue-dark;
+      background-color: colors.$blue-state;
     }
 
     & input {
