@@ -3,6 +3,7 @@
 
 .ods-grid {
   display: grid;
+  background-color: red;
   grid-template-columns: repeat(#{grid.$columns}, 1fr);
 
   &--inline {
