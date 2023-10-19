@@ -64,10 +64,6 @@
     .ods-radio__label {
       color: colors.$blue-state;
     }
-
-    & input:checked + .ods-radio__control {
-      background-color: colors.$blue-state;
-    }
   }
 
   &__input {
@@ -86,6 +82,10 @@
       &:focus + &.ods-radio__control {
         box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
       }
+    }
+
+    & input:checked + .ods-radio__control {
+      background-color: colors.$blue-state;
     }
 
   }
