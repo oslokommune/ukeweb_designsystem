@@ -34,12 +34,12 @@
   }
 
   &--focused {
-    outline: 2px solid colors.$purple-light !important;
+    outline: 0.125rem solid colors.$purple-light !important;
   }
 
   &__checkmark {
     position: relative;
-    border: 2px solid colors.$blue-dark;
+    border: 0.125rem solid colors.$blue-dark;
     width: 20px;
     height: 20px;
     flex-shrink: 0;

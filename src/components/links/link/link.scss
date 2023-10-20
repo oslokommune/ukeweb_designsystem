@@ -19,9 +19,9 @@
   }
 
   &:focus-visible {
-    outline-offset: 12px;
-    box-shadow: 0 0 0 14px white, 0 0 0 18px colors.$purple-light;
-    outline: 2px solid colors.$blue-state;
+    outline-offset: 0.75rem;
+    box-shadow: 0 0 0 0.875rem white, 0 0 0 1.125rem colors.$purple-light;
+    outline: 0.125rem solid colors.$blue-state;
   }
   
   &--state-light {
