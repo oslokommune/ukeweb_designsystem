@@ -11,7 +11,7 @@
   @extend %ods-text--weight-medium;
 
   background: colors.$blue-dark;
-  border: 2px solid colors.$blue-dark;
+  border: 0.125rem solid colors.$blue-dark;
   color: colors.$white;
   cursor: pointer;
   display: inline-block;
@@ -179,17 +179,17 @@
   }
   
   &:focus-visible {
-    outline: 4px solid colors.$purple-light !important;
+    outline: 0.25rem solid colors.$purple-light !important;
 
     &.ods-button--text {
-      border: 2px solid colors.$blue-state !important
+      border: 0.125rem solid colors.$blue-state !important
     }
   }
 
   &:active,
   &.ods-button--active {
     background-color: states.$active !important;
-    border: 2px solid states.$active !important;
+    border: 0.125rem solid states.$active !important;
     text-decoration: none;
 
     &.ods-button--outline {
@@ -207,7 +207,7 @@
 
   &:disabled {
     background-color: states.$disabled !important;
-    border: 2px solid states.$disabled !important;
+    border: 0.125rem solid states.$disabled !important;
     color: states.$disabled-text !important;
     cursor: default;
     text-decoration: none;
@@ -226,7 +226,7 @@
     &:hover,
     &:active {
       background-color: states.$disabled !important;
-      border: 2px solid states.$disabled !important;
+      border: 0.125rem solid states.$disabled !important;
       color: states.$disabled-text !important;
 
       &.ods-button--outline {
@@ -250,7 +250,7 @@
   &.ods-button--red {
     color: colors.$blue-dark;
     background-color: colors.$red;
-    border: 2px solid colors.$red;
+    border: 0.125rem solid colors.$red;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -258,14 +258,14 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
     }
   }
 
   &.ods-button--yellow {
     color: colors.$blue-dark;
     background-color: colors.$yellow;
-    border: 2px solid colors.$yellow;
+    border: 0.125rem solid colors.$yellow;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -273,14 +273,14 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
     }
   }
 
   &.ods-button--green-dark {
     color: colors.$white;
     background-color: colors.$green-dark;
-    border: 2px solid colors.$green-dark;
+    border: 0.125rem solid colors.$green-dark;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -289,7 +289,7 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
       color: colors.$green-dark;
     }
   }
@@ -297,7 +297,7 @@
   &.ods-button--green-light {
     color: colors.$green-dark;
     background-color: colors.$green-light;
-    border: 2px solid colors.$green-light;
+    border: 0.125rem solid colors.$green-light;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -306,7 +306,7 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
       color: colors.$green-dark;
     }
   }
@@ -314,7 +314,7 @@
   &.ods-button--blue-light {
     color: colors.$blue-dark;
     background-color: colors.$blue-light;
-    border: 2px solid colors.$blue-light;
+    border: 0.125rem solid colors.$blue-light;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -322,14 +322,14 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
     }
   }
 
   &.ods-button--gray {
     color: colors.$blue-dark;
     background-color: colors.$gray-light;
-    border: 2px solid colors.$gray-light;
+    border: 0.125rem solid colors.$gray-light;
 
     &.ods-button--outline {
       background-color: transparent;
@@ -337,7 +337,7 @@
 
     &.ods-button--text {
       background-color: transparent;
-      border: 2px solid transparent;
+      border: 0.125rem solid transparent;
     }
   }
 

@@ -16,7 +16,7 @@
 
   background-color: transparent;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   box-sizing: content-box;
   color: colors.$blue-dark;
   cursor: pointer;
@@ -30,13 +30,13 @@
   width: 1.5rem;
 
   &:focus-visible {
-    box-shadow: 0 0 0 4px colors.$purple-light;
+    box-shadow: 0 0 0 0.25rem colors.$purple-light;
     outline: none;
   }
 
   @include breakpoints.medium {
     border-radius: 0;
-    border: 2px solid colors.$blue-dark;
+    border: 0.125rem solid colors.$blue-dark;
     padding-left: units.unit-to-rem(4);
     padding-right: units.unit-to-rem(4);
     width: unset;
@@ -188,8 +188,8 @@
     text-decoration: none;
 
     &:focus-visible {
-      box-shadow: 0 0 0 6px colors.$purple-light;
-      outline: 2px solid colors.$blue-state !important;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light;
+      outline: 0.125rem solid colors.$blue-state !important;
     }
 
     @include mixins.states {

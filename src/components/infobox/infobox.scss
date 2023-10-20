@@ -54,9 +54,8 @@
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 6px colors.$purple-light;
-      outline: 2px solid colors.$blue-state !important;
-      z-index: 200;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light;
+      outline: 0.125rem solid colors.$blue-state;
     }
 
     &:focus-visible::after {
@@ -98,9 +97,5 @@
     @extend %ods-padding-horizontal-5, %ods-padding-vertical-4, %ods-padding-horizontal-6-breakpoint-medium;
 
     background-color: #d8f9ff;
-    
-    &:focus-visible {
-      outline: 4px solid colors.$purple-light !important;
-    }
   }
 }
