@@ -1,9 +1,9 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsRadiogroup from './radiogroup.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('ods-radio-vue-1')) {
-    const vm = new Vue({
+    const app = createApp({
       components: { OdsRadiogroup },
       data: () => ({
         selectedValue: '40',
@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fieldsetText: 'Select an option: ',
       }),
     });
-    vm.$mount('#ods-radio-vue-1');
+    app.mount('#ods-radio-vue-1');
   }
 });

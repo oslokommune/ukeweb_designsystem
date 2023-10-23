@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsMap from '../../map/map.vue';
 import contactbox from './contactbox';
 import OdsBreakpoints from '../../../general/breakpoints/breakpoints';
@@ -24,9 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapElement = document.getElementById('ods-contactbox-custom-content-map');
 
   if (mapElement) {
-    Vue.component('ods-map', OdsMap);
-    const vm = new Vue();
-    vm.$mount(mapElement);
+    const app = createApp({
+      components: {
+        OdsMap,
+      },
+    });
+    app.mount(mapElement);
   }
 
   contactboxInit.init();
