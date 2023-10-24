@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Change getting started -> bundle to refer to npm instead of github
 - Change "pages" reference to "templates"
 
 ## [1.0.2] - 23.10.2023
