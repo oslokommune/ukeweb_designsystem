@@ -32,8 +32,8 @@
 
       line-height: 1em;
       position: absolute;
-      right: 10px;
-      bottom: 10px;
+      right: 0.625rem;
+      bottom: 0.625rem;
     }
   }
 
@@ -55,7 +55,7 @@
     justify-content: center;
     padding: $padding;
     position: absolute;
-    width: 290px + ($padding * 2);
+    width: 20rem;
     z-index: 99;
 
     &__nav,
@@ -64,20 +64,20 @@
     }
 
     &__button {
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       border-radius: 50%;
       border: none;
       background-color: transparent;
       @extend %ods-text--size-golf;
 
-      line-height: 30px;
+      line-height: 1.875rem;
       text-align: center;
 
       @extend %ods-margin-vertical-0, %ods-margin-horizontal-1;
 
       position: absolute;
-      top: 10px;
+      top: 0.625rem;
 
       &:not(:disabled) {
         cursor: pointer;
@@ -156,8 +156,8 @@
         @extend %ods-text--align-center;
 
         button {
-          width: 36px;
-          height: 36px;
+      width: 1.875rem;
+      height: 1.875rem;
           border-radius: 50%;
           border: 2px solid transparent;
           background-color: transparent;
