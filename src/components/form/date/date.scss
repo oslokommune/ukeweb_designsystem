@@ -47,7 +47,7 @@
   }
 
   &__datepicker {
-    $padding: 10px;
+    $padding: 0.625rem;
 
     background-color: colors.$white;
     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 30%);
@@ -156,12 +156,13 @@
         @extend %ods-text--align-center;
 
         button {
-      width: 1.875rem;
-      height: 1.875rem;
+          width: 1.875rem;
+          height: 1.875rem;
           border-radius: 50%;
           border: 2px solid transparent;
           background-color: transparent;
           font-size: inherit;
+          font-family: inherit;
           padding: 0;
 
           &:hover {
