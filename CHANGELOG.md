@@ -5,12 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
 
 ### Changed
 
 - Change getting started -> bundle to refer to npm instead of github
 - Change "pages" reference to "templates"
+
+## [1.0.3] - 25.10.2023
+
+### Fixed
+
+- Remove font styles from lists and update the list's clean variant padding. This fixes the lists styles in the Banner component.
 
 ## [1.0.2] - 23.10.2023
 
