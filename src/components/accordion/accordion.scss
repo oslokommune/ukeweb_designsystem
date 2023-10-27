@@ -20,7 +20,7 @@
 
   &__trigger {
     @extend %ods-padding-vertical-5, %ods-padding-left-5, %ods-padding-right-11;
-    @extend %ods-padding-vertical-6-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
+    @extend %ods-padding-vertical-6-breakpoint-medium, %ods-padding-left-8-breakpoint-medium, %ods-padding-right-11-breakpoint-medium;
 
     border: none;
     background-color: colors.$white;
