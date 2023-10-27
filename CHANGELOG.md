@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Change getting started -> bundle to refer to npm instead of github
 
+### Fixed
+
+- Fix arrow overlapping text in small breakpoint of Accordion.
+
 ## [1.0.3] - 25.10.2023
 
 ### Fixed
