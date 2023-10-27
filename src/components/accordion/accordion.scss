@@ -14,13 +14,13 @@
   }
 
   &__heading {
-    @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium;
+    @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-medium;
     @extend %ods-text--weight-medium;
   }
 
   &__trigger {
     @extend %ods-padding-vertical-5, %ods-padding-left-5, %ods-padding-right-11;
-    @extend %ods-padding-vertical-6-breakpoint-medium, %ods-padding-left-8-breakpoint-medium, %ods-padding-right-11-breakpoint-medium;
+    @extend %ods-padding-vertical-6-breakpoint-medium, %ods-padding-left-8-breakpoint-medium, %ods-padding-right-13-breakpoint-medium;
 
     border: none;
     background-color: colors.$white;
