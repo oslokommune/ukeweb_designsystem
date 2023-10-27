@@ -16,10 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added icon for X.
 
-### Removed
-
-- Removed Twitter icon.
-
 ## [1.0.1] - 03.10.2023
 
 ### Added
