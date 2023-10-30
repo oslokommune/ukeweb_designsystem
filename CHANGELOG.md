@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Change getting started -> bundle to refer to npm instead of github
 - Change "pages" reference to "templates"
+- Removed column gap on service header.
 
 ### Fixed
 
