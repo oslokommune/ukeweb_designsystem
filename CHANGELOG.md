@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added underline to radio button's text on hover.
+
 ### Changed
 
 - Change background color and text for default state of radio button.
