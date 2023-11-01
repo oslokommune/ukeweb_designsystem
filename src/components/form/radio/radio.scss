@@ -8,11 +8,12 @@
   @extend %ods-text--weight-light;
 
   align-items: center;
-  color: colors.$blue-state;
+  color: colors.$blue-dark;
   display: flex;
 
   &:focus-within {
     &__label {
+      color: colors.$blue-dark;
       transform: scale(1.05);
       opacity: 1;
     }
@@ -70,10 +71,6 @@
     align-items: inherit;
     display: flex;
 
-    & input:checked + &__control {
-      background-color: colors.$blue-state;
-    }
-
     & input {
       opacity: 0;
       width: 0;
@@ -86,6 +83,7 @@
 
     & input:checked + .ods-radio__control {
       background-color: colors.$blue-state;
+      border-color: colors.$blue-state;
     }
 
   }
@@ -109,6 +107,7 @@
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-medium;
 
+    color: colors.$blue-state;
     line-height: 1.5em !important;
   }
 
