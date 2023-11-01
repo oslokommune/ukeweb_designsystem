@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 01.11.2023
+
 ### Added
 
 - Added underline to radio button's text on hover.
