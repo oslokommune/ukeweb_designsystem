@@ -90,7 +90,8 @@
       }
 
       &:focus-visible {
-        outline: 4px solid colors.$purple-light
+        box-shadow: 0 0 0 0.375rem colors.$purple-light;
+        outline: 0.125rem solid colors.$blue-state;
       }
 
       &:disabled {
