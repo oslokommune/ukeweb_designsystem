@@ -89,6 +89,10 @@
         color: colors.$blue-state;
       }
 
+      &:focus-visible {
+        outline: 4px solid colors.$purple-light
+      }
+
       &:disabled {
         cursor: not-allowed;
         color: states.$disabled-text;
