@@ -2,6 +2,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "mixins";
+@use "system/colors";
 
 .ods-input {
   @include mixins.form-states;
@@ -9,6 +10,10 @@
   &__input {
     @include mixins.form-component;
     @extend %ods-margin-top-2;
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+    }
 
     &::placeholder {
       color: inherit;
