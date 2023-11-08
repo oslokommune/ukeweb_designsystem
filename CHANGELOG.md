@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed hardcoded references to use s3.dualstack for IPv6 support.
+
 ## [1.0.5] - 01.11.2023
 
 ### Added
