@@ -45,6 +45,10 @@
       outline: none;
     }
 
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
     &::-webkit-search-cancel-button {
       background: url("/node_modules/@oslokommune/oslo-designsystem/src/assets/icons/cross.svg") no-repeat;
       background-size: contain;
@@ -92,6 +96,13 @@
     &:hover {
       background-color: states.$hover !important;
       border: 0.125rem solid states.$hover !important;
+      color: states.$hover-text !important;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+      border: 0.125rem solid colors.$blue-state;
+      background-color: colors.$blue-state;
       color: states.$hover-text !important;
     }
   }
