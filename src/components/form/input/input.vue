@@ -2,7 +2,7 @@
   <div class="ods-input" :class="{ 'ods-input--error': errorMessage }">
     <label class="ods-input__label">
       {{ label }}
-      <input class="ods-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" :aria-required="ariaReq ? 'true' : null" />
+      <input class="ods-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" :aria-required="isAriaRequired ? 'true' : null" />
       <span v-if="errorMessage" class="ods-icon ods-icon--exclamation-mark-circle"></span>
     </label>
     <div v-if="errorMessage" class="ods-input__error-message" :id="errorId">{{ errorMessage }}</div>
@@ -45,7 +45,7 @@ export default {
       type: String,
       required: true,
     },
-    ariaReq: {
+    isAriaRequired: {
       type: Boolean,
     },
   },

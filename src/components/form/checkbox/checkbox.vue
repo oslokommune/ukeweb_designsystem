@@ -1,7 +1,7 @@
 <template>
   <div>
     <label class="ods-checkbox" :class="{ 'ods-checkbox--error': errorMessage }">
-      <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaReq ? 'true' : null" />
+      <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" :aria-required="isAriaRequired ? 'true' : null" />
       <span class="ods-checkbox__checkmark"></span>
       <span class="ods-checkbox__text">{{ label }}</span>
     </label>
@@ -37,7 +37,7 @@ export default {
       type: String,
       required: true,
     },
-    ariaReq: {
+    isAriaRequired: {
       type: Boolean,
     },
   },
