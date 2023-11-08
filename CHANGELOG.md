@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added underline to radio button's text on hover.
+- Added aria-required prop to checkbox, textarea and input vuecomponents.
 
 ### Changed
 
