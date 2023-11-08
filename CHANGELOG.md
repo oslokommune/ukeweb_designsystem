@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added modifier to hide collapsible icon when fieldset content is empty.
+
 ## [1.0.5] - 01.11.2023
 
 ### Added

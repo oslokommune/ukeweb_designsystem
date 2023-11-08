@@ -95,4 +95,14 @@
       @extend %ods-margin-bottom-0;
     }
   }
+
+  &--no-filter {
+    & .ods-fieldset__legend >*::after {
+      display: none;
+    }
+
+    & .ods-fieldset__legend > * {
+      cursor: pointer;
+    }
+  }
 }
