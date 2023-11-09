@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
+### Fixed
 
-- Added modifier to hide collapsible icon when fieldset content is empty.
+- Prevent plus/minus icon to show in other variants than filter.
 
 ## [1.0.5] - 01.11.2023
 
