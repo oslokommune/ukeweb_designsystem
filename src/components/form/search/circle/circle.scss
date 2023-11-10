@@ -35,6 +35,10 @@
     width: 100%;
     appearance: none;
 
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light !important;
+    }
+
     &:hover {
       border: 0.125rem solid colors.$blue-state;
     }
@@ -43,10 +47,6 @@
       border: 0.25rem solid colors.$blue-state;
       padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
       outline: none;
-    }
-
-    &:focus-visible {
-      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::-webkit-search-cancel-button {
