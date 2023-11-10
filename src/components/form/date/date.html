@@ -8,13 +8,13 @@
       <h3 class="ods-devtools-text-preset-1">Default</h3>
       <p class="ods-paragraph">Simple form element for date input.</p>
       <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+        <div class="ods-grid">
+          <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+            <div class="ods-devtools-code__box">
               <div class="ods-date">
                 <label class="ods-date__label">
                   Type date
-                  <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd/mm/yyyy" />
+                  <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd.mm.yyyy" />
                 </label>
               </div>
             </div>
@@ -25,13 +25,13 @@
     <div class="ods-grid__column--12">
       <h3 class="ods-devtools-text-preset-1">Required</h3>
       <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+        <div class="ods-grid">
+          <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+            <div class="ods-devtools-code__box">
               <div class="ods-date">
                 <label class="ods-date__label">
                   Type date
-                  <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd/mm/yyyy" />
+                  <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd.mm.yyyy" />
                 </label>
                 <div class="ods-date__required" id="required-1">* Required</div>
               </div>
@@ -44,9 +44,9 @@
       <h3 class="ods-devtools-text-preset-1">Datepicker</h3>
       <p class="ods-paragraph">Vue version which includes a datepicker.</p>
       <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+        <div class="ods-grid">
+          <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+            <div class="ods-devtools-code__box">
               <div id="ods-date-vue">
                 <ods-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
               </div>
@@ -61,7 +61,7 @@
 <!-- Developer mode -->
 <div class="ods-devtools-devmode">
   <div class="ods-grid ods-grid--gap ods-grid--gutter">
-    <div class="ods-grid__column--12">
+    <div class="ods-grid__column--7">
       <h3 class="ods-devtools-text-preset-2">Default</h3>
       <div class="ods-date">
         <label class="ods-date__label">
@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--12">
+    <div class="ods-grid__column--7">
       <div class="ods-date ods-date--error">
         <label class="ods-date__label">
           Error/invalid
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--12">
+    <div class="ods-grid__column--7">
       <div class="ods-date">
         <label class="ods-date__label">
           Type date
@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--12">
+    <div class="ods-grid__column--6">
       <h3 class="ods-devtools-text-preset-2">Datepicker</h3>
       <div id="ods-date-vue-dev">
         <ods-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>

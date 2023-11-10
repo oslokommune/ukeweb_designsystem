@@ -97,7 +97,7 @@
       &:disabled {
         cursor: not-allowed;
         color: states.$disabled-text;
-        
+
         &:hover {
           background-color: transparent;
           color: states.$disabled-text;
@@ -105,48 +105,48 @@
       }
 
       &--next {
-        right: 5px;
-        
+        right: 0.3rem;
+
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-right") !important;
           font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
         }
       }
-      
+
       &--prev {
-        left: 5px;
-        
+        left: 0.3rem;
+
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-left") !important;
           font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
         }
       }
     }
-    
+
     /**
     * nrk-core-datepicker styling
     * - Element styles since missing classes on child component
     */
     &__calendar {
       width: 100%;
-      
+
       caption,
       th {
         font-weight: normal;
       }
-      
+
       caption {
         @extend %ods-text--size-juliett;
         @extend %ods-margin-bottom-3, %ods-margin-top-1;
-        
+
         text-transform: capitalize;
       }
-      
+
       thead {
         border-bottom: 1px solid colors.$blue-dark;
         border-top: 1px solid colors.$blue-dark;
       }
-      
+
       th {
         @extend %ods-text--size-kilo;
         @extend %ods-padding-vertical-1, %ods-padding-horizontal-0;
@@ -164,7 +164,7 @@
 
         button {
           @extend %ods-text--weight-medium;
-          
+
           color: colors.$blue-dark;
           width: 1.875rem;
           height: 1.875rem;
@@ -174,11 +174,11 @@
           font-size: inherit;
           font-family: inherit;
           padding: 0;
-          
+
           &:focus-visible {
-            outline: 0.25rem solid colors.$purple-light; 
+            outline: 0.25rem solid colors.$purple-light;
           }
-          
+
           &:hover {
             background-color: colors.$blue-state;
             color: colors.$white;
@@ -188,18 +188,18 @@
           &[data-adjacent="true"] {
             @extend %ods-text--size-lima;
             @extend %ods-text--weight-light;
-            
+
             // font-size: typography.$size-14;
           }
 
           &:not(:disabled) {
             cursor: pointer;
           }
-          
+
           // today
           &[aria-current="date"] {
             background-color: colors.$beige;
-            
+
             &:focus,
             &:hover {
               color: colors.$blue-dark;
