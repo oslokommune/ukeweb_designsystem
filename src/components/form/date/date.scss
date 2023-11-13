@@ -119,6 +119,9 @@
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-left") !important;
           font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
