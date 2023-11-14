@@ -49,6 +49,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix a bug that prevents generate certain grid classes that were extended as a placeholder.
 - Fix unintended padding and border on accordion
 
+### Added
+
+- Added icon for X.
+
 ## [1.0.1] - 03.10.2023
 
 ### Added
