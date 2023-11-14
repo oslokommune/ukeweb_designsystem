@@ -117,6 +117,11 @@
     outline: colors.$blue-state solid 1px;
   }
 
+  & input:focus-visible ~ .ods-radio__control {
+    outline: initial;
+    outline: 0.25rem solid colors.$purple-light;
+  }
+
 
   &--focus,
   &:focus {
