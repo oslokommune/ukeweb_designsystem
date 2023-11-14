@@ -11,6 +11,12 @@
   display: flex;
   flex-direction: row;
 
+  &:focus-visible {
+    outline-offset: 0.125rem;
+    outline: 0.25rem solid colors.$purple-light;
+    box-shadow: 0 0 0 0.125rem colors.$blue-state;
+  }
+
   &__icon {
     @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
     @extend %ods-margin-right-4;

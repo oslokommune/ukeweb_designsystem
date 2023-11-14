@@ -8,7 +8,7 @@
 .ods-personalized-content-link {
   @extend %ods-padding-4, %ods-padding-6-breakpoint-large;
 
-  border: 4px solid colors.$green-light;
+  border: 0.25rem solid colors.$green-light;
   column-gap: units.unit-to-rem(3);
   @include breakpoints.large {
     column-gap: units.unit-to-rem(4);
@@ -16,8 +16,8 @@
 
   &:focus-visible {
     outline-offset: -1px;
-    outline: 4px solid colors.$purple-light;
-    border: 4px solid colors.$blue-state;
+    outline: 0.25rem solid colors.$purple-light;
+    border: 0.25rem solid colors.$blue-state;
   }
 
   display: grid;
