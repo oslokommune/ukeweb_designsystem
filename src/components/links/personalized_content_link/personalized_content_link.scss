@@ -14,8 +14,13 @@
     column-gap: units.unit-to-rem(4);
   }
 
+  &:focus-visible {
+    outline-offset: -1px;
+    outline: 4px solid colors.$purple-light;
+    border: 4px solid colors.$blue-state;
+  }
+
   display: grid;
-  grid-template-columns: 1fr;
   text-decoration: none;
   width: 100%;
 
