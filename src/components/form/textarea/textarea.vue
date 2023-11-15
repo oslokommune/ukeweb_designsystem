@@ -2,7 +2,7 @@
   <div class="ods-textarea" :class="{ 'ods-textarea--error': errorMessage }">
     <label class="ods-textarea__label">
       {{ label }}
-      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" :aria-required="isAriaRequired ? 'true' : null" class="ods-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
+      <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" class="ods-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
     </label>
     <div v-if="errorMessage" class="ods-input__error-message" :id="errorId">{{ errorMessage }}</div>
   </div>
@@ -40,7 +40,7 @@ export default {
       type: String,
       required: true,
     },
-    isAriaRequired: {
+    ariaRequired: {
       type: Boolean,
     },
   },
