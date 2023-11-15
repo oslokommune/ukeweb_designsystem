@@ -155,12 +155,10 @@
         @extend %ods-padding-vertical-1, %ods-padding-horizontal-0;
         @extend %ods-text--align-center;
 
-        // text-align: center;
         text-transform: capitalize;
       }
 
       td {
-        // text-align: center;
         @extend %ods-text--align-center;
 
         padding-top: 0.25rem;
@@ -191,8 +189,6 @@
           &[data-adjacent="true"] {
             @extend %ods-text--size-lima;
             @extend %ods-text--weight-light;
-
-            // font-size: typography.$size-14;
           }
 
           &:not(:disabled) {
