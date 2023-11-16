@@ -318,7 +318,7 @@ export default {
 
       this.showPopups = this.state.showPopups;
 
-      this.mapObject.loadImage('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/location-pin-filled.png', (error, image) => {
+      this.mapObject.loadImage('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/location-pin-filled.png', (error, image) => {
         if (error) throw error;
         this.mapObject.addImage('location-pin-filled', image);
       });

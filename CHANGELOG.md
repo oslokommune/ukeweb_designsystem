@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
 ### Changed
 
 - Change font, spacing, and reactivity of datepicker vue component
+
+### Fixed
+
+- Fixed hardcoded references to use s3.dualstack for IPv6 support.
+- Prevent plus/minus icon to show in other variants than filter.
+
 
 ## [1.0.5] - 01.11.2023
 
@@ -46,6 +53,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix issue with radio button that didn't keep the checked style after it was checked
 - Fix a bug that prevents generate certain grid classes that were extended as a placeholder.
 - Fix unintended padding and border on accordion
+
+### Added
+
+- Added icon for X.
 
 ## [1.0.1] - 03.10.2023
 
