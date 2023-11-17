@@ -117,6 +117,10 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
         text-decoration: underline;
       }
     }
+    
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+    }
   }
 
   &--image-breakpoint-medium {
