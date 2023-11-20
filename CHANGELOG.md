@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+
 ### Fixed
 
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
