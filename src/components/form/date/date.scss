@@ -114,7 +114,7 @@
       }
 
       &--prev {
-        left: 0.2rem;
+        left: 0.3rem;
 
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-left") !important;
