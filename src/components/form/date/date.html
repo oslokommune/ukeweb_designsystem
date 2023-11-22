@@ -67,7 +67,7 @@
 <!-- Developer mode -->
 <div class="ods-devtools-devmode">
   <div class="ods-grid ods-grid--gap ods-grid--gutter">
-    <div class="ods-grid__column--7">
+    <div class="ods-grid__column--12 ods-grid__column--7-breakpoint-medium">
       <h3 class="ods-devtools-text-preset-2">Default</h3>
       <div class="ods-date">
         <label class="ods-date__label">
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--7">
+    <div class="ods-grid__column--12 ods-grid__column--7-breakpoint-medium">
       <div class="ods-date ods-date--error">
         <label class="ods-date__label">
           Error/invalid
@@ -87,7 +87,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--7">
+    <div class="ods-grid__column--12 ods-grid__column--7-breakpoint-medium">
       <div class="ods-date">
         <label class="ods-date__label">
           Type date
@@ -97,7 +97,7 @@
       </div>
     </div>
 
-    <div class="ods-grid__column--6">
+    <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
       <h3 class="ods-devtools-text-preset-2">Datepicker</h3>
       <div id="ods-date-vue-dev">
         <ods-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
