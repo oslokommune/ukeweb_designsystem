@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const app8 = createApp({
       components: { OdsMap },
       data: () => ({
-        geoJson: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
+        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
       }),
 
       mounted() {
         setTimeout(() => {
-          this.geoJson = 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
+          this.geoJson = 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
         }, 15000);
       },
     });
