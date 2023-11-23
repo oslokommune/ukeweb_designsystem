@@ -35,8 +35,12 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &__actions {
-    @extend %ods-padding-horizontal-3, %ods-padding-bottom-4, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
+    @extend %ods-padding-horizontal-3, %ods-padding-bottom-4, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-4-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
+
+    & .ods-button {
+      padding: 0;
+    }
   }
 
   &__heading {
