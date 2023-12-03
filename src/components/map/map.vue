@@ -682,12 +682,12 @@ export default {
 
             if (Array.isArray(features)) {
               const featuresCoordinates = {
-                Point: (feature) => feature.geometry.coordinates,
-                MultiPoint: (feature) => feature.geometry.coordinates[0],
-                Polygon: (feature) => feature.geometry.coordinates[0][0],
-                MultiPolygon: (feature) => feature.geometry.coordinates[0][0][0],
-                LineString: (feature) => feature.geometry.coordinates[0],
-                MultiLineString: (feature) => feature.geometry.coordinates[0][0],
+                Point: (feature) => feature.geometry.coordinates || null,
+                MultiPoint: (feature) => feature.geometry.coordinates[0] || null,
+                Polygon: (feature) => feature.geometry.coordinates[0][0] || null,
+                MultiPolygon: (feature) => feature.geometry.coordinates[0][0][0] || null,
+                LineString: (feature) => feature.geometry.coordinates[0] || null,
+                MultiLineString: (feature) => feature.geometry.coordinates[0][0] || null,
               };
 
               features.forEach((feature) => {
