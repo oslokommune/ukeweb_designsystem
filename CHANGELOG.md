@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
 - Prevent plus/minus icon to show in other variants than filter.
+- Fixed wrong colours on search-seasons
 
 ## [1.0.5] - 01.11.2023
 
