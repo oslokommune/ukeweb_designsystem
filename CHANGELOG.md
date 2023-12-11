@@ -10,17 +10,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added examples of more geoJSON structures in the map component.
+- Added security, contribution and license files to accomodate github community standards.
+
+### Changed
+
+- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
 - Prevent plus/minus icon to show in other variants than filter.
+- Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
 
 ## [1.0.5] - 01.11.2023
 
 ### Added
 
 - Added underline to radio button's text on hover.
+- Added aria-required property to checkbox, textarea and input VUE components.
 
 ### Changed
 
@@ -44,7 +51,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Remove font styles from lists and update the list's clean variant padding. This fixes the lists styles in the Banner component.
 
-
 ## [1.0.2] - 23.10.2023
 
 ### Fixed
@@ -52,6 +58,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix issue with radio button that didn't keep the checked style after it was checked
 - Fix a bug that prevents generate certain grid classes that were extended as a placeholder.
 - Fix unintended padding and border on accordion
+
+### Added
+
+- Added icon for X.
 
 ## [1.0.1] - 03.10.2023
 
