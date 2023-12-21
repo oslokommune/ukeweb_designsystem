@@ -21,8 +21,29 @@ $displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
   }
 }
 
-.ods-full-height {
-  height: 100%;
+$widths: (
+  100: 100%,
+  75: 75%,
+  50: 50%,
+  25: 25%,
+);
+$heights: (
+  100: 100%,
+  75: 75%,
+  50: 50%,
+  25: 25%,
+);
+
+@each $width, $value in $widths {
+  .ods-width-#{$width} {
+    width: $value;
+  }
+}
+
+@each $height, $value in $heights {
+  .ods-height-#{$height} {
+    height: $value;
+  }
 }
 
 .ods-invisible {
