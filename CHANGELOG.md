@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added examples of more geoJSON structures in the map component.
 - Added security, contribution and license files to accomodate github community standards.
+- Added new classes for width and height.
 
 ### Changed
 
