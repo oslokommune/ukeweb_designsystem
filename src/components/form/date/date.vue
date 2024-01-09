@@ -114,10 +114,8 @@ export default {
     },
     handleInputChange(event) {
       const inputDate = new Date(event.target.value);
-      if (Number.isNaN(inputDate)) {
-        this.data = inputDate;
-        this.datepicker.data = inputDate;
-      }
+      this.$emit('set', inputDate);
+      this.datepicker.date = inputDate;
     },
   },
 };
