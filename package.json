@@ -39,7 +39,7 @@
     "webfont": "^11.2.26"
   },
   "dependencies": {
-    "@nrk/core-datepicker": "^3.1.0",
+    "@nrk/core-datepicker": "^4.0.2",
     "maplibre-gl": "2.3.0",
     "vue": "^2.6.14"
   },
