@@ -38,9 +38,6 @@ $ods-portrait-card-image-height-large: 290px;
     @extend %ods-padding-horizontal-5, %ods-padding-bottom-4, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-4-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
 
-    & .ods-button {
-      padding: 0;
-    }
   }
 
   &__heading {
@@ -63,6 +60,20 @@ $ods-portrait-card-image-height-large: 290px;
   &--actions {
     & .ods-portrait-card__content {
       @extend %ods-padding-top-8-breakpoint-medium, %ods-padding-bottom-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-top-8-breakpoint-large, %ods-padding-vertical-8-breakpoint-large, %ods-padding-bottom-4-breakpoint-large;
+    }
+  }
+
+  &--actions-clean {
+    & .ods-portrait-card__content {
+      @extend %ods-padding-top-8-breakpoint-medium, %ods-padding-bottom-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-top-8-breakpoint-large, %ods-padding-vertical-8-breakpoint-large, %ods-padding-bottom-4-breakpoint-large;
+    }
+
+    & .ods-portrait-card__actions {
+      @extend %ods-padding-horizontal-4;
+
+      & > * {
+        padding: 0;
+      }
     }
   }
 
