@@ -120,6 +120,7 @@ export default {
         console.log('inputDate', inputDate);
         this.datepicker.date = inputDate; // Triggers datepicker.change
         console.log('datepicker.date', this.datepicker.date);
+        this.$emit('set', this.datepicker.date);
       }
     },
   },
