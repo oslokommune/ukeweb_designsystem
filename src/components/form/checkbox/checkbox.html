@@ -104,7 +104,7 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <label class="ods-checkbox">
-                <input type="checkbox" aria-describedby="required" checked="" />
+                <input type="checkbox" aria-describedby="required" checked="" aria-required="true" />
                 <span class="ods-checkbox__checkmark"></span>
                 <span class="ods-checkbox__text"> Text </span>
               </label>
@@ -195,7 +195,7 @@
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <label class="ods-checkbox">
-            <input type="checkbox" aria-describedby="required" checked="" />
+            <input type="checkbox" aria-describedby="required" checked="" aria-required="true" />
             <span class="ods-checkbox__checkmark"></span>
             <span class="ods-checkbox__text"> Text </span>
           </label>
@@ -207,7 +207,7 @@
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-checkbox-vue-1">
-        <ods-checkbox :checked="true" error-id="ods-vue-checkbox-component" label="Name" name="name" value="50" />
+        <ods-checkbox :checked="true" :aria-required="true" error-id="ods-vue-checkbox-component" label="Name" name="name" value="50" />
       </div>
     </div>
   </div>

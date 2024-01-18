@@ -32,8 +32,8 @@
 
       line-height: 1em;
       position: absolute;
-      right: 10px;
-      bottom: 10px;
+      right: 0.625rem;
+      bottom: 0.625rem;
     }
   }
 
@@ -47,7 +47,7 @@
   }
 
   &__datepicker {
-    $padding: 10px;
+    $padding: 0.625rem;
 
     background-color: colors.$white;
     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 30%);
@@ -55,7 +55,9 @@
     justify-content: center;
     padding: $padding;
     position: absolute;
-    width: 290px + ($padding * 2);
+    width: 100%;
+    max-width: 25rem;
+    min-width: 15rem;
     z-index: 99;
 
     &__nav,
@@ -64,20 +66,20 @@
     }
 
     &__button {
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       border-radius: 50%;
       border: none;
       background-color: transparent;
       @extend %ods-text--size-golf;
 
-      line-height: 30px;
+      line-height: 1.875rem;
       text-align: center;
 
       @extend %ods-margin-vertical-0, %ods-margin-horizontal-1;
 
       position: absolute;
-      top: 10px;
+      top: 0.625rem;
 
       &:not(:disabled) {
         cursor: pointer;
@@ -86,6 +88,11 @@
       &:hover {
         background-color: colors.$gray;
         color: colors.$blue-state;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 0.375rem colors.$purple-light;
+        outline: 0.125rem solid colors.$blue-state;
       }
 
       &:disabled {
@@ -98,9 +105,8 @@
         }
       }
 
-
       &--next {
-        right: 5px;
+        right: 0.3rem;
 
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-right") !important;
@@ -109,11 +115,14 @@
       }
 
       &--prev {
-        left: 5px;
+        left: 0.2rem;
 
         &::after {
           content: map.get(icon-map.$icons, "chevron-thin-left") !important;
           font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
@@ -143,37 +152,44 @@
       }
 
       th {
-        @extend %ods-text--size-lima;
+        @extend %ods-text--size-kilo;
         @extend %ods-padding-vertical-1, %ods-padding-horizontal-0;
         @extend %ods-text--align-center;
 
-        // text-align: center;
         text-transform: capitalize;
       }
 
       td {
-        // text-align: center;
         @extend %ods-text--align-center;
 
+        padding-top: 0.25rem;
+
         button {
-          width: 36px;
-          height: 36px;
+          @extend %ods-text--weight-medium;
+
+          color: colors.$blue-dark;
+          width: 1.875rem;
+          height: 1.875rem;
           border-radius: 50%;
           border: 2px solid transparent;
           background-color: transparent;
           font-size: inherit;
+          font-family: inherit;
           padding: 0;
 
+          &:focus-visible {
+            outline: 0.25rem solid colors.$purple-light;
+          }
+
           &:hover {
-            background-color: colors.$blue-dark;
+            background-color: colors.$blue-state;
             color: colors.$white;
           }
 
           // next/prev month
           &[data-adjacent="true"] {
             @extend %ods-text--size-lima;
-
-            // font-size: typography.$size-14;
+            @extend %ods-text--weight-light;
           }
 
           &:not(:disabled) {

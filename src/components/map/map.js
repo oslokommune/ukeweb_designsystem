@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const app8 = createApp({
       components: { OdsMap },
       data: () => ({
-        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
+        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
       }),
 
       mounted() {
