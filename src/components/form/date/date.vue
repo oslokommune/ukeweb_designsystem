@@ -116,11 +116,12 @@ export default {
       console.log('im here');
       if (event.key === 'Enter' || event.keyCode === 13) {
         console.log('enter');
-        const inputDate = new Date(event.target.value);
+        const inputDate = new Date(this.datepicker.date);
         console.log('inputDate', inputDate);
-        this.datepicker.date = inputDate; // Triggers datepicker.change
+        this.datepicker.date = inputDate;
         console.log('datepicker.date', this.datepicker.date);
         this.$emit('set', this.datepicker.date);
+        this.toggleDatepicker(false);
       }
     },
   },
