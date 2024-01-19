@@ -1,0 +1,132 @@
+@use "system/breakpoints";
+@use "system/colors";
+@use "system/typography";
+@use "system/icon-map";
+@use "system/spacing";
+@use "system/units";
+@use "system/states";
+@use "sass:map";
+
+.ods-combobox {
+  position: relative;
+
+  &__label {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
+  }
+
+  &__select {
+    @extend %ods-margin-top-1;
+
+    display: inline-flex;
+    justify-content: space-between;
+    outline: 0.13rem solid colors.$blue-dark;
+    width: 100%;
+
+    &--focus,
+    &--active {
+      outline: 0.3em solid states.$hover;
+    }
+
+    &--hover {
+      outline: 0.13rem solid states.$hover;
+    }
+
+    & .ods-combobox__input {
+      @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+      @extend %ods-text--weight-light;
+      @extend %ods-color-text-blue-dark;
+      @extend %ods-padding-vertical-2, %ods-padding-left-4, %ods-padding-right-2;
+
+      border: 0.125rem solid transparent;
+      width: 100%;
+
+      &:focus,
+      &--focus,
+      &--active {
+        margin-right: -5rem;
+        outline: 0.3em solid states.$hover;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::placeholder {
+        @extend %ods-color-text-grayscale-50;
+      }
+    }
+
+    & .ods-combobox__toggle {
+      background-color: colors.$white;
+      border: none;
+    }
+  }
+
+  &__dropdown {
+    @extend %ods-text--size-lima;
+    @extend %ods-text--weight-medium;
+
+    position: absolute;
+    margin-top: 0.25rem;
+    left: -0.25rem;
+    right: -0.25rem;
+    background-color: colors.$white;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
+    list-style: none;
+    z-index: 99999;
+
+    @include breakpoints.large {
+      margin-top: 0.313rem;
+      left: -0.313rem;
+      right: -0.313rem;
+    }
+
+    &--scroll {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    & .ods-combobox__dropdown-list {
+      width: 100%;
+    }
+
+    & .ods-combobox__dropdown-item {
+      @extend %ods-padding-vertical-2, %ods-padding-horizontal-4;
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &--focus {
+        background-color: colors.$gray-light;
+        color: states.$hover !important;
+        text-decoration: underline;
+      }
+
+      & .ods-combobox__dropdown-item-title {
+        @extend %ods-text--weight-medium;
+      }
+
+      & .ods-combobox__dropdown-item-description {
+        @extend %ods-text--weight-light;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      &--list-more {
+        @extend %ods-padding-4;
+        @extend %ods-text--weight-medium;
+
+        border-top: 1px solid colors.$gray-light;
+        text-decoration: underline;
+      }
+    }
+}
+}

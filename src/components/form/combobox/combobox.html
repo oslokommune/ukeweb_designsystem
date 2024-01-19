@@ -1,0 +1,115 @@
+<!-- Overview mode -->
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <!-- Default -->
+    <div class="ods-grid__column--12 ods-margin-bottom-25">
+      <h2 class="ods-devtools-text-preset-1">Default</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-combobox">
+                  <div class="ods-combobox__select">
+                    <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-1" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
+                    <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-1" tabindex="-1">
+                      <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
+                    </button>
+                  </div>
+                  <div class="ods-combobox__dropdown">
+                    <ul class="ods-combobox__dropdown-list ods-combobox__dropdown--scroll" role="listbox" id="id-listbox-1">
+                      <li class="ods-combobox__dropdown-item" role="option">Item A</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item B</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item C</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item D</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item E</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item F</li>
+                      <li class="ods-combobox__dropdown-item" role="option">Item G</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12 ods-margin-bottom-25">
+      <h2 class="ods-devtools-text-preset-1">With label</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-combobox">
+                  <label for="ods-combobox-2" class="ods-combobox__label">Label text</label>
+                  <div class="ods-combobox__select">
+                    <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-2" type="text" autocomplete="off" placeholder="Select an item from the list" />
+                    <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-2" tabindex="-1">
+                      <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
+                    </button>
+                  </div>
+                  <div class="ods-combobox__dropdown">
+                    <ul class="ods-combobox__dropdown-list ods-combobox__dropdown--scroll" role="listbox" id="id-listbox-2">
+                      <li class="ods-combobox__dropdown-item" role="option">
+                        <span class="osg-text--size-lima osg-text--weight-medium">Item A</span>
+                        <span class="osg-text--size-lima ods-text--weight-light">Description A</span>
+                      </li>
+                      <li class="ods-combobox__dropdown-item" role="option">
+                        <span class="osg-text--size-lima osg-text--weight-medium">Item B</span>
+                        <span class="osg-text--size-lima ods-text--weight-light">Description B</span>
+                      </li>
+                      <li class="ods-combobox__dropdown-item" role="option">
+                        <span class="osg-text--size-lima osg-text--weight-medium">Item C</span>
+                        <span class="osg-text--size-lima ods-text--weight-light">Description C</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-margin-bottom-25">
+      <h2 class="ods-devtools-text-preset-1">Vue component</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div id="ods-combobox-vue-1">
+                  <ods-combobox
+                    :i18n="{
+                      'label': 'Select an element:',
+                      'ariaLabelListBox': 'List of elements',
+                      'buttonLabel': 'Toggle list',
+                      'placeholder': 'Select an element from the list',
+                    }"
+                    :id="id"
+                    :input-id="inputId"
+                    :listbox-id="listboxId"
+                    :items="items"
+                    :item-list-scroll="true"
+                    :value="value"
+                    v-on:item-blur="event('input-blur', $event)"
+                    v-on:item-focus="event('item-focus', $event)"
+                    v-on:input-change="event('input-change', $event)"
+                    v-on:input-enter="event('input-enter', $event)"
+                    v-on:submit="event('submit', $event)"
+                    v-on:itemlist-blur="event('itemlist-blur', $event)"
+                    v-on:input-arrow-up-down="event('input-arrow-up-down', $event)"
+                  ></ods-combobox>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Default -->
+  </div>
+</div>
+
