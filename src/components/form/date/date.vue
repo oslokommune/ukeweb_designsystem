@@ -113,15 +113,17 @@ export default {
       this.browseDate = event.detail;
     },
     handleKeyboardInput(event) {
-      console.log('im here');
       if (event.key === 'Enter' || event.keyCode === 13) {
-        console.log('enter');
-        const inputDate = new Date(this.datepicker.date);
-        console.log('inputDate', inputDate);
-        this.datepicker.date = inputDate;
-        console.log('datepicker.date', this.datepicker.date);
-        this.$emit('set', this.datepicker.date);
-        this.toggleDatepicker(false);
+        const [day, month, year] = event.target.value.split('.').map(Number);
+        if (day && month && year) {
+          const inputDate = new Date(year, month - 1, day);
+          if (!Number.isNaN(inputDate.getTime())) {
+            this.datepicker.date = inputDate;
+            this.$emit('set', this.datepicker.date);
+            this.toggleDatepicker(false);
+            console.log(this.datepicker.date);
+          }
+        }
       }
     },
   },
