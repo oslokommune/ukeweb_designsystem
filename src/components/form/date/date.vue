@@ -1,9 +1,10 @@
 <template>
-  <div class="ods-date">
+  <div class="ods-date" :class="{ 'ods-date--error': isError }">
     <label class="ods-date__label">
       {{ label }}
       <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
+    <div class="ods-date__error-message" v-if="isError">Invalid date or format. Try dd.mm.yyyy</div>
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
       <fieldset class="ods-date__datepicker__nav">
         <button class="ods-date__datepicker__button ods-date__datepicker__button--prev" :value="browseMonth(-1)" :disabled="browseMonthDisabled(-1)" :aria-label="btnPrevMonthLabel"></button>
@@ -64,6 +65,7 @@ export default {
     datepicker: null,
     showDatepicker: false,
     browseDate: new Date(Date.now()),
+    isError: false,
   }),
 
   mounted() {
@@ -117,13 +119,25 @@ export default {
         const [day, month, year] = event.target.value.split('.').map(Number);
         if (day && month && year) {
           const inputDate = new Date(year, month - 1, day);
-          if (!Number.isNaN(inputDate.getTime())) {
+          if (this.isValidDate(inputDate) && this.isWithinRange(inputDate)) {
             this.datepicker.date = inputDate;
             this.$emit('set', this.datepicker.date);
             this.toggleDatepicker(false);
+            this.isError = false; // Reset error state
+          } else {
+            // handle invalid or out of range date
+            console.log('else-statement');
+            this.isError = true; // Set error state
           }
         }
       }
+    },
+    isValidDate(date) {
+      return !Number.isNaN(date.getTime());
+    },
+
+    isWithinRange(date) {
+      return date >= this.min && date <= this.max;
     },
   },
 };
