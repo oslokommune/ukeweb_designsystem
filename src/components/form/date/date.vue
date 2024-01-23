@@ -2,7 +2,7 @@
   <div class="ods-date">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
       <fieldset class="ods-date__datepicker__nav">
@@ -121,7 +121,6 @@ export default {
             this.datepicker.date = inputDate;
             this.$emit('set', this.datepicker.date);
             this.toggleDatepicker(false);
-            console.log(this.datepicker.date);
           }
         }
       }
