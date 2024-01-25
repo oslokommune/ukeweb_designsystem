@@ -139,15 +139,12 @@ export default {
           this.isError = `${this.invalidInputErrorMessage}`;
           this.$emit('set', null);
         } else if (inputDate < this.min) {
-          // Error if date is before min
           this.isError = `${this.minDateErrorMessage} (${minFormatted}).`;
           this.$emit('set', null);
         } else if (inputDate > this.max) {
-          // Error if date is after max
           this.isError = `${this.maxDateErrorMessage} (${maxFormatted}).`;
           this.$emit('set', null);
         } else {
-          // Success
           this.datepicker.date = inputDate;
           this.$emit('set', this.datepicker.date);
           this.toggleDatepicker(false);
