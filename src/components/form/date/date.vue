@@ -137,15 +137,15 @@ export default {
         if (!day || !month || !year || !this.isValidDate(inputDate)) {
           // Error message for invalid date
           this.isError = `${this.invalidInputErrorMessage}`;
-          this.resetDatepicker();
+          this.$emit('set', null);
         } else if (inputDate < this.min) {
           // Error if date is before min
           this.isError = `${this.minDateErrorMessage} (${minFormatted}).`;
-          this.resetDatepicker();
+          this.$emit('set', null);
         } else if (inputDate > this.max) {
           // Error if date is after max
           this.isError = `${this.maxDateErrorMessage} (${maxFormatted}).`;
-          this.resetDatepicker();
+          this.$emit('set', null);
         } else {
           // Success
           this.datepicker.date = inputDate;
@@ -162,9 +162,6 @@ export default {
 
     isWithinRange(date) {
       return date >= this.min && date <= this.max;
-    },
-    resetDatepicker() {
-      this.$emit('set', null);
     },
   },
 };
