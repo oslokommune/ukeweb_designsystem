@@ -2,9 +2,9 @@
   <div class="ods-date" :class="{ 'ods-date--error': isError }">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      <input type="text" class="ods-date__input" placeholder="dd.mm.åååå" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
-    <div class="ods-date__error-message" v-if="isError">Invalid date or format. Try dd.mm.yyyy</div>
+    <div class="ods-date__error-message" v-if="isError">{{ isError }}</div>
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
       <fieldset class="ods-date__datepicker__nav">
         <button class="ods-date__datepicker__button ods-date__datepicker__button--prev" :value="browseMonth(-1)" :disabled="browseMonthDisabled(-1)" :aria-label="btnPrevMonthLabel"></button>
@@ -65,7 +65,7 @@ export default {
     datepicker: null,
     showDatepicker: false,
     browseDate: new Date(Date.now()),
-    isError: false,
+    isError: '',
   }),
 
   mounted() {
@@ -110,6 +110,7 @@ export default {
     onDatepickerClickDay() {
       this.$emit('set', this.datepicker.date);
       this.toggleDatepicker(false);
+      this.isError = '';
     },
     onDatepickerChange(event) {
       this.browseDate = event.detail;
@@ -119,25 +120,43 @@ export default {
         const [day, month, year] = event.target.value.split('.').map(Number);
         if (day && month && year) {
           const inputDate = new Date(year, month - 1, day);
-          if (this.isValidDate(inputDate) && this.isWithinRange(inputDate)) {
-            this.datepicker.date = inputDate;
-            this.$emit('set', this.datepicker.date);
-            this.toggleDatepicker(false);
-            this.isError = false; // Reset error state
+          if (this.isValidDate(inputDate)) {
+            // Formatting the min and max dates
+            const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
+            const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
+
+            if (inputDate < this.min) {
+              this.isError = `Valgt dato er før tidligst mulig dato. (${minFormatted}).`; // Error message for date before minDate
+              this.resetDatepicker();
+            } else if (inputDate > this.max) {
+              this.isError = `Valgt dato er etter senest mulig dato. (${maxFormatted}).`; // Error message for date after maxDate
+              this.resetDatepicker();
+            } else {
+              this.datepicker.date = inputDate;
+              this.$emit('set', this.datepicker.date);
+              this.toggleDatepicker(false);
+              this.isError = '';
+            }
           } else {
-            // handle invalid or out of range date
-            console.log('else-statement');
-            this.isError = true; // Set error state
+            this.isError = 'Ugyldig dato eller format. Prøv dd.mm.åååå'; // Error message for invalid format or date
+            this.resetDatepicker();
           }
+        } else {
+          this.isError = 'Ugyldig dato eller format. Prøv dd.mm.åååå'; // Error message for empty or incorrect fields
+          this.resetDatepicker();
         }
       }
     },
+
     isValidDate(date) {
       return !Number.isNaN(date.getTime());
     },
 
     isWithinRange(date) {
       return date >= this.min && date <= this.max;
+    },
+    resetDatepicker() {
+      this.$emit('set', null);
     },
   },
 };
