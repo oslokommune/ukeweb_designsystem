@@ -2,7 +2,7 @@
   <div class="ods-date" :class="{ 'ods-date--error': isError }">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" placeholder="dd.mm.åååå" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
     <div class="ods-date__error-message" v-if="isError">{{ isError }}</div>
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
@@ -58,6 +58,18 @@ export default {
     btnNextMonthLabel: {
       type: String,
       default: 'Next month',
+    },
+    minDateErrorMessage: {
+      type: String,
+      default: 'Date is before the earliest allowed date.',
+    },
+    maxDateErrorMessage: {
+      type: String,
+      default: 'Date is after the latest allowed date',
+    },
+    invalidInputErrorMessage: {
+      type: String,
+      default: 'Invalid date or format. Try dd.mm.yyyy',
     },
   },
 
@@ -118,32 +130,28 @@ export default {
     handleKeyboardInput(event) {
       if (event.key === 'Enter' || event.keyCode === 13) {
         const [day, month, year] = event.target.value.split('.').map(Number);
-        if (day && month && year) {
-          const inputDate = new Date(year, month - 1, day);
-          if (this.isValidDate(inputDate)) {
-            // Formatting the min and max dates
-            const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
-            const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
+        const inputDate = new Date(year, month - 1, day);
+        const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
+        const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
 
-            if (inputDate < this.min) {
-              this.isError = `Valgt dato er før tidligst mulig dato. (${minFormatted}).`; // Error message for date before minDate
-              this.resetDatepicker();
-            } else if (inputDate > this.max) {
-              this.isError = `Valgt dato er etter senest mulig dato. (${maxFormatted}).`; // Error message for date after maxDate
-              this.resetDatepicker();
-            } else {
-              this.datepicker.date = inputDate;
-              this.$emit('set', this.datepicker.date);
-              this.toggleDatepicker(false);
-              this.isError = '';
-            }
-          } else {
-            this.isError = 'Ugyldig dato eller format. Prøv dd.mm.åååå'; // Error message for invalid format or date
-            this.resetDatepicker();
-          }
-        } else {
-          this.isError = 'Ugyldig dato eller format. Prøv dd.mm.åååå'; // Error message for empty or incorrect fields
+        if (!day || !month || !year || !this.isValidDate(inputDate)) {
+          // Error message for invalid date
+          this.isError = `${this.invalidInputErrorMessage}`;
           this.resetDatepicker();
+        } else if (inputDate < this.min) {
+          // Error if date is before min
+          this.isError = `${this.minDateErrorMessage} (${minFormatted}).`;
+          this.resetDatepicker();
+        } else if (inputDate > this.max) {
+          // Error if date is after max
+          this.isError = `${this.maxDateErrorMessage} (${maxFormatted}).`;
+          this.resetDatepicker();
+        } else {
+          // Success
+          this.datepicker.date = inputDate;
+          this.$emit('set', this.datepicker.date);
+          this.toggleDatepicker(false);
+          this.isError = '';
         }
       }
     },
