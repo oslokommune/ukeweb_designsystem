@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
 - Fixed hexcodes and class names for colors.
+- Fixed links on portrait cards to improve screen reader capabilities.
 
 ## [1.0.5] - 01.11.2023
 
