@@ -46,8 +46,8 @@ export default {
       }),
     },
     geoJson: {
-      // Can't set type, as MapLibre accepts both an URL and an object
-      default: null,
+      type: Object,
+      default: () => ({}),
     },
     points: {
       type: Array,
@@ -77,6 +77,7 @@ export default {
     mapLoaded: false,
     error: false,
     technicalErrorText: '',
+    geoJsonData: null,
   }),
 
   computed: {
@@ -158,15 +159,7 @@ export default {
     mapLoad() {
       if (!this.mapLoaded) {
         this.mapLoaded = true;
-        if (typeof this.geoJson === 'string') {
-          fetch(this.geoJson)
-            .then((response) => response.json())
-            .then((data) => {
-              this.$_createMapObject(data);
-            });
-        } else {
-          this.$_createMapObject(this.geoJson);
-        }
+        this.$_createMapObject(this.geoJson);
       }
     },
     populateMap() {
@@ -187,27 +180,14 @@ export default {
 
         if (this.geoJson !== null) {
           if (!this.clusteredPoints) {
-            if (typeof this.geoJson === 'string') {
-              fetch(this.geoJson)
-                .then((response) => response.json())
-                .then((data) => {
-                  this.$_addGeoJsonToMap(data);
-                });
-            } else {
-              this.$_addGeoJsonToMap(this.geoJson);
-            }
-          } else if (typeof this.geoJson === 'string') {
-            fetch(this.geoJson)
-              .then((response) => response.json())
-              .then((data) => {
-                this.$_splitClusterDataAndAddToMap(data);
-              });
+            this.$_addGeoJsonToMap(this.geoJson);
           } else {
             this.$_splitClusterDataAndAddToMap(this.geoJson);
           }
         }
       }
     },
+
     clearMapAndData() {
       if (this.lastDisplayedPopup !== null) {
         this.lastDisplayedPopup.remove();

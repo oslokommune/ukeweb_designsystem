@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import OdsMap from './map.vue';
+import fetchGeoJsonData from './geoJsonUtils';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mapElement = document.getElementById('ods-map');
@@ -19,15 +20,49 @@ document.addEventListener('DOMContentLoaded', () => {
     vm1.$mount(mapElement);
   }
   if (mapElement2) {
-    Vue.component('ods-map', OdsMap);
-    const vm2 = new Vue();
+    const vm2 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      mounted() {
+        setTimeout(() => {
+          fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson')
+            .then((data) => {
+              this.geoJsonData = data;
+            })
+            .catch((error) => {
+              console.error('Error fetching GeoJSON data:', error);
+            });
+        }, 15000);
+      },
+    });
     vm2.$mount(mapElement2);
   }
+
   if (mapElement3) {
-    Vue.component('ods-map', OdsMap);
-    const vm3 = new Vue();
+    const vm3 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      mounted() {
+        setTimeout(() => {
+          fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson')
+            .then((data) => {
+              this.geoJsonData = data;
+            })
+            .catch((error) => {
+              console.error('Error fetching GeoJSON data:', error);
+            });
+        }, 15000);
+      },
+    });
     vm3.$mount(mapElement3);
   }
+
   if (mapElement4) {
     Vue.component('ods-map', OdsMap);
     const vm4 = new Vue({
@@ -43,14 +78,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement5) {
-    Vue.component('ods-map', OdsMap);
-    const vm5 = new Vue();
+    const vm5 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      mounted() {
+        setTimeout(() => {
+          fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson')
+            .then((data) => {
+              this.geoJsonData = data;
+            })
+            .catch((error) => {
+              console.error('Error fetching GeoJSON data:', error);
+            });
+        }, 15000);
+      },
+    });
     vm5.$mount(mapElement5);
   }
 
   if (mapElement6) {
-    Vue.component('ods-map', OdsMap);
-    const vm6 = new Vue();
+    const vm6 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      mounted() {
+        setTimeout(() => {
+          fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson')
+            .then((data) => {
+              this.geoJsonData = data;
+            })
+            .catch((error) => {
+              console.error('Error fetching GeoJSON data:', error);
+            });
+        }, 15000);
+      },
+    });
     vm6.$mount(mapElement6);
   }
 
@@ -73,13 +140,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mapElement8) {
     Vue.component('ods-map', OdsMap);
     const vm8 = new Vue({
-      data: () => ({
-        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
-      }),
+      data() {
+        return {
+          geoJsonData: null,
+        };
+        // old geoJson string  geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
+      },
 
       mounted() {
         setTimeout(() => {
-          this.geoJson = 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
+          fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson')
+            .then((data) => {
+              this.geoJsonData = data;
+            })
+            .catch((error) => {
+              console.error('Error fetching GeoJSON data:', error);
+            });
         }, 15000);
       },
     });
