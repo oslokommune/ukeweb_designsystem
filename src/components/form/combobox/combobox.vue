@@ -302,13 +302,6 @@ export default {
         index: this.selectedIndex,
       });
     },
-    eventKeyDown(event) {
-      const { code } = event;
-
-      if (this.index !== null && (code === 'ArrowDown' || code === 'ArrowUp')) {
-        event.preventDefault();
-      }
-    },
     handleClickEvent(event) {
       const { target } = event;
       const isOption = (target.parentElement && target.parentElement.role === 'option') || target.role === 'option';

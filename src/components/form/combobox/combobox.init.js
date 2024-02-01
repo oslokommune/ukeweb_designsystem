@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
           OdsCombobox,
         },
         data: () => ({
-          addressesURL: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/experiments/addresses/addresses.json',
           addresses: [],
-          id: 'combobox_id_vue',
-          inputId: 'input_id_vue',
+          id: `combobox-${element}`,
+          inputId: `input-${element}`,
           items: [],
-          listboxId: 'listbox_id_vue',
+          listboxId: `listbox-${element}`,
           value: '',
         }),
         mounted() {
