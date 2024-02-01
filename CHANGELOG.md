@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added examples of more geoJSON structures in the map component.
+- Update styles for the popup in the map component.
 - Added security, contribution and license files to accomodate github community standards.
 
 ### Changed
 
+- Changed hover colour on button-text button.
 - Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
@@ -21,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
+- Fixed hexcodes and class names for colors.
 
 ## [1.0.5] - 01.11.2023
 
