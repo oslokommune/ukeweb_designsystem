@@ -70,6 +70,7 @@ export default {
   data: () => ({
     layerIds: [],
     dataSourceIds: [],
+    geoJsonData: null,
     lastDisplayedPopup: null,
     mapObject: null,
     mapReady: false,
@@ -77,7 +78,6 @@ export default {
     mapLoaded: false,
     error: false,
     technicalErrorText: '',
-    geoJsonData: null,
   }),
 
   computed: {
@@ -160,6 +160,8 @@ export default {
       if (!this.mapLoaded) {
         this.mapLoaded = true;
         this.$_createMapObject(this.geoJson);
+        console.log('geoJson: ', this.geoJson);
+        console.log('mapObject: ', this.mapObject);
       }
     },
     populateMap() {
@@ -341,7 +343,7 @@ export default {
       }
       this.mapObject.addSource('geoJson', {
         type: 'geojson',
-        data: geoJson,
+        data: this.geoJsonData,
       });
 
       this.dataSourceIds.push('geoJson');
