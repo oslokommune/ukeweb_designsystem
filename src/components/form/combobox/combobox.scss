@@ -58,7 +58,7 @@
 
     &--focus,
     &--active {
-      outline: 0.3rem solid states.$hover;
+      outline: 0.3em solid states.$hover;
     }
 
     &:hover,
@@ -85,7 +85,7 @@
       &--focus,
       &--active {
         margin-right: -5rem;
-        outline: 0.3rem solid states.$hover;
+        outline: 0.3em solid states.$hover;
       }
 
       &:hover {
