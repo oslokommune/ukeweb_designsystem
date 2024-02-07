@@ -1,3 +1,4 @@
+@use "components/form/input/mixins";
 @use "system/breakpoints";
 @use "system/colors";
 @use "system/typography";
@@ -40,6 +41,13 @@
     & .ods-combobox__input,
     & .ods-combobox__select .ods-combobox__toggle {
       background-color: states.$disabled;
+    }
+  }
+
+  &--error {
+    & .ods-combobox__select {
+      color: colors.$red-light;
+      outline: 0.13rem solid colors.$red-light;
     }
   }
 
@@ -173,5 +181,13 @@
         text-decoration: underline;
       }
     }
+  }
+
+  &__error-message {
+    @include mixins.error-message;
+    @extend %ods-padding-3;
+
+    background: colors.$red-light;
+    outline: 0.13rem solid colors.$red-light;
   }
 }

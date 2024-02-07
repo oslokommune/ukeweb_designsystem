@@ -159,7 +159,7 @@
           <div class="ods-combobox">
             <label for="ods-combobox-33" class="ods-combobox__label">Focus/Active</label>
             <div class="ods-combobox__select ods-combobox__select--focus">
-              <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-33" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
+              <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-33" type="text" autocomplete="off" placeholder="Select an item from the list" />
               <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-33" tabindex="-1">
                 <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
               </button>
@@ -176,7 +176,7 @@
           <div class="ods-combobox">
             <label for="ods-combobox-44" class="ods-combobox__label">ActiveListHover</label>
             <div class="ods-combobox__select ods-combobox__select--focus">
-              <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-44" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
+              <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-44" type="text" autocomplete="off" placeholder="Select an item from the list" />
               <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-44" tabindex="-1">
                 <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
               </button>
@@ -196,11 +196,23 @@
           <div class="ods-combobox ods-combobox--disabled">
             <label for="ods-combobox-55" class="ods-combobox__label">Disabled</label>
             <div class="ods-combobox__select">
-              <input class="ods-combobox__input" id="ods-combobox-55" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" disabled="disabled" />
+              <input class="ods-combobox__input" id="ods-combobox-55" type="text" autocomplete="off" placeholder="Select an item from the list" disabled="disabled" />
               <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" tabindex="-1">
                 <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
               </button>
             </div>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-combobox ods-combobox--error">
+            <label for="ods-combobox-55" class="ods-combobox__label">Error/invalid</label>
+            <div class="ods-combobox__select">
+              <input class="ods-combobox__input" id="ods-combobox-55" type="text" autocomplete="off" placeholder="Select an item from the list"  aria-describedby="ods-combobox-error-55"/>
+              <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" tabindex="-1">
+                <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
+              </button>
+            </div>
+            <div class="ods-combobox__error-message" id="ods-combobox-error-55">Error message</div>
           </div>
         </div>
       </div>
