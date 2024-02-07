@@ -10,6 +10,39 @@
 .ods-combobox {
   position: relative;
 
+  &--disabled,
+  &:disabled {
+    & .ods-combobox__label {
+      color: states.$disabled-text;
+    }
+
+    & .ods-combobox__select {
+      background-color: states.$disabled;
+      color: states.$disabled-text;
+      outline: 0.13rem solid states.$disabled-text;
+
+      &:hover {
+        outline: 0.13rem solid states.$disabled-text;
+      }
+
+      & .ods-combobox__input {
+        &:active,
+        &:focus {
+          outline: 0.13rem solid states.$disabled-text;
+        }
+      }
+
+      & .ods-combobox__toggle {
+        color: states.$disabled-text;
+      }
+    }
+
+    & .ods-combobox__input,
+    & .ods-combobox__select .ods-combobox__toggle {
+      background-color: states.$disabled;
+    }
+  }
+
   &__label {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-medium;
@@ -28,8 +61,14 @@
       outline: 0.3rem solid states.$hover;
     }
 
+    &:hover,
     &--hover {
       outline: 0.13rem solid states.$hover;
+    }
+
+    &:disabled,
+    &--disabled {
+      outline: 0.13rem solid states.$disabled-text;
     }
 
     & .ods-combobox__input {
@@ -42,6 +81,7 @@
       width: 100%;
 
       &:focus,
+      &:active,
       &--focus,
       &--active {
         margin-right: -5rem;
@@ -50,6 +90,10 @@
 
       &:hover {
         cursor: pointer;
+      }
+
+      &:disabled {
+        cursor: unset;
       }
 
       &::placeholder {
@@ -101,6 +145,7 @@
 
       &:hover,
       &:focus,
+      &--hover,
       &--focus {
         background-color: colors.$gray-light;
         color: states.$hover !important;
@@ -128,5 +173,5 @@
         text-decoration: underline;
       }
     }
-}
+  }
 }
