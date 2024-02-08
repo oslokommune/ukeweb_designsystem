@@ -12,7 +12,7 @@
         v-on:keyup.up="onInputKeyArrowUpDown($event)"
         v-on:keyup.esc="onInputEscape($event)"
         :aria-controls="listboxId"
-        :aria-expanded="dropdownOpen ? 'true' : 'false'"
+        :aria-expanded="isDropdownOpen ? 'true' : 'false'"
         :aria-label="ariaLabelInputText"
         :placeholder="i18n.placeholder"
         :id="inputId"
@@ -25,13 +25,13 @@
         role="combobox"
         type="text"
       />
-      <button v-on:click="setInputFocus" class="ods-combobox__toggle" type="button" :aria-label="i18n.buttonLabel" :aria-expanded="dropdownOpen ? 'true' : 'false'" :aria-controls="listboxId" tabindex="-1">
+      <button v-on:click="setInputFocus" class="ods-combobox__toggle" type="button" :aria-label="i18n.buttonLabel" :aria-expanded="isDropdownOpen ? 'true' : 'false'" :aria-controls="listboxId" tabindex="-1">
         <span class="ods-icon ods-icon--size-juliett" :class="toggleBtnClass" aria-hidden="true" tabindex="-1"> </span>
       </button>
     </div>
 
     <div class="ods-combobox__dropdown">
-      <ul v-show="dropdownOpen" ref="list" :id="listboxId" class="ods-combobox__dropdown-list" :class="{ 'ods-combobox__dropdown--scroll': itemListScroll }" role="listbox" :aria-label="i18n.ariaLabelListBox">
+      <ul v-show="isDropdownOpen" ref="list" :id="listboxId" class="ods-combobox__dropdown-list" :class="{ 'ods-combobox__dropdown--scroll': itemListScroll }" role="listbox" :aria-label="i18n.ariaLabelListBox">
         <li
           v-for="(item, itemIndex) of items"
           v-on:click.prevent="itemSelectClick(itemIndex)"
@@ -114,10 +114,7 @@ export default {
       return this.i18n.ariaLabelInput;
     },
     toggleBtnClass() {
-      return `ods-icon--chevron-thin-${this.dropdownOpen ? 'up' : 'down'}`;
-    },
-    dropdownOpen() {
-      return this.isDropdownOpen;
+      return `ods-icon--chevron-thin-${this.isDropdownOpen ? 'up' : 'down'}`;
     },
     lisItemId() {
       return this.selectedIndex !== null ? `${this.listboxId}-${this.selectedIndex}` : '';
@@ -129,7 +126,7 @@ export default {
   },
 
   beforeDestroy() {
-    window.removeEventListener('click', this.eventFocusOut);
+    window.removeEventListener('click', this.handleClickEvent);
   },
 
   watch: {
@@ -142,7 +139,7 @@ export default {
     openDropdown(event) {
       if (this.$refs.input.value !== '') {
         this.isDropdownOpen = this.items.length > 0;
-      } else if (this.$refs.input.value === '' && this.dropdownOpen === false) {
+      } else if (this.$refs.input.value === '' && this.isDropdownOpen === false) {
         this.$emit('input-arrow-up-down', event);
         this.isDropdownOpen = true;
       }
@@ -161,7 +158,7 @@ export default {
       this.setFocus(event);
       if (this.$refs.input.value !== '') {
         this.isDropdownOpen = this.items.length > 0;
-      } else if (this.$refs.input.value === '' && this.dropdownOpen === false) {
+      } else if (this.$refs.input.value === '' && this.isDropdownOpen === false) {
         this.$emit('input-arrow-up-down', event);
         this.isDropdownOpen = true;
       }
@@ -220,7 +217,7 @@ export default {
     },
 
     onInputEscape() {
-      if (this.dropdownOpen === true) {
+      if (this.isDropdownOpen === true) {
         this.isDropdownOpen = false;
       } else {
         this.resetAndFocus();

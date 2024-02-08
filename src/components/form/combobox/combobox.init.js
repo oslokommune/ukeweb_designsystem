@@ -4,6 +4,9 @@ import OdsCombobox from './combobox.vue';
 document.addEventListener('DOMContentLoaded', () => {
   const vueElements = ['ods-combobox-vue-1'];
 
+  // This is a "dummy" logic to simulate how to show the result of a search in the combobox.
+  // In a real world scenario, the consumer must implement or hook into a service like Algolia.
+
   vueElements.forEach((element) => {
     const odsComboboxPlaceholder = document.getElementById(element);
 
