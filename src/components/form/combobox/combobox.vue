@@ -1,6 +1,6 @@
 <template>
   <div ref="combobox" class="ods-combobox" :id="id">
-    <label :for="inputId" class="ods-combobox__label">{{ i18n.label }}</label>
+    <label v-if="i18n.label" :for="inputId" class="ods-combobox__label">{{ i18n.label }}</label>
     <div class="ods-combobox__select">
       <input
         v-on:input="onInputChange($event)"

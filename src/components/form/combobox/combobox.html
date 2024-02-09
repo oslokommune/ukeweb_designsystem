@@ -1,6 +1,31 @@
 <!-- Overview mode -->
 <div class="ods-devtools-nondevmode">
   <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <h3>
+        <button class="ods-collapsible-trigger ods-collapsible-trigger--block" aria-expanded="false" aria-controls="combobox-technical-info">Show technical combobox info</button>
+      </h3>
+      <div id="combobox-technical-info" class="ods-collapsible-content ods-collapsible-content--block ods-collapsible-content--collapsed ods-collapsible-content--ease">
+        <div class="ods-infobox ods-infobox--yellow">
+          <h3 class="ods-infobox__heading">Description:</h3>
+            <p>Combobox with list autocomplete based on <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-list/" target="_blank">W3C pattern</a>.</p>
+          <h3 class="ods-infobox__heading">Events:</h3>
+          <ul>
+            <li>input-blur: when the focus is outside of the input</li>
+            <li>item-focus: when the input gets the focus</li>
+            <li>input-change: when the input value changes</li>
+            <li>input-enter: when the enter key is pressed on the input</li>
+            <li>input-escape: when the escape key is pressed on the input</li>
+            <li>input-arrow-up-down: when the up or down arrow is pressed on the input</li>
+            <li>itemlist-enter: when the enter key is pressed on the list</li>
+            <li>itemlist-escape: when the escape key is pressed on the list</li>
+            <li>itemlist-arrow-up-down: when the up or down arrow is pressed on the list</li>
+          </ul>
+          <h3 class="ods-infobox__heading">Accessibility</h3>
+          <p>Use "label" if the combobox has a visible label or use "ariaLabelInput" if it doesn't, but both shouldn't be used on the same component.</p>
+        </div>
+      </div>
+    </div>
     <!-- Default -->
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Default</h2>
@@ -9,63 +34,27 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <div class="ods-combobox">
-                  <div class="ods-combobox__select">
-                    <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-1" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
-                    <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-1" tabindex="-1">
-                      <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
-                    </button>
-                  </div>
-                  <div class="ods-combobox__dropdown">
-                    <ul class="ods-combobox__dropdown-list ods-combobox__dropdown--scroll" role="listbox" id="id-listbox-1">
-                      <li class="ods-combobox__dropdown-item" role="option">Item A</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item B</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item C</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item D</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item E</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item F</li>
-                      <li class="ods-combobox__dropdown-item" role="option">Item G</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ods-margin-bottom-25"></div>
-    </div>
-    <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">With label</h2>
-      <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
-              <div class="ods-devtools-code__box__code">
-                <div class="ods-combobox">
-                  <label for="ods-combobox-2" class="ods-combobox__label">Label text</label>
-                  <div class="ods-combobox__select">
-                    <input class="ods-combobox__input ods-combobox__input--focus" id="ods-combobox-2" type="text" autocomplete="off" placeholder="Select an item from the list" />
-                    <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" aria-controls="id-lisbox-2" tabindex="-1">
-                      <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
-                    </button>
-                  </div>
-                  <div class="ods-combobox__dropdown">
-                    <ul class="ods-combobox__dropdown-list ods-combobox__dropdown--scroll" role="listbox" id="id-listbox-2">
-                      <li class="ods-combobox__dropdown-item" role="option">
-                        <div class="osg-text--size-lima osg-text--weight-medium">Item A</div>
-                        <div class="osg-text--size-lima ods-text--weight-light">Description A</div>
-                      </li>
-                      <li class="ods-combobox__dropdown-item" role="option">
-                        <div class="osg-text--size-lima osg-text--weight-medium">Item B</div>
-                        <div class="osg-text--size-lima ods-text--weight-light">Description B</div>
-                      </li>
-                      <li class="ods-combobox__dropdown-item" role="option">
-                        <div class="osg-text--size-lima osg-text--weight-medium">Item C</div>
-                        <div class="osg-text--size-lima ods-text--weight-light">Description C</div>
-                      </li>
-                    </ul>
-                  </div>
+                <div id="ods-combobox-vue-1">
+                  <ods-combobox
+                    :i18n="{
+                      'ariaLabelListBox': 'List of elements',
+                      'buttonLabel': 'Toggle list',
+                      'ariaLabelInput': 'Search and select an element',
+                      'placeholder': 'Type \'i\' to search or up and down to navigate',
+                    }"
+                    :id="id"
+                    :input-id="inputId"
+                    :listbox-id="listboxId"
+                    :items="items"
+                    :item-list-scroll="true"
+                    :value="value"
+                    v-on:item-blur="event('input-blur', $event)"
+                    v-on:item-focus="event('item-focus', $event)"
+                    v-on:input-change="event('input-change', $event)"
+                    v-on:input-enter="event('input-enter', $event)"
+                    v-on:itemlist-blur="event('itemlist-blur', $event)"
+                    v-on:input-arrow-up-down="event('input-arrow-up-down', $event)"
+                  ></ods-combobox>
                 </div>
               </div>
             </div>
@@ -76,19 +65,19 @@
     </div>
 
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">Vue component</h2>
+      <h2 class="ods-devtools-text-preset-1">With label</h2>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <div id="ods-combobox-vue-1">
+                <div id="ods-combobox-vue-2">
                   <ods-combobox
                     :i18n="{
-                      'label': 'Select an element:',
+                      'label': 'Search and select an element:',
                       'ariaLabelListBox': 'List of elements',
                       'buttonLabel': 'Toggle list',
-                      'placeholder': 'Select an element from the list',
+                      'placeholder': 'Type \'i\' to search or up and down to navigate',
                     }"
                     :id="id"
                     :input-id="inputId"
@@ -103,7 +92,14 @@
                     v-on:submit="event('submit', $event)"
                     v-on:itemlist-blur="event('itemlist-blur', $event)"
                     v-on:input-arrow-up-down="event('input-arrow-up-down', $event)"
-                  ></ods-combobox>
+                  >
+                  <template v-slot:listitem="{ item }">
+                    <div class="custom-list-item">
+                      <div class="osg-text--size-lima osg-text--weight-medium">{{ item.text }}</div>
+                      <div class="osg-text--size-lima ods-text--weight-light">{{ item.description }}</div>
+                    </div>
+                  </template>
+                </ods-combobox>
                 </div>
               </div>
             </div>
@@ -123,11 +119,32 @@
         <div class="ods-grid__column--12">
           <h2 class="ods-devtools-text-preset-2">Default</h2>
         </div>
+      </div>
+      <div class="ods-grid ods-grid--gap">
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <div class="ods-combobox">
             <label for="ods-combobox-11" class="ods-combobox__label">Label text</label>
             <div class="ods-combobox__select">
-              <input class="ods-combobox__input" id="ods-combobox-11" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
+              <input class="ods-combobox__input" id="ods-combobox-11" type="text" autocomplete="off" placeholder="Select an item from the list" />
+              <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" tabindex="-1">
+                <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-grid">
+        <div class="ods-grid__column--12">
+          <h2 class="ods-devtools-text-preset-2">Combobox without label</h2>
+        </div>
+      </div>
+      <div class="ods-grid ods-grid--gap">
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-combobox">
+            <div class="ods-combobox__select">
+              <input class="ods-combobox__input" type="text" autocomplete="off" aria-label="Label text" placeholder="Select an item from the list" />
               <button class="ods-combobox__toggle" type="button" aria-label="Toggle list" aria-expanded="false" tabindex="-1">
                 <span class="ods-icon ods-icon--chevron-thin-down ods-icon--size-juliett" aria-hidden="true" tabindex="-1"></span>
               </button>
