@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch((error) => {
               console.error('Error fetching GeoJSON data:', error);
             });
-        }, 20000);
+        }, 15000);
       },
     });
     vm3.$mount(mapElement3);
