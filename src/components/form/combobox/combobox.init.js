@@ -68,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
               case 'itemlist-blur':
                 this.items = [];
                 break;
-              case 'input-arrow-up-down':
-                this.fetchAddresses();
-                break;
               case 'submit':
                 console.log('submit');
                 break;

@@ -9,17 +9,18 @@
         <div class="ods-infobox ods-infobox--yellow">
           <h3 class="ods-infobox__heading">Description:</h3>
             <p>Combobox with list autocomplete based on <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-list/" target="_blank">W3C pattern</a>.</p>
-          <h3 class="ods-infobox__heading">Events:</h3>
-          <ul>
-            <li>input-blur: when the focus is outside of the input</li>
-            <li>item-focus: when the input gets the focus</li>
-            <li>input-change: when the input value changes</li>
-            <li>input-enter: when the enter key is pressed on the input</li>
-            <li>input-escape: when the escape key is pressed on the input</li>
-            <li>input-arrow-up-down: when the up or down arrow is pressed on the input</li>
-            <li>itemlist-enter: when the enter key is pressed on the list</li>
-            <li>itemlist-escape: when the escape key is pressed on the list</li>
-            <li>itemlist-arrow-up-down: when the up or down arrow is pressed on the list</li>
+          <h3 class="ods-infobox__heading">Custom events:</h3>
+          <ul class="ods-unordered-list">
+            <li class="ods-unordered-list__item">input-blur: Triggered when the input field loses focus. Arguments: event (Event) - Blur event.</li>
+            <li class="ods-unordered-list__item">input-change: Triggered when the input value changes. Arguments: filter (String) - The current input value.
+            </li>
+            <li class="ods-unordered-list__item">input-enter: Triggered when the Enter key is pressed in the input field. Arguments: none.</li>
+            <li class="ods-unordered-list__item">input-focus: Triggered when the input field is focused. Arguments: none.</li>
+            <li class="ods-unordered-list__item">item-select: Triggered when an item is selected from the dropdown. Arguments: index (Number) - Index of the selected item.
+            </li>
+            <li class="ods-unordered-list__item">item-focus: Triggered when an item is focused in the dropdown. Arguments: index (Number) - Index of the focused item.</li>
+            <li class="ods-unordered-list__item">itemlist-blur: Triggered when the dropdown item list loses focus. Arguments: none.</li>
+            <li class="ods-unordered-list__item">submit: Triggered when the form is submitted. Arguments: { value: String, index: Number } - Selected value and its index.</li>
           </ul>
           <h3 class="ods-infobox__heading">Accessibility</h3>
           <p>Use "label" if the combobox has a visible label or use "ariaLabelInput" if it doesn't, but both shouldn't be used on the same component.</p>
@@ -48,12 +49,11 @@
                     :items="items"
                     :item-list-scroll="true"
                     :value="value"
-                    v-on:item-blur="event('input-blur', $event)"
-                    v-on:item-focus="event('item-focus', $event)"
+                    v-on:input-blur="event('input-blur', $event)"
                     v-on:input-change="event('input-change', $event)"
                     v-on:input-enter="event('input-enter', $event)"
+                    v-on:item-focus="event('item-focus', $event)"
                     v-on:itemlist-blur="event('itemlist-blur', $event)"
-                    v-on:input-arrow-up-down="event('input-arrow-up-down', $event)"
                   ></ods-combobox>
                 </div>
               </div>
@@ -85,13 +85,11 @@
                     :items="items"
                     :item-list-scroll="true"
                     :value="value"
-                    v-on:item-blur="event('input-blur', $event)"
-                    v-on:item-focus="event('item-focus', $event)"
+                    v-on:input-blur="event('input-blur', $event)"
                     v-on:input-change="event('input-change', $event)"
                     v-on:input-enter="event('input-enter', $event)"
-                    v-on:submit="event('submit', $event)"
+                    v-on:item-focus="event('item-focus', $event)"
                     v-on:itemlist-blur="event('itemlist-blur', $event)"
-                    v-on:input-arrow-up-down="event('input-arrow-up-down', $event)"
                   >
                   <template v-slot:listitem="{ item }">
                     <div class="custom-list-item">

@@ -8,8 +8,8 @@
         v-on:focus="resetIndex()"
         v-on:blur="handleClickEvent($event)"
         v-on:keyup.enter="onInputEnter()"
-        v-on:keyup.down="onInputKeyArrowUpDown($event)"
-        v-on:keyup.up="onInputKeyArrowUpDown($event)"
+        v-on:keyup.down.prevent.stop="openDropdown($event)"
+        v-on:keyup.up.prevent.stop="openDropdown($event)"
         v-on:keyup.esc="onInputEscape($event)"
         :aria-controls="listboxId"
         :aria-expanded="isDropdownOpen ? 'true' : 'false'"
@@ -137,10 +137,13 @@ export default {
 
   methods: {
     openDropdown(event) {
+      const { code } = event;
+      if (code === 'ArrowUp' || code === 'ArrowDown') {
+        this.setFocus(event);
+      }
       if (this.$refs.input.value !== '') {
         this.isDropdownOpen = this.items.length > 0;
       } else if (this.$refs.input.value === '' && this.isDropdownOpen === false) {
-        this.$emit('input-arrow-up-down', event);
         this.isDropdownOpen = true;
       }
     },
@@ -153,15 +156,6 @@ export default {
       this.$emit('input-enter', filter);
       this.resetAndFocus();
       this.isDropdownOpen = false;
-    },
-    onInputKeyArrowUpDown(event) {
-      this.setFocus(event);
-      if (this.$refs.input.value !== '') {
-        this.isDropdownOpen = this.items.length > 0;
-      } else if (this.$refs.input.value === '' && this.isDropdownOpen === false) {
-        this.$emit('input-arrow-up-down', event);
-        this.isDropdownOpen = true;
-      }
     },
     onInputBlur(event) {
       this.$emit('input-blur', event);
