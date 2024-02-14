@@ -25,7 +25,7 @@
         role="combobox"
         type="text"
       />
-      <button v-on:click="setInputFocus" class="ods-combobox__toggle" type="button" :aria-label="i18n.buttonLabel" :aria-expanded="isDropdownOpen ? 'true' : 'false'" :aria-controls="listboxId" tabindex="-1">
+      <button v-on:click="setInputFocus" class="ods-combobox__toggle" type="button" :aria-label="i18n.buttonLabel" :aria-expanded="isDropdownOpen ? 'true' : 'false'" :aria-controls="listboxId" v-on:click.prevent="openDropdown($event)" tabindex="-1">
         <span class="ods-icon ods-icon--size-juliett" :class="toggleBtnClass" aria-hidden="true" tabindex="-1"> </span>
       </button>
     </div>
