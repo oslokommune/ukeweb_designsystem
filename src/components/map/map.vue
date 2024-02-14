@@ -97,10 +97,12 @@ export default {
           });
         });
 
-        return {
+        const geoJson = {
           type: 'FeatureCollection',
           features,
         };
+        console.log(JSON.stringify(geoJson, null, 2));
+        return geoJson;
       }
       return null;
     },
@@ -166,7 +168,8 @@ export default {
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
-        if (this.pointsGeoJson !== null) {
+        // Check if pointsGeoJson has features to add
+        if (this.pointsGeoJson && this.pointsGeoJson.features && this.pointsGeoJson.features.length > 0) {
           this.mapObject.addSource('points', {
             type: 'geojson',
             data: this.pointsGeoJson,
@@ -177,14 +180,19 @@ export default {
           if (this.showPopups) {
             this.$_addPopupsFromProperties('points');
           }
+        } else {
+          console.log('No valid pointsGeoJson data to add to the map.');
         }
 
-        if (this.geoJson !== null) {
+        // Check if there's valid geoJson data for non-clustered or clustered points
+        if (this.geoJson && Object.keys(this.geoJson).length > 0) {
           if (!this.clusteredPoints) {
             this.$_addGeoJsonToMap(this.geoJson);
           } else {
             this.$_splitClusterDataAndAddToMap(this.geoJson);
           }
+        } else {
+          console.log('No valid geoJson data to add to the map.');
         }
       }
     },
@@ -336,7 +344,6 @@ export default {
     },
     // Private/protected method
     $_addGeoJsonToMap(geoJson) {
-      console.log('addGeoJsonToMap called with geoJson: ', geoJson);
       const boundingBox = this.getBoundingBox(geoJson);
       if (boundingBox) {
         this.setBoundingBox(boundingBox);
@@ -348,11 +355,8 @@ export default {
 
       this.dataSourceIds.push('geoJson');
       this.$_addPolygonsLayer('geoJson-polygons', 'geoJson');
-      console.log('Polygons layer-polygons added to map');
       this.$_addLinesLayer('geoJson-lines', 'geoJson');
-      console.log('Polygons layer-lines added to map');
       this.$_addPointsLayer('geoJson-points', 'geoJson');
-      console.log('Polygons layer-points added to map');
 
       if (this.showPopups) {
         this.$_addPopupsFromProperties('geoJson-polygons');
@@ -478,7 +482,6 @@ export default {
         },
         filter: ['==', '$type', 'Polygon'],
       });
-      console.log('Polygons layer setup complete');
     },
     // Private/protected method
     $_addLinesLayer(layerId, dataSourceId) {
