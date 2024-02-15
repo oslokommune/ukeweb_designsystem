@@ -160,8 +160,6 @@ export default {
       if (!this.mapLoaded) {
         this.mapLoaded = true;
         this.$_createMapObject(this.geoJson);
-        // console.log('geoJson: ', this.geoJson);
-        // console.log('mapObject: ', this.mapObject);
       }
     },
     populateMap() {
@@ -179,8 +177,6 @@ export default {
           if (this.showPopups) {
             this.$_addPopupsFromProperties('points');
           }
-        } else {
-          console.log('No valid pointsGeoJson data to add to the map.');
         }
 
         // Check if there's valid geoJson data for non-clustered or clustered points
@@ -190,8 +186,6 @@ export default {
           } else {
             this.$_splitClusterDataAndAddToMap(this.geoJson);
           }
-        } else {
-          console.log('No valid geoJson data to add to the map.');
         }
       }
     },

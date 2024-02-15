@@ -1,10 +1,11 @@
-// geoJsonUtils.js
-const fetchGeoJsonData = (url) =>
-  fetch(url)
-    .then((response) => response.json())
-    .catch((error) => {
-      console.error('Error fetching GeoJSON data:', error);
-      throw error; // Rethrow the error for handling by the caller
-    });
+const fetchGeoJsonData = async (url) => {
+  try {
+    const response = await fetch(url);
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    throw new Error('Error fetching GeoJSON data:', error);
+  }
+};
 
 export default fetchGeoJsonData;
