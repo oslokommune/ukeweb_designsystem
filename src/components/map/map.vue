@@ -77,6 +77,7 @@ export default {
     mapLoaded: false,
     error: false,
     technicalErrorText: '',
+    popups: [],
   }),
 
   computed: {
@@ -97,12 +98,10 @@ export default {
           });
         });
 
-        const geoJson = {
+        return {
           type: 'FeatureCollection',
           features,
         };
-        console.log(JSON.stringify(geoJson, null, 2));
-        return geoJson;
       }
       return null;
     },
@@ -620,6 +619,11 @@ export default {
     },
     // Private/protected method
     $_addPopupToMap(lngLat, feature) {
+      if (this.lastDisplayedPopup) {
+        this.lastDisplayedPopup.remove();
+        this.lastDisplayedPopup = null;
+      }
+
       const html = this.$_getPopupHtml(feature);
       if (typeof html === 'string') {
         const popup = new maplibregl.Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
