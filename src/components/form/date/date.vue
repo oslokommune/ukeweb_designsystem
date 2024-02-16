@@ -135,7 +135,6 @@ export default {
         const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
 
         if (!day || !month || !year || !this.isValidDate(inputDate)) {
-          // Error message for invalid date
           this.isError = `${this.invalidInputErrorMessage}`;
           this.$emit('set', null);
         } else if (inputDate < this.min) {
