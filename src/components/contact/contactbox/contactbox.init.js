@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement) {
     const app = createApp({
+      name: 'OdsContactboxMap',
       components: {
         OdsMap,
       },
