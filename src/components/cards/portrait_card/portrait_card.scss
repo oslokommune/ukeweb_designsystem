@@ -150,18 +150,7 @@ $ods-portrait-card-image-height-large: 290px;
       z-index: 1;
     }
 
-    &:hover {
-      .ods-portrait-card__content {
-        color: states.$hover !important;
-      }
-
-      .ods-portrait-card__heading {
-        text-decoration: underline;
-      }
-    }
-
     &__heading {
-      position: relative;
       z-index: 1;
     }
   }
@@ -193,6 +182,18 @@ $ods-portrait-card-image-height-large: 290px;
           transform: scale(1.1);
         }
       }
+    }
+  }
+
+  &:hover {
+    .ods-portrait-card__content,
+    .ods-portrait-card__text,
+    .ods-portrait-card__published {
+      color: states.$hover;
+    }
+
+    .ods-portrait-card__heading {
+      text-decoration: underline;
     }
   }
 
