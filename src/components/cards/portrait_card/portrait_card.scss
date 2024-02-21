@@ -102,12 +102,12 @@ $ods-portrait-card-image-height-large: 290px;
       @extend %ods-color-bg-white;
     }
   }
-
+  
   &--xs {
     & .ods-portrait-card__content {
       @extend %ods-padding-vertical-5, %ods-padding-horizontal-5, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-large;
     }
-
+    
     & .ods-portrait-card__heading {
       @extend %ods-text--size-india;
       @extend %ods-margin-bottom-1;
@@ -117,12 +117,12 @@ $ods-portrait-card-image-height-large: 290px;
       @extend %ods-text--size-kilo;
       @extend %ods-text--weight-light;
     }
-
+    
     & .ods-portrait-card__published {
       @extend %ods-margin-top-3;
       @extend %ods-text--size-lima;
     }
-
+    
     & .ods-portrait-card__media {
       img {
         @include breakpoints.large {
@@ -130,12 +130,12 @@ $ods-portrait-card-image-height-large: 290px;
         }
       }
     }
-
+    
     & .ods-portrait-card__actions {
       @extend %ods-padding-top-0, %ods-padding-top-0-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-5, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-large;
     }
   }
-
+  
   &__link {
     display: block;
     text-decoration: none;
@@ -146,17 +146,29 @@ $ods-portrait-card-image-height-large: 290px;
     width: 100%;
     height: 100%;
   }
-
-
+  
   & .ods-portrait-card__content:hover,
   & .ods-portrait-card__xs-content:hover,
   & .ods-portrait-card__text:hover,
   & .ods-portrait-card__published:hover {
-    color: states.$hover; // This won't apply when hovering over __actions due to specificity
+    color: states.$hover;
   }
-
+  
   & .ods-portrait-card__heading:hover {
     text-decoration: underline;
+  }
+  
+  &--nolink {
+    & .ods-portrait-card__content:hover,
+    & .ods-portrait-card__xs-content:hover,
+    & .ods-portrait-card__text:hover,
+    & .ods-portrait-card__published:hover {
+      color: colors.$blue-dark;
+    }
+  
+    & .ods-portrait-card__heading:hover {
+      text-decoration: none;
+    }
   }
 
   &--image-breakpoint-medium {
