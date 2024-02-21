@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - dd.mm.yyyy
+
+### Changed
+
+- Fixed links on portrait cards to improve screen reader capabilities.
+
+## [1.1.0] - 16.02.2024
 
 ### Added
 
@@ -25,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
 - Fixed hexcodes and class names for colors.
-- Fixed links on portrait cards to improve screen reader capabilities.
+- Fixed typo in checkbox component and heading style of 'important' section.
 
 ## [1.0.5] - 01.11.2023
 
