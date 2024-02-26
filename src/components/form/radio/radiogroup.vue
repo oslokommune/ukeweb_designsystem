@@ -6,7 +6,7 @@
         v-for="(label, value, index) in items"
         :key="index"
         :name="name"
-        :label="label"
+        :text="label"
         :value="value"
         :selected="selectedModel"
         :has-error="errorMessage.length > 0 ? true : false"

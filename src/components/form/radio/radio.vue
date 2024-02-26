@@ -1,11 +1,12 @@
 <template>
-  <label class="ods-radio" :class="{ 'ods-radio--error': hasError }">
-    <span class="ods-radio__input">
+  <div class="ods-radio" :class="{ 'ods-radio--error': hasError }">
+    <span v-if="label" class="ods-radio__label">{{ label }}</span>
+    <label class="ods-radio__input">
       <input type="radio" v-model="selectedModel" :value="value" :name="name" />
       <span class="ods-radio__control"></span>
-      <span class="ods-radio__label">{{ label }}</span>
-    </span>
-  </label>
+      <span class="ods-radio__text">{{ text }}</span>
+    </label>
+  </div>
 </template>
 
 <script>
@@ -17,9 +18,13 @@ export default {
       type: String,
       required: true,
     },
-    label: {
+    text: {
       type: String,
       required: true,
+    },
+    label: {
+      type: String,
+      required: false,
     },
     value: {
       type: String,

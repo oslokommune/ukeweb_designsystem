@@ -41,10 +41,6 @@
 
   &--error {
     border-color: colors.$red;
-
-    & .ods-fieldset__legend {
-      color: colors.$red;
-    }
   }
 
   &--disabled,

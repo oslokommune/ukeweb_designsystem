@@ -6,7 +6,7 @@
 
 @mixin error-message() {
   background: colors.$red-light;
-  @extend %ods-margin-top-3;
+  @extend %ods-margin-top-1;
   @extend %ods-padding-4;
   @extend %ods-text--size-lima;
   @extend %ods-text--weight-light;
