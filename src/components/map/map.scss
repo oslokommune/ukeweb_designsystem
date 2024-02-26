@@ -1,3 +1,4 @@
+@use "system/breakpoints";
 @use "system/typography";
 @use "system/colors";
 @use "system/spacing";
@@ -18,17 +19,42 @@
   }
 
   &__popup-content {
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-padding-1;
+    @extend %ods-text--size-kilo;
+    @extend %ods-padding-horizontal-4, %ods-padding-bottom-4, %ods-padding-top-2, %ods-padding-top-3-breakpoint-large;
   }
 
   &__heading {
-    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
+    @extend %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
     @extend %ods-text--weight-medium;
-    @extend %ods-margin-bottom-3;
+
+    &:not(:last-child) {
+      @extend %ods-padding-vertical-2, %ods-padding-vertical-3-breakpoint-large;
+
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
   }
 
   &__label {
     @extend %ods-text--weight-medium;
   }
+}
+
+// Override styles
+.maplibregl-popup-content {
+  padding: 1.5rem 0 0;
+  max-width: 15rem;
+  min-width: 13rem;
+
+  @include breakpoints.large {
+    padding: 1.75rem 0 0;
+  }
+}
+
+.maplibregl-popup-close-button {
+  @extend %ods-margin-top-4, %ods-margin-right-4;
+  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-large;
+
+  border-radius: 0;
+  line-height: 1.525rem;
 }
