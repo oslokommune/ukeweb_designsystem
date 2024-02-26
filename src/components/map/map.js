@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Vue.component('ods-map', OdsMap);
     const vm8 = new Vue({
       data: () => ({
-        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
+        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
       }),
 
       mounted() {
