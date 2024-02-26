@@ -1,6 +1,6 @@
 {
   "name": "@oslokommune/oslo-designsystem",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Oslo Designsystem",
   "main": "index.js",
   "scripts": {
@@ -23,25 +23,25 @@
   "license": "MIT",
   "homepage": "https://github.com/oslokommune/ukeweb_designsystem#readme",
   "devDependencies": {
-    "eslint": "^8.44.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-vue": "^9.15.1",
+    "eslint": "8.44.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-vue": "9.15.1",
     "npm-run-all": "4.1.5",
-    "stylelint": "^15.10.1",
-    "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-standard-scss": "^10.0.0",
-    "stylelint-selector-bem-pattern": "^3.0.0",
+    "stylelint": "15.10.1",
+    "stylelint-config-prettier-scss": "1.0.0",
+    "stylelint-config-standard-scss": "10.0.0",
+    "stylelint-selector-bem-pattern": "3.0.0",
     "svgo": "2.8.0",
     "svgstore-cli": "2.0.1",
-    "webfont": "^11.2.26"
+    "webfont": "11.2.26"
   },
   "dependencies": {
-    "@nrk/core-datepicker": "^3.1.0",
+    "@nrk/core-datepicker": "3.1.0",
     "maplibre-gl": "2.3.0",
-    "vue": "^2.6.14"
+    "vue": "2.6.14"
   },
   "prettier": {
     "printWidth": 400,

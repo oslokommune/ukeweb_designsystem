@@ -21,7 +21,7 @@
         </svg>
       </div>
       <div class="ods-example-component__picture">
-        <img src="https://ukeweb-public.s3.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
+        <img src="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/illustrations/300x300/14.png" alt="" />
       </div>
     </div>
     <div class="ods-example-component__content">

@@ -5,12 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - dd.mm.yyyy
+
+## [1.1.0] - 16.02.2024
+
+### Added
+
+- Added examples of more geoJSON structures in the map component.
+- Update styles for the popup in the map component.
+- Added security, contribution and license files to accomodate github community standards.
+
+### Changed
+
+- Changed hover colour on button-text button.
+- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+
+### Fixed
+
+- Fixed hardcoded references to use s3.dualstack for IPv6 support.
+- Prevent plus/minus icon to show in other variants than filter.
+- Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
+- Fixed hexcodes and class names for colors.
+- Fixed typo in checkbox component and heading style of 'important' section.
+
+## [1.0.5] - 01.11.2023
+
+### Added
+
+- Added underline to radio button's text on hover.
+- Added aria-required property to checkbox, textarea and input VUE components.
+
+### Changed
+
+- Change background color and text for default state of radio button.
+
+## [1.0.4] - 30.10.2023
+
+### Changed
+
+- Change getting started -> bundle to refer to npm instead of github
+- Change "pages" reference to "templates"
+- Removed column gap on service header.
+
+### Fixed
+
+- Fix arrow overlapping text in small breakpoint of Accordion.
+
+## [1.0.3] - 25.10.2023
+
+### Fixed
+
+- Remove font styles from lists and update the list's clean variant padding. This fixes the lists styles in the Banner component.
+
+## [1.0.2] - 23.10.2023
 
 ### Fixed
 
 - Fix issue with radio button that didn't keep the checked style after it was checked
 - Fix a bug that prevents generate certain grid classes that were extended as a placeholder.
+- Fix unintended padding and border on accordion
+
+### Added
+
+- Added icon for X.
 
 ## [1.0.1] - 03.10.2023
 

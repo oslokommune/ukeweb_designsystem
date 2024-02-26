@@ -250,7 +250,6 @@
     }
   }
 
-
   &__text {
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-light;
@@ -269,56 +268,56 @@
     }
   }
 
-  & .ods-search-seasons__input {
-    &:hover,
-    &:focus {
-      border-color: states.$hover-light !important;
+  &--blue-dark {
+    & .ods-search-seasons__main {
+      background-color: colors.$blue-dark;
+      color: colors.$white;
     }
 
-    &--blue-dark {
-      & .ods-search-seasons__main {
-        background-color: colors.$blue-dark;
-        color: colors.$white;
-      }
+    & .ods-search-seasons__button {
+      background-color: colors.$blue-light;
+      border-color: colors.$blue-light;
+      color: colors.$blue-dark;
 
-      & .ods-search-seasons__button {
-        background-color: colors.$blue-light;
-        border-color: colors.$blue-light;
-        color: colors.$blue-dark;
-
-        &:hover,
-        &:focus {
-          background-color: states.$hover-light !important;
-          border: 0.125rem solid states.$hover-light !important;
-          color: states.$hover-light-text !important;
-        }
-      }
-
-      & .ods-search-seasons__input {
-        &:hover,
-        &:focus {
-          border-color: states.$hover-light !important;
-        }
+      &:hover,
+      &:focus {
+        background-color: states.$hover-light !important;
+        border: 0.125rem solid states.$hover-light !important;
+        color: states.$hover-light-text !important;
       }
     }
 
-    &--green-dark {
-      & .ods-search-seasons__main {
-        background-color: colors.$green-dark;
-        color: colors.$white;
+    & .ods-search-seasons__input {
+      &:hover,
+      &:focus {
+        border-color: states.$hover-light !important;
       }
+    }
+  }
 
-      & .ods-search-seasons__button {
-        background-color: colors.$green-light;
-        border-color: colors.$green-light;
-        color: colors.$blue-dark;
+  &--green-dark {
+    & .ods-search-seasons__main {
+      background-color: colors.$green-dark;
+      color: colors.$white;
+    }
 
-        &:hover,
-        &:focus {
-          background-color: states.$hover-light !important;
-          border: 0.125rem solid states.$hover-light !important;
-          color: states.$hover-light-text !important;
-        }
+    & .ods-search-seasons__button {
+      background-color: colors.$green-light;
+      border-color: colors.$green-light;
+      color: colors.$blue-dark;
+
+      &:hover,
+      &:focus {
+        background-color: states.$hover-light !important;
+        border: 0.125rem solid states.$hover-light !important;
+        color: states.$hover-light-text !important;
+      }
+    }
+    
+    & .ods-search-seasons__input {
+      &:hover,
+      &:focus {
+        border-color: states.$hover-light !important;
       }
     }
   }
