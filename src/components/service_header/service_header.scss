@@ -7,7 +7,6 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: grid.$gutter-size-large;
   row-gap: grid.$gutter-size-large;
 
   &__main {
