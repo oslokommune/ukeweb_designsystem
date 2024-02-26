@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - dd.mm.yyyy
 
+### Added
+
+- Added nowrap and truncated as modifiers to typography.
+
+### Changed
+
+### Fixed
+
 ## [1.1.0] - 16.02.2024
 
 ### Added
@@ -14,12 +22,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added examples of more geoJSON structures in the map component.
 - Update styles for the popup in the map component.
 - Added security, contribution and license files to accomodate github community standards.
-- Added nowrap and truncated as modifiers to typography.
 
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
