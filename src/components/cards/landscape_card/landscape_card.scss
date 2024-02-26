@@ -59,6 +59,7 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
   &__label {
     @extend %ods-text--size-lima;
     @extend %ods-margin-bottom-3, %ods-margin-bottom-4-breakpoint-medium;
+    @extend %ods-text--weight-medium;
   }
 
   &__heading {
@@ -95,23 +96,6 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
         background-position: center;
         background-size: cover;
         object-fit: cover;
-      }
-    }
-  }
-
-
-  &--large {
-    & .ods-landscape-card__content {
-      @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-medium;
-    }
-
-    & .ods-landscape-card__media img {
-      @include breakpoints.medium {
-        height: $ods-landscape-card-height-large-breakpoint-medium;
-      }
-
-      @include breakpoints.large {
-        height: $ods-landscape-card-height-large-breakpoint-large;
       }
     }
   }
@@ -179,6 +163,4 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
       }
     }
   }
-
 }
-

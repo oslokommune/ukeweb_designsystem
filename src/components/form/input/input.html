@@ -55,7 +55,7 @@
           <div class="ods-input">
             <label class="ods-input__label">
               Required text
-              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-1" />
+              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-1" aria-required="true" />
             </label>
             <div class="ods-input__required" id="required-1">* Required</div>
           </div>
@@ -107,10 +107,10 @@
               Counter
               <input class="ods-input__input ods-input__input--number" type="number" min="1" max="9" step="1" value="1" />
               <div class="ods-input__counter-nav">
-                <button class="ods-input__counter-nav-button ods-input__counter-nav-button--up">
+                <button class="ods-input__counter-button ods-input__counter-button--up">
                   <span class="ods-icon--chevron-thin-up" role="img" aria-label="increase"></span>
                 </button>
-                <button class="ods-input__counter-nav-button ods-input__counter-nav-button--down">
+                <button class="ods-input__counter-button ods-input__counter-button--down">
                   <span class="ods-icon--chevron-thin-down" role="img" aria-label="decrease"></span>
                 </button>
               </div>
@@ -206,7 +206,7 @@
           <div class="ods-input">
             <label class="ods-input__label">
               Required text
-              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-2" />
+              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-2" aria-required="true" />
             </label>
             <div class="ods-input__required" id="required-2">* Required</div>
           </div>
@@ -242,10 +242,10 @@
               Counter
               <input class="ods-input__input ods-input__input--number" type="number" min="1" max="9" step="1" value="1" />
               <div class="ods-input__counter-nav">
-                <button class="ods-input__counter-nav-button ods-input__counter-nav-button-up">
+                <button class="ods-input__counter-button ods-input__counter-button--up">
                   <span class="ods-icon--chevron-thin-up" role="img" aria-label="increase"></span>
                 </button>
-                <button class="ods-input__counter-nav-button ods-input__counter-nav-button-down">
+                <button class="ods-input__counter-button ods-input__counter-button--down">
                   <span class="ods-icon--chevron-thin-down" role="img" aria-label="decrease"></span>
                 </button>
               </div>
@@ -257,7 +257,7 @@
     <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-input-vue-1">
-        <ods-input error-id="ods-vue-input-component" label="Name" name="name" placeholder="Please type your name" />
+        <ods-input error-id="ods-vue-input-component" label="Name" name="name" :aria-required="true" placeholder="Please type your name" />
       </div>
     </div>
   </div>

@@ -1,10 +1,13 @@
-![Oslo Designsystem Banner](./src/assets/images/oslo-header.jpg)
+<div align="center">
 
+![Oslo Designsystem Banner](./src/assets/images/oslo-header.svg)
+
+</div>
 <h1 align="center">Oslo Designsystem</h1>
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=rocket&label=Version)
+![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge&logo=rocket&label=Version)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&label=License)](https://opensource.org/licenses/MIT)
 [![JavaScript](https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=ffffff&label=JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Vue](https://img.shields.io/badge/Vue-2.x-green?style=for-the-badge&logo=vue.js&label=Vue)](https://v2.vuejs.org/)
@@ -16,12 +19,12 @@ Welcome to `Oslo Designsystem` a complete library for styles and components used
 
 ## 📚 Table of Contents
 
-- **🎯 [Description](#description)**
-- **🚀 [Installation](#installation)**
-- **📑 [Documentation](#documentation)**
-- **🤝 [Contribution Guidelines](#contribution-guidelines)**
-- **📜 [License](#license)**
-- **📬 [Contact](#contact)**
+- **🎯 [Description](#-description)**
+- **🚀 [Installation](#-installation)**
+- **📑 [Documentation](#-documentation)**
+- **🤝 [Contribution Guidelines](#-contribution)**
+- **📜 [License](#-license)**
+- **📬 [Contact](#-contact)**
 
 ## 🎯 Description
 
@@ -49,7 +52,9 @@ Oslo Designsystem is distributed under a MIT-license for open source code.
 
 ## 📬 Contact
 
-Slack: oslo-designsystem
+Slack: [Oslo kommune](https://oslokommune.slack.com)
+
+Join the #oslodesignsystem channel
 
 devnull@uke.oslo.kommune.no
 

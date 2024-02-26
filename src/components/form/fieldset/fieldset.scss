@@ -24,25 +24,7 @@
     width: 100%;
 
     > * {
-      display: block;
-      cursor: pointer;
-      position: relative;
       text-decoration: none;
-
-      &::after {
-        font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
-        @extend %ods-text--size-golf;
-
-        content: map.get(icon-map.$icons, "plus-sign");
-        line-height: inherit;
-        position: absolute;
-        top: 0;
-        right: units.unit-to-rem(1);
-      }
-    }
-
-    > *.ods-collapsible-trigger--expanded::after {
-      content: map.get(icon-map.$icons, "minus-sign");
     }
   }
 
@@ -75,6 +57,29 @@
     border: none;
     border-bottom: 2px solid colors.$blue-dark;
 
+    & .ods-fieldset__legend {
+      > * {
+        display: block;
+        cursor: pointer;
+        position: relative;
+
+        &::after {
+          font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
+          @extend %ods-text--size-golf;
+
+          content: map.get(icon-map.$icons, "plus-sign");
+          line-height: inherit;
+          position: absolute;
+          top: 0;
+          right: units.unit-to-rem(1);
+        }
+      }
+
+      > *.ods-collapsible-trigger--expanded::after {
+        content: map.get(icon-map.$icons, "minus-sign");
+      }
+    }
+
     > .ods-collapsible-content:first-of-type {
       @extend %ods-margin-top-3;
     }
@@ -91,4 +96,5 @@
       @extend %ods-margin-bottom-0;
     }
   }
+
 }

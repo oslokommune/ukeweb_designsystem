@@ -17,10 +17,6 @@
     @include mixins.icon-left("chevron-right");
   }
 
-  &--chevron-left {
-    @include mixins.icon-left("chevron-left");
-  }
-
   &--state-light {
     &:visited,
     &-visited {

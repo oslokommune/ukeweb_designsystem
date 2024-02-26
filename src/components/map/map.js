@@ -74,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
     Vue.component('ods-map', OdsMap);
     const vm8 = new Vue({
       data: () => ({
-        geoJson: 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson',
+        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
       }),
 
       mounted() {
         setTimeout(() => {
-          this.geoJson = 'https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
+          this.geoJson = 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
         }, 15000);
       },
     });
