@@ -7,22 +7,27 @@
 .ods-input {
   @include mixins.form-states;
 
+  
   &__input {
     @include mixins.form-component;
     @extend %ods-margin-top-2;
-
+    
     &::placeholder {
       color: inherit;
     }
-
+    
     &[type="number"]::-webkit-inner-spin-button,
     &[type="number"]::-webkit-outer-spin-button {
       appearance: none;
       margin: 0;
     }
-
+    
     &[type="number"] {
       appearance: textfield;
+    }
+    
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
     }
   }
 
