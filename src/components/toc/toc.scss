@@ -25,7 +25,7 @@
     @include mixins.states;
 
     text-decoration: none;
-    
+
     &:focus-visible {
       box-shadow: 0 0 0 0.125rem white, 0 0 0 0.375rem colors.$purple-light;
       outline: 0.125rem solid colors.$blue-state;
