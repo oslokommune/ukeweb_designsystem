@@ -11,6 +11,8 @@ $ods-portrait-card-image-height-medium: 230px;
 $ods-portrait-card-image-height-large: 290px;
 
 .ods-portrait-card {
+  position: relative;
+
   &__media {
     img {
       display: block;
@@ -133,7 +135,18 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &__link {
+    display: block;
     text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
     &:hover {
       .ods-portrait-card__content {
@@ -143,6 +156,11 @@ $ods-portrait-card-image-height-large: 290px;
       .ods-portrait-card__heading {
         text-decoration: underline;
       }
+    }
+
+    &__heading {
+      position: relative;
+      z-index: 1;
     }
   }
 
