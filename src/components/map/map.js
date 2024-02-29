@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapElement8 = document.getElementById('ods-map8');
   const mapElement9 = document.getElementById('ods-map9');
   const mapElement10 = document.getElementById('ods-map10');
+  const mapElement11 = document.getElementById('ods-map11');
 
   if (mapElement) {
     Vue.component('ods-map', OdsMap);
@@ -182,5 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }),
     });
     vm10.$mount(mapElement10);
+  }
+
+  if (mapElement11) {
+    Vue.component('ods-map', OdsMap);
   }
 });
