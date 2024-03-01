@@ -186,6 +186,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement11) {
-    Vue.component('ods-map', OdsMap);
+    const vm11 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+          loadMap: false,
+        };
+      },
+      async created() {
+        try {
+          this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson');
+        } catch (error) {
+          throw new Error('Error fetching GeoJSON data:', error);
+        }
+      },
+      methods: {
+        showMap() {
+          this.loadMap = true;
+        },
+        hideMap() {
+          this.loadMap = false;
+        },
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+        const listViewBtn = document.getElementById('listViewBtn');
+        const mapViewBtn = document.getElementById('mapViewBtn');
+
+        listViewBtn.addEventListener('click', () => {
+          this.hideMap();
+        });
+        mapViewBtn.addEventListener('click', () => {
+          this.showMap();
+        });
+      },
+    });
+    vm11.$mount(mapElement11);
   }
 });

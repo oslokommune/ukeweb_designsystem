@@ -129,7 +129,7 @@
 
 <!-- Developer mode -->
 <div class="ods-devtools-devmode">
-  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+  <class="ods-grid ods-grid--gap ods-grid--gutter">
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Single marker with automatic popup</h2>
     </div>
@@ -194,13 +194,94 @@
         <ods-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
+
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Map in filter</h2>
     </div>
-    <div class="ods-grid__column--12">
+    <div class="ods-grid__column--12 ods-flex ods-flex-align-items-center">
+      <button id="listViewBtn" class="ods-button ods-button--small ods-margin-right-4">
+        <span aria-hidden="true" class="ods-button__icon ods-icon--grid"></span>
+        <span class="ods-sr-only">Rutenettvisning</span>
+      </button>
+      <button id="mapViewBtn" class="ods-button ods-button--small ods-margin-right-4 ods-button--outline">
+        <span aria-hidden="true" class="ods-button__icon ods-icon--map"></span>
+        <span class="ods-sr-only">Vis i kart</span>
+      </button>
+    </div>
+    <div id="listView" class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Extra small</h2>
+      <div class="ods-grid ods-grid--gap">
+        <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium ods-grid__column--3-breakpoint-large">
+          <div class="ods-portrait-card ods-portrait-card--xs">
+            <a class="ods-portrait-card__link" href="javascript:void(0)">
+              <div class="ods-portrait-card__media">
+                <img src="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/300x300/1.jpg" alt="Lighthouse in the middle of the fjord" />
+              </div>
+              <div class="ods-portrait-card__content">
+                <h3 class="ods-portrait-card__heading">Heading</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium ods-grid__column--3-breakpoint-large">
+          <div class="ods-portrait-card ods-portrait-card--xs">
+            <a class="ods-portrait-card__link" href="javascript:void(0)">
+              <div class="ods-portrait-card__media">
+                <img src="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/300x300/2.jpg" alt="Sunset in the mountain close to a lake" />
+              </div>
+              <div class="ods-portrait-card__content">
+                <h3 class="ods-portrait-card__heading">Heading</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium ods-grid__column--3-breakpoint-large">
+          <div class="ods-portrait-card ods-portrait-card--xs">
+            <a class="ods-portrait-card__link" href="javascript:void(0)">
+              <div class="ods-portrait-card__media">
+                <img src="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/300x300/3.jpg" alt="Boy doing cross country sky" />
+              </div>
+              <div class="ods-portrait-card__content">
+                <h3 class="ods-portrait-card__heading">Heading</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium ods-grid__column--3-breakpoint-large">
+          <div class="ods-portrait-card ods-portrait-card--xs ods-portrait-card--actions">
+            <a class="ods-portrait-card__link" href="javascript:void(0)">
+              <div class="ods-portrait-card__media">
+                <img src="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/300x300/4.jpg" alt="Children running on the snow" />
+              </div>
+              <div class="ods-portrait-card__content">
+                <h3 class="ods-portrait-card__heading">Heading</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mapView" class="ods-grid__column--12">
       <div class="ods-map" id="ods-map11">
-        <ods-map ref="odsMap11" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
+        <h2>Map under here</h2>
+        <ods-map ref="odsMap11" api-key="VW1Tn0fx1t3b6t0CHP6Q" :load-map="loadMap" :geo-json="geoJsonData" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const listViewBtn = document.getElementById('listViewBtn');
+    const mapViewBtn = document.getElementById('mapViewBtn');
+
+    listViewBtn.addEventListener('click', () => {
+    // Assuming vm11 is accessible here
+    vm11.hideMap(); // Call Vue instance method to hide the map
+  });
+
+    mapViewBtn.addEventListener('click', () => {
+    // Assuming vm11 is accessible here
+    vm11.showMap(); // Call Vue instance method to show the map
+  });
+});
+  </script>
 </div>
