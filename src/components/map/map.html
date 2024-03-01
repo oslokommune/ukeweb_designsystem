@@ -209,7 +209,7 @@
       </button>
     </div>
     <div id="listView" class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-2">Extra small</h2>
+      <h2 class="ods-devtools-text-preset-2">Placeholder cards</h2>
       <div class="ods-grid ods-grid--gap">
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium ods-grid__column--3-breakpoint-large">
           <div class="ods-portrait-card ods-portrait-card--xs">
@@ -269,19 +269,25 @@
     </div>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const listViewBtn = document.getElementById('listViewBtn');
     const mapViewBtn = document.getElementById('mapViewBtn');
+    const listView = document.getElementById('listView');
+    const mapView = document.getElementById('mapView');
 
-    listViewBtn.addEventListener('click', () => {
-    // Assuming vm11 is accessible here
-    vm11.hideMap(); // Call Vue instance method to hide the map
-  });
+    // Initially show list view and hide map view
+    listView.style.display = 'block';
+    mapView.style.display = 'none';
 
-    mapViewBtn.addEventListener('click', () => {
-    // Assuming vm11 is accessible here
-    vm11.showMap(); // Call Vue instance method to show the map
+    listViewBtn.addEventListener('click', function() {
+      listView.style.display = 'block';
+      mapView.style.display = 'none';
+    });
+
+    mapViewBtn.addEventListener('click', function() {
+      listView.style.display = 'none';
+      mapView.style.display = 'block';
+    });
   });
-});
   </script>
 </div>
