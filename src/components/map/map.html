@@ -269,7 +269,7 @@
     </div>
   </div>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const listViewBtn = document.getElementById('listViewBtn');
     const mapViewBtn = document.getElementById('mapViewBtn');
     const listView = document.getElementById('listView');
@@ -279,12 +279,12 @@
     listView.style.display = 'block';
     mapView.style.display = 'none';
 
-    listViewBtn.addEventListener('click', function() {
+    listViewBtn.addEventListener('click', () => {
       listView.style.display = 'block';
       mapView.style.display = 'none';
     });
 
-    mapViewBtn.addEventListener('click', function() {
+    mapViewBtn.addEventListener('click', () => {
       listView.style.display = 'none';
       mapView.style.display = 'block';
     });
