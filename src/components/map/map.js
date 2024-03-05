@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('Error fetching GeoJSON data:', error);
           }
         }, 15000);
+
         const listViewBtn = document.getElementById('listViewBtn');
         const mapViewBtn = document.getElementById('mapViewBtn');
 

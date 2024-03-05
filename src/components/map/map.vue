@@ -124,10 +124,8 @@ export default {
     pointsGeoJson: {
       deep: true,
       handler() {
-        if (this.loadMap === true) {
-          this.clearMapAndData();
-          this.populateMap();
-        }
+        this.clearMapAndData();
+        this.populateMap();
       },
     },
     geoJson: {
@@ -162,8 +160,7 @@ export default {
     },
     populateMap() {
       // Will only populate if map is ready (load event done)
-      if (this.mapReady && this.loadMap) {
-        // Check if pointsGeoJson has features to add
+      if (this.mapReady) {
         if (this.pointsGeoJson && this.pointsGeoJson.features && this.pointsGeoJson.features.length > 0) {
           this.mapObject.addSource('points', {
             type: 'geojson',
