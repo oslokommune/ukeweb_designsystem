@@ -23,10 +23,6 @@
     right: units.unit-to-rem(4);
   }
 
-  &:focus-visible {
-    outline: 0.25rem solid colors.$purple-light;
-  }
-
   &__input {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-light;
@@ -48,6 +44,10 @@
       border: 0.25rem solid colors.$blue-state !important;
       padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(12) - 0.125rem) calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
       outline: none;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::-webkit-search-cancel-button {
