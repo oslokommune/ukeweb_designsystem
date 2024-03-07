@@ -41,9 +41,7 @@
     }
 
     &:focus {
-      border: 0.25rem solid colors.$blue-state !important;
-      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(12) - 0.125rem) calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
-      outline: none;
+      border: 0.125rem solid colors.$blue-state !important;
     }
 
     &:focus-visible {
