@@ -177,8 +177,9 @@
       color: states.$hover !important;
     }
   }
-  
+
   &:focus-visible {
+    outline-offset: 0;
     outline: 0.25rem solid colors.$purple-light !important;
 
     &.ods-button--text {
