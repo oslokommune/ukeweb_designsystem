@@ -31,7 +31,12 @@
 
       cursor: pointer;
       padding-right: 50px;
+
+      &:focus-visible {
+        outline: 0.25rem solid colors.$purple-light;
+      }
     }
+
 
     &::after {
       color: inherit;
