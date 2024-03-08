@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added new custom width and height classes.
+- Added nowrap and truncated as modifiers to typography.
 
 ### Changed
 
