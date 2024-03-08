@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fixed spacing and some other design adjustments on menu component.
+
 ## [1.1.0] - 16.02.2024
 
 ### Added
