@@ -40,6 +40,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed hexcodes and class names for colors.
 - Fixed typo in checkbox component and heading style of 'important' section.
 
+### Removed
+
+- Removed twitter icon
+
 ## [1.0.5] - 01.11.2023
 
 ### Added
