@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added new custom width and height classes.
+
 ### Changed
 
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added examples of more geoJSON structures in the map component.
 - Update styles for the popup in the map component.
 - Added security, contribution and license files to accomodate github community standards.
+- Added new classes for width and height.
 
 ### Changed
 
