@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed font-weight in video heading and refactored to correct scss setup.
 
+- Changed accordion heading to be inside ods-accordion
+
 ### Fixed
 
 - Fixed spacing and some other design adjustments on menu component.
