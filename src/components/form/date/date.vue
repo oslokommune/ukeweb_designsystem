@@ -1,9 +1,13 @@
 <template>
-  <div class="ods-date">
+  <div class="ods-date" :class="{ 'ods-date--error': isError }">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" />
+      <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
+    <div class="ods-status-message ods-status-message--danger" v-if="isError">
+      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ isError }}</h2>
+    </div>
+
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
       <fieldset class="ods-date__datepicker__nav">
         <button class="ods-date__datepicker__button ods-date__datepicker__button--prev" :value="browseMonth(-1)" :disabled="browseMonthDisabled(-1)" :aria-label="btnPrevMonthLabel"></button>
@@ -58,12 +62,25 @@ export default {
       type: String,
       default: 'Next month',
     },
+    minDateErrorMessage: {
+      type: String,
+      default: 'Date is before the earliest allowed date.',
+    },
+    maxDateErrorMessage: {
+      type: String,
+      default: 'Date is after the latest allowed date',
+    },
+    invalidInputErrorMessage: {
+      type: String,
+      default: 'Invalid date or format. Try dd.mm.yyyy',
+    },
   },
 
   data: () => ({
     datepicker: null,
     showDatepicker: false,
     browseDate: new Date(Date.now()),
+    isError: '',
   }),
 
   mounted() {
@@ -108,9 +125,42 @@ export default {
     onDatepickerClickDay() {
       this.$emit('set', this.datepicker.date);
       this.toggleDatepicker(false);
+      this.isError = '';
     },
     onDatepickerChange(event) {
       this.browseDate = event.detail;
+    },
+    handleKeyboardInput(event) {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        const [day, month, year] = event.target.value.split('.').map(Number);
+        const inputDate = new Date(year, month - 1, day);
+        const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
+        const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
+
+        if (!day || !month || !year || !this.isValidDate(inputDate)) {
+          this.isError = `${this.invalidInputErrorMessage}`;
+          this.$emit('set', null);
+        } else if (inputDate < this.min) {
+          this.isError = `${this.minDateErrorMessage} (${minFormatted}).`;
+          this.$emit('set', null);
+        } else if (inputDate > this.max) {
+          this.isError = `${this.maxDateErrorMessage} (${maxFormatted}).`;
+          this.$emit('set', null);
+        } else {
+          this.datepicker.date = inputDate;
+          this.$emit('set', this.datepicker.date);
+          this.toggleDatepicker(false);
+          this.isError = '';
+        }
+      }
+    },
+
+    isValidDate(date) {
+      return !Number.isNaN(date.getTime());
+    },
+
+    isWithinRange(date) {
+      return date >= this.min && date <= this.max;
     },
   },
 };

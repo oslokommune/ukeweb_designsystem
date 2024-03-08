@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added new custom width and height classes.
 - Added nowrap and truncated as modifiers to typography.
+- Added keyboard functionality to datepicker component and upgraded to new version.
 
 ### Changed
 
@@ -31,7 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added examples of more geoJSON structures in the map component.
 - Update styles for the popup in the map component.
 - Added security, contribution and license files to accomodate github community standards.
-- Added new classes for width and height.
 
 ### Changed
 
