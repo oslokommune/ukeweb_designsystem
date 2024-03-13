@@ -129,14 +129,13 @@
 
 <!-- Developer mode -->
 <div class="ods-devtools-devmode">
-  <class="ods-grid ods-grid--gap ods-grid--gutter">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Single marker with automatic popup</h2>
     </div>
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map4">
         <ods-map ref="odsMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" v-on:resize="resize" ></ods-map>
-        <!-- <ods-map ref="odsMap4" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" v-on:resize="resize" /> -->
       </div>
     </div>
     <div class="ods-grid__column--12">
@@ -145,7 +144,6 @@
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map5">
         <ods-map ref="odsMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" :geo-json="geoJsonData" :clustered-points="true" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
-        <!-- <ods-map ref="odsMap5" api-key="VW1Tn0fx1t3b6t0CHP6Q" :state="{ longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: true }" :geo-json="https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson" :clustered-points="true" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" /> -->
       </div>
     </div>
     <div class="ods-grid__column--12">
@@ -154,7 +152,6 @@
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map6">
         <ods-map ref="odsMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJsonData" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium"></ods-map>
-        <!-- <ods-map ref="odsMap6" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" /> -->
       </div>
     </div>
     <div class="ods-grid__column--12">
