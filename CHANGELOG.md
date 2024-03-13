@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added new custom width and height classes.
 - Added nowrap and truncated as modifiers to typography.
 - Added keyboard functionality to datepicker component and upgraded to new version.
+- Added links to the designmanual in typography and icons to clearify font installation.
 
 ### Changed
 
