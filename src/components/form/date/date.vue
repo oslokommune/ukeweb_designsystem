@@ -1,11 +1,11 @@
 <template>
-  <div class="ods-date" :class="{ 'ods-date--error': isError }">
+  <div class="ods-date" :class="{ 'ods-date--error': hasError }">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" placeholder="dd.mm.yyyy" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      <input type="text" class="ods-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
-    <div class="ods-status-message ods-status-message--danger" v-if="isError">
-      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ isError }}</h2>
+    <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
+      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
     </div>
 
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">
@@ -80,8 +80,14 @@ export default {
     datepicker: null,
     showDatepicker: false,
     browseDate: new Date(Date.now()),
-    isError: '',
+    errorMessage: '',
   }),
+
+  computed: {
+    hasError() {
+      return this.errorMessage !== '';
+    },
+  },
 
   mounted() {
     this.datepicker = this.$refs.datepicker;
@@ -125,7 +131,7 @@ export default {
     onDatepickerClickDay() {
       this.$emit('set', this.datepicker.date);
       this.toggleDatepicker(false);
-      this.isError = '';
+      this.errorMessage = '';
     },
     onDatepickerChange(event) {
       this.browseDate = event.detail;
@@ -138,19 +144,19 @@ export default {
         const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
 
         if (!day || !month || !year || !this.isValidDate(inputDate)) {
-          this.isError = `${this.invalidInputErrorMessage}`;
+          this.errorMessage = `${this.invalidInputErrorMessage}`;
           this.$emit('set', null);
         } else if (inputDate < this.min) {
-          this.isError = `${this.minDateErrorMessage} (${minFormatted}).`;
+          this.errorMessage = `${this.minDateErrorMessage} (${minFormatted}).`;
           this.$emit('set', null);
         } else if (inputDate > this.max) {
-          this.isError = `${this.maxDateErrorMessage} (${maxFormatted}).`;
+          this.errorMessage = `${this.maxDateErrorMessage} (${maxFormatted}).`;
           this.$emit('set', null);
         } else {
           this.datepicker.date = inputDate;
           this.$emit('set', this.datepicker.date);
           this.toggleDatepicker(false);
-          this.isError = '';
+          this.errorMessage = '';
         }
       }
     },
