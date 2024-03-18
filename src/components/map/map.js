@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import OdsMap from './map.vue';
+import fetchGeoJsonData from './geoJsonUtils';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mapElement = document.getElementById('ods-map');
@@ -12,22 +13,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapElement8 = document.getElementById('ods-map8');
   const mapElement9 = document.getElementById('ods-map9');
   const mapElement10 = document.getElementById('ods-map10');
+  const mapElement11 = document.getElementById('ods-map11');
 
   if (mapElement) {
     Vue.component('ods-map', OdsMap);
     const vm1 = new Vue();
     vm1.$mount(mapElement);
   }
+
   if (mapElement2) {
-    Vue.component('ods-map', OdsMap);
-    const vm2 = new Vue();
+    const vm2 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
+    });
     vm2.$mount(mapElement2);
   }
+
   if (mapElement3) {
-    Vue.component('ods-map', OdsMap);
-    const vm3 = new Vue();
+    const vm3 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
+    });
     vm3.$mount(mapElement3);
   }
+
   if (mapElement4) {
     Vue.component('ods-map', OdsMap);
     const vm4 = new Vue({
@@ -43,14 +76,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement5) {
-    Vue.component('ods-map', OdsMap);
-    const vm5 = new Vue();
+    const vm5 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
+    });
     vm5.$mount(mapElement5);
   }
 
   if (mapElement6) {
-    Vue.component('ods-map', OdsMap);
-    const vm6 = new Vue();
+    const vm6 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
+    });
     vm6.$mount(mapElement6);
   }
 
@@ -71,15 +132,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mapElement8) {
-    Vue.component('ods-map', OdsMap);
     const vm8 = new Vue({
-      data: () => ({
-        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
-      }),
-
-      mounted() {
-        setTimeout(() => {
-          this.geoJson = 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async created() {
+        try {
+          this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson');
+        } catch (error) {
+          throw new Error('Error fetching GeoJSON data:', error);
+        }
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
         }, 15000);
       },
     });
@@ -111,5 +183,51 @@ document.addEventListener('DOMContentLoaded', () => {
       }),
     });
     vm10.$mount(mapElement10);
+  }
+
+  if (mapElement11) {
+    const vm11 = new Vue({
+      data() {
+        return {
+          geoJsonData: null,
+          loadMap: false,
+        };
+      },
+      async created() {
+        try {
+          this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson');
+        } catch (error) {
+          throw new Error('Error fetching GeoJSON data:', error);
+        }
+      },
+      methods: {
+        showMap() {
+          this.loadMap = true;
+        },
+        hideMap() {
+          this.loadMap = false;
+        },
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+
+        const listViewBtn = document.getElementById('listViewBtn');
+        const mapViewBtn = document.getElementById('mapViewBtn');
+
+        listViewBtn.addEventListener('click', () => {
+          this.hideMap();
+        });
+        mapViewBtn.addEventListener('click', () => {
+          this.showMap();
+        });
+      },
+    });
+    vm11.$mount(mapElement11);
   }
 });
