@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fixed the component registration of pagination in the init file to use pagination with a tag
+- Fixed pagination not displaying caused by bad name import.
 
 ## [1.1.0] - 16.02.2024
 
