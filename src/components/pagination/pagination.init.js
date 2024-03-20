@@ -1,12 +1,11 @@
 import { createApp } from 'vue';
-import pagination from './pagination.vue';
+import OdsPagination from './pagination.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
     const app = createApp({
-      components: {
-        'ods-pagination': pagination,
-      },
+      name: 'PaginationApp',
+      components: { OdsPagination },
       data: () => ({
         currentIndex: 99,
         limit: 2,
