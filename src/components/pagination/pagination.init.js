@@ -4,7 +4,7 @@ import OdsPagination from './pagination.vue';
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
     const app = createApp({
-      name: 'PaginationApp',
+      name: 'OdsPaginationApp',
       components: { OdsPagination },
       data: () => ({
         currentIndex: 99,
