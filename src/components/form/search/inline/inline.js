@@ -7,6 +7,7 @@ function OdsSearchVue() {
     const odsSearchPlaceholder = document.getElementById(element);
     if (odsSearchPlaceholder) {
       const app = createApp({
+        name: 'OdsSearchInlineApp',
         components: {
           OdsSearchInline,
         },

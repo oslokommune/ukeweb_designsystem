@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.getElementById('ods-input-vue-1')) {
     const app = createApp({
+      name: 'InputApp',
       components: {
-        OdsInput,
+        'ods-input': OdsInputVue,
       },
     });
     app.mount('#ods-input-vue-1');

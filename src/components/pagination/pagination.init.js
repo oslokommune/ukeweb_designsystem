@@ -4,6 +4,7 @@ import pagination from './pagination.vue';
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
     const app = createApp({
+      name: 'OdsPaginationApp',
       components: {
         pagination,
       },

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const odsDatePlaceholder = document.getElementById(elementName);
     if (odsDatePlaceholder) {
       const app = createApp({
+        name: 'OdsDateApp',
         components: {
           OdsDate,
         },
