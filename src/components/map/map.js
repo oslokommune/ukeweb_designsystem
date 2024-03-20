@@ -15,24 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement) {
     const app1 = createApp({
+      name: 'OdsMapApp1',
       components: { OdsMap },
     });
     app1.mount(mapElement);
   }
   if (mapElement2) {
     const app2 = createApp({
+      name: 'OdsMapApp2',
       components: { OdsMap },
     });
     app2.mount(mapElement2);
   }
   if (mapElement3) {
     const app3 = createApp({
+      name: 'OdsMapApp3',
       components: { OdsMap },
     });
     app3.mount(mapElement3);
   }
   if (mapElement4) {
-    const app1 = createApp({
+    const app4 = createApp({
+      name: 'OdsMapApp4',
       components: { OdsMap },
       mounted() {
         this.$refs.odsMap4.resize();
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement5) {
     const app5 = createApp({
+      name: 'OdsMapApp5',
       components: { OdsMap },
     });
     app5.mount(mapElement5);
@@ -54,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement6) {
     const app6 = createApp({
+      name: 'OdsMapApp6',
       components: { OdsMap },
     });
     app6.mount(mapElement6);
@@ -61,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement7) {
     const app7 = createApp({
+      name: 'OdsMapApp7',
       components: { OdsMap },
       data: () => ({
         points: [{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }],
@@ -77,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement8) {
     const app8 = createApp({
+      name: 'OdsMapApp8',
       components: { OdsMap },
       data: () => ({
         geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
@@ -93,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement9) {
     const app9 = createApp({
+      name: 'OdsMapApp9',
       components: { OdsMap },
       data: () => ({
         state: { longitude: 10.74981, latitude: 59.913008, zoom: 10, showPopups: true, autoFitToBounds: false },
@@ -109,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mapElement10) {
     const app10 = createApp({
+      name: 'OdsMapApp10',
       components: { OdsMap },
       data: () => ({
         loadMap: false,

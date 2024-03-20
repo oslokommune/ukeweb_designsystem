@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const exampleComponent = document.getElementById('ods-example-component-vue');
   if (exampleComponent) {
     const app = createApp({
+      name: 'OdsExampleComponentApp',
       components: {
         OdsExampleComponent,
       },

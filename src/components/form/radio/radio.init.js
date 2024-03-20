@@ -4,6 +4,7 @@ import OdsRadiogroup from './radiogroup.vue';
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('ods-radio-vue-1')) {
     const app = createApp({
+      name: 'OdsRadiogroupApp',
       components: { OdsRadiogroup },
       data: () => ({
         selectedValue: '40',
