@@ -7,14 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - dd.mm.yyyy
 
-### Added
-
-### Changed
-
-### Fixed
-
-- Fixed pagination not displaying caused by bad name import.
-
 ## [1.1.0] - 16.02.2024
 
 ### Added
