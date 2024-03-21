@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - dd.mm.yyyy
 
+### Added
+
 ### Changed
 
+### Fixed
+
 - Fixed links on portrait cards to improve screen reader capabilities.
+- Fixed spacing around links and buttons in portrait card on all breakpoints.
 
 ## [1.1.0] - 16.02.2024
 
@@ -26,7 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fixed spacing around links and buttons in portrait card on all breakpoints.
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
