@@ -27,7 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed hover colour on button-text button.
 - Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
-- Change structure of accordion component to follow BEM.
 
 ### Fixed
 
