@@ -22,7 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added examples of more geoJSON structures in the map component.
 - Update styles for the popup in the map component.
 - Added security, contribution and license files to accomodate github community standards.
-- Added keyboard functionality to datepicker component and upgraded to newest version.
 
 ### Changed
 
