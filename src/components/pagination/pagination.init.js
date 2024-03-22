@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
     const app = createApp({
       name: 'OdsPaginationApp',
-      components: { OdsPagination },
+      components: {
+        OdsPagination,
+      },
       data: () => ({
         currentIndex: 99,
         limit: 2,
