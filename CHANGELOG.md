@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added new custom width and height classes.
+
+### Changed
+
+### Fixed
 
 ## [1.1.0] - 16.02.2024
 
