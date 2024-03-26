@@ -1,10 +1,13 @@
-import Vue from 'vue';
-import pagination from './pagination.vue';
+import { createApp } from 'vue';
+import OdsPagination from './pagination.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('vue-pagination')) {
-    Vue.component('ods-pagination', pagination);
-    const vm = new Vue({
+    const app = createApp({
+      name: 'OdsPaginationApp',
+      components: {
+        OdsPagination,
+      },
       data: () => ({
         currentIndex: 99,
         limit: 2,
@@ -16,6 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
     });
-    vm.$mount('#vue-pagination');
+    app.mount('#vue-pagination');
   }
 });
