@@ -100,7 +100,7 @@ export default {
     window.addEventListener('keyup', this.onDatepickerOutside);
   },
 
-  destroyed() {
+  unmounted() {
     this.datepicker.removeEventListener('datepicker.change', this.onDatepickerChange);
     this.datepicker.removeEventListener('datepicker.click.day', this.onDatepickerClickDay);
     window.removeEventListener('click', this.onDatepickerOutside);
