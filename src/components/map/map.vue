@@ -679,10 +679,23 @@ export default {
           // https://maplibre.org/maplibre-gl-js-docs/api/events/#mapdataevent
           if (event.isSourceLoaded && event.sourceId === dataSourceId && event.coord) {
             const { features } = event.source.data;
-            if (typeof features === 'object') {
+
+            if (Array.isArray(features)) {
+              const featuresCoordinates = {
+                Point: (feature) => feature.geometry.coordinates || null,
+                MultiPoint: (feature) => feature.geometry.coordinates[0] || null,
+                Polygon: (feature) => feature.geometry.coordinates[0][0] || null,
+                MultiPolygon: (feature) => feature.geometry.coordinates[0][0][0] || null,
+                LineString: (feature) => feature.geometry.coordinates[0] || null,
+                MultiLineString: (feature) => feature.geometry.coordinates[0][0] || null,
+              };
+
               features.forEach((feature) => {
-                if (feature.geometry.type === 'Point' && feature.properties.openPopup) {
-                  this.$_addPopupToMap(feature.geometry.coordinates, feature);
+                const { type } = feature.geometry;
+                const { openPopup } = feature.properties;
+
+                if (openPopup && featuresCoordinates[type]) {
+                  this.$_addPopupToMap(featuresCoordinates[type](feature), feature);
                 }
               });
             }
