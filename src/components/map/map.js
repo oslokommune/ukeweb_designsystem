@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import OdsMap from './map.vue';
+import fetchGeoJsonData from './geoJsonUtils';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mapElement = document.getElementById('ods-map');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapElement8 = document.getElementById('ods-map8');
   const mapElement9 = document.getElementById('ods-map9');
   const mapElement10 = document.getElementById('ods-map10');
+  const mapElement11 = document.getElementById('ods-map11');
 
   if (mapElement) {
     const app1 = createApp({
@@ -20,20 +22,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     app1.mount(mapElement);
   }
+
   if (mapElement2) {
     const app2 = createApp({
       name: 'OdsMapApp2',
       components: { OdsMap },
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
     });
     app2.mount(mapElement2);
   }
+
   if (mapElement3) {
     const app3 = createApp({
       name: 'OdsMapApp3',
       components: { OdsMap },
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
     });
     app3.mount(mapElement3);
   }
+
   if (mapElement4) {
     const app4 = createApp({
       name: 'OdsMapApp4',
@@ -53,6 +86,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const app5 = createApp({
       name: 'OdsMapApp5',
       components: { OdsMap },
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
     });
     app5.mount(mapElement5);
   }
@@ -61,6 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const app6 = createApp({
       name: 'OdsMapApp6',
       components: { OdsMap },
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+      },
     });
     app6.mount(mapElement6);
   }
@@ -86,13 +147,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const app8 = createApp({
       name: 'OdsMapApp8',
       components: { OdsMap },
-      data: () => ({
-        geoJson: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson',
-      }),
-
-      mounted() {
-        setTimeout(() => {
-          this.geoJson = 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups.geojson';
+      data() {
+        return {
+          geoJsonData: null,
+        };
+      },
+      async created() {
+        try {
+          this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson');
+        } catch (error) {
+          throw new Error('Error fetching GeoJSON data:', error);
+        }
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
         }, 15000);
       },
     });
@@ -127,4 +200,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     app10.mount(mapElement10);
   }
+
+  if (mapElement11) {
+    const app11 = createApp({
+      name: 'OdsMapApp11',
+      components: { OdsMap },
+      data() {
+        return {
+          geoJsonData: null,
+          loadMap: false,
+        };
+      },
+      async created() {
+        try {
+          this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/data/kindergarten-with-events-ods.geojson');
+        } catch (error) {
+          throw new Error('Error fetching GeoJSON data:', error);
+        }
+      },
+      methods: {
+        showMap() {
+          this.loadMap = true;
+        },
+        hideMap() {
+          this.loadMap = false;
+        },
+      },
+      async mounted() {
+        setTimeout(async () => {
+          try {
+            this.geoJsonData = await fetchGeoJsonData('https://ukeweb-public.s3.eu-central-1.amazonaws.com/map/data/featurecollection-with-popups-and-multi-variants.geojson');
+          } catch (error) {
+            throw new Error('Error fetching GeoJSON data:', error);
+          }
+        }, 15000);
+
+        const listViewBtn = document.getElementById('listViewBtn');
+        const mapViewBtn = document.getElementById('mapViewBtn');
+
+        listViewBtn.addEventListener('click', () => {
+          this.hideMap();
+        });
+        mapViewBtn.addEventListener('click', () => {
+          this.showMap();
+        });
+      },
+    });
+    app11.mount(mapElement11);
+  }
 });
+
