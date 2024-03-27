@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsSearchInline from './inline.vue';
 
 function OdsSearchVue() {
@@ -6,7 +6,8 @@ function OdsSearchVue() {
   vueElements.forEach((element) => {
     const odsSearchPlaceholder = document.getElementById(element);
     if (odsSearchPlaceholder) {
-      const vm = new Vue({
+      const app = createApp({
+        name: 'OdsSearchInlineApp',
         components: {
           OdsSearchInline,
         },
@@ -45,7 +46,7 @@ function OdsSearchVue() {
           },
         },
       });
-      vm.$mount(odsSearchPlaceholder);
+      app.mount(odsSearchPlaceholder);
     }
   });
 }
