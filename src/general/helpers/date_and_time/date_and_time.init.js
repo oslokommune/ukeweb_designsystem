@@ -1,6 +1,4 @@
-import Vue from 'vue';
-import './date_and_time.vue'; // For Vue filters
-import OdsDateTime from './date_and_time'; // For JS
+import OdsDateTime from './date_and_time';
 
 document.addEventListener('DOMContentLoaded', () => {
   const testCasesElement = document.getElementById('testcases');
@@ -130,15 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
       testCaseElement.innerHTML += `<code class="ods-code" class="ods-code ods-block ods-margin-top-10">${testCase.toString}</code>`;
       testCasesElement.appendChild(testCaseElement);
     });
-  }
-
-  if (document.getElementById('date-time-vue-examples')) {
-    const vm = new Vue({
-      data: () => ({
-        testDate: new Date(2021, 11, 31, 23, 59, 59),
-      }),
-      template: '<div><p>Date: {{ testDate | OdsDateTimeFormat() }}, DateTime: {{ testDate | OdsDateTimeFormat(null, { format: "datetime" }) }}, <span v-html="\'DoubleDate: \' + $options.filters.OdsDateTimeFormat(testDate, new Date())"></span></p></div>',
-    });
-    vm.$mount('#date-time-vue-examples');
   }
 });
