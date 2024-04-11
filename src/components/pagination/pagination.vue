@@ -4,11 +4,11 @@
       <span class="ods-sr-only">{{ i18n.previousButton }} {{ currentIndex - 1 }}</span>
     </button>
     <template v-for="index in totalPages">
-      <button v-if="showItem(index)" class="ods-pagination__item" v-bind:class="{ 'ods-pagination__item--current': index === currentIndex, 'ods-pagination__item--rectangle': index >= 100 }" :key="index" :disabled="index === currentIndex && disableCurrentIndexBtn" @click.prevent="paginate(index)">
+      <button v-if="showItem(index)" class="ods-pagination__item" v-bind:class="{ 'ods-pagination__item--current': index === currentIndex, 'ods-pagination__item--rectangle': index >= 100 }" :key="'item' + index" :disabled="index === currentIndex && disableCurrentIndexBtn" @click.prevent="paginate(index)">
         <span class="ods-sr-only">{{ i18n.showPage }} {{ index }}</span>
         {{ index }}
       </button>
-      <span v-else-if="showSpacer(index)" :key="index" class="ods-pagination__spacer" aria-hidden="true">&hellip;</span>
+      <span v-else-if="showSpacer(index)" :key="'spacer' + index" class="ods-pagination__spacer" aria-hidden="true">&hellip;</span>
     </template>
     <button class="ods-pagination__next" v-show="showArrows && currentIndex < totalPages" @click.prevent="paginate(currentIndex + 1)">
       <span class="ods-sr-only">{{ i18n.nextButton }} {{ currentIndex + 1 }}</span>

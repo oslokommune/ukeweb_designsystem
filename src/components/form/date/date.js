@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsDate from './date.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
   odsDatePlaceholderElements.forEach((elementName) => {
     const odsDatePlaceholder = document.getElementById(elementName);
     if (odsDatePlaceholder) {
-      Vue.component('ods-date', OdsDate);
-      const vm = new Vue({
+      const app = createApp({
+        name: 'OdsDateApp',
+        components: {
+          OdsDate,
+        },
         data: () => ({
           date: null,
           minDate: new Date('2022-10-01'),
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
-      vm.$mount(odsDatePlaceholder);
+      app.mount(odsDatePlaceholder);
     }
   });
 });
