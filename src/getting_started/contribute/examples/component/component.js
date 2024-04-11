@@ -6,17 +6,18 @@
  * Wrap the javascript in a DOMContentLoaded listener to make sure all the markup is loaded
  * before the script runs.
  */
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsExampleComponent from './component.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   const exampleComponent = document.getElementById('ods-example-component-vue');
   if (exampleComponent) {
-    const vm = new Vue({
+    const app = createApp({
+      name: 'OdsExampleComponentApp',
       components: {
         OdsExampleComponent,
       },
     });
-    vm.$mount(exampleComponent);
+    app.mount(exampleComponent);
   }
 });
