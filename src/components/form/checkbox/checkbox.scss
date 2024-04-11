@@ -171,4 +171,17 @@
     color: colors.$grayscale-40;
     border-color: colors.$grayscale-40;
   }
+
+  &--error {
+    @extend %ods-margin-bottom-1;
+
+    & input ~ .ods-checkbox__checkmark {
+      border-color: colors.$red;
+    }
+    & input:checked:hover ~ .ods-checkbox__checkmark,
+    & input:checked:focus ~ .ods-checkbox__checkmark {
+      background-color: colors.$blue-state;
+      border-color: colors.$blue-state;
+    }
+  }
 }
