@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed accordion heading to be inside ods-accordion
+- Changed font-weight in video heading and refactored to correct scss setup.
 
 ### Fixed
 
@@ -28,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
