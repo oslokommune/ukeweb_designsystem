@@ -156,6 +156,14 @@
     }
   }
 
+  &--error {
+    @extend %ods-margin-bottom-1;
+
+    .ods-radio__control {
+      color: colors.$red;
+    }
+  }
+
   &__error-message {
     @include mixins.error-message;
 
