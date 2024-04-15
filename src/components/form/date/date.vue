@@ -2,7 +2,7 @@
   <div class="ods-date" :class="{ 'ods-date--error': hasError }">
     <label class="ods-date__label">
       {{ label }}
-      <input type="text" class="ods-date__input" :value="displayDate" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      <input type="text" class="ods-date__input" :value="displayDate" :placeholder="placeholder" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
     <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
       <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
@@ -26,6 +26,10 @@ window.customElements.define('nrk-core-datepicker', CoreDatepicker);
 export default {
   name: 'OdsDate',
   props: {
+    placeholder: {
+      type: String,
+      default: 'dd.mm.yyyy',
+    },
     label: {
       type: String,
       default: 'Pick a date',
