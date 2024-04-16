@@ -137,15 +137,25 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &__link {
+    text-decoration: none;
+    display: block;
+
     &::after {
+      content: "";
       position: absolute;
-      text-decoration: none;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      content: "";
     }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &:focus-within {
+    outline: 4px solid red;
   }
 
   & .ods-portrait-card__content:hover,
