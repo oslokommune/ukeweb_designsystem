@@ -1,10 +1,14 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsTextarea from './textarea.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('ods-textarea-vue-1')) {
-    Vue.component('ods-textarea', OdsTextarea);
-    const vm = new Vue();
-    vm.$mount('#ods-textarea-vue-1');
+    const app = createApp({
+      name: 'OdsTextareaApp',
+      components: {
+        OdsTextarea,
+      },
+    });
+    app.mount('#ods-textarea-vue-1');
   }
 });
