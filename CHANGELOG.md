@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 
+### Changed
+
+- Changed font-weight in video heading and refactored to correct scss setup.
+
 ### Fixed
 
 - Fixed links on portrait cards to improve screen reader capabilities.
@@ -26,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
