@@ -154,7 +154,6 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   & .ods-portrait-card__content:hover,
-  & .ods-portrait-card__xs-content:hover,
   & .ods-portrait-card__text:hover,
   & .ods-portrait-card__published:hover {
     color: states.$hover;
@@ -166,7 +165,6 @@ $ods-portrait-card-image-height-large: 290px;
 
   &--nolink {
     & .ods-portrait-card__content:hover,
-    & .ods-portrait-card__xs-content:hover,
     & .ods-portrait-card__text:hover,
     & .ods-portrait-card__published:hover {
       color: colors.$blue-dark;

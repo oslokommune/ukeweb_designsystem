@@ -16,11 +16,12 @@
 
   &:focus-visible {
     outline-offset: -1px;
-    outline: 0.25rem solid colors.$purple-light;
     border: 0.25rem solid colors.$blue-state;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   display: grid;
+  grid-template-columns: 1fr;
   text-decoration: none;
   width: 100%;
 

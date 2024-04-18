@@ -35,9 +35,8 @@
     }
 
     &:focus-visible {
-      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
-      box-shadow: 0 0 0 6px colors.$purple-light;
-      outline: 2px solid colors.$blue-state;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light;
+      outline: 0.125rem solid colors.$blue-state;
     }
   }
 
@@ -62,9 +61,8 @@
     }
 
     &:focus-visible {
-      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
-      box-shadow: 0 0 0 6px colors.$purple-light;
-      outline: 2px solid colors.$blue-state;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light;
+      outline: 0.125rem solid colors.$blue-state;
     }
 
     &::after {
@@ -93,9 +91,8 @@
     }
 
     &:focus-visible {
-      // there has to be a 6px box shadow since the blue outline "eats" 2 pixels from the box shadow.
-      box-shadow: 0 0 0 6px colors.$purple-light;
-      outline: 2px solid colors.$blue-state;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light;
+      outline: 0.125rem solid colors.$blue-state;
     }
 
     &::after {
