@@ -10,11 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
-- Added outline on keyboard navigation
+- Added focus outline on keyboard navigation.
 
 ### Changed
 
+- Changed font-weight in video heading and refactored to correct scss setup.
+
 ### Fixed
+
+- Fixed links on portrait cards to improve screen reader capabilities.
 
 ## [1.1.0] - 16.02.2024
 
@@ -31,7 +35,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fixed spacing around links and buttons in portrait card on all breakpoints.
 - Fixed hardcoded references to use s3.dualstack for IPv6 support.
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
