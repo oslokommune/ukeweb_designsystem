@@ -10,14 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added outline on keyboard navigation
 
 ### Changed
 
-- Changed font-weight in video heading and refactored to correct scss setup.
-
 ### Fixed
-
-- Fixed links on portrait cards to improve screen reader capabilities.
 
 ## [1.1.0] - 16.02.2024
 
