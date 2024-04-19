@@ -10,7 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added links to the designmanual in typography and icons to clearify font installation.
 - Added new custom width and height classes.
+
+### Changed
+
+- Changed font-weight in video heading and refactored to correct scss setup.
+
+### Fixed
+
+### Removed
+
+- Removed twitter icon.
 
 ## [1.1.0] - 16.02.2024
 
@@ -23,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
