@@ -16,8 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed font-weight in video heading and refactored to correct scss setup.
 
-### Fixed
-
 ## [1.1.0] - 16.02.2024
 
 ### Added
