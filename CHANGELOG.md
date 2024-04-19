@@ -14,17 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-### Fixed
-
-### Changed
-
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Changed stylelint rules to exclude no-longhand-properties.
 - Updated package version for stylelint.
-
-### Fixed
-
-### Changed
 
 ### Fixed
 
