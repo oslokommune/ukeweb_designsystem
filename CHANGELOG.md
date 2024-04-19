@@ -11,15 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 - Added links to the designmanual in typography and icons to clearify font installation.
+- Added new map example with data fetching while map is not loaded.
 
 ### Changed
 
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Updated package version for stylelint.
+- Moved geoJSON fetching from component to a per-vue-instance setup.
 
 ### Fixed
 
 - Fixed linting errors caused by new stylelint version.
+- Fixed an issue causing multiple map-popups to open and overlay each other.
 
 ### Removed
 
