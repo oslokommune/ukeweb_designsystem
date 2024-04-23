@@ -610,7 +610,6 @@ export default {
     $_addPopupToMap(lngLat, feature) {
       if (this.lastDisplayedPopup) {
         this.lastDisplayedPopup.remove();
-        this.lastDisplayedPopup = null;
       }
 
       const html = this.$_getPopupHtml(feature);
