@@ -12,7 +12,7 @@
   &__heading {
     @extend %ods-margin-bottom-4;
     @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
-    @include typography.weight("light");
+    @extend %ods-text--weight-regular;
   }
 
   &__video {
@@ -27,7 +27,7 @@
 
   &__transcription-heading {
     @extend %ods-margin-vertical-3;
-    @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
-    @include typography.weight("medium");
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
+    @extend %ods-text--weight-medium;
   }
 }

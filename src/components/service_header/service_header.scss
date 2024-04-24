@@ -30,9 +30,8 @@
   &__image {
     grid-row-start: 1;
     display: grid;
-    align-items: center;
     grid-column: 3 / 11;
-    justify-items: center;
+    place-items: center;
 
     img {
       max-width: 10.125rem;
