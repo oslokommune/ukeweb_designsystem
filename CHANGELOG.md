@@ -12,10 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 - Added nowrap and truncated as modifiers to typography.
 
-### Changed
-
-### Fixed
-
 ## [1.1.0] - 16.02.2024
 
 ### Added
