@@ -5,6 +5,7 @@ export default {
   css: {
     output: path.resolve(process.cwd(), 'src/system/'),
     fileName: '_icon-map2',
+    include: '\\.(scss)$',
   },
   template: path.resolve(process.cwd(), 'src/utils/icon-map.scss.njk'),
   startUnicode: 0xea01,
