@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
