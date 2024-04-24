@@ -53,7 +53,7 @@
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
                 <div id="ods-date-vue">
-                  <ods-date :date="date" :display-date="displayDate" placeholder="dd.mm.yyyy" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
+                  <ods-date :date="date" :display-date="displayDate" :placeholder="placeholder" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@
     <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
       <h3 class="ods-devtools-text-preset-2">Datepicker</h3>
       <div id="ods-date-vue-dev">
-        <ods-date :date="date" :display-date="displayDate" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
+        <ods-date :date="date" :display-date="displayDate" :placeholder="placeholder" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
       </div>
     </div>
   </div>

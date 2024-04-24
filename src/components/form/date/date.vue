@@ -28,7 +28,7 @@ export default {
   props: {
     placeholder: {
       type: String,
-      default: 'dd.mm.yyyy',
+      default: 'dd.mm.åååå',
     },
     label: {
       type: String,
