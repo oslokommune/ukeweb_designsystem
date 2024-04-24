@@ -141,27 +141,28 @@ export default {
       this.browseDate = event.detail;
     },
     handleKeyboardInput(event) {
-      if (event.key === 'Enter' || event.keyCode === 13) {
-        const [day, month, year] = event.target.value.split('.').map(Number);
-        const inputDate = new Date(year, month - 1, day);
-        const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
-        const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
+      if (event.key !== 'Enter' || event.keyCode !== 13) {
+        return;
+      }
+      const [day, month, year] = event.target.value.split('.').map(Number);
+      const inputDate = new Date(year, month - 1, day);
+      const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
+      const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
 
-        if (!day || !month || !year || !this.isValidDate(inputDate)) {
-          this.errorMessage = `${this.invalidInputErrorMessage}`;
-          this.$emit('set', null);
-        } else if (inputDate < this.min) {
-          this.errorMessage = `${this.minDateErrorMessage} (${minFormatted}).`;
-          this.$emit('set', null);
-        } else if (inputDate > this.max) {
-          this.errorMessage = `${this.maxDateErrorMessage} (${maxFormatted}).`;
-          this.$emit('set', null);
-        } else {
-          this.datepicker.date = inputDate;
-          this.$emit('set', this.datepicker.date);
-          this.toggleDatepicker(false);
-          this.errorMessage = '';
-        }
+      if (!day || !month || !year || !this.isValidDate(inputDate)) {
+        this.errorMessage = `${this.invalidInputErrorMessage}`;
+        this.$emit('set', null);
+      } else if (inputDate < this.min) {
+        this.errorMessage = `${this.minDateErrorMessage} (${minFormatted}).`;
+        this.$emit('set', null);
+      } else if (inputDate > this.max) {
+        this.errorMessage = `${this.maxDateErrorMessage} (${maxFormatted}).`;
+        this.$emit('set', null);
+      } else {
+        this.datepicker.date = inputDate;
+        this.$emit('set', this.datepicker.date);
+        this.toggleDatepicker(false);
+        this.errorMessage = '';
       }
     },
 
