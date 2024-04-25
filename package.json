@@ -18,6 +18,7 @@
   "svgtofont": {
     "website": false,
     "fontName": "OsloIcons2",
+    "classNamePrefix": "",
     "css": {
       "fileName": "_icon-map2.scss",
       "include": "\\.(scss)$"

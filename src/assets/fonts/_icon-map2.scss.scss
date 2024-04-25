@@ -1,0 +1,258 @@
+@font-face {font-family: "OsloIcons2";
+  src: url('OsloIcons2.eot?t=1714050012162'); /* IE9*/
+  src: url('OsloIcons2.eot?t=1714050012162#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("OsloIcons2.woff2?t=1714050012162") format("woff2"),
+  url("OsloIcons2.woff?t=1714050012162") format("woff"),
+  url('OsloIcons2.ttf?t=1714050012162') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('OsloIcons2.svg?t=1714050012162#OsloIcons2') format('svg'); /* iOS 4.1- */
+}
+
+[class^="OsloIcons2-"], [class*=" OsloIcons2-"] {
+  font-family: 'OsloIcons2' !important;font-size: undefined;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.OsloIcons2-24h:before { content: "\ea01"; }
+.OsloIcons2-ambulance:before { content: "\ea02"; }
+.OsloIcons2-arrow:before { content: "\ea03"; }
+.OsloIcons2-attachment:before { content: "\ea04"; }
+.OsloIcons2-automat:before { content: "\ea05"; }
+.OsloIcons2-backpack:before { content: "\ea06"; }
+.OsloIcons2-bike:before { content: "\ea07"; }
+.OsloIcons2-briefcase:before { content: "\ea08"; }
+.OsloIcons2-bullseye:before { content: "\ea09"; }
+.OsloIcons2-bus:before { content: "\ea0a"; }
+.OsloIcons2-cafe:before { content: "\ea0b"; }
+.OsloIcons2-calendar:before { content: "\ea0c"; }
+.OsloIcons2-camera:before { content: "\ea0d"; }
+.OsloIcons2-check-big:before { content: "\ea0e"; }
+.OsloIcons2-check-circle:before { content: "\ea0f"; }
+.OsloIcons2-check:before { content: "\ea10"; }
+.OsloIcons2-chevron-down:before { content: "\ea11"; }
+.OsloIcons2-chevron-left:before { content: "\ea12"; }
+.OsloIcons2-chevron-right:before { content: "\ea13"; }
+.OsloIcons2-chevron-thin-down:before { content: "\ea14"; }
+.OsloIcons2-chevron-thin-left:before { content: "\ea15"; }
+.OsloIcons2-chevron-thin-right:before { content: "\ea16"; }
+.OsloIcons2-chevron-thin-up:before { content: "\ea17"; }
+.OsloIcons2-chevron-up:before { content: "\ea18"; }
+.OsloIcons2-clock:before { content: "\ea19"; }
+.OsloIcons2-close:before { content: "\ea1a"; }
+.OsloIcons2-coin-stacks:before { content: "\ea1b"; }
+.OsloIcons2-corona:before { content: "\ea1c"; }
+.OsloIcons2-crane:before { content: "\ea1d"; }
+.OsloIcons2-cross-circle:before { content: "\ea1e"; }
+.OsloIcons2-cross:before { content: "\ea1f"; }
+.OsloIcons2-data:before { content: "\ea20"; }
+.OsloIcons2-directions:before { content: "\ea21"; }
+.OsloIcons2-district:before { content: "\ea22"; }
+.OsloIcons2-document:before { content: "\ea23"; }
+.OsloIcons2-download:before { content: "\ea24"; }
+.OsloIcons2-edit:before { content: "\ea25"; }
+.OsloIcons2-elcar:before { content: "\ea26"; }
+.OsloIcons2-email:before { content: "\ea27"; }
+.OsloIcons2-error-hexa:before { content: "\ea28"; }
+.OsloIcons2-exclamation-mark-circle:before { content: "\ea29"; }
+.OsloIcons2-exclamation-mark-square:before { content: "\ea2a"; }
+.OsloIcons2-exit:before { content: "\ea2b"; }
+.OsloIcons2-expand:before { content: "\ea2c"; }
+.OsloIcons2-eye:before { content: "\ea2d"; }
+.OsloIcons2-facebook:before { content: "\ea2e"; }
+.OsloIcons2-factory-fill:before { content: "\ea2f"; }
+.OsloIcons2-feedback:before { content: "\ea30"; }
+.OsloIcons2-filter:before { content: "\ea31"; }
+.OsloIcons2-fire-emblem:before { content: "\ea32"; }
+.OsloIcons2-graph:before { content: "\ea33"; }
+.OsloIcons2-grid:before { content: "\ea34"; }
+.OsloIcons2-handicap:before { content: "\ea35"; }
+.OsloIcons2-heart-plus:before { content: "\ea36"; }
+.OsloIcons2-heart:before { content: "\ea37"; }
+.OsloIcons2-home:before { content: "\ea38"; }
+.OsloIcons2-house-heart:before { content: "\ea39"; }
+.OsloIcons2-information:before { content: "\ea3a"; }
+.OsloIcons2-instagram:before { content: "\ea3b"; }
+.OsloIcons2-invoice:before { content: "\ea3c"; }
+.OsloIcons2-language:before { content: "\ea3d"; }
+.OsloIcons2-linked-in:before { content: "\ea3e"; }
+.OsloIcons2-list:before { content: "\ea3f"; }
+.OsloIcons2-location-pin-filled:before { content: "\ea40"; }
+.OsloIcons2-location-pin:before { content: "\ea41"; }
+.OsloIcons2-magnifying-glass-big:before { content: "\ea42"; }
+.OsloIcons2-magnifying-glass-small:before { content: "\ea43"; }
+.OsloIcons2-map-layer:before { content: "\ea44"; }
+.OsloIcons2-map:before { content: "\ea45"; }
+.OsloIcons2-menu:before { content: "\ea46"; }
+.OsloIcons2-message:before { content: "\ea47"; }
+.OsloIcons2-minimize:before { content: "\ea48"; }
+.OsloIcons2-minus-circle-fill:before { content: "\ea49"; }
+.OsloIcons2-minus-circle:before { content: "\ea4a"; }
+.OsloIcons2-minus-sign:before { content: "\ea4b"; }
+.OsloIcons2-mobile:before { content: "\ea4c"; }
+.OsloIcons2-museum:before { content: "\ea4d"; }
+.OsloIcons2-neutral:before { content: "\ea4e"; }
+.OsloIcons2-new-window:before { content: "\ea4f"; }
+.OsloIcons2-obstacle:before { content: "\ea50"; }
+.OsloIcons2-organization:before { content: "\ea51"; }
+.OsloIcons2-paint-bucket:before { content: "\ea52"; }
+.OsloIcons2-paper-plane:before { content: "\ea53"; }
+.OsloIcons2-park:before { content: "\ea54"; }
+.OsloIcons2-parking:before { content: "\ea55"; }
+.OsloIcons2-picture:before { content: "\ea56"; }
+.OsloIcons2-plus-circle-fill:before { content: "\ea57"; }
+.OsloIcons2-plus-circle:before { content: "\ea58"; }
+.OsloIcons2-plus-sign:before { content: "\ea59"; }
+.OsloIcons2-print:before { content: "\ea5a"; }
+.OsloIcons2-question:before { content: "\ea5b"; }
+.OsloIcons2-recycling:before { content: "\ea5c"; }
+.OsloIcons2-sad:before { content: "\ea5d"; }
+.OsloIcons2-save:before { content: "\ea5e"; }
+.OsloIcons2-share-outline:before { content: "\ea5f"; }
+.OsloIcons2-share:before { content: "\ea60"; }
+.OsloIcons2-signing:before { content: "\ea61"; }
+.OsloIcons2-sky:before { content: "\ea62"; }
+.OsloIcons2-smile:before { content: "\ea63"; }
+.OsloIcons2-sound-off:before { content: "\ea64"; }
+.OsloIcons2-sound-on:before { content: "\ea65"; }
+.OsloIcons2-success-square:before { content: "\ea66"; }
+.OsloIcons2-swingset:before { content: "\ea67"; }
+.OsloIcons2-table:before { content: "\ea68"; }
+.OsloIcons2-target:before { content: "\ea69"; }
+.OsloIcons2-thumbs-down:before { content: "\ea6a"; }
+.OsloIcons2-thumbs-up:before { content: "\ea6b"; }
+.OsloIcons2-tickets:before { content: "\ea6c"; }
+.OsloIcons2-tool:before { content: "\ea6d"; }
+.OsloIcons2-trail:before { content: "\ea6e"; }
+.OsloIcons2-tram:before { content: "\ea6f"; }
+.OsloIcons2-trash:before { content: "\ea70"; }
+.OsloIcons2-treatment:before { content: "\ea71"; }
+.OsloIcons2-user:before { content: "\ea72"; }
+.OsloIcons2-warning-triangle:before { content: "\ea73"; }
+.OsloIcons2-water-faucet:before { content: "\ea74"; }
+.OsloIcons2-wifi:before { content: "\ea75"; }
+.OsloIcons2-x:before { content: "\ea76"; }
+.OsloIcons2-zoom-minus:before { content: "\ea77"; }
+.OsloIcons2-zoom-plus:before { content: "\ea78"; }
+
+$OsloIcons2-24h: "\ea01";
+$OsloIcons2-ambulance: "\ea02";
+$OsloIcons2-arrow: "\ea03";
+$OsloIcons2-attachment: "\ea04";
+$OsloIcons2-automat: "\ea05";
+$OsloIcons2-backpack: "\ea06";
+$OsloIcons2-bike: "\ea07";
+$OsloIcons2-briefcase: "\ea08";
+$OsloIcons2-bullseye: "\ea09";
+$OsloIcons2-bus: "\ea0a";
+$OsloIcons2-cafe: "\ea0b";
+$OsloIcons2-calendar: "\ea0c";
+$OsloIcons2-camera: "\ea0d";
+$OsloIcons2-check-big: "\ea0e";
+$OsloIcons2-check-circle: "\ea0f";
+$OsloIcons2-check: "\ea10";
+$OsloIcons2-chevron-down: "\ea11";
+$OsloIcons2-chevron-left: "\ea12";
+$OsloIcons2-chevron-right: "\ea13";
+$OsloIcons2-chevron-thin-down: "\ea14";
+$OsloIcons2-chevron-thin-left: "\ea15";
+$OsloIcons2-chevron-thin-right: "\ea16";
+$OsloIcons2-chevron-thin-up: "\ea17";
+$OsloIcons2-chevron-up: "\ea18";
+$OsloIcons2-clock: "\ea19";
+$OsloIcons2-close: "\ea1a";
+$OsloIcons2-coin-stacks: "\ea1b";
+$OsloIcons2-corona: "\ea1c";
+$OsloIcons2-crane: "\ea1d";
+$OsloIcons2-cross-circle: "\ea1e";
+$OsloIcons2-cross: "\ea1f";
+$OsloIcons2-data: "\ea20";
+$OsloIcons2-directions: "\ea21";
+$OsloIcons2-district: "\ea22";
+$OsloIcons2-document: "\ea23";
+$OsloIcons2-download: "\ea24";
+$OsloIcons2-edit: "\ea25";
+$OsloIcons2-elcar: "\ea26";
+$OsloIcons2-email: "\ea27";
+$OsloIcons2-error-hexa: "\ea28";
+$OsloIcons2-exclamation-mark-circle: "\ea29";
+$OsloIcons2-exclamation-mark-square: "\ea2a";
+$OsloIcons2-exit: "\ea2b";
+$OsloIcons2-expand: "\ea2c";
+$OsloIcons2-eye: "\ea2d";
+$OsloIcons2-facebook: "\ea2e";
+$OsloIcons2-factory-fill: "\ea2f";
+$OsloIcons2-feedback: "\ea30";
+$OsloIcons2-filter: "\ea31";
+$OsloIcons2-fire-emblem: "\ea32";
+$OsloIcons2-graph: "\ea33";
+$OsloIcons2-grid: "\ea34";
+$OsloIcons2-handicap: "\ea35";
+$OsloIcons2-heart-plus: "\ea36";
+$OsloIcons2-heart: "\ea37";
+$OsloIcons2-home: "\ea38";
+$OsloIcons2-house-heart: "\ea39";
+$OsloIcons2-information: "\ea3a";
+$OsloIcons2-instagram: "\ea3b";
+$OsloIcons2-invoice: "\ea3c";
+$OsloIcons2-language: "\ea3d";
+$OsloIcons2-linked-in: "\ea3e";
+$OsloIcons2-list: "\ea3f";
+$OsloIcons2-location-pin-filled: "\ea40";
+$OsloIcons2-location-pin: "\ea41";
+$OsloIcons2-magnifying-glass-big: "\ea42";
+$OsloIcons2-magnifying-glass-small: "\ea43";
+$OsloIcons2-map-layer: "\ea44";
+$OsloIcons2-map: "\ea45";
+$OsloIcons2-menu: "\ea46";
+$OsloIcons2-message: "\ea47";
+$OsloIcons2-minimize: "\ea48";
+$OsloIcons2-minus-circle-fill: "\ea49";
+$OsloIcons2-minus-circle: "\ea4a";
+$OsloIcons2-minus-sign: "\ea4b";
+$OsloIcons2-mobile: "\ea4c";
+$OsloIcons2-museum: "\ea4d";
+$OsloIcons2-neutral: "\ea4e";
+$OsloIcons2-new-window: "\ea4f";
+$OsloIcons2-obstacle: "\ea50";
+$OsloIcons2-organization: "\ea51";
+$OsloIcons2-paint-bucket: "\ea52";
+$OsloIcons2-paper-plane: "\ea53";
+$OsloIcons2-park: "\ea54";
+$OsloIcons2-parking: "\ea55";
+$OsloIcons2-picture: "\ea56";
+$OsloIcons2-plus-circle-fill: "\ea57";
+$OsloIcons2-plus-circle: "\ea58";
+$OsloIcons2-plus-sign: "\ea59";
+$OsloIcons2-print: "\ea5a";
+$OsloIcons2-question: "\ea5b";
+$OsloIcons2-recycling: "\ea5c";
+$OsloIcons2-sad: "\ea5d";
+$OsloIcons2-save: "\ea5e";
+$OsloIcons2-share-outline: "\ea5f";
+$OsloIcons2-share: "\ea60";
+$OsloIcons2-signing: "\ea61";
+$OsloIcons2-sky: "\ea62";
+$OsloIcons2-smile: "\ea63";
+$OsloIcons2-sound-off: "\ea64";
+$OsloIcons2-sound-on: "\ea65";
+$OsloIcons2-success-square: "\ea66";
+$OsloIcons2-swingset: "\ea67";
+$OsloIcons2-table: "\ea68";
+$OsloIcons2-target: "\ea69";
+$OsloIcons2-thumbs-down: "\ea6a";
+$OsloIcons2-thumbs-up: "\ea6b";
+$OsloIcons2-tickets: "\ea6c";
+$OsloIcons2-tool: "\ea6d";
+$OsloIcons2-trail: "\ea6e";
+$OsloIcons2-tram: "\ea6f";
+$OsloIcons2-trash: "\ea70";
+$OsloIcons2-treatment: "\ea71";
+$OsloIcons2-user: "\ea72";
+$OsloIcons2-warning-triangle: "\ea73";
+$OsloIcons2-water-faucet: "\ea74";
+$OsloIcons2-wifi: "\ea75";
+$OsloIcons2-x: "\ea76";
+$OsloIcons2-zoom-minus: "\ea77";
+$OsloIcons2-zoom-plus: "\ea78";
+
