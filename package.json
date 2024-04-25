@@ -15,6 +15,20 @@
     "format": "./node_modules/.bin/prettier --write './src/**/*.{js,vue}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "svgtofont": {
+    "website": false,
+    "fontName": "OsloIcons2",
+    "css": {
+      "fileName": "_icon-map2.scss",
+      "include": "\\.(scss)$"
+    },
+    "template": "src/utils/icon-map.scss.njk",
+    "startUnicode": "0xea01",
+    "svgicons2svgfont": {
+      "fontHeight": 512,
+      "normalize": true
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:oslokommune/ukeweb_designsystem.git"
