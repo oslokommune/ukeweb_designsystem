@@ -7,7 +7,7 @@
         <span class="ods-checkbox__text">{{ text }}</span>
       </label>
       <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
-        <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ computedErrorMessage }}</h2>
+        <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: '',
+      default: 'Default Error Message',
     },
     errorId: {
       type: String,
@@ -60,12 +60,7 @@ export default {
       },
     },
     hasError() {
-      // Return true if the checkbox is required but not checked
       return this.ariaRequired && !this.checked;
-    },
-    computedErrorMessage() {
-      // Only return the error message if there is an error
-      return this.hasError ? this.errorMessage : '';
     },
   },
 };
