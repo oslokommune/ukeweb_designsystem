@@ -1,0 +1,18 @@
+{
+  "fontName": "OsloIcons2",
+  "classNamePrefix": "",
+  "css": {
+    "fileName": "_icon-map2.scss",
+    "include": "\\.(scss)$"
+  },
+  "styleTemplate": "src/utils/",
+  "dist": "src/assets/fonts",
+  "src": "src/assets/icons",
+  "startUnicode": 60001,
+  "svgicons2svgfont": {
+    "fontHeight": 512,
+    "normalize": true
+  },
+  "outSVGReact": false,
+  "outSVGReactNative": false
+}
