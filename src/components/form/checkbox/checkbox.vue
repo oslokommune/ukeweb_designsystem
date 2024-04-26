@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="ods-checkbox" :class="{ 'ods-checkbox--error': hasError }">
+    <div class="ods-checkbox" :class="{ 'ods-checkbox--error': errorMessage }">
       <label class="ods-checkbox__wrapper">
         <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" />
         <span class="ods-checkbox__checkmark"></span>
         <span class="ods-checkbox__text">{{ text }}</span>
       </label>
-      <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
-        <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+      <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
+        <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: 'Default Error Message',
+      default: '',
     },
     errorId: {
       type: String,
@@ -58,9 +58,6 @@ export default {
       set(value) {
         this.$emit('check', value);
       },
-    },
-    hasError() {
-      return this.ariaRequired && !this.checked;
     },
   },
 };
