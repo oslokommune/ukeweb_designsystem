@@ -146,17 +146,15 @@ export default {
       }
       const [day, month, year] = event.target.value.split('.').map(Number);
       const inputDate = new Date(year, month - 1, day);
-      const minFormatted = `${this.min.getDate().toString().padStart(2, '0')}.${(this.min.getMonth() + 1).toString().padStart(2, '0')}.${this.min.getFullYear()}`;
-      const maxFormatted = `${this.max.getDate().toString().padStart(2, '0')}.${(this.max.getMonth() + 1).toString().padStart(2, '0')}.${this.max.getFullYear()}`;
 
       if (!day || !month || !year || !this.isValidDate(inputDate)) {
-        this.errorMessage = `${this.invalidInputErrorMessage}`;
+        this.errorMessage = this.invalidInputErrorMessage;
         this.$emit('set', null);
       } else if (inputDate < this.min) {
-        this.errorMessage = `${this.minDateErrorMessage} (${minFormatted}).`;
+        this.errorMessage = `${this.minDateErrorMessage} (min allowed date: ${this.min.toLocaleDateString().replace(/\//g, '.')}).`;
         this.$emit('set', null);
       } else if (inputDate > this.max) {
-        this.errorMessage = `${this.maxDateErrorMessage} (${maxFormatted}).`;
+        this.errorMessage = `${this.maxDateErrorMessage} (max allowed date: ${this.max.toLocaleDateString().replace(/\//g, '.')}).`;
         this.$emit('set', null);
       } else {
         this.datepicker.date = inputDate;
