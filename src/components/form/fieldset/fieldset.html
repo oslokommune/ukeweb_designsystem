@@ -63,9 +63,8 @@
       <h2 class="ods-devtools-text-preset-1">Required</h2>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1">
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1" aria-required="true">
             <legend class="ods-fieldset__legend">Select the options:</legend>
-
             <div class="ods-checkbox">
               <label class="ods-checkbox__wrapper">
                 <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
@@ -280,39 +279,39 @@
                 </label>
               </div>
               <div class="ods-status-message ods-status-message--danger">
-                <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
             </div>
           </fieldset>
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-1">
+          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-2">
             <legend class="ods-fieldset__legend">Error:</legend>
             <div>
               <div class="ods-radio ods-radio--error">
                 <label class="ods-radio__input">
-                  <input type="radio" name="radio-4" checked="checked" aria-describedby="error-1" />
+                  <input type="radio" name="radio-4" checked="checked" />
                   <span class="ods-radio__control"></span>
                   <span class="ods-radio__text">Option 1</span>
                 </label>
               </div>
               <div class="ods-radio ods-radio--error">
                 <label class="ods-radio__input">
-                  <input type="radio" name="radio-4" aria-describedby="error-2" />
+                  <input type="radio" name="radio-4" />
                   <span class="ods-radio__control"></span>
                   <span class="ods-radio__text">Option 2</span>
                 </label>
               </div>
               <div class="ods-status-message ods-status-message--danger">
-                <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
             </div>
           </fieldset>
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-2">
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-11" aria-required="true">
             <legend class="ods-fieldset__legend">Required</legend>
             <div>
               <div class="ods-checkbox">
@@ -331,7 +330,7 @@
               </div>
             </div>
           </fieldset>
-          <div class="ods-fieldset__required" id="required-2">* Required</div>
+          <div class="ods-fieldset__required" id="required-11">* Required</div>
         </div>
       </div>
     </div>
