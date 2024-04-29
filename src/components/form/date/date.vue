@@ -151,10 +151,10 @@ export default {
         this.errorMessage = this.invalidInputErrorMessage;
         this.$emit('set', null);
       } else if (inputDate < this.min) {
-        this.errorMessage = `${this.minDateErrorMessage} (min allowed date: ${this.min.toLocaleDateString().replace(/\//g, '.')}).`;
+        this.errorMessage = `${this.minDateErrorMessage} (${this.min.toLocaleDateString().replace('/', '.')}).`;
         this.$emit('set', null);
       } else if (inputDate > this.max) {
-        this.errorMessage = `${this.maxDateErrorMessage} (max allowed date: ${this.max.toLocaleDateString().replace(/\//g, '.')}).`;
+        this.errorMessage = `${this.maxDateErrorMessage} (${this.max.toLocaleDateString().replaceAll('/', '.')}).`;
         this.$emit('set', null);
       } else {
         this.datepicker.date = inputDate;
