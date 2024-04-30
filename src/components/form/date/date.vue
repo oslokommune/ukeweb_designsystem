@@ -151,7 +151,7 @@ export default {
         this.errorMessage = this.invalidInputErrorMessage;
         this.$emit('set', null);
       } else if (inputDate < this.min) {
-        this.errorMessage = `${this.minDateErrorMessage} (${this.min.toLocaleDateString().replace('/', '.')}).`;
+        this.errorMessage = `${this.minDateErrorMessage} (${this.min.toLocaleDateString().replaceAll('/', '.')}).`;
         this.$emit('set', null);
       } else if (inputDate > this.max) {
         this.errorMessage = `${this.maxDateErrorMessage} (${this.max.toLocaleDateString().replaceAll('/', '.')}).`;
