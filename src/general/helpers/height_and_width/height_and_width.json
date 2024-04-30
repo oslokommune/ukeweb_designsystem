@@ -1,3 +1,4 @@
 {
-  "preset": "clean"
+  "preset": "clean",
+  "tags": ["height", "width"]
 }
