@@ -8,8 +8,8 @@ function triggerIterator(callback) {
 }
 
 function handleAnimation(e) {
-  if (e.target.classList.contains('ods-accordion--animate')) {
-    e.target.classList.toggle('ods-accordion__trigger--rotate');
+  if (e.target.classList.contains('ods-animations')) {
+    e.target.classList.toggle('ods-animations--rotate-open');
   }
 }
 

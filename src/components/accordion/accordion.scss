@@ -77,27 +77,10 @@
       top: 50%;
       position: absolute;
       text-align: center;
-      transform: translate(-50%, -50%) rotate(0deg);
-      transition: transform 0.3s ease;
 
       @include breakpoints.medium {
         margin-right: 0.75rem;
       }
-    }
-
-    &--rotate {
-      @extend %ods-margin-bottom-0;
-
-      background-color: colors.$blue-state;
-      color: colors.$white;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    &--rotate::after {
-      transform: translate(-50%, -50%) rotate(180deg);
     }
   }
 
