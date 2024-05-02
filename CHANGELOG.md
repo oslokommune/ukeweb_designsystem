@@ -28,6 +28,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed twitter icon.
 - Removed remaining old styleguide files.
 
+### Changed
+
+### Fixed
+
+- Fixed an issue where long links would not break properly.
+
 ## [1.1.0] - 16.02.2024
 
 ### Added
