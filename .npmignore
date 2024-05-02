@@ -1,2 +1,6 @@
 .github
 .devbox
+.editorconfig
+.eslintrc.json
+.stylelintrc.json
+svgo.config.js
