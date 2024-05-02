@@ -101,10 +101,6 @@
     }
   }
 
-  &__trigger:first-child {
-    @extend %ods-margin-top-0;
-  }
-
   &__content {
     @extend %ods-padding-5, %ods-padding-bottom-8;
     @extend %ods-padding-top-6-breakpoint-large, %ods-padding-bottom-8-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large;
