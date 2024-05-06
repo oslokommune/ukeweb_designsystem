@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import OdsCombobox from './combobox.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const odsComboboxPlaceholder = document.getElementById(element);
 
     if (odsComboboxPlaceholder) {
-      const vm = new Vue({
+      const app = createApp({
         components: {
           OdsCombobox,
         },
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       });
-      vm.$mount(odsComboboxPlaceholder);
+      app.component('ods-combobox', OdsCombobox);
+      app.mount(odsComboboxPlaceholder);
     }
   });
 });
