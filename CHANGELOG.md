@@ -5,7 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - dd.mm.yyyy
+
+### Added
+
+- Added configuration files to .npmignore.
+- Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added links to the designmanual in typography and icons to clearify font installation.
+- Added keyboard functionality to datepicker component and upgraded to new version.
+
+### Changed
+
+- Changed font-weight in video heading and refactored to correct scss setup.
+- Updated package version for stylelint.
+
+### Fixed
+
+- Fixed linting errors caused by new stylelint version.
+
+### Removed
+
+- Removed twitter icon.
+- Removed remaining old styleguide files.
+
+### Changed
+
+### Fixed
+
+- Fixed an issue where long links would not break properly.
+
+## [1.1.0] - 16.02.2024
 
 ### Added
 
@@ -16,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 
@@ -24,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent plus/minus icon to show in other variants than filter.
 - Fixed a scope issue where blue-dark and green-dark modifiers in Search seasons did not receive the correct styling.
 - Fixed hexcodes and class names for colors.
+- Fixed typo in checkbox component and heading style of 'important' section.
 
 ## [1.0.5] - 01.11.2023
 
