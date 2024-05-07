@@ -56,6 +56,12 @@
     &--active {
       color: states.$active !important;
     }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
   }
 
   &__active {
