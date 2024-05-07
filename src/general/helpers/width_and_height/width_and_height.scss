@@ -1,0 +1,51 @@
+@use "system/breakpoints";
+
+$widths: (
+  100: 100%,
+  75: 75%,
+  50: 50%,
+  25: 25%,
+);
+$heights: (
+  100: 100%,
+  75: 75%,
+  50: 50%,
+  25: 25%,
+);
+
+@each $width, $value in $widths {
+  .ods-width-#{$width} {
+    width: $value;
+  }
+}
+@each $height, $value in $heights {
+  .ods-height-#{$height} {
+    height: $value;
+  }
+}
+
+@include breakpoints.medium {
+  @each $width, $value in $widths {
+    .ods-width-#{$width}-breakpoint-medium {
+      width: $value;
+    }
+  }
+  @each $height, $value in $heights {
+    .ods-height-#{$height}-breakpoint-medium {
+      height: $value;
+    }
+  }
+}
+
+@include breakpoints.large {
+  @each $width, $value in $widths {
+    .ods-width-#{$width}-breakpoint-large {
+      width: $value;
+    }
+  }
+  @each $height, $value in $heights {
+    .ods-height-#{$height}-breakpoint-large {
+      height: $value;
+    }
+  }
+}

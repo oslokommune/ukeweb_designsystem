@@ -18,11 +18,33 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-checkbox">
-                  <input type="checkbox" />
-                  <span class="ods-checkbox__checkmark"></span>
-                  <span class="ods-checkbox__text"> Text </span>
-                </label>
+                <div class="ods-checkbox">
+                  <label class="ods-checkbox__wrapper">
+                    <input class="ods-checkbox__input" type="checkbox" />
+                    <span class="ods-checkbox__checkmark"></span>
+                    <span class="ods-checkbox__text"> Text </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--6-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-checkbox">
+                  <fieldset class="ods-fieldset ods-fieldset--no-border">
+                    <legend class="ods-checkbox__label">Label for this checkbox</legend>
+                    <label class="ods-checkbox__wrapper">
+                      <input class="ods-checkbox__input" type="checkbox" checked="checked" />
+                      <span class="ods-checkbox__checkmark"></span>
+                      <span class="ods-checkbox__text"> Text </span>
+                    </label>
+                  </fieldset>
+                </div>
               </div>
             </div>
           </div>
@@ -33,26 +55,52 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-checkbox">
-                  <input type="checkbox" checked="checked" />
-                  <span class="ods-checkbox__checkmark"></span>
-                  <span class="ods-checkbox__text"> Text </span>
-                </label>
+                <div class="ods-checkbox ods-checkbox--text-align-top">
+                  <label class="ods-checkbox__wrapper">
+                    <input class="ods-checkbox__input" type="checkbox" />
+                    <span class="ods-checkbox__checkmark"></span>
+                    <span class="ods-checkbox__text"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="ods-grid__column--12">
+        <h2 class="ods-devtools-text-preset-1">Required</h2>
+        <div class="ods-devtools-code">
+          <div class="ods-devtools-code__box">
+            <div class="ods-grid">
+              <div class="ods-grid__column--6-breakpoint-medium">
+                <div class="ods-checkbox">
+                  <label class="ods-checkbox__wrapper">
+                    <input class="ods-checkbox__input" type="checkbox" checked="checked" aria-describedby="required-1" aria-required="true" />
+                    <span class="ods-checkbox__checkmark"></span>
+                    <span class="ods-checkbox__text"> Text </span>
+                  </label>
+                </div>
+                <div class="ods-checkbox__required" id="required-1">* Required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="ods-paragraph">When error is used thin about what information you give the user in the error message.</p>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-              <div class="ods-devtools-code__box__code">
-                <label class="ods-checkbox ods-checkbox--text-align-top">
-                  <input type="checkbox" />
+            <div class="ods-grid__column--6-breakpoint-medium">
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper ods-checkbox--error">
+                  <input class="ods-checkbox__input" type="checkbox" aria-describedby="required-2 error-1" aria-required="true" />
                   <span class="ods-checkbox__checkmark"></span>
-                  <span class="ods-checkbox__text"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
+                  <span class="ods-checkbox__text"> Text </span>
                 </label>
+              </div>
+              <div class="ods-checkbox__required" id="required-2">* Required</div>
+              <div class="ods-status-message ods-status-message--danger">
+                <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
             </div>
           </div>
@@ -64,51 +112,16 @@
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+            <div class="ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-checkbox">
-                  <input type="checkbox" disabled="disabled" />
-                  <span class="ods-checkbox__checkmark"></span>
-                  <span class="ods-checkbox__text"> Text </span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-              <div class="ods-devtools-code__box__code">
-                <div class="ods-grid">
-                  <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-                    <label class="ods-checkbox ods-checkbox--error">
-                      <input type="checkbox" aria-describedby="error-1" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text"> Text </span>
-                    </label>
-                    <div class="ods-checkbox ods-checkbox--error-message" id="error-1">Error message</div>
-                  </div>
+                <div class="ods-checkbox">
+                  <label class="ods-checkbox__wrapper">
+                    <input class="ods-checkbox__input" type="checkbox" disabled="disabled" />
+                    <span class="ods-checkbox__checkmark"></span>
+                    <span class="ods-checkbox__text"> Text </span>
+                  </label>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">Required</h2>
-      <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-              <label class="ods-checkbox">
-                <input type="checkbox" aria-describedby="required" checked="" aria-required="true" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Text </span>
-              </label>
-              <div class="ods-checkbox__required" id="required-1">* Required</div>
             </div>
           </div>
         </div>
@@ -128,16 +141,20 @@
       </div>
       <div class="ods-grid ods-grid--gap">
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox">
-            <input type="checkbox" checked="checked" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Checked </span>
-          </label>
-          <label class="ods-checkbox">
-            <input type="checkbox" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Unchecked </span>
-          </label>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Checked</span>
+            </label>
+          </div>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Checked</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -145,61 +162,81 @@
       <h2 class="ods-devtools-text-preset-2">States</h2>
       <div class="ods-grid ods-grid--gap">
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox ods-checkbox--hover">
-            <input type="checkbox" checked="checked" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Hover </span>
-          </label>
-          <label class="ods-checkbox ods-checkbox--hover">
-            <input type="checkbox" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Hover </span>
-          </label>
+          <div class="ods-checkbox ods-checkbox--hover">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Hover</span>
+            </label>
+          </div>
+          <div class="ods-checkbox ods-checkbox--hover">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Hover</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox ods-checkbox--focus">
-            <input type="checkbox" checked="checked" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Focus/active </span>
-          </label>
-          <label class="ods-checkbox ods-checkbox--focus">
-            <input type="checkbox" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Focus/active </span>
-          </label>
+          <div class="ods-checkbox ods-checkbox--focus">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Focus/active</span>
+            </label>
+          </div>
+          <div class="ods-checkbox ods-checkbox--focus">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Focus/active</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox">
-            <input type="checkbox" disabled="disabled" checked="checked" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Disabled </span>
-          </label>
-          <label class="ods-checkbox">
-            <input type="checkbox" disabled="disabled" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Disabled </span>
-          </label>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" disabled="disabled " />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Disabled</span>
+            </label>
+          </div>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" disabled="disabled" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Disabled</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox ods-checkbox--error">
-            <input type="checkbox" aria-describedby="error-2" checked="checked" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Error/invalid </span>
-          </label>
-          <label class="ods-checkbox ods-checkbox--error">
-            <input type="checkbox" aria-describedby="error-2" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Error/invalid </span>
-          </label>
-          <div class="ods-checkbox ods-checkbox--error-message" id="error-2">Error message</div>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper ods-checkbox--error">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" aria-describedby="error-2" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Error/invalid</span>
+            </label>
+          </div>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper ods-checkbox--error">
+              <input class="ods-checkbox__input" type="checkbox" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Error/invalid</span>
+            </label>
+          </div>
+          <div class="ods-status-message ods-status-message--danger">
+            <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-checkbox">
-            <input type="checkbox" aria-describedby="required" checked="" aria-required="true" />
-            <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text"> Text </span>
-          </label>
-          <div class="ods-checkbox__required" id="required-1">* Required</div>
+          <div class="ods-checkbox">
+            <label class="ods-checkbox__wrapper">
+              <input class="ods-checkbox__input" type="checkbox" checked="checked" aria-required="true" />
+              <span class="ods-checkbox__checkmark"></span>
+              <span class="ods-checkbox__text">Text</span>
+            </label>
+          </div>
+          <div class="ods-checkbox__required" id="required-11">* Required</div>
         </div>
       </div>
     </div>
@@ -207,7 +244,7 @@
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-checkbox-vue-1">
-        <ods-checkbox :checked="true" :aria-required="true" error-id="ods-vue-checkbox-component" label="Name" name="name" value="50" />
+        <ods-checkbox :checked="true" :aria-required="true" error-id="ods-vue-checkbox-component" text="Name" name="name" value="50" />
       </div>
     </div>
   </div>
