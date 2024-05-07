@@ -1,4 +1,4 @@
-.ods-animations {
+.ods-animation {
   &--rotate::after {
     transform: translate(-50%, -50%) rotate(0deg);
     transition: transform 0.3s ease;

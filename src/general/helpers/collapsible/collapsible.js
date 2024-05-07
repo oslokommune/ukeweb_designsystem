@@ -8,8 +8,8 @@ function triggerIterator(callback) {
 }
 
 function handleAnimation(e) {
-  if (e.target.classList.contains('ods-animations')) {
-    e.target.classList.toggle('ods-animations--rotate-open');
+  if (e.target.classList.contains('ods-animation')) {
+    e.target.classList.toggle('ods-animation--rotate-open');
   }
 }
 

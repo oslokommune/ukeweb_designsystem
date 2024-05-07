@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Updated package version for stylelint.
-- **Breaking change:** Create a helper for animations and refactor accordion component accordingly. You need to replace the class 'ods-accordion--animate' with 'ods-animations ods-animations--rotate'.
+- **Breaking change:** Create a helper for animations and refactor accordion component accordingly. You need to replace the class 'ods-accordion--animate' with 'ods-animation ods-animation--rotate'.
 
 ### Fixed
 
