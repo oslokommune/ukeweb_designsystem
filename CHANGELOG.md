@@ -18,21 +18,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Updated package version for stylelint.
+- **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
 
 ### Fixed
 
 - Fixed linting errors caused by new stylelint version.
+- Fixed an issue where long links would not break properly.
 
 ### Removed
 
 - Removed twitter icon.
 - Removed remaining old styleguide files.
-
-### Changed
-
-### Fixed
-
-- Fixed an issue where long links would not break properly.
 
 ## [1.1.0] - 16.02.2024
 

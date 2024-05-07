@@ -17,13 +17,13 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-radio">
-                  <span class="ods-radio__input">
+                <div class="ods-radio">
+                  <label class="ods-radio__input">
                     <input type="radio" name="radio-11" />
                     <span class="ods-radio__control"></span>
-                    <span class="ods-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="ods-radio__text">Text</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -34,13 +34,14 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-radio">
-                  <span class="ods-radio__input">
+                <div class="ods-radio">
+                  <span class="ods-radio__label"> Label </span>
+                  <label class="ods-radio__input">
                     <input type="radio" name="radio-11" checked="checked" />
                     <span class="ods-radio__control"></span>
-                    <span class="ods-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="ods-radio__text">Text</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -51,13 +52,13 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-radio ods-radio--text-align-top">
-                  <span class="ods-radio__input">
+                <div class="ods-radio">
+                  <label class="ods-radio__input ods-radio--text-align-top">
                     <input type="radio" name="radio-11" />
                     <span class="ods-radio__control"></span>
-                    <span class="ods-radio__label"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
-                  </span>
-                </label>
+                    <span class="ods-radio__text"> Lorem Ipsum is simply dummy text of the print and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -68,34 +69,14 @@
           <div class="ods-grid">
             <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
               <div class="ods-devtools-code__box__code">
-                <label class="ods-radio ods-radio--text-align-top">
-                  <span class="ods-radio__input">
-                    <input type="radio" name="radio-11" />
+                <div class="ods-radio">
+                  <label class="ods-radio__input">
+                    <input type="radio" name="radio-11" aria-describedby="required-1" />
                     <span class="ods-radio__control"></span>
-                    <span class="ods-radio__label">Text</span>
-                  </span>
-                </label>
+                    <span class="ods-radio__text">Text</span>
+                  </label>
+                </div>
                 <div class="ods-radio__required" id="required-1">* Required</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">States</h2>
-      <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-              <div class="ods-devtools-code__box__code">
-                <label class="ods-radio ods-radio--disabled">
-                  <span class="ods-radio__input">
-                    <input type="radio" name="radio-44" disabled="disabled" />
-                    <span class="ods-radio__control"></span>
-                    <span class="ods-radio__label">Disabled</span>
-                  </span>
-                </label>
               </div>
             </div>
           </div>
@@ -112,15 +93,38 @@
               <div class="ods-grid">
                 <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
                   <div class="ods-devtools-code__box__code">
-                    <label class="ods-radio ods-radio--error">
-                      <span class="ods-radio__input">
-                        <input type="radio" name="radio-55" aria-describedby="error-1" />
+                    <div class="ods-radio ods-radio--error">
+                      <label class="ods-radio__input">
+                        <input type="radio" name="radio-55" aria-describedby="required-2 error-1" />
                         <span class="ods-radio__control"></span>
-                        <span class="ods-radio__label">Error/invalid</span>
-                      </span>
-                    </label>
-                    <div class="ods-radio__error-message" id="error-1">Error message</div>
+                        <span class="ods-radio__text">Error/invalid</span>
+                      </label>
+                    </div>
+                    <div class="ods-radio__required" id="required-2">* Required</div>
+                    <div class="ods-status-message ods-status-message--danger">
+                      <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">States</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid">
+            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-radio ods-radio--disabled">
+                  <label class="ods-radio__input">
+                    <input type="radio" name="radio-44" disabled="disabled" />
+                    <span class="ods-radio__control"></span>
+                    <span class="ods-radio__text">Disabled</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -142,20 +146,20 @@
       </div>
       <div class="ods-grid">
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio">
-            <span class="ods-radio__input">
+          <div class="ods-radio">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-1" checked="checked" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Checked</span>
-            </span>
-          </label>
-          <label class="ods-radio">
-            <span class="ods-radio__input">
+              <span class="ods-radio__text">Checked</span>
+            </label>
+          </div>
+          <div class="ods-radio">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-1" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Unchecked</span>
-            </span>
-          </label>
+              <span class="ods-radio__text">Unchecked</span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -167,86 +171,81 @@
       </div>
       <div class="ods-grid ods-grid--gap">
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio ods-radio--hover">
-            <span class="ods-radio__input">
+          <div class="ods-radio ods-radio--hover">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-2" checked="checked" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Hover</span>
-            </span>
-          </label>
-          <label class="ods-radio ods-radio--hover">
-            <span class="ods-radio__input">
+              <span class="ods-radio__text">Hover</span>
+            </label>
+          </div>
+          <div class="ods-radio ods-radio--hover">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-2" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Hover</span>
-            </span>
-          </label>
+              <span class="ods-radio__text">Hover</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio ods-radio--focus">
-            <span class="ods-radio__input">
+          <div class="ods-radio ods-radio--focus">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-3" checked="checked" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Focus/active</span>
-            </span>
-          </label>
-          <label class="ods-radio ods-radio--focus">
-            <span class="ods-radio__input">
+              <span class="ods-radio__text">Focus/active</span>
+            </label>
+          </div>
+          <div class="ods-radio ods-radio--focus">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-3" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Focus/active</span>
-            </span>
-          </label>
+              <span class="ods-radio__text">Focus/active</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio ods-radio--disabled">
-            <span class="ods-radio__input">
-              <input type="radio" name="radio-4" checked="checked" disabled="disabled" />
-              <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Disabled</span>
-            </span>
-          </label>
-          <label class="ods-radio ods-radio--disabled">
-            <span class="ods-radio__input">
+          <div class="ods-radio ods-radio--disabled">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-4" disabled="disabled" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Disabled</span>
-            </span>
-          </label>
+              <span class="ods-radio__text">Disabled</span>
+            </label>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio ods-radio--error">
-            <span class="ods-radio__input">
+          <div class="ods-radio ods-radio--error">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-5" checked="checked" aria-describedby="error-2" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Error/invalid</span>
-            </span>
-          </label>
-          <label class="ods-radio ods-radio--error">
-            <span class="ods-radio__input">
+              <span class="ods-radio__text">Error/invalid</span>
+            </label>
+          </div>
+          <div class="ods-radio ods-radio--error">
+            <label class="ods-radio__input">
               <input type="radio" name="radio-5" aria-describedby="error-2" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Error/invalid</span>
-            </span>
-          </label>
-          <div class="ods-radio__error-message" id="error-2">Error message</div>
+              <span class="ods-radio__text">Error/invalid</span>
+            </label>
+          </div>
+          <div class="ods-status-message ods-status-message--danger">
+            <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+          </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <label class="ods-radio">
-            <span class="ods-radio__input">
-              <input type="radio" name="radio-6" checked="checked" aria-describedby="required-2" />
+          <div class="ods-radio">
+            <label class="ods-radio__input">
+              <input type="radio" name="radio-6" checked="checked" aria-describedby="required-11" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Required</span>
-            </span>
-          </label>
-          <label class="ods-radio">
-            <span class="ods-radio__input">
-              <input type="radio" name="radio-5" aria-describedby="required-2" />
+              <span class="ods-radio__text">Required</span>
+            </label>
+          </div>
+          <div class="ods-radio">
+            <label class="ods-radio__input">
+              <input type="radio" name="radio-5" aria-describedby="required-11" />
               <span class="ods-radio__control"></span>
-              <span class="ods-radio__label">Required</span>
-            </span>
-          </label>
-          <div class="ods-radio__required" id="required-1">* Required</div>
+              <span class="ods-radio__text">Required</span>
+            </label>
+          </div>
+          <div class="ods-radio__required" id="required-11">* Required</div>
         </div>
       </div>
     </div>
