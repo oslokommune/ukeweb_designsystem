@@ -32,6 +32,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed twitter icon.
 - Removed remaining old styleguide files.
 
+### Fixed
+
+- Fixed spacing around links and buttons in portrait card on all breakpoints.
+
 ## [1.1.0] - 16.02.2024
 
 ### Added
