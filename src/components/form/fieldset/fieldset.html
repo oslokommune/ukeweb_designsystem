@@ -18,16 +18,20 @@
         <div class="ods-devtools-code__box">
           <fieldset class="ods-fieldset ods-fieldset--no-border">
             <legend class="ods-fieldset__legend">Select the options:</legend>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 2 </span>
-            </label>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 1</span>
+              </label>
+            </div>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -37,20 +41,20 @@
         <div class="ods-devtools-code__box">
           <fieldset class="ods-fieldset ods-fieldset--no-border">
             <legend class="ods-fieldset__legend">Choose an option:</legend>
-            <label class="ods-radio">
-              <span class="ods-radio__input">
+            <div class="ods-radio">
+              <label class="ods-radio__input">
                 <input type="radio" name="radio-1" checked="checked" />
                 <span class="ods-radio__control"></span>
-              </span>
-              <span class="ods-radio__label">Option 1</span>
-            </label>
-            <label class="ods-radio">
-              <span class="ods-radio__input">
+                <span class="ods-radio__text">Option 1</span>
+              </label>
+            </div>
+            <div class="ods-radio">
+              <label class="ods-radio__input">
                 <input type="radio" name="radio-1" />
                 <span class="ods-radio__control"></span>
-              </span>
-              <span class="ods-radio__label">Option 2</span>
-            </label>
+                <span class="ods-radio__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -59,18 +63,22 @@
       <h2 class="ods-devtools-text-preset-1">Required</h2>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1">
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1" aria-required="true">
             <legend class="ods-fieldset__legend">Select the options:</legend>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 2 </span>
-            </label>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 1</span>
+              </label>
+            </div>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
           <div class="ods-fieldset__required" id="required-1">* Required</div>
         </div>
@@ -86,46 +94,58 @@
                 <fieldset class="ods-fieldset ods-fieldset--filter">
                   <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-1">Options</a></legend>
                   <div id="ods-fieldset--filter-1" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-                    <label class="ods-checkbox ods-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="ods-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset class="ods-fieldset ods-fieldset--filter">
                   <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-2">Options</a></legend>
                   <div id="ods-fieldset--filter-2" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-                    <label class="ods-checkbox ods-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="ods-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset class="ods-fieldset ods-fieldset--filter">
                   <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-3">Options</a></legend>
                   <div id="ods-fieldset--filter-3" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-                    <label class="ods-checkbox ods-margin-bottom-1">
-                      <input type="checkbox" name="checkbox-1" checked="checked" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 1</span>
-                    </label>
-                    <label class="ods-checkbox">
-                      <input type="checkbox" name="checkbox-1" />
-                      <span class="ods-checkbox__checkmark"></span>
-                      <span class="ods-checkbox__text">Option 2</span>
-                    </label>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 1</span>
+                      </label>
+                    </div>
+                    <div class="ods-checkbox">
+                      <label class="ods-checkbox__wrapper">
+                        <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                        <span class="ods-checkbox__checkmark"></span>
+                        <span class="ods-checkbox__text">Option 2</span>
+                      </label>
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -150,35 +170,40 @@
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
           <fieldset class="ods-fieldset ods-fieldset--no-border">
             <legend class="ods-fieldset__legend">Select the options:</legend>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" checked="checked" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 1 </span>
-            </label>
-            <label class="ods-checkbox">
-              <input type="checkbox" name="checkbox-1" />
-              <span class="ods-checkbox__checkmark"></span>
-              <span class="ods-checkbox__text"> Option 2 </span>
-            </label>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 1</span>
+              </label>
+            </div>
+            <div class="ods-checkbox">
+              <label class="ods-checkbox__wrapper">
+                <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                <span class="ods-checkbox__checkmark"></span>
+                <span class="ods-checkbox__text">Option 2</span>
+              </label>
+            </div>
           </fieldset>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
           <fieldset class="ods-fieldset ods-fieldset--no-border">
             <legend class="ods-fieldset__legend">Choose an option:</legend>
-            <label class="ods-radio">
-              <span class="ods-radio__input">
+            <div class="ods-radio">
+              <label class="ods-radio__input">
                 <input type="radio" name="radio-2" checked="checked" />
                 <span class="ods-radio__control"></span>
-              </span>
-              <span class="ods-radio__label">Option 1</span>
-            </label>
-            <label class="ods-radio">
-              <span class="ods-radio__input">
+                <span class="ods-radio__text">Text</span>
+              </label>
+            </div>
+
+            <div class="ods-radio">
+              <label class="ods-radio__input">
                 <input type="radio" name="radio-2" />
                 <span class="ods-radio__control"></span>
-              </span>
-              <span class="ods-radio__label">Option 2</span>
-            </label>
+                <span class="ods-radio__text">Text</span>
+              </label>
+            </div>
           </fieldset>
         </div>
       </div>
@@ -195,16 +220,20 @@
           <fieldset class="ods-fieldset ods-fieldset--no-border" disabled="disabled">
             <legend class="ods-fieldset__legend">Disabled</legend>
             <div>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" checked="checked" disabled="disabled" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" disabled="disabled" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 2 </span>
-              </label>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" disabled="disabled" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" disabled="disabled" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -213,20 +242,20 @@
           <fieldset class="ods-fieldset ods-fieldset--no-border" disabled="disabled">
             <legend class="ods-fieldset__legend">Disabled</legend>
             <div>
-              <label class="ods-radio ods-radio--disabled">
-                <span class="ods-radio__input">
+              <div class="ods-radio ods-radio--disabled">
+                <label class="ods-radio__input">
                   <input type="radio" name="radio-3" disabled="disabled" checked="checked" />
                   <span class="ods-radio__control"></span>
-                </span>
-                <span class="ods-radio__label">Option 1</span>
-              </label>
-              <label class="ods-radio ods-radio--disabled">
-                <span class="ods-radio__input">
+                  <span class="ods-radio__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-radio ods-radio--disabled">
+                <label class="ods-radio__input">
                   <input type="radio" name="radio-3" disabled="disabled" />
                   <span class="ods-radio__control"></span>
-                </span>
-                <span class="ods-radio__label">Option 2</span>
-              </label>
+                  <span class="ods-radio__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -235,61 +264,73 @@
           <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-1">
             <legend class="ods-fieldset__legend">Error:</legend>
             <div>
-              <label class="ods-checkbox ods-checkbox--error">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="ods-checkbox ods-checkbox--error">
-                <input type="checkbox" name="checkbox-1" aria-describedby="error-1" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 2 </span>
-              </label>
-              <div class="ods-input__error-message" id="error-1">Error message</div>
+              <div class="ods-checkbox ods-checkbox--error">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" aria-describedby="error-1" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox ods-checkbox--error">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" aria-describedby="error-1" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-status-message ods-status-message--danger">
+                <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+              </div>
             </div>
           </fieldset>
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-1">
+          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-2">
             <legend class="ods-fieldset__legend">Error:</legend>
             <div>
-              <label class="ods-radio ods-radio--error">
-                <span class="ods-radio__input">
-                  <input type="radio" name="radio-4" aria-describedby="error-1" />
+              <div class="ods-radio ods-radio--error">
+                <label class="ods-radio__input">
+                  <input type="radio" name="radio-4" checked="checked" />
                   <span class="ods-radio__control"></span>
-                </span>
-                <span class="ods-radio__label">Option 1</span>
-              </label>
-              <label class="ods-radio ods-radio--error">
-                <span class="ods-radio__input">
-                  <input type="radio" name="radio-4" aria-describedby="error-2" />
+                  <span class="ods-radio__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-radio ods-radio--error">
+                <label class="ods-radio__input">
+                  <input type="radio" name="radio-4" />
                   <span class="ods-radio__control"></span>
-                </span>
-                <span class="ods-radio__label">Option 2</span>
-              </label>
-              <div class="ods-radio__error-message" id="error-2">Error message</div>
+                  <span class="ods-radio__text">Option 2</span>
+                </label>
+              </div>
+              <div class="ods-status-message ods-status-message--danger">
+                <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+              </div>
             </div>
           </fieldset>
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-2">
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-11" aria-required="true">
             <legend class="ods-fieldset__legend">Required</legend>
             <div>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 1 </span>
-              </label>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text"> Option 2 </span>
-              </label>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
-          <div class="ods-fieldset__required" id="required-2">* Required</div>
+          <div class="ods-fieldset__required" id="required-11">* Required</div>
         </div>
       </div>
     </div>
@@ -300,46 +341,58 @@
           <fieldset class="ods-fieldset ods-fieldset--filter">
             <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-4">Options</a></legend>
             <div id="ods-fieldset--filter-4" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-              <label class="ods-checkbox ods-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 1</span>
-              </label>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 2</span>
-              </label>
+              <div class="ods-checkbox ods-margin-bottom-1">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="ods-fieldset ods-fieldset--filter">
             <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-5">Options</a></legend>
             <div id="ods-fieldset--filter-5" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-              <label class="ods-checkbox ods-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 1</span>
-              </label>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 2</span>
-              </label>
+              <div class="ods-checkbox ods-margin-bottom-1">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="ods-fieldset ods-fieldset--filter">
             <legend class="ods-fieldset__legend"><a href="#" class="ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-fieldset--filter-6">Options</a></legend>
             <div id="ods-fieldset--filter-6" class="ods-collapsible-content ods-collapsible-content--collapsed ods-collapsible-content--ease">
-              <label class="ods-checkbox ods-margin-bottom-1">
-                <input type="checkbox" name="checkbox-1" checked="checked" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 1</span>
-              </label>
-              <label class="ods-checkbox">
-                <input type="checkbox" name="checkbox-1" />
-                <span class="ods-checkbox__checkmark"></span>
-                <span class="ods-checkbox__text">Option 2</span>
-              </label>
+              <div class="ods-checkbox ods-margin-bottom-1">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" disabled="disabled" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 1</span>
+                </label>
+              </div>
+              <div class="ods-checkbox">
+                <label class="ods-checkbox__wrapper">
+                  <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" disabled="disabled" />
+                  <span class="ods-checkbox__checkmark"></span>
+                  <span class="ods-checkbox__text">Option 2</span>
+                </label>
+              </div>
             </div>
           </fieldset>
         </div>

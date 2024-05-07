@@ -1,13 +1,18 @@
 <template>
   <div>
-    <label class="ods-checkbox" :class="{ 'ods-checkbox--error': errorMessage }">
-      <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" />
-      <span class="ods-checkbox__checkmark"></span>
-      <span class="ods-checkbox__text">{{ label }}</span>
-    </label>
-    <div v-if="errorMessage" class="ods-checkbox ods-checkbox--error-message" :id="errorId">{{ errorMessage }}</div>
+    <div class="ods-checkbox" :class="{ 'ods-checkbox--error': errorMessage }">
+      <label class="ods-checkbox__wrapper">
+        <input type="checkbox" v-model="checkedModel" :value="value" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" />
+        <span class="ods-checkbox__checkmark"></span>
+        <span class="ods-checkbox__text">{{ text }}</span>
+      </label>
+      <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
+        <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+      </div>
+    </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'OdsCheckbox',
@@ -17,7 +22,7 @@ export default {
       type: String,
       required: true,
     },
-    label: {
+    text: {
       type: String,
       required: true,
     },
@@ -44,7 +49,7 @@ export default {
 
   computed: {
     conditionalErrorId() {
-      return this.errorMessage ? this.errorId : '';
+      return this.hasError ? this.errorId : '';
     },
     checkedModel: {
       get() {
