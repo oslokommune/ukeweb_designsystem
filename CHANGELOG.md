@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 - Added links to the designmanual in typography and icons to clearify font installation.
 - Added keyboard functionality to datepicker component and upgraded to new version.
+- Added new helper for width and height custom classes.
 
 ### Changed
 
