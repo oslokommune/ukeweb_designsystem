@@ -9,15 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added configuration files to .npmignore.
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added links to the designmanual in typography and icons to clearify font installation.
+- Added keyboard functionality to datepicker component and upgraded to new version.
 
 ### Changed
 
 - Changed font-weight in video heading and refactored to correct scss setup.
+- Updated package version for stylelint.
 
 ### Fixed
 
+- Fixed linting errors caused by new stylelint version.
+- Fixed an issue where long links would not break properly.
 - Fixed spacing and some other design adjustments on menu component.
+
+### Removed
+
+- Removed twitter icon.
+- Removed remaining old styleguide files.
 
 ## [1.1.0] - 16.02.2024
 
