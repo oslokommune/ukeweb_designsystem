@@ -193,7 +193,7 @@ $alignments: (
   }
 }
 
-// Text modifiers - Nowrap, Truncate
+// Text modifiers
 $modifiers: (
   "nowrap": (
     "white-space": nowrap,
@@ -216,19 +216,19 @@ $modifiers: (
 }
 
 @each $name, $values in $modifiers {
-  %ods-text--modifier-#{$name} {
+  %ods-text--#{$name} {
     @include modifier($name);
   }
 }
 @each $name, $values in $modifiers {
-  %ods-text--modifier-#{$name}-breakpoint-medium {
+  %ods-text--#{$name}-breakpoint-medium {
     @include breakpoints.medium {
       @include modifier($name);
     }
   }
 }
 @each $name, $values in $modifiers {
-  %ods-text--modifier-#{$name}-breakpoint-large {
+  %ods-text--#{$name}-breakpoint-large {
     @include breakpoints.large {
       @include modifier($name);
     }
