@@ -20,11 +20,9 @@
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(#{grid.$columns}, 1fr);
-    column-gap: grid.$gutter-size;
-    row-gap: grid.$gutter-size;
+    gap: grid.$gutter-size;
     @include breakpoints.medium {
-      column-gap: grid.$gutter-size-large;
-      row-gap: grid.$gutter-size-large;
+      gap: grid.$gutter-size-large;
     }
 
     margin: 0 auto;

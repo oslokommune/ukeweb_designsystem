@@ -16,25 +16,21 @@
   }
 
   &--gap {
-    column-gap: grid.$gap-size-hard;
-    row-gap: grid.$gap-size-hard;
+    gap: grid.$gap-size-hard;
 
     @include breakpoints.medium {
-      column-gap: grid.$gap-size-hard-large;
-      row-gap: grid.$gap-size-hard-large;
+      gap: grid.$gap-size-hard-large;
     }
 
     &-breakpoint-medium {
       @include breakpoints.medium {
-        column-gap: grid.$gap-size-hard-large;
-        row-gap: grid.$gap-size-hard-large;
+        gap: grid.$gap-size-hard-large;
       }
     }
 
     &-breakpoint-large {
       @include breakpoints.large {
-        column-gap: grid.$gap-size-hard-large;
-        row-gap: grid.$gap-size-hard-large;
+        gap: grid.$gap-size-hard-large;
       }
     }
   }
