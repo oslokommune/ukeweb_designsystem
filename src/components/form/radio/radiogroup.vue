@@ -6,7 +6,7 @@
         v-for="(label, value, index) in items"
         :key="index"
         :name="name"
-        :label="label"
+        :text="label"
         :value="value"
         :selected="selectedModel"
         :has-error="errorMessage.length > 0 ? true : false"
@@ -17,7 +17,9 @@
         "
       ></ods-radio>
     </fieldset>
-    <div v-if="errorMessage" class="ods-radio__error-message" :id="errorId">{{ errorMessage }}</div>
+    <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
+      <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+    </div>
   </div>
 </template>
 <script>
