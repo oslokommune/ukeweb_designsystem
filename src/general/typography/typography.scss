@@ -63,15 +63,15 @@
 
 // Text modifiers
 @each $name, $values in typography.$modifiers {
-  .ods-text--modifier-#{$name} {
+  .ods-text--#{$name} {
     @extend %ods-text--#{$name};
   }
 
-  .ods-text--modifier-#{$name}-breakpoint-medium {
+  .ods-text--#{$name}-breakpoint-medium {
     @extend %ods-text--#{$name}-breakpoint-medium;
   }
 
-  .ods-text--modifier-#{$name}-breakpoint-large {
+  .ods-text--#{$name}-breakpoint-large {
     @extend %ods-text--#{$name}-breakpoint-large;
   }
 }
