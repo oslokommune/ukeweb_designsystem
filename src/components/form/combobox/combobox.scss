@@ -124,7 +124,7 @@
     left: -0.25rem;
     right: -0.25rem;
     background-color: colors.$white;
-    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0.438rem 0.625rem 0 rgb(0 0 0 / 10%);
     list-style: none;
     z-index: 99999;
 
@@ -177,7 +177,7 @@
         @extend %ods-padding-4;
         @extend %ods-text--weight-medium;
 
-        border-top: 1px solid colors.$gray-light;
+        border-top: 0.063rem solid colors.$gray-light;
         text-decoration: underline;
       }
     }
