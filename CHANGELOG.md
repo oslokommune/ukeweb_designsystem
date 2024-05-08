@@ -9,12 +9,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added configuration files to .npmignore.
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added links to the designmanual in typography and icons to clearify font installation.
+- Added keyboard functionality to datepicker component and upgraded to new version.
+- Added new helper for width and height custom classes.
 - Added new error message styling to all components.
 
 ### Changed
 
+- Changed accordion heading to be inside ods-accordion
+- Changed font-weight in video heading and refactored to correct scss setup.
+- Updated package version for stylelint.
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
+- **Breaking change:** Create a helper for animations and refactor accordion component accordingly. You need to replace the class 'ods-accordion--animate' with 'ods-animation ods-animation--rotate'.
+
+### Fixed
+
+- Fixed linting errors caused by new stylelint version.
+- Fixed an issue where long links would not break properly.
+
+### Removed
+
+- Removed twitter icon.
+- Removed remaining old styleguide files.
+
+### Fixed
+
+- Fixed spacing around links and buttons in portrait card on all breakpoints.
 
 ## [1.1.0] - 16.02.2024
 
@@ -27,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed hover colour on button-text button.
-- Change to OsloSans font, increase spacing and size scaling of datepicker vue component.
+- Changed to OsloSans font, increase spacing and size scaling of datepicker vue component.
 
 ### Fixed
 

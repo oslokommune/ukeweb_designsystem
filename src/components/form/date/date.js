@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
           date: null,
           minDate: new Date('2022-10-01'),
           maxDate: new Date('2025-10-15'),
+          placeholder: 'dd.mm.yyyy',
         }),
 
         computed: {

@@ -1,0 +1,10 @@
+.ods-animation {
+  &--rotate::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &--rotate-open::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
