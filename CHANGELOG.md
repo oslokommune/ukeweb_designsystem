@@ -27,15 +27,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed linting errors caused by new stylelint version.
 - Fixed an issue where long links would not break properly.
+- Fixed spacing and some other design adjustments on menu component.
+- Fixed an issue where long links would not break properly.
+- Fixed spacing around links and buttons in portrait card on all breakpoints.
 
 ### Removed
 
 - Removed twitter icon.
 - Removed remaining old styleguide files.
-
-### Fixed
-
-- Fixed spacing around links and buttons in portrait card on all breakpoints.
 
 ## [1.1.0] - 16.02.2024
 
