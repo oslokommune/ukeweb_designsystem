@@ -192,3 +192,45 @@ $alignments: (
     }
   }
 }
+
+// Text modifiers
+$modifiers: (
+  "nowrap": (
+    "white-space": nowrap,
+  ),
+  "truncate": (
+    "overflow": hidden,
+    "text-overflow": ellipsis,
+    "white-space": nowrap,
+  ),
+);
+
+@mixin modifier($name) {
+  @if map.has-key($modifiers, $name) {
+    @each $property, $value in map.get($modifiers, $name) {
+      #{$property}: $value;
+    }
+  } @else {
+    @error "Text modifier #{$name} is invalid. Text modifier must be one of: #{map.keys($modifiers)}.";
+  }
+}
+
+@each $name, $values in $modifiers {
+  %ods-text--#{$name} {
+    @include modifier($name);
+  }
+}
+@each $name, $values in $modifiers {
+  %ods-text--#{$name}-breakpoint-medium {
+    @include breakpoints.medium {
+      @include modifier($name);
+    }
+  }
+}
+@each $name, $values in $modifiers {
+  %ods-text--#{$name}-breakpoint-large {
+    @include breakpoints.large {
+      @include modifier($name);
+    }
+  }
+}
