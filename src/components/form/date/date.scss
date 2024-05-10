@@ -22,6 +22,10 @@
     @include mixins.error-message;
   }
 
+  &--error {
+    @extend %ods-margin-bottom-1;
+  }
+
   &__label {
     @include mixins.form-label;
 
