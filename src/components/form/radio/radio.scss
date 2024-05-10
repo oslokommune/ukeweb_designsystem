@@ -2,21 +2,24 @@
 @use "system/colors";
 @use "system/typography";
 @use "system/spacing";
+@use "system/breakpoints";
 
 .ods-radio {
   @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
   @extend %ods-text--weight-light;
 
-  align-items: center;
   color: colors.$blue-dark;
-  display: flex;
 
   &:focus-within {
-    &__label {
+    &__text {
       color: colors.$blue-dark;
       transform: scale(1.05);
       opacity: 1;
     }
+  }
+
+  &__label {
+    @include mixins.form-label;
   }
 
   &__required {
@@ -26,9 +29,10 @@
     @extend %ods-text--weight-light;
   }
 
-  &__label {
+  &__text {
+    @extend %ods-margin-left-2;
+
     hyphens: auto;
-    margin-left: 10px;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
   }
@@ -36,41 +40,18 @@
   &--text-align-top {
     align-items: flex-start;
 
-    .ods-radio__label {
+    .ods-radio__text {
       margin-top: -(5px);
     }
-  }
 
-  &__control {
-    align-items: center;
-    background-color: colors.$white;
-    border: 0.15em solid currentcolor;
-    border-radius: 50%;
-    display: flex;
-    height: 1em;
-    justify-content: center;
-    transform: translateY(-0.05em);
-    width: 1em;
-    flex-shrink: 0;
-  }
-
-  &--hover,
-  &--focus,
-  &:hover,
-  &:focus {
     .ods-radio__control {
-      border-color: colors.$blue-state;
-    }
-
-    .ods-radio__label {
-      color: colors.$blue-state;
-      text-decoration: underline;
+      align-self: baseline;
     }
   }
 
   &__input {
-    align-items: inherit;
-    display: flex;
+    align-items: center;
+    display: inline-flex;
 
     & input {
       opacity: 0;
@@ -99,12 +80,28 @@
     transform: scale(0);
   }
 
+  &__control {
+    align-items: center;
+    background-color: colors.$white;
+    border: 0.15em solid currentcolor;
+    border-radius: 50%;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    transform: translateY(-0.05em);
+    width: 1em;
+    flex-shrink: 0;
+  }
+
   & input:checked + &__control::before {
     transform: scale(1);
   }
 
+  & input:checked + &__control {
+    background-color: colors.$blue-dark;
+  }
 
-  & input:checked ~ &__label {
+  & input:checked ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-medium;
 
@@ -112,11 +109,29 @@
     line-height: 1.5em !important;
   }
 
-  & input:focus ~ .ods-radio__control {
-    outline: initial;
-    outline: colors.$blue-state solid 1px;
+  &--hover,
+  &:hover,
+  &--focus,
+  &:focus {
+    & input:checked + .ods-radio__control {
+      background-color: colors.$blue-state;
+    }
+
+    .ods-radio__control {
+      border-color: colors.$blue-state;
+    }
+
+    .ods-radio__text {
+      color: colors.$blue-state;
+    }
   }
 
+  &--hover,
+  &:hover {
+    .ods-radio__text {
+      text-decoration: underline;
+    }
+  }
   & input:focus-visible ~ .ods-radio__control {
     outline: initial;
     outline: 0.25rem solid colors.$purple-light;
@@ -125,7 +140,7 @@
 
   &--focus,
   &:focus {
-    .ods-radio__label {
+    .ods-radio__text {
       @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     }
   }
@@ -140,26 +155,37 @@
       border-color: colors.$grayscale-40;
     }
 
-    .ods-radio__label {
+    .ods-radio__text {
       color: colors.$grayscale-40;
+      text-decoration: none;
     }
   }
 
   &--error {
-    & input:checked + .ods-radio__control {
-      background-color: colors.$red;
-    }
+    @extend %ods-margin-bottom-1;
 
     .ods-radio__control {
-      border-color: colors.$red;
-    }
-
-    .ods-radio__label {
       color: colors.$red;
     }
   }
 
   &__error-message {
     @include mixins.error-message;
+
+    background-color: colors.$red-30;
+    border-left: 0.25rem solid colors.$red;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    @extend %ods-text--size-juliett, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-padding-right-2;
+
+    line-height: 1.5rem;
+
+    @include breakpoints.large {
+      line-height: 1.75rem;
+    }
   }
 }

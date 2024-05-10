@@ -3,7 +3,7 @@
 @use "system/states";
 
 .ods-link {
-  display: inline-block;
+  display: inline;
   text-decoration: underline;
   word-wrap: break-word;
 
@@ -15,6 +15,9 @@
   }
 
   &--chevron-right {
+    display: inline-flex;
+    align-items: center;
+    
     @include mixins.icon-left("chevron-right");
   }
 

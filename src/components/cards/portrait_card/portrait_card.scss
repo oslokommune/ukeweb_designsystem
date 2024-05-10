@@ -40,6 +40,7 @@ $ods-portrait-card-image-height-large: 290px;
     @extend %ods-padding-horizontal-5, %ods-padding-bottom-5, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
 
+
     z-index: 2;
     position: relative;
   }
@@ -62,16 +63,6 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &--actions {
-    & .ods-portrait-card__content {
-      @extend %ods-padding-vertical-5, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-vertical-8-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-large;
-    }
-
-    & .ods-portrait-card__actions {
-      @extend %ods-padding-top-0, %ods-padding-top-0-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-large, %ods-padding-bottom-5, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-bottom-8-breakpoint-large;
-    }
-  }
-
-  &--actions-clean {
     & .ods-portrait-card__content {
       @extend %ods-padding-vertical-5, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-vertical-8-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-large;
     }

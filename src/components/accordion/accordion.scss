@@ -19,6 +19,7 @@
   }
 
   &__trigger {
+    @extend %ods-margin-bottom-0, %ods-margin-top-3;
     @extend %ods-padding-vertical-5, %ods-padding-left-5, %ods-padding-right-11;
     @extend %ods-padding-vertical-6-breakpoint-medium, %ods-padding-left-8-breakpoint-medium, %ods-padding-right-13-breakpoint-medium;
 
@@ -67,46 +68,21 @@
       outline: 0.125rem solid colors.$blue-state;
       box-shadow: 0 0 0 0.375rem colors.$purple-light;
     }
-  }
 
-  &__trigger:first-child {
-    @extend %ods-margin-top-0;
-  }
+    &::after {
+      @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
 
-  & .ods-collapsible-trigger {
-    @extend %ods-margin-bottom-0, %ods-margin-top-3;
-  }
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "chevron-thin-down");
+      right: 0;
+      top: 50%;
+      position: absolute;
+      text-align: center;
 
-  & .ods-collapsible-trigger--expanded {
-    @extend %ods-margin-bottom-0;
-
-    background-color: colors.$blue-state;
-    color: colors.$white;
-
-    &:hover {
-      text-decoration: none;
+      @include breakpoints.medium {
+        margin-right: 0.75rem;
+      }
     }
-  }
-
-  & .ods-collapsible-trigger::after {
-    @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
-
-    font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-    content: map.get(icon-map.$icons, "chevron-thin-down");
-    right: 0;
-    top: 50%;
-    position: absolute;
-    text-align: center;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transition: transform 0.3s ease;
-
-    @include breakpoints.medium {
-      margin-right: 0.75rem;
-    }
-  }
-
-  & .ods-accordion__trigger--rotate::after {
-    transform: translate(-50%, -50%) rotate(180deg);
   }
 
   &__content {
