@@ -173,7 +173,7 @@
   }
 
   &--error {
-    @extend %ods-margin-bottom-1;
+    @extend %ods-margin-bottom-2;
 
     & input ~ .ods-checkbox__checkmark {
       border-color: colors.$red;

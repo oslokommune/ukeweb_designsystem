@@ -5,9 +5,9 @@
       <input class="ods-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" />
       <span v-if="errorMessage" class="ods-icon ods-icon--exclamation-mark-circle"></span>
     </label>
-    <div class="ods-status-message ods-status-message--danger" v-if="errorMessage">
-      <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
-    </div>
+  </div>
+  <div class="ods-status-message ods-status-message--danger" v-if="errorMessage">
+    <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
   </div>
 </template>
 <script>
@@ -41,7 +41,7 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: '',
+      default: 'a',
     },
     errorId: {
       type: String,
