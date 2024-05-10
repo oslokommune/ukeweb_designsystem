@@ -39,7 +39,7 @@
   }
 
   &--focused {
-    outline: 0.25rem solid colors.$purple-light !important;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &__checkmark {
@@ -108,7 +108,7 @@
   }
 
   &:focus-visible ~ &__checkmark {
-    outline-style: none;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &--focus &__text,

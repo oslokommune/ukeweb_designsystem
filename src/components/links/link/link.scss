@@ -17,7 +17,7 @@
   &--chevron-right {
     display: inline-flex;
     align-items: center;
-    
+
     @include mixins.icon-left("chevron-right");
   }
 
