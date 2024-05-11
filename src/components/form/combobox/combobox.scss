@@ -19,17 +19,20 @@
 
     & .ods-combobox__select {
       background-color: states.$disabled;
+      border: 0.125rem solid states.$disabled-text;
       color: states.$disabled-text;
-      outline: 0.13rem solid states.$disabled-text;
 
-      &:hover {
-        outline: 0.13rem solid states.$disabled-text;
+      &:hover,
+      &:focus-within {
+        border: 0.125rem solid states.$disabled-text;
+        outline: 0;
       }
 
       & .ods-combobox__input {
         &:active,
         &:focus {
-          outline: 0.13rem solid states.$disabled-text;
+          border: none;
+          outline: 0;
         }
       }
 
@@ -46,8 +49,8 @@
 
   &--error {
     & .ods-combobox__select {
-      color: colors.$red-light;
-      outline: 0.13rem solid colors.$red-light;
+      border: 0.125rem solid colors.$red;
+      color: colors.$red;
     }
   }
 
@@ -59,24 +62,26 @@
   &__select {
     @extend %ods-margin-top-1;
 
+    border: 0.125rem solid colors.$blue-dark;
     display: inline-flex;
     justify-content: space-between;
-    outline: 0.13rem solid colors.$blue-dark;
     width: 100%;
 
     &--focus,
-    &--active {
-      outline: 0.3em solid states.$hover;
+    &--active,
+    &:focus-within {
+      border: 0.125rem solid states.$hover;
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &:hover,
     &--hover {
-      outline: 0.13rem solid states.$hover;
+      border: 0.125rem solid states.$hover;
     }
 
     &:disabled,
     &--disabled {
-      outline: 0.13rem solid states.$disabled-text;
+      outline: 0.125rem solid states.$disabled-text;
     }
 
     & .ods-combobox__input {
@@ -85,7 +90,7 @@
       @extend %ods-color-text-blue-dark;
       @extend %ods-padding-vertical-2, %ods-padding-left-4, %ods-padding-right-2;
 
-      border: 0.125rem solid transparent;
+      border: none;
       width: 100%;
 
       &:focus,
@@ -93,7 +98,7 @@
       &--focus,
       &--active {
         margin-right: -5rem;
-        outline: 0.3em solid states.$hover;
+        outline: 0;
       }
 
       &:hover {
@@ -188,6 +193,6 @@
     @extend %ods-padding-3;
 
     background: colors.$red-light;
-    outline: 0.13rem solid colors.$red-light;
+    outline: 0.125rem solid colors.$red-light;
   }
 }
