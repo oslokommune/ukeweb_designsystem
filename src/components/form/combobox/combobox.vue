@@ -137,6 +137,10 @@ export default {
 
   methods: {
     openDropdown(event) {
+      if (this.isDropdownOpen && event?.type === 'click') {
+        this.isDropdownOpen = false;
+        return;
+      }
       const { code } = event;
       if (code === 'ArrowUp' || code === 'ArrowDown') {
         this.setFocus(event);
@@ -186,16 +190,16 @@ export default {
                 this.isDropdownOpen = false;
                 return;
               }
-              const firstItem = this.items[0];
               const inputElement = this.$refs.input;
               this.isDropdownOpen = true;
 
               this.$nextTick(() => {
-                const isSubstringMatch = firstItem.text.toLowerCase().includes(inputElement.value.toLowerCase()) && firstItem.text.toLowerCase().startsWith(inputElement.value.toLowerCase());
+                const filteredItem = filter.toLowerCase();
+                const itemMatch = this.items.find((item) => item.text.toLowerCase().includes(filteredItem) && item.text.toLowerCase().startsWith(filteredItem));
 
-                if (isSubstringMatch) {
-                  inputElement.value = firstItem.text;
-                  inputElement.setSelectionRange(filter.length, firstItem.text.length, 'forward');
+                if (itemMatch) {
+                  inputElement.value = itemMatch.text;
+                  inputElement.setSelectionRange(filteredItem.length, itemMatch.text.length, 'forward');
                 } else {
                   this.isDropdownOpen = false;
                 }
