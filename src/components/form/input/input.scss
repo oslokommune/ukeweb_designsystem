@@ -31,6 +31,10 @@
     }
   }
 
+  &--error {
+    @extend %ods-margin-bottom-1;
+  }
+
   &__label {
     @include mixins.form-label;
   }
