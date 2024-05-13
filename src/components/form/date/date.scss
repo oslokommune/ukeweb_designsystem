@@ -28,6 +28,7 @@
 
   &__label {
     @include mixins.form-label;
+    @extend %ods-margin-bottom-1;
 
     &::after {
       content: map.get(icon-map.$icons, "calendar") !important;
