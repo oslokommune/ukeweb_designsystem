@@ -14,12 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 - Added nowrap and truncated as modifiers to typography.
 - Added links to the designmanual in typography and icons to clearify font installation.
-- Added keyboard functionality to datepicker component and upgraded to new version.
+- **Breaking change:** Added keyboard functionality to datepicker component and upgraded to new version.
 - Added new helper for width and height custom classes.
 
 ### Changed
 
-- Changed accordion heading to be inside ods-accordion
+- Changed accordion heading to be inside ods-accordion.
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Updated package version for stylelint.
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
@@ -36,8 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - **Breaking change:** Removed VUE2 support.
-- Removed twitter icon.
-- Removed remaining old styleguide files.
+- **Breaking change:** Removed twitter icon.
+- **Breaking change:** Removed remaining old styleguide files.
 
 ## [1.1.0] - 16.02.2024
 
