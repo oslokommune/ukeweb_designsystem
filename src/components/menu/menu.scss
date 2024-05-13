@@ -3,6 +3,7 @@
 @use "system/icon-map";
 @use "system/spacing";
 @use "system/typography";
+@use "system/icons";
 @use "system/units";
 @use "system/visibility";
 @use "components/links/link/mixins";
@@ -119,26 +120,28 @@
 }
 
 .ods-navbar-menu {
+  @extend %ods-padding-bottom-8, %ods-padding-bottom-0-breakpoint-medium;
+
   background-color: colors.$white;
   display: none;
 
   .ods-icon {
-    font-size: 1.5rem;
-    @include breakpoints.medium {
-      font-size: 2rem;
-    }
+    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-large;
   }
 
   &__heading-collapsable {
+    @extend %ods-text--size-juliett;
+    @include typography.weight("medium");
+    @extend %ods-text--weight-medium;
+    @extend %ods-padding-horizontal-0;
+    @extend %ods-padding-left-4;
+    @extend %ods-padding-bottom-4, %ods-padding-bottom-0-breakpoint-medium;
+    @extend %ods-none-breakpoint-medium;
+
     background-color: unset;
     border: none;
     color: colors.$blue-dark;
     cursor: pointer;
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @include typography.weight("light");
-    @extend %ods-margin-bottom-4;
-    @extend %ods-padding-horizontal-0;
-    @extend %ods-none-breakpoint-medium;
 
     span {
       pointer-events: none;
@@ -158,6 +161,11 @@
 
     @include breakpoints.medium {
       max-height: unset;
+      overflow: visible;
+    }
+
+    ul {
+      @extend %ods-padding-left-4, %ods-padding-left-0-breakpoint-medium, %ods-padding-bottom-4, %ods-padding-bottom-0-breakpoint-medium;
     }
 
     &--open {
@@ -194,56 +202,33 @@
         text-decoration: underline;
       }
     }
+
+    &:focus-visible {
+      outline-offset: 0;
+      outline: 0.125rem solid colors.$blue-state !important;
+      box-shadow: 0 0 0 0.375rem colors.$purple-light !important;
+    }
   }
 
   &__link-icon {
-    @extend %ods-margin-right-4;
+    @extend %ods-margin-right-1;
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-
-    > * {
-      line-height: 1.5em !important;
-    }
-  }
-
-  &__link-content {
-    line-height: 2.375em;
-    @include breakpoints.medium {
-      line-height: 3.125em;
-    }
   }
 
   &__link-text {
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
 
     display: inline-block;
   }
 
   &__services {
     @extend %ods-padding-top-8, %ods-padding-bottom-4, %ods-padding-horizontal-0;
-    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
-  }
-
-  &__categories {
-    @extend %ods-padding-top-1, %ods-padding-horizontal-0, %ods-padding-bottom-4;
-    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
-
-    ul {
-      background-color: colors.$gray;
-      @extend %ods-margin-top-8-breakpoint-medium;
-
-      li {
-        @extend %ods-margin-left-3;
-        @extend %ods-margin-left-0-breakpoint-medium;
-      }
-    }
-
-    @include breakpoints.medium {
-      background-color: colors.$gray;
-    }
+    @extend %ods-padding-13-breakpoint-medium;
   }
 
   &__services-list {
-    @extend %ods-padding-vertical-0, %ods-padding-horizontal-3;
+    @extend %ods-padding-left-4;
+    @extend %ods-padding-vertical-0;
     @extend %ods-margin-top-8-breakpoint-medium;
     @extend %ods-padding-0-breakpoint-medium;
 
@@ -255,6 +240,10 @@
       flex-wrap: wrap;
     }
 
+    li:first-child {
+      @extend %ods-padding-top-4, %ods-padding-top-0-breakpoint-medium;
+    }
+
     li:last-child {
       @extend %ods-margin-bottom-3;
 
@@ -264,18 +253,47 @@
     }
   }
 
+  &__categories {
+    @extend %ods-padding-horizontal-0;
+    @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+
+    ul {
+      @extend %ods-margin-top-4-breakpoint-medium;
+
+      background-color: colors.$gray;
+
+      li {
+        @extend %ods-margin-left-3;
+        @extend %ods-margin-left-0-breakpoint-medium;
+        @extend %ods-padding-top-4;
+      }
+    }
+
+    & .ods-navbar-menu__link-text {
+      text-decoration: underline;
+    }
+
+    @include breakpoints.medium {
+      background-color: colors.$gray;
+    }
+  }
+
   &__footer {
-    @extend %ods-padding-vertical-4-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+    @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+
+    li {
+      @extend %ods-padding-top-4;
+    }
   }
 
   &__footer-list {
-    @extend %ods-margin-top-8, %ods-margin-top-0-breakpoint-medium;
+    @extend %ods-margin-top-0-breakpoint-medium, %ods-padding-left-4, %ods-padding-left-0-breakpoint-medium;
 
     justify-content: flex-start;
 
     &--media {
       display: flex;
-      @extend %ods-margin-top-13;
+      @extend %ods-margin-top-4;
       @extend %ods-margin-top-0-breakpoint-medium;
 
       @include breakpoints.medium {
@@ -283,7 +301,7 @@
       }
 
       & .ods-navbar-menu__link-content {
-        @extend %ods-padding-right-8, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-13-breakpoint-medium;
+        @extend %ods-padding-right-4, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-6-breakpoint-medium;
       }
     }
 
