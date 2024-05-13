@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Breaking change:** Added VUE3 support.
 - Added configuration files to .npmignore.
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
 - Added nowrap and truncated as modifiers to typography.
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- **Breaking change:** Removed VUE2 support.
 - Removed twitter icon.
 - Removed remaining old styleguide files.
 
