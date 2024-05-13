@@ -41,7 +41,7 @@ export default {
     },
     errorMessage: {
       type: String,
-      default: 'a',
+      default: '',
     },
     errorId: {
       type: String,
