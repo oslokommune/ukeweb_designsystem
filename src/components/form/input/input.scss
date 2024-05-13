@@ -24,10 +24,6 @@
     &[type="number"] {
       appearance: textfield;
     }
-
-    &:focus {
-      outline: 0.25rem solid colors.$purple-light;
-    }
   }
 
   &--error {
