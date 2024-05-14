@@ -38,10 +38,6 @@
     align-items: flex-start;
   }
 
-  &--focused {
-    outline: 0.25rem solid colors.$purple-light;
-  }
-
   &__checkmark {
     @extend %ods-margin-top-1-breakpoint-medium;
 
@@ -107,10 +103,6 @@
     }
   }
 
-  &:focus-visible ~ &__checkmark {
-    outline: 0.25rem solid colors.$purple-light;
-  }
-
   &--focus &__text,
   & input:focus ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
@@ -147,6 +139,11 @@
   & input:checked ~ &__checkmark {
     background-color: colors.$blue-state;
     outline: none;
+  }
+
+  & input:focus-visible ~ &__checkmark,
+  & input:checked:focus-visible ~ &__checkmark {
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   & input:checked ~ &__text {
