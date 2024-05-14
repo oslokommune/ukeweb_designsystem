@@ -113,7 +113,7 @@ export default {
     this.reload();
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     // Remove resize listener
     window.removeEventListener('resize', this.calculateWidthSlide);
   },
