@@ -99,7 +99,6 @@
   & input:focus ~ &__checkmark {
     &:not([disabled]) {
       color: colors.$blue-state;
-      outline: initial;
     }
   }
 

@@ -132,8 +132,8 @@
       text-decoration: underline;
     }
   }
+
   & input:focus-visible ~ .ods-radio__control {
-    outline: initial;
     outline: 0.25rem solid colors.$purple-light;
   }
 
@@ -166,6 +166,10 @@
 
     .ods-radio__control {
       color: colors.$red;
+    }
+
+    & input:focus-visible ~ .ods-radio__control {
+      color: colors.$blue-state;
     }
   }
 
