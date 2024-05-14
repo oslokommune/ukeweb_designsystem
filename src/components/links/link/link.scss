@@ -7,7 +7,6 @@
   text-decoration: underline;
   word-wrap: break-word;
 
-
   @include mixins.states;
 
   &--external {
@@ -39,7 +38,6 @@
     &-focus {
       color: states.$hover-light !important;
     }
-
 
     &:active,
     &-active {

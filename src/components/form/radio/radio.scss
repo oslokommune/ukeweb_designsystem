@@ -67,7 +67,6 @@
       background-color: colors.$blue-state;
       border-color: colors.$blue-state;
     }
-
   }
 
   & input + &__control::before {
@@ -136,7 +135,6 @@
   & input:focus-visible ~ .ods-radio__control {
     outline: 0.25rem solid colors.$purple-light;
   }
-
 
   &--focus,
   &:focus {

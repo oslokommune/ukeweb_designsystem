@@ -7,7 +7,6 @@
 .ods-input {
   @include mixins.form-states;
 
-
   &__input {
     @include mixins.form-component;
     @extend %ods-margin-top-2;
