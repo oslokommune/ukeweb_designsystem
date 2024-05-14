@@ -11,6 +11,8 @@ $ods-portrait-card-image-height-medium: 230px;
 $ods-portrait-card-image-height-large: 290px;
 
 .ods-portrait-card {
+  position: relative;
+
   &__media {
     img {
       display: block;
@@ -38,6 +40,7 @@ $ods-portrait-card-image-height-large: 290px;
     @extend %ods-padding-horizontal-5, %ods-padding-bottom-5, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
 
+    position: relative;
   }
 
   &__heading {
@@ -124,15 +127,44 @@ $ods-portrait-card-image-height-large: 290px;
 
   &__link {
     text-decoration: none;
+    display: block;
 
-    &:hover {
-      .ods-portrait-card__content {
-        color: states.$hover !important;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
 
-      .ods-portrait-card__heading {
-        text-decoration: underline;
-      }
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+  }
+
+  & .ods-portrait-card__content:hover,
+  & .ods-portrait-card__text:hover,
+  & .ods-portrait-card__published:hover {
+    color: states.$hover;
+  }
+
+  & .ods-portrait-card__heading:hover {
+    text-decoration: underline;
+  }
+
+  &--nolink {
+    & .ods-portrait-card__content:hover,
+    & .ods-portrait-card__text:hover,
+    & .ods-portrait-card__published:hover {
+      color: colors.$blue-dark;
+    }
+
+    & .ods-portrait-card__heading:hover {
+      text-decoration: none;
     }
   }
 
@@ -148,21 +180,19 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &--zoom {
-    & .ods-portrait-card__link {
-      & .ods-portrait-card__media {
-        overflow: hidden;
+    & .ods-portrait-card__media {
+      overflow: hidden;
 
-        img {
-          transform: scale(1);
-          transition: all 0.5s;
-        }
+      img {
+        transform: scale(1);
+        transition: all 0.5s;
       }
+    }
 
-      &:hover {
-        & .ods-portrait-card__media {
-          img {
-            transform: scale(1.1);
-          }
+    &:hover {
+      & .ods-portrait-card__media {
+        img {
+          transform: scale(1.1);
         }
       }
     }
