@@ -161,7 +161,7 @@ export default {
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
-        if (this.pointsGeoJson && this.pointsGeoJson.features && this.pointsGeoJson.features.length > 0) {
+        if (this.pointsGeoJson?.features?.length > 0) {
           this.mapObject.addSource('points', {
             type: 'geojson',
             data: this.pointsGeoJson,
