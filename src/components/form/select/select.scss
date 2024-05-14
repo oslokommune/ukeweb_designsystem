@@ -37,7 +37,6 @@
       }
     }
 
-
     &::after {
       color: inherit;
       content: map.get(icon-map.$icons, "chevron-thin-down");
