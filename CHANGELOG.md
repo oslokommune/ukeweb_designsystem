@@ -9,24 +9,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Breaking change:** Added VUE3 support.
+- Added configuration files to .npmignore.
 - Added VUE apps names to the components so they are easier to identify in Vue devtools applist.
+- Added nowrap and truncated as modifiers to typography.
 - Added links to the designmanual in typography and icons to clearify font installation.
-- Added new map example with data fetching while map is not loaded.
+- **Breaking change:** Added keyboard functionality to datepicker component and upgraded to new version.
+- Added new helper for width and height custom classes.
+- Added new error message styling to all components.
 
 ### Changed
 
+- Changed accordion heading to be inside ods-accordion.
 - Changed font-weight in video heading and refactored to correct scss setup.
 - Updated package version for stylelint.
+- **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
+- **Breaking change:** Create a helper for animations and refactor accordion component accordingly. You need to replace the class 'ods-accordion--animate' with 'ods-animation ods-animation--rotate'.
 - Moved geoJSON fetching from component to a per-vue-instance setup.
 
 ### Fixed
 
 - Fixed linting errors caused by new stylelint version.
+- Fixed an issue where long links would not break properly.
+- Fixed spacing and some other design adjustments on menu component.
+- Fixed an issue where long links would not break properly.
+- Fixed spacing around links and buttons in portrait card on all breakpoints.
+- Fixed links on portrait cards to improve screen reader capabilities.
 - Fixed an issue causing multiple map-popups to open and overlay each other.
 
 ### Removed
 
-- Removed twitter icon.
+- **Breaking change:** Removed VUE2 support.
+- **Breaking change:** Removed twitter icon.
+- **Breaking change:** Removed remaining old styleguide files.
 
 ## [1.1.0] - 16.02.2024
 

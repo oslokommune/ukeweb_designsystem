@@ -2,6 +2,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "mixins";
+@use "system/colors";
 
 .ods-input {
   @include mixins.form-states;
@@ -23,6 +24,10 @@
     &[type="number"] {
       appearance: textfield;
     }
+  }
+
+  &--error {
+    @extend %ods-margin-bottom-1;
   }
 
   &__label {

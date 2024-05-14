@@ -60,3 +60,18 @@
     @extend %ods-text--align-#{$name}-breakpoint-large;
   }
 }
+
+// Text modifiers
+@each $name, $values in typography.$modifiers {
+  .ods-text--#{$name} {
+    @extend %ods-text--#{$name};
+  }
+
+  .ods-text--#{$name}-breakpoint-medium {
+    @extend %ods-text--#{$name}-breakpoint-medium;
+  }
+
+  .ods-text--#{$name}-breakpoint-large {
+    @extend %ods-text--#{$name}-breakpoint-large;
+  }
+}

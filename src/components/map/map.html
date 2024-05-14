@@ -263,26 +263,4 @@
       </div>
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const listViewBtn = document.getElementById('listViewBtn');
-    const mapViewBtn = document.getElementById('mapViewBtn');
-    const listView = document.getElementById('listView');
-    const mapView = document.getElementById('mapView');
-
-    // Initially show list view and hide map view
-    listView.style.display = 'block';
-    mapView.style.display = 'none';
-
-    listViewBtn.addEventListener('click', () => {
-      listView.style.display = 'block';
-      mapView.style.display = 'none';
-    });
-
-    mapViewBtn.addEventListener('click', () => {
-      listView.style.display = 'none';
-      mapView.style.display = 'block';
-    });
-  });
-  </script>
 </div>

@@ -11,6 +11,8 @@ $ods-portrait-card-image-height-medium: 230px;
 $ods-portrait-card-image-height-large: 290px;
 
 .ods-portrait-card {
+  position: relative;
+
   &__media {
     img {
       display: block;
@@ -31,12 +33,14 @@ $ods-portrait-card-image-height-large: 290px;
 
   &__content {
     @extend %ods-color-bg-gray-light;
-    @extend %ods-padding-5, %ods-padding-8-breakpoint-medium;
+    @extend %ods-padding-horizontal-5, %ods-padding-vertical-5, %ods-padding-8-breakpoint-medium;
   }
 
   &__actions {
-    @extend %ods-padding-horizontal-3, %ods-padding-bottom-4, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
+    @extend %ods-padding-horizontal-5, %ods-padding-bottom-5, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
+
+    position: relative;
   }
 
   &__heading {
@@ -58,7 +62,26 @@ $ods-portrait-card-image-height-large: 290px;
 
   &--actions {
     & .ods-portrait-card__content {
-      @extend %ods-padding-top-8-breakpoint-medium, %ods-padding-bottom-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-top-8-breakpoint-large, %ods-padding-vertical-8-breakpoint-large, %ods-padding-bottom-4-breakpoint-large;
+      @extend %ods-padding-vertical-5, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-vertical-8-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-large;
+    }
+
+    & .ods-portrait-card__actions {
+      @extend %ods-padding-top-0, %ods-padding-top-0-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-medium, %ods-padding-horizontal-8-breakpoint-large, %ods-padding-bottom-5, %ods-padding-bottom-8-breakpoint-medium, %ods-padding-bottom-8-breakpoint-large;
+
+      & > * {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.ods-portrait-card--xs {
+      & .ods-portrait-card__content {
+        @extend %ods-padding-vertical-5, %ods-padding-horizontal-5, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-large;
+      }
+
+      & .ods-portrait-card__actions {
+        @extend %ods-padding-top-0, %ods-padding-top-0-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-large, %ods-padding-bottom-5, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-large;
+      }
     }
   }
 
@@ -71,7 +94,7 @@ $ods-portrait-card-image-height-large: 290px;
 
   &--xs {
     & .ods-portrait-card__content {
-      @extend %ods-padding-5, %ods-padding-4-breakpoint-medium, %ods-padding-5-breakpoint-large;
+      @extend %ods-padding-vertical-5, %ods-padding-horizontal-5, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-large;
     }
 
     & .ods-portrait-card__heading {
@@ -98,21 +121,50 @@ $ods-portrait-card-image-height-large: 290px;
     }
 
     & .ods-portrait-card__actions {
-      @extend %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-8-breakpoint-large, %ods-padding-bottom-4-breakpoint-large;
+      @extend %ods-padding-top-0, %ods-padding-top-0-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-bottom-5, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-large;
     }
   }
 
   &__link {
     text-decoration: none;
+    display: block;
 
-    &:hover {
-      .ods-portrait-card__content {
-        color: states.$hover !important;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
 
-      .ods-portrait-card__heading {
-        text-decoration: underline;
-      }
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+  }
+
+  & .ods-portrait-card__content:hover,
+  & .ods-portrait-card__text:hover,
+  & .ods-portrait-card__published:hover {
+    color: states.$hover;
+  }
+
+  & .ods-portrait-card__heading:hover {
+    text-decoration: underline;
+  }
+
+  &--nolink {
+    & .ods-portrait-card__content:hover,
+    & .ods-portrait-card__text:hover,
+    & .ods-portrait-card__published:hover {
+      color: colors.$blue-dark;
+    }
+
+    & .ods-portrait-card__heading:hover {
+      text-decoration: none;
     }
   }
 
@@ -128,21 +180,19 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &--zoom {
-    & .ods-portrait-card__link {
-      & .ods-portrait-card__media {
-        overflow: hidden;
+    & .ods-portrait-card__media {
+      overflow: hidden;
 
-        img {
-          transform: scale(1);
-          transition: all 0.5s;
-        }
+      img {
+        transform: scale(1);
+        transition: all 0.5s;
       }
+    }
 
-      &:hover {
-        & .ods-portrait-card__media {
-          img {
-            transform: scale(1.1);
-          }
+    &:hover {
+      & .ods-portrait-card__media {
+        img {
+          transform: scale(1.1);
         }
       }
     }
