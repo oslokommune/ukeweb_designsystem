@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'OdsMapApp4',
       components: { OdsMap },
       mounted() {
-        this.$refs.odsMap4.resize();
+        this.$nextTick(() => {
+          if (this.$refs.odsMap4) {
+            this.$refs.odsMap4.resize();
+          }
+        });
       },
 
       methods: {

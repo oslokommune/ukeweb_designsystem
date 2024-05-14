@@ -40,8 +40,6 @@ $ods-portrait-card-image-height-large: 290px;
     @extend %ods-padding-horizontal-5, %ods-padding-bottom-5, %ods-padding-top-0-breakpoint-medium, %ods-padding-horizontal-5-breakpoint-medium, %ods-padding-bottom-5-breakpoint-medium, %ods-padding-top-0-breakpoint-large, %ods-padding-horizontal-5-breakpoint-large, %ods-padding-bottom-8-breakpoint-large;
     @extend %ods-color-bg-gray-light;
 
-
-    z-index: 2;
     position: relative;
   }
 
@@ -130,14 +128,19 @@ $ods-portrait-card-image-height-large: 290px;
   &__link {
     display: block;
     text-decoration: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
 
     &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
       box-shadow: 0 0 0 0.125rem colors.$blue-state;
       outline-offset: 0.125rem;
       outline: 0.25rem solid colors.$purple-light;
