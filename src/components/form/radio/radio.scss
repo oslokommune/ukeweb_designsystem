@@ -102,7 +102,6 @@
 
   & input:checked ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-text--weight-medium;
 
     color: colors.$blue-state;
     line-height: 1.5em !important;

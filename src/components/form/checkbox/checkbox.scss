@@ -105,7 +105,6 @@
   &--focus &__text,
   & input:focus ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-text--weight-medium;
   }
 
   &--hover span,
