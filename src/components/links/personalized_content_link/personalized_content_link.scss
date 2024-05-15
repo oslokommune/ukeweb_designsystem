@@ -15,7 +15,7 @@
   }
 
   &:focus-visible {
-    outline-offset: 0;
+    outline-offset: -0.125rem;
     border: 0.25rem solid colors.$blue-state;
     outline: 0.25rem solid colors.$purple-light;
   }
