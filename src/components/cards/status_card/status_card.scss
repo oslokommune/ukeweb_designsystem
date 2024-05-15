@@ -5,6 +5,8 @@
 @use "system/states";
 
 .ods-status-card {
+  position: relative;
+
   &__content {
     @extend %ods-padding-vertical-4, %ods-padding-horizontal-3, %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-4-breakpoint-medium, %ods-padding-8-breakpoint-large;
 
@@ -124,7 +126,14 @@
   }
 
   &__link {
+    display: block;
     text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
 
     &:hover {
       .ods-status-card__content {
@@ -137,6 +146,10 @@
     }
 
     &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
       box-shadow: 0 0 0 0.125rem colors.$blue-state;
       outline-offset: 0.125rem;
       outline: 0.25rem solid colors.$purple-light;
