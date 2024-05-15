@@ -103,7 +103,7 @@ export default {
     this.$refs.search.addEventListener('focusout', this.eventFocusOut);
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('keydown', this.eventKeyDown);
     window.removeEventListener('focusout', this.eventFocusOut);
   },
