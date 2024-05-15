@@ -24,8 +24,6 @@
   &--focus
   &:focus-within {
     border: 0.125rem solid colors.$blue-state;
-    outline: initial;
-    outline: colors.$blue-state solid 0.063rem;
   }
 
   &--focus &__label-text
@@ -40,6 +38,12 @@
 
   &__input:checked ~ &__background {
     background: colors.$blue-dark none repeat scroll 0 0;
+  }
+
+  &__input:focus-visible ~ &__background {
+    transition: none;
+    border: 0.125rem solid colors.$blue-state;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &__input:checked ~ &__slider {
