@@ -178,6 +178,7 @@
     }
   }
 
+  &--focus,
   &:focus-visible {
     outline-offset: 0;
     outline: 0.25rem solid colors.$purple-light !important;

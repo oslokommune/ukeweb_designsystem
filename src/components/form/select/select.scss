@@ -54,6 +54,11 @@
     }
   }
 
+  &--focus &__select,
+  &:focus-visible {
+    outline: 0.25rem solid colors.$purple-light;
+  }
+
   &__error-message {
     @include mixins.error-message;
   }

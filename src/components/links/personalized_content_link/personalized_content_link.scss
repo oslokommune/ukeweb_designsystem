@@ -14,6 +14,7 @@
     column-gap: units.unit-to-rem(4);
   }
 
+  &--focus,
   &:focus-visible {
     outline-offset: -0.125rem;
     border: 0.25rem solid colors.$blue-state;

@@ -139,6 +139,8 @@
     outline: none;
   }
 
+  &--focus input ~ &__checkmark,
+  &--focus input:checked ~ &__checkmark,
   & input:focus-visible ~ &__checkmark,
   & input:checked:focus-visible ~ &__checkmark {
     outline: 0.25rem solid colors.$purple-light;

@@ -40,6 +40,7 @@
     background: colors.$blue-dark none repeat scroll 0 0;
   }
 
+  &--focus &__background,
   &__input:focus-visible ~ &__background {
     transition: none;
     border: 0.125rem solid colors.$blue-state;

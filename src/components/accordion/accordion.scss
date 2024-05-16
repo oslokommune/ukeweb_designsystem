@@ -62,6 +62,7 @@
       text-decoration: none;
     }
 
+    &--focus,
     &:focus-visible {
       background-color: colors.$white;
       color: colors.$blue-state;
