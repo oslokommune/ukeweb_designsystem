@@ -22,6 +22,11 @@
     @include mixins.form-label;
   }
 
+  &--focus &__select,
+  &:focus-visible {
+    outline: 0.25rem solid colors.$purple-light;
+  }
+
   &__select {
     position: relative;
     @extend %ods-margin-top-2;
@@ -52,11 +57,6 @@
         top: 1.5rem;
       }
     }
-  }
-
-  &--focus &__select,
-  &:focus-visible {
-    outline: 0.25rem solid colors.$purple-light;
   }
 
   &__error-message {
