@@ -29,9 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed linting errors caused by new stylelint version.
-- Fixed an issue where long links would not break properly.
 - Fixed spacing and some other design adjustments on menu component.
-- Fixed an issue where long links would not break properly.
 - Fixed spacing around links and buttons in portrait card on all breakpoints.
 - Fixed links on portrait cards to improve screen reader capabilities.
 - Replaced deprecated ods-icon--space-right classes with ods-margin-right-1 on contactbox, portrait card and status card
