@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package version for stylelint.
 - **Breaking change:** Updated checkbox and radio component according to adjustments from design (Figma), both now have label options, correct spacing and correct font size and weight. Also changed naming of modifiers to be more consistent with other components.
 - **Breaking change:** Create a helper for animations and refactor accordion component accordingly. You need to replace the class 'ods-accordion--animate' with 'ods-animation ods-animation--rotate'.
+- **Breaking change:** Update the size of text in the banner. There are changes on the css classes in the markup of headings and paragrafs that need to be replaced.
+
 
 ### Fixed
 

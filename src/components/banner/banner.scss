@@ -6,7 +6,7 @@
 
 .ods-banner {
   @extend %ods-padding-vertical-4, %ods-padding-vertical-13-breakpoint-medium;
-  @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
 
   background-color: colors.$white;
   padding-left: grid.$gutter-size;
