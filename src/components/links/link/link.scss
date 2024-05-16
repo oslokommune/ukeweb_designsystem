@@ -10,6 +10,8 @@
   @include mixins.states;
 
   &--external {
+    display: inline-block;
+
     @include mixins.icon-right("new-window");
   }
 
@@ -21,8 +23,8 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 0.125rem colors.$blue-state;
-    outline-offset: 0.125rem;
+    box-shadow: 0 0 0 0.125rem colors.$white, 0 0 0 0.375rem colors.$blue-state;
+    outline-offset: 0.25rem;
     outline: 0.25rem solid colors.$purple-light;
   }
 

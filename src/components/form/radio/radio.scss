@@ -140,6 +140,11 @@
     .ods-radio__text {
       @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     }
+
+    .ods-radio__control {
+      border-color: colors.$blue-state;
+      outline: 0.25rem solid colors.$purple-light;
+    }
   }
 
   &--disabled,
