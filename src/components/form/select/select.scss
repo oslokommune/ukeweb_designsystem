@@ -50,6 +50,12 @@
     }
   }
 
+  &--error {
+    .ods-select__label {
+      @extend %ods-margin-bottom-1;
+    }
+  }
+
   &__error-message {
     @include mixins.error-message;
   }
