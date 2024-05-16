@@ -68,6 +68,7 @@
 
   &__text {
     @extend %ods-padding-left-2;
+    @extend %ods-text--weight-light;
 
     border-style: hidden;
     hyphens: auto;

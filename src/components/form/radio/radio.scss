@@ -31,6 +31,7 @@
 
   &__text {
     @extend %ods-margin-left-2;
+    @extend %ods-text--weight-light;
 
     hyphens: auto;
     transition: 180ms all ease-in-out;
@@ -102,6 +103,7 @@
 
   & input:checked ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
 
     color: colors.$blue-state;
     line-height: 1.5em !important;
