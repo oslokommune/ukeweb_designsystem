@@ -40,9 +40,11 @@
     }
 
     &:focus {
-      border: 0.25rem solid colors.$blue-state;
-      padding: calc(units.unit-to-rem(2) - 0.125rem) calc(units.unit-to-rem(4) - 0.125rem);
-      outline: none;
+      border: 0.125rem solid colors.$blue-state;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::-webkit-search-cancel-button {
@@ -92,6 +94,13 @@
     &:hover {
       background-color: states.$hover !important;
       border: 0.125rem solid states.$hover !important;
+      color: states.$hover-text !important;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+      border: 0.125rem solid colors.$blue-state;
+      background-color: colors.$blue-state;
       color: states.$hover-text !important;
     }
   }

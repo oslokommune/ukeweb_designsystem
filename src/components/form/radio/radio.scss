@@ -31,6 +31,7 @@
 
   &__text {
     @extend %ods-margin-left-2;
+    @extend %ods-text--weight-light;
 
     hyphens: auto;
     transition: 180ms all ease-in-out;
@@ -67,7 +68,6 @@
       background-color: colors.$blue-state;
       border-color: colors.$blue-state;
     }
-
   }
 
   & input + &__control::before {
@@ -98,7 +98,7 @@
   }
 
   & input:checked + &__control {
-    background-color: colors.$blue-dark;
+    background-color: colors.$blue-state;
   }
 
   & input:checked ~ &__text {
@@ -133,10 +133,19 @@
     }
   }
 
+  & input:focus-visible ~ .ods-radio__control {
+    outline: 0.25rem solid colors.$purple-light;
+  }
+
   &--focus,
   &:focus {
     .ods-radio__text {
       @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    }
+
+    .ods-radio__control {
+      border-color: colors.$blue-state;
+      outline: 0.25rem solid colors.$purple-light;
     }
   }
 
@@ -161,6 +170,10 @@
 
     .ods-radio__control {
       color: colors.$red;
+    }
+
+    & input:focus-visible ~ .ods-radio__control {
+      color: colors.$blue-state;
     }
   }
 

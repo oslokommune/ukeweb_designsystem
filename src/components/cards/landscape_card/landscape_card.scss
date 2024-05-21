@@ -48,6 +48,31 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
     }
   }
 
+  &__link {
+    text-decoration: none;
+
+    @include breakpoints.medium {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    &:hover {
+      .ods-landscape-card__content {
+        color: states.$hover;
+      }
+
+      .ods-landscape-card__heading {
+        text-decoration: underline;
+      }
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+  }
+
   &--no-image {
     & .ods-landscape-card__content {
       @include breakpoints.medium {
@@ -96,25 +121,6 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
         background-position: center;
         background-size: cover;
         object-fit: cover;
-      }
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-
-    @include breakpoints.medium {
-      display: grid;
-      grid-template-columns: repeat(9, 1fr);
-    }
-
-    &:hover {
-      .ods-landscape-card__content {
-        color: states.$hover !important;
-      }
-
-      .ods-landscape-card__heading {
-        text-decoration: underline;
       }
     }
   }

@@ -24,8 +24,6 @@
   &--focus
   &:focus-within {
     border: 0.125rem solid colors.$blue-state;
-    outline: initial;
-    outline: colors.$blue-state solid 0.063rem;
   }
 
   &--focus &__label-text
@@ -40,6 +38,13 @@
 
   &__input:checked ~ &__background {
     background: colors.$blue-dark none repeat scroll 0 0;
+  }
+
+  &--focus &__background,
+  &__input:focus-visible ~ &__background {
+    transition: none;
+    border: 0.125rem solid colors.$blue-state;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &__input:checked ~ &__slider {
@@ -74,13 +79,17 @@
   }
 
   &--error .ods-switch__input:checked ~ .ods-switch__background {
-    background: colors.$red none repeat scroll 0 0 !important;
+    background: colors.$red-30 none repeat scroll 0 0 !important;
   }
 
-  &--error &__label-text,
   &--error &__slider {
     border-color: colors.$red;
     color: colors.$red;
+  }
+
+  &--error &__label-text {
+    border-color: colors.$blue-dark;
+    color: colors.$blue-dark;
   }
 }
 

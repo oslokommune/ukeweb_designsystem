@@ -2,6 +2,8 @@
 @use "system/typography";
 @use "system/spacing";
 @use "system/visibility";
+@use "system/colors";
+@use "system/states";
 
 .ods-textarea {
   @include mixins.form-states;
@@ -27,6 +29,14 @@
     @extend %ods-margin-top-2;
 
     resize: none;
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+    }
+  }
+
+  &--focus &__textarea {
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &__countdown-characters {

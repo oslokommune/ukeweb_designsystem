@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking change:** Added keyboard functionality to datepicker component and upgraded to new version.
 - Added new helper for width and height custom classes.
 - Added new error message styling to all components.
+- Added focus outline on keyboard navigation.
 
 ### Changed
 

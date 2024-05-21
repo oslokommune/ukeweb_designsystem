@@ -24,6 +24,15 @@
     &[type="number"] {
       appearance: textfield;
     }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
+    }
+  }
+
+  &--focus input,
+  &:focus-visible {
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &--error {
