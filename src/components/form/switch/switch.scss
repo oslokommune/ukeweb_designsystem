@@ -77,13 +77,17 @@
   }
 
   &--error .ods-switch__input:checked ~ .ods-switch__background {
-    background: colors.$red none repeat scroll 0 0 !important;
+    background: colors.$red-30 none repeat scroll 0 0 !important;
   }
 
-  &--error &__label-text,
   &--error &__slider {
     border-color: colors.$red;
     color: colors.$red;
+  }
+
+  &--error &__label-text {
+    border-color: colors.$blue-dark;
+    color: colors.$blue-dark;
   }
 }
 
