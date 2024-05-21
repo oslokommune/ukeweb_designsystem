@@ -151,7 +151,7 @@
 
   &__heading {
     @extend %ods-none, %ods-block-breakpoint-medium;
-    @extend %ods-text--size-juliett, %ods-text--size-hotel-breakpoint-medium;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
     @include typography.weight("medium");
   }
 
