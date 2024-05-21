@@ -24,8 +24,8 @@
 
   &--focus,
   &:focus-visible {
-    box-shadow: 0 0 0 0.125rem colors.$white, 0 0 0 0.375rem colors.$blue-state;
-    outline-offset: 0.25rem;
+    box-shadow: 0 0 0 0.125rem colors.$blue-state;
+    outline-offset: 0.125rem;
     outline: 0.25rem solid colors.$purple-light;
   }
 
@@ -45,14 +45,14 @@
     &:focus,
     &-focus {
       color: states.$hover-light !important;
-      box-shadow: 0 0 0 0.125rem colors.$white, 0 0 0 0.375rem colors.$blue-light;
-      outline-offset: 0.25rem;
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
       outline: 0.25rem solid colors.$purple-light;
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 0.125rem colors.$white, 0 0 0 0.375rem colors.$blue-light;
-      outline-offset: 0.25rem;
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
       outline: 0.25rem solid colors.$purple-light;
     }
 
