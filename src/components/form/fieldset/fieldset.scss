@@ -63,6 +63,12 @@
         cursor: pointer;
         position: relative;
 
+        &:focus-visible {
+          box-shadow: 0 0 0 0.125rem colors.$blue-state;
+          outline-offset: 0.125rem;
+          outline: 0.25rem solid colors.$purple-light;
+        }
+
         &::after {
           font-family: "Oslo Icons", Arial, Helvetica, sans-serif;
           @extend %ods-text--size-golf;

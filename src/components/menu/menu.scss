@@ -17,7 +17,7 @@
 
   background-color: transparent;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   box-sizing: content-box;
   color: colors.$blue-dark;
   cursor: pointer;
@@ -32,7 +32,7 @@
 
   @include breakpoints.medium {
     border-radius: 0;
-    border: 2px solid colors.$blue-dark;
+    border: 0.125rem solid colors.$blue-dark;
     padding-left: units.unit-to-rem(4);
     padding-right: units.unit-to-rem(4);
     width: unset;
@@ -151,7 +151,7 @@
 
   &__heading {
     @extend %ods-none, %ods-block-breakpoint-medium;
-    @extend %ods-text--size-juliett, %ods-text--size-hotel-breakpoint-medium;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
     @include typography.weight("medium");
   }
 
@@ -190,16 +190,16 @@
     flex-direction: row;
     text-decoration: none;
 
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
     @include mixins.states {
       .ods-navbar-menu__link-content .ods-navbar-menu__link-text {
         text-decoration: underline;
       }
-    }
-
-    &:focus-visible {
-      outline-offset: 0;
-      outline: 0.125rem solid colors.$blue-state !important;
-      box-shadow: 0 0 0 0.375rem colors.$purple-light !important;
     }
   }
 

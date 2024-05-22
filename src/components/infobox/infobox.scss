@@ -53,8 +53,16 @@
       color: colors.$blue-state;
     }
 
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
     &:focus-visible::after {
-      border: 0.125rem solid colors.$blue-state;
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &:active {

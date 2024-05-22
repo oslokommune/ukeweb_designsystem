@@ -43,7 +43,7 @@
 
     margin-top: 0.12em;
     position: relative;
-    border: 2px solid colors.$blue-dark;
+    border: 0.125rem solid colors.$blue-dark;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
@@ -68,6 +68,7 @@
 
   &__text {
     @extend %ods-padding-left-2;
+    @extend %ods-text--weight-light;
 
     border-style: hidden;
     hyphens: auto;
@@ -99,18 +100,12 @@
   & input:focus ~ &__checkmark {
     &:not([disabled]) {
       color: colors.$blue-state;
-      outline: initial;
     }
-  }
-
-  &:focus-visible ~ &__checkmark {
-    outline-style: none;
   }
 
   &--focus &__text,
   & input:focus ~ &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-text--weight-medium;
   }
 
   &--hover span,
@@ -143,6 +138,13 @@
   & input:checked ~ &__checkmark {
     background-color: colors.$blue-state;
     outline: none;
+  }
+
+  &--focus input ~ &__checkmark,
+  &--focus input:checked ~ &__checkmark,
+  & input:focus-visible ~ &__checkmark,
+  & input:checked:focus-visible ~ &__checkmark {
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   & input:checked ~ &__text {

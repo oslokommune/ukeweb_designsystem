@@ -33,6 +33,12 @@
       content: map.get(icon-map.$icons, "chevron-thin-down");
       position: absolute;
     }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
   }
 
   &--big-block {
@@ -53,6 +59,12 @@
     &:hover {
       background-color: colors.$gray;
       cursor: pointer;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::after {
@@ -78,6 +90,12 @@
     &:hover {
       color: colors.$blue-state;
       cursor: pointer;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::after {

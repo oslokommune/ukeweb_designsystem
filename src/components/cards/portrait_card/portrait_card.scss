@@ -126,8 +126,8 @@ $ods-portrait-card-image-height-large: 290px;
   }
 
   &__link {
-    text-decoration: none;
     display: block;
+    text-decoration: none;
 
     &::after {
       content: "";

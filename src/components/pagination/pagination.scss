@@ -31,6 +31,12 @@
     border-radius: 50%;
     cursor: pointer;
 
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
     &:hover,
     &:focus {
       background-color: colors.$gray-light;
@@ -48,21 +54,25 @@
     &--current {
       color: colors.$white;
       background: colors.$blue-dark;
-      border: 2px solid colors.$blue-dark;
+      border: 0.125rem solid colors.$blue-dark;
       text-decoration: none;
 
       &:hover,
       &:focus {
         background: states.$hover !important;
-        border: 2px solid states.$hover !important;
+        border: 0.125rem solid states.$hover !important;
         text-decoration: underline !important;
         color: states.$hover-text !important;
+      }
+
+      &:focus-visible {
+        outline: 0.25rem solid colors.$purple-light;
       }
 
       &:disabled {
         color: colors.$white !important;
         background: colors.$blue-dark !important;
-        border: 2px solid colors.$blue-dark !important;
+        border: 0.125rem solid colors.$blue-dark !important;
         text-decoration: none !important;
       }
     }
@@ -79,12 +89,24 @@
     &:hover::before {
       content: map.get(icon-map.$icons, "chevron-thin-left") !important;
     }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
   }
 
   &__next {
     &::before,
     &:hover::before {
       content: map.get(icon-map.$icons, "chevron-thin-right") !important;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
     }
   }
 

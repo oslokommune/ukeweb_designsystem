@@ -84,9 +84,12 @@
     }
 
     &:focus {
-      border: 0.25rem solid colors.$blue-state !important;
-      padding: calc(units.unit-to-rem(3) - 0.125rem);
+      border: 0.125rem solid colors.$blue-state !important;
       outline: none;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &::-webkit-search-cancel-button {
@@ -144,6 +147,10 @@
       background-color: states.$hover !important;
       border: 0.125rem solid states.$hover !important;
       color: states.$hover-text !important;
+    }
+
+    &:focus-visible {
+      outline: 0.25rem solid colors.$purple-light !important;
     }
   }
 
@@ -285,12 +292,20 @@
         border: 0.125rem solid states.$hover-light !important;
         color: states.$hover-light-text !important;
       }
+
+      &:focus-visible {
+        outline: 0.25rem solid colors.$purple-light !important;
+      }
     }
 
     & .ods-search-seasons__input {
       &:hover,
       &:focus {
         border-color: states.$hover-light !important;
+      }
+
+      &:focus-visible {
+        outline: 0.25rem solid colors.$purple-light !important;
       }
     }
   }
@@ -313,11 +328,15 @@
         color: states.$hover-light-text !important;
       }
     }
-    
+
     & .ods-search-seasons__input {
       &:hover,
       &:focus {
         border-color: states.$hover-light !important;
+      }
+
+      &:focus-visible {
+        outline: 0.25rem solid colors.$purple-light !important;
       }
     }
   }

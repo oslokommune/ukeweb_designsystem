@@ -3,21 +3,27 @@
 @use "system/states";
 
 .ods-link {
-  display: inline;
+  display: inline-block;
   text-decoration: underline;
   word-wrap: break-word;
 
   @include mixins.states;
 
   &--external {
+    display: inline-block;
+
     @include mixins.icon-right("new-window");
   }
 
   &--chevron-right {
-    display: inline-flex;
-    align-items: center;
-    
     @include mixins.icon-left("chevron-right");
+  }
+
+  &--focus,
+  &:focus-visible {
+    box-shadow: 0 0 0 0.125rem colors.$blue-state;
+    outline-offset: 0.125rem;
+    outline: 0.25rem solid colors.$purple-light;
   }
 
   &--state-light {
@@ -33,6 +39,20 @@
       color: states.$hover-light !important;
     }
 
+    &:focus,
+    &-focus {
+      color: states.$hover-light !important;
+      box-shadow: 0 0 0 0.125rem colors.$blue-light;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-light;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
+    }
+
     &:active,
     &-active {
       color: states.$active-light !important;
@@ -40,6 +60,7 @@
   }
 
   &--no-decoration {
+    display: inline-block;
     text-decoration: none;
   }
 }
