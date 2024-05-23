@@ -46,8 +46,8 @@ export default {
       }),
     },
     geoJson: {
-      // Can't set type, as MapLibre accepts both an URL and an object
-      default: null,
+      type: Object,
+      default: () => ({}),
     },
     points: {
       type: Array,
@@ -77,6 +77,7 @@ export default {
     mapLoaded: false,
     error: false,
     technicalErrorText: '',
+    popups: [],
   }),
 
   computed: {
@@ -123,19 +124,15 @@ export default {
     pointsGeoJson: {
       deep: true,
       handler() {
-        if (this.loadMap === true) {
-          this.clearMapAndData();
-          this.populateMap();
-        }
+        this.clearMapAndData();
+        this.populateMap();
       },
     },
     geoJson: {
       deep: true,
       handler() {
-        if (this.loadMap === true) {
-          this.clearMapAndData();
-          this.populateMap();
-        }
+        this.clearMapAndData();
+        this.populateMap();
       },
     },
     state: {
@@ -158,21 +155,13 @@ export default {
     mapLoad() {
       if (!this.mapLoaded) {
         this.mapLoaded = true;
-        if (typeof this.geoJson === 'string') {
-          fetch(this.geoJson)
-            .then((response) => response.json())
-            .then((data) => {
-              this.$_createMapObject(data);
-            });
-        } else {
-          this.$_createMapObject(this.geoJson);
-        }
+        this.$_createMapObject(this.geoJson);
       }
     },
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
-        if (this.pointsGeoJson !== null) {
+        if (this.pointsGeoJson?.features?.length > 0) {
           this.mapObject.addSource('points', {
             type: 'geojson',
             data: this.pointsGeoJson,
@@ -185,29 +174,17 @@ export default {
           }
         }
 
-        if (this.geoJson !== null) {
+        // Check if there's valid geoJson data for non-clustered or clustered points
+        if (this.geoJson && Object.keys(this.geoJson).length > 0) {
           if (!this.clusteredPoints) {
-            if (typeof this.geoJson === 'string') {
-              fetch(this.geoJson)
-                .then((response) => response.json())
-                .then((data) => {
-                  this.$_addGeoJsonToMap(data);
-                });
-            } else {
-              this.$_addGeoJsonToMap(this.geoJson);
-            }
-          } else if (typeof this.geoJson === 'string') {
-            fetch(this.geoJson)
-              .then((response) => response.json())
-              .then((data) => {
-                this.$_splitClusterDataAndAddToMap(data);
-              });
+            this.$_addGeoJsonToMap(this.geoJson);
           } else {
             this.$_splitClusterDataAndAddToMap(this.geoJson);
           }
         }
       }
     },
+
     clearMapAndData() {
       if (this.lastDisplayedPopup !== null) {
         this.lastDisplayedPopup.remove();
@@ -361,7 +338,7 @@ export default {
       }
       this.mapObject.addSource('geoJson', {
         type: 'geojson',
-        data: geoJson,
+        data: this.geoJson,
       });
 
       this.dataSourceIds.push('geoJson');
@@ -631,6 +608,10 @@ export default {
     },
     // Private/protected method
     $_addPopupToMap(lngLat, feature) {
+      if (this.lastDisplayedPopup) {
+        this.lastDisplayedPopup.remove();
+      }
+
       const html = this.$_getPopupHtml(feature);
       if (typeof html === 'string') {
         const popup = new maplibregl.Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
