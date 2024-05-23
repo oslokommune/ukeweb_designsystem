@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - dd.mm.yyyy
 
+## [2.0.0] - 23.05.2024
+
 ### Added
 
 - **Breaking change:** Added VUE3 support.
