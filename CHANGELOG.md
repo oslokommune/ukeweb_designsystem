@@ -5,9 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - dd.mm.yyyy
+## [Unreleased]
 
-## [2.0.0] - 23.05.2024
+### Fixed
+
+- Fixed all dates to actually adhere to "Keep a changelog".
+
+## [2.0.0] - 2024-05-23
 
 ### Added
 
@@ -47,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking change:** Removed twitter icon.
 - **Breaking change:** Removed remaining old styleguide files.
 
-## [1.1.0] - 16.02.2024
+## [1.1.0] - 2024-02-16
 
 ### Added
 
@@ -68,7 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed hexcodes and class names for colors.
 - Fixed typo in checkbox component and heading style of 'important' section.
 
-## [1.0.5] - 01.11.2023
+## [1.0.5] - 2023-11-01
 
 ### Added
 
@@ -79,7 +83,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Change background color and text for default state of radio button.
 
-## [1.0.4] - 30.10.2023
+## [1.0.4] - 2023-10-30
 
 ### Changed
 
@@ -91,13 +95,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix arrow overlapping text in small breakpoint of Accordion.
 
-## [1.0.3] - 25.10.2023
+## [1.0.3] - 2023-10-25
 
 ### Fixed
 
 - Remove font styles from lists and update the list's clean variant padding. This fixes the lists styles in the Banner component.
 
-## [1.0.2] - 23.10.2023
+## [1.0.2] - 2023-10-23
 
 ### Fixed
 
@@ -109,7 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added icon for X.
 
-## [1.0.1] - 03.10.2023
+## [1.0.1] - 2023-10-03
 
 ### Added
 
@@ -119,7 +123,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed consume -> packages to show use of dualstack to support both IPv4 and IPv6.
 
-## [1.0.0] - 27.09.2023
+## [1.0.0] - 2023-09-27
 
 ### Added
 
@@ -157,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed link chevron left variant
 - Removed landscape card large variant
 
-## [0.99.106] - 01-06-2023
+## [0.99.106] - 2023-06-01
 
 ### Added
 
@@ -180,7 +184,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed wrong color on focus state in search seasons.
 - Fixed font weight and size on xs card.
 
-## [0.99.105] - 28-04-2023
+## [0.99.105] - 2023-04-28
 
 ### Added
 
@@ -192,7 +196,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix alignment of cross icon in fieldset collapsible.
 - Update search markup in header and employee search.
 
-## [0.99.104] - 19-04-2023
+## [0.99.104] - 2023-04-19
 
 ### Added
 
@@ -207,7 +211,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implements design version 1.2 of Search Seasons.
 - Updated colours for status message.
 
-## [0.99.103] - 11-04-2023
+## [0.99.103] - 2023-04-11
 
 ### Fixed
 
