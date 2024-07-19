@@ -14,11 +14,11 @@ jobs:
       SLACK_CHANNEL: C044EMZ22JX
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Slack status
         id: slack
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v1.26.0
         with:
           channel-id: ${{ env.SLACK_CHANNEL }}
           payload: |
@@ -88,7 +88,7 @@ jobs:
 
       - name: Update Slack status
         if: success()
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v1.26.0
         with:
           update-ts: ${{ steps.slack.outputs.ts }}
           channel-id: ${{ env.SLACK_CHANNEL }}
@@ -167,14 +167,14 @@ jobs:
       - name: Workplace step
         if: success()
         id: changelog
-        uses: oslokommune/ukeweb_gh_workplace_action@1.0
+        uses: oslokommune/ukeweb_gh_workplace_action@1.1.0
         with:
           group-id: ${{ secrets.WORKPLACE_GROUP_ID }}
           auth-token: ${{ secrets.WORKPLACE_AUTH_TOKEN }}
 
       - name: Update Slack status
         if: success()
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v1.26.0
         with:
           update-ts: ${{ steps.slack.outputs.ts }}
           channel-id: ${{ env.SLACK_CHANNEL }}
@@ -237,7 +237,7 @@ jobs:
 
       - name: Update Slack status
         if: failure()
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v1.26.0
         with:
           update-ts: ${{ steps.slack.outputs.ts }}
           channel-id: ${{ env.SLACK_CHANNEL }}
