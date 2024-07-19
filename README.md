@@ -7,10 +7,10 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge&logo=rocket&label=Version)
+![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=for-the-badge&logo=rocket&label=Version)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative&label=License)](https://opensource.org/licenses/MIT)
 [![JavaScript](https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=ffffff&label=JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Vue](https://img.shields.io/badge/Vue-2.x-green?style=for-the-badge&logo=vue.js&label=Vue)](https://v2.vuejs.org/)
+[![Vue](https://img.shields.io/badge/Vue-3.x-green?style=for-the-badge&logo=vue.js&label=Vue)](https://vuejs.org/)
 [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=ffffff&label=Sassy)](https://sass-lang.com/)
 
 </div>
