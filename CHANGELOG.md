@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed all dates to actually adhere to "Keep a changelog".
 
+### Changed
+
+- Updated all Git Hub actions to latest versions.
+
 ## [2.0.0] - 2024-05-23
 
 ### Added
