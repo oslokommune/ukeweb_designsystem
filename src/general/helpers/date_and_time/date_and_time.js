@@ -46,7 +46,6 @@ const OdsDateTime = {
         hourCycle: 'h24',
         calendar: 'gregory',
         timeZone: 'Europe/Oslo',
-
       },
     };
     dateFromOptions.type = 'from';
