@@ -61,14 +61,14 @@ const OdsDateTime = {
           options.localeOptions = { hour: 'numeric', minute: 'numeric', ...options.localeOptions };
 
           if (options.type === 'to' && typeof options.prefix === 'undefined') {
-            options.prefix = '–';
+            options.prefix = '–'; // This is an em dash / mdash
           }
           break;
         case 'datetime':
           options.localeOptions = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', ...options.localeOptions };
 
           if (options.type === 'to' && options.format === 'time' && typeof options.prefix === 'undefined') {
-            options.prefix = '–';
+            options.prefix = '–'; // This is an em dash / mdash
           }
           break;
         case 'daytime':
@@ -81,7 +81,7 @@ const OdsDateTime = {
           options.localeOptions = { year: 'numeric', month: '2-digit', day: '2-digit', ...options.localeOptions };
 
           if (options.type === 'to' && typeof options.prefix === 'undefined') {
-            options.prefix = '–';
+            options.prefix = '–'; // This is an em dash / mdash
           }
       }
     });
