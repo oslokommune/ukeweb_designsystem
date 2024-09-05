@@ -1,8 +1,18 @@
 // --------------- COLORS -------------*/
 
+$beige: #f8f0dd;
+$beige-dark: #d0bfae;
+$purple: #8d50b1;
+$purple-light: #e0adff;
+
 // BASE COLORS
 $black: #000;
 $white: #fff;
+
+// Gray colors
+$gray-dark: #2c2c2c;
+$gray: #f2f2f2;
+$gray-light: #f9f9f9;
 
 // Grayscale Colors
 $grayscale-10: #dadada;
@@ -149,7 +159,12 @@ $beige-dark-10: #faf9f7;
 $colors: (
   "black": $black,
   "white": $white,
+  "purple": $purple,
+  "purple-light": $purple-light,
   // Grayscale
+  "gray-light": $gray-light,
+  "gray-dark": $gray-dark,
+  "gray": $gray,
   "grayscale-10": $grayscale-10,
   "grayscale-20": $grayscale-20,
   "grayscale-30": $grayscale-30,
