@@ -1,13 +1,12 @@
-const { extendDefaultPlugins } = require("svgo");
 module.exports = {
-  plugins: extendDefaultPlugins([
+  plugins: [
     {
-      name: "removeViewBox",
+      name: 'removeViewBox',
       active: false,
     },
     {
-      name: "removeDimensions",
+      name: 'removeDimensions',
       active: true,
     },
-  ]),
+  ],
 };
