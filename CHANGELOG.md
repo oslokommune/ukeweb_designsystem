@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed all dates to actually adhere to "Keep a changelog".
+- Fixed spacing on calendar icon in date component.
 
 ## [2.0.0] - 2024-05-23
 
