@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed all dates to actually adhere to "Keep a changelog".
 - Fixed locale formatting for dates to adhere to UKEs writing rules.
 - Fixed spacing on calendar icon in date component.
+- Fixed an issue causing some links to not break correctly.
 
 ### Added
 
