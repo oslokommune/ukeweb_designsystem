@@ -5,7 +5,7 @@
       <input type="text" class="ods-date__input" :value="displayDate" :placeholder="placeholder" autocomplete="off" v-on:focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
     <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
-      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+      <p class="ods-status-message__content"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</p>
     </div>
 
     <nrk-core-datepicker class="ods-date__datepicker" ref="datepicker" v-show="showDatepicker" :days="days" :months="months">

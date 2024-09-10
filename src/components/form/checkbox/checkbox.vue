@@ -7,7 +7,7 @@
         <span class="ods-checkbox__text">{{ text }}</span>
       </label>
       <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
-        <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+        <p class="ods-status-message__content" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</p>
       </div>
     </div>
   </div>

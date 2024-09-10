@@ -15,13 +15,15 @@
 
   &__heading {
     @extend %ods-text--weight-medium;
+    @extend %ods-margin-bottom-4;
 
     display: flex;
   }
 
   &__content {
     @extend %ods-text--weight-light;
-    @extend %ods-margin-top-4;
+
+    display: flex;
   }
 
   &__date {
