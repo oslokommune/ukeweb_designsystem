@@ -1,29 +1,18 @@
 // --------------- COLORS -------------*/
-
+// BASE COLORS
 $beige: #f8f0dd;
 $beige-dark: #d0bfae;
-$black: #000;
-$gray-dark: #2c2c2c;
-$blue: #6fe9ff;
-$blue-dark: #2a2859;
-$blue-light: #b3f5ff;
-$blue-state: #1f42aa;
-$green: #43f8b6;
-$green-dark: #034b45;
-$green-light: #c7f6c9;
-$gray: #f2f2f2;
-$gray-light: #f9f9f9;
 $purple: #8d50b1;
 $purple-light: #e0adff;
-$red: #ff8274;
-$red-light: #ffb4ac;
-$yellow: #f9c66b;
+$black: #000;
 $white: #fff;
-$green-30: #c7fde9;
-$blue-60: #d1f9ff;
-$yellow-50: #ffe7bc;
-$yellow-60: #f7d9a2;
-$red-30: #ffdfdc;
+
+// Gray colors
+$gray-dark: #2c2c2c;
+$gray: #f2f2f2;
+$gray-light: #f9f9f9;
+
+// Grayscale Colors
 $grayscale-10: #dadada;
 $grayscale-20: #c2c2c2;
 $grayscale-30: #a9a9a9;
@@ -33,26 +22,147 @@ $grayscale-60: #616161;
 $grayscale-70: #494949;
 $grayscale-80: #303030;
 $grayscale-90: #181818;
+
+// Blue colors
+$blue: #6fe9ff;
+$blue-dark: #2a2859;
+$blue-state: #1f42aa;
+$blue-light: #b3f5ff;
+
+// Blue Gradient
+$blue-90: #b3f5ff;
+$blue-80: #c2f7ff;
+$blue-70: #caf8ff;
+$blue-60: #d1f9ff;
+$blue-50: #d9faff;
+$blue-40: #e1fbff;
+$blue-30: #e8fcff;
+$blue-20: #f0fdff;
+$blue-10: #f7feff;
+
+// Blue-Dark Gradient
+$blue-dark-90: #3f3e6a;
+$blue-dark-80: #55537a;
+$blue-dark-70: #6a698b;
+$blue-dark-60: #7f7e9b;
+$blue-dark-50: #9493ac;
+$blue-dark-40: #aaa9bd;
+$blue-dark-30: #bfbfcd;
+$blue-dark-20: #d4d4de;
+$blue-dark-10: #eaeaee;
+
+// Blue-Light Gradient
+$blue-light-90: #7debff;
+$blue-light-80: #8cedff;
+$blue-light-70: #9af0ff;
+$blue-light-60: #a9f2ff;
+$blue-light-50: #b7f4ff;
+$blue-light-40: #c5f6ff;
+$blue-light-30: #d4f8ff;
+$blue-light-20: #e2fbff;
+$blue-light-10: #f1fdff;
+
+// Green Colors
+$green: #43f8b6;
+$green-dark: #034b45;
+$green-light: #c7f6c9;
+
+// Green Gradient
+$green-90: #56f9bd;
+$green-80: #69f9c5;
+$green-70: #7bfacc;
+$green-60: #8efbd3;
+$green-50: #a1fbda;
+$green-40: #b4fce2;
+$green-30: #c7fde9;
+$green-20: #d9fef0;
+$green-10: #ecfef8;
+
+// Green-Dark Gradient
+$green-dark-90: #1c5d58;
+$green-dark-80: #356f6a;
+$green-dark-70: #4f817d;
+$green-dark-60: #68938f;
+$green-dark-50: #81a5a2;
+$green-dark-40: #9ab7b5;
+$green-dark-30: #b3c9c7;
+$green-dark-20: #cdddda;
+$green-dark-10: #e6edec;
+
+// Green-Light Gradient
+$green-light-90: #cdf7ce;
+$green-light-80: #d2f8d4;
+$green-light-70: #d8f9d9;
+$green-light-60: #ddfadf;
+$green-light-50: #e3fae4;
+$green-light-40: #e9fbe9;
+$green-light-30: #eefcef;
+$green-light-20: #f4fdf4;
+$green-light-10: #f9fefa;
+
+// Red Colors
+$red: #ff8274;
+$red-light: #ffb4ac;
+
+// Red Gradient
+$red-90: #ff8f82;
+$red-80: #ff9b90;
+$red-70: #ffa89e;
+$red-60: #ffb4ac;
+$red-50: #ffc0b9;
+$red-40: #ffcdc7;
+$red-30: #ffdfdc;
+$red-20: #ffeae8;
+$red-10: #fff3f1;
+
+// Yellow Colors
+$yellow: #f9c66b;
+
+// Yellow Gradient
+$yellow-90: #facc7a;
+$yellow-80: #fad189;
+$yellow-70: #fbd797;
+$yellow-60: #f7d9a2;
+$yellow-50: #ffe7bc;
+$yellow-40: #fde8c4;
+$yellow-30: #fdeed3;
+$yellow-20: #fef4e1;
+$yellow-10: #fef9f0;
+
+// Beige Colors
+$beige: #f8f0dd;
+$beige-dark: #d0bfae;
+
+// Beige Gradient
+$beige-90: #f9f1e0;
+$beige-80: #f9f3e4;
+$beige-70: #faf5e7;
+$beige-60: #fbf6eb;
+$beige-50: #fbf7ee;
+$beige-40: #fcf9f1;
+$beige-30: #fdfbf5;
+$beige-20: #fefcf8;
+$beige-10: #fefefc;
+
+// Beige-Dark Gradient
+$beige-dark-90: #d5c5b6;
+$beige-dark-80: #d9ccbe;
+$beige-dark-70: #ded2c6;
+$beige-dark-60: #e3d9ce;
+$beige-dark-50: #e7dfd6;
+$beige-dark-40: #ece5df;
+$beige-dark-30: #f1ece7;
+$beige-dark-20: #f6f2ef;
+$beige-dark-10: #faf9f7;
 $colors: (
-  "white": $white,
-  "beige": $beige,
-  "beige-dark": $beige-dark,
   "black": $black,
-  "blue": $blue,
-  "blue-dark": $blue-dark,
-  "blue-state": $blue-state,
-  "blue-light": $blue-light,
-  "green": $green,
-  "green-dark": $green-dark,
-  "green-light": $green-light,
-  "gray-dark": $gray-dark,
-  "gray": $gray,
-  "gray-light": $gray-light,
-  "red": $red,
-  "red-light": $red-light,
-  "yellow": $yellow,
+  "white": $white,
   "purple": $purple,
   "purple-light": $purple-light,
+  // Grayscale
+  "gray-light": $gray-light,
+  "gray-dark": $gray-dark,
+  "gray": $gray,
   "grayscale-10": $grayscale-10,
   "grayscale-20": $grayscale-20,
   "grayscale-30": $grayscale-30,
@@ -62,11 +172,124 @@ $colors: (
   "grayscale-70": $grayscale-70,
   "grayscale-80": $grayscale-80,
   "grayscale-90": $grayscale-90,
-  "green-30": $green-30,
+  // Blue Colors
+  "blue": $blue,
+  "blue-dark": $blue-dark,
+  "blue-state": $blue-state,
+  "blue-light": $blue-light,
+  // Blue Gradient
+  "blue-90": $blue-90,
+  "blue-80": $blue-80,
+  "blue-70": $blue-70,
   "blue-60": $blue-60,
-  "yellow-50": $yellow-50,
-  "yellow-60": $yellow-60,
+  "blue-50": $blue-50,
+  "blue-40": $blue-40,
+  "blue-30": $blue-30,
+  "blue-20": $blue-20,
+  "blue-10": $blue-10,
+  // Blue-Dark Gradient
+  "blue-dark-90": $blue-dark-90,
+  "blue-dark-80": $blue-dark-80,
+  "blue-dark-70": $blue-dark-70,
+  "blue-dark-60": $blue-dark-60,
+  "blue-dark-50": $blue-dark-50,
+  "blue-dark-40": $blue-dark-40,
+  "blue-dark-30": $blue-dark-30,
+  "blue-dark-20": $blue-dark-20,
+  "blue-dark-10": $blue-dark-10,
+  // Blue-Light Gradient
+  "blue-light-90": $blue-light-90,
+  "blue-light-80": $blue-light-80,
+  "blue-light-70": $blue-light-70,
+  "blue-light-60": $blue-light-60,
+  "blue-light-50": $blue-light-50,
+  "blue-light-40": $blue-light-40,
+  "blue-light-30": $blue-light-30,
+  "blue-light-20": $blue-light-20,
+  "blue-light-10": $blue-light-10,
+  // Green Colors
+  "green": $green,
+  "green-dark": $green-dark,
+  "green-light": $green-light,
+  // Green Gradient
+  "green-90": $green-90,
+  "green-80": $green-80,
+  "green-70": $green-70,
+  "green-60": $green-60,
+  "green-50": $green-50,
+  "green-40": $green-40,
+  "green-30": $green-30,
+  "green-20": $green-20,
+  "green-10": $green-10,
+
+  // Green-Dark Gradient
+  "green-dark-90": $green-dark-90,
+  "green-dark-80": $green-dark-80,
+  "green-dark-70": $green-dark-70,
+  "green-dark-60": $green-dark-60,
+  "green-dark-50": $green-dark-50,
+  "green-dark-40": $green-dark-40,
+  "green-dark-30": $green-dark-30,
+  "green-dark-20": $green-dark-20,
+  "green-dark-10": $green-dark-10,
+  // Green-Light Gradient
+  "green-light-90": $green-light-90,
+  "green-light-80": $green-light-80,
+  "green-light-70": $green-light-70,
+  "green-light-60": $green-light-60,
+  "green-light-50": $green-light-50,
+  "green-light-40": $green-light-40,
+  "green-light-30": $green-light-30,
+  "green-light-20": $green-light-20,
+  "green-light-10": $green-light-10,
+  // Red Colors
+  "red": $red,
+  "red-light": $red-light,
+  // Red Gradient
+  "red-90": $red-90,
+  "red-80": $red-80,
+  "red-70": $red-70,
+  "red-60": $red-60,
+  "red-50": $red-50,
+  "red-40": $red-40,
   "red-30": $red-30,
+  "red-20": $red-20,
+  "red-10": $red-10,
+  // Yellow Colors
+  "yellow": $yellow,
+  // Yellow Gradient
+  "yellow-90": $yellow-90,
+  "yellow-80": $yellow-80,
+  "yellow-70": $yellow-70,
+  "yellow-60": $yellow-60,
+  "yellow-50": $yellow-50,
+  "yellow-40": $yellow-40,
+  "yellow-30": $yellow-30,
+  "yellow-20": $yellow-20,
+  "yellow-10": $yellow-10,
+  // Beige Colors
+  "beige": $beige,
+  "beige-dark": $beige-dark,
+  // Beige Gradient
+  "beige-90": $beige-90,
+  "beige-80": $beige-80,
+  "beige-70": $beige-70,
+  "beige-60": $beige-60,
+  "beige-50": $beige-50,
+  "beige-40": $beige-40,
+  "beige-30": $beige-30,
+  "beige-20": $beige-20,
+  "beige-10": $beige-10,
+  // Beige-Dark Gradient
+  "beige-dark-90": $beige-dark-90,
+  "beige-dark-80": $beige-dark-80,
+  "beige-dark-70": $beige-dark-70,
+  "beige-dark-60": $beige-dark-60,
+  "beige-dark-50": $beige-dark-50,
+  "beige-dark-40": $beige-dark-40,
+  "beige-dark-30": $beige-dark-30,
+  "beige-dark-20": $beige-dark-20,
+  "beige-dark-10": $beige-dark-10
 );
 
 @each $name, $color in $colors {
