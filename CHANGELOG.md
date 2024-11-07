@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added missing developer tab for date and time.
+- Fixed an issue with the close button focus outline in modal.
 
 ### Changed
 
