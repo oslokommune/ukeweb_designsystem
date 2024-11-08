@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (testCasesElement) {
     const testCases = [
       {
+        dateFrom: new Date(2021, 1, 5, 8, 5, 32),
+        dateTo: null,
+        dateFromOptions: {},
+        dateToOptions: {},
+        toString: 'OdsDateTime.format(new Date(2021, 11, 30, 8, 5, 32))',
+      },
+      {
         dateFrom: new Date(2021, 11, 30, 8, 5, 32),
         dateTo: null,
         dateFromOptions: {},
