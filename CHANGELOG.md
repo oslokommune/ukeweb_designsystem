@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed all dates to actually adhere to "Keep a changelog".
 - Fixed locale formatting for dates to adhere to Oslo kommunes writing rules.
+- Fixed outline on dropdown elements in search and search seasons.
 
 ### Added
 

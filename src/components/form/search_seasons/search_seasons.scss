@@ -220,7 +220,7 @@
       }
 
       &-last {
-        @extend %ods-margin-bottom-4;
+        @extend %ods-padding-bottom-4;
 
         &:focus-visible {
           box-shadow: 0 0 0 0.125rem colors.$blue-state;
