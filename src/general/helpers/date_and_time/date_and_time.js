@@ -61,14 +61,14 @@ const OdsDateTime = {
           options.localeOptions = { hour: 'numeric', minute: 'numeric', ...options.localeOptions };
 
           if (options.type === 'to' && typeof options.prefix === 'undefined') {
-            options.prefix = '&mdash;';
+            options.prefix = '&ndash;';
           }
           break;
         case 'datetime':
-          options.localeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', ...options.localeOptions };
+          options.localeOptions = { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', ...options.localeOptions };
 
           if (options.type === 'to' && options.format === 'time' && typeof options.prefix === 'undefined') {
-            options.prefix = '&mdash;';
+            options.prefix = '&ndash;';
           }
           break;
         case 'daytime':
@@ -78,10 +78,10 @@ const OdsDateTime = {
           options.localeOptions = { ...options.localeOptions };
           break;
         default:
-          options.localeOptions = { year: 'numeric', month: 'numeric', day: 'numeric', ...options.localeOptions };
+          options.localeOptions = { year: 'numeric', month: '2-digit', day: '2-digit', ...options.localeOptions };
 
           if (options.type === 'to' && typeof options.prefix === 'undefined') {
-            options.prefix = '&mdash;';
+            options.prefix = '&ndash;';
           }
       }
     });
