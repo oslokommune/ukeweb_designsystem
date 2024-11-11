@@ -1,5 +1,5 @@
 $icons: (
-  {% for glyph in glyphs %}
-    "{{ glyph.name | replace(" ", "-") | lower }}": "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}",
+  {% for svg in svgs %}
+    "{{ svg.name | replace(" ", "-") | lower }}": "\{{ svg.unicode | lower }}"{% if not loop.last %},{% endif %}
   {% endfor %}
 );

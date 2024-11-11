@@ -8,7 +8,7 @@
     "build:icons:minimize": "svgo src/assets/icons/*.svg",
     "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
     "build:icons:font": "npm run build:icons:svgtofont",
-    "build:icons:svgtofont": "svgtofont --sources 'src/assets/icons/' --output 'src/assets/fonts/'",
+    "build:icons:svgtofont": "svgtofont --sources 'src/assets/icons/' --output 'src/assets/fonts/' --fontName 'OsloIcons2' --scss --template 'src/utils/_icon-map.scss.njk' --cssDest 'src/system/icon-map2'",
     "lint": "./node_modules/.bin/eslint --ext .js,.vue ./src && ./node_modules/.bin/stylelint './src/**/*.scss'",
     "eslint": "./node_modules/.bin/eslint --ext .js,.vue ./src",
     "stylelint": "./node_modules/.bin/stylelint './src/**/*.scss'",
