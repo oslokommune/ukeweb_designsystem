@@ -16,11 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed all dates to actually adhere to "Keep a changelog".
 - Fixed an issue causing some links to not break correctly.
 - Fixed locale formatting for dates to adhere to Oslo kommunes writing rules.
+- Fixed an issue with the close button focus outline in modal.
 
 ### Added
 
 - Added missing developer tab for date and time.
-- Fixed an issue with the close button focus outline in modal.
 
 ## [2.0.0] - 2024-05-23
 
