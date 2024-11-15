@@ -24,7 +24,6 @@
 .ods-ordered-list {
   padding-left: 1.25rem;
   list-style: decimal;
-  list-style-position: inside;
 
   & & {
     @extend %ods-padding-top-2;

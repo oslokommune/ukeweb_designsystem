@@ -16,9 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed all dates to actually adhere to "Keep a changelog".
+- Fixed an issue causing some links to not break correctly.
 - Fixed locale formatting for dates to adhere to Oslo kommunes writing rules.
 - Fixed spacing on calendar icon in date component.
 - Fixed an issue causing some links to not break correctly.
+- Fixed the positioning of ordered lists to line up with rest of content.
 
 ### Added
 
