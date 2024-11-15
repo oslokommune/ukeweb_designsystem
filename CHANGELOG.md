@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed locale formatting for dates to adhere to Oslo kommunes writing rules.
 - Fixed an issue with the close button focus outline in modal.
 - Fixed outline on dropdown elements in search and search seasons.
+- Fixed the positioning of ordered lists to line up with rest of content.
 
 ### Added
 
