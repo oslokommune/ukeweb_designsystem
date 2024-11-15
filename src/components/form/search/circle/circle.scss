@@ -192,6 +192,12 @@
 
       &-last {
         @extend %ods-padding-bottom-4;
+
+        &:focus-visible {
+          box-shadow: 0 0 0 0.125rem colors.$blue-state;
+          outline-offset: 0.125rem;
+          outline: 0.25rem solid colors.$purple-light;
+        }
       }
     }
   }
@@ -222,6 +228,12 @@
       background-color: colors.$gray-light;
       color: states.$hover;
       text-decoration: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.125rem colors.$blue-state;
+      outline-offset: 0.125rem;
+      outline: 0.25rem solid colors.$purple-light;
     }
 
     &--divider {
