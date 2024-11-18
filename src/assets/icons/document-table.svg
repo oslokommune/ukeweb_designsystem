@@ -1,12 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.83519 14H12.7528V16H8.83519V14Z" fill="#2A2859"/>
-<path d="M8.83519 18H12.7528V20H8.83519V18Z" fill="#2A2859"/>
-<path d="M8.83519 22H12.7528V24H8.83519V22Z" fill="#2A2859"/>
-<path d="M14.7116 14H18.6292V16H14.7116V14Z" fill="#2A2859"/>
-<path d="M14.7116 18H18.6292V20H14.7116V18Z" fill="#2A2859"/>
-<path d="M14.7116 22H18.6292V24H14.7116V22Z" fill="#2A2859"/>
-<path d="M20.588 14H24.5055V16H20.588V14Z" fill="#2A2859"/>
-<path d="M20.588 18H24.5055V20H20.588V18Z" fill="#2A2859"/>
-<path d="M20.588 22H24.5055V24H20.588V22Z" fill="#2A2859"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28.4231 7L23.5261 1H4.9176V31H28.4231V7ZM26.4643 29H6.8764V3H21.5673V9H26.4643V29ZM25.8733 7L23.5261 4.1241V7H25.8733Z" fill="#2A2859"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Document-table" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="8.99" y="13.91" width="3.83" height="2"/><rect x="14.07" y="13.91" width="3.83" height="2"/><rect x="19.06" y="13.91" width="3.83" height="2"/><rect x="8.99" y="18.09" width="3.83" height="2"/><rect x="14.07" y="18.09" width="3.83" height="2"/><rect x="19.06" y="18.09" width="3.83" height="2"/><rect x="8.99" y="21.86" width="3.83" height="2"/><rect x="14.07" y="21.86" width="3.83" height="2"/><rect x="19.06" y="21.86" width="3.83" height="2"/><path d="M21.65.9H5.02v30.06h21.95V7.4L21.65.9ZM21.47,3.67l2.7,3.3h-2.7v-3.3ZM6.85,28.96V2.9h12.79v6.07h5.5v19.99H6.85Z"/></svg>
