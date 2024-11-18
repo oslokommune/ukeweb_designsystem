@@ -9,11 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added missing developer tab for date and time.
 - Added new gradient colours.
+- Added the Oslove logo.
+- Added new link-arrow icon.
 
 ### Fixed
 
 - Fixed all dates to actually adhere to "Keep a changelog".
+- Fixed spacing on calendar icon in date component.
+- Fixed an issue causing some links to not break correctly.
+- Fixed locale formatting for dates to adhere to Oslo kommunes writing rules.
+- Fixed an issue with the close button focus outline in modal.
+- Fixed outline on dropdown elements in search and search seasons.
+- Fixed the positioning of ordered lists to line up with rest of content.
+
 
 ## [2.0.0] - 2024-05-23
 
