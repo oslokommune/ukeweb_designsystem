@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added missing developer tab for date and time.
 - Added new gradient colours.
 - Added the Oslove logo.
-- Added new link-arrow icon.
+- Added link-arrow, qr-code, document-code, law-paragraph, lock-unlocked, character-exclamation-mark, adjust, lock-locked, cogwheel, folder, apple, computer, document-plain, character-information, archive, document-text, document-table, document-pdf, ruler, copy and arrow-circle icons.
 
 ### Fixed
 
