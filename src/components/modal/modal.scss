@@ -67,8 +67,15 @@ $ods-modal-popup-width: 600px !default;
   &__content {
     background: white;
     overflow: auto;
-    @extend %ods-padding-top-0;
+
+    @extend %ods-padding-top-6;
     @extend %ods-padding-bottom-13;
-    @extend %ods-padding-horizontal-13;
+    @extend %ods-padding-horizontal-6;
+
+    @include breakpoints.medium {
+      padding-top: 32px;
+      padding-left: 52px;
+      padding-right: 52px;
+    }
   }
 }

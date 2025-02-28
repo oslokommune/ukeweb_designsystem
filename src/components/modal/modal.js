@@ -2,9 +2,7 @@ let toggleModal;
 
 const trapFocus = (event) => {
   const isTabPressed = event.key === 'Tab';
-  if (!isTabPressed) {
-    return;
-  }
+  if (!isTabPressed) return;
 
   const currentElement = event.target;
   const modalContent = document.querySelectorAll('.ods-modal')[0];
@@ -28,7 +26,13 @@ const trapFocus = (event) => {
 const closeModal = (modal) => {
   if (modal) {
     modal.classList.remove('ods-modal--open');
-    modal.querySelector('.ods-modal__button button').removeEventListener('click', toggleModal, false);
+
+    // Only remove event listener if close button exists
+    const closeButton = modal.querySelector('.ods-modal__button button');
+    if (closeButton) {
+      closeButton.removeEventListener('click', toggleModal, false);
+    }
+
     modal.setAttribute('aria-hidden', 'true');
     document.removeEventListener('keyup', trapFocus, false);
 
@@ -37,9 +41,7 @@ const closeModal = (modal) => {
       let { parentNode } = trigger;
 
       while (parentNode) {
-        if (parentNode.classList?.contains('ods-modal')) {
-          return false;
-        }
+        if (parentNode.classList?.contains('ods-modal')) return false;
         parentNode = parentNode.parentNode;
       }
 
@@ -61,10 +63,18 @@ toggleModal = (event) => {
     const open = modalContent.classList.toggle('ods-modal--open');
 
     if (open) {
-      modalContent.querySelectorAll('input,checkbox')[0].focus();
+      modalContent.querySelectorAll('input,checkbox')[0]?.focus();
       document.addEventListener('keyup', trapFocus, false);
 
-      modalContent.querySelector('.ods-modal__button button').addEventListener('click', toggleModal, false);
+      const closeButton = modalContent.querySelector('.ods-modal__button button');
+      if (closeButton) {
+        closeButton.addEventListener('click', toggleModal, false);
+      } else {
+        // If there's no close button, allow any button inside the modal to close it
+        modalContent.querySelectorAll('.ods-modal__content button').forEach((btn) => {
+          btn.addEventListener('click', () => closeModal(modalContent), false);
+        });
+      }
     } else {
       closeModal(modalContent);
     }
