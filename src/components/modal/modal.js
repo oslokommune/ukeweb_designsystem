@@ -70,8 +70,8 @@ toggleModal = (event) => {
       if (closeButton) {
         closeButton.addEventListener('click', toggleModal, false);
       } else {
-        // If there's no close button, allow any button inside the modal to close it
-        modalContent.querySelectorAll('.ods-modal__content button').forEach((btn) => {
+        // If there's no close button, only allow buttons with the trigger class inside the modal to close it
+        modalContent.querySelectorAll('.ods-modal__content .ods-modal-trigger').forEach((btn) => {
           btn.addEventListener('click', () => closeModal(modalContent), false);
         });
       }

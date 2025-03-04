@@ -51,7 +51,6 @@ $ods-modal-popup-width: 600px !default;
     background: white;
     display: flex;
     justify-content: flex-end;
-    @extend %ods-padding-4;
 
     @include breakpoints.medium {
       background: transparent;
@@ -69,7 +68,7 @@ $ods-modal-popup-width: 600px !default;
     overflow: auto;
 
     @extend %ods-padding-top-6;
-    @extend %ods-padding-bottom-13;
+    @extend %ods-padding-bottom-8;
     @extend %ods-padding-horizontal-6;
 
     @include breakpoints.medium {
