@@ -1,5 +1,13 @@
 let toggleModal;
 
+// document.addEventListener("odsModalOpened", () => {
+//   document.body.classList.add("ods-prevent-scroll");
+// });
+// document.addEventListener("odsModalClosed", () => {
+//   document.body.classList.remove("ods-prevent-scroll");
+// });
+
+
 const trapFocus = (event) => {
   const isTabPressed = event.key === 'Tab';
   if (!isTabPressed) return;
@@ -48,6 +56,8 @@ const closeModal = (modal) => {
       trigger.focus();
       return true;
     });
+
+    modal.dispatchEvent(new CustomEvent('odsModalClosed', { bubbles: true }));
   }
 };
 
@@ -63,6 +73,7 @@ toggleModal = (event) => {
     const open = modalContent.classList.toggle('ods-modal--open');
 
     if (open) {
+      modalContent.dispatchEvent(new CustomEvent('odsModalOpened', { bubbles: true }));
       modalContent.querySelectorAll('input,checkbox')[0]?.focus();
       document.addEventListener('keyup', trapFocus, false);
 
