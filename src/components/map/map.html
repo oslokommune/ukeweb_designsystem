@@ -4,7 +4,7 @@
     <div class="ods-grid__column--12">
       <h3><button class="ods-collapsible-trigger ods-collapsible-trigger--block" aria-expanded="false" aria-controls="map-technical-info">Show technical map info</button></h3>
       <div id="map-technical-info" class="ods-collapsible-content ods-collapsible-content--block ods-collapsible-content--collapsed ods-collapsible-content--ease">
-        <div class="ods-infobox ods-infobox--yellow">
+        <!-- <div class="ods-infobox ods-infobox--yellow">
           <h1 class="ods-infobox__heading">Technical details on the use of maps</h1>
           <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">API-keys</h2>
           <p>The API-key that is used on this page is just for use in the Designsystem, and is limited to the relevant domains.</p>
@@ -95,18 +95,34 @@
           <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">Highlight a polygon</h2>
           <p>If you need to highlight a polygon, add the property <code class="ods-code">highlight</code> with a value of <code class="ods-code">true</code> to the polygon.</p>
           <p>It will get another fill and border colour than normal polygons.</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Single marker with automatic popup and ratio for different breakpoints</h2>
       <div class="ods-devtools-code">
-        <div class="ods-map" id="ods-map">
+        <!-- <div id="map" style="width:100vw; height:100vh;"></div> -->
+        <!-- <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+        <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+        <script>
+          const map = new maplibregl.Map({
+            container: 'map',
+            // style: 'https://api.maptiler.com/maps/basic/style.json?key=VW1Tn0fx1t3b6t0CHP6Q',
+            style: 'https://api.maptiler.com/maps/79adf164-6825-4f19-8239-52582627143a/style.json?key=VW1Tn0fx1t3b6t0CHP6Q',
+            center: [10.74981, 59.913008],
+            zoom: 12
+          });
+          map.on('load', () => {
+            console.log('MapLibre loaded');
+          });
+        </script> -->
+
+        <div class="ods-map"  id="ods-map">
           <ods-map ref="odsMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, openPopup: true, popupContent: '<h2>Bob the Building</h2>' }]" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
         </div>
       </div>
     </div>
-    <div class="ods-grid__column--12">
+    <!-- <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Markers with clustering</h2>
       <div class="ods-devtools-code">
         <div class="ods-map" id="ods-map2">
@@ -121,13 +137,13 @@
           <ods-map ref="odsMap3" api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="geoJsonData"></ods-map>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
 <!-- Developer mode -->
 <div class="ods-devtools-devmode">
-  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+  <!-- <div class="ods-grid ods-grid--gap ods-grid--gutter">
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Single marker with automatic popup</h2>
     </div>
@@ -191,5 +207,5 @@
         <ods-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

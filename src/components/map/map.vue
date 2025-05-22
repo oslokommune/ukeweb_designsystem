@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="ods-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
     <div v-show="error" class="ods-status-message ods-status-message--warning" aria-live="polite">
@@ -685,5 +685,98 @@ export default {
       }
     },
   },
+};
+</script> -->
+
+<!-- <template>
+  <div class="ods-map__container">
+    <div ref="mapContainer" class="ods-map"></div>
+  </div>
+</template> -->
+<!-- <template>
+  <div class="ods-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
+</template>
+
+<script>
+import maplibregl from 'maplibre-gl';
+import style from './style.js';
+
+export default {
+  name: 'OdsMap',
+  props: {
+    apiKey: {
+      type: String,
+      required: true
+    },
+    points: {
+      type: Array,
+      default: () => []
+    },
+    ratio: {
+      type: String,
+      default: 'ods-ratio-16-9'
+    }
+  },
+
+  mounted() {
+    const el = this.$refs.mapContainer;
+    console.log('Width:', el.offsetWidth, 'Height:', el.offsetHeight);
+
+
+    this.map = new maplibregl.Map({
+      container: this.$refs.mapContainer,
+      // style: 'https://demotiles.maplibre.org/debug-tiles/style.json',
+      // style: 'https://api.maptiler.com/maps/streets/style.json?key=VW1Tn0fx1t3b6t0CHP6Q',
+      // style: `https://api.maptiler.com/maps/streets/style.json?key=${this.apiKey}`,
+      // style: 'https://api.maptiler.com/maps/79adf164-6825-4f19-8239-52582627143a/style.json?key=VW1Tn0fx1t3b6t0CHP6Q',
+      style: 'https://demotiles.maplibre.org/style.json',
+      center: [13.4, 52.5], // Berlin, near water
+      zoom: 10
+    });
+
+    this.map.on('load', () => {
+      setTimeout(() => this.map.resize(), 100);
+    });
+
+    this.map.on('error', (e) => {
+      console.error('MapLibre error:', e);
+    });
+
+    this.points.forEach(point => {
+      new maplibregl.Marker()
+        .setLngLat([point.longitude, point.latitude])
+        .setPopup(new maplibregl.Popup().setHTML(point.popupContent))
+        .addTo(this.map);
+    });
+  },
+};
+</script>
+ -->
+
+
+<template>
+  <div ref="mapContainer" style="width:100%; height:400px; background:#eee;"></div>
+</template>
+
+<script>
+import maplibregl from 'maplibre-gl';
+
+export default {
+  name: 'MapLibreTest',
+  mounted() {
+    console.log('Container size:', this.$refs.mapContainer.offsetWidth, this.$refs.mapContainer.offsetHeight);
+    this.map = new maplibregl.Map({
+      container: this.$refs.mapContainer,
+      style: 'https://demotiles.maplibre.org/style.json', // MapLibre demo style
+      // style: 'https://api.maptiler.com/maps/streets/style.json?key=VW1Tn0fx1t3b6t0CHP6Q', // Oslo kommunes style
+      center: [10.74981, 59.913008],
+      zoom: 13
+    });
+
+    this.map.on('load', () => {
+      console.log('Map loaded');
+      this.map.resize();
+    });
+  }
 };
 </script>
