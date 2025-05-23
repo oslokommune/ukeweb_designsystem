@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.1.0] - 2024-11-21
 
 ### Added
 
@@ -23,7 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed an issue with the close button focus outline in modal.
 - Fixed outline on dropdown elements in search and search seasons.
 - Fixed the positioning of ordered lists to line up with rest of content.
-
 
 ## [2.0.0] - 2024-05-23
 

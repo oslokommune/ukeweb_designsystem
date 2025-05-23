@@ -1,18 +1,9 @@
-# Security Policy
+# Reporting Security Issues
 
-## Supported Versions
-The versions with a checkmark are currently being supported in terms of security.
+The development team take security bugs seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 2.0.x   | :white_check_mark: |
-| 1.0.x   | :x:                |
-| 0.x.x   | :x:                |
+To report a security issue, please use the GitHub Security Advisory ["Report a Vulnerability"](https://github.com/oslokommune/ukeweb_designsystem/security/advisories/new) tab.
 
-## Reporting a Vulnerability
-If you discover a vulnerability, please follow our guidelines for reporting a vulnerability.
+The development team will send a response indicating the next steps in handling your report. After the initial reply to your report, the security team will keep you informed of the progress towards a fix and full announcement, and may ask for additional information or guidance.
 
-## Guidelines
-- Please contact us at our e-mail [devnull@uke.oslo.kommune.no](mailto:devnull@uke.oslo.kommune.no) if you find security vulnerabilities in Oslo Designsystem.
-- Give us reasonable time to address and release fixes before publicizing them.
-- Pleave provide a full report with explanations and possible exploits.
+You can also report a vulnerability through the [npm contact form](https://www.npmjs.com/support) by selecting "I'm reporting a security vulnerability".
