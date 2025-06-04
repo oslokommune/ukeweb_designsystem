@@ -295,19 +295,24 @@ export default {
 
       this.showPopups = this.state.showPopups;
 
-      this.mapObject.loadImage('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/location-pin-filled.png', (error, image) => {
-        if (error) throw error;
-        this.mapObject.addImage('location-pin-filled', image);
-      });
-
       this.mapObject.on('load', () => {
-        this.mapReady = true;
-        this.resize();
+          this.mapReady = true;
+          this.resize();
 
-        // If there is data available, show it now plz.
-        this.populateMap();
-      });
-    },
+          this.mapObject.loadImage('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/location-pin-filled.png')
+            .then((result) => {
+              const image = result.data instanceof ImageBitmap ? result.data : result;
+              if (!this.mapObject.hasImage('location-pin-filled')) {
+                this.mapObject.addImage('location-pin-filled', image);
+              }
+              this.populateMap();
+            })
+            .catch((error) => {
+              this.error = true;
+              this.technicalErrorText = error.message;
+            });
+        });
+      },
     // Private/protected method
     $_getCoordinatesForGeoJsonObject(geoJson) {
       let coordinates;
