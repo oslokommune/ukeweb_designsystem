@@ -46,23 +46,24 @@
   }
 
   &__heading {
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-large;
     @extend %ods-text--weight-medium;
 
     position: relative;
     top: 0.25em;
-    margin-left: calc(2em + 12px);
+    margin-left: calc(2rem + 12px);
     @include breakpoints.large {
-        margin-left: calc(2em + 16px);
+        margin-left: calc(2rem + 16px);
       }
   }
 
   &__text {
     @extend %ods-margin-top-3, %ods-margin-top-4-breakpoint-large;
+    @extend %ods-text--weight-light;
 
-    margin-left: calc(2em + 12px);
+    margin-left: calc(2rem + 12px);
     @include breakpoints.large {
-        margin-left: calc(2em + 16px);
+        margin-left: calc(2rem + 16px);
       }
   }
 }
