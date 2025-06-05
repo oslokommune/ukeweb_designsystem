@@ -7,33 +7,58 @@
   list-style: none;
   counter-reset: orderedlist;
 
-  &__item:not(:last-child) {
-    @extend %ods-margin-bottom-8;
-  }
-
-  &__item::before {
-    text-align: center;
-    @extend %ods-margin-right-1;
+  &__item {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
-    @extend %ods-text--weight-medium;
 
-    counter-increment: orderedlist;
-    content: counter(orderedlist);
-    border: 2px solid colors.$blue-dark;
-    border-radius: 100%;
-    display: inline-block;
-    height: 2em;
-    width: 2em;
-    padding-top: 0.15em;
+    position: relative;
+
+    &:not(:last-child) {
+      @extend %ods-padding-bottom-6;
+    }
+
+
+    &::before {
+      @extend %ods-margin-right-1;
+      @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+      @extend %ods-text--weight-medium;
+
+      counter-increment: orderedlist;
+      content: counter(orderedlist);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      padding-top: 0.15em;
+      text-align: center;
+      border: 2px solid colors.$blue-dark;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 1em;
+      top: 2em;
+      bottom: 0;
+      border-left: 2px solid colors.$blue-dark;
+    }
   }
 
   &__heading {
-    display: inline;
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-medium;
+
+    display: inline;
+    position: relative;
+    margin-left: 2.5em;
+    top: 0.25em;
   }
 
   &__text {
-    @extend %ods-margin-top-1;
+    @extend %ods-margin-top-4;
+
+    margin-left: 2.5em;
   }
 }
