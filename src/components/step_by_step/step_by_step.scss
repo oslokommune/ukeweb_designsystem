@@ -13,9 +13,8 @@
     position: relative;
 
     &:not(:last-child) {
-      @extend %ods-padding-bottom-6;
+      @extend %ods-padding-bottom-4, %ods-padding-bottom-6-breakpoint-large;
     }
-
 
     &::before {
       @extend %ods-margin-right-1;
