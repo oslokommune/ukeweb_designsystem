@@ -50,7 +50,7 @@
     @extend %ods-text--weight-medium;
 
     position: relative;
-    top: 0.25em;
+    top: 0.15em;
     margin-left: calc(2rem + 12px);
     @include breakpoints.large {
         margin-left: calc(2rem + 16px);
