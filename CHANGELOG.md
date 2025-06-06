@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - 2025-6-6
+
+### Added
+
+- Link icon.
+- Green light colour option for banner.
+- Added no-image modifier for service header component.
+
+### Changed
+
+- Changed spacing on message component.
+- Changed keyboard focus-style for normal links.
+
+### Fixed
+
+- Fixed icons.
+- Fixed list bulletpoint placement when used with long links.
+- Fixed a warning that was causing spam in the logs.
+
+### Removed
+
+- Removed drop-shadow styling from status messages.
+
 ## [2.1.0] - 2024-11-21
 
 ### Added
