@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed spacing on message component.
 - Changed keyboard focus-style for normal links.
+- Changed step by step component to have a whole new look.
 
 ### Fixed
 
