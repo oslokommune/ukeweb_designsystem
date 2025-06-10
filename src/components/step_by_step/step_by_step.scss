@@ -38,7 +38,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 1em;
+      left: 0.95em;
       top: 2em;
       bottom: 0;
       border-left: 2px solid colors.$blue-dark;
@@ -51,9 +51,9 @@
 
     position: relative;
     top: 0.15em;
-    margin-left: calc(2rem + 12px);
+    margin-left: 2.75rem;
     @include breakpoints.large {
-        margin-left: calc(2rem + 16px);
+        margin-left: 3rem;
       }
   }
 
@@ -61,9 +61,9 @@
     @extend %ods-margin-top-3, %ods-margin-top-4-breakpoint-large;
     @extend %ods-text--weight-light;
 
-    margin-left: calc(2rem + 12px);
+    margin-left: 2.75rem;
     @include breakpoints.large {
-        margin-left: calc(2rem + 16px);
+        margin-left: 3rem;
       }
   }
 }
