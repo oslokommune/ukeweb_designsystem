@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed icons.
 - Fixed list bulletpoint placement when used with long links.
-- Fixed a warning that was causing spam in the logs.
+- Fixed a sass dart deprecation.
 
 ### Removed
 
