@@ -113,6 +113,7 @@ const uiIconsList = [
   'lock-unlocked',
   'qr-code',
   'ruler',
+  'link',
 ];
 
 uiIconsList.sort();

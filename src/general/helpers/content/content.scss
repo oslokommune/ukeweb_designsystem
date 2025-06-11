@@ -56,6 +56,14 @@
     @extend .ods-link; /* stylelint-disable-line */
   }
 
+   // Force inline override of links in lists
+  ul li a:not(.ods-button),
+  ol li a:not(.ods-button) {
+    @extend .ods-link; /* stylelint-disable-line */
+
+    display: inline;
+  }
+
   ul {
     @extend .ods-unordered-list, %ods-margin-vertical-5; /* stylelint-disable-line */
 

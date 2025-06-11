@@ -15,6 +15,12 @@
     @include breakpoints.medium {
       grid-column: span 8;
     }
+
+    &--no-image {
+      @include breakpoints.medium {
+        grid-column: span 12;
+      }
+    }
   }
 
   &__heading {
