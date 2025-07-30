@@ -3,7 +3,7 @@
 
 .ods-contactpoint {
   &__media {
-    @extend %ods-margin-bottom-2;
+    @extend %ods-margin-bottom-2, %ods-margin-bottom-3-breakpoint-large;
 
     max-width: 50%;
 
@@ -24,10 +24,15 @@
   }
 
   &__label {
+    @extend %ods-margin-top-2, %ods-margin-top-3-breakpoint-large;
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-medium;
   }
 
   &__value {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
+  }
+
+  &__time {
+    @extend %ods-text--size-lima, %ods-text--weight-light;
   }
 }
