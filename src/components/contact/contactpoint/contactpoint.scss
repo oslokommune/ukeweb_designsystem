@@ -5,7 +5,7 @@
   &__media {
     @extend %ods-margin-bottom-2, %ods-margin-bottom-3-breakpoint-large;
 
-    max-width: 50%;
+    max-width: 40%;
 
     img {
       object-fit: cover;
@@ -15,8 +15,12 @@
   }
 
   &__heading {
-    @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-large;
+    @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-large;
     @extend %ods-text--weight-medium;
+  }
+
+  &__media + &__heading {
+    @extend  %ods-text--size-hotel-breakpoint-large;
   }
 
   &__group {
@@ -29,10 +33,19 @@
   }
 
   &__value {
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
+    @extend %ods-text--size-kilo, %ods-text--size-kilo-breakpoint-large, %ods-text--weight-light;
   }
 
   &__time {
+    @extend %ods-text--size-lima, %ods-text--weight-light;
+  }
+
+  &__affiliation {
+    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
+    @extend %ods-margin-bottom-1;
+  }
+
+  &__role {
     @extend %ods-text--size-lima, %ods-text--weight-light;
   }
 }
