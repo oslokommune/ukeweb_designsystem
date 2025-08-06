@@ -7,6 +7,96 @@
 @use "sass:map";
 
 .ods-accordion {
+  &--outlined {
+    & .ods-accordion__item {
+      border: 2px solid #F2F2F2;
+      @extend %ods-margin-top-3;
+    }
+
+    & .ods-accordion__trigger,
+    & .ods-accordion__description {
+      @extend %ods-padding-right-4;
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-padding-left-4, %ods-padding-top-3;
+      @extend %ods-padding-bottom-3;
+
+      &--chevron::after {
+        @extend %ods-icon--size-juliett;
+
+        @include breakpoints.medium {
+          margin-right: 0;
+        }
+      }
+    }
+
+    & .ods-accordion__description {
+      @extend %ods-text--weight-regular;
+      display: block;
+    }
+
+    & .ods-accordion__content {
+      @extend %ods-padding-bottom-3, %ods-padding-top-2;
+      @extend %ods-padding-horizontal-4;
+      @extend %ods-margin-bottom-0;
+    }
+  }
+
+  &--underlined {
+    & .ods-accordion__item {
+      border-bottom: 2px solid #F2F2F2;
+      @extend %ods-margin-top-3;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    & .ods-accordion__trigger,
+    & .ods-accordion__description {
+      @extend %ods-padding-left-0, %ods-padding-right-11;
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-padding-bottom-1;
+    }
+
+    & .ods-accordion__description {
+      @extend %ods-padding-bottom-5;
+    }
+  }
+
+  &--outlined,
+  &--underlined {
+    & .ods-accordion__heading {
+      @extend %ods-text--size-juliett;
+      @extend %ods-text--weight-medium;
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-margin-top-0;
+      @extend %ods-padding-bottom-2;
+
+      &:focus,
+      &:active,
+      &--focus,
+      &--active {
+        background-color: colors.$white;
+        color: colors.$blue-state;
+      }
+    }
+
+    & .ods-accordion__description {
+      // @extend %ods-padding-left-5, %ods-padding-right-11;
+      // @extend %ods-padding-bottom-5, %ods-padding-bottom-6-breakpoint-medium;
+      @extend %ods-text--size-kilo;
+
+
+      background-color: colors.$white;
+    }
+  }
+
   &__main-heading {
     @extend %ods-text--size-golf, %ods-text--size-delta-breakpoint-large;
     @extend %ods-text--weight-regular;
@@ -71,11 +161,26 @@
       outline: 0.25rem solid colors.$purple-light;
     }
 
-    &::after {
+    &--chevron::after {
       @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
 
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
       content: map.get(icon-map.$icons, "chevron-thin-down");
+      right: 0;
+      top: 50%;
+      position: absolute;
+      text-align: center;
+
+      @include breakpoints.medium {
+        margin-right: 0.75rem;
+      }
+    }
+    &--plus::after {
+      // @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
+      @extend %ods-icon--size-juliett;
+
+      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
+      content: map.get(icon-map.$icons, "plus-sign");
       right: 0;
       top: 50%;
       position: absolute;
