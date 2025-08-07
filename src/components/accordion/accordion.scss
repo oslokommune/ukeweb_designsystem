@@ -153,29 +153,21 @@
     }
 
     &--chevron::after {
+      content: map.get(icon-map.$icons, "chevron-thin-down");
+    }
+
+    &--plus::after {
+      content: map.get(icon-map.$icons, "plus-sign");
+    }
+
+    &::after {
       @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
 
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      content: map.get(icon-map.$icons, "chevron-thin-down");
-      right: 0;
-      top: 50%;
       position: absolute;
-      text-align: center;
-
-      @include breakpoints.medium {
-        margin-right: 0.75rem;
-      }
-    }
-    &--plus::after {
-      // @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
-      @extend %ods-icon--size-juliett;
-
-      font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      content: map.get(icon-map.$icons, "plus-sign");
       right: 0;
-      top: 50%;
-      position: absolute;
       text-align: center;
+      top: 50%;
 
       @include breakpoints.medium {
         margin-right: 0.75rem;
