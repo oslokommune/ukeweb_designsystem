@@ -20,7 +20,7 @@
     }
 
     & .ods-accordion__trigger {
-      @extend %ods-padding-top-3, %ods-padding-bottom-3, %ods-padding-left-4;
+      @extend %ods-padding-bottom-3, %ods-padding-left-4;
 
       &--chevron::after,
       &--plus::after {
@@ -45,7 +45,7 @@
     }
 
     & .ods-accordion__trigger {
-      @extend %ods-padding-top-3, %ods-padding-right-5, %ods-padding-bottom-2, %ods-padding-left-0;
+      @extend %ods-padding-right-5, %ods-padding-bottom-2, %ods-padding-left-0;
       @extend %ods-margin-bottom-1; // This makes the trigger focus style visible
     }
 
@@ -63,8 +63,7 @@
     }
 
     & .ods-accordion__trigger {
-      @extend %ods-margin-top-0;
-      @extend %ods-padding-bottom-2;
+      @extend %ods-padding-top-3, %ods-margin-top-0;
 
       &:focus,
       &:active,
