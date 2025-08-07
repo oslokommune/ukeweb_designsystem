@@ -16,7 +16,7 @@
 
     & .ods-accordion__trigger,
     & .ods-accordion__description {
-      @extend %ods-padding-right-4;
+      @extend %ods-padding-right-19;
     }
 
     & .ods-accordion__trigger {
@@ -45,7 +45,7 @@
     }
 
     & .ods-accordion__trigger {
-      @extend %ods-padding-right-5, %ods-padding-bottom-2, %ods-padding-left-0;
+      @extend %ods-padding-right-19, %ods-padding-bottom-2, %ods-padding-left-0;
       @extend %ods-margin-bottom-1; // This makes the trigger focus style visible
     }
 
