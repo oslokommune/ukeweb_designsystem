@@ -11,6 +11,7 @@ function handleAnimation(e) {
   if (e.target.classList.contains('ods-animation') && e.target.classList.contains('ods-animation--rotate-plus-minus')) {
     e.target.classList.toggle('ods-animation--rotate-plus-minus-open');
   }
+
   else if (e.target.classList.contains('ods-animation')) {
     e.target.classList.toggle('ods-animation--rotate-open');
   }
