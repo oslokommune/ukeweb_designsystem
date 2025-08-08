@@ -14,13 +14,9 @@
       border: 2px solid colors.$gray;
     }
 
-    & .ods-accordion__trigger,
-    & .ods-accordion__description {
-      @extend %ods-padding-right-19;
-    }
-
     & .ods-accordion__trigger {
-      @extend %ods-padding-bottom-3, %ods-padding-left-4;
+      @extend %ods-padding-right-13, %ods-padding-bottom-3, %ods-padding-left-4;
+      @extend %ods-padding-right-19-breakpoint-medium;
 
       &--chevron::after,
       &--plus::after {
@@ -45,13 +41,14 @@
     }
 
     & .ods-accordion__trigger {
-      @extend %ods-padding-right-19, %ods-padding-bottom-2, %ods-padding-left-0;
+      @extend %ods-padding-right-13, %ods-padding-bottom-2, %ods-padding-left-4;
+      @extend %ods-padding-right-19-breakpoint-medium;
       @extend %ods-margin-bottom-1; // This makes the trigger focus style visible
     }
 
     & .ods-accordion__content {
       @extend %ods-margin-bottom-0;
-      @extend %ods-padding-top-2, %ods-padding-right-4, %ods-padding-bottom-3, %ods-padding-left-0;
+      @extend %ods-padding-top-2, %ods-padding-horizontal-4, %ods-padding-bottom-3;
     }
   }
 
