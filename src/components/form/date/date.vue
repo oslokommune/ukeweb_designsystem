@@ -10,7 +10,7 @@
         {{ errorMessage }}
       </h2>
     </div>
-    <ods-datepicker v-show="showDatepicker" :model-value="datepicker.date" :browse-date="browseDate" :min="min" :max="max" :days="days" :months="months" :btn-prev-month-label="btnPrevMonthLabel" :btn-next-month-label="btnNextMonthLabel" @update:modelValue="onDatepickerPick" @change="onDatepickerChange" />
+    <ods-datepicker v-show="showDatepicker" :model-value="datepicker.date" :browse-date="browseDate" :min="min" :max="max" :days="days" :months="months" :btn-prev-month-label="btnPrevMonthLabel" :btn-next-month-label="btnNextMonthLabel" @update:modelValue="onDatepickerClickDay" @change="onDatepickerChange" />
   </div>
 </template>
 
@@ -88,7 +88,6 @@ export default {
     },
   },
   mounted() {
-    // set initial selected date
     this.datepicker.date = this.date || new Date();
     window.addEventListener('click', this.onDatepickerOutside);
     window.addEventListener('keyup', this.onDatepickerOutside);
@@ -115,7 +114,7 @@ export default {
         this.toggleDatepicker(false);
       }
     },
-    onDatepickerPick(date) {
+    onDatepickerClickDay(date) {
       this.datepicker.date = date;
       this.$emit('set', date);
       this.toggleDatepicker(false);
@@ -125,7 +124,9 @@ export default {
       this.browseDate = newBrowseDate;
     },
     handleKeyboardInput(event) {
-      if (event.key !== 'Enter' || event.keyCode !== 13) return;
+      if (event.key !== 'Enter' || event.keyCode !== 13) {
+        return;
+      }
 
       const [day, month, year] = event.target.value.split('.').map(Number);
       const inputDate = new Date(year, month - 1, day);
