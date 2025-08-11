@@ -4,7 +4,7 @@
       <button class="ods-date__datepicker__button ods-date__datepicker__button--prev" type="button" :disabled="isPrevDisabled" :aria-label="btnPrevMonthLabel" @click="goMonth(-1)" />
       <button class="ods-date__datepicker__button ods-date__datepicker__button--next" type="button" :disabled="isNextDisabled" :aria-label="btnNextMonthLabel" @click="goMonth(1)" />
     </fieldset>
-    <table class="ods-date__datepicker__calendar" @keydown.stop="onGridKeydown" ref="grid">
+    <table class="ods-date__datepicker__calendar" @keydown.stop="onCalendarKeydown" ref="grid">
       <caption>
         {{
           monthsArr[currentMonth]
@@ -202,7 +202,6 @@ export default {
       this.visibleYear = next.getFullYear();
       this.visibleMonth = next.getMonth();
 
-      // Keep focus inside the new month
       const clampedDay = Math.min(this.focusDate.getDate(), 28);
       this.focusDate = new Date(this.visibleYear, this.visibleMonth, clampedDay);
 
@@ -217,12 +216,8 @@ export default {
       this.$emit('click-day', picked);
     },
 
-    onGridKeydown(event) {
+    onCalendarKeydown(event) {
       const keyMap = {
-        33: 'pageUp', // PageUp
-        34: 'pageDown', // PageDown
-        35: 'end', // End
-        36: 'home', // Home
         37: -1, // ArrowLeft
         38: -7, // ArrowUp
         39: 1, // ArrowRight
@@ -234,38 +229,20 @@ export default {
 
       event.preventDefault();
 
-      if (action === 'home') {
-        this.focusDate = new Date(this.currentYear, this.currentMonth, 1);
-      } else if (action === 'end') {
-        this.focusDate = new Date(this.currentYear, this.currentMonth + 1, 0);
-      } else if (action === 'pageUp') {
-        const prevMonth = new Date(this.currentYear, this.currentMonth - 1, Math.min(this.focusDate.getDate(), 28));
-        this.visibleYear = prevMonth.getFullYear();
-        this.visibleMonth = prevMonth.getMonth();
-        this.focusDate = prevMonth;
+      const newFocusDate = new Date(this.focusDate);
+      newFocusDate.setDate(newFocusDate.getDate() + action);
+
+      const prevMonthIndex = this.currentMonth;
+      const prevYear = this.currentYear;
+      const newMonthIndex = newFocusDate.getMonth();
+      const newYear = newFocusDate.getFullYear();
+
+      this.focusDate = newFocusDate;
+
+      if (newMonthIndex !== prevMonthIndex || newYear !== prevYear) {
+        this.visibleMonth = newMonthIndex;
+        this.visibleYear = newYear;
         this.$emit('change', new Date(this.visibleYear, this.visibleMonth, 1));
-      } else if (action === 'pageDown') {
-        const nextMonth = new Date(this.currentYear, this.currentMonth + 1, Math.min(this.focusDate.getDate(), 28));
-        this.visibleYear = nextMonth.getFullYear();
-        this.visibleMonth = nextMonth.getMonth();
-        this.focusDate = nextMonth;
-        this.$emit('change', new Date(this.visibleYear, this.visibleMonth, 1));
-      } else if (typeof action === 'number') {
-        const newFocusDate = new Date(this.focusDate);
-        newFocusDate.setDate(newFocusDate.getDate() + action);
-
-        const prevMonthIndex = this.currentMonth;
-        const prevYear = this.currentYear;
-        const newMonthIndex = newFocusDate.getMonth();
-        const newYear = newFocusDate.getFullYear();
-
-        this.focusDate = newFocusDate;
-
-        if (newMonthIndex !== prevMonthIndex || newYear !== prevYear) {
-          this.visibleMonth = newMonthIndex;
-          this.visibleYear = newYear;
-          this.$emit('change', new Date(this.visibleYear, this.visibleMonth, 1));
-        }
       }
 
       this.$nextTick(() => this.focusButton());

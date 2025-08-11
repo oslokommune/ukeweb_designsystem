@@ -23,19 +23,46 @@ export default {
     odsDatepicker,
   },
   props: {
-    placeholder: { type: String, default: 'dd.mm.yyyy' },
-    label: { type: String, default: 'Pick a date' },
-    date: { type: Date, default: null },
-    displayDate: { type: String, default: '' },
-    min: { type: Date, default: () => new Date('1900-01-01') },
-    max: { type: Date, default: () => new Date('2100-01-01') },
-    days: { type: String, default: 'mon,tue,wed,thu,fri,sat,sun' },
+    placeholder: {
+      type: String,
+      default: 'dd.mm.yyyy',
+    },
+    label: {
+      type: String,
+      default: 'Pick a date',
+    },
+    date: {
+      type: Date,
+      default: null,
+    },
+    displayDate: {
+      type: String,
+      default: '',
+    },
+    min: {
+      type: Date,
+      default: () => new Date('1900-01-01'),
+    },
+    max: {
+      type: Date,
+      default: () => new Date('2100-01-01'),
+    },
+    days: {
+      type: String,
+      default: 'mon,tue,wed,thu,fri,sat,sun',
+    },
     months: {
       type: String,
       default: 'January,February,March,April,May,June,July,August,September,October,November,December',
     },
-    btnPrevMonthLabel: { type: String, default: 'Last month' },
-    btnNextMonthLabel: { type: String, default: 'Next month' },
+    btnPrevMonthLabel: {
+      type: String,
+      default: 'Last month',
+    },
+    btnNextMonthLabel: {
+      type: String,
+      default: 'Next month',
+    },
     minDateErrorMessage: {
       type: String,
       default: 'Date is before the earliest allowed date.',
