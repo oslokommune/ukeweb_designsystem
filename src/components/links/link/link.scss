@@ -20,6 +20,10 @@
     @include mixins.icon-left("chevron-right");
   }
 
+  &--arrow-right {
+    @include mixins.icon-left("link-arrow");
+  }
+
   &--focus,
   &:focus-visible {
     outline: none;
