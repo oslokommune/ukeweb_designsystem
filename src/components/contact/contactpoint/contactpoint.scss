@@ -16,6 +16,7 @@
 
   &__heading {
     @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-large;
+    @extend %ods-padding-bottom-1;
     @extend %ods-text--weight-medium;
   }
 
