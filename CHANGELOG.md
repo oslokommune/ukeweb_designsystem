@@ -18,10 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Breaking change:** Changed table component styling (extra wrapper class required).
 - Changed banner examples and updated link-icon.
 - Changed contactpoint examples, font-sizes, spacing etc.
 - Moved spacing from service header's heading to lead.
-- **Breaking change:** Changed table component styling (extra wrapper class required).
+- Changed padding on large button.
 
 ### Fixed
 
