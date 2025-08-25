@@ -1,9 +1,8 @@
-// .fantasticonrc.js
 const path = require('path');
 const root = __dirname;
 
 module.exports = {
-  inputDir: path.join(root, 'src/assets/icons'),      // directory, not a glob
+  inputDir: path.join(root, 'src/assets/icons'),
   outputDir: path.join(root, 'src/assets/fonts'),
 
   name: 'OsloIcons',
