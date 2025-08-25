@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Fantasticon svg to font library.
 - Added new accordion variants.
 - Added new placeholder and document-download icon.
 - Added arrow-right as a link icon.
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- Webfont
 - nrk/core-datepicker.
 - Chevron-right icon from footer links.
 
