@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added new link icon and updated template.
+
+### Changed
+
+- Changed banner examples and updated link-icon.
+
+### Fixed
+
+### Removed
+
+## [2.2.0] - 2025-6-10
+
+### Added
+
 - Link icon.
 - Green light colour option for banner.
 - Added no-image modifier for service header component.
