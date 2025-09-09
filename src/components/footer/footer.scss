@@ -6,7 +6,7 @@
 
 .ods-footer {
   @extend %ods-color-bg-blue-dark, %ods-color-text-white;
-  @extend %ods-text--size-juliett, %ods-text--size-india-breakpoint-large, %ods-text--weight-light;
+  @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
   @extend %ods-padding-vertical-13;
 
   &__gutter {
