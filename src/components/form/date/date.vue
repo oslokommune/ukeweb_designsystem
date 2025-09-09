@@ -97,20 +97,11 @@ export default {
     window.removeEventListener('keyup', this.onDatepickerOutside);
   },
   methods: {
-    browseMonth(direction) {
-      const next = new Date(this.browseDate).setMonth(this.browseDate.getMonth() + direction);
-      return Math.max(this.min || 0, Math.min(this.max.setHours(23, 59, 59, 999) || Infinity, next));
-    },
-    browseMonthDisabled(direction) {
-      let next = new Date(this.browseDate).setMonth(this.browseDate.getMonth() + direction);
-      next = new Date(next).setDate(1);
-      return (direction > 0 && next > this.max) || next < this.min;
-    },
     toggleDatepicker(bool) {
       this.showDatepicker = bool;
     },
     onDatepickerOutside(event) {
-      if (!this.$el.contains(event.target) || event.keyCode === 27) {
+      if (!this.$el.contains(event.target) || event.key === 'Escape') {
         this.toggleDatepicker(false);
       }
     },
@@ -124,7 +115,7 @@ export default {
       this.browseDate = newBrowseDate;
     },
     handleKeyboardInput(event) {
-      if (event.key !== 'Enter' || event.keyCode !== 13) {
+      if (event.key !== 'Enter' || event.key !== 'Enter') {
         return;
       }
 
