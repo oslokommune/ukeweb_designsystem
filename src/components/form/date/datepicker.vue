@@ -218,13 +218,13 @@ export default {
 
     onCalendarKeydown(event) {
       const keyMap = {
-        37: -1, // ArrowLeft
-        38: -7, // ArrowUp
-        39: 1, // ArrowRight
-        40: 7, // ArrowDown
+        ArrowLeft: -1,
+        ArrowUp: -7,
+        ArrowRight: 1,
+        ArrowDown: 7,
       };
 
-      const action = keyMap[event.keyCode];
+      const action = keyMap[event.key];
       if (action === undefined) return;
 
       event.preventDefault();
