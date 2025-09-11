@@ -24,11 +24,11 @@
   }
 
   &__heading {
-    @extend %ods-margin-bottom-4;
     @extend %ods-text--size-echo, %ods-text--size-bravo-breakpoint-medium, %ods-text--size-alfa-breakpoint-large;
   }
 
   &__lead {
+    @extend %ods-margin-top-4;
     @extend %ods-text--size-hotel, %ods-text--size-golf-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
     @extend %ods-text--weight-light;
   }
