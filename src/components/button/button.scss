@@ -127,7 +127,7 @@
   }
 
   &.ods-button--large {
-    @extend %ods-padding-horizontal-8, %ods-padding-vertical-4;
+    @extend %ods-padding-horizontal-6, %ods-padding-vertical-3;
     @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-large;
 
     &.ods-button--icon {
