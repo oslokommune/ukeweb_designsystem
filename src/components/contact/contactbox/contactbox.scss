@@ -47,6 +47,10 @@
     word-wrap: break-word;
   }
 
+  &__time {
+    @extend %ods-text--size-lima, %ods-text--weight-light;
+  }
+
   &__value {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
 
