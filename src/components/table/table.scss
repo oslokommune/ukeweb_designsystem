@@ -3,21 +3,57 @@
 @use "system/typography";
 @use "system/spacing";
 
-.ods-table {
+.ods-table-wrapper {
   display: block;
+  max-width: 100%;
   overflow-x: auto;
-  white-space: nowrap;
+}
+
+.ods-table {
+  display: inline-table;
+  overflow-x: auto;
+  table-layout: auto;
+  width: max-content;
   text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid colors.$grayscale-10;
 
   &__caption {
-    text-align: left;
     @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
     @include typography.weight("medium");
+
+    text-align: left;
+    margin-bottom: 0.5rem;
+    max-width: 50rem;
+  }
+
+  &__title {
+    @extend %ods-text--size-india, %ods-text--size-hotel-breakpoint-medium, %ods-text--size-golf-breakpoint-large;
+    @include typography.weight("medium");
+
+  }
+
+  &__description {
+    @extend %ods-text--size-kilo, %ods-text--size-kilo-breakpoint-medium, %ods-text--size-juliett-breakpoint-large;
+    @include typography.weight("light");
+
+    margin-top: 0.25rem;
   }
 
   &__heading,
   &__cell {
     @extend %ods-padding-4;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-align: start;
+    vertical-align: top;
+    max-width: 24rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid colors.$grayscale-10;
+    }
   }
 
   &__head {
@@ -54,6 +90,5 @@
 
   &--full-width {
     width: 100%;
-    display: inline-table;
   }
 }
