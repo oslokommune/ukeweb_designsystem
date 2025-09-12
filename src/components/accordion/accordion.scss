@@ -7,6 +7,83 @@
 @use "sass:map";
 
 .ods-accordion {
+  &--outlined {
+    & .ods-accordion__item {
+      @extend %ods-margin-top-3;
+
+      border: 2px solid colors.$gray;
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-padding-right-13, %ods-padding-bottom-3, %ods-padding-left-4;
+      @extend %ods-padding-right-19-breakpoint-medium;
+
+      &--chevron::after,
+      &--plus::after {
+        margin-right: 0;
+      }
+    }
+
+    & .ods-accordion__content {
+      @extend %ods-margin-bottom-0;
+      @extend %ods-padding-top-2, %ods-padding-bottom-3;
+      @extend %ods-padding-horizontal-4;
+    }
+  }
+
+  &--underlined {
+    & .ods-accordion__item {
+      border-bottom: 2px solid colors.$gray;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-padding-right-13, %ods-padding-bottom-2, %ods-padding-left-4;
+      @extend %ods-padding-right-19-breakpoint-medium;
+      @extend %ods-margin-bottom-1; // This makes the trigger focus style visible
+    }
+
+    & .ods-accordion__content {
+      @extend %ods-margin-bottom-0;
+      @extend %ods-padding-top-2, %ods-padding-horizontal-4, %ods-padding-bottom-3;
+    }
+  }
+
+  &--outlined,
+  &--underlined {
+    & .ods-accordion__heading {
+      @extend %ods-text--size-juliett;
+      @extend %ods-text--weight-medium;
+    }
+
+    & .ods-accordion__trigger {
+      @extend %ods-padding-top-3, %ods-margin-top-0;
+
+      &:focus,
+      &:active,
+      &--focus,
+      &--active {
+        background-color: colors.$white;
+        color: colors.$blue-state;
+      }
+
+      &--chevron::after,
+      &--plus::after {
+        @extend %ods-icon--size-juliett;
+      }
+    }
+
+    & .ods-accordion__description {
+      @extend %ods-text--size-kilo;
+      @extend %ods-text--weight-regular;
+
+      display: block;
+    }
+  }
+
   &__main-heading {
     @extend %ods-text--size-golf, %ods-text--size-delta-breakpoint-large;
     @extend %ods-text--weight-regular;
@@ -71,15 +148,22 @@
       outline: 0.25rem solid colors.$purple-light;
     }
 
+    &--chevron::after {
+      content: map.get(icon-map.$icons, "chevron-thin-down");
+    }
+
+    &--plus::after {
+      content: map.get(icon-map.$icons, "plus-sign");
+    }
+
     &::after {
       @extend %ods-icon--size-hotel, %ods-icon--size-golf-breakpoint-medium;
 
       font-family: "Oslo Icons", Arial, Helvetica, sans-serif !important;
-      content: map.get(icon-map.$icons, "chevron-thin-down");
-      right: 0;
-      top: 50%;
       position: absolute;
+      right: 0;
       text-align: center;
+      top: 50%;
 
       @include breakpoints.medium {
         margin-right: 0.75rem;
