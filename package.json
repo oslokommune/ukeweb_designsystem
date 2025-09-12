@@ -7,8 +7,7 @@
     "build:icons": "npm run build:icons:minimize && run-p build:icons:svg build:icons:font",
     "build:icons:minimize": "svgo src/assets/icons/*.svg",
     "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
-    "build:icons:font": "npm run build:icons:webfont",
-    "build:icons:webfont": "webfont \"src/assets/icons/**/*.svg\" --font-name 'OsloIcons' --font-height 512 --normalize --dest \"src/assets/fonts/\" --template \"src/utils/_icon-map.scss.njk\" --dest-template \"src/system/\"",
+    "build:icons:font": "fantasticon -c ./.fantasticonrc.js",
     "lint": "eslint --ext .js,.vue ./src && stylelint './src/**/*.scss'",
     "eslint": "eslint --ext .js,.vue ./src",
     "stylelint": "stylelint './src/**/*.scss'",
@@ -29,20 +28,19 @@
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-vue": "9.17.0",
+    "fantasticon": "3.0.0",
     "npm-run-all": "",
     "stylelint": "16.2.1",
     "stylelint-config-prettier-scss": "1.0.0",
     "stylelint-config-standard-scss": "13.0.0",
     "stylelint-selector-bem-pattern": "4.0.0",
     "svgo": "3.0.2",
-    "svgstore-cli": "2.0.1",
-    "webfont": "11.2.26"
+    "svgstore-cli": "2.0.1"
   },
   "overrides": {
     "cross-spawn": "7.0.5"
   },
   "dependencies": {
-    "@nrk/core-datepicker": "4.0.2",
     "maplibre-gl": "3.5.1",
     "vue": "3.4.14"
   },

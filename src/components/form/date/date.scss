@@ -142,7 +142,6 @@
     }
 
     /**
-    * nrk-core-datepicker styling
     * - Element styles since missing classes on child component
     */
     &__calendar {
@@ -220,18 +219,29 @@
             }
           }
 
+          &[tabindex="0"]:focus-visible {
+            background-color: colors.$blue-state;
+            color: colors.$white;
+          }
+
           // selected
-          &[autofocus] {
+          &[aria-selected="true"] {
             background-color: colors.$blue-dark;
             border-color: colors.$blue-dark;
             color: colors.$white;
 
+            &:hover,
             &:focus,
-            &:hover {
+            &:focus-visible {
               background-color: colors.$blue-state;
               border-color: colors.$blue-state;
               color: colors.$white;
             }
+          }
+
+          &[aria-current="date"][aria-selected="true"] {
+            background-color: colors.$blue-dark;
+            color: colors.$white;
           }
 
           &:disabled {
