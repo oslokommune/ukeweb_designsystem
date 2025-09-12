@@ -43,6 +43,16 @@
     @extend %ods-margin-top-8, %ods-margin-top-13-breakpoint-medium;
   }
 
+  ul + h2,
+  ol + h2 {
+    @extend %ods-margin-top-8, %ods-margin-top-13-breakpoint-medium;
+  }
+
+  h2 + ul,
+  h2 + ol {
+    @extend %ods-margin-top-0;
+  }
+
   p + h3,
   p + h4 {
     @extend %ods-margin-top-5;
@@ -54,6 +64,14 @@
 
   a:not(.ods-button) {
     @extend .ods-link; /* stylelint-disable-line */
+  }
+
+   // Force inline override of links in lists
+  ul li a:not(.ods-button),
+  ol li a:not(.ods-button) {
+    @extend .ods-link; /* stylelint-disable-line */
+
+    display: inline;
   }
 
   ul {

@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "system/icons";
+@use "system/icon-map";
+
 .ods-animation {
   &--rotate::after {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -6,5 +10,16 @@
 
   &--rotate-open::after {
     transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &--rotate-plus-minus::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    background-color: transparent;
+  }
+
+  &--rotate-plus-minus-open::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+    content: map.get(icon-map.$icons, "minus-sign") !important;
   }
 }

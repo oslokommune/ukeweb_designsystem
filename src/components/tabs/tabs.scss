@@ -4,8 +4,6 @@
 @use "system/states";
 
 .ods-tabs {
-  overflow: hidden;
-
   &__label {
     @extend %ods-text--size-kilo, %ods-text--size-hotel-breakpoint-medium;
     @extend %ods-margin-bottom-3;

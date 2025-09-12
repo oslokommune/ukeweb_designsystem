@@ -10,7 +10,9 @@
 
   &__heading {
     @extend %ods-margin-bottom-1;
-    @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--size-kilo, %ods-text--size-kilo-breakpoint-medium, %ods-text--size-juliett-breakpoint-large;
+    @extend %ods-text--weight-medium;
+
   }
 
   &__text {
@@ -21,10 +23,10 @@
   &__list {
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-medium;
-    @extend %ods-margin-top-4;
+    @extend %ods-margin-top-2;
 
     > * + * {
-      @extend %ods-margin-top-4;
+      @extend %ods-margin-top-2;
     }
   }
 }

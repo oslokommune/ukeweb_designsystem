@@ -1,285 +1,144 @@
 $icons: (
-  
-    "24h": "\ea01",
-  
-    "adjust": "\ea02",
-  
-    "ambulance": "\ea03",
-  
-    "apple": "\ea04",
-  
-    "archive": "\ea05",
-  
-    "arrow": "\ea06",
-  
-    "arrow-circle": "\ea07",
-  
-    "attachment": "\ea08",
-  
-    "automat": "\ea09",
-  
-    "backpack": "\ea0a",
-  
-    "bike": "\ea0b",
-  
-    "briefcase": "\ea0c",
-  
-    "bullseye": "\ea0d",
-  
-    "bus": "\ea0e",
-  
-    "cafe": "\ea0f",
-  
-    "calendar": "\ea10",
-  
-    "camera": "\ea11",
-  
-    "character-exclamation-mark": "\ea12",
-  
-    "character-information": "\ea13",
-  
-    "check": "\ea14",
-  
-    "check-big": "\ea15",
-  
-    "check-circle": "\ea16",
-  
-    "chevron-down": "\ea17",
-  
-    "chevron-left": "\ea18",
-  
-    "chevron-right": "\ea19",
-  
-    "chevron-thin-down": "\ea1a",
-  
-    "chevron-thin-left": "\ea1b",
-  
-    "chevron-thin-right": "\ea1c",
-  
-    "chevron-thin-up": "\ea1d",
-  
-    "chevron-up": "\ea1e",
-  
-    "clock": "\ea1f",
-  
-    "close": "\ea20",
-  
-    "cogwheel": "\ea21",
-  
-    "coin-stacks": "\ea22",
-  
-    "computer": "\ea23",
-  
-    "copy": "\ea24",
-  
-    "corona": "\ea25",
-  
-    "crane": "\ea26",
-  
-    "cross": "\ea27",
-  
-    "cross-circle": "\ea28",
-  
-    "data": "\ea29",
-  
-    "directions": "\ea2a",
-  
-    "district": "\ea2b",
-  
-    "document": "\ea2c",
-  
-    "document-code": "\ea2d",
-  
-    "document-pdf": "\ea2e",
-  
-    "document-plain": "\ea2f",
-  
-    "document-table": "\ea30",
-  
-    "document-text": "\ea31",
-  
-    "download": "\ea32",
-  
-    "edit": "\ea33",
-  
-    "elcar": "\ea34",
-  
-    "email": "\ea35",
-  
-    "error-hexa": "\ea36",
-  
-    "exclamation-mark-circle": "\ea37",
-  
-    "exclamation-mark-square": "\ea38",
-  
-    "exit": "\ea39",
-  
-    "expand": "\ea3a",
-  
-    "eye": "\ea3b",
-  
-    "facebook": "\ea3c",
-  
-    "factory-fill": "\ea3d",
-  
-    "feedback": "\ea3e",
-  
-    "filter": "\ea3f",
-  
-    "fire-emblem": "\ea40",
-  
-    "folder": "\ea41",
-  
-    "graph": "\ea42",
-  
-    "grid": "\ea43",
-  
-    "handicap": "\ea44",
-  
-    "heart": "\ea45",
-  
-    "heart-plus": "\ea46",
-  
-    "home": "\ea47",
-  
-    "house-heart": "\ea48",
-  
-    "information": "\ea49",
-  
-    "instagram": "\ea4a",
-  
-    "invoice": "\ea4b",
-  
-    "language": "\ea4c",
-  
-    "law-paragraph": "\ea4d",
-  
-    "link-arrow": "\ea4e",
-  
-    "linked-in": "\ea4f",
-  
-    "list": "\ea50",
-  
-    "location-pin": "\ea51",
-  
-    "location-pin-filled": "\ea52",
-  
-    "lock-locked": "\ea53",
-  
-    "lock-unlocked": "\ea54",
-  
-    "magnifying-glass-big": "\ea55",
-  
-    "magnifying-glass-small": "\ea56",
-  
-    "map": "\ea57",
-  
-    "map-layer": "\ea58",
-  
-    "menu": "\ea59",
-  
-    "message": "\ea5a",
-  
-    "minimize": "\ea5b",
-  
-    "minus-circle": "\ea5c",
-  
-    "minus-circle-fill": "\ea5d",
-  
-    "minus-sign": "\ea5e",
-  
-    "mobile": "\ea5f",
-  
-    "museum": "\ea60",
-  
-    "neutral": "\ea61",
-  
-    "new-window": "\ea62",
-  
-    "obstacle": "\ea63",
-  
-    "organization": "\ea64",
-  
-    "paint-bucket": "\ea65",
-  
-    "paper-plane": "\ea66",
-  
-    "park": "\ea67",
-  
-    "parking": "\ea68",
-  
-    "picture": "\ea69",
-  
-    "plus-circle": "\ea6a",
-  
-    "plus-circle-fill": "\ea6b",
-  
-    "plus-sign": "\ea6c",
-  
-    "print": "\ea6d",
-  
-    "qr-code": "\ea6e",
-  
-    "question": "\ea6f",
-  
-    "recycling": "\ea70",
-  
-    "ruler": "\ea71",
-  
-    "sad": "\ea72",
-  
-    "save": "\ea73",
-  
-    "share": "\ea74",
-  
-    "share-outline": "\ea75",
-  
-    "signing": "\ea76",
-  
-    "sky": "\ea77",
-  
-    "smile": "\ea78",
-  
-    "sound-off": "\ea79",
-  
-    "sound-on": "\ea7a",
-  
-    "success-square": "\ea7b",
-  
-    "swingset": "\ea7c",
-  
-    "table": "\ea7d",
-  
-    "target": "\ea7e",
-  
-    "thumbs-down": "\ea7f",
-  
-    "thumbs-up": "\ea80",
-  
-    "tickets": "\ea81",
-  
-    "tool": "\ea82",
-  
-    "trail": "\ea83",
-  
-    "tram": "\ea84",
-  
-    "trash": "\ea85",
-  
-    "treatment": "\ea86",
-  
-    "user": "\ea87",
-  
-    "warning-triangle": "\ea88",
-  
-    "water-faucet": "\ea89",
-  
-    "wifi": "\ea8a",
-  
-    "x": "\ea8b",
-  
-    "zoom-minus": "\ea8c",
-  
-    "zoom-plus": "\ea8d",
-  
+  "zoom-plus": "\f101",
+  "zoom-minus": "\f102",
+  "x": "\f103",
+  "wifi": "\f104",
+  "water-faucet": "\f105",
+  "warning-triangle": "\f106",
+  "user": "\f107",
+  "treatment": "\f108",
+  "trash": "\f109",
+  "tram": "\f10a",
+  "trail": "\f10b",
+  "tool": "\f10c",
+  "tickets": "\f10d",
+  "thumbs-up": "\f10e",
+  "thumbs-down": "\f10f",
+  "target": "\f110",
+  "table": "\f111",
+  "swingset": "\f112",
+  "success-square": "\f113",
+  "sound-on": "\f114",
+  "sound-off": "\f115",
+  "smile": "\f116",
+  "sky": "\f117",
+  "signing": "\f118",
+  "share": "\f119",
+  "share-outline": "\f11a",
+  "save": "\f11b",
+  "sad": "\f11c",
+  "ruler": "\f11d",
+  "recycling": "\f11e",
+  "question": "\f11f",
+  "qr-code": "\f120",
+  "print": "\f121",
+  "plus-sign": "\f122",
+  "plus-circle": "\f123",
+  "plus-circle-fill": "\f124",
+  "picture": "\f125",
+  "parking": "\f126",
+  "park": "\f127",
+  "paper-plane": "\f128",
+  "paint-bucket": "\f129",
+  "organization": "\f12a",
+  "obstacle": "\f12b",
+  "new-window": "\f12c",
+  "neutral": "\f12d",
+  "museum": "\f12e",
+  "mobile": "\f12f",
+  "minus-sign": "\f130",
+  "minus-circle": "\f131",
+  "minus-circle-fill": "\f132",
+  "minimize": "\f133",
+  "message": "\f134",
+  "menu": "\f135",
+  "map": "\f136",
+  "map-layer": "\f137",
+  "magnifying-glass-small": "\f138",
+  "magnifying-glass-big": "\f139",
+  "lock-unlocked": "\f13a",
+  "lock-locked": "\f13b",
+  "location-pin": "\f13c",
+  "location-pin-filled": "\f13d",
+  "list": "\f13e",
+  "linked-in": "\f13f",
+  "link": "\f140",
+  "link-arrow": "\f141",
+  "law-paragraph": "\f142",
+  "language": "\f143",
+  "invoice": "\f144",
+  "instagram": "\f145",
+  "information": "\f146",
+  "house-heart": "\f147",
+  "home": "\f148",
+  "heart": "\f149",
+  "heart-plus": "\f14a",
+  "handicap": "\f14b",
+  "grid": "\f14c",
+  "graph": "\f14d",
+  "folder": "\f14e",
+  "fire-emblem": "\f14f",
+  "filter": "\f150",
+  "feedback": "\f151",
+  "factory-fill": "\f152",
+  "facebook": "\f153",
+  "eye": "\f154",
+  "expand": "\f155",
+  "exit": "\f156",
+  "exclamation-mark-square": "\f157",
+  "exclamation-mark-circle": "\f158",
+  "error-hexa": "\f159",
+  "email": "\f15a",
+  "elcar": "\f15b",
+  "edit": "\f15c",
+  "download": "\f15d",
+  "document": "\f15e",
+  "document-text": "\f15f",
+  "document-table": "\f160",
+  "document-plain": "\f161",
+  "document-pdf": "\f162",
+  "document-code": "\f163",
+  "district": "\f164",
+  "directions": "\f165",
+  "data": "\f166",
+  "cross": "\f167",
+  "cross-circle": "\f168",
+  "crane": "\f169",
+  "corona": "\f16a",
+  "copy": "\f16b",
+  "computer": "\f16c",
+  "coin-stacks": "\f16d",
+  "cogwheel": "\f16e",
+  "close": "\f16f",
+  "clock": "\f170",
+  "chevron-up": "\f171",
+  "chevron-thin-up": "\f172",
+  "chevron-thin-right": "\f173",
+  "chevron-thin-left": "\f174",
+  "chevron-thin-down": "\f175",
+  "chevron-right": "\f176",
+  "chevron-left": "\f177",
+  "chevron-down": "\f178",
+  "check": "\f179",
+  "check-circle": "\f17a",
+  "check-big": "\f17b",
+  "character-information": "\f17c",
+  "character-exclamation-mark": "\f17d",
+  "camera": "\f17e",
+  "calendar": "\f17f",
+  "cafe": "\f180",
+  "bus": "\f181",
+  "bullseye": "\f182",
+  "briefcase": "\f183",
+  "bike": "\f184",
+  "backpack": "\f185",
+  "automat": "\f186",
+  "attachment": "\f187",
+  "arrow": "\f188",
+  "arrow-circle": "\f189",
+  "archive": "\f18a",
+  "apple": "\f18b",
+  "ambulance": "\f18c",
+  "adjust": "\f18d",
+  "24h": "\f18e",
 );

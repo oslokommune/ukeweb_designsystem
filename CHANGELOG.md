@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- Moved margin from servide header heading to lead.
+
+## [2.2.0] - 2025-6-10
+
+### Added
+
+- Link icon.
+- Green light colour option for banner.
+- Added no-image modifier for service header component.
+
+### Changed
+
+- Changed spacing on message component.
+- Changed keyboard focus-style for normal links.
+- Changed step by step component to have a whole new look.
+
+### Fixed
+
+- Fixed icons.
+- Fixed list bulletpoint placement when used with long links.
+- Fixed a sass dart deprecation.
+
+### Removed
+
+- Removed drop-shadow styling from status messages.
+
 ## [2.1.0] - 2024-11-21
 
 ### Added
