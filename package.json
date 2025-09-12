@@ -41,7 +41,6 @@
     "cross-spawn": "7.0.5"
   },
   "dependencies": {
-    "@nrk/core-datepicker": "4.0.2",
     "maplibre-gl": "3.5.1",
     "vue": "3.4.14"
   },
