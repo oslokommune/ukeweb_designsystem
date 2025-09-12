@@ -7,8 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Fantasticon svg to font library.
+- Added new accordion variants.
+- Added new placeholder and document-download icon.
+- Added arrow-right as a link icon.
+- Added custom ods-datepicker component.
+- Added new modifiers to contactpoint.
+- Added spacing rules for when lists precede or succeed a heading in ods-content.
+
 ### Changed
-- Moved margin from servide header heading to lead.
+
+- **Breaking change:** Changed table component styling (extra wrapper class required).
+- Changed banner examples and updated link-icon.
+- Changed contactpoint examples, font-sizes, spacing etc.
+- Moved spacing from service header's heading to lead.
+- Changed padding on large button.
+
+### Fixed
+
+- Fixed an issue with focus outline on the tabs component.
+
+### Removed
+
+- Webfont
+- nrk/core-datepicker.
+- Chevron-right icon from footer links.
 
 ## [2.2.0] - 2025-6-10
 
