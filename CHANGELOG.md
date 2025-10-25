@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated Oslo Sans to version 1.3
 
+### Fixed
+
+- Fix accordion triggers by changing the target.
 
 ## [3.0.0] - 2025-9-12
 
