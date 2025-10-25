@@ -8,31 +8,31 @@ function triggerIterator(callback) {
 }
 
 function handleAnimation(e) {
-  if (e.target.classList.contains('ods-animation') && e.target.classList.contains('ods-animation--rotate-plus-minus')) {
-    e.target.classList.toggle('ods-animation--rotate-plus-minus-open');
-  } else if (e.target.classList.contains('ods-animation')) {
-    e.target.classList.toggle('ods-animation--rotate-open');
+  if (e.currentTarget.classList.contains('ods-animation') && e.currentTarget.classList.contains('ods-animation--rotate-plus-minus')) {
+    e.currentTarget.classList.toggle('ods-animation--rotate-plus-minus-open');
+  } else if (e.currentTarget.classList.contains('ods-animation')) {
+    e.currentTarget.classList.toggle('ods-animation--rotate-open');
   }
 }
 
 function toggleCollapsible(e) {
   e.preventDefault();
 
-  const collapsible = document.getElementById(e.target.getAttribute('aria-controls'));
+  const collapsible = document.getElementById(e.currentTarget.getAttribute('aria-controls'));
 
   if ((e.code && e.code === 'Enter' && collapsible) || (!e.code && collapsible)) {
     collapsible.classList.toggle('ods-collapsible-content--collapsed');
 
     handleAnimation(e);
 
-    e.target.setAttribute('aria-expanded', collapsible.classList.contains('ods-collapsible-content--collapsed') ? 'false' : 'true');
-    e.target.classList.toggle('ods-collapsible-trigger--expanded', !collapsible.classList.contains('ods-collapsible-content--collapsed'));
+    e.currentTarget.setAttribute('aria-expanded', collapsible.classList.contains('ods-collapsible-content--collapsed') ? 'false' : 'true');
+    e.currentTarget.classList.toggle('ods-collapsible-trigger--expanded', !collapsible.classList.contains('ods-collapsible-content--collapsed'));
   }
 }
 
 function handleCollapsible(e) {
   toggleCollapsible(e);
-  dispatchCustomEvent('OdsCollapsibleToggle', { target: e.target, expanded: e.target.classList.contains('ods-collapsible-trigger--expanded') }, e.target);
+  dispatchCustomEvent('OdsCollapsibleToggle', { target: e.currentTarget, expanded: e.currentTarget.classList.contains('ods-collapsible-trigger--expanded') }, e.currentTarget);
 }
 
 function handleBreakpointChange(e) {
