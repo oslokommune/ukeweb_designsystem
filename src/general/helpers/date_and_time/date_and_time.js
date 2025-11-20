@@ -14,13 +14,39 @@ function replaceLast(initialString, stringToReplace, replaceString) {
   return a.join('');
 }
 
-function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions) {
-  let dateToString = '';
+function shortenNbShortWeekday(initialString, options, overrideNorwegianShortDayFormat = false) {
+  if (!initialString || !options || !options.localeOptions) {
+    return initialString;
+  }
+  // If override is true, keep the 3-letter format
+  if (overrideNorwegianShortDayFormat === true) {
+    return initialString;
+  }
 
+  // Only act when weekday short form is used
+  if (options.localeOptions.weekday !== 'short') {
+    return initialString;
+  }
+
+  const locale = options.locale || 'no-NO';
+  const localeLower = locale.toLowerCase();
+  if (!localeLower.startsWith('no') && !localeLower.startsWith('nb')) {
+    return initialString;
+  }
+
+  // Replace Norwegian short weekdays: man, tir, ons, tor, fre, lør, søn → strip last letter
+  const regex = /\b(man|tir|ons|tor|fre|lør|søn)\b/g;
+
+  return initialString.replace(regex, (match) => match.slice(0, -1));
+}
+
+function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions, overrideNorwegianShortDayFormat = false) {
+  let dateToString = '';
   let dateFromString = dateFrom.toLocaleString(dateFromOptions.locale, dateFromOptions.localeOptions);
   let timePrefix = dateFromOptions.time.prefix ? dateFromOptions.time.prefix : ' ';
   dateFromString = replaceLast(dateFromString, ', ', timePrefix);
   dateFromString = dateFromOptions.prefix + dateFromString + dateFromOptions.suffix;
+  dateFromString = shortenNbShortWeekday(dateFromString, dateFromOptions, overrideNorwegianShortDayFormat);
 
   if (dateTo) {
     dateToString = dateTo.toLocaleString(dateToOptions.locale, dateToOptions.localeOptions);
@@ -28,13 +54,14 @@ function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions) {
     timePrefix = dateToOptions.time.prefix ? dateToOptions.time.prefix : ' ';
     dateToString = replaceLast(dateToString, ', ', timePrefix);
     dateToString = dateToOptions.prefix + dateToString + dateToOptions.suffix;
+    dateToString = shortenNbShortWeekday(dateToString, dateToOptions, overrideNorwegianShortDayFormat);
   }
 
   return dateFromString + dateToString;
 }
 
 const OdsDateTime = {
-  format(dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}) {
+  format(dateFrom, dateTo = null, dateFromOptions = {}, dateToOptions = {}, overrideNorwegianShortDayFormat = false) {
     const defaults = {
       locale: 'no-NO',
       prefix: '',
@@ -86,7 +113,7 @@ const OdsDateTime = {
       }
     });
 
-    return formatDateTime(dateFrom, dateTo, { ...defaults, ...dateFromOptions }, { ...defaults, ...dateToOptions });
+    return formatDateTime(dateFrom, dateTo, { ...defaults, ...dateFromOptions }, { ...defaults, ...dateToOptions }, overrideNorwegianShortDayFormat);
   },
 };
 
