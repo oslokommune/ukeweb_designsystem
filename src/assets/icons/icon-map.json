@@ -1,0 +1,578 @@
+{
+  "24h": {
+    "name": "24h",
+    "terms": "24h"
+  },
+  "adjust": {
+    "name": "adjust",
+    "terms": "adjust"
+  },
+  "ambulance": {
+    "name": "ambulance",
+    "terms": "ambulance"
+  },
+  "apple": {
+    "name": "apple",
+    "terms": "apple"
+  },
+  "archive": {
+    "name": "archive",
+    "terms": "archive"
+  },
+  "arrow": {
+    "name": "arrow",
+    "terms": "arrow"
+  },
+  "arrow-circle": {
+    "name": "arrow-circle",
+    "terms": "arrow-circle"
+  },
+  "attachment": {
+    "name": "attachment",
+    "terms": "attachment"
+  },
+  "automat": {
+    "name": "automat",
+    "terms": "automat"
+  },
+  "backpack": {
+    "name": "backpack",
+    "terms": "backpack"
+  },
+  "bike": {
+    "name": "bike",
+    "terms": "bike"
+  },
+  "briefcase": {
+    "name": "briefcase",
+    "terms": "briefcase"
+  },
+  "bullseye": {
+    "name": "bullseye",
+    "terms": "bullseye"
+  },
+  "bus": {
+    "name": "bus",
+    "terms": "bus"
+  },
+  "cafe": {
+    "name": "cafe",
+    "terms": "cafe"
+  },
+  "calendar": {
+    "name": "calendar",
+    "terms": "calendar"
+  },
+  "camera": {
+    "name": "camera",
+    "terms": "camera"
+  },
+  "character-exclamation-mark": {
+    "name": "character-exclamation-mark",
+    "terms": "character-exclamation-mark"
+  },
+  "character-information": {
+    "name": "character-information",
+    "terms": "character-information"
+  },
+  "check": {
+    "name": "check",
+    "terms": "check"
+  },
+  "check-big": {
+    "name": "check-big",
+    "terms": "check-big"
+  },
+  "check-circle": {
+    "name": "check-circle",
+    "terms": "check-circle"
+  },
+  "chevron-down": {
+    "name": "chevron-down",
+    "terms": "chevron-down"
+  },
+  "chevron-left": {
+    "name": "chevron-left",
+    "terms": "chevron-left"
+  },
+  "chevron-right": {
+    "name": "chevron-right",
+    "terms": "chevron-right"
+  },
+  "chevron-thin-down": {
+    "name": "chevron-thin-down",
+    "terms": "chevron-thin-down"
+  },
+  "chevron-thin-left": {
+    "name": "chevron-thin-left",
+    "terms": "chevron-thin-left"
+  },
+  "chevron-thin-right": {
+    "name": "chevron-thin-right",
+    "terms": "chevron-thin-right"
+  },
+  "chevron-thin-up": {
+    "name": "chevron-thin-up",
+    "terms": "chevron-thin-up"
+  },
+  "chevron-up": {
+    "name": "chevron-up",
+    "terms": "chevron-up"
+  },
+  "clock": {
+    "name": "clock",
+    "terms": "clock"
+  },
+  "close": {
+    "name": "close",
+    "terms": "close"
+  },
+  "cogwheel": {
+    "name": "cogwheel",
+    "terms": "cogwheel"
+  },
+  "coin-stacks": {
+    "name": "coin-stacks",
+    "terms": "coin-stacks"
+  },
+  "computer": {
+    "name": "computer",
+    "terms": "computer"
+  },
+  "copy": {
+    "name": "copy",
+    "terms": "copy"
+  },
+  "corona": {
+    "name": "corona",
+    "terms": "corona"
+  },
+  "crane": {
+    "name": "crane",
+    "terms": "crane"
+  },
+  "cross": {
+    "name": "cross",
+    "terms": "cross"
+  },
+  "cross-circle": {
+    "name": "cross-circle",
+    "terms": "cross-circle"
+  },
+  "data": {
+    "name": "data",
+    "terms": "data"
+  },
+  "directions": {
+    "name": "directions",
+    "terms": "directions"
+  },
+  "district": {
+    "name": "district",
+    "terms": "district"
+  },
+  "document": {
+    "name": "document",
+    "terms": "document"
+  },
+  "document-code": {
+    "name": "document-code",
+    "terms": "document-code"
+  },
+  "document-pdf": {
+    "name": "document-pdf",
+    "terms": "document-pdf"
+  },
+  "document-plain": {
+    "name": "document-plain",
+    "terms": "document-plain"
+  },
+  "document-table": {
+    "name": "document-table",
+    "terms": "document-table"
+  },
+  "document-text": {
+    "name": "document-text",
+    "terms": "document-text"
+  },
+  "download": {
+    "name": "download",
+    "terms": "download"
+  },
+  "download-document": {
+    "name": "download-document",
+    "terms": "download-document"
+  },
+  "edit": {
+    "name": "edit",
+    "terms": "edit"
+  },
+  "elcar": {
+    "name": "elcar",
+    "terms": "elcar"
+  },
+  "email": {
+    "name": "email",
+    "terms": "email"
+  },
+  "error-hexa": {
+    "name": "error-hexa",
+    "terms": "error-hexa"
+  },
+  "exclamation-mark-circle": {
+    "name": "exclamation-mark-circle",
+    "terms": "exclamation-mark-circle"
+  },
+  "exclamation-mark-square": {
+    "name": "exclamation-mark-square",
+    "terms": "exclamation-mark-square"
+  },
+  "exit": {
+    "name": "exit",
+    "terms": "exit"
+  },
+  "expand": {
+    "name": "expand",
+    "terms": "expand"
+  },
+  "eye": {
+    "name": "eye",
+    "terms": "eye"
+  },
+  "facebook": {
+    "name": "facebook",
+    "terms": "facebook"
+  },
+  "factory-fill": {
+    "name": "factory-fill",
+    "terms": "factory-fill"
+  },
+  "feedback": {
+    "name": "feedback",
+    "terms": "feedback"
+  },
+  "filter": {
+    "name": "filter",
+    "terms": "filter"
+  },
+  "fire-emblem": {
+    "name": "fire-emblem",
+    "terms": "fire-emblem"
+  },
+  "folder": {
+    "name": "folder",
+    "terms": "folder"
+  },
+  "graph": {
+    "name": "graph",
+    "terms": "graph"
+  },
+  "grid": {
+    "name": "grid",
+    "terms": "grid"
+  },
+  "handicap": {
+    "name": "handicap",
+    "terms": "handicap"
+  },
+  "heart": {
+    "name": "heart",
+    "terms": "heart"
+  },
+  "heart-plus": {
+    "name": "heart-plus",
+    "terms": "heart-plus"
+  },
+  "home": {
+    "name": "home",
+    "terms": "home"
+  },
+  "house-heart": {
+    "name": "house-heart",
+    "terms": "house-heart"
+  },
+  "information": {
+    "name": "information",
+    "terms": "information"
+  },
+  "instagram": {
+    "name": "instagram",
+    "terms": "instagram"
+  },
+  "invoice": {
+    "name": "invoice",
+    "terms": "invoice"
+  },
+  "language": {
+    "name": "language",
+    "terms": "language"
+  },
+  "law-paragraph": {
+    "name": "law-paragraph",
+    "terms": "law-paragraph"
+  },
+  "link": {
+    "name": "link",
+    "terms": "link"
+  },
+  "link-arrow": {
+    "name": "link-arrow",
+    "terms": "link-arrow"
+  },
+  "linked-in": {
+    "name": "linked-in",
+    "terms": "linked-in"
+  },
+  "list": {
+    "name": "list",
+    "terms": "list"
+  },
+  "location-pin": {
+    "name": "location-pin",
+    "terms": "location-pin"
+  },
+  "location-pin-filled": {
+    "name": "location-pin-filled",
+    "terms": "location-pin-filled"
+  },
+  "lock-locked": {
+    "name": "lock-locked",
+    "terms": "lock-locked"
+  },
+  "lock-unlocked": {
+    "name": "lock-unlocked",
+    "terms": "lock-unlocked"
+  },
+  "magnifying-glass-big": {
+    "name": "magnifying-glass-big",
+    "terms": "magnifying-glass-big"
+  },
+  "magnifying-glass-small": {
+    "name": "magnifying-glass-small",
+    "terms": "magnifying-glass-small"
+  },
+  "map": {
+    "name": "map",
+    "terms": "map"
+  },
+  "map-layer": {
+    "name": "map-layer",
+    "terms": "map-layer"
+  },
+  "menu": {
+    "name": "menu",
+    "terms": "menu"
+  },
+  "message": {
+    "name": "message",
+    "terms": "message"
+  },
+  "minimize": {
+    "name": "minimize",
+    "terms": "minimize"
+  },
+  "minus-circle": {
+    "name": "minus-circle",
+    "terms": "minus-circle"
+  },
+  "minus-circle-fill": {
+    "name": "minus-circle-fill",
+    "terms": "minus-circle-fill"
+  },
+  "minus-sign": {
+    "name": "minus-sign",
+    "terms": "minus-sign"
+  },
+  "mobile": {
+    "name": "mobile",
+    "terms": "mobile"
+  },
+  "museum": {
+    "name": "museum",
+    "terms": "museum"
+  },
+  "neutral": {
+    "name": "neutral",
+    "terms": "neutral"
+  },
+  "new-window": {
+    "name": "new-window",
+    "terms": "new-window"
+  },
+  "obstacle": {
+    "name": "obstacle",
+    "terms": "obstacle"
+  },
+  "organization": {
+    "name": "organization",
+    "terms": "organization"
+  },
+  "paint-bucket": {
+    "name": "paint-bucket",
+    "terms": "paint-bucket"
+  },
+  "paper-plane": {
+    "name": "paper-plane",
+    "terms": "paper-plane"
+  },
+  "park": {
+    "name": "park",
+    "terms": "park"
+  },
+  "parking": {
+    "name": "parking",
+    "terms": "parking"
+  },
+  "picture": {
+    "name": "picture",
+    "terms": "picture"
+  },
+  "placeholder": {
+    "name": "placeholder",
+    "terms": "placeholder"
+  },
+  "plus-circle": {
+    "name": "plus-circle",
+    "terms": "plus-circle"
+  },
+  "plus-circle-fill": {
+    "name": "plus-circle-fill",
+    "terms": "plus-circle-fill"
+  },
+  "plus-sign": {
+    "name": "plus-sign",
+    "terms": "plus-sign"
+  },
+  "print": {
+    "name": "print",
+    "terms": "print"
+  },
+  "qr-code": {
+    "name": "qr-code",
+    "terms": "qr-code"
+  },
+  "question": {
+    "name": "question",
+    "terms": "question"
+  },
+  "recycling": {
+    "name": "recycling",
+    "terms": "recycling"
+  },
+  "ruler": {
+    "name": "ruler",
+    "terms": "ruler"
+  },
+  "sad": {
+    "name": "sad",
+    "terms": "sad"
+  },
+  "save": {
+    "name": "save",
+    "terms": "save"
+  },
+  "share": {
+    "name": "share",
+    "terms": "share"
+  },
+  "share-outline": {
+    "name": "share-outline",
+    "terms": "share-outline"
+  },
+  "signing": {
+    "name": "signing",
+    "terms": "signing"
+  },
+  "sky": {
+    "name": "sky",
+    "terms": "sky"
+  },
+  "smile": {
+    "name": "smile",
+    "terms": "smile"
+  },
+  "sound-off": {
+    "name": "sound-off",
+    "terms": "sound-off"
+  },
+  "sound-on": {
+    "name": "sound-on",
+    "terms": "sound-on"
+  },
+  "success-square": {
+    "name": "success-square",
+    "terms": "success-square"
+  },
+  "swingset": {
+    "name": "swingset",
+    "terms": "swingset"
+  },
+  "table": {
+    "name": "table",
+    "terms": "table"
+  },
+  "target": {
+    "name": "target",
+    "terms": "target"
+  },
+  "thumbs-down": {
+    "name": "thumbs-down",
+    "terms": "thumbs-down"
+  },
+  "thumbs-up": {
+    "name": "thumbs-up",
+    "terms": "thumbs-up"
+  },
+  "tickets": {
+    "name": "tickets",
+    "terms": "tickets"
+  },
+  "tool": {
+    "name": "tool",
+    "terms": "tool"
+  },
+  "trail": {
+    "name": "trail",
+    "terms": "trail"
+  },
+  "tram": {
+    "name": "tram",
+    "terms": "tram"
+  },
+  "trash": {
+    "name": "trash",
+    "terms": "trash"
+  },
+  "treatment": {
+    "name": "treatment",
+    "terms": "treatment"
+  },
+  "user": {
+    "name": "user",
+    "terms": "user"
+  },
+  "warning-triangle": {
+    "name": "warning-triangle",
+    "terms": "warning-triangle"
+  },
+  "water-faucet": {
+    "name": "water-faucet",
+    "terms": "water-faucet"
+  },
+  "wifi": {
+    "name": "wifi",
+    "terms": "wifi"
+  },
+  "x": {
+    "name": "x",
+    "terms": "x"
+  },
+  "zoom-minus": {
+    "name": "zoom-minus",
+    "terms": "zoom-minus"
+  },
+  "zoom-plus": {
+    "name": "zoom-plus",
+    "terms": "zoom-plus"
+  }
+}

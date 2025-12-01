@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- Added automatically generated icon-map.json
+
 ## [3.1.0] - 2025-10-27
 
 ### Changed

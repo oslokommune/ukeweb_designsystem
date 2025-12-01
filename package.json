@@ -8,6 +8,7 @@
     "build:icons:minimize": "svgo src/assets/icons/*.svg",
     "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
     "build:icons:font": "fantasticon -c ./.fantasticonrc.js",
+    "build:icons:json": "node ./generate-icon-json.js",
     "lint": "eslint --ext .js,.vue ./src && stylelint './src/**/*.scss'",
     "eslint": "eslint --ext .js,.vue ./src",
     "stylelint": "stylelint './src/**/*.scss'",
