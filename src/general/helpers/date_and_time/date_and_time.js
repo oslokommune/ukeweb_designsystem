@@ -15,7 +15,7 @@ function replaceLast(initialString, stringToReplace, replaceString) {
 }
 
 function shortenNbShortWeekday(initialString, options, overrideNorwegianShortDayFormat = false) {
-  if (!initialString || !options || !options.localeOptions || overrideNorwegianShortDayFormat === true) {
+  if (!initialString || !options?.localeOptions || overrideNorwegianShortDayFormat === true) {
     return initialString;
   }
 
