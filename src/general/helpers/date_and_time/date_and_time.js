@@ -46,7 +46,9 @@ function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions, overri
   let timePrefix = dateFromOptions.time.prefix ? dateFromOptions.time.prefix : ' ';
   dateFromString = replaceLast(dateFromString, ', ', timePrefix);
   dateFromString = dateFromOptions.prefix + dateFromString + dateFromOptions.suffix;
-  dateFromString = shortenNbShortWeekday(dateFromString, dateFromOptions, overrideNorwegianShortDayFormat);
+  if (dateFromOptions.localeOptions.weekday === 'short') {
+    dateFromString = shortenNbShortWeekday(dateFromString, dateFromOptions, overrideNorwegianShortDayFormat);
+  }
 
   if (dateTo) {
     dateToString = dateTo.toLocaleString(dateToOptions.locale, dateToOptions.localeOptions);
@@ -54,7 +56,9 @@ function formatDateTime(dateFrom, dateTo, dateFromOptions, dateToOptions, overri
     timePrefix = dateToOptions.time.prefix ? dateToOptions.time.prefix : ' ';
     dateToString = replaceLast(dateToString, ', ', timePrefix);
     dateToString = dateToOptions.prefix + dateToString + dateToOptions.suffix;
-    dateToString = shortenNbShortWeekday(dateToString, dateToOptions, overrideNorwegianShortDayFormat);
+    if (dateToOptions.localeOptions.weekday === 'short') {
+      dateToString = shortenNbShortWeekday(dateToString, dateToOptions, overrideNorwegianShortDayFormat);
+    }
   }
 
   return dateFromString + dateToString;
