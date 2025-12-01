@@ -15,16 +15,7 @@ function replaceLast(initialString, stringToReplace, replaceString) {
 }
 
 function shortenNbShortWeekday(initialString, options, overrideNorwegianShortDayFormat = false) {
-  if (!initialString || !options || !options.localeOptions) {
-    return initialString;
-  }
-  // If override is true, keep the 3-letter format
-  if (overrideNorwegianShortDayFormat === true) {
-    return initialString;
-  }
-
-  // Only act when weekday short form is used
-  if (options.localeOptions.weekday !== 'short') {
+  if (!initialString || !options || !options.localeOptions || overrideNorwegianShortDayFormat === true) {
     return initialString;
   }
 
