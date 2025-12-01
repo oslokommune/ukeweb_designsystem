@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-### Changed
+### Added
 
-- Changed date and time js to support 2 letter abbreviations of weekdays.
+- Added date and time js to support 2 letter abbreviations of weekdays.
 
 ## [3.1.0] - 2025-10-27
 
