@@ -35,6 +35,7 @@ function shortenNbShortWeekday(initialString, options, overrideNorwegianShortDay
   }
 
   // Replace Norwegian short weekdays: man, tir, ons, tor, fre, lør, søn → strip last letter
+  // https://regex101.com/r/vPFAGB/1
   const regex = /\b(man|tir|ons|tor|fre|lør|søn)\b/g;
 
   return initialString.replace(regex, (match) => match.slice(0, -1));
