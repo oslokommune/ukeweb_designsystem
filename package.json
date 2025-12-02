@@ -4,7 +4,7 @@
   "description": "Oslo Designsystem",
   "main": "index.js",
   "scripts": {
-    "build:icons": "npm run build:icons:minimize && run-p build:icons:svg build:icons:font",
+    "build:icons": "npm run build:icons:minimize && run-p build:icons:svg build:icons:font build:icons:json",
     "build:icons:minimize": "svgo src/assets/icons/*.svg",
     "build:icons:svg": "svgstore src/assets/icons/*.svg -o src/assets/images/OsloIcons.svg",
     "build:icons:font": "fantasticon -c ./.fantasticonrc.js",

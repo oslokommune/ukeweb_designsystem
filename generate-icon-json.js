@@ -1,8 +1,6 @@
-#!/usr/bin/env node
 /* eslint-disable no-console */
 /**
  * Generate a JSON map of icons based on SVG filenames.
- * Usage: node generate-icon-json.js --out path.json
  */
 
 const fs = require('fs');
