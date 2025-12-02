@@ -8,27 +8,7 @@ const path = require('path');
 
 const projectRoot = __dirname;
 const iconsDir = path.join(projectRoot, 'src', 'assets', 'icons');
-const defaultOut = path.join(projectRoot, 'src', 'assets', 'icons', 'icon-map.json');
-
-const args = process.argv.slice(2);
-
-function getArgValue(flag, fallback) {
-  const index = args.findIndex((arg) => arg === flag || arg.startsWith(`${flag}=`));
-
-  if (index === -1) {
-    return fallback;
-  }
-
-  const [, value] = args[index].split('=');
-
-  if (value) {
-    return value;
-  }
-
-  return args[index + 1] && !args[index + 1].startsWith('--') ? args[index + 1] : fallback;
-}
-
-const outPath = getArgValue('--out', defaultOut);
+const outPath = path.join(projectRoot, 'src', 'assets', 'icons', 'icon-map.json');
 
 if (!fs.existsSync(iconsDir)) {
   throw new Error(`Icons folder not found: ${iconsDir}`);
