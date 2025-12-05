@@ -1,434 +1,146 @@
 [
-  {
-    "name": "24h"
-  },
-  {
-    "name": "adjust"
-  },
-  {
-    "name": "ambulance"
-  },
-  {
-    "name": "apple"
-  },
-  {
-    "name": "archive"
-  },
-  {
-    "name": "arrow"
-  },
-  {
-    "name": "arrow-circle"
-  },
-  {
-    "name": "attachment"
-  },
-  {
-    "name": "automat"
-  },
-  {
-    "name": "backpack"
-  },
-  {
-    "name": "bike"
-  },
-  {
-    "name": "briefcase"
-  },
-  {
-    "name": "bullseye"
-  },
-  {
-    "name": "bus"
-  },
-  {
-    "name": "cafe"
-  },
-  {
-    "name": "calendar"
-  },
-  {
-    "name": "camera"
-  },
-  {
-    "name": "character-exclamation-mark"
-  },
-  {
-    "name": "character-information"
-  },
-  {
-    "name": "check"
-  },
-  {
-    "name": "check-big"
-  },
-  {
-    "name": "check-circle"
-  },
-  {
-    "name": "chevron-down"
-  },
-  {
-    "name": "chevron-left"
-  },
-  {
-    "name": "chevron-right"
-  },
-  {
-    "name": "chevron-thin-down"
-  },
-  {
-    "name": "chevron-thin-left"
-  },
-  {
-    "name": "chevron-thin-right"
-  },
-  {
-    "name": "chevron-thin-up"
-  },
-  {
-    "name": "chevron-up"
-  },
-  {
-    "name": "clock"
-  },
-  {
-    "name": "close"
-  },
-  {
-    "name": "cogwheel"
-  },
-  {
-    "name": "coin-stacks"
-  },
-  {
-    "name": "computer"
-  },
-  {
-    "name": "copy"
-  },
-  {
-    "name": "corona"
-  },
-  {
-    "name": "crane"
-  },
-  {
-    "name": "cross"
-  },
-  {
-    "name": "cross-circle"
-  },
-  {
-    "name": "data"
-  },
-  {
-    "name": "directions"
-  },
-  {
-    "name": "district"
-  },
-  {
-    "name": "document"
-  },
-  {
-    "name": "document-code"
-  },
-  {
-    "name": "document-pdf"
-  },
-  {
-    "name": "document-plain"
-  },
-  {
-    "name": "document-table"
-  },
-  {
-    "name": "document-text"
-  },
-  {
-    "name": "download"
-  },
-  {
-    "name": "download-document"
-  },
-  {
-    "name": "edit"
-  },
-  {
-    "name": "elcar"
-  },
-  {
-    "name": "email"
-  },
-  {
-    "name": "error-hexa"
-  },
-  {
-    "name": "exclamation-mark-circle"
-  },
-  {
-    "name": "exclamation-mark-square"
-  },
-  {
-    "name": "exit"
-  },
-  {
-    "name": "expand"
-  },
-  {
-    "name": "eye"
-  },
-  {
-    "name": "facebook"
-  },
-  {
-    "name": "factory-fill"
-  },
-  {
-    "name": "feedback"
-  },
-  {
-    "name": "filter"
-  },
-  {
-    "name": "fire-emblem"
-  },
-  {
-    "name": "folder"
-  },
-  {
-    "name": "graph"
-  },
-  {
-    "name": "grid"
-  },
-  {
-    "name": "handicap"
-  },
-  {
-    "name": "heart"
-  },
-  {
-    "name": "heart-plus"
-  },
-  {
-    "name": "home"
-  },
-  {
-    "name": "house-heart"
-  },
-  {
-    "name": "information"
-  },
-  {
-    "name": "instagram"
-  },
-  {
-    "name": "invoice"
-  },
-  {
-    "name": "language"
-  },
-  {
-    "name": "law-paragraph"
-  },
-  {
-    "name": "link"
-  },
-  {
-    "name": "link-arrow"
-  },
-  {
-    "name": "linked-in"
-  },
-  {
-    "name": "list"
-  },
-  {
-    "name": "location-pin"
-  },
-  {
-    "name": "location-pin-filled"
-  },
-  {
-    "name": "lock-locked"
-  },
-  {
-    "name": "lock-unlocked"
-  },
-  {
-    "name": "magnifying-glass-big"
-  },
-  {
-    "name": "magnifying-glass-small"
-  },
-  {
-    "name": "map"
-  },
-  {
-    "name": "map-layer"
-  },
-  {
-    "name": "menu"
-  },
-  {
-    "name": "message"
-  },
-  {
-    "name": "minimize"
-  },
-  {
-    "name": "minus-circle"
-  },
-  {
-    "name": "minus-circle-fill"
-  },
-  {
-    "name": "minus-sign"
-  },
-  {
-    "name": "mobile"
-  },
-  {
-    "name": "museum"
-  },
-  {
-    "name": "neutral"
-  },
-  {
-    "name": "new-window"
-  },
-  {
-    "name": "obstacle"
-  },
-  {
-    "name": "organization"
-  },
-  {
-    "name": "paint-bucket"
-  },
-  {
-    "name": "paper-plane"
-  },
-  {
-    "name": "park"
-  },
-  {
-    "name": "parking"
-  },
-  {
-    "name": "picture"
-  },
-  {
-    "name": "placeholder"
-  },
-  {
-    "name": "plus-circle"
-  },
-  {
-    "name": "plus-circle-fill"
-  },
-  {
-    "name": "plus-sign"
-  },
-  {
-    "name": "print"
-  },
-  {
-    "name": "qr-code"
-  },
-  {
-    "name": "question"
-  },
-  {
-    "name": "recycling"
-  },
-  {
-    "name": "ruler"
-  },
-  {
-    "name": "sad"
-  },
-  {
-    "name": "save"
-  },
-  {
-    "name": "share"
-  },
-  {
-    "name": "share-outline"
-  },
-  {
-    "name": "signing"
-  },
-  {
-    "name": "sky"
-  },
-  {
-    "name": "smile"
-  },
-  {
-    "name": "sound-off"
-  },
-  {
-    "name": "sound-on"
-  },
-  {
-    "name": "success-square"
-  },
-  {
-    "name": "swingset"
-  },
-  {
-    "name": "table"
-  },
-  {
-    "name": "target"
-  },
-  {
-    "name": "thumbs-down"
-  },
-  {
-    "name": "thumbs-up"
-  },
-  {
-    "name": "tickets"
-  },
-  {
-    "name": "tool"
-  },
-  {
-    "name": "trail"
-  },
-  {
-    "name": "tram"
-  },
-  {
-    "name": "trash"
-  },
-  {
-    "name": "treatment"
-  },
-  {
-    "name": "user"
-  },
-  {
-    "name": "warning-triangle"
-  },
-  {
-    "name": "water-faucet"
-  },
-  {
-    "name": "wifi"
-  },
-  {
-    "name": "x"
-  },
-  {
-    "name": "zoom-minus"
-  },
-  {
-    "name": "zoom-plus"
-  }
+  "24h",
+  "adjust",
+  "ambulance",
+  "apple",
+  "archive",
+  "arrow",
+  "arrow-circle",
+  "attachment",
+  "automat",
+  "backpack",
+  "bike",
+  "briefcase",
+  "bullseye",
+  "bus",
+  "cafe",
+  "calendar",
+  "camera",
+  "character-exclamation-mark",
+  "character-information",
+  "check",
+  "check-big",
+  "check-circle",
+  "chevron-down",
+  "chevron-left",
+  "chevron-right",
+  "chevron-thin-down",
+  "chevron-thin-left",
+  "chevron-thin-right",
+  "chevron-thin-up",
+  "chevron-up",
+  "clock",
+  "close",
+  "cogwheel",
+  "coin-stacks",
+  "computer",
+  "copy",
+  "corona",
+  "crane",
+  "cross",
+  "cross-circle",
+  "data",
+  "directions",
+  "district",
+  "document",
+  "document-code",
+  "document-pdf",
+  "document-plain",
+  "document-table",
+  "document-text",
+  "download",
+  "download-document",
+  "edit",
+  "elcar",
+  "email",
+  "error-hexa",
+  "exclamation-mark-circle",
+  "exclamation-mark-square",
+  "exit",
+  "expand",
+  "eye",
+  "facebook",
+  "factory-fill",
+  "feedback",
+  "filter",
+  "fire-emblem",
+  "folder",
+  "graph",
+  "grid",
+  "handicap",
+  "heart",
+  "heart-plus",
+  "home",
+  "house-heart",
+  "information",
+  "instagram",
+  "invoice",
+  "language",
+  "law-paragraph",
+  "link",
+  "link-arrow",
+  "linked-in",
+  "list",
+  "location-pin",
+  "location-pin-filled",
+  "lock-locked",
+  "lock-unlocked",
+  "magnifying-glass-big",
+  "magnifying-glass-small",
+  "map",
+  "map-layer",
+  "menu",
+  "message",
+  "minimize",
+  "minus-circle",
+  "minus-circle-fill",
+  "minus-sign",
+  "mobile",
+  "museum",
+  "neutral",
+  "new-window",
+  "obstacle",
+  "organization",
+  "paint-bucket",
+  "paper-plane",
+  "park",
+  "parking",
+  "picture",
+  "placeholder",
+  "plus-circle",
+  "plus-circle-fill",
+  "plus-sign",
+  "print",
+  "qr-code",
+  "question",
+  "recycling",
+  "ruler",
+  "sad",
+  "save",
+  "share",
+  "share-outline",
+  "signing",
+  "sky",
+  "smile",
+  "sound-off",
+  "sound-on",
+  "success-square",
+  "swingset",
+  "table",
+  "target",
+  "thumbs-down",
+  "thumbs-up",
+  "tickets",
+  "tool",
+  "trail",
+  "tram",
+  "trash",
+  "treatment",
+  "user",
+  "warning-triangle",
+  "water-faucet",
+  "wifi",
+  "x",
+  "zoom-minus",
+  "zoom-plus"
 ]

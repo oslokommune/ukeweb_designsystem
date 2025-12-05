@@ -30,7 +30,7 @@ if (iconNames.length === 0) {
 
 const result = iconNames.map((icon) => {
   const value = icon.trim();
-  return { name: value };
+  return value;
 });
 
 fs.writeFileSync(outPath, `${JSON.stringify(result, null, 2)}\n`);
