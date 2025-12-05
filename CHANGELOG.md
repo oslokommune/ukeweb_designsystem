@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added automatically generated icon-map.json
+- Added date and time js to support 2 letter abbreviations of weekdays.
+- Added automatically generated icon-map.json.
 
 ## [3.1.0] - 2025-10-27
 
