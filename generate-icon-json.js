@@ -28,11 +28,10 @@ if (iconNames.length === 0) {
   process.exit(1);
 }
 
-const result = iconNames.reduce((acc, icon) => {
+const result = iconNames.map((icon) => {
   const value = icon.trim();
-  acc[icon] = { name: value, terms: value };
-  return acc;
-}, {});
+  return { name: value };
+});
 
 fs.writeFileSync(outPath, `${JSON.stringify(result, null, 2)}\n`);
 
