@@ -5,6 +5,16 @@
   padding-left: 1.25rem;
   list-style: disc;
 
+  &:not(&--clean) {
+    ul {
+        list-style-type: circle;
+      }
+
+    ul ul {
+      list-style-type: square;
+    }
+  }
+
   & & {
     @extend %ods-padding-top-2;
 
