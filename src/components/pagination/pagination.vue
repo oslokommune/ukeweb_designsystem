@@ -6,7 +6,7 @@
     <template v-for="index in totalPages">
       <button v-if="showItem(index)" class="ods-pagination__item" v-bind:class="{ 'ods-pagination__item--current': index === currentIndex, 'ods-pagination__item--rectangle': index >= 100 }" :key="'item' + index" :disabled="index === currentIndex && disableCurrentIndexBtn" @click.prevent="paginate(index)">
         <span class="ods-sr-only">{{ i18n.showPage }} {{ index }}</span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true">{{ index }}</span>
       </button>
       <span v-else-if="showSpacer(index)" :key="'spacer' + index" class="ods-pagination__spacer" aria-hidden="true">&hellip;</span>
     </template>
