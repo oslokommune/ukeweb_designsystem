@@ -78,10 +78,21 @@
     &:hover::before {
       font-size: 1rem;
       left: -0.375rem;
+      top: 0;
     }
 
     @include breakpoints.medium {
       margin-left: 1.3rem;
+      padding-left: 0.5rem;
+
+      &::before,
+      &:hover::before {
+        font-size: 1.512rem;
+        left: -1.4rem;
+      }
+    }
+
+    @include breakpoints.large {
       padding-left: 0.75rem;
 
       &::before,
