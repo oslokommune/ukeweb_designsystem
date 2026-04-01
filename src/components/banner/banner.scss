@@ -81,13 +81,13 @@
     }
 
     @include breakpoints.medium {
-      margin-left: 1.5rem;
-      padding-left: 1rem;
+      margin-left: 1.3rem;
+      padding-left: 0.75rem;
 
       &::before,
       &:hover::before {
         font-size: 1.763rem;
-        left: -1.6rem;
+        left: -1.45rem;
       }
     }
   }
