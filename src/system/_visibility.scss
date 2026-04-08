@@ -1,6 +1,6 @@
 @use "breakpoints";
 
-$displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
+$displays: "none" "block" "inline" "inline-block" "flex" "inline-flex";
 
 // Displays
 @each $display in $displays {
