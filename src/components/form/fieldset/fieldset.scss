@@ -35,7 +35,7 @@
     & .ods-fieldset__legend {
       @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
       @extend %ods-text--weight-medium;
-      @extend %ods-margin-bottom-3, %ods-padding-bottom-1;
+      @extend %ods-margin-bottom-1;
     }
   }
 

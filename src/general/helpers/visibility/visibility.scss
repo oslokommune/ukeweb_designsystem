@@ -1,7 +1,7 @@
 @use "system/breakpoints";
 @use "system/visibility";
 
-$displays: "none" "block" "inline" "inline-block" "flex" "flex-inline";
+$displays: "none" "block" "inline" "inline-block" "flex" "inline-flex";
 
 @each $display in $displays {
   .ods-#{$display} {

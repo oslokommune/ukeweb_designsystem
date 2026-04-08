@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fixed pagination that repeated the page number in screenreaders.
 
+- Fixed CSS flex-inline rule that broke CSS validation.
+
+- Fixed vertical alignment of radio button and checkbox.
+
+### Removed
+
+- Removed extra spacing from legend.
+
 ## [3.3.0] - 2026-01-13
 
 ### Changed
