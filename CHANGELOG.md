@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Fix the style of the outline footer link.
+
 - Fixed pagination that repeated the page number in screenreaders.
 
 - Fixed CSS flex-inline rule that broke CSS validation.
