@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix the style of the outline footer link.
+- Fixed external links that broke the content into another line at small breakpoints.
+
+- Fixed the style of the outline footer link.
 
 - Fixed pagination that repeated the page number in screenreaders.
 
