@@ -93,7 +93,7 @@
     }
 
     @include breakpoints.large {
-      padding-left: 0.875rem;
+      padding-left: 1.125rem;
 
       &::before,
       &:hover::before {
