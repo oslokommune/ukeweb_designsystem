@@ -73,6 +73,7 @@
 
   &__link-icon {
     margin-left: 0.375rem;
+    padding-left: 0.875rem;
 
     &::before,
     &:hover::before {
@@ -93,7 +94,7 @@
     }
 
     @include breakpoints.large {
-      padding-left: 1rem;
+      padding-left: 1.125rem;
 
       &::before,
       &:hover::before {
