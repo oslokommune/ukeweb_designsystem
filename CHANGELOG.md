@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element.
+
 ## [3.3.0] - 2026-01-13
 
 ### Changed
