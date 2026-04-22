@@ -1,6 +1,6 @@
 {
   "name": "@oslokommune/oslo-designsystem",
-  "version": "v26-3-2",
+  "version": "3.3.1",
   "description": "Oslo Designsystem",
   "main": "index.js",
   "scripts": {
