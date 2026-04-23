@@ -11,11 +11,11 @@ This is a **source library**, not a standalone app. There is no dev server or bu
 ## Commands
 
 ```bash
-npm run lint              # Run both eslint and stylelint
-npm run eslint            # Lint JS/Vue files in src/
-npm run stylelint         # Lint SCSS files in src/
-npm run format            # Run Prettier
-npm run build:icons       # Full icon pipeline: minimize SVGs → generate sprite, font, and JSON map
+devbox npm run lint              # Run both eslint and stylelint
+devbox npm run eslint            # Lint JS/Vue files in src/
+devbox npm run stylelint         # Lint SCSS files in src/
+devbox npm run format            # Run Prettier
+devbox npm run build:icons       # Full icon pipeline: minimize SVGs → generate sprite, font, and JSON map
 ```
 
 There are no tests. There is no dev server (preview happens via the separate devtools repo).
