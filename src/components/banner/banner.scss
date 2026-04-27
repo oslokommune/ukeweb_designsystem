@@ -3,6 +3,7 @@
 @use "system/grid";
 @use "system/spacing";
 @use "system/typography";
+@use "components/links/link/mixins";
 
 .ods-banner {
   @extend %ods-padding-vertical-8, %ods-padding-vertical-13-breakpoint-medium;
@@ -72,6 +73,11 @@
   }
 
   &__link-icon {
+    display: inline-block;
+
+    @include mixins.icon-left("link-arrow");
+    @include mixins.states;
+
     margin-left: 0.375rem;
     padding-left: 0.875rem;
 
