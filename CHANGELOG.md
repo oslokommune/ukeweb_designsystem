@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element.
+- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element and remove `ods-link` and `ods-link--arrow-right`.
 
 - Added ellipsis when the content is too long in landscape card component.
 
