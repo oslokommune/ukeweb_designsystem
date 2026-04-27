@@ -46,6 +46,18 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
       width: 100%;
       grid-column: -5/-1;
     }
+
+    @include breakpoints.large {
+      max-height: $ods-landscape-card-height-breakpoint-large;
+      overflow: hidden;
+    }
+
+    & > *:not(:has(span)) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
   }
 
   &__link {
@@ -85,23 +97,40 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
     @extend %ods-text--size-lima;
     @extend %ods-margin-bottom-3, %ods-margin-bottom-4-breakpoint-medium;
     @extend %ods-text--weight-medium;
+
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
   }
 
   &__heading {
     @extend %ods-margin-bottom-1;
     @extend %ods-text--size-india, %ods-text--size-golf-breakpoint-medium;
     @extend %ods-text--weight-medium;
+
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
   }
 
   &__text {
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
     @extend %ods-text--weight-light;
+
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
   }
 
   &__published {
     @extend %ods-margin-top-3, %ods-margin-top-4-breakpoint-medium;
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-light;
+
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+
+    @include breakpoints.large {
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
+    }
   }
 
   &--white {
