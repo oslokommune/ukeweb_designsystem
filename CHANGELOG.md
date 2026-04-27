@@ -9,9 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fixed external links that broke the content into another line at small breakpoints.
+- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
 
-- Fixed the style of the outline footer link.
+## [3.3.3] - 2026-04-23
+
+- Update libraries to fix security errors.
+
+## [3.3.2] - 2026-04-22
+
+### Fixed
+
+- Fix the style of the outline footer link.
 
 - Fixed pagination that repeated the page number in screenreaders.
 
