@@ -5,7 +5,7 @@
 @use "system/typography";
 
 .ods-banner {
-  @extend %ods-padding-vertical-4, %ods-padding-vertical-13-breakpoint-medium;
+  @extend %ods-padding-vertical-8, %ods-padding-vertical-13-breakpoint-medium;
   @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-medium, %ods-text--size-hotel-breakpoint-large;
 
   background-color: colors.$white;
