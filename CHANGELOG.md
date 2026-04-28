@@ -11,12 +11,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added ellipsis when the content is too long in landscape card component.
 
+## [3.3.3] - 2026-04-23
+
+- Update libraries to fix security errors.
+
+## [3.3.2] - 2026-04-22
+
+### Fixed
+
+- Fix the style of the outline footer link.
+
+- Fixed pagination that repeated the page number in screenreaders.
+
+- Fixed CSS flex-inline rule that broke CSS validation.
+
+- Fixed vertical alignment of radio button and checkbox.
+
+### Removed
+
+- Removed extra spacing from legend.
+
 ## [3.3.0] - 2026-01-13
 
 ### Changed
 
 - Changed style to list items.
-
 
 ## [3.2.0] - 2025-12-09
 

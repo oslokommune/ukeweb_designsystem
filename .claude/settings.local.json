@@ -1,0 +1,46 @@
+{
+  "awsAuthRefresh": "aws sso login --profile ki-bedrock-inference-261916864828",
+  "env": {
+    "AWS_PROFILE": "ki-bedrock-inference-261916864828",
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_MODEL": "eu.anthropic.claude-opus-4-6-v1",
+    "AWS_REGION": "eu-central-1",
+    "DISABLE_BUG_COMMAND": "1",
+    "DISABLE_TELEMETRY": "1",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-3-haiku-20240307-v1:0",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "eu.anthropic.claude-opus-4-6-v1"
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash(devbox *)",
+      "Bash(docker exec *)",
+      "Bash(docker compose *)",
+      "Bash(docker-compose version *)"
+    ],
+    "deny": [
+      "Bash(devbox -e *)",
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Read(**.ssh/**)",
+      "Read(.gnupg/**)",
+      "Read(.devbox/**)",
+      "Read(.aws/**)",
+      "Read(.docker/config.json)",
+      "Read(secrets**)",
+      "Read(.secrets**)",
+      "Read(.env)",
+      "Read(*.pem)",
+      "Read(*.key)",
+      "Read(*.p12)",
+      "Read(*.pfx)",
+      "Read(id_rsa*)",
+      "Read(id_ed25519*)",
+      "Read(id_ecdsa*)",
+      "Read(*.crt)",
+      "Read(*.csr)"
+    ]
+  }
+}
