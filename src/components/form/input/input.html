@@ -54,10 +54,10 @@
         <div class="ods-devtools-code__box">
           <div class="ods-input">
             <label class="ods-input__label">
-              Required text
-              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-1" aria-required="true" />
+              Required text <span aria-hidden="true">*</span>
+              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-required="true" />
             </label>
-            <div class="ods-input__required" id="required-1">* Required</div>
+            <div class="ods-input__required" aria-hidden="true">* Required</div>
           </div>
         </div>
       </div>
@@ -192,8 +192,25 @@
             </label>
           </div>
           <div class="ods-status-message ods-status-message--danger">
-            <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+            <h2 class="ods-status-message__heading" id="error-1">
+              <span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message
+            </h2>
           </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-input ods-input--error">
+            <label class="ods-input__label">
+              Error/invalid <span aria-hidden="true">*</span>
+              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="error-2" aria-required="true" />
+              <span class="ods-icon ods-icon--exclamation-mark-circle" aria-hidden="true"></span>
+            </label>
+          </div>
+          <div class="ods-status-message ods-status-message--danger">
+            <h2 class="ods-status-message__heading" id="error-2">
+              <span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message
+            </h2>
+          </div>
+          <div class="ods-input__required" aria-hidden="true">* Required</div>
         </div>
       </div>
     </div>
@@ -207,10 +224,10 @@
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <div class="ods-input">
             <label class="ods-input__label">
-              Required text
-              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-describedby="required-2" aria-required="true" />
+              Required text <span aria-hidden="true">*</span>
+              <input class="ods-input__input" type="text" autocomplete="on" placeholder="Input text" aria-required="true" />
             </label>
-            <div class="ods-input__required" id="required-2">* Required</div>
+            <div class="ods-input__required" aria-hidden="true">* Required</div>
           </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
