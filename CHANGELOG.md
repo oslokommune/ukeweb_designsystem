@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- Added ellipsis when the content is too long in landscape card component.
+
 ## [3.3.3] - 2026-04-23
 
 - Update libraries to fix security errors.
