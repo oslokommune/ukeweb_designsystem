@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- Added ellipsis when the content is too long in landscape card component.
+
 ### Fixed
 
 - Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
