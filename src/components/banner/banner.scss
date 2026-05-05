@@ -44,9 +44,11 @@
 
   &__media {
     grid-column: 4 / 10;
+    @extend %ods-margin-bottom-2;
 
     @include breakpoints.medium {
       grid-column: 1 / 5;
+      margin-bottom: 0;
     }
 
     img {
