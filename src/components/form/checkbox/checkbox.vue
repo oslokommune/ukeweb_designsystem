@@ -6,10 +6,10 @@
         <span class="ods-checkbox__checkmark"></span>
         <span class="ods-checkbox__text">{{ text }}</span>
       </label>
-      <div v-if="ariaRequired" class="ods-checkbox__required" aria-hidden="true">{{ requiredText }}</div>
       <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
         <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
       </div>
+      <div v-if="ariaRequired" class="ods-checkbox__required" aria-hidden="true">{{ requiredText }}</div>
     </div>
   </div>
 </template>
