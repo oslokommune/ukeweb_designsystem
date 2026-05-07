@@ -75,12 +75,12 @@
               <div class="ods-grid__column--6-breakpoint-medium">
                 <div class="ods-checkbox">
                   <label class="ods-checkbox__wrapper">
-                    <input class="ods-checkbox__input" type="checkbox" checked="checked" aria-describedby="required-1" aria-required="true" />
+                    <input class="ods-checkbox__input" type="checkbox" checked="checked" aria-required="true" />
                     <span class="ods-checkbox__checkmark"></span>
                     <span class="ods-checkbox__text"> Text </span>
                   </label>
                 </div>
-                <div class="ods-checkbox__required" id="required-1">* Required</div>
+                <div class="ods-checkbox__required" aria-hidden="true">* Required</div>
               </div>
             </div>
           </div>
@@ -93,15 +93,15 @@
             <div class="ods-grid__column--6-breakpoint-medium">
               <div class="ods-checkbox">
                 <label class="ods-checkbox__wrapper ods-checkbox--error">
-                  <input class="ods-checkbox__input" type="checkbox" aria-describedby="required-2 error-1" aria-required="true" />
+                  <input class="ods-checkbox__input" type="checkbox" aria-describedby="error-1" aria-required="true" />
                   <span class="ods-checkbox__checkmark"></span>
                   <span class="ods-checkbox__text"> Text </span>
                 </label>
-                <div class="ods-checkbox__required" id="required-2">* Required</div>
               </div>
               <div class="ods-status-message ods-status-message--danger">
                 <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
+              <div class="ods-checkbox__required" aria-hidden="true">* Required</div>
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@
               <span class="ods-checkbox__text">Text</span>
             </label>
           </div>
-          <div class="ods-checkbox__required" id="required-11">* Required</div>
+          <div class="ods-checkbox__required" aria-hidden="true">* Required</div>
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-checkbox-vue-1">
-        <ods-checkbox :checked="true" :aria-required="true" error-id="ods-vue-checkbox-component" text="Name" name="name" value="50" />
+        <ods-checkbox :checked="true" :aria-required="true" error-id="vue-checkbox-error" text="Name" name="name" value="50" required-text="* Required" />
       </div>
     </div>
   </div>
