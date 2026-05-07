@@ -20,6 +20,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Increase top and bottom spacing on small breakpoint and update spacing between links in banner component.
 
+### Fixed
+
+- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
+
 ## [3.3.3] - 2026-04-23
 
 - Update libraries to fix security errors.
