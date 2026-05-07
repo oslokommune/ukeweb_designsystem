@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+
+- Added support for required text in Checkbox, Radio, and Input Vue components.
+
+### Changed
+
+- Required text is no longer announced to screen readers and is replaced by aria-required for required fields.
+
 ## [3.3.4] - 2026-05-06
 
 ### Added
