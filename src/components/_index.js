@@ -2,6 +2,7 @@ import '../general/helpers/collapsible/collapsible.init';
 import './contact/contactbox/contactbox.init';
 import './image_carousel/image_carousel.init';
 import './form/checkbox/checkbox.init';
+import './form/combobox/combobox.init';
 import './form/date/date';
 import './form/input/input.init';
 import './form/radio/radio.init';
