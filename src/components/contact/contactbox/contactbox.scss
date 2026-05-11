@@ -8,6 +8,11 @@
 .ods-contactbox {
   background-color: colors.$yellow;
 
+  &__content > :last-child:not(.ods-contactbox__custom-content),
+  &__content > :has(+ .ods-contactbox__custom-content:last-child) {
+    @extend %ods-padding-bottom-5, %ods-padding-bottom-8-breakpoint-large;
+  }
+
   &__trigger {
     @extend %ods-text--size-hotel, %ods-text--size-foxtrot-breakpoint-medium, %ods-text--size-delta-breakpoint-large;
     @extend %ods-padding-5, %ods-padding-8-breakpoint-large;
@@ -34,11 +39,10 @@
 
   &__group {
     @extend %ods-padding-horizontal-5, %ods-padding-horizontal-8-breakpoint-large;
-    @extend %ods-padding-bottom-4;
   }
 
-  &__group:last-of-type {
-    @extend %ods-padding-bottom-5, %ods-padding-bottom-8-breakpoint-large;
+  &__group:not(:last-child) {
+    @extend %ods-padding-bottom-4;
   }
 
   &__label {
