@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [3.3.4] - 2026-05-06
+
 ### Added
 
 - Added ellipsis when the content is too long in landscape card component.
+- Added Claude.
+
+### Changed
+
+- Increase top and bottom spacing on small breakpoint and update spacing between links in banner component.
 
 ## [3.3.3] - 2026-04-23
 
