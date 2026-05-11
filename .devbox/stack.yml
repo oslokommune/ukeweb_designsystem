@@ -1,0 +1,8 @@
+tools:
+  pnpm:
+    version: 10.33.2
+aliases:
+  npm: pnpm
+scripts:
+  build-icons:
+    devbox pnpm build:icons
