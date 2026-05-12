@@ -15,6 +15,10 @@
     @extend %ods-padding-0;
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-light;
+
+    &::before {
+      content: "* ";
+    }
   }
 
   &__legend {
@@ -26,6 +30,10 @@
     > * {
       text-decoration: none;
     }
+  }
+
+  &[aria-required="true"] > &__legend::after {
+    content: " *";
   }
 
   &--no-border {

@@ -76,7 +76,7 @@
                     <span class="ods-radio__text">Text</span>
                   </label>
                 </div>
-                <div class="ods-radio__required" aria-hidden="true">* Required</div>
+                <div class="ods-radio__required" aria-hidden="true">Required</div>
               </div>
             </div>
           </div>
@@ -247,7 +247,7 @@
           <div class="ods-status-message ods-status-message--danger">
             <h2 class="ods-status-message__heading" id="error-3"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
           </div>
-          <div class="ods-radio__required" aria-hidden="true">* Required</div>
+          <div class="ods-radio__required" aria-hidden="true">Required</div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <div class="ods-radio">
@@ -264,7 +264,7 @@
               <span class="ods-radio__text">Required</span>
             </label>
           </div>
-          <div class="ods-radio__required" aria-hidden="true">* Required</div>
+          <div class="ods-radio__required" aria-hidden="true">Required</div>
         </div>
       </div>
     </div>
@@ -272,7 +272,7 @@
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-radio-vue-1">
         <ods-radiogroup name="radiogrouptest" :fieldset-text="fieldsetText" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></ods-radiogroup>
-        <p class="ods-paragraph ods-margin-top-20">Value: {{ selectedValue }}</p>
+        <p class="ods-paragraph ods-margin-top-20 ods-padding-top-5">Value selected: {{ selectedValue }}</p>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <fieldset class="ods-fieldset ods-fieldset--no-border" :aria-describedby="errorMessage ? errorId : null" :aria-required="ariaRequired ? 'true' : null">
-      <legend>{{ fieldsetText }}</legend>
+      <legend class="ods-fieldset__legend">{{ fieldsetText }}</legend>
       <ods-radio
         v-for="(label, value, index) in items"
         :key="index"
