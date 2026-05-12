@@ -95,7 +95,7 @@
                   <div class="ods-devtools-code__box__code">
                     <div class="ods-radio ods-radio--error">
                       <label class="ods-radio__input">
-                        <input type="radio" name="radio-55" aria-describedby="error-1" aria-required="true"/>
+                        <input type="radio" name="radio-55" aria-describedby="error-1" />
                         <span class="ods-radio__control"></span>
                         <span class="ods-radio__text">Error/invalid</span>
                       </label>
@@ -103,7 +103,6 @@
                     <div class="ods-status-message ods-status-message--danger">
                       <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
                     </div>
-                    <div class="ods-radio__required" aria-hidden="true">* Required</div>
                   </div>
                 </div>
               </div>
@@ -227,20 +226,40 @@
             </label>
           </div>
           <div class="ods-status-message ods-status-message--danger">
-            <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+            <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
           </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <div class="ods-radio">
             <label class="ods-radio__input">
-              <input type="radio" name="radio-6" checked="checked" aria-required="true" />
+              <input type="radio" name="radio-6" checked="checked" aria-required="true" aria-describedby="error-3" />
               <span class="ods-radio__control"></span>
               <span class="ods-radio__text">Required</span>
             </label>
           </div>
           <div class="ods-radio">
             <label class="ods-radio__input">
-              <input type="radio" name="radio-5" aria-required="true" />
+              <input type="radio" name="radio-6" aria-required="true" aria-describedby="error-3" />
+              <span class="ods-radio__control"></span>
+              <span class="ods-radio__text">Required</span>
+            </label>
+          </div>
+          <div class="ods-status-message ods-status-message--danger">
+            <h2 class="ods-status-message__heading" id="error-3"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+          </div>
+          <div class="ods-radio__required" aria-hidden="true">* Required</div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-radio">
+            <label class="ods-radio__input">
+              <input type="radio" name="radio-7" checked="checked" aria-required="true" />
+              <span class="ods-radio__control"></span>
+              <span class="ods-radio__text">Required</span>
+            </label>
+          </div>
+          <div class="ods-radio">
+            <label class="ods-radio__input">
+              <input type="radio" name="radio-7" aria-required="true" />
               <span class="ods-radio__control"></span>
               <span class="ods-radio__text">Required</span>
             </label>
