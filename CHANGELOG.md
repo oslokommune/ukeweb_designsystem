@@ -19,12 +19,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element and remove `ods-link` and `ods-link--arrow-right`.
+
 - Added ellipsis when the content is too long in landscape card component.
 - Added Claude.
 
 ### Changed
 
 - Increase top and bottom spacing on small breakpoint and update spacing between links in banner component.
+
+### Fixed
+
+- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
 
 ## [3.3.3] - 2026-04-23
 
