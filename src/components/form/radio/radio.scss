@@ -19,6 +19,10 @@
     @extend %ods-padding-0;
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-light;
+
+    &::before {
+      content: "* ";
+    }
   }
 
   &__text {
@@ -28,6 +32,10 @@
     hyphens: auto;
     transition: 180ms all ease-in-out;
     opacity: 0.8;
+  }
+
+  & input[aria-required="true"] ~ &__text::after {
+    content: " *";
   }
 
   &--text-align-top {
