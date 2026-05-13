@@ -71,7 +71,7 @@
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                       </select>
-                      <div class="ods-select__required" id="required-1">* Required</div>
+                      <div class="ods-select__required" aria-hidden="true">Required</div>
                     </div>
                   </label>
                 </div>
@@ -192,17 +192,34 @@
           </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <div class="ods-select">
+          <div class="ods-select ods-select--error">
             <label class="ods-select__label">
-              Required
+              Error and Required
               <div class="ods-select__select">
-                <select aria-describedby="required-1" aria-required="true">
+                <select aria-describedby="error-2" aria-required="true">
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                 </select>
               </div>
             </label>
-            <div class="ods-select__required" id="required-1">* Required</div>
+            <div class="ods-status-message ods-status-message--danger">
+              <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+            </div>
+            <div class="ods-select__required" aria-hidden="true">Required</div>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-select">
+            <label class="ods-select__label">
+              Required
+              <div class="ods-select__select">
+                <select aria-required="true">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+              </div>
+            </label>
+            <div class="ods-select__required" aria-hidden="true">Required</div>
           </div>
         </div>
       </div>
