@@ -58,8 +58,8 @@
               <div class="ods-textarea">
                 <label class="ods-textarea__label">
                   Text
-                  <textarea class="ods-textarea__textarea" rows="4" aria-describedby="required-1" aria-required="true" placeholder="Write something here..."></textarea>
-                  <div class="ods-textarea__required" id="required-1">* Required</div>
+                  <textarea class="ods-textarea__textarea" rows="4" aria-required="true" placeholder="Write something here..."></textarea>
+                  <div class="ods-textarea__required" aria-hidden="true">Required</div>
                 </label>
               </div>
             </div>
@@ -143,12 +143,24 @@
           </div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
+          <div class="ods-textarea ods-textarea--error">
+            <label class="ods-textarea__label">
+              Error and required
+              <textarea class="ods-textarea__textarea" aria-describedby="error-2" rows="4" placeholder="Write something here..." aria-required="true"></textarea>
+            </label>
+            <div class="ods-textarea__required" aria-hidden="true">Required</div>
+            <div class="ods-status-message ods-status-message--danger">
+              <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+            </div>
+          </div>
+        </div>
+        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
           <div class="ods-textarea">
             <label class="ods-textarea__label">
               Required
-              <textarea class="ods-textarea__textarea" aria-describedby="required-1" aria-required="true" rows="4" placeholder="Write something here..."></textarea>
+              <textarea class="ods-textarea__textarea" aria-required="true" rows="4" placeholder="Write something here..."></textarea>
             </label>
-            <div class="ods-textarea__required" id="required-1">* Required</div>
+            <div class="ods-textarea__required" aria-hidden="true">Required</div>
           </div>
         </div>
       </div>
@@ -156,7 +168,7 @@
     <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-textarea-vue-1">
-        <ods-textarea error-id="ods-vue-checkbox-component" label="Label text" name="text" text="" placeholder="Type text here" />
+        <ods-textarea error-id="ods-vue-textarea-component" label="Label text" name="text" text="" placeholder="Type text here" :aria-required="true" required-text="Required" />
       </div>
     </div>
   </div>

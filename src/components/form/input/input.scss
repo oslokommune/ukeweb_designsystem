@@ -53,6 +53,10 @@
     &::before {
       content: "* ";
     }
+
+    &--optional::before {
+      content: none;
+    }
   }
 
   &__error-message {
