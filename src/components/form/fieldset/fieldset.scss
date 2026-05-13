@@ -19,6 +19,10 @@
     &::before {
       content: "* ";
     }
+
+    &--optional::before {
+      content: none;
+    }
   }
 
   &__legend {
