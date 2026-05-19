@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added support for required text in Checkbox, Radio, and Input Vue components.
+- Added support for required text in Checkbox, Date, Radio, Textarea, and Input Vue components. These components now accept two additional props: `aria-required` and `required-text`.
 
 ### Changed
 

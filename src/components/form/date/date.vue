@@ -1,9 +1,10 @@
 <template>
   <div class="ods-date" :class="{ 'ods-date--error': hasError }">
     <label class="ods-date__label">
-      {{ label }}
-      <input type="text" class="ods-date__input" :value="displayDate" :placeholder="placeholder" autocomplete="off" @focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
+      {{ label }} <span v-if="ariaRequired" aria-hidden="true">*</span>
+      <input type="text" class="ods-date__input" :value="displayDate" :placeholder="placeholder" :aria-required="ariaRequired ? 'true' : null" autocomplete="off" @focus="toggleDatepicker(true)" @keyup="handleKeyboardInput" />
     </label>
+    <div v-if="ariaRequired" class="ods-date__required" aria-hidden="true">{{ requiredText }}</div>
     <div role="alert" class="ods-status-message ods-status-message--danger" v-if="hasError">
       <h2 class="ods-status-message__heading">
         <span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>
@@ -62,6 +63,13 @@ export default {
     btnNextMonthLabel: {
       type: String,
       default: 'Next month',
+    },
+    ariaRequired: {
+      type: Boolean,
+    },
+    requiredText: {
+      type: String,
+      default: '',
     },
     minDateErrorMessage: {
       type: String,
