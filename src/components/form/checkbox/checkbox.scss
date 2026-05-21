@@ -11,6 +11,10 @@
   color: inherit;
   cursor: pointer;
 
+  &:has(input:disabled) {
+    cursor: default;
+  }
+
   &__label {
     @include mixins.form-label;
   }
@@ -26,12 +30,24 @@
     @extend %ods-padding-0;
     @extend %ods-text--size-lima;
     @extend %ods-text--weight-light;
+
+    &::before {
+      content: "* ";
+    }
+
+    &--optional::before {
+      content: none;
+    }
   }
 
   & input {
     cursor: pointer;
     opacity: 0;
     position: absolute;
+
+    &:disabled {
+      cursor: default;
+    }
   }
 
   &--text-align-top {
@@ -72,6 +88,10 @@
 
     border-style: hidden;
     hyphens: auto;
+  }
+
+  & input[aria-required="true"] ~ &__text::after {
+    content: " *";
   }
 
   &--error-message {
@@ -119,7 +139,7 @@
   }
 
   &--hover span,
-  & input:hover ~ span {
+  & input:hover:not([disabled]) ~ span {
     text-decoration: underline;
   }
 

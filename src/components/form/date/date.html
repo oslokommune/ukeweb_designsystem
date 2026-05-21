@@ -33,10 +33,10 @@
               <div class="ods-devtools-code__box__code">
                 <div class="ods-date">
                   <label class="ods-date__label">
-                    Type date
-                    <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd.mm.yyyy" />
+                    Type date <span aria-hidden="true">*</span>
+                    <input type="text" class="ods-date__input" autocomplete="off" placeholder="dd.mm.yyyy" aria-required="true" />
                   </label>
-                  <div class="ods-date__required" id="required-1">* Required</div>
+                  <div class="ods-date__required" aria-hidden="true">Required</div>
                 </div>
               </div>
             </div>
@@ -90,19 +90,32 @@
     </div>
 
     <div class="ods-grid__column--12 ods-grid__column--7-breakpoint-medium">
+      <div class="ods-date ods-date--error">
+        <label class="ods-date__label">
+          Error and required <span aria-hidden="true">*</span>
+          <input type="text" class="ods-date__input" autocomplete="off" aria-describedby="error-12" aria-required="true" />
+        </label>
+      </div>
+      <div class="ods-status-message ods-status-message--danger">
+        <h2 class="ods-status-message__heading" id="error-12"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+      </div>
+      <div class="ods-date__required" aria-hidden="true">Required</div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-grid__column--7-breakpoint-medium">
       <div class="ods-date">
         <label class="ods-date__label">
-          Type date
-          <input type="text" class="ods-date__input" autocomplete="off" aria-describedby="required-1" />
+          Type date <span aria-hidden="true">*</span>
+          <input type="text" class="ods-date__input" autocomplete="off" aria-required="true" />
         </label>
-        <div class="ods-date__required" id="required-1">* Required</div>
+        <div class="ods-date__required" aria-hidden="true">Required</div>
       </div>
     </div>
 
     <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
       <h3 class="ods-devtools-text-preset-2">Datepicker</h3>
       <div id="ods-date-vue-dev">
-        <ods-date :date="date" :display-date="displayDate" :placeholder="placeholder" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate"></ods-date>
+        <ods-date :date="date" :display-date="displayDate" :placeholder="placeholder" label="Pick a date" v-on:set="setDate" :min="minDate" :max="maxDate" :aria-required="true" required-text="Required"></ods-date>
       </div>
     </div>
   </div>

@@ -30,6 +30,10 @@
     opacity: 0.8;
   }
 
+  & input[aria-required="true"] ~ &__text::after {
+    content: " *";
+  }
+
   &--text-align-top {
     align-items: flex-start;
 
