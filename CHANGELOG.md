@@ -13,13 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element and remove `ods-link` and `ods-link--arrow-right`.
 - Required text is no longer announced to screen readers and is replaced by aria-required for required fields.
+
+### Fixed
+
+- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
+- Fixed external link in Personalized content link, now it shows the icon after the text.
 
 ## [3.3.4] - 2026-05-06
 
 ### Added
-
-- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element and remove `ods-link` and `ods-link--arrow-right`.
 
 - Added ellipsis when the content is too long in landscape card component.
 - Added Claude.
@@ -27,10 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Increase top and bottom spacing on small breakpoint and update spacing between links in banner component.
-
-### Fixed
-
-- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
 
 ## [3.3.3] - 2026-04-23
 
