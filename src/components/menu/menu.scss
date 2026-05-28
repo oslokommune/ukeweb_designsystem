@@ -172,7 +172,8 @@
 
     &--open {
       visibility: visible;
-      max-height: fit-content;
+      max-height: 695px;
+      transition: all 0.7s ease;
 
       ul {
         @extend %ods-padding-top-4, %ods-padding-bottom-4, %ods-margin-top-4;
@@ -195,6 +196,7 @@
     &--close {
       max-height: 0;
       visibility: hidden;
+      transition: all 0.7s ease;
 
       @include breakpoints.medium {
         max-height: unset;
@@ -292,7 +294,7 @@
   }
 
   &__my-page {
-    padding: 0 3.25rem 3.25rem;
+    padding: 0 3.25rem 2rem;
 
     &--mobile {
       display: block;
