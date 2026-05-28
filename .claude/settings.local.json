@@ -20,7 +20,6 @@
     ],
     "deny": [
       "Bash(devbox -e *)",
-      "Bash(git *)",
       "Bash(npm *)",
       "Bash(npx *)",
       "Bash(node *)",
