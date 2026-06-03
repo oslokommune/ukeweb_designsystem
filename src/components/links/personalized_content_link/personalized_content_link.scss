@@ -3,6 +3,7 @@
 @use "system/spacing";
 @use "system/typography";
 @use "system/units";
+@use "../link/mixins";
 @use "system/states";
 
 .ods-personalized-content-link {
@@ -76,6 +77,17 @@
     grid-template-columns: units.unit-to-rem(8) 1fr;
     @include breakpoints.large {
       grid-template-columns: units.unit-to-rem(10) 1fr;
+    }
+  }
+
+  &.ods-link--external {
+    &::after,
+    &:hover::after {
+      content: none !important;
+    }
+
+    .ods-personalized-content-link__text:last-of-type {
+      @include mixins.icon-right("new-window");
     }
   }
 

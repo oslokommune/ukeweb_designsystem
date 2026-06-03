@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [4.0.0] - 2026-05-22
+
+### Added
+
+- Added support for required text in Checkbox, Date, Radio, Textarea, and Input Vue components. These components now accept two additional props: `aria-required` and `required-text`.
+
+### Changed
+
+- **Breaking change:** Added a class in banner to increase the visual spacing between the icon and the text. All banner components need to add `ods-banner__link-icon` to the list element and remove `ods-link` and `ods-link--arrow-right`.
+- Required text is no longer announced to screen readers and is replaced by aria-required for required fields.
+
+### Fixed
+
+- Fixed a bug that caused external links to wrap onto a new line at smaller breakpoints.
+- Fixed external link in Personalized content link, now it shows the icon after the text.
+
 ## [3.3.4] - 2026-05-06
 
 ### Added

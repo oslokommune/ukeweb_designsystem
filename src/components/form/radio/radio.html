@@ -64,24 +64,6 @@
           </div>
         </div>
       </div>
-      <div class="ods-devtools-code">
-        <div class="ods-devtools-code__box">
-          <div class="ods-grid">
-            <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-              <div class="ods-devtools-code__box__code">
-                <div class="ods-radio">
-                  <label class="ods-radio__input">
-                    <input type="radio" name="radio-11" aria-describedby="required-1" />
-                    <span class="ods-radio__control"></span>
-                    <span class="ods-radio__text">Text</span>
-                  </label>
-                </div>
-                <div class="ods-radio__required" id="required-1">* Required</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <p class="ods-paragraph ods-margin-top-20">
         When error is used think about what information you give the user in the error message.<br />
         The length of the error message shouldn't take 100% of the width of the page.
@@ -95,7 +77,7 @@
                   <div class="ods-devtools-code__box__code">
                     <div class="ods-radio ods-radio--error">
                       <label class="ods-radio__input">
-                        <input type="radio" name="radio-55" aria-describedby="required-2 error-1" />
+                        <input type="radio" name="radio-55" aria-describedby="error-1" />
                         <span class="ods-radio__control"></span>
                         <span class="ods-radio__text">Error/invalid</span>
                       </label>
@@ -103,7 +85,6 @@
                     <div class="ods-status-message ods-status-message--danger">
                       <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
                     </div>
-                    <div class="ods-radio__required" id="required-2">* Required</div>
                   </div>
                 </div>
               </div>
@@ -227,33 +208,16 @@
             </label>
           </div>
           <div class="ods-status-message ods-status-message--danger">
-            <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+            <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
           </div>
-        </div>
-        <div class="ods-grid__column--12 ods-grid__column--4-breakpoint-medium">
-          <div class="ods-radio">
-            <label class="ods-radio__input">
-              <input type="radio" name="radio-6" checked="checked" aria-describedby="required-11" />
-              <span class="ods-radio__control"></span>
-              <span class="ods-radio__text">Required</span>
-            </label>
-          </div>
-          <div class="ods-radio">
-            <label class="ods-radio__input">
-              <input type="radio" name="radio-5" aria-describedby="required-11" />
-              <span class="ods-radio__control"></span>
-              <span class="ods-radio__text">Required</span>
-            </label>
-          </div>
-          <div class="ods-radio__required" id="required-11">* Required</div>
         </div>
       </div>
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Vue</h2>
       <div id="ods-radio-vue-1">
-        <ods-radiogroup name="radiogrouptest" :fieldset-text="fieldsetText" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}"></ods-radiogroup>
-        <p class="ods-paragraph ods-margin-top-20">Value: {{ selectedValue }}</p>
+        <ods-radiogroup name="radiogrouptest" :fieldset-text="fieldsetText" :selected="selectedValue" error-id="radiogrouptest-error" :items="items" v-on:select="(value) => {selectedValue = value}" :aria-required="true" required-text="Required"></ods-radiogroup>
+        <p class="ods-paragraph ods-margin-top-20 ods-padding-top-5">Value selected: {{ selectedValue }}</p>
       </div>
     </div>
   </div>

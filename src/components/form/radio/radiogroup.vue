@@ -1,7 +1,7 @@
 <template>
   <div>
-    <fieldset class="ods-fieldset ods-fieldset--no-border" :aria-describedby="conditionalErrorId">
-      <legend>{{ fieldsetText }}</legend>
+    <fieldset class="ods-fieldset ods-fieldset--no-border" :aria-describedby="errorMessage ? errorId : null" :aria-required="ariaRequired ? 'true' : null">
+      <legend class="ods-fieldset__legend">{{ fieldsetText }}</legend>
       <ods-radio
         v-for="(label, value, index) in items"
         :key="index"
@@ -20,6 +20,7 @@
     <div role="alert" class="ods-status-message ods-status-message--danger" v-if="errorMessage">
       <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
     </div>
+    <div v-if="ariaRequired" class="ods-input__required" aria-hidden="true">{{ requiredText }}</div>
   </div>
 </template>
 <script>
@@ -60,12 +61,18 @@ export default {
       type: String,
       required: true,
     },
+
+    ariaRequired: {
+      type: Boolean,
+    },
+
+    requiredText: {
+      type: String,
+      default: '',
+    },
   },
 
   computed: {
-    conditionalErrorId() {
-      return this.errorMessage ? this.errorId : '';
-    },
     selectedModel: {
       get() {
         return this.selected;

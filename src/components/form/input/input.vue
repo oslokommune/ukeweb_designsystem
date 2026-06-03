@@ -1,14 +1,15 @@
 <template>
   <div class="ods-input" :class="{ 'ods-input--error': errorMessage }">
     <label class="ods-input__label">
-      {{ label }}
-      <input class="ods-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" />
+      {{ label }} <span v-if="ariaRequired" aria-hidden="true">*</span>
+      <input class="ods-input__input" v-model="valueModel" :type="type" :name="name" :autocomplete="autocomplete" :placeholder="placeholder" :aria-describedby="errorMessage ? errorId : null" :aria-required="ariaRequired ? 'true' : null" />
       <span v-if="errorMessage" class="ods-icon ods-icon--exclamation-mark-circle"></span>
     </label>
   </div>
   <div class="ods-status-message ods-status-message--danger" v-if="errorMessage">
     <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
   </div>
+  <div v-if="ariaRequired" class="ods-input__required" aria-hidden="true">{{ requiredText }}</div>
 </template>
 <script>
 export default {
@@ -50,12 +51,13 @@ export default {
     ariaRequired: {
       type: Boolean,
     },
+    requiredText: {
+      type: String,
+      default: '',
+    },
   },
 
   computed: {
-    conditionalErrorId() {
-      return this.errorMessage ? this.errorId : '';
-    },
     valueModel: {
       get() {
         return this.value;
