@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed contactbox styling to support div tags.
 - Changed menu component to new version.
+- Updated dependencies.
 
 ## [4.0.0] - 2026-05-22
 
