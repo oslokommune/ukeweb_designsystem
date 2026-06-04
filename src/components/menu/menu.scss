@@ -126,7 +126,7 @@
   display: none;
 
   .ods-icon {
-    @extend %ods-icon--size-kilo, %ods-icon--size-juliett-breakpoint-large;
+    @extend %ods-icon--size-juliett, %ods-icon--size-golf-breakpoint-medium;
   }
 
   &__heading-collapsable {
@@ -135,7 +135,7 @@
     @extend %ods-text--weight-medium;
     @extend %ods-padding-horizontal-0;
     @extend %ods-padding-left-4;
-    @extend %ods-padding-bottom-4, %ods-padding-bottom-0-breakpoint-medium;
+    @extend %ods-padding-bottom-0;
     @extend %ods-none-breakpoint-medium;
 
     background-color: unset;
@@ -158,10 +158,12 @@
   &__list-animate {
     max-height: 0;
     overflow: hidden;
+    visibility: hidden;
 
     @include breakpoints.medium {
       max-height: unset;
       overflow: visible;
+      visibility: visible;
     }
 
     ul {
@@ -169,16 +171,36 @@
     }
 
     &--open {
+      visibility: visible;
       max-height: 695px;
       transition: all 0.7s ease;
+
+      ul {
+        @extend %ods-padding-top-4, %ods-padding-bottom-4, %ods-margin-top-4;
+
+        @include breakpoints.medium {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        li {
+          @extend %ods-margin-left-0, %ods-margin-bottom-0;
+        }
+
+        li:first-child {
+          @extend %ods-padding-top-0;
+        }
+      }
     }
 
     &--close {
       max-height: 0;
+      visibility: hidden;
       transition: all 0.7s ease;
 
       @include breakpoints.medium {
         max-height: unset;
+        visibility: visible;
       }
     }
   }
@@ -206,6 +228,9 @@
   &__link-icon {
     @extend %ods-margin-right-1;
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
+
+    display: flex;
+    align-items: center;
   }
 
   &__link-text {
@@ -231,6 +256,11 @@
       background-color: unset;
       hyphens: auto;
       flex-wrap: wrap;
+      padding-left: 0 !important;
+    }
+
+    .ods-navbar-menu__link {
+      align-items: center;
     }
 
     li:first-child {
@@ -244,11 +274,44 @@
         margin-bottom: unset;
       }
     }
+
+    &.ods-navbar-menu__list-animate--open {
+      @extend %ods-padding-top-4, %ods-padding-bottom-4, %ods-margin-top-4;
+
+      @include breakpoints.medium {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      li {
+        @extend %ods-margin-left-0, %ods-margin-bottom-0;
+      }
+
+      li:first-child {
+        @extend %ods-padding-top-0;
+      }
+    }
+  }
+
+  &__my-page {
+    padding: 0 3.25rem 2rem;
+
+    &--mobile {
+      display: block;
+
+      @include breakpoints.medium {
+        display: none !important;
+      }
+    }
   }
 
   &__categories {
     @extend %ods-padding-horizontal-0;
     @extend %ods-padding-vertical-13-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
+
+    @include breakpoints.medium {
+      margin-left: 0;
+    }
 
     ul {
       @extend %ods-margin-top-4-breakpoint-medium;
@@ -266,6 +329,12 @@
       text-decoration: underline;
     }
 
+    .ods-navbar-menu__link {
+      @include breakpoints.medium {
+        margin-left: 0 !important;
+      }
+    }
+
     @include breakpoints.medium {
       background-color: colors.$gray;
     }
@@ -274,8 +343,14 @@
   &__footer {
     @extend %ods-padding-vertical-8-breakpoint-medium, %ods-padding-horizontal-13-breakpoint-medium;
 
+    align-items: center;
+
     li {
       @extend %ods-padding-top-4;
+
+      @include breakpoints.medium {
+        padding-top: 0 !important;
+      }
     }
   }
 
@@ -283,6 +358,10 @@
     @extend %ods-margin-top-0-breakpoint-medium, %ods-padding-left-4, %ods-padding-left-0-breakpoint-medium;
 
     justify-content: flex-start;
+
+    @include breakpoints.medium {
+      margin-left: 0 !important;
+    }
 
     &--media {
       display: flex;
@@ -296,10 +375,15 @@
       & .ods-navbar-menu__link-content {
         @extend %ods-padding-right-4, %ods-padding-right-0-breakpoint-medium, %ods-padding-left-6-breakpoint-medium;
       }
-    }
 
-    .ods-icon {
-      font-size: 1.5rem;
+      .ods-icon {
+        font-size: 1.5rem;
+        margin-right: 0;
+
+        @include breakpoints.large {
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 }
