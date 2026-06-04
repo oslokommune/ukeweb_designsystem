@@ -2,6 +2,7 @@
 @use "system/colors";
 @use "system/grid";
 @use "system/spacing";
+@use "system/states";
 @use "system/typography";
 @use "components/links/link/mixins";
 
@@ -79,6 +80,21 @@
 
     @include mixins.icon-left("link-arrow");
     @include mixins.states;
+
+    &:focus-visible {
+      outline: none;
+      color: states.$hover !important;
+      background-color: colors.$purple-light;
+      box-shadow: -0.375rem 0 0 colors.$purple-light;
+
+      @include breakpoints.medium {
+        box-shadow: -1.4rem 0 0 colors.$purple-light;
+      }
+
+      @include breakpoints.large {
+        box-shadow: -1.35rem 0 0 colors.$purple-light;
+      }
+    }
 
     margin-left: 0.375rem;
     padding-left: 0.875rem;

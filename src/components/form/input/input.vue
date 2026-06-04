@@ -15,6 +15,8 @@
 export default {
   name: 'OdsInput',
 
+  emits: ['input'],
+
   props: {
     name: {
       type: String,
