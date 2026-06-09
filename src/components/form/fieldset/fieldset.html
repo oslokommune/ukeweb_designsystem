@@ -61,6 +61,7 @@
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Required</h2>
+      <p class="ods-paragraph">For fieldset-based components (such as radio button and checkbox groups), we use <code class="ods-code">aria-describedby</code> to associate the group with a visible "Required" text instead of using <code class="ods-code">aria-required</code>. The fieldset/legend pattern represents the group as a whole, and <code class="ods-code">aria-required</code> is not supported on fieldset or legend.</p>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1">
