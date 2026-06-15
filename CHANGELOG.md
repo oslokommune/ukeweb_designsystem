@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated status message styling to use font weight 300 for single-line usage.
+- Updated the styling for status messages. Messages are now restricted to heading-only, paragraph-only (rendered with font size 300) or heading+paragraph layouts.
 
 ## [4.0.1] - 2026-06-03
 
