@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated missing required to fieldset and textarea.
 - Updated documentation in video component.
+- Updated the styling for status messages. Messages are now restricted to heading-only, paragraph-only (rendered with font size 300) or heading+paragraph layouts.
 
 ## [4.0.1] - 2026-06-03
 
