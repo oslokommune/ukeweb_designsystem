@@ -61,10 +61,11 @@
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Required</h2>
+      <p class="ods-paragraph">For fieldset-based components (such as radio button and checkbox groups), we use <code class="ods-code">aria-describedby</code> to associate the group with a visible "Required" text instead of using <code class="ods-code">aria-required</code>. The fieldset/legend pattern represents the group as a whole, and <code class="ods-code">aria-required</code> is not supported on fieldset or legend.</p>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-required="true">
-            <legend class="ods-fieldset__legend">Select the options:</legend>
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-1">
+            <legend class="ods-fieldset__legend">Select the options: <span aria-hidden="true">*</span></legend>
             <div class="ods-checkbox">
               <label class="ods-checkbox__wrapper">
                 <input class="ods-checkbox__input" type="checkbox" name="checkbox-1" checked="checked" />
@@ -80,7 +81,7 @@
               </label>
             </div>
           </fieldset>
-          <div class="ods-fieldset__required" aria-hidden="true">Required</div>
+          <div class="ods-fieldset__required" id="required-1">Required</div>
         </div>
       </div>
     </div>
@@ -283,7 +284,7 @@
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" >
+          <fieldset class="ods-fieldset ods-fieldset--no-border">
             <legend class="ods-fieldset__legend">Focus</legend>
             <div>
               <div class="ods-radio ods-radio--focus">
@@ -323,7 +324,7 @@
                 </label>
               </div>
               <div class="ods-status-message ods-status-message--danger">
-                <h2 class="ods-status-message__heading" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                <p class="ods-status-message__content" id="error-1"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</p>
               </div>
             </div>
           </fieldset>
@@ -348,15 +349,15 @@
                 </label>
               </div>
               <div class="ods-status-message ods-status-message--danger">
-                <h2 class="ods-status-message__heading" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                <p class="ods-status-message__content" id="error-2"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
             </div>
           </fieldset>
         </div>
 
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-required="true">
-            <legend class="ods-fieldset__legend">Required</legend>
+          <fieldset class="ods-fieldset ods-fieldset--no-border" aria-describedby="required-2">
+            <legend class="ods-fieldset__legend">Required <span aria-hidden="true">*</span></legend>
             <div>
               <div class="ods-checkbox">
                 <label class="ods-checkbox__wrapper">
@@ -374,11 +375,11 @@
               </div>
             </div>
           </fieldset>
-          <div class="ods-fieldset__required" aria-hidden="true">Required</div>
+          <div class="ods-fieldset__required" id="required-2">Required</div>
         </div>
         <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="error-3" aria-required="true">
-            <legend class="ods-fieldset__legend">Required and error</legend>
+          <fieldset class="ods-fieldset ods-fieldset--no-border ods-fieldset--error" aria-describedby="required-3 error-3">
+            <legend class="ods-fieldset__legend">Required and error <span aria-hidden="true">*</span></legend>
             <div>
               <div class="ods-radio ods-radio--error">
                 <label class="ods-radio__input">
@@ -395,11 +396,11 @@
                 </label>
               </div>
               <div class="ods-status-message ods-status-message--danger">
-                <h2 class="ods-status-message__heading" id="error-3"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
+                <p class="ods-status-message__content" id="error-3"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>Error message</h2>
               </div>
             </div>
           </fieldset>
-          <div class="ods-fieldset__required" aria-hidden="true">Required</div>
+          <div class="ods-fieldset__required" id="required-3">Required</div>
         </div>
       </div>
     </div>
