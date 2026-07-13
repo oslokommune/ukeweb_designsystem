@@ -237,6 +237,15 @@
     @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large, %ods-text--weight-light;
 
     display: inline-block;
+
+    &--separator {
+      @extend %ods-padding-right-6-breakpoint-medium;
+
+      @include breakpoints.medium {
+        align-self: center;
+        border-right: 1px solid currentcolor;
+      }
+    }
   }
 
   &__services {
