@@ -1,12 +1,12 @@
 <template>
   <div class="ods-textarea" :class="{ 'ods-textarea--error': errorMessage }">
     <label class="ods-textarea__label">
-      {{ label }}
+      {{ label }} <span v-if="ariaRequired" aria-hidden="true">*</span>
       <textarea v-model="textModel" :name="name" :aria-describedby="conditionalErrorId" :aria-required="ariaRequired ? 'true' : null" class="ods-textarea__textarea" :rows="rows" :placeholder="placeholder"></textarea>
     </label>
     <div v-if="ariaRequired" class="ods-textarea__required" aria-hidden="true">{{ requiredText }}</div>
     <div class="ods-status-message ods-status-message--danger" v-if="errorMessage">
-      <h2 class="ods-status-message__heading" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</h2>
+      <p class="ods-status-message__content" :id="errorId"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ errorMessage }}</p>
     </div>
   </div>
 </template>

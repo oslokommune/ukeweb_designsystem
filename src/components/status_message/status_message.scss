@@ -20,7 +20,14 @@
 
   &__content {
     @extend %ods-text--weight-light;
+
+    display: flex;
+  }
+
+  &__heading + &__content {
     @extend %ods-margin-top-4;
+
+    display: block;
   }
 
   &__date {
