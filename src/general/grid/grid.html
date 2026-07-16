@@ -151,47 +151,45 @@
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-1">Center</h2>
-      <p class="ods-paragraph">The center modifier centers a grid inside a parent element if the width of the parent element exceeds the specified max width. Center will conflict with gutter since both targets margin. If a gutter is needed create a parent grid with gutter.</p>
+      <p class="ods-paragraph">The center modifier centers a grid inside a parent element when the parent element is wider than the grid's max width. Center will conflict with gutter since both targets margin. If a gutter is needed, create a parent grid with gutter and place the centered grid inside it.</p>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
-          <div class="ods-grid">
+          <div class="ods-color-bg-gray-light ods-padding-4" style="overflow-x: auto">
+            <div style="min-width: 90rem">
+              <div class="ods-devtools-code__box__code">
+                <div class="ods-grid ods-grid--center ods-grid--gap">
+                  <div class="ods-grid__column--12">
+                    <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">Centered content max-width</div>
+                  </div>
+                  <div class="ods-grid__column--4">
+                    <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">4 columns</div>
+                  </div>
+                  <div class="ods-grid__column--4">
+                    <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">4 columns</div>
+                  </div>
+                  <div class="ods-grid__column--4">
+                    <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">4 columns</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="ods-paragraph">Use this pattern when a page needs both page gutter and centered content.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid ods-grid--gutter">
             <div class="ods-grid__column--12">
-              <div class="ods-grid ods-grid--center">
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+              <div class="ods-grid ods-grid--center ods-grid--gap">
+                <div class="ods-grid__column--12">
+                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">Content</div>
                 </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+                <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-green-light">6 columns</div>
                 </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
-                </div>
-                <div class="ods-grid__column--1">
-                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+                <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
+                  <div class="ods-padding-3 ods-text--align-center ods-color-bg-green-light">6 columns</div>
                 </div>
               </div>
             </div>
