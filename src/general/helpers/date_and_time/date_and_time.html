@@ -12,7 +12,7 @@
     </div>
     <div class="ods-grid__column--12">
       <div class="ods-content">
-        <code class="ods-code" class="ods-code ods-block ods-margin-vertical-8">OdsDateFormat.format(dateFrom, dateTo, dateFromOptions, dateToOptions);</code>
+        <code class="ods-code ods-block ods-margin-vertical-8">OdsDateTime.format(dateFrom, dateTo, dateFromOptions, dateToOptions);</code>
         <p>The arguments are:</p>
         <ul>
           <li>
@@ -56,9 +56,20 @@
           </li>
           <li>
             <code class="ods-code">localeOptions</code>
-            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#using_options" target="_blank">Available options</a>. Defaults are <code class="ods-code">hourCycle: "h24", calendar: "gregory", timeZone: "Europe/Oslo"</code></code></p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#using_options" target="_blank">Available options</a>. Defaults are <code class="ods-code">hourCycle: "h24", calendar: "gregory", timeZone: "Europe/Oslo"</code></p>
           </li>
         </ul>
+        <h2 class="ods-devtools-text-preset-1">JavaScript examples</h2>
+        <p>Import the formatter before using it in your JavaScript.</p>
+        <code class="ods-code ods-block ods-margin-vertical-8">import OdsDateTime from '@oslokommune/oslo-designsystem/src/general/helpers/date_and_time/date_and_time';</code>
+        <p>Format a single date. The default output uses numbers for day, month and year.</p>
+        <code class="ods-code ods-block ods-margin-vertical-8">const publishedDate = OdsDateTime.format(new Date(2022, 4, 15));</code>
+        <p>Format a time interval with a prefix before the first time.</p>
+        <code class="ods-code ods-block ods-margin-vertical-8">const openingHours = OdsDateTime.format(new Date(2022, 4, 15, 8, 0), new Date(2022, 4, 15, 16, 0), { format: 'time', prefix: 'kl. ' }, { format: 'time' });</code>
+        <p>Format date and time together. Use <code class="ods-code">time.prefix</code> to control the text between the date and the time.</p>
+        <code class="ods-code ods-block ods-margin-vertical-8">const eventTime = OdsDateTime.format(new Date(2022, 4, 15, 8, 0), new Date(2022, 4, 15, 16, 0), { format: 'datetime', time: { prefix: ' kl. ' } }, { format: 'time' });</code>
+        <p>Use <code class="ods-code">localeOptions</code> when you need a more specific format.</p>
+        <code class="ods-code ods-block ods-margin-vertical-8">const readableDate = OdsDateTime.format(new Date(2022, 4, 15, 8, 0), null, { format: 'daytime', time: { prefix: ', kl. ' }, localeOptions: { weekday: 'long' } });</code>
       </div>
     </div>
   </div>
