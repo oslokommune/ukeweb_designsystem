@@ -33,10 +33,6 @@
     @extend %ods-text--weight-light;
   }
 
-  &--square &__image img {
-    border-radius: 0;
-  }
-
   &__image {
     grid-row-start: 1;
     display: grid;
