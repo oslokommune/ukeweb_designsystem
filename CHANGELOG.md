@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed the Banner component styles: image sizing, alignment, and heading font size at the small breakpoint.
 
+### Fixed
+
+- Fixed height of search inline and search square in Safari.
+
 ## [4.0.4]
 
 ### Changed
