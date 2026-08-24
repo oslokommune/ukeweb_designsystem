@@ -11,6 +11,7 @@ const OdsCurrency = {
       ...options,
     };
 
+    // Strips all whitespace (e.g. thousand separators), see https://regex101.com/r/6cb9bd/1
     const number = typeof amount === 'string' ? Number(amount.replace(/\s/g, '').replace(',', '.')) : amount;
 
     if (typeof number !== 'number' || Number.isNaN(number) || !Number.isFinite(number)) {

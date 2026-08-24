@@ -23,11 +23,13 @@ const OdsPhone = {
       return '';
     }
 
+    // Strips everything except digits and "+" (e.g. spaces, hyphens, parentheses), see https://regex101.com/r/BiEcKV/1
     let digits = String(number).replace(/[^+\d]/g, '');
     let countryCode = '';
 
     if (digits.startsWith('+47') || digits.startsWith('0047')) {
       countryCode = `+47${settings.separator}`;
+      // Strips a leading Norwegian country code ("+47" or "0047"), see https://regex101.com/r/IwJDvw/1
       digits = digits.replace(/^(\+47|0047)/, '');
     } else if (digits.startsWith('+') || digits.startsWith('00')) {
       // Non-Norwegian country code, return the number cleaned but ungrouped
