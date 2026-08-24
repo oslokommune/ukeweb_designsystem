@@ -53,7 +53,11 @@
     }
 
     img {
-      max-width: 300px;
+      max-width: 162px;
+
+      @include breakpoints.large {
+        max-width: 200px;
+      }
     }
   }
 
@@ -129,6 +133,12 @@
   }
 
   &--media {
+    .ods-banner__media {
+      @include breakpoints.medium {
+        align-self: center;
+      }
+    }
+
     .ods-banner__text {
       @include breakpoints.medium {
         grid-column: 5 / 13;
@@ -140,6 +150,7 @@
     .ods-banner__media {
       @include breakpoints.medium {
         grid-column: 9 / 13;
+        align-self: center;
       }
     }
 
