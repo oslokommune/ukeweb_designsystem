@@ -269,6 +269,73 @@
         </div>
       </div>
     </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Dynamic columns</h2>
+      <p class="ods-paragraph">Dynamic columns share the space on the row equally based on how many columns are present, without specifying a size. Use the plain column element class and the grid adapts to any number of columns from 1 through 12.</p>
+      <p class="ods-paragraph">Dynamic columns must be the only children of their grid — do not mix them with sized or offset columns in the same grid. More than 12 dynamic columns will wrap onto new rows.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid ods-grid--gap">
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="ods-paragraph">Any number of columns works — also counts that do not divide evenly into the 12 column grid.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid ods-grid--gap">
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="ods-paragraph">Use the breakpoint variants to stack the columns on smaller viewports and distribute them from the given breakpoint and up. Columns with a breakpoint variant use the full width below their breakpoint.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div class="ods-grid ods-grid--gap">
+            <div class="ods-grid__column--breakpoint-medium">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column--breakpoint-medium">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column--breakpoint-medium">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+            <div class="ods-grid__column--breakpoint-medium">
+              <div class="ods-padding-3 ods-text--align-center ods-color-bg-blue-light">C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="ods-devtools-devmode">
