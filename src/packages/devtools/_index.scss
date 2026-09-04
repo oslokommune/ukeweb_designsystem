@@ -23,8 +23,13 @@
 }
 
 // Simulates a large screen inside a code example box by forcing a wide
-// viewport and scaling it down to fit without horizontal scrolling
+// viewport and scaling it down. The block contains the overflow so the
+// simulated screen scrolls inside the code box on narrow viewports.
 .ods-devtools-simulate-large-screen {
-  min-width: 90rem;
-  zoom: 0.7;
+  overflow-x: auto;
+
+  &__viewport {
+    min-width: 90rem;
+    zoom: 0.7;
+  }
 }
