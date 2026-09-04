@@ -21,3 +21,10 @@
   @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
   @extend %ods-text--weight-medium;
 }
+
+// Simulates a large screen inside a code example box by forcing a wide
+// viewport and scaling it down to fit without horizontal scrolling
+.ods-devtools-simulate-large-screen {
+  min-width: 90rem;
+  zoom: 0.7;
+}
