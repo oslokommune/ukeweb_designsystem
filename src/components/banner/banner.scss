@@ -44,7 +44,9 @@
   }
 
   &__media {
-    grid-column: 4 / 10;
+    grid-column: 1 / 13;
+    justify-self: center;
+
     @extend %ods-margin-bottom-2;
 
     @include breakpoints.medium {
@@ -133,15 +135,10 @@
   }
 
   &--media {
-    .ods-banner__media {
-      @include breakpoints.medium {
-        align-self: center;
-      }
-    }
-
     .ods-banner__text {
       @include breakpoints.medium {
         grid-column: 5 / 13;
+        align-self: center;
       }
     }
   }
@@ -150,13 +147,13 @@
     .ods-banner__media {
       @include breakpoints.medium {
         grid-column: 9 / 13;
-        align-self: center;
       }
     }
 
     .ods-banner__text {
       @include breakpoints.medium {
         grid-column: 1 / 9;
+        align-self: center;
       }
     }
   }
