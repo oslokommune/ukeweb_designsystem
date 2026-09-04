@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "system/focus";
 @use "system/icon-map";
 @use "system/typography";
 @use "system/spacing";
@@ -59,9 +60,7 @@
 
     &--focus,
     &:focus-visible {
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
   }
 

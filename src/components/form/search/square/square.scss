@@ -1,5 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "system/focus";
 @use "system/typography";
 @use "system/icon-map";
 @use "system/spacing";
@@ -38,7 +39,7 @@
     }
 
     &:focus-visible {
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.outline();
     }
 
     &::-webkit-search-cancel-button {
@@ -99,7 +100,7 @@
     }
 
     &:focus-visible {
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.outline();
     }
   }
 

@@ -1,5 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "system/focus";
 @use "system/icons";
 @use "system/icon-map";
 @use "system/typography";
@@ -143,9 +144,7 @@
     &:focus-visible {
       background-color: colors.$white;
       color: colors.$blue-state;
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
 
     &--chevron::after {
