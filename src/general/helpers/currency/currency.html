@@ -1,0 +1,61 @@
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-paragraph">Currency formatter for javascript. Based on ruleset established in the service www.oslo.kommune.no.</p>
+      <p class="ods-paragraph">Amounts are rounded to the nearest whole krone by default, following the principle used in calculators on oslo.kommune.no. Remember to inform the user that amounts are rounded when presenting calculated results. Thousands are grouped with a hard space and the decimal separator is a comma (Norwegian locale).</p>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-content">
+        <code class="ods-code ods-block ods-margin-vertical-8">OdsCurrency.format(amount, options);</code>
+        <p>Usage in a project:</p>
+        <code class="ods-code ods-block ods-margin-top-8">import OdsCurrency from '@oslokommune/oslo-designsystem/src/general/helpers/currency/currency';</code>
+        <code class="ods-code ods-block">OdsCurrency.format(1234.56); // "1 235 kroner"</code>
+        <code class="ods-code ods-block">OdsCurrency.format(1234.56, { decimals: 2 }); // "1 234,56 kroner"</code>
+        <code class="ods-code ods-block">OdsCurrency.format(1500000, { unit: 'kr' }); // "1 500 000 kr"</code>
+        <code class="ods-code ods-block ods-margin-bottom-8">OdsCurrency.format(1500, { unit: '', prefix: 'kr ' }); // "kr 1 500"</code>
+        <p>The arguments are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">amount</code>
+            <p>Number (or numeric string). Required.</p>
+          </li>
+          <li>
+            <code class="ods-code">options</code>
+            <p>Object. Optional. Default <code class="ods-code">{}</code>.</p>
+          </li>
+        </ul>
+        <p>The options are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">locale</code>
+            <p>The locale used for number formatting. Default is <code class="ods-code">no-NO</code>.</p>
+          </li>
+          <li>
+            <code class="ods-code">decimals</code>
+            <p>Number of decimals shown. The amount is rounded to this precision. Default is <code class="ods-code">0</code> (nearest whole krone).</p>
+          </li>
+          <li>
+            <code class="ods-code">unit</code>
+            <p>The unit appended after the amount, separated with a hard space. Default is <code class="ods-code">kroner</code>. Use <code class="ods-code">kr</code> for a short unit or <code class="ods-code">""</code> for no unit.</p>
+          </li>
+          <li>
+            <code class="ods-code">prefix</code>
+            <p>The prefix of the string. Default is <code class="ods-code">""</code>.</p>
+          </li>
+          <li>
+            <code class="ods-code">suffix</code>
+            <p>The suffix of the string. Default is <code class="ods-code">""</code>.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ods-devtools-devmode">
+  <div class="ods-grid">
+    <div class="ods-grid__column--12">
+      <div id="testcases-currency"></div>
+    </div>
+  </div>
+</div>
