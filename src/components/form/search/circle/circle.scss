@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/typography";
 @use "system/icon-map";
 @use "system/spacing";
@@ -45,7 +45,7 @@
     }
 
     &:focus-visible {
-      @include focus.outline();
+      @include focus.outline;
     }
 
     &::-webkit-search-cancel-button {

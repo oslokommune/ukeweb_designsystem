@@ -1,6 +1,6 @@
 @use "components/form/input/mixins";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/typography";
 @use "system/spacing";
 @use "system/breakpoints";
@@ -134,7 +134,7 @@
   }
 
   & input:focus-visible ~ .ods-radio__control {
-    @include focus.outline();
+    @include focus.outline;
   }
 
   &--focus,

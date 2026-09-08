@@ -1,6 +1,6 @@
 @use "components/form/input/mixins";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/typography";
 @use "system/icon-map";
 @use "system/spacing";
@@ -165,7 +165,7 @@
   &--focus input:checked ~ &__checkmark,
   & input:focus-visible ~ &__checkmark,
   & input:checked:focus-visible ~ &__checkmark {
-    @include focus.outline();
+    @include focus.outline;
   }
 
   & input:checked ~ &__text {

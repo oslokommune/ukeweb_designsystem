@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/typography";
 @use "system/spacing";
 @use "system/icon-map";
@@ -65,7 +65,7 @@
       }
 
       &:focus-visible {
-        @include focus.outline();
+        @include focus.outline;
       }
 
       &:disabled {

@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/breakpoints";
 @use "system/icon-map";
 @use "system/spacing";
@@ -65,7 +65,7 @@
     }
 
     &:focus-visible {
-      @include focus.outline();
+      @include focus.outline;
     }
   }
 
@@ -200,7 +200,7 @@
           padding: 0;
 
           &:focus-visible {
-            @include focus.outline();
+            @include focus.outline;
           }
 
           &:hover {

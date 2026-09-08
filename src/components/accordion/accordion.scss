@@ -1,6 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/icons";
 @use "system/icon-map";
 @use "system/typography";
@@ -142,9 +142,10 @@
 
     &--focus,
     &:focus-visible {
+      @include focus.ring;
+
       background-color: colors.$white;
       color: colors.$blue-state;
-      @include focus.ring;
     }
 
     &--chevron::after {

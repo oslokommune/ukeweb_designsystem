@@ -1,5 +1,5 @@
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/breakpoints";
 @use "system/icon-map";
 @use "system/spacing";
@@ -33,7 +33,7 @@
 
   &--focus &__select,
   &:focus-visible {
-    @include focus.outline();
+    @include focus.outline;
   }
 
   &__select {
@@ -47,7 +47,7 @@
       padding-right: 50px;
 
       &:focus-visible {
-        @include focus.outline();
+        @include focus.outline;
       }
     }
 

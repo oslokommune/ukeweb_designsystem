@@ -3,7 +3,7 @@
 @use "system/typography";
 @use "mixins";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 
 .ods-input {
   @include mixins.form-states;
@@ -27,13 +27,13 @@
     }
 
     &:focus-visible {
-      @include focus.outline();
+      @include focus.outline;
     }
   }
 
   &--focus input,
   &:focus-visible {
-    @include focus.outline();
+    @include focus.outline;
   }
 
   &--error {

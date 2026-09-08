@@ -3,7 +3,7 @@
 @use "system/spacing";
 @use "system/visibility";
 @use "system/colors";
-@use "system/focus";
+@use "common/focus";
 @use "system/states";
 
 .ods-textarea {
@@ -40,7 +40,7 @@
     resize: none;
 
     &:focus-visible {
-      @include focus.outline();
+      @include focus.outline;
     }
   }
 
