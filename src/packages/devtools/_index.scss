@@ -21,3 +21,15 @@
   @extend %ods-text--size-kilo, %ods-text--size-juliett-breakpoint-large;
   @extend %ods-text--weight-medium;
 }
+
+// Simulates a large screen inside a code example box by forcing a wide
+// viewport and scaling it down. The block contains the overflow so the
+// simulated screen scrolls inside the code box on narrow viewports.
+.ods-devtools-simulate-large-screen {
+  overflow-x: auto;
+
+  &__viewport {
+    min-width: 90rem;
+    zoom: 0.7;
+  }
+}

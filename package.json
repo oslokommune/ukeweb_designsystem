@@ -46,7 +46,7 @@
     "tar": "7.5.11"
   },
   "dependencies": {
-    "maplibre-gl": "3.5.1",
+    "maplibre-gl": "5.23.0",
     "vue": "3.4.14"
   },
   "prettier": {
