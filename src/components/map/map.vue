@@ -9,7 +9,7 @@
 
 <script>
 import { Map as MaplibreMap, NavigationControl, ScaleControl, Popup, setWorkerUrl } from 'maplibre-gl';
-// eslint-disable-next-line import/no-unresolved, import/extensions -- Vite ?worker&url suffix, not a real path
+// eslint-disable-next-line import/no-unresolved, import/extensions -- Vite ?worker&url suffix, not a real path (https://maplibre.org/maplibre-gl-js/docs/#esm)
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
 
