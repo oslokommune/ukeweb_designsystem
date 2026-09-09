@@ -3,6 +3,7 @@
 @use "system/typography";
 @use "mixins";
 @use "system/colors";
+@use "common/focus";
 
 .ods-input {
   @include mixins.form-states;
@@ -26,13 +27,13 @@
     }
 
     &:focus-visible {
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.outline;
     }
   }
 
   &--focus input,
   &:focus-visible {
-    outline: 0.25rem solid colors.$purple-light;
+    @include focus.outline;
   }
 
   &--error {

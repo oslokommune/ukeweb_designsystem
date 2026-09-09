@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "common/focus";
 @use "system/breakpoints";
 @use "system/icon-map";
 @use "system/spacing";
@@ -64,7 +65,7 @@
     }
 
     &:focus-visible {
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.outline;
     }
   }
 
@@ -199,7 +200,7 @@
           padding: 0;
 
           &:focus-visible {
-            outline: 0.25rem solid colors.$purple-light;
+            @include focus.outline;
           }
 
           &:hover {
