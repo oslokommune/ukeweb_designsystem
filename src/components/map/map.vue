@@ -8,8 +8,12 @@
 </template>
 
 <script>
-import maplibregl from 'maplibre-gl';
+import { Map as MaplibreMap, NavigationControl, ScaleControl, Popup, setWorkerUrl } from 'maplibre-gl';
+// eslint-disable-next-line import/no-unresolved, import/extensions -- Vite ?worker&url suffix, not a real path
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+
+setWorkerUrl(maplibreWorkerUrl);
 
 export default {
   name: 'OdsMap',
@@ -298,18 +302,18 @@ export default {
         }
       }
 
-      this.mapObject = new maplibregl.Map(mapConfig);
+      this.mapObject = new MaplibreMap(mapConfig);
 
       this.mapObject.on('error', (event) => {
         this.error = true;
         this.technicalErrorText = event.error.message;
       });
 
-      const nav = new maplibregl.NavigationControl({
+      const nav = new NavigationControl({
         showCompass: false,
       });
 
-      const scale = new maplibregl.ScaleControl({
+      const scale = new ScaleControl({
         maxWidth: 80,
         unit: 'metric',
       });
@@ -624,7 +628,7 @@ export default {
 
       const html = this.$_getPopupHtml(feature);
       if (typeof html === 'string') {
-        const popup = new maplibregl.Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
+        const popup = new Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
         const properties = feature.properties ?? null;
         this.$_addEventsToPopup(popup, properties);
         popup.addTo(this.mapObject);
