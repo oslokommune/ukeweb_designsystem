@@ -39,7 +39,7 @@
     "svgstore-cli": "2.0.1"
   },
   "dependencies": {
-    "maplibre-gl": "5.23.0",
+    "maplibre-gl": "6.8.0",
     "vue": "3.4.14"
   },
   "prettier": {
