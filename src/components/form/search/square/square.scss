@@ -22,11 +22,13 @@
     border: 0.125rem solid colors.$blue-dark;
     border-radius: 0;
     display: inline-block;
+    height: 2.75rem;
     padding: units.unit-to-rem(2) units.unit-to-rem(4);
     width: calc(100% - 3.25rem);
     appearance: none;
 
     @include breakpoints.large {
+      height: 3rem;
       width: calc(100% - 3.5rem);
     }
 

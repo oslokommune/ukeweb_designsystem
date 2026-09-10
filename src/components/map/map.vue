@@ -8,8 +8,12 @@
 </template>
 
 <script>
-import maplibregl from 'maplibre-gl';
+import { Map as MaplibreMap, NavigationControl, ScaleControl, Popup, setWorkerUrl } from 'maplibre-gl';
+// eslint-disable-next-line import/no-unresolved, import/extensions -- Vite ?worker&url suffix, not a real path (https://maplibre.org/maplibre-gl-js/docs/#esm)
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import dispatchCustomEvent from '../../utils/js/events/dispatchCustomEvent';
+
+setWorkerUrl(maplibreWorkerUrl);
 
 export default {
   name: 'OdsMap',
@@ -70,17 +74,20 @@ export default {
   data: () => ({
     layerIds: [],
     dataSourceIds: [],
+    layerEventHandlers: [],
+    mapEventHandlers: [],
     lastDisplayedPopup: null,
     mapObject: null,
     mapReady: false,
-    showPopups: true,
     mapLoaded: false,
     error: false,
     technicalErrorText: '',
-    popups: [],
   }),
 
   computed: {
+    popupsEnabled() {
+      return this.state.showPopups ?? true;
+    },
     pointsGeoJson() {
       if (this.points) {
         const features = [];
@@ -113,6 +120,17 @@ export default {
     }
   },
 
+  beforeUnmount() {
+    if (this.mapObject) {
+      this.mapObject.remove();
+      this.mapObject = null;
+    }
+    this.mapReady = false;
+    this.mapLoaded = false;
+    this.layerEventHandlers = [];
+    this.mapEventHandlers = [];
+  },
+
   watch: {
     loadMap: {
       handler(newValue) {
@@ -124,28 +142,27 @@ export default {
     pointsGeoJson: {
       deep: true,
       handler() {
-        this.clearMapAndData();
-        this.populateMap();
+        this.refreshMapData();
       },
     },
     geoJson: {
       deep: true,
       handler() {
-        this.clearMapAndData();
-        this.populateMap();
+        this.refreshMapData();
       },
+    },
+    clusteredPoints() {
+      this.refreshMapData();
+    },
+    popupsEnabled() {
+      this.refreshMapData();
     },
     state: {
       deep: true,
       handler() {
-        if (this.loadMap === true) {
+        if (this.mapObject) {
           this.mapObject.setCenter([this.state.longitude, this.state.latitude]);
           this.mapObject.setZoom(this.state.zoom);
-          if (this.state.showPopups !== this.showPopups) {
-            this.showPopups = this.state.showPopups;
-            this.clearMapAndData();
-            this.populateMap();
-          }
         }
       },
     },
@@ -158,6 +175,13 @@ export default {
         this.$_createMapObject(this.geoJson);
       }
     },
+    refreshMapData() {
+      if (!this.mapReady) {
+        return;
+      }
+      this.clearMapAndData();
+      this.populateMap();
+    },
     populateMap() {
       // Will only populate if map is ready (load event done)
       if (this.mapReady) {
@@ -168,8 +192,9 @@ export default {
           });
           this.dataSourceIds.push('points');
           this.$_addPointsLayer('points', 'points');
+          this.$_openPopupAfterDataLoaded('points');
 
-          if (this.showPopups) {
+          if (this.popupsEnabled) {
             this.$_addPopupsFromProperties('points');
           }
         }
@@ -186,15 +211,18 @@ export default {
     },
 
     clearMapAndData() {
-      if (this.lastDisplayedPopup !== null) {
-        this.lastDisplayedPopup.remove();
+      if (!this.mapObject) {
+        return;
       }
 
-      this.layerIds.forEach((layerId) => {
-        // Remove previously added listeners
-        // Listener for click events that occurs on a feature in the layer.
-        this.mapObject.off('click', layerId, this.$_addClickEventToLayer);
+      if (this.lastDisplayedPopup !== null) {
+        this.lastDisplayedPopup.remove();
+        this.lastDisplayedPopup = null;
+      }
 
+      this.$_removeDataEventListeners();
+
+      this.layerIds.forEach((layerId) => {
         if (this.mapObject.getLayer(layerId)) {
           this.mapObject.removeLayer(layerId);
         }
@@ -216,15 +244,22 @@ export default {
       }
 
       const coordinates = this.$_getCoordinatesForGeoJsonObject(geoJson);
+      if (!Array.isArray(coordinates) || coordinates.length === 0) {
+        return null;
+      }
       const boundingBox = this.calculateBoundingBox(coordinates);
 
       return boundingBox || null;
     },
 
     calculateBoundingBox(coordinates) {
+      if (!Array.isArray(coordinates) || coordinates.length === 0) {
+        return null;
+      }
       const initialBox = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY];
+      const boundingBox = coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], initialBox);
 
-      return coordinates.reduce((previous, coordinate) => [Math.min(coordinate[0], previous[0]), Math.min(coordinate[1], previous[1]), Math.max(coordinate[0], previous[2]), Math.max(coordinate[1], previous[3])], initialBox);
+      return boundingBox.every(Number.isFinite) ? boundingBox : null;
     },
     setBoundingBox(boundingBox) {
       if (boundingBox) {
@@ -247,6 +282,8 @@ export default {
         style: `${this.mapStyle}?key=${this.apiKey}`,
         locale: this.i18n.mapLibre,
         dragRotate: false,
+        center: [this.state.longitude, this.state.latitude],
+        zoom: this.state.zoom,
       };
 
       if (geoJson && this.state.autoFitToBounds) {
@@ -263,28 +300,20 @@ export default {
             },
           };
         }
-      } else {
-        mapConfig = {
-          ...mapConfig,
-          ...{
-            center: [this.state.longitude, this.state.latitude],
-            zoom: this.state.zoom,
-          },
-        };
       }
 
-      this.mapObject = new maplibregl.Map(mapConfig);
+      this.mapObject = new MaplibreMap(mapConfig);
 
       this.mapObject.on('error', (event) => {
         this.error = true;
         this.technicalErrorText = event.error.message;
       });
 
-      const nav = new maplibregl.NavigationControl({
+      const nav = new NavigationControl({
         showCompass: false,
       });
 
-      const scale = new maplibregl.ScaleControl({
+      const scale = new ScaleControl({
         maxWidth: 80,
         unit: 'metric',
       });
@@ -293,19 +322,21 @@ export default {
       this.mapObject.addControl(scale);
       this.mapObject.scrollZoom.disable();
 
-      this.showPopups = this.state.showPopups;
-
-      this.mapObject.loadImage('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/location-pin-filled.png', (error, image) => {
-        if (error) throw error;
-        this.mapObject.addImage('location-pin-filled', image);
-      });
-
-      this.mapObject.on('load', () => {
-        this.mapReady = true;
+      this.mapObject.on('load', async () => {
         this.resize();
-
-        // If there is data available, show it now plz.
-        this.populateMap();
+        const { mapObject } = this;
+        try {
+          const { data: image } = await mapObject.loadImage('https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/map/location-pin-filled.png');
+          if (this.mapObject !== mapObject) return;
+          if (!mapObject.hasImage('location-pin-filled')) {
+            mapObject.addImage('location-pin-filled', image);
+          }
+          this.mapReady = true;
+          this.populateMap();
+        } catch (error) {
+          this.error = true;
+          this.technicalErrorText = error.message;
+        }
       });
     },
     // Private/protected method
@@ -345,8 +376,9 @@ export default {
       this.$_addPolygonsLayer('geoJson-polygons', 'geoJson');
       this.$_addLinesLayer('geoJson-lines', 'geoJson');
       this.$_addPointsLayer('geoJson-points', 'geoJson');
+      this.$_openPopupAfterDataLoaded('geoJson');
 
-      if (this.showPopups) {
+      if (this.popupsEnabled) {
         this.$_addPopupsFromProperties('geoJson-polygons');
         this.$_addPopupsFromProperties('geoJson-lines');
         this.$_addPopupsFromProperties('geoJson-points');
@@ -402,21 +434,9 @@ export default {
       this.$_addClusterLayer('clusteredGeoJson-points', 'clusteredGeoJson');
 
       // Expand/zoom in on the cluster on click
-      this.mapObject.on('click', 'clusteredGeoJson-points', (event) => {
-        const features = this.mapObject.queryRenderedFeatures(event.point, {
-          layers: ['clusteredGeoJson-points'],
-        });
-        const clusterId = features[0].properties.cluster_id;
-        this.mapObject.getSource('clusteredGeoJson').getClusterExpansionZoom(clusterId, (err, zoom) => {
-          if (err) return;
-          this.mapObject.easeTo({
-            center: features[0].geometry.coordinates,
-            zoom,
-          });
-        });
-      });
+      this.$_addLayerEventListener('click', 'clusteredGeoJson-points', this.$_expandClusterOnClick);
 
-      if (this.showPopups) {
+      if (this.popupsEnabled) {
         this.$_addPopupsFromProperties('clusteredGeoJson-points-unclustered-points');
         this.$_addPopupsFromProperties('clusteredGeoJson-shapes-polygons');
         this.$_addPopupsFromProperties('clusteredGeoJson-shapes-lines');
@@ -424,8 +444,6 @@ export default {
     },
     // Private/protected method
     $_addPolygonsLayer(layerId, dataSourceId) {
-      this.$_openPopupAfterDataLoaded(dataSourceId);
-
       // Adds fill + line to get an outline / stroke on the polygon.
 
       const layerIdOutline = `${layerId}-outline`;
@@ -473,8 +491,6 @@ export default {
     },
     // Private/protected method
     $_addLinesLayer(layerId, dataSourceId) {
-      this.$_openPopupAfterDataLoaded(dataSourceId);
-
       this.layerIds.push(layerId);
 
       this.mapObject.addLayer({
@@ -491,8 +507,6 @@ export default {
     },
     // Private/protected method
     $_addPointsLayer(layerId, dataSourceId) {
-      this.$_openPopupAfterDataLoaded(dataSourceId);
-
       this.layerIds.push(layerId);
 
       this.mapObject.addLayer({
@@ -614,7 +628,7 @@ export default {
 
       const html = this.$_getPopupHtml(feature);
       if (typeof html === 'string') {
-        const popup = new maplibregl.Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
+        const popup = new Popup({ className: 'ods-map__popup' }).setLngLat(lngLat).setHTML(html);
         const properties = feature.properties ?? null;
         this.$_addEventsToPopup(popup, properties);
         popup.addTo(this.mapObject);
@@ -625,23 +639,73 @@ export default {
     $_addClickEventToLayer(event) {
       this.$_addPopupToMap(event.lngLat, event.features[0]);
     },
+    // Private/protected method
+    async $_expandClusterOnClick(event) {
+      const features = this.mapObject.queryRenderedFeatures(event.point, {
+        layers: ['clusteredGeoJson-points'],
+      });
+      if (features.length === 0) return;
+      const clusterId = features[0].properties.cluster_id;
+      const { mapObject } = this;
+      try {
+        const zoom = await mapObject.getSource('clusteredGeoJson').getClusterExpansionZoom(clusterId);
+        if (this.mapObject !== mapObject) return;
+        mapObject.easeTo({
+          center: features[0].geometry.coordinates,
+          zoom,
+        });
+      } catch (error) {
+        this.error = true;
+        this.technicalErrorText = error.message;
+      }
+    },
+    // Private/protected method
+    $_setPointerCursor() {
+      this.mapObject.getCanvas().style.cursor = 'pointer';
+    },
+    // Private/protected method
+    $_resetCursor() {
+      this.mapObject.getCanvas().style.cursor = '';
+    },
+    // Private/protected method
+    $_addLayerEventListener(eventName, layerId, handler) {
+      this.mapObject.on(eventName, layerId, handler);
+      this.layerEventHandlers.push({ eventName, layerId, handler });
+    },
+    // Private/protected method
+    $_addMapEventListener(eventName, handler) {
+      this.mapObject.on(eventName, handler);
+      this.mapEventHandlers.push({ eventName, handler });
+    },
+    // Private/protected method
+    $_removeMapEventListener(eventName, handler) {
+      this.mapObject.off(eventName, handler);
+      this.mapEventHandlers = this.mapEventHandlers.filter((eventHandler) => eventHandler.eventName !== eventName || eventHandler.handler !== handler);
+    },
+    // Private/protected method
+    $_removeDataEventListeners() {
+      this.layerEventHandlers.forEach(({ eventName, layerId, handler }) => {
+        this.mapObject.off(eventName, layerId, handler);
+      });
+      this.mapEventHandlers.forEach(({ eventName, handler }) => {
+        this.mapObject.off(eventName, handler);
+      });
+      this.layerEventHandlers = [];
+      this.mapEventHandlers = [];
+    },
 
     // Private/protected method
     $_addPopupsFromProperties(layerId) {
       // Add listener for click events that occurs on a feature in the layer, open a popup at the
       // location of the feature, with HTML from its properties.
 
-      this.mapObject.on('click', layerId, this.$_addClickEventToLayer);
+      this.$_addLayerEventListener('click', layerId, this.$_addClickEventToLayer);
 
       // Change the cursor to a pointer when over the feature/layer.
-      this.mapObject.on('mouseenter', layerId, () => {
-        this.mapObject.getCanvas().style.cursor = 'pointer';
-      });
+      this.$_addLayerEventListener('mouseenter', layerId, this.$_setPointerCursor);
 
       // Change it back to a pointer when it leaves.
-      this.mapObject.on('mouseleave', layerId, () => {
-        this.mapObject.getCanvas().style.cursor = '';
-      });
+      this.$_addLayerEventListener('mouseleave', layerId, this.$_resetCursor);
     },
     // Private/protected method
     $_getPopupHtml(feature) {
@@ -655,10 +719,11 @@ export default {
     },
     // Private/protected method
     $_openPopupAfterDataLoaded(dataSourceId) {
-      if (this.showPopups && this.clusteredPoints === false) {
-        this.mapObject.on('sourcedata', (event) => {
+      if (this.popupsEnabled && this.clusteredPoints === false) {
+        const openPopupAfterDataLoaded = (event) => {
           // https://maplibre.org/maplibre-gl-js-docs/api/events/#mapdataevent
           if (event.isSourceLoaded && event.sourceId === dataSourceId && event.coord) {
+            this.$_removeMapEventListener('sourcedata', openPopupAfterDataLoaded);
             const { features } = event.source.data;
 
             if (Array.isArray(features)) {
@@ -681,7 +746,8 @@ export default {
               });
             }
           }
-        });
+        };
+        this.$_addMapEventListener('sourcedata', openPopupAfterDataLoaded);
       }
     },
   },

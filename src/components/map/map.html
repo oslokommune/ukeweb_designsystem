@@ -177,7 +177,7 @@
       </div>
     </div>
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-2">Load map later</h2>
+      <h2 class="ods-devtools-text-preset-2">Mount and unmount map</h2>
     </div>
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map10">
@@ -185,10 +185,10 @@
           <label class="ods-checkbox__wrapper">
             <input class="ods-checkbox__input" type="checkbox" v-model="loadMap">
             <span class="ods-checkbox__checkmark"></span>
-            <span class="ods-checkbox__text">Load map</span>
+            <span class="ods-checkbox__text">{{ loadMap ? 'Unmount map' : 'Mount map' }}</span>
           </label>
         </div>
-        <ods-map :load-map="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
+        <ods-map v-if="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
       </div>
     </div>
   </div>

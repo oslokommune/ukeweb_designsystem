@@ -11,6 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added focus visible mixin.
 
+## [4.0.5]
+
+### Added
+
+- Added documentation for the grid and the date and time helpers.
+- Added a square image example to the service header documentation.
+
+### Changed
+
+- Changed the Banner component styles: image sizing, alignment, and heading font size at the small breakpoint.
+- Updated maplibre-gl from version 3 to 6, and cleaned up the Map component: the map instance and event listeners are now removed when the component unmounts, popups can be toggled reactively via `state.showPopups`, and bounding box calculation handles empty geometry.
+- Updated development dependencies (fantasticon, svgo) and removed obsolete npm overrides.
+
+### Fixed
+
+- Fixed height of search inline and search square in Safari.
+
 ## [4.0.4]
 
 ### Changed

@@ -33,9 +33,14 @@
     border: 0.125rem solid colors.$blue-dark;
     border-radius: 0;
     display: inline-block;
+    height: 2.75rem;
     padding: units.unit-to-rem(2) units.unit-to-rem(12) units.unit-to-rem(2) units.unit-to-rem(4);
     width: 100%;
     appearance: none;
+
+    @include breakpoints.large {
+      height: 3rem;
+    }
 
     &:hover {
       border: 0.125rem solid colors.$blue-state !important;
