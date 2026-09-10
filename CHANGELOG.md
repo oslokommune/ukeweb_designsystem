@@ -5,11 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [4.0.5]
+
+### Added
+
+- Added documentation for the grid and the date and time helpers.
+- Added a square image example to the service header documentation.
 
 ### Changed
 
 - Changed the Banner component styles: image sizing, alignment, and heading font size at the small breakpoint.
+- Updated maplibre-gl from version 3 to 6, and cleaned up the Map component: the map instance and event listeners are now removed when the component unmounts, popups can be toggled reactively via `state.showPopups`, and bounding box calculation handles empty geometry.
+- Updated development dependencies (fantasticon, svgo) and removed obsolete npm overrides.
 
 ### Fixed
 
