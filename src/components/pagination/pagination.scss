@@ -1,4 +1,5 @@
 @use "system/colors";
+@use "common/focus";
 @use "system/typography";
 @use "system/spacing";
 @use "system/icon-map";
@@ -32,9 +33,7 @@
     cursor: pointer;
 
     &:focus-visible {
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
 
     &:hover,
@@ -66,7 +65,7 @@
       }
 
       &:focus-visible {
-        outline: 0.25rem solid colors.$purple-light;
+        @include focus.outline;
       }
 
       &:disabled {
@@ -91,9 +90,7 @@
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
   }
 
@@ -104,9 +101,7 @@
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
   }
 

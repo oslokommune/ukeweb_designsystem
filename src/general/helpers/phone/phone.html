@@ -1,0 +1,46 @@
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-paragraph">Phone number formatter for javascript. Based on the writing rules from <a class="ods-link" href="https://www.sprakradet.no/sprakhjelp/Skriveregler/Dato/#tlf" target="_blank">Språkrådet</a>.</p>
+      <p class="ods-paragraph">Eight digit numbers are grouped in pairs (22 33 44 55), 800-numbers are grouped 3-2-3 (800 33 333), five digit numbers are written without spaces (02180) and six digit harmonized numbers are grouped 3-3 (116 117). The groups are separated with hard spaces so the number is not wrapped across lines. A Norwegian country code (+47 or 0047) is normalized to +47.</p>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-content">
+        <code class="ods-code ods-block ods-margin-vertical-8">OdsPhone.format(number, options);</code>
+        <p>Usage in a project:</p>
+        <code class="ods-code ods-block ods-margin-top-8">import OdsPhone from '@oslokommune/oslo-designsystem/src/general/helpers/phone/phone';</code>
+        <code class="ods-code ods-block">OdsPhone.format('22334455'); // "22 33 44 55"</code>
+        <code class="ods-code ods-block">OdsPhone.format('+47 987 65 432'); // "+47 98 76 54 32"</code>
+        <code class="ods-code ods-block">OdsPhone.format('80033333'); // "800 33 333"</code>
+        <code class="ods-code ods-block ods-margin-bottom-8">OdsPhone.format('02180'); // "02180"</code>
+        <p>The arguments are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">number</code>
+            <p>String or number. Required. Existing spaces and punctuation are stripped before formatting.</p>
+          </li>
+          <li>
+            <code class="ods-code">options</code>
+            <p>Object. Optional. Default <code class="ods-code">{}</code>.</p>
+          </li>
+        </ul>
+        <p>The options are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">separator</code>
+            <p>The separator between digit groups. Default is a hard space (<code class="ods-code"> </code>).</p>
+          </li>
+        </ul>
+        <p>Numbers with a non-Norwegian country code and numbers with an unknown length are returned cleaned but ungrouped.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ods-devtools-devmode">
+  <div class="ods-grid">
+    <div class="ods-grid__column--12">
+      <div id="testcases-phone"></div>
+    </div>
+  </div>
+</div>

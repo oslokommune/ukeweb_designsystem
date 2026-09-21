@@ -1,0 +1,24 @@
+@use "system/colors";
+
+$ring-color: colors.$purple-light !default;
+$ring-width: 0.25rem !default;
+$ring-offset: 0.125rem !default;
+$inner-color: colors.$blue-state !default;
+$inner-width: 0.125rem !default;
+
+// Purple outline with an inner blue ring. Default focus indicator.
+@mixin ring($offset: $ring-offset, $important: false) {
+  box-shadow: 0 0 0 $inner-width $inner-color;
+  outline-offset: $offset;
+
+  @include outline($important: $important);
+}
+
+// Purple outline only, for elements that already carry their own border.
+@mixin outline($important: false) {
+  @if $important {
+    outline: $ring-width solid $ring-color !important;
+  } @else {
+    outline: $ring-width solid $ring-color;
+  }
+}

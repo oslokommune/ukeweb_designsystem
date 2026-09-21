@@ -1,5 +1,6 @@
 @use "system/breakpoints";
 @use "system/colors";
+@use "common/focus";
 @use "system/typography";
 @use "system/spacing";
 @use "system/states";
@@ -150,9 +151,7 @@
     }
 
     &:focus-visible::after {
-      box-shadow: 0 0 0 0.125rem colors.$blue-state;
-      outline-offset: 0.125rem;
-      outline: 0.25rem solid colors.$purple-light;
+      @include focus.ring;
     }
   }
 }
