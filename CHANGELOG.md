@@ -7,9 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.6]
+
 ### Added
 
 - Added focus visible mixin.
+- Added dynamic column grid system.
+- Added helpers for money, phone numbers and terminology.
+
+## Changed
+
+- Refactor focus-visible to use mixins.
+
+### Security
+
+- Updated MapLibre package to address a security vulnerability.
 
 ## [4.0.5]
 
