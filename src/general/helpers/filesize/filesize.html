@@ -1,0 +1,52 @@
+<div class="ods-devtools-nondevmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12">
+      <p class="ods-paragraph">File size formatter for javascript. Takes a number of bytes and returns a human readable string.</p>
+      <p class="ods-paragraph">The value moves to the next unit (bytes → KB → MB → GB → TB, divided by 1024) when it reaches 500. Values below 5 are shown with one decimal, values of 5 and above are shown without decimals, both rounded. Example: 150 000 bytes becomes 146 KB and 800 000 000 bytes becomes 0,7 GB.</p>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-content">
+        <code class="ods-code ods-block ods-margin-vertical-8">OdsFileSize.format(bytes, options);</code>
+        <p>Usage in a project:</p>
+        <code class="ods-code ods-block ods-margin-top-8">import OdsFileSize from '@oslokommune/oslo-designsystem/src/general/helpers/filesize/filesize';</code>
+        <code class="ods-code ods-block">OdsFileSize.format(150000); // "146 KB"</code>
+        <code class="ods-code ods-block">OdsFileSize.format(800000000); // "0,7 GB"</code>
+        <code class="ods-code ods-block ods-margin-bottom-8">OdsFileSize.format(document.file.size); // e.g. "1,4 MB" for an attachment</code>
+        <p>The arguments are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">bytes</code>
+            <p>Number. Required. The file size in bytes.</p>
+          </li>
+          <li>
+            <code class="ods-code">options</code>
+            <p>Object. Optional. Default <code class="ods-code">{}</code>.</p>
+          </li>
+        </ul>
+        <p>The options are:</p>
+        <ul>
+          <li>
+            <code class="ods-code">locale</code>
+            <p>The locale used for number formatting. Default is <code class="ods-code">no-NO</code> (decimal comma).</p>
+          </li>
+          <li>
+            <code class="ods-code">threshold</code>
+            <p>The value at which the formatter moves to the next unit. Default is <code class="ods-code">500</code>.</p>
+          </li>
+          <li>
+            <code class="ods-code">units</code>
+            <p>The unit labels. Default is <code class="ods-code">["bytes", "KB", "MB", "GB", "TB"]</code>.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ods-devtools-devmode">
+  <div class="ods-grid">
+    <div class="ods-grid__column--12">
+      <div id="testcases-filesize"></div>
+    </div>
+  </div>
+</div>

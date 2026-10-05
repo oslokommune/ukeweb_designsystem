@@ -5,6 +5,54 @@
   display: grid;
   grid-template-columns: repeat(#{grid.$columns}, 1fr);
 
+  // Dynamic columns: the track template adapts to the number of direct
+  // ods-grid__column children so they share the row equally. Dynamic columns
+  // must be the only children of their grid, and more than 12 will wrap.
+  @for $i from 1 through grid.$columns {
+    &:has(> .ods-grid__column:first-child:nth-last-child(#{$i})) {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+
+  @include breakpoints.medium {
+    @for $i from 1 through grid.$columns {
+      &:has(> .ods-grid__column--breakpoint-medium:first-child:nth-last-child(#{$i})) {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      }
+    }
+  }
+
+  @include breakpoints.large {
+    @for $i from 1 through grid.$columns {
+      &:has(> .ods-grid__column--breakpoint-large:first-child:nth-last-child(#{$i})) {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      }
+    }
+  }
+
+  &__column {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  &__column--breakpoint-medium {
+    grid-column: span #{grid.$columns};
+    width: 100%;
+
+    @include breakpoints.medium {
+      grid-column: span 1;
+    }
+  }
+
+  &__column--breakpoint-large {
+    grid-column: span #{grid.$columns};
+    width: 100%;
+
+    @include breakpoints.large {
+      grid-column: span 1;
+    }
+  }
+
   &--inline {
     display: inline-grid;
   }
