@@ -45,5 +45,8 @@
   "prettier": {
     "printWidth": 400,
     "singleQuote": true
+  },
+  "overrides": {
+    "@vue/server-renderer": "3.5.43"
   }
 }

@@ -1,0 +1,3 @@
+overrides:
+  '@vue/server-renderer@<3.5.42': '>=3.5.42'
+  postcss-selector-parser@<7.1.6: '>=7.1.6'

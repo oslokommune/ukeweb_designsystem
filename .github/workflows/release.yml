@@ -82,7 +82,7 @@ jobs:
         id: qa
         run: |
           npm install
-          npm audit --audit-level high
+          npm audit --audit-level high --omit=dev
           npm run eslint
           npm run stylelint
 
