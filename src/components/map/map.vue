@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="ods-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
-    <!-- The wrapper must always be in the DOM for aria-live to announce slot content. Slot content should not add its own role="alert". -->
+    <!-- The wrapper must always be in the DOM for aria-live to announce slot content. -->
     <div class="ods-map__status" aria-live="polite">
       <slot v-if="error" name="error" :message="technicalErrorText" :severity="errorSeverity"></slot>
     </div>
@@ -321,7 +321,6 @@ export default {
       this.mapObject = new MaplibreMap(mapConfig);
 
       this.mapObject.on('error', (event) => {
-        // Errors before the map has finished loading (invalid API key, style fetch failure) are fatal, later ones (tile hiccups) are not.
         this.setError(event.error.message, this.mapReady ? 'warning' : 'danger');
       });
 

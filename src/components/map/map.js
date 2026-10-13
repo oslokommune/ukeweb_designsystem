@@ -211,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'OdsMapAppErrorDev',
       components: { OdsMap },
       mounted() {
-        // Forced instead of a real invalid API key, which would spam the console with failed map requests.
         this.$refs.odsMap.setError('Error example', 'danger');
       },
     });
