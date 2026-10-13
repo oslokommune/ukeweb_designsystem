@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapElement8 = document.getElementById('ods-map8');
   const mapElement9 = document.getElementById('ods-map9');
   const mapElement10 = document.getElementById('ods-map10');
+  const mapElementErrorDev = document.getElementById('ods-map-error-dev');
+  const mapElementWarningDev = document.getElementById('ods-map-warning-dev');
 
   if (mapElement) {
     const app1 = createApp({
@@ -202,5 +204,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }),
     });
     app10.mount(mapElement10);
+  }
+
+  if (mapElementErrorDev) {
+    const appErrorDev = createApp({
+      name: 'OdsMapAppErrorDev',
+      components: { OdsMap },
+    });
+    appErrorDev.mount(mapElementErrorDev);
+  }
+
+  if (mapElementWarningDev) {
+    const appWarningDev = createApp({
+      name: 'OdsMapAppWarningDev',
+      components: { OdsMap },
+    });
+    appWarningDev.mount(mapElementWarningDev);
   }
 });
