@@ -9,10 +9,62 @@
         <h2 class="ods-devtools-text-preset-1">How to use</h2>
         <p>Add the class <code class="ods-code">.ods-animation</code> to the element, then add the desired type of animation afterwards. The following animation is supported:</p>
         <ul>
-          <li><code class="ods-code">.ods-animation--rotate</code>: Used to rotate the ::after element.</li>
-          <li><code class="ods-code">.ods-animation--rotate-plus-minus</code>: Used to rotate and toggles the ::after element between plus and minus icon.</li>
+          <li><code class="ods-code">.ods-animation--rotate</code>: Used to rotate the ::after element. Add <code class="ods-code">.ods-animation--rotate-open</code> to rotate it 180 degrees.</li>
+          <li><code class="ods-code">.ods-animation--rotate-plus-minus</code>: Used to rotate and toggle the ::after element between plus and minus icon. Add <code class="ods-code">.ods-animation--rotate-plus-minus-open</code> to rotate it and show the minus icon.</li>
         </ul>
+        <p>The animation targets the <code class="ods-code">::after</code> pseudo element of the element, and expects it to be absolutely positioned with <code class="ods-code">top: 50%</code>, like the icon on the accordion trigger.</p>
+        <p>If the element also has the class <code class="ods-code">.ods-collapsible-trigger</code>, the <a href="https://designsystem.oslo.kommune.no/#/general-helpers-collapsible">collapsible helper</a> javascript will toggle the open class for you when the trigger is clicked. This is how the <a href="https://designsystem.oslo.kommune.no/#/components-accordion">accordion component</a> animates its icons.</p>
       </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Rotate</h2>
+      <p>Click the trigger to rotate the chevron. The collapsible helper toggles <code class="ods-code">.ods-animation--rotate-open</code> on the trigger.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--gray-light">
+          <div class="ods-accordion">
+            <div class="ods-accordion__item">
+              <h3 class="ods-accordion__heading">
+                <button class="ods-accordion__trigger ods-accordion__trigger--chevron ods-collapsible-trigger ods-animation ods-animation--rotate" aria-expanded="false" aria-controls="ods-animation-example-1">Trigger with rotating chevron</button>
+              </h3>
+              <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-example-1">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Rotate plus/minus</h2>
+      <p>Click the trigger to rotate the icon and toggle it between plus and minus. The collapsible helper toggles <code class="ods-code">.ods-animation--rotate-plus-minus-open</code> on the trigger.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--gray-light">
+          <div class="ods-accordion">
+            <div class="ods-accordion__item">
+              <h3 class="ods-accordion__heading">
+                <button class="ods-accordion__trigger ods-accordion__trigger--plus ods-collapsible-trigger ods-animation ods-animation--rotate-plus-minus" aria-expanded="false" aria-controls="ods-animation-example-2">Trigger with rotating plus/minus icon</button>
+              </h3>
+              <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-example-2">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Options</h2>
+      <!-- prettier-ignore -->
+      <pre><code class="ods-code ods-code--block">
+        .ods-animation
+        .ods-animation--rotate
+        .ods-animation--rotate-open
+        .ods-animation--rotate-plus-minus
+        .ods-animation--rotate-plus-minus-open
+      </code></pre>
     </div>
   </div>
 </div>
