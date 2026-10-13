@@ -1,3 +1,4 @@
+@use "system/animation";
 @use "system/breakpoints";
 @use "system/colors";
 @use "common/focus";
@@ -184,7 +185,7 @@ $ods-portrait-card-image-height-large: 290px;
 
       img {
         transform: scale(1);
-        transition: all 0.5s;
+        transition: transform animation.$duration-slow animation.$easing;
       }
     }
 

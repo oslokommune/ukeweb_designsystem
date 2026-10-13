@@ -1,3 +1,4 @@
+@use "system/animation";
 @use "system/breakpoints";
 @use "system/colors";
 @use "common/focus";
@@ -49,7 +50,7 @@
 
   &__symbol {
     &::after {
-      animation: status-card-red-pulse 2s infinite;
+      animation: ods-pulse animation.$duration-pulse infinite;
       background-color: colors.$red;
       border-radius: 50%;
       box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
@@ -59,6 +60,10 @@
       margin-right: 9px;
       margin-top: 9px;
       width: 12px;
+
+      @include animation.reduced-motion {
+        animation: none;
+      }
     }
   }
 
@@ -153,19 +158,5 @@
     &:focus-visible::after {
       @include focus.ring;
     }
-  }
-}
-
-@keyframes status-card-red-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
-  }
-
-  80% {
-    box-shadow: 0 0 0 10px rgba(colors.$red, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(colors.$red, 0);
   }
 }

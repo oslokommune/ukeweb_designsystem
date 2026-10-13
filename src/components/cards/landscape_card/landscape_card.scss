@@ -1,3 +1,4 @@
+@use "system/animation";
 @use "system/breakpoints";
 @use "system/colors";
 @use "common/focus";
@@ -171,7 +172,7 @@ $ods-landscape-card-height-large-breakpoint-large: 421px;
 
         img {
           transform: scale(1);
-          transition: all 0.5s;
+          transition: transform animation.$duration-slow animation.$easing;
         }
       }
 

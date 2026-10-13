@@ -1,4 +1,5 @@
 @use "components/form/input/mixins";
+@use "system/animation";
 @use "system/colors";
 @use "system/typography";
 @use "system/icon-map";
@@ -118,7 +119,7 @@
     display: block;
     height: 1.5rem;
     position: relative;
-    transition: all 0.15s ease-out 0s;
+    transition: all animation.$duration-fast animation.$easing-out 0s;
   }
 
   &__label-text {
@@ -137,7 +138,7 @@
     left: -0.125rem;
     position: absolute;
     top: -0.063rem;
-    transition: left 0.15s ease-out 0s;
+    transition: left animation.$duration-fast animation.$easing-out 0s;
     width: 1.688rem;
   }
 
