@@ -204,11 +204,11 @@
       </div>
     </div>
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-2">Error slot with danger severity (invalid API key)</h2>
+      <h2 class="ods-devtools-text-preset-2">Error slot with danger severity (forced via setError)</h2>
     </div>
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map-error-dev">
-        <ods-map api-key="this-key-is-invalid" :points="[{ longitude: 10.74981, latitude: 59.913008 }]" ratio="ods-ratio-21-9">
+        <ods-map ref="odsMap" :load-map="false" ratio="ods-ratio-21-9">
           <template #error="{ message, severity }">
             <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
               <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Kartet kunne ikke lastes.' : 'En feil oppsto i kartet.' }} - {{ message }}</h2>
@@ -218,11 +218,11 @@
       </div>
     </div>
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-2">Error slot with warning severity (invalid popup event data after load)</h2>
+      <h2 class="ods-devtools-text-preset-2">Error slot with warning severity (forced via setError, map still works)</h2>
     </div>
     <div class="ods-grid__column--12">
       <div class="ods-map" id="ods-map-warning-dev">
-        <ods-map api-key="VW1Tn0fx1t3b6t0CHP6Q" :geo-json="{ type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'Point', coordinates: [10.74981, 59.913008] }, properties: { popupContent: '<h2>Bob the Builder</h2>', openPopup: true, popupEvent: 'popupOpened', popupEventData: 'this-is-not-valid-json' } }] }" ratio="ods-ratio-21-9">
+        <ods-map ref="odsMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-21-9">
           <template #error="{ message, severity }">
             <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
               <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Kartet kunne ikke lastes.' : 'En feil oppsto i kartet.' }} - {{ message }}</h2>

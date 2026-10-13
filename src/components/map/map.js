@@ -210,6 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const appErrorDev = createApp({
       name: 'OdsMapAppErrorDev',
       components: { OdsMap },
+      mounted() {
+        // Forced instead of a real invalid API key, which would spam the console with failed map requests.
+        this.$refs.odsMap.setError('Error example', 'danger');
+      },
     });
     appErrorDev.mount(mapElementErrorDev);
   }
@@ -218,6 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const appWarningDev = createApp({
       name: 'OdsMapAppWarningDev',
       components: { OdsMap },
+      mounted() {
+        this.$refs.odsMap.setError('Warning example', 'warning');
+      },
     });
     appWarningDev.mount(mapElementWarningDev);
   }
