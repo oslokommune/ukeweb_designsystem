@@ -1,0 +1,8 @@
+# Alle filer i repoet må godkjennes av teamet @oslokommune/ukeweb-reviewers-frontend
+* @oslokommune/ukeweb-reviewers-frontend
+
+# Alle filer i mappen .github må godkjennes av teamet @oslokommune/ukeweb-reviewers-backend
+.github/** @oslokommune/ukeweb-reviewers-backend
+
+# Alle filer i mappen .devbox må godkjennes av teamet @oslokommune/ukeweb-reviewers-backend
+.devbox/** @oslokommune/ukeweb-reviewers-backend
