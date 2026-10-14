@@ -4,7 +4,6 @@
 @use "system/icon-map";
 
 .ods-animation {
-  // Rotate: targets the ::after pseudo element, expects it to be absolutely positioned with top: 50%.
   &--rotate::after {
     transform: translate(-50%, -50%) rotate(0deg);
     transition: transform animation.$duration-base animation.$easing;
@@ -25,8 +24,6 @@
     content: map.get(icon-map.$icons, "minus-sign") !important;
   }
 
-  // Fade: fades the element in and out. Hidden while .ods-animation--fade-hidden is set,
-  // or while the element is a collapsed collapsible content.
   &--fade {
     opacity: 1;
     transform: translateZ(0);
@@ -38,7 +35,6 @@
     }
   }
 
-  // Pulse: a repeating ring that expands from the element. Use for status indicators that need attention.
   &--pulse {
     animation: ods-pulse animation.$duration-pulse infinite;
     box-shadow: 0 0 0 0 rgba(animation.$pulse-color, 0.7);

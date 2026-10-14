@@ -1,31 +1,25 @@
 @use "system/colors";
 
 /* ANIMATION OPTIONS */
-// Durations
 $duration-fast: 0.15s !default;
 $duration-base: 0.3s !default;
 $duration-slow: 0.5s !default;
 $duration-slower: 0.7s !default;
 $duration-pulse: 2s !default;
 
-// Easing
 $easing: ease !default;
 $easing-in: ease-in !default;
 $easing-out: ease-out !default;
 $easing-in-out: ease-in-out !default;
 
-// Pulse
 $pulse-color: colors.$red !default;
 
-// Wraps content in a prefers-reduced-motion media query.
-// Use it to disable or shorten animations for users who have asked for less motion.
 @mixin reduced-motion {
   @media (prefers-reduced-motion: reduce) {
     @content;
   }
 }
 
-// Shared keyframes. Sass emits them once no matter how many files @use this module.
 @keyframes ods-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba($pulse-color, 0.8);

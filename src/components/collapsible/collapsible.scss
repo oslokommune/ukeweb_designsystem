@@ -172,7 +172,6 @@
     }
   }
 
-  // Deprecated: use .ods-animation.ods-animation--fade from the animation helper instead.
   &--ease {
     transition: opacity animation.$duration-base animation.$easing-in;
     transform: translateZ(0);
