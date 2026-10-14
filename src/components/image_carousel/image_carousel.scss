@@ -102,6 +102,27 @@
     }
   }
 
+  &__pagination {
+    @extend %ods-padding-top-2, %ods-padding-top-4-breakpoint-large;
+
+    display: flex;
+    gap: units.unit-to-rem(1);
+    grid-column: span 12 / span 12;
+    justify-content: center;
+
+    &__item {
+      background-color: colors.$grayscale-10;
+      border-radius: units.unit-to-rem(2);
+      height: units.unit-to-rem(2);
+      width: units.unit-to-rem(5);
+
+      &--current {
+        background-color: colors.$grayscale-30;
+        width: units.unit-to-rem(10);
+      }
+    }
+  }
+
   &--ratio-1-1,
   &--ratio-9-16 {
     .ods-carousel__track,

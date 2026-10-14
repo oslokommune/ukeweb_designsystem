@@ -33,6 +33,9 @@
       <span v-if="currentImage.description.length" class="ods-carousel__info__description">{{ currentImage.description }}</span
       ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
+    <div v-if="images.length > 1" class="ods-carousel__pagination" aria-hidden="true">
+      <span v-for="slideNumber in images.length" v-bind:key="`pagination-${slideNumber}`" class="ods-carousel__pagination__item" :class="{ 'ods-carousel__pagination__item--current': slideNumber === currentSlide }"></span>
+    </div>
   </div>
 </template>
 
@@ -61,7 +64,7 @@ export default {
     },
 
     /**
-     * Slide animation speed in milliseconds
+     * Slide animation duration in milliseconds
      */
     speed: {
       type: Number,
