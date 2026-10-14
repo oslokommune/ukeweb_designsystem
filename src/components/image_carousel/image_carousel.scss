@@ -1,6 +1,8 @@
 @use "system/breakpoints";
+@use "system/colors";
 @use "system/typography";
 @use "system/spacing";
+@use "system/units";
 
 .ods-carousel {
   display: grid;
@@ -9,8 +11,8 @@
 
   &__content {
     grid-column: span 12 / span 12;
-    position: relative;
     overflow: hidden;
+    position: relative;
   }
 
   &__track {
@@ -42,14 +44,14 @@
   }
 
   &__navigation {
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 100%;
     justify-content: space-between;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
     top: 0;
+    width: 100%;
+    z-index: 2;
 
     > * {
       @extend %ods-margin-horizontal-8-breakpoint-medium;
@@ -60,6 +62,7 @@
         @extend %ods-text--weight-medium-breakpoint-large;
       }
     }
+
   }
 
   &__info {
@@ -72,6 +75,83 @@
 
     &__description {
       @extend %ods-margin-right-1;
+    }
+  }
+
+  &__captions {
+    grid-column: span 12 / span 12;
+    overflow: hidden;
+
+    &__track {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    &__item {
+      @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
+      @extend %ods-text--weight-light;
+      @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large;
+      @extend %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-medium;
+
+      flex-shrink: 0;
+      white-space: pre-line;
+
+      &__description {
+        @extend %ods-margin-right-1;
+      }
+    }
+  }
+
+  &--ratio-1-1,
+  &--ratio-9-16 {
+    .ods-carousel__track,
+    .ods-carousel__slides {
+      height: 100%;
+    }
+
+    .ods-carousel__navigation .ods-button {
+      background-color: rgba(colors.$white, 0.4);
+      border: 0.125rem solid colors.$white;
+      color: colors.$blue-dark;
+    }
+
+    .ods-carousel__slides {
+      gap: units.unit-to-rem(4);
+
+      @include breakpoints.large {
+        gap: units.unit-to-rem(8);
+      }
+
+      figure,
+      picture {
+        display: block;
+        flex-shrink: 0;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &--ratio-1-1 {
+    .ods-carousel__content {
+      aspect-ratio: 1 / 1;
+
+      @include breakpoints.medium {
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+
+  &--ratio-9-16 {
+    .ods-carousel__content {
+      aspect-ratio: 9 / 16;
+
+      @include breakpoints.medium {
+        aspect-ratio: 16 / 9;
+      }
     }
   }
 }
