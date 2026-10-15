@@ -1,0 +1,35 @@
+@use "system/colors";
+
+/* ANIMATION OPTIONS */
+$duration-fast: 0.15s !default;
+$duration-base: 0.3s !default;
+$duration-slow: 0.5s !default;
+$duration-slower: 0.7s !default;
+$duration-pulse: 2s !default;
+
+$easing: ease !default;
+$easing-in: ease-in !default;
+$easing-out: ease-out !default;
+$easing-in-out: ease-in-out !default;
+
+$pulse-color: colors.$red !default;
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@keyframes ods-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($pulse-color, 0.8);
+  }
+
+  80% {
+    box-shadow: 0 0 0 10px rgba($pulse-color, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba($pulse-color, 0);
+  }
+}
