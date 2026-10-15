@@ -33,7 +33,7 @@
       <span v-if="currentImage.description.length" class="ods-carousel__info__description">{{ currentImage.description }}</span
       ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
-    <div v-if="images.length > 1" class="ods-carousel__pagination" aria-hidden="true">
+    <div v-if="hasPagination" class="ods-carousel__pagination" aria-hidden="true">
       <span v-for="slideNumber in images.length" v-bind:key="`pagination-${slideNumber}`" class="ods-carousel__pagination__item" :class="{ 'ods-carousel__pagination__item--current': slideNumber === currentSlide }"></span>
     </div>
   </div>
@@ -96,6 +96,15 @@ export default {
     },
 
     /**
+     * Show the pagination pills under the carousel.
+     * Off by default, the ratio modifiers use them.
+     */
+    pagination: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
      * Settings object.
      * Used as an alternative to setting individual props.
      */
@@ -132,6 +141,7 @@ export default {
         speed: this.speed,
         timing: this.timing,
         modifier: this.modifier,
+        pagination: this.pagination,
       },
     };
   },
@@ -192,6 +202,13 @@ export default {
      */
     hasSlideCaptions() {
       return !this.isFullWidthRatio;
+    },
+
+    /**
+     * The pagination pills only make sense when there is more than one image to show
+     */
+    hasPagination() {
+      return this.settings.pagination && this.images.length > 1;
     },
 
     /**
