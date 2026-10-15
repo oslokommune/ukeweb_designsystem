@@ -211,7 +211,7 @@
         <ods-map ref="odsMap" :load-map="false" ratio="ods-ratio-21-9">
           <template #error="{ message, severity }">
             <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
-              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Kartet kunne ikke lastes.' : 'En feil oppsto i kartet.' }} - {{ message }}</h2>
+              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Map could not be loaded.' : 'An error occurred in the map.' }} - {{ message }}</h2>
             </div>
           </template>
         </ods-map>
@@ -225,7 +225,7 @@
         <ods-map ref="odsMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-21-9">
           <template #error="{ message, severity }">
             <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
-              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Kartet kunne ikke lastes.' : 'En feil oppsto i kartet.' }} - {{ message }}</h2>
+              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Map could not be loaded.' : 'An error occurred in the map.' }} - {{ message }}</h2>
             </div>
           </template>
         </ods-map>
