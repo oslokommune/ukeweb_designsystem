@@ -130,12 +130,6 @@
       height: 100%;
     }
 
-    .ods-carousel__navigation .ods-button {
-      background-color: rgba(colors.$white, 0.4);
-      border: 0.125rem solid colors.$white;
-      color: colors.$blue-dark;
-    }
-
     .ods-carousel__slides {
       gap: units.unit-to-rem(4);
 

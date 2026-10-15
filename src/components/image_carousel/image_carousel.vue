@@ -1,11 +1,11 @@
 <template>
-  <div class="ods-carousel" :class="ratioClass">
+  <div class="ods-carousel" :class="settings.modifier">
     <div class="ods-carousel__content" ref="content">
       <div class="ods-carousel__navigation" v-if="images.length > 1">
-        <button class="ods-button ods-button--circle" :class="{ 'ods-button--yellow': isFullWidthRatio }" :aria-label="i18n.previousButton" @click="goToPrev">
+        <button class="ods-button ods-button--circle ods-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
           <span class="ods-button__icon ods-icon--chevron-left"></span>
         </button>
-        <button class="ods-button ods-button--circle" :class="{ 'ods-button--yellow': isFullWidthRatio }" :aria-label="i18n.nextButton" @click="goToNext">
+        <button class="ods-button ods-button--circle ods-button--yellow" :aria-label="i18n.nextButton" @click="goToNext">
           <span class="ods-button__icon ods-icon--chevron-right"></span>
         </button>
       </div>
@@ -41,15 +41,17 @@
 
 <script>
 /**
- * Supported image ratios, mapped to their width / height value.
+ * Ratio modifiers of the component, mapped to their width / height value.
  */
-const RATIOS = {
-  '16:9': 16 / 9,
-  '1:1': 1,
-  '9:16': 9 / 16,
+const MODIFIER_RATIOS = {
+  'ods-carousel--ratio-1-1': 1,
+  'ods-carousel--ratio-9-16': 9 / 16,
 };
 
-const DEFAULT_RATIO = '16:9';
+/**
+ * Ratio used when no ratio modifier is set.
+ */
+const DEFAULT_RATIO = 16 / 9;
 
 export default {
   name: 'ImageCarousel',
@@ -81,15 +83,16 @@ export default {
     },
 
     /**
-     * Image ratio.
-     * Available: 16:9, 1:1, 9:16
-     * 16:9 fills the whole carousel width, 1:1 and 9:16 center the image
-     * and use the remaining space to show the previous and next image.
+     * Modifier class of the carousel.
+     * Available: ods-carousel--ratio-1-1, ods-carousel--ratio-9-16
+     * Without a modifier the images are 16:9 and fill the whole carousel width.
+     * The ratio modifiers show the whole image in the middle and use the space
+     * left on both sides to show the previous and the next image.
      */
-    ratio: {
+    modifier: {
       type: String,
-      default: DEFAULT_RATIO,
-      validator: (value) => Object.keys(RATIOS).includes(value),
+      default: '',
+      validator: (value) => value === '' || Object.keys(MODIFIER_RATIOS).includes(value),
     },
 
     /**
@@ -128,7 +131,7 @@ export default {
         initialSlide: this.initialSlide,
         speed: this.speed,
         timing: this.timing,
-        ratio: this.ratio,
+        modifier: this.modifier,
       },
     };
   },
@@ -169,24 +172,18 @@ export default {
     },
 
     /**
-     * Selected ratio, falls back to the default one
-     */
-    currentRatio() {
-      return RATIOS[this.settings.ratio] ? this.settings.ratio : DEFAULT_RATIO;
-    },
-
-    /**
-     * Ratio as a width / height value
+     * Ratio of the images as a width / height value
      */
     ratioValue() {
-      return RATIOS[this.currentRatio];
+      return MODIFIER_RATIOS[this.settings.modifier] || DEFAULT_RATIO;
     },
 
     /**
-     * 16:9 slides take the full carousel width, the other ratios are centered
+     * Without a ratio modifier the images take the full carousel width,
+     * the ratio modifiers center the image instead
      */
     isFullWidthRatio() {
-      return this.currentRatio === DEFAULT_RATIO;
+      return !MODIFIER_RATIOS[this.settings.modifier];
     },
 
     /**
@@ -195,10 +192,6 @@ export default {
      */
     hasSlideCaptions() {
       return !this.isFullWidthRatio;
-    },
-
-    ratioClass() {
-      return `ods-carousel--ratio-${this.currentRatio.replace(':', '-')}`;
     },
 
     /**
