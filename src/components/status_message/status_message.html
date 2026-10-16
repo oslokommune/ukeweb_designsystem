@@ -52,6 +52,22 @@
         </div>
       </div>
     </div>
+
+    <div class="ods-grid__column--12"">
+      <h2 class="ods-devtools-text-preset-1">Vue component</h2>
+      <p class="ods-paragraph">
+        The component sets the role itself, so screen readers announce the message. The danger variant gets <code>role="alert"</code>, because an error has to reach the user right away: the screen reader interrupts whatever it is reading. All the other variants get
+        <code>role="status"</code>, which waits until the screen reader is done with what it is reading. This role can be overridden, as there may be situations where warning messages need to be announced immediately by screen readers.
+      </p>
+      <div class="ods-devtools-code">
+        <div id="ods-status-message-vue-8">
+          <ods-status-message variant="danger" content="An error message, read out right away"></ods-status-message>
+        </div>
+        <div id="ods-status-message-vue-9">
+          <ods-status-message variant="info" content="A status message, read out when the screen reader is done"></ods-status-message>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -102,6 +118,43 @@
         <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--information" aria-hidden="true"></span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
         <p class="ods-status-message__content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <p class="ods-status-message__date">Lorem Ipsum is simply dummy text</p>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Vue component</h2>
+      <div id="ods-status-message-vue-1">
+        <ods-status-message content="A status message"></ods-status-message>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Vue component, variants</h2>
+      <div id="ods-status-message-vue-2">
+        <ods-status-message variant="info" content="A status message"></ods-status-message>
+      </div>
+      <div id="ods-status-message-vue-3">
+        <ods-status-message variant="success" content="A status message"></ods-status-message>
+      </div>
+      <div id="ods-status-message-vue-4">
+        <ods-status-message variant="warning" content="A status message"></ods-status-message>
+      </div>
+      <div id="ods-status-message-vue-5">
+        <ods-status-message variant="danger" content="A status message"></ods-status-message>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Vue component, with heading and date</h2>
+      <div id="ods-status-message-vue-6">
+        <ods-status-message variant="info" heading="Lorem Ipsum is simply dummy text" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." date="Lorem Ipsum is simply dummy text"></ods-status-message>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Vue component, with slots</h2>
+      <div id="ods-status-message-vue-7" class="ods-padding-bottom-13">
+        <ods-status-message variant="success">
+          <template #heading>Lorem Ipsum is simply dummy text</template>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          <template #date>Lorem Ipsum is simply dummy text</template>
+        </ods-status-message>
       </div>
     </div>
   </div>
