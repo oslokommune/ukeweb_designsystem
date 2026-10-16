@@ -1,5 +1,5 @@
 <template>
-  <div class="ods-carousel" :class="settings.modifier">
+  <div class="ods-carousel" :class="{ 'ods-carousel--ratio-1-1': currentRatio === '1:1', 'ods-carousel--ratio-9-16': currentRatio === '9:16' }">
     <div class="ods-carousel__content" ref="content">
       <div class="ods-carousel__navigation" v-if="images.length > 1">
         <button class="ods-button ods-button--circle ods-button--yellow" :aria-label="i18n.previousButton" @click="goToPrev">
@@ -41,17 +41,15 @@
 
 <script>
 /**
- * Ratio modifiers of the component, mapped to their width / height value.
+ * Supported image ratios, mapped to their width / height value.
  */
-const MODIFIER_RATIOS = {
-  'ods-carousel--ratio-1-1': 1,
-  'ods-carousel--ratio-9-16': 9 / 16,
+const RATIOS = {
+  '16:9': 16 / 9,
+  '1:1': 1,
+  '9:16': 9 / 16,
 };
 
-/**
- * Ratio used when no ratio modifier is set.
- */
-const DEFAULT_RATIO = 16 / 9;
+const DEFAULT_RATIO = '16:9';
 
 export default {
   name: 'ImageCarousel',
@@ -83,16 +81,16 @@ export default {
     },
 
     /**
-     * Modifier class of the carousel.
-     * Available: ods-carousel--ratio-1-1, ods-carousel--ratio-9-16
-     * Without a modifier the images are 16:9 and fill the whole carousel width.
-     * The ratio modifiers show the whole image in the middle and use the space
-     * left on both sides to show the previous and the next image.
+     * Image ratio.
+     * Available: 16:9, 1:1, 9:16
+     * 16:9 fills the whole carousel width. 1:1 and 9:16 show the whole image
+     * in the middle and use the space left on both sides to show the previous
+     * and the next image.
      */
-    modifier: {
+    ratio: {
       type: String,
-      default: '',
-      validator: (value) => value === '' || Object.keys(MODIFIER_RATIOS).includes(value),
+      default: DEFAULT_RATIO,
+      validator: (value) => Object.keys(RATIOS).includes(value),
     },
 
     /**
@@ -140,7 +138,7 @@ export default {
         initialSlide: this.initialSlide,
         speed: this.speed,
         timing: this.timing,
-        modifier: this.modifier,
+        ratio: this.ratio,
         pagination: this.pagination,
       },
     };
@@ -182,18 +180,24 @@ export default {
     },
 
     /**
-     * Ratio of the images as a width / height value
+     * Selected ratio, falls back to the default one
      */
-    ratioValue() {
-      return MODIFIER_RATIOS[this.settings.modifier] || DEFAULT_RATIO;
+    currentRatio() {
+      return RATIOS[this.settings.ratio] ? this.settings.ratio : DEFAULT_RATIO;
     },
 
     /**
-     * Without a ratio modifier the images take the full carousel width,
-     * the ratio modifiers center the image instead
+     * Ratio of the images as a width / height value
+     */
+    ratioValue() {
+      return RATIOS[this.currentRatio];
+    },
+
+    /**
+     * 16:9 slides take the full carousel width, the other ratios are centered
      */
     isFullWidthRatio() {
-      return !MODIFIER_RATIOS[this.settings.modifier];
+      return this.currentRatio === DEFAULT_RATIO;
     },
 
     /**
