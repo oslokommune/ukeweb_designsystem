@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.9]
+
 ### Changed
 
 - Updated Maplibre-gl to version 6.13.0.
