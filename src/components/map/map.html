@@ -95,6 +95,18 @@
           <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">Highlight a polygon</h2>
           <p>If you need to highlight a polygon, add the property <code class="ods-code">highlight</code> with a value of <code class="ods-code">true</code> to the polygon.</p>
           <p>It will get another fill and border colour than normal polygons.</p>
+
+          <h2 class="ods-devtools-text-preset-3 ods-margin-top-3">Error handling</h2>
+          <p>The map does not render an error message itself. When an error occurs it renders the scoped slot named <code class="ods-code">error</code>, so your project controls the markup and the (localised) text.</p>
+          <p>The slot receives the following props:</p>
+          <ul class="ods-unordered-list">
+            <li class="ods-unordered-list__item"><code class="ods-code">message</code> (string): the technical error message.</li>
+            <li class="ods-unordered-list__item"><code class="ods-code">severity</code> (string): <code class="ods-code">danger</code> when the map failed to load (for example an invalid API key), <code class="ods-code">warning</code> for non-fatal errors after the map has loaded.</li>
+          </ul>
+          <br />
+          <p>Use the status message component with the variant matching the severity in the slot, see the example below.</p>
+          <p>The slot is wrapped in an always-present element with <code class="ods-code">aria-live="polite"</code>, so the message is announced by screen readers. Do not add <code class="ods-code">role="alert"</code> to the slot content, as that would cause a double announcement.</p>
+          <p>The map also emits an <code class="ods-code">error</code> event with the payload <code class="ods-code">{ message, severity }</code> for every error, which can be used for logging or custom handling.</p>
         </div>
       </div>
     </div>
@@ -189,6 +201,34 @@
           </label>
         </div>
         <ods-map v-if="loadMap" :state="state" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ref="odsMap10" api-key="VW1Tn0fx1t3b6t0CHP6Q" ratio="ods-ratio-1-1 ods-ratio-21-9-breakpoint-medium" />
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Error slot with danger severity (forced via setError)</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map-error-dev">
+        <ods-map ref="odsMap" :load-map="false" ratio="ods-ratio-21-9">
+          <template #error="{ message, severity }">
+            <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
+              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Map could not be loaded.' : 'An error occurred in the map.' }} - {{ message }}</h2>
+            </div>
+          </template>
+        </ods-map>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-2">Error slot with warning severity (forced via setError, map still works)</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-map" id="ods-map-warning-dev">
+        <ods-map ref="odsMap" api-key="VW1Tn0fx1t3b6t0CHP6Q" :points="[{ longitude: 10.74981, latitude: 59.913008, popupContent: '<h2>Bob the Builder</h2>' }]" ratio="ods-ratio-21-9">
+          <template #error="{ message, severity }">
+            <div class="ods-status-message" :class="severity === 'danger' ? 'ods-status-message--danger' : 'ods-status-message--warning'">
+              <h2 class="ods-status-message__heading"><span class="ods-status-message__icon" :class="severity === 'danger' ? 'ods-icon--error-hexa' : 'ods-icon--warning-triangle'" aria-hidden="true"></span>{{ severity === 'danger' ? 'Map could not be loaded.' : 'An error occurred in the map.' }} - {{ message }}</h2>
+            </div>
+          </template>
+        </ods-map>
       </div>
     </div>
   </div>

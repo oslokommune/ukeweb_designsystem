@@ -1,3 +1,4 @@
+@use "system/animation";
 @use "system/breakpoints";
 @use "system/colors";
 @use "common/focus";
@@ -172,7 +173,7 @@
   }
 
   &--ease {
-    transition: opacity 0.3s ease-in;
+    transition: opacity animation.$duration-base animation.$easing-in;
     transform: translateZ(0);
     opacity: 1;
 
