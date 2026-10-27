@@ -4,6 +4,10 @@
 @use "system/spacing";
 @use "system/units";
 
+// An image in the centered layout never gets wider than this. The component
+// reads the limit back from the slide, so it is only set here.
+$max-image-width: 23.75rem; // 380px
+
 .ods-carousel {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -27,20 +31,58 @@
     flex-grow: 1;
     flex-shrink: 0;
     justify-content: flex-start;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-
-    figure {
-      line-height: 0;
-    }
   }
 
+  // An image and its text are one slide, so the text travels with its own
+  // image and keeps the same distance to it whatever ratio the image has
   &__slide {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
+
+    &__image {
+      line-height: 0;
+
+      picture {
+        display: block;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      // Only the centered layout gives its images a ratio. Every image is the
+      // same width, and its own ratio turns that width into the height it
+      // takes, so a carousel that mixes the ratios is as high as the tallest
+      // image in it.
+      &--ratio-1-1 {
+        aspect-ratio: 1 / 1;
+      }
+
+      &--ratio-9-16 {
+        aspect-ratio: 9 / 16;
+      }
+    }
+
+    &__caption {
+      @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
+      @extend %ods-text--weight-light;
+      @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large;
+      @extend %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-medium;
+
+      // The text keeps the width of its own image: a long word is broken
+      // instead of making the slide wider than the image
+      line-height: initial;
+      white-space: pre-line;
+      word-break: break-word;
+
+      &__description {
+        @extend %ods-margin-right-1;
+      }
+    }
   }
 
   &__navigation {
@@ -78,30 +120,6 @@
     }
   }
 
-  &__captions {
-    grid-column: span 12 / span 12;
-    overflow: hidden;
-
-    &__track {
-      display: flex;
-      flex-flow: row nowrap;
-    }
-
-    &__item {
-      @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
-      @extend %ods-text--weight-light;
-      @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large;
-      @extend %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-medium;
-
-      flex-shrink: 0;
-      white-space: pre-line;
-
-      &__description {
-        @extend %ods-margin-right-1;
-      }
-    }
-  }
-
   &__pagination {
     @extend %ods-padding-top-2, %ods-padding-top-4-breakpoint-large;
 
@@ -123,50 +141,19 @@
     }
   }
 
-  &--ratio-1-1,
-  &--ratio-9-16 {
-    .ods-carousel__track,
-    .ods-carousel__slides {
-      height: 100%;
-    }
-
+  &--centered {
     .ods-carousel__slides {
       gap: units.unit-to-rem(4);
 
       @include breakpoints.large {
         gap: units.unit-to-rem(8);
       }
+    }
 
-      figure,
-      picture {
-        display: block;
-        flex-shrink: 0;
-        height: 100%;
-      }
-
-      img {
-        height: 100%;
-      }
+    // The component reads this limit back from the slide to size the track
+    .ods-carousel__slide {
+      max-width: $max-image-width;
     }
   }
 
-  &--ratio-1-1 {
-    .ods-carousel__content {
-      aspect-ratio: 1 / 1;
-
-      @include breakpoints.medium {
-        aspect-ratio: 16 / 9;
-      }
-    }
-  }
-
-  &--ratio-9-16 {
-    .ods-carousel__content {
-      aspect-ratio: 9 / 16;
-
-      @include breakpoints.medium {
-        aspect-ratio: 16 / 9;
-      }
-    }
-  }
 }
