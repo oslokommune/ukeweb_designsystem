@@ -141,10 +141,9 @@ export default {
 
     /**
      * Texts the carousel needs.
-     * previousButton and nextButton name the buttons that move it. carousel
-     * names the carousel itself, and of joins the number of an image and the
-     * amount of images, as in "3 of 8". Both are left out of what the screen
-     * reader reads when they are not given.
+     * "previousButton" and "nextButton" name the buttons that move it.
+     * "carousel" names the carousel itself.
+     * "of" joins the number of an image and the amount of images, as in "3 of 8".
      */
     i18n: {
       required: true,

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Refactor in Image carousel component: images can be shown in a ratio of 16:9, 1:1 or 9:16, and one carousel can mix all three. Every image takes a `ratio` of its own in the `images` array or a common `defaultRatio` prop for all images. Added also screen reader support. The consumer needs to add a `carousel` and an `of` key to `i18n`.
+
 ## [4.0.8]
 
 ### Security
