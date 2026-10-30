@@ -1,5 +1,5 @@
 <template>
-  <div class="ods-carousel">
+  <div class="ods-carousel" role="group" aria-roledescription="carousel" :aria-label="i18n.carousel || null">
     <div class="ods-carousel__content" ref="content">
       <div class="ods-carousel__navigation" v-if="images.length > 1">
         <button class="ods-button ods-button--circle" :class="buttonClass" :aria-label="i18n.previousButton" @click="goToPrev">
@@ -11,12 +11,11 @@
       </div>
       <div ref="track" class="ods-carousel__track" :style="trackStyle">
         <div class="ods-carousel__slides" ref="slides">
-          <!-- The text of an image travels with it, so it keeps the same distance to its own image whatever ratio the image has -->
-          <figure v-for="(slide, slidePosition) in displaySlides" v-bind:key="slide.key" class="ods-carousel__slide" :class="slide.slideClass" :style="slideStyles[slidePosition]" :aria-hidden="slide.isClone ? 'true' : null">
+          <figure v-for="(slide, slidePosition) in displaySlides" v-bind:key="slide.key" class="ods-carousel__slide" :class="slide.slideClass" :style="slideStyles[slidePosition]" role="group" aria-roledescription="slide" :aria-label="slide.label" :aria-hidden="isSlideHidden(slide) ? 'true' : null">
             <div class="ods-carousel__slide__image" :class="slide.imageClass">
               <picture v-if="slide.image.sources.length">
                 <source v-for="(source, sourceIndex) in slide.image.sources" :key="sourceIndex" :srcset="source.src" :media="source.media" />
-                <img :src="slide.image.sources[0].src" :alt="slide.image.alt" />
+                <img :src="slide.image.sources[0].src" :alt="slide.image.alt || ''" />
               </picture>
             </div>
             <figcaption class="ods-carousel__slide__caption">
@@ -27,6 +26,7 @@
         </div>
       </div>
     </div>
+    <div class="ods-sr-only" role="status" aria-live="polite">{{ announcement }}</div>
     <div v-if="hasPagination" class="ods-carousel__pagination" aria-hidden="true">
       <span v-for="slideNumber in images.length" v-bind:key="`pagination-${slideNumber}`" class="ods-carousel__pagination__item" :class="{ 'ods-carousel__pagination__item--current': slideNumber === currentSlide }"></span>
     </div>
@@ -139,6 +139,13 @@ export default {
       required: true,
     },
 
+    /**
+     * Texts the carousel needs.
+     * previousButton and nextButton name the buttons that move it. carousel
+     * names the carousel itself, and of joins the number of an image and the
+     * amount of images, as in "3 of 8". Both are left out of what the screen
+     * reader reads when they are not given.
+     */
     i18n: {
       required: true,
       type: Object,
@@ -214,6 +221,21 @@ export default {
      */
     buttonClass() {
       return `ods-button--${BUTTONS.includes(this.settings.button) ? this.settings.button : DEFAULT_BUTTON}`;
+    },
+
+    /**
+     * What the screen reader reads once the carousel has moved. The number of
+     * the image is part of it, so that two images with the same text still
+     * read as a change and the carousel is not silent.
+     */
+    announcement() {
+      const image = this.images ? this.images[this.currentSlide - 1] : null;
+
+      if (!image) {
+        return '';
+      }
+
+      return [this.positionLabel(this.currentSlide), image.alt, image.description, image.credits].filter(Boolean).join('. ');
     },
 
     /**
@@ -347,6 +369,25 @@ export default {
     },
 
     /**
+     * Where an image is in the carousel, as "3 of 8". Without a word to join
+     * the two numbers it falls back to a form that needs none.
+     */
+    positionLabel(number) {
+      const total = this.images ? this.images.length : 0;
+
+      return this.i18n.of ? `${number} ${this.i18n.of} ${total}` : `${number}/${total}`;
+    },
+
+    /**
+     * Only the image in the middle is read. The clones and the images waiting
+     * on both sides of the carousel are left out, so the screen reader does
+     * not walk through images that are not in view.
+     */
+    isSlideHidden(slide) {
+      return slide.isClone || slide.index !== this.currentSlide - 1;
+    },
+
+    /**
      * One slide to render, with the classes and the ratio its image asks for
      */
     slideOf(image, index, key, isClone) {
@@ -359,6 +400,7 @@ export default {
         key,
         isClone,
         ratio,
+        label: this.positionLabel(index + 1),
         slideClass: `ods-carousel__slide--ratio-${modifier}`,
         imageClass: `ods-carousel__slide__image--ratio-${modifier}`,
       };
