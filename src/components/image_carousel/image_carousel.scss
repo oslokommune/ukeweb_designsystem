@@ -1,6 +1,19 @@
 @use "system/breakpoints";
+@use "system/colors";
 @use "system/typography";
 @use "system/spacing";
+@use "system/units";
+
+// A 1:1 or 9:16 image never gets wider than this. A 16:9 image is not capped.
+// The component reads the limit back from the slide, so it is only set here.
+$max-image-width: 25rem; // 400px
+
+// The text under an image is always this high, so every caption starts and
+// ends at the same line and the carousel keeps its height while it moves.
+// It is also what the buttons take off the height of the carousel to sit in
+// the middle of the images instead of in the middle of the images and
+// the text together. Room for two lines and the space above them.
+$caption-height: 3.5rem; // 56px
 
 .ods-carousel {
   display: grid;
@@ -9,8 +22,8 @@
 
   &__content {
     grid-column: span 12 / span 12;
-    position: relative;
     overflow: hidden;
+    position: relative;
   }
 
   &__track {
@@ -24,32 +37,90 @@
     flex-flow: row nowrap;
     flex-grow: 1;
     flex-shrink: 0;
+    gap: units.unit-to-rem(4);
     justify-content: flex-start;
 
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-
-    figure {
-      line-height: 0;
+    @include breakpoints.large {
+      gap: units.unit-to-rem(8);
     }
   }
 
+  // An image and its text are one slide, so the text travels with its own
+  // image and keeps the same distance to it whatever ratio the image has
   &__slide {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
+
+    // The component reads this limit back from the slide to size the track
+    max-width: $max-image-width;
+
+    // A 16:9 image takes the whole visible width of the carousel instead, so
+    // it leaves no room for the previous and the next image beside it
+    &--ratio-16-9 {
+      max-width: none;
+    }
+
+    &__image {
+      line-height: 0;
+
+      picture {
+        display: block;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      // The ratio turns the width of an image into the height it takes, so a
+      // carousel that mixes the ratios is as high as the tallest image in it.
+      &--ratio-16-9 {
+        aspect-ratio: 16 / 9;
+      }
+
+      &--ratio-1-1 {
+        aspect-ratio: 1 / 1;
+      }
+
+      &--ratio-9-16 {
+        aspect-ratio: 9 / 16;
+      }
+    }
+
+    &__caption {
+      @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
+      @extend %ods-text--weight-light;
+      @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large;
+      @extend %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-medium;
+
+      // The text keeps the width and the height of its own image: a long word
+      // is broken instead of making the slide wider than the image, and a long
+      // text is cut instead of making the carousel higher than the others
+      height: $caption-height;
+      overflow: hidden;
+      white-space: pre-line;
+      word-break: break-word;
+
+      &__description {
+        @extend %ods-margin-right-1;
+      }
+    }
   }
 
   &__navigation {
-    display: flex;
+    // The carousel is as high as its tallest image and the text under it, so
+    // taking the text off again leaves the buttons in the middle of the images
     align-items: center;
+    display: flex;
+    height: calc(100% - #{$caption-height});
     justify-content: space-between;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
     top: 0;
+    width: 100%;
+    z-index: 2;
 
     > * {
       @extend %ods-margin-horizontal-8-breakpoint-medium;
@@ -60,18 +131,28 @@
         @extend %ods-text--weight-medium-breakpoint-large;
       }
     }
+
   }
 
-  &__info {
-    @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
-    @extend %ods-text--weight-light;
-    @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large, %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-large;
+  &__pagination {
+    @extend %ods-padding-top-2, %ods-padding-top-4-breakpoint-large;
 
+    display: flex;
+    gap: units.unit-to-rem(1);
     grid-column: span 12 / span 12;
-    white-space: pre-line;
+    justify-content: center;
 
-    &__description {
-      @extend %ods-margin-right-1;
+    &__item {
+      background-color: colors.$grayscale-10;
+      border-radius: units.unit-to-rem(2);
+      height: units.unit-to-rem(2);
+      width: units.unit-to-rem(5);
+
+      &--current {
+        background-color: colors.$grayscale-30;
+        width: units.unit-to-rem(10);
+      }
     }
   }
+
 }
