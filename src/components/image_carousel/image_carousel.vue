@@ -1,5 +1,5 @@
 <template>
-  <div class="ods-carousel" :class="{ 'ods-carousel--centered': isCentered }">
+  <div class="ods-carousel">
     <div class="ods-carousel__content" ref="content">
       <div class="ods-carousel__navigation" v-if="images.length > 1">
         <button class="ods-button ods-button--circle" :class="buttonClass" :aria-label="i18n.previousButton" @click="goToPrev">
@@ -12,24 +12,20 @@
       <div ref="track" class="ods-carousel__track" :style="trackStyle">
         <div class="ods-carousel__slides" ref="slides">
           <!-- The text of an image travels with it, so it keeps the same distance to its own image whatever ratio the image has -->
-          <figure v-for="slide in displaySlides" v-bind:key="slide.key" class="ods-carousel__slide" :style="slideStyle" :aria-hidden="slide.isClone ? 'true' : null">
-            <div class="ods-carousel__slide__image" :class="slide.ratioClass">
+          <figure v-for="(slide, slidePosition) in displaySlides" v-bind:key="slide.key" class="ods-carousel__slide" :class="slide.slideClass" :style="slideStyles[slidePosition]" :aria-hidden="slide.isClone ? 'true' : null">
+            <div class="ods-carousel__slide__image" :class="slide.imageClass">
               <picture v-if="slide.image.sources.length">
                 <source v-for="(source, sourceIndex) in slide.image.sources" :key="sourceIndex" :srcset="source.src" :media="source.media" />
                 <img :src="slide.image.sources[0].src" :alt="slide.image.alt" />
               </picture>
             </div>
-            <figcaption v-if="hasSlideCaptions" class="ods-carousel__slide__caption">
+            <figcaption class="ods-carousel__slide__caption">
               <span v-if="slide.image.description" class="ods-carousel__slide__caption__description">{{ slide.image.description }}</span
               ><span v-if="slide.image.credits">{{ slide.image.credits }}</span>
             </figcaption>
           </figure>
         </div>
       </div>
-    </div>
-    <div v-if="!hasSlideCaptions && currentImage" class="ods-carousel__info">
-      <span v-if="currentImage.description.length" class="ods-carousel__info__description">{{ currentImage.description }}</span
-      ><span v-if="currentImage.credits.length">{{ currentImage.credits }}</span>
     </div>
     <div v-if="hasPagination" class="ods-carousel__pagination" aria-hidden="true">
       <span v-for="slideNumber in images.length" v-bind:key="`pagination-${slideNumber}`" class="ods-carousel__pagination__item" :class="{ 'ods-carousel__pagination__item--current': slideNumber === currentSlide }"></span>
@@ -39,23 +35,14 @@
 
 <script>
 /**
- * Layouts the carousel can use.
- * The full layout gives the whole carousel width to one image at a time and
- * lets the image keep its own shape. The centered layout shows the whole image
- * in the middle and uses the space left on both sides to show the previous and
- * the next image.
+ * Ratios an image can be shown in. An image can pick one of these for itself,
+ * so a carousel can mix them. 1:1 and 9:16 show the whole image in the middle
+ * and use the space left on both sides to show the previous and the next
+ * image, 16:9 takes the whole visible width of the carousel.
  */
-const LAYOUTS = ['full', 'centered'];
+const RATIOS = ['16:9', '1:1', '9:16'];
 
-const DEFAULT_LAYOUT = 'full';
-
-/**
- * Ratios an image can be shown in, in the centered layout. An image can pick
- * one of these for itself, so a carousel can mix them.
- */
-const RATIOS = ['1:1', '9:16'];
-
-const DEFAULT_RATIO = '1:1';
+const DEFAULT_RATIO = '16:9';
 
 /**
  * Colours the buttons that move the carousel can take.
@@ -94,28 +81,24 @@ export default {
     },
 
     /**
-     * Carousel layout.
-     * Available: full, centered
-     * full gives the whole carousel width to one image at a time. centered
-     * caps the width of its images and uses the space left on both sides to
-     * show the previous and the next image.
-     */
-    layout: {
-      type: String,
-      default: DEFAULT_LAYOUT,
-      validator: (value) => LAYOUTS.includes(value),
-    },
-
-    /**
      * Ratio an image is shown in when it sets none of its own.
-     * Available: 1:1, 9:16
-     * Only the centered layout reads it, the full layout lets every image keep
-     * its own shape.
+     * Available: 16:9, 1:1, 9:16
      */
     defaultRatio: {
       type: String,
       default: DEFAULT_RATIO,
       validator: (value) => RATIOS.includes(value),
+    },
+
+    /**
+     * Ratio every image is shown in, whatever ratio the image asks for itself.
+     * Available: 16:9, 1:1, 9:16
+     * Left out, every image keeps its own ratio and falls back to defaultRatio.
+     */
+    ratio: {
+      type: String,
+      default: null,
+      validator: (value) => value === null || RATIOS.includes(value),
     },
 
     /**
@@ -130,7 +113,6 @@ export default {
 
     /**
      * Show the pagination pills under the carousel.
-     * Off by default, the centered layout uses them.
      */
     pagination: {
       type: Boolean,
@@ -148,8 +130,9 @@ export default {
 
     /**
      * Images to show. Every image takes sources, alt, description and credits,
-     * and can take a ratio of 1:1 or 9:16 to be shown in a ratio of its own.
-     * Images without one fall back to the default ratio of the carousel.
+     * and can take a ratio of 16:9, 1:1 or 9:16 to be shown in a ratio of its own.
+     * Images without one fall back to the default ratio of the carousel, and a
+     * carousel that sets a ratio itself overrules all of them.
      */
     images: {
       type: Array,
@@ -169,7 +152,7 @@ export default {
       transitionDelay: 0,
       translateX: 0,
       widthContainer: 0,
-      widthSlide: 0,
+      maxWidthSlide: Infinity,
       gapSlide: 0,
       isSlideChanging: false,
       settings: {},
@@ -177,8 +160,8 @@ export default {
         initialSlide: this.initialSlide,
         speed: this.speed,
         timing: this.timing,
-        layout: this.layout,
         defaultRatio: this.defaultRatio,
+        ratio: this.ratio,
         button: this.button,
         pagination: this.pagination,
       },
@@ -212,29 +195,6 @@ export default {
   },
 
   computed: {
-    currentImage() {
-      if (!this.images) {
-        return null;
-      }
-
-      return this.images[this.currentSlide - 1];
-    },
-
-    /**
-     * Selected layout, falls back to the default one
-     */
-    currentLayout() {
-      return LAYOUTS.includes(this.settings.layout) ? this.settings.layout : DEFAULT_LAYOUT;
-    },
-
-    /**
-     * The centered layout caps the width of its images, the full layout gives
-     * every image the whole carousel width
-     */
-    isCentered() {
-      return this.currentLayout === 'centered';
-    },
-
     /**
      * Ratio an image falls back to when it sets none of its own
      */
@@ -243,18 +203,17 @@ export default {
     },
 
     /**
+     * Ratio the carousel puts on every image, when it asks for one itself
+     */
+    currentRatio() {
+      return RATIOS.includes(this.settings.ratio) ? this.settings.ratio : null;
+    },
+
+    /**
      * Class that gives the buttons their colour, falls back to the default one
      */
     buttonClass() {
       return `ods-button--${BUTTONS.includes(this.settings.button) ? this.settings.button : DEFAULT_BUTTON}`;
-    },
-
-    /**
-     * The centered layout shows the text of every image under its own image,
-     * instead of only the text of the current image under the carousel
-     */
-    hasSlideCaptions() {
-      return this.isCentered;
     },
 
     /**
@@ -273,7 +232,7 @@ export default {
       const total = images.length;
 
       if (total < 2 || this.clonesPerSide === 0) {
-        return images.map((image, index) => ({ image, index, key: `slide-${index}`, isClone: false, ratioClass: this.ratioClassOf(image) }));
+        return images.map((image, index) => this.slideOf(image, index, `slide-${index}`, false));
       }
 
       const slides = [];
@@ -281,7 +240,7 @@ export default {
       for (let i = this.clonesPerSide * -1; i < total + this.clonesPerSide; i += 1) {
         const index = ((i % total) + total) % total;
 
-        slides.push({ image: images[index], index, key: `slide-${i}`, isClone: i < 0 || i >= total, ratioClass: this.ratioClassOf(images[index]) });
+        slides.push(this.slideOf(images[index], index, `slide-${i}`, i < 0 || i >= total));
       }
 
       return slides;
@@ -294,15 +253,43 @@ export default {
       return { transform: `translate(${this.translateX}px)`, transition: `transform ${this.settings.timing} ${this.transitionDelay}ms` };
     },
 
-    slideStyle() {
-      return { width: `${this.widthSlide}px` };
+    /**
+     * Width of every slide. A 16:9 image takes the whole visible width of the
+     * carousel, the ratios that leave room on both sides stay under the max
+     * width the stylesheet gives them, so the slides are not all as wide.
+     */
+    slideWidths() {
+      return this.displaySlides.map((slide) => this.widthForRatio(slide.ratio));
     },
 
     /**
-     * Distance from one slide to the next one, gap included
+     * Left edge of every slide in the track, the gaps between them included
      */
-    widthStep() {
-      return this.widthSlide + this.gapSlide;
+    slideOffsets() {
+      const offsets = [];
+      let left = 0;
+
+      this.slideWidths.forEach((width) => {
+        offsets.push(left);
+        left += width + this.gapSlide;
+      });
+
+      return offsets;
+    },
+
+    slideStyles() {
+      return this.slideWidths.map((width) => ({ width: `${width}px` }));
+    },
+
+    /**
+     * Width of the narrowest slide in the carousel. It sets how many clones
+     * the space on both sides needs, so that the widest gap never runs out of
+     * images.
+     */
+    narrowestSlideWidth() {
+      const widths = (this.images || []).map((image) => this.widthForRatio(this.ratioOf(image)));
+
+      return widths.length ? Math.min(...widths) : this.widthContainer;
     },
   },
 
@@ -335,10 +322,9 @@ export default {
       // The space between the slides is set by the ratio modifier in CSS
       this.gapSlide = this.$refs.slides ? parseFloat(window.getComputedStyle(this.$refs.slides).columnGap) || 0 : 0;
 
-      // A centered image fills the carousel until it reaches the max width the
-      // layout gives it. The ratio turns that width into the height the image
-      // takes, and the carousel is as high as the image.
-      this.widthSlide = this.isCentered ? Math.min(this.widthContainer, this.maxWidthOfSlide()) : this.widthContainer;
+      // The max width a capped image may take is set by the ratio modifier in
+      // CSS, so the value only lives in the SCSS
+      this.maxWidthSlide = this.maxWidthOfSlides();
 
       this.updateClones();
 
@@ -347,30 +333,60 @@ export default {
     },
 
     /**
-     * Class that gives an image its ratio. An image can set a ratio of its
-     * own, so one carousel can mix them, and falls back to the default ratio
-     * of the carousel. The full layout leaves its images alone.
+     * Ratio an image is shown in. A carousel that asks for a ratio of its own
+     * puts it on every image. Otherwise an image can set a ratio of its own,
+     * so one carousel can mix them, and falls back to the default ratio of
+     * the carousel.
      */
-    ratioClassOf(image) {
-      if (!this.isCentered) {
-        return null;
+    ratioOf(image) {
+      if (this.currentRatio) {
+        return this.currentRatio;
       }
 
-      const ratio = image && RATIOS.includes(image.ratio) ? image.ratio : this.currentDefaultRatio;
-
-      return `ods-carousel__slide__image--ratio-${ratio.replace(':', '-')}`;
+      return image && RATIOS.includes(image.ratio) ? image.ratio : this.currentDefaultRatio;
     },
 
     /**
-     * Widest a centered image is allowed to get, read back from the max width
-     * the ratio modifier puts on a slide, so the value only lives in the SCSS.
-     * Falls back to no limit when CSS sets none.
+     * One slide to render, with the classes and the ratio its image asks for
      */
-    maxWidthOfSlide() {
-      const slide = this.$refs.slides ? this.$refs.slides.firstElementChild : null;
-      const maxWidth = slide ? parseFloat(window.getComputedStyle(slide).maxWidth) : NaN;
+    slideOf(image, index, key, isClone) {
+      const ratio = this.ratioOf(image);
+      const modifier = ratio.replace(':', '-');
 
-      return Number.isNaN(maxWidth) ? Infinity : maxWidth;
+      return {
+        image,
+        index,
+        key,
+        isClone,
+        ratio,
+        slideClass: `ods-carousel__slide--ratio-${modifier}`,
+        imageClass: `ods-carousel__slide__image--ratio-${modifier}`,
+      };
+    },
+
+    /**
+     * Width a slide takes for a ratio. 16:9 fills the whole visible width of
+     * the carousel, the other ratios stop at their max width, and neither ever
+     * gets wider than the carousel itself.
+     */
+    widthForRatio(ratio) {
+      if (ratio === '16:9') {
+        return this.widthContainer;
+      }
+
+      return Math.min(this.widthContainer, this.maxWidthSlide);
+    },
+
+    /**
+     * Widest a capped image is allowed to get, read back from the max width
+     * the ratio modifier puts on a slide. A 16:9 slide sets no limit, so the
+     * narrowest limit the slides carry is the one that counts.
+     */
+    maxWidthOfSlides() {
+      const slides = this.$refs.slides ? Array.from(this.$refs.slides.children) : [];
+      const limits = slides.map((slide) => parseFloat(window.getComputedStyle(slide).maxWidth)).filter((limit) => !Number.isNaN(limit));
+
+      return limits.length ? Math.min(...limits) : Infinity;
     },
 
     /**
@@ -383,10 +399,12 @@ export default {
       const total = this.images.length;
       let clonesPerSide = 0;
 
-      if (total > 1 && this.widthStep > 0) {
-        const spaceOnSide = Math.max(0, (this.widthContainer - this.widthSlide) / 2);
+      const widthStep = this.narrowestSlideWidth + this.gapSlide;
 
-        clonesPerSide = Math.ceil(spaceOnSide / this.widthStep) + 1;
+      if (total > 1 && widthStep > 0) {
+        const spaceOnSide = Math.max(0, (this.widthContainer - this.narrowestSlideWidth) / 2);
+
+        clonesPerSide = Math.ceil(spaceOnSide / widthStep) + 1;
       }
 
       if (clonesPerSide !== this.clonesPerSide) {
@@ -399,7 +417,10 @@ export default {
      * Track offset for a slide position, centered in the container
      */
     offsetOf(position) {
-      return position * this.widthStep * -1 + (this.widthContainer - this.widthSlide) / 2;
+      const left = this.slideOffsets[position] || 0;
+      const width = this.slideWidths[position] || 0;
+
+      return left * -1 + (this.widthContainer - width) / 2;
     },
 
     /**

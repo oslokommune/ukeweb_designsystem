@@ -4,9 +4,16 @@
 @use "system/spacing";
 @use "system/units";
 
-// An image in the centered layout never gets wider than this. The component
-// reads the limit back from the slide, so it is only set here.
-$max-image-width: 23.75rem; // 380px
+// A 1:1 or 9:16 image never gets wider than this. A 16:9 image is not capped.
+// The component reads the limit back from the slide, so it is only set here.
+$max-image-width: 25rem; // 400px
+
+// The text under an image is always this high, so every caption starts and
+// ends at the same line and the carousel keeps its height while it moves.
+// It is also what the buttons take off the height of the carousel to sit in
+// the middle of the images instead of in the middle of the images and
+// the text together. Room for two lines and the space above them.
+$caption-height: 3.5rem; // 56px
 
 .ods-carousel {
   display: grid;
@@ -30,7 +37,12 @@ $max-image-width: 23.75rem; // 380px
     flex-flow: row nowrap;
     flex-grow: 1;
     flex-shrink: 0;
+    gap: units.unit-to-rem(4);
     justify-content: flex-start;
+
+    @include breakpoints.large {
+      gap: units.unit-to-rem(8);
+    }
   }
 
   // An image and its text are one slide, so the text travels with its own
@@ -39,6 +51,15 @@ $max-image-width: 23.75rem; // 380px
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+
+    // The component reads this limit back from the slide to size the track
+    max-width: $max-image-width;
+
+    // A 16:9 image takes the whole visible width of the carousel instead, so
+    // it leaves no room for the previous and the next image beside it
+    &--ratio-16-9 {
+      max-width: none;
+    }
 
     &__image {
       line-height: 0;
@@ -54,10 +75,12 @@ $max-image-width: 23.75rem; // 380px
         width: 100%;
       }
 
-      // Only the centered layout gives its images a ratio. Every image is the
-      // same width, and its own ratio turns that width into the height it
-      // takes, so a carousel that mixes the ratios is as high as the tallest
-      // image in it.
+      // The ratio turns the width of an image into the height it takes, so a
+      // carousel that mixes the ratios is as high as the tallest image in it.
+      &--ratio-16-9 {
+        aspect-ratio: 16 / 9;
+      }
+
       &--ratio-1-1 {
         aspect-ratio: 1 / 1;
       }
@@ -73,9 +96,11 @@ $max-image-width: 23.75rem; // 380px
       @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large;
       @extend %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-medium;
 
-      // The text keeps the width of its own image: a long word is broken
-      // instead of making the slide wider than the image
-      line-height: initial;
+      // The text keeps the width and the height of its own image: a long word
+      // is broken instead of making the slide wider than the image, and a long
+      // text is cut instead of making the carousel higher than the others
+      height: $caption-height;
+      overflow: hidden;
       white-space: pre-line;
       word-break: break-word;
 
@@ -86,9 +111,11 @@ $max-image-width: 23.75rem; // 380px
   }
 
   &__navigation {
+    // The carousel is as high as its tallest image and the text under it, so
+    // taking the text off again leaves the buttons in the middle of the images
     align-items: center;
     display: flex;
-    height: 100%;
+    height: calc(100% - #{$caption-height});
     justify-content: space-between;
     position: absolute;
     top: 0;
@@ -105,19 +132,6 @@ $max-image-width: 23.75rem; // 380px
       }
     }
 
-  }
-
-  &__info {
-    @extend %ods-text--size-lima, %ods-text--size-kilo-breakpoint-medium;
-    @extend %ods-text--weight-light;
-    @extend %ods-padding-top-1, %ods-padding-top-2-breakpoint-large, %ods-padding-horizontal-4, %ods-padding-horizontal-0-breakpoint-large;
-
-    grid-column: span 12 / span 12;
-    white-space: pre-line;
-
-    &__description {
-      @extend %ods-margin-right-1;
-    }
   }
 
   &__pagination {
@@ -138,21 +152,6 @@ $max-image-width: 23.75rem; // 380px
         background-color: colors.$grayscale-30;
         width: units.unit-to-rem(10);
       }
-    }
-  }
-
-  &--centered {
-    .ods-carousel__slides {
-      gap: units.unit-to-rem(4);
-
-      @include breakpoints.large {
-        gap: units.unit-to-rem(8);
-      }
-    }
-
-    // The component reads this limit back from the slide to size the track
-    .ods-carousel__slide {
-      max-width: $max-image-width;
     }
   }
 

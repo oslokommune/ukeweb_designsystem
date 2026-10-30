@@ -95,13 +95,13 @@
       </div>
     </div>
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">Centered layout with pagination and 1:1 ratio</h2>
+      <h2 class="ods-devtools-text-preset-1">1:1 ratio</h2>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <div id="vue2">
             <ods-image-carousel
-              layout="centered"
               button="gray"
+              ratio="1:1"
               pagination
               :i18n="{
                 'previousButton':'Show previous image',
@@ -116,7 +116,6 @@
                 ],
                 description: 'Test description One.',
                 alt: 'alt One',
-                ratio: '1:1',
                 credits: 'Credits: Jon snow'
               },
               {
@@ -127,7 +126,6 @@
                   ],
                   description: 'Test description Two.',
                   alt: 'alt Two',
-                  ratio: '1:1',
                   credits: 'Credits: Jon snow'
                 },
                 {
@@ -138,7 +136,6 @@
                 ],
                 description: 'Test description Three.',
                 alt: 'alt Three',
-                ratio: '1:1',
                 credits: 'Credits: Jon snow'
               },
               {
@@ -149,7 +146,6 @@
                 ],
                 description: '',
                 alt: 'alt Four',
-                ratio: '1:1',
                 credits: 'Credits: Jon snow'
               }
             ]"
@@ -159,12 +155,71 @@
       </div>
     </div>
     <div class="ods-grid__column--12">
-      <h2 class="ods-devtools-text-preset-1">Centered layout with pagination and mixed ratios</h2>
+      <h2 class="ods-devtools-text-preset-1">9:16 ratio</h2>
       <div class="ods-devtools-code">
         <div class="ods-devtools-code__box">
           <div id="vue3">
             <ods-image-carousel
-              layout="centered"
+              button="gray"
+              pagination
+              ratio="9:16"
+              :i18n="{
+                'previousButton':'Show previous image',
+                'nextButton':'Show next image',
+              }"
+              :images="[
+              {
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/1024/19.jpg'
+                  }
+                ],
+                description: 'Test description One.',
+                alt: 'alt One',
+                credits: 'Credits: Jon snow'
+              },
+              {
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/1024/17.jpg'
+                  }
+                  ],
+                  description: 'Test description Two.',
+                  alt: 'alt Two',
+                  credits: 'Credits: Jon snow'
+                },
+                {
+                  sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/1024/15.jpg'
+                  }
+                ],
+                description: 'Test description Three.',
+                alt: 'alt Three',
+                credits: 'Credits: Jon snow'
+              },
+              {
+                sources: [
+                  {
+                    src: 'https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/images/1024/22.jpg'
+                  }
+                ],
+                description: '',
+                alt: 'alt Four',
+                credits: 'Credits: Jon snow'
+              }
+            ]"
+            ></ods-image-carousel>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Mixed ratios</h2>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <div id="vue4">
+            <ods-image-carousel
               button="gray"
               pagination
               :i18n="{
@@ -202,7 +257,7 @@
                 ],
                 description: 'Test description Three.',
                 alt: 'alt Three',
-                ratio: '9:16',
+                ratio: '16:9',
                 credits: 'Credits: Jon snow'
               },
               {
@@ -230,7 +285,7 @@
   <div class="ods-grid ods-grid--gap ods-grid--gutter">
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">Default</h2>
-      <div id="vue4">
+      <div id="vue5">
         <ods-image-carousel
           :i18n="{
           'previousButton':'Show previous image',
@@ -319,7 +374,7 @@
     </div>
     <div class="ods-grid__column--12">
       <h2 class="ods-devtools-text-preset-2">1 image</h2>
-      <div id="vue5">
+      <div id="vue6">
         <ods-image-carousel
           :i18n="{
             'previousButton':'Show previous image',
@@ -349,10 +404,9 @@
       </div>
     </div>
     <div class="ods-grid__column--12 ods-grid__column--8-breakpoint-medium">
-      <h2 class="ods-devtools-text-preset-2">Centered layout in 8 columns</h2>
-      <div id="vue6">
+      <h2 class="ods-devtools-text-preset-2">In 8 columns</h2>
+      <div id="vue7">
         <ods-image-carousel
-          layout="centered"
           button="gray"
           pagination
           :i18n="{
@@ -409,10 +463,9 @@
       </div>
     </div>
     <div class="ods-grid__column--12 ods-grid__column--6-breakpoint-medium">
-      <h2 class="ods-devtools-text-preset-2">Centered layout in 6 columns</h2>
-      <div id="vue7">
+      <h2 class="ods-devtools-text-preset-2">In 6 columns</h2>
+      <div id="vue8">
         <ods-image-carousel
-          layout="centered"
           button="gray"
           pagination
           :i18n="{
