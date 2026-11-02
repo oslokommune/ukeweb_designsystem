@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Animations are now turned off for users who prefer reduced motion. Components (alert, status card, collapsible, menu, cards, radio, switch) use the shared animation tokens instead of hard coded durations and easings.
 - Updated the status message markup in the Map component examples.
 
+## [4.0.9]
+
+### Changed
+
+- Updated Maplibre-gl to version 6.13.0.
+
 ## [4.0.8]
 
 ### Security
