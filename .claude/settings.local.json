@@ -9,11 +9,13 @@
       "Bash(devbox *)",
       "Bash(docker exec *)",
       "Bash(docker compose *)",
-      "Bash(docker-compose version *)"
+      "Bash(docker-compose version *)",
+      "Bash(git *)"
     ],
     "deny": [
       "Bash(devbox -e *)",
-      "Bash(git *)",
+      "Bash(git commit *)",
+      "Bash(git tag *)",
       "Bash(npm *)",
       "Bash(npx *)",
       "Bash(node *)",
