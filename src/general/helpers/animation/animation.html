@@ -1,18 +1,251 @@
+<!-- Overview mode -->
 <div class="ods-devtools-nondevmode">
   <div class="ods-grid ods-grid--gap ods-grid--gutter">
     <div class="ods-grid__column--12">
-      <p>The animations helper is used to animate different types of elements.</p>
+      <p>The animations helper is used to animate different types of elements. All animations share the same durations and easings, and are turned off for users who prefer reduced motion.</p>
     </div>
 
     <div class="ods-grid__column--12">
       <div class="ods-content">
         <h2 class="ods-devtools-text-preset-1">How to use</h2>
-        <p>Add the class <code class="ods-code">.ods-animation</code> to the element, then add the desired type of animation afterwards. The following animation is supported:</p>
+        <p>Add the class <code class="ods-code">.ods-animation</code> to the element, then add the desired type of animation afterwards. The following animations are supported:</p>
         <ul>
-          <li><code class="ods-code">.ods-animation--rotate</code>: Used to rotate the ::after element.</li>
-          <li><code class="ods-code">.ods-animation--rotate-plus-minus</code>: Used to rotate and toggles the ::after element between plus and minus icon.</li>
+          <li><code class="ods-code">.ods-animation--rotate</code>: Used to rotate the ::after element. Add <code class="ods-code">.ods-animation--rotate-open</code> to rotate it 180 degrees.</li>
+          <li><code class="ods-code">.ods-animation--rotate-plus-minus</code>: Used to rotate and toggle the ::after element between plus and minus icon. Add <code class="ods-code">.ods-animation--rotate-plus-minus-open</code> to rotate it and show the minus icon.</li>
+          <li><code class="ods-code">.ods-animation--fade</code>: Fades the element in and out. Collapsible content fades automatically when it is collapsed. Outside a collapsible, toggle <code class="ods-code">.ods-animation--fade-hidden</code> from your own javascript to hide and show the element.</li>
+          <li><code class="ods-code">.ods-animation--pulse</code>: A repeating ring that expands from the element. Used for status indicators that need attention, like the critical alert.</li>
         </ul>
+        <p>The rotate animations target the <code class="ods-code">::after</code> pseudo element of the element, and expect it to be absolutely positioned with <code class="ods-code">top: 50%</code>, like the icon on the accordion trigger.</p>
+        <p>
+          If the element also has the class <code class="ods-code">.ods-collapsible-trigger</code>, the <a href="https://designsystem.oslo.kommune.no/#/general-helpers-collapsible">collapsible helper</a> javascript will toggle the open class for you when the trigger is clicked. This is how the <a href="https://designsystem.oslo.kommune.no/#/components-accordion">accordion component</a> animates
+          its icons.
+        </p>
+        <p>
+          Durations and easings are defined as tokens in <code class="ods-code">system/_animation.scss</code>. Components should use these tokens instead of hard coded values. The same file contains the <code class="ods-code">reduced-motion</code> mixin, which wraps styles in a <code class="ods-code">prefers-reduced-motion: reduce</code> media query, and the shared
+          <code class="ods-code">ods-pulse</code> keyframes.
+        </p>
       </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Rotate</h2>
+      <p>Click the trigger to rotate the chevron. The collapsible helper toggles <code class="ods-code">.ods-animation--rotate-open</code> on the trigger.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--gray-light">
+          <div class="ods-accordion">
+            <div class="ods-accordion__item">
+              <h3 class="ods-accordion__heading">
+                <button class="ods-accordion__trigger ods-accordion__trigger--chevron ods-collapsible-trigger ods-animation ods-animation--rotate" aria-expanded="false" aria-controls="ods-animation-example-1">Trigger with rotating chevron</button>
+              </h3>
+              <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-example-1">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Rotate plus/minus</h2>
+      <p>Click the trigger to rotate the icon and toggle it between plus and minus. The collapsible helper toggles <code class="ods-code">.ods-animation--rotate-plus-minus-open</code> on the trigger.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box ods-devtools-code__box--gray-light">
+          <div class="ods-accordion">
+            <div class="ods-accordion__item">
+              <h3 class="ods-accordion__heading">
+                <button class="ods-accordion__trigger ods-accordion__trigger--plus ods-collapsible-trigger ods-animation ods-animation--rotate-plus-minus" aria-expanded="false" aria-controls="ods-animation-example-2">Trigger with rotating plus/minus icon</button>
+              </h3>
+              <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-example-2">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Fade</h2>
+      <p>Click the trigger to fade the content in. The content is a collapsible, so it is hidden while it has <code class="ods-code">.ods-collapsible-content--collapsed</code>. Outside a collapsible, toggle <code class="ods-code">.ods-animation--fade-hidden</code> yourself.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <h3><button class="ods-button ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-animation-example-3">Trigger</button></h3>
+          <p id="ods-animation-example-3" class="ods-collapsible-content ods-collapsible-content--collapsed ods-animation ods-animation--fade ods-text-5 ods-margin-top-15">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Pulse</h2>
+      <p>A repeating ring expands from the element. The element should be small and round, like a status dot. The <a href="https://designsystem.oslo.kommune.no/#/components-alert">critical alert</a> and the status card use the same keyframes.</p>
+      <div class="ods-devtools-code">
+        <div class="ods-devtools-code__box">
+          <p class="ods-text-5 ods-flex ods-flex-align-items-center">
+            <span class="ods-animation ods-animation--pulse ods-color-bg-red ods-margin-right-2" style="display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%;" aria-hidden="true"></span>
+            Needs attention
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Options</h2>
+      <!-- prettier-ignore -->
+      <pre><code class="ods-code ods-code--block">
+        .ods-animation
+        .ods-animation--rotate
+        .ods-animation--rotate-open
+        .ods-animation--rotate-plus-minus
+        .ods-animation--rotate-plus-minus-open
+        .ods-animation--fade
+        .ods-animation--fade-hidden
+        .ods-animation--pulse
+      </code></pre>
+    </div>
+
+    <div class="ods-grid__column--12">
+      <h2 class="ods-devtools-text-preset-1">Tokens</h2>
+      <p>Available from <code class="ods-code">@use "system/animation";</code></p>
+      <!-- prettier-ignore -->
+      <pre><code class="ods-code ods-code--block">
+        animation.$duration-fast      0.15s
+        animation.$duration-base      0.3s
+        animation.$duration-slow      0.5s
+        animation.$duration-slower    0.7s
+        animation.$duration-pulse     2s
+        animation.$easing             ease
+        animation.$easing-in          ease-in
+        animation.$easing-out         ease-out
+        animation.$easing-in-out      ease-in-out
+        @include animation.reduced-motion { ... }
+      </code></pre>
+    </div>
+  </div>
+</div>
+
+<!-- Developer mode -->
+<div class="ods-devtools-devmode">
+  <div class="ods-grid ods-grid--gap ods-grid--gutter">
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Rotate</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-accordion">
+        <div class="ods-accordion__item">
+          <h3 class="ods-accordion__heading">
+            <button class="ods-accordion__trigger ods-accordion__trigger--chevron ods-collapsible-trigger ods-animation ods-animation--rotate" aria-expanded="false" aria-controls="ods-animation-dev-1">Trigger with rotating chevron</button>
+          </h3>
+          <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-dev-1">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Rotate, open by default</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-accordion">
+        <div class="ods-accordion__item">
+          <h3 class="ods-accordion__heading">
+            <button class="ods-accordion__trigger ods-accordion__trigger--chevron ods-collapsible-trigger ods-collapsible-trigger--expanded ods-animation ods-animation--rotate ods-animation--rotate-open" aria-expanded="true" aria-controls="ods-animation-dev-2">Trigger with rotating chevron</button>
+          </h3>
+          <div class="ods-accordion__content ods-content ods-collapsible-content" id="ods-animation-dev-2">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Rotate plus/minus</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-accordion">
+        <div class="ods-accordion__item">
+          <h3 class="ods-accordion__heading">
+            <button class="ods-accordion__trigger ods-accordion__trigger--plus ods-collapsible-trigger ods-animation ods-animation--rotate-plus-minus" aria-expanded="false" aria-controls="ods-animation-dev-3">Trigger with rotating plus/minus icon</button>
+          </h3>
+          <div class="ods-accordion__content ods-content ods-collapsible-content--collapsed" id="ods-animation-dev-3">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Rotate plus/minus, open by default</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <div class="ods-accordion">
+        <div class="ods-accordion__item">
+          <h3 class="ods-accordion__heading">
+            <button class="ods-accordion__trigger ods-accordion__trigger--plus ods-collapsible-trigger ods-collapsible-trigger--expanded ods-animation ods-animation--rotate-plus-minus ods-animation--rotate-plus-minus-open" aria-expanded="true" aria-controls="ods-animation-dev-4">Trigger with rotating plus/minus icon</button>
+          </h3>
+          <div class="ods-accordion__content ods-content ods-collapsible-content" id="ods-animation-dev-4">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Fade, collapsible content</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-button ods-collapsible-trigger" aria-expanded="false" aria-controls="ods-animation-dev-5">Trigger</button></h3>
+      <p id="ods-animation-dev-5" class="ods-collapsible-content ods-collapsible-content--collapsed ods-animation ods-animation--fade ods-text-5 ods-margin-top-15">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Fade, styled collapsible content</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <h3><button class="ods-collapsible-trigger ods-collapsible-trigger--block" aria-expanded="false" aria-controls="ods-animation-dev-6">Trigger</button></h3>
+      <p id="ods-animation-dev-6" class="ods-collapsible-content ods-collapsible-content--block ods-collapsible-content--collapsed ods-animation ods-animation--fade ods-color-bg-gray-light ods-text-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Pulse</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <p class="ods-text-5 ods-flex ods-flex-align-items-center">
+        <span class="ods-animation ods-animation--pulse ods-color-bg-red ods-margin-right-2" style="display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%;" aria-hidden="true"></span>
+        Needs attention
+      </p>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Pulse in a critical alert</h2>
+    </div>
+    <div class="ods-grid__column--12">
+      <article class="ods-alert ods-alert--critical">
+        <a href="javascript:void(0)" class="ods-alert__link">
+          <div class="ods-alert__main">
+            <h2>Integer in lectus ut nulla placerat gravida dolor</h2>
+            <p>Critical message - Thursday September 11th, 13:37</p>
+          </div>
+          <div class="ods-alert__status">
+            <span class="ods-alert__symbol" aria-label="Critical alert" role="img"></span>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-1">Testcases</h2>
+    </div>
+    <div class="ods-grid__column--12 ods-padding-bottom-none">
+      <h2 class="ods-devtools-text-preset-2">Reduced motion</h2>
+      <p class="ods-paragraph">Enable "reduce motion" in the operating system. The rotate and fade animations above should snap to their end state, and the pulse should stop.</p>
     </div>
   </div>
 </div>
