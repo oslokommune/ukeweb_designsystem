@@ -6,7 +6,7 @@
 
 // A 1:1 or 9:16 image never gets wider than this. A 16:9 image is not capped.
 // The component reads the limit back from the slide, so it is only set here.
-$max-image-width: 25rem; // 400px
+$max-image-width: 23.75rem; // 380px
 
 // The text under an image is always this high, so every caption starts and
 // ends at the same line and the carousel keeps its height while it moves.
