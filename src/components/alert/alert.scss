@@ -1,3 +1,4 @@
+@use "system/animation";
 @use "system/breakpoints";
 @use "system/colors";
 @use "common/focus";
@@ -98,7 +99,7 @@
         @extend %ods-margin-top-2;
         @extend %ods-margin-right-2;
 
-        animation: alert-critical-pulse 2s infinite;
+        animation: ods-pulse animation.$duration-pulse infinite;
         background-color: colors.$red;
         border-radius: 50%;
         box-shadow: 0 0 0 0 rgba(colors.$red, 0.7);
@@ -106,6 +107,10 @@
         display: inline-block;
         height: units.unit-to-rem(3);
         width: units.unit-to-rem(3);
+
+        @include animation.reduced-motion {
+          animation: none;
+        }
       }
     }
   }
@@ -114,19 +119,5 @@
     .ods-alert__main h2 {
       text-decoration: underline;
     }
-  }
-}
-
-@keyframes alert-critical-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(colors.$red, 0.8);
-  }
-
-  80% {
-    box-shadow: 0 0 0 10px rgba(colors.$red, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(colors.$red, 0);
   }
 }

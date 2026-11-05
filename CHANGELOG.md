@@ -11,6 +11,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Refactor in Image carousel component: images can be shown in a ratio of 16:9, 1:1 or 9:16, and one carousel can mix all three. Every image takes a `ratio` of its own in the `images` array or a common `defaultRatio` prop for all images. Added also screen reader support. The consumer needs to add a `carousel` and an `of` key to `i18n`.
 
+## [4.1.0]
+
+### Added
+
+- Added animation tokens in `system/_animation.scss`: durations (`$duration-fast`, `$duration-base`, `$duration-slow`, `$duration-slower`, `$duration-pulse`), easings, a `reduced-motion` mixin and shared `ods-pulse` keyframes.
+- Added `.ods-animation--fade` / `.ods-animation--fade-hidden` and `.ods-animation--pulse` to the animation helper, with documentation and examples for all animation types.
+- Added an `error` scoped slot to the Map component with `message` and `severity` props, wrapped in an `aria-live="polite"` element so errors are announced by screen readers. The map also emits an `error` event with `{ message, severity }`.
+- Added a CODEOWNERS file.
+
+### Changed
+
+- The Map component no longer renders its own error message. Provide the `error` slot (for example with the status message component) to show errors to users.
+- Animations are now turned off for users who prefer reduced motion. Components (alert, status card, collapsible, menu, cards, radio, switch) use the shared animation tokens instead of hard coded durations and easings.
+- Updated the status message markup in the Map component examples.
+
+## [4.0.9]
+
+### Changed
+
+- Updated Maplibre-gl to version 6.13.0.
+
 ## [4.0.8]
 
 ### Security
