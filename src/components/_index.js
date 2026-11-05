@@ -11,4 +11,5 @@ import './modal/modal.init';
 import './map/map';
 import './menu/menu.init';
 import './pagination/pagination.init';
+import './status_message/status_message.init';
 import './tabs/tabs.init';
