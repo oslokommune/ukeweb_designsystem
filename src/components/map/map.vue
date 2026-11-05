@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="ods-map__container" :class="ratio ? ratio : ''" ref="mapContainer"></div>
-    <div v-show="error" class="ods-status-message ods-status-message--warning" aria-live="polite">
-      <h2 class="ods-status-message__heading"><span class="ods-status-message__icon ods-icon--error-hexa" aria-hidden="true"></span>{{ i18n.mapError }} - {{ technicalErrorText }}</h2>
+    <!-- The wrapper must always be in the DOM for aria-live to announce slot content. -->
+    <div class="ods-map__status" aria-live="polite">
+      <slot v-if="error" name="error" :message="technicalErrorText" :severity="errorSeverity"></slot>
     </div>
   </div>
 </template>
@@ -36,7 +37,6 @@ export default {
           'NavigationControl.ZoomIn': 'Zoom inn',
           'NavigationControl.ZoomOut': 'Zoom ut',
         },
-        mapError: 'En feil oppstod ved lasting av kart.',
       }),
     },
     state: {
@@ -71,6 +71,8 @@ export default {
     },
   },
 
+  emits: ['error', 'resize'],
+
   data: () => ({
     layerIds: [],
     dataSourceIds: [],
@@ -81,6 +83,7 @@ export default {
     mapReady: false,
     mapLoaded: false,
     error: false,
+    errorSeverity: 'warning',
     technicalErrorText: '',
   }),
 
@@ -275,6 +278,19 @@ export default {
       this.$emit('resize');
     },
 
+    setError(message, severity) {
+      this.$emit('error', { message, severity });
+
+      // A displayed danger should not be overwritten by a later warning.
+      if (this.error && this.errorSeverity === 'danger') {
+        return;
+      }
+
+      this.error = true;
+      this.errorSeverity = severity;
+      this.technicalErrorText = message;
+    },
+
     // Private/protected method
     $_createMapObject(geoJson) {
       let mapConfig = {
@@ -305,8 +321,7 @@ export default {
       this.mapObject = new MaplibreMap(mapConfig);
 
       this.mapObject.on('error', (event) => {
-        this.error = true;
-        this.technicalErrorText = event.error.message;
+        this.setError(event.error.message, this.mapReady ? 'warning' : 'danger');
       });
 
       const nav = new NavigationControl({
@@ -334,8 +349,8 @@ export default {
           this.mapReady = true;
           this.populateMap();
         } catch (error) {
-          this.error = true;
-          this.technicalErrorText = error.message;
+          // Without the marker image, point features cannot render at all.
+          this.setError(error.message, 'danger');
         }
       });
     },
@@ -599,8 +614,7 @@ export default {
               popupEventData = JSON.parse(popupEventData);
             } catch (e) {
               // Probably: Uncaught SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data
-              this.technicalErrorText = e.message;
-              this.error = true;
+              this.setError(e.message, 'warning');
             }
           }
         }
@@ -655,8 +669,7 @@ export default {
           zoom,
         });
       } catch (error) {
-        this.error = true;
-        this.technicalErrorText = error.message;
+        this.setError(error.message, 'warning');
       }
     },
     // Private/protected method
