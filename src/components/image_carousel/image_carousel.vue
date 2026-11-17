@@ -19,8 +19,7 @@
               </picture>
             </div>
             <figcaption class="ods-carousel__slide__caption">
-              <span v-if="slide.image.description" class="ods-carousel__slide__caption__description">{{ slide.image.description }}</span
-              ><span v-if="slide.image.credits">{{ slide.image.credits }}</span>
+              <span v-if="slide.image.description" class="ods-carousel__slide__caption__description">{{ slide.image.description }}</span><span v-if="slide.image.credits">{{ slide.image.credits }}</span>
             </figcaption>
           </figure>
         </div>
